@@ -412,3 +412,5 @@
 		usr << browse(dat, "window=roundstatus;size=400x500")
 	else
 		alert("The game hasn't started yet!")
+
+/var/global/datum/telltale/code_modules_admin_player_panel_dm = new("[__FILE__]")

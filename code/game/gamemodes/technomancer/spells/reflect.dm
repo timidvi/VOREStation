@@ -92,3 +92,5 @@
 						qdel(src)
 		return 1
 	return 0
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_reflect_dm = new("[__FILE__]")

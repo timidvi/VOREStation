@@ -100,3 +100,5 @@ NOTE: It checks usr by default. Supply the "user" argument if you wish to check 
 		holder.disassociate()
 		//qdel(holder)
 	return 1
+
+/var/global/datum/telltale/code_modules_admin_holder__dm = new("[__FILE__]")

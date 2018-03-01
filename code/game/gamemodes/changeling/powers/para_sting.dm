@@ -19,3 +19,4 @@
 	T.Weaken(20)
 	feedback_add_details("changeling_powers","PS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_para_sting_dm = new("[__FILE__]")

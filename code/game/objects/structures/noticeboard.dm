@@ -99,3 +99,5 @@
 			usr << browse("<HTML><HEAD><TITLE>[P.name]</TITLE></HEAD><BODY><TT>[P.info]</TT></BODY></HTML>", "window=[P.name]")
 			onclose(usr, "[P.name]")
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_noticeboard_dm = new("[__FILE__]")

@@ -448,3 +448,5 @@
 			user.visible_message("\The [user] stops applying pressure to [src]'s [organ.name]!", "You stop applying pressure to [src]'s [organ.name]!")
 
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_attackhand_dm = new("[__FILE__]")

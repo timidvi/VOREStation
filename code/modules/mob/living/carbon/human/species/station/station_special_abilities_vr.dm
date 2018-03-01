@@ -806,3 +806,5 @@
 	set category = "Abilities"
 	pass_flags ^= PASSTABLE //I dunno what this fancy ^= is but Aronai gave it to me.
 	to_chat(src, "You [pass_flags&PASSTABLE ? "will" : "will NOT"] move over tables/railings/trays!")
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_station_special_abilities_vr_dm = new("[__FILE__]")

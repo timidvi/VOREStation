@@ -1282,3 +1282,4 @@
 	sleep(equip_cooldown)
 	wait = 0
 	return 1
+/var/global/datum/telltale/code_game_mecha_equipment_tools_tools_dm = new("[__FILE__]")

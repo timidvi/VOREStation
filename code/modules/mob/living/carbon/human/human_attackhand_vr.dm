@@ -61,3 +61,4 @@
 	claws/strong/attack_name = "strong claws"
 	slime_glomp/attack_name = "glomp"
 	bite/sharp/numbing/attack_name = "numbing bite"
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_attackhand_vr_dm = new("[__FILE__]")

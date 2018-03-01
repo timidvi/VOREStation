@@ -47,3 +47,5 @@
 	var/obj/item/weapon/reagent_containers/glass/bucket/bucket = locate(/obj/item/weapon/reagent_containers/glass/bucket) in H
 	if(bucket)
 		bucket.reagents.add_reagent(/datum/reagent/water, 70)
+
+/var/global/datum/telltale/code_datums_outfits_tournament_dm = new("[__FILE__]")

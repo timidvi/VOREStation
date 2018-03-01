@@ -25,3 +25,5 @@ function SetMusic(url, time, volume) {
 </body>
 </html>
 "}
+
+/var/global/datum/telltale/code_modules_media_media_player_html__dm = new("[__FILE__]")

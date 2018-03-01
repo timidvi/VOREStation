@@ -90,3 +90,5 @@ obj/machinery/atmospherics/trinary/isConnectable(var/obj/machinery/atmospherics/
 
 /obj/machinery/atmospherics/unary/isConnectable(var/obj/machinery/atmospherics/target)
 	return (target == node || ..())
+
+/var/global/datum/telltale/code_modules_ventcrawl_ventcrawl_atmospherics_dm = new("[__FILE__]")

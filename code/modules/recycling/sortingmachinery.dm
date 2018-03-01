@@ -455,3 +455,5 @@
 	if(trunk)
 		trunk.linked = null
 	..()
+
+/var/global/datum/telltale/code_modules_recycling_sortingmachinery_dm = new("[__FILE__]")

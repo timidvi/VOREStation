@@ -160,3 +160,4 @@ var/global/datum/controller/plants/plant_controller // Set in New().
 
 /datum/controller/plants/proc/remove_plant(var/obj/effect/plant/plant)
 	plant_queue -= plant
+/var/global/datum/telltale/code_modules_hydroponics_seed_controller_dm = new("[__FILE__]")

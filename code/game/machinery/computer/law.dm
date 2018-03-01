@@ -90,3 +90,5 @@
 
 	attack_ghost(user as mob)
 		return 1
+
+/var/global/datum/telltale/code_game_machinery_computer_law_dm = new("[__FILE__]")

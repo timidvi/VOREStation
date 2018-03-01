@@ -1862,3 +1862,5 @@ datum/design/rust_injector
 	materials = list("glass" = 2000, "sacid" = 20, "phoron" = 3000, "uranium" = 2000)
 	build_path = "/obj/item/weapon/circuitboard/rust_core"
 */
+
+/var/global/datum/telltale/code_modules_research_designs_dm = new("[__FILE__]")

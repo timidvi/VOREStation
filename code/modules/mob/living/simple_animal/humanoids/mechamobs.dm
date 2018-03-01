@@ -119,3 +119,4 @@
 
 /mob/living/simple_animal/hostile/mecha/malf_drone/speech_bubble_appearance()
 	return "synthetic_evil"
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_humanoids_mechamobs_dm = new("[__FILE__]")

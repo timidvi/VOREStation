@@ -100,3 +100,5 @@
 	icon_state = "syndicate-orange"
 	desc = "A thin, ungainly softsuit colored in blaze orange for rescuers to easily locate, looks pretty fragile."
 	slowdown = 4
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_miscellaneous_dm = new("[__FILE__]")

@@ -20,3 +20,4 @@
 /obj/item/weapon/towel/random/New()
 	..()
 	color = "#"+get_random_colour()
+/var/global/datum/telltale/code_game_objects_items_weapons_towels_dm = new("[__FILE__]")

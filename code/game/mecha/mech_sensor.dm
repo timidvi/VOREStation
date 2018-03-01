@@ -93,3 +93,5 @@
 		on = 0
 
 	update_icon()
+
+/var/global/datum/telltale/code_game_mecha_mech_sensor_dm = new("[__FILE__]")

@@ -1767,3 +1767,4 @@ Departamental Swimsuits, for general use
 	icon_state = "tronsiren_shoes"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
+/var/global/datum/telltale/code_modules_vore_fluffstuff_custom_clothes_vr_dm = new("[__FILE__]")

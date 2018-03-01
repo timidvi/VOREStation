@@ -373,3 +373,5 @@
 	camera = 0
 	network = 0
 	power = 0
+
+/var/global/datum/telltale/code_game_machinery_computer__lapvend_dm = new("[__FILE__]")

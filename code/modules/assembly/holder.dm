@@ -275,3 +275,5 @@
 				to_chat(usr, "<span class='notice'>Timer can't be [ntime<=0?"negative":"more than 1000 seconds"].</span>")
 	else
 		to_chat(usr, "<span class='notice'>You cannot do this while [usr.stat?"unconscious/dead":"restrained"].</span>")
+
+/var/global/datum/telltale/code_modules_assembly_holder_dm = new("[__FILE__]")

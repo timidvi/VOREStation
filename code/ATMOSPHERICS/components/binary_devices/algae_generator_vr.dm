@@ -313,3 +313,5 @@
 
 #undef MATERIAL_ALGAE
 #undef MATERIAL_CARBON
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_algae_generator_vr_dm = new("[__FILE__]")

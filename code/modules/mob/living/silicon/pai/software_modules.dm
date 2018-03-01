@@ -531,3 +531,5 @@
 			P.sradio.code = min(100, P.sradio.code)
 			P.sradio.code = max(1, P.sradio.code)
 			return 1
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_software_modules_dm = new("[__FILE__]")

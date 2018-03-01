@@ -69,3 +69,5 @@
 		pref.persistence_settings &= ~bit
 		return TOPIC_REFRESH
 	return ..()
+
+/var/global/datum/telltale/code_modules_client_preference_setup_vore____persistence_dm = new("[__FILE__]")

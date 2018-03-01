@@ -94,3 +94,5 @@
 
 
 
+
+/var/global/datum/telltale/code_modules_icon_generation_Icon_color_animation_dm = new("[__FILE__]")

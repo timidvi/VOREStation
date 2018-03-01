@@ -23,3 +23,5 @@
 	if(hidden_uplink && usr == source) // Let's not have another people activate our uplink
 		hidden_uplink.check_trigger(source, emote, activation_emote)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implantuplink_dm = new("[__FILE__]")

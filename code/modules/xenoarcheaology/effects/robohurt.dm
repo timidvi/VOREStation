@@ -38,3 +38,5 @@
 			M.adjustFireLoss(10)
 			M.updatehealth()
 		return 1
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_robohurt_dm = new("[__FILE__]")

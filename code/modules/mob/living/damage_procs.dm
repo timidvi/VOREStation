@@ -103,3 +103,5 @@
 	if(flammable)	adjust_fire_stacks(flammable)
 	if(ignite)		IgniteMob()
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_living_damage_procs_dm = new("[__FILE__]")

@@ -209,3 +209,5 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 			if(new_item.matter && new_item.matter.len > 0)
 				for(var/i in new_item.matter)
 					new_item.matter[i] = new_item.matter[i] * mat_efficiency
+
+/var/global/datum/telltale/code_modules_research_circuitprinter_dm = new("[__FILE__]")

@@ -229,3 +229,5 @@
 		user << browse(dat,"window=plant_analyzer")
 
 	return
+
+/var/global/datum/telltale/code_modules_hydroponics_trays_tray_tools_dm = new("[__FILE__]")

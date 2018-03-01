@@ -78,3 +78,4 @@
 	minimal_player_age = 3
 	outfit_type = /decl/hierarchy/outfit/job/security/officer
 	alt_titles = list("Junior Officer")
+/var/global/datum/telltale/code_game_jobs_job_security_dm = new("[__FILE__]")

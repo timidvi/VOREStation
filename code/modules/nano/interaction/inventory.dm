@@ -9,3 +9,5 @@
 
 
 	return user.shared_nano_interaction()
+
+/var/global/datum/telltale/code_modules_nano_interaction_inventory_dm = new("[__FILE__]")

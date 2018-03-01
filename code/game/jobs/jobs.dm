@@ -154,3 +154,5 @@ var/list/nonhuman_positions = list(
 			titles = J.alt_titles
 
 	return titles
+
+/var/global/datum/telltale/code_game_jobs_jobs_dm = new("[__FILE__]")

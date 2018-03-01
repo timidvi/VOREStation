@@ -242,3 +242,5 @@
 			visible_message("<span class='danger'>\The [src] splatters a layer of web on \the [target]!</span>")
 			new /obj/effect/spider/stickyweb(target.loc)
 	..()
+
+/var/global/datum/telltale/code_modules_projectiles_projectile_special_dm = new("[__FILE__]")

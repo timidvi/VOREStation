@@ -1037,3 +1037,5 @@
 #undef ONLY_DEPLOY
 #undef ONLY_RETRACT
 #undef SEAL_DELAY
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_rig_dm = new("[__FILE__]")

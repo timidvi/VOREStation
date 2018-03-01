@@ -30,3 +30,5 @@
 	var/datum/robot_component/actuator/A = get_component("actuator")
 	if (cell_use_power(A.active_usage))
 		return ..()
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_movement_dm = new("[__FILE__]")

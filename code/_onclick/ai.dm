@@ -180,3 +180,5 @@
 
 /mob/living/silicon/ai/TurfAdjacent(var/turf/T)
 	return (cameranet && cameranet.checkTurfVis(T))
+
+/var/global/datum/telltale/code__onclick_ai_dm = new("[__FILE__]")

@@ -20,3 +20,5 @@
 			usr << "There will be an AI Triumvirate at round start."
 			message_admins("<font color='blue'>[key_name_admin(usr)] has toggled on triple AIs at round start.</font>", 1)
 	return
+
+/var/global/datum/telltale/code_modules_admin_verbs_tripAI_dm = new("[__FILE__]")

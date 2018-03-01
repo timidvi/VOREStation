@@ -11,3 +11,5 @@ var/decl/observ/task_triggered/task_triggered_event = new()
 /decl/observ/task_triggered
 	name = "Task Triggered"
 	expected_type = /datum/scheduled_task
+
+/var/global/datum/telltale/code_datums_observation_task_triggered_dm = new("[__FILE__]")

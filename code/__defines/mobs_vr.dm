@@ -8,3 +8,5 @@
 #define VIS_AUGMENTED		25
 
 #define VIS_COUNT			25
+
+/var/global/datum/telltale/code___defines_mobs_vr_dm = new("[__FILE__]")

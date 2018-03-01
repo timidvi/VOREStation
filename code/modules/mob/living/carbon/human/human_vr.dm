@@ -11,3 +11,5 @@
 	alt_farmanimals -= src
 
 	. = ..()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_vr_dm = new("[__FILE__]")

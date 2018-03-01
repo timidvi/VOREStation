@@ -43,3 +43,5 @@
 		source.mind.store_memory("A implant can be activated by using the smile emote, <B>say *smile</B> to attempt to activate.", 0, 0)
 		source << "The implanted language implant can be activated by using the smile emote, <B>say *smile</B> to attempt to activate."
 		return 1
+
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implant_vr_dm = new("[__FILE__]")

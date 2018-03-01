@@ -239,3 +239,5 @@
 	icon_state_closed = "anesthetic_tank"
 	icon_state_open = "anesthetic_tank_open"
 	mask_type = /obj/item/clothing/mask/breath/anesthetic
+
+/var/global/datum/telltale/code_game_machinery_oxygen_pump_dm = new("[__FILE__]")

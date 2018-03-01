@@ -42,3 +42,4 @@ Desc:	If true is an object that can hold an assemblyholder object
 */
 /obj/proc/IsAssemblyHolder()
 	return 0
+/var/global/datum/telltale/code_modules_assembly_helpers_dm = new("[__FILE__]")

@@ -449,3 +449,5 @@ SUBSYSTEM_DEF(garbage)
 	..()
 	loc = null
 	return QDEL_HINT_QUEUE
+
+/var/global/datum/telltale/code_controllers_subsystems_garbage_dm = new("[__FILE__]")

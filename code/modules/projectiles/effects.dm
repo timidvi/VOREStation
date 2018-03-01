@@ -268,3 +268,4 @@
 	light_range = 2
 	light_power = 0.5
 	light_color = "#8837A3"
+/var/global/datum/telltale/code_modules_projectiles_effects_dm = new("[__FILE__]")

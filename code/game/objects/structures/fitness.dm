@@ -63,3 +63,5 @@
 		else
 			to_chat(user, "<span class='notice'>Against your previous judgement, perhaps working out is not for you.</span>")
 			being_used = 0
+
+/var/global/datum/telltale/code_game_objects_structures_fitness_dm = new("[__FILE__]")

@@ -36,3 +36,5 @@
 			else
 				user << "DERP! BUG! Report this (And what you were doing to cause it) to Agouri"
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_computer_supply_dm = new("[__FILE__]")

@@ -550,3 +550,5 @@
 //		new /obj/item/weapon/pestspray(src)
 //		new /obj/item/weapon/pestspray(src)
 //		new /obj/item/weapon/pestspray(src)
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_crates_dm = new("[__FILE__]")

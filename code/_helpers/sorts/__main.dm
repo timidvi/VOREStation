@@ -654,3 +654,5 @@ reverse a descending sequence without violating stability.
 #undef MIN_MERGE
 
 #undef fetchElement
+
+/var/global/datum/telltale/code__helpers_sorts___main_dm = new("[__FILE__]")

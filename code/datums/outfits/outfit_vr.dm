@@ -101,3 +101,5 @@
 	r_hand = /obj/item/weapon/melee/energy/sword/imperial
 	l_hand = /obj/item/weapon/shield/energy/imperial
 	suit_store = /obj/item/weapon/gun/energy/imperial
+
+/var/global/datum/telltale/code_datums_outfits_outfit_vr_dm = new("[__FILE__]")

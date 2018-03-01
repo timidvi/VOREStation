@@ -474,3 +474,5 @@ var/global/use_preloader = FALSE
 /turf/template_noop
 	name = "Turf Passthrough"
 	icon_state = "template_void"
+
+/var/global/datum/telltale/code_modules_maps_tg_reader_dm = new("[__FILE__]")

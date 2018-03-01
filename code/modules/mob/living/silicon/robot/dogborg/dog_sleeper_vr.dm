@@ -616,3 +616,5 @@
 	max_item_count = 1
 	startdrain = 100
 	analyzer = TRUE
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_dogborg_dog_sleeper_vr_dm = new("[__FILE__]")

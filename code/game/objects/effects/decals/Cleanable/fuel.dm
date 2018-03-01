@@ -80,3 +80,5 @@
 			O.hotspot_expose((T20C*2) + 380,500) //Light flamethrower fuel on fire immediately.
 
 	amount *= 0.25
+
+/var/global/datum/telltale/code_game_objects_effects_decals_Cleanable_fuel_dm = new("[__FILE__]")

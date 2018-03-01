@@ -70,3 +70,5 @@
 		pass("All research designs have valid materials.")
 
 	return 1
+
+/var/global/datum/telltale/code_unit_tests_research_tests_dm = new("[__FILE__]")

@@ -152,3 +152,5 @@
 	icon_state = "jackboots"
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
 	siemens_coefficient = 0.6
+
+/var/global/datum/telltale/code_modules_clothing_shoes_boots_dm = new("[__FILE__]")

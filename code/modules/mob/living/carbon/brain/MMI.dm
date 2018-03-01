@@ -336,3 +336,5 @@
 	..()
 	src.brainmob.name = "[pick(list("PBU","HIU","SINA","ARMA","OSI"))]-[rand(100, 999)]"
 	src.brainmob.real_name = src.brainmob.name
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_MMI_dm = new("[__FILE__]")

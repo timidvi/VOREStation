@@ -25,3 +25,4 @@
 	speak = list("Awrr?","Aowrl!","Worrl")
 	emote_see = list("sniffs the air cautiously","looks around")
 	emote_hear = list("snuffles")
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_sif_wildlife_diyaab_dm = new("[__FILE__]")

@@ -23,3 +23,5 @@
 	name = "Uplink Implant" //Original name: "Uplink Implant (Contains 5 Telecrystals)"
 	item_cost = 50 //Original cost: 10
 	path = /obj/item/weapon/storage/box/syndie_kit/imp_uplink
+
+/var/global/datum/telltale/code_datums_uplink_implants_dm = new("[__FILE__]")

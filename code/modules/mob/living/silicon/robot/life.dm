@@ -352,3 +352,5 @@
 		if(lights_on)
 			set_light(integrated_light_power, 1, "#FFFFFF")
 			return TRUE
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_life_dm = new("[__FILE__]")

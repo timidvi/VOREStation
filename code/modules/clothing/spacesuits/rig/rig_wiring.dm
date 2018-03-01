@@ -55,3 +55,4 @@
 	if(rig.open)
 		return 1
 	return 0
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_rig_wiring_dm = new("[__FILE__]")

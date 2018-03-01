@@ -143,3 +143,5 @@ var/global/list/all_exonet_connections = list()
 // Description: Override this to make your atom do something when a message is received.
 /atom/proc/receive_exonet_message(var/atom/origin_atom, var/origin_address, var/message, var/text)
 	return
+
+/var/global/datum/telltale/code_datums_EPv__dm = new("[__FILE__]")

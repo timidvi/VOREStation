@@ -99,3 +99,5 @@
 
 /obj/machinery/computer/shuttle_control/emp_act()
 	return
+
+/var/global/datum/telltale/code_modules_shuttles_shuttle_console_dm = new("[__FILE__]")

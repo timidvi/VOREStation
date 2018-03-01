@@ -45,3 +45,5 @@ var/const/SUIT_STORAGE_WIRE_LOCKED		= 4
 				S.electrified = 0
 			else
 				S.electrified = -1
+
+/var/global/datum/telltale/code_datums_wires_suit_storage_unit_dm = new("[__FILE__]")

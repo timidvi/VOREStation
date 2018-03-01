@@ -104,3 +104,5 @@
 	if(E.is_broken() && E.apply_splint(src))
 		user << "You feel [src] constrict about your [E.name], supporting it."
 		supporting_limbs |= E
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_spacesuits_dm = new("[__FILE__]")

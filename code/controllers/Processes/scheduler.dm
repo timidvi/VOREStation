@@ -144,3 +144,5 @@
 /proc/repeat_scheduled_task(var/trigger_delay, var/datum/scheduled_task/st)
 	st.trigger_time = world.time + trigger_delay
 	scheduler.schedule(st)
+
+/var/global/datum/telltale/code_controllers_Processes_scheduler_dm = new("[__FILE__]")

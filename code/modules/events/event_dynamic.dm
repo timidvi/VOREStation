@@ -230,3 +230,5 @@ var/list/event_last_fired = list()
 			active_with_role["Gardener"]++
 
 	return active_with_role
+
+/var/global/datum/telltale/code_modules_events_event_dynamic_dm = new("[__FILE__]")

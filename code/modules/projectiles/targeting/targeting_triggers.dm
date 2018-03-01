@@ -29,3 +29,5 @@
 		G.Fire(aiming_at, owner, reflex = 1)
 		locked = 0
 		lock_time = world.time+10
+
+/var/global/datum/telltale/code_modules_projectiles_targeting_targeting_triggers_dm = new("[__FILE__]")

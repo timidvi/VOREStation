@@ -248,3 +248,5 @@
 /area/engineering/engine_gas
 	name = "\improper Engine Gas Storage"
 	icon_state = "engine_waste"
+
+/var/global/datum/telltale/code_game_area_Space_Station____areas_vr_dm = new("[__FILE__]")

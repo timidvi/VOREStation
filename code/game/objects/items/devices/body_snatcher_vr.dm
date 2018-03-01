@@ -68,3 +68,5 @@
 /obj/item/device/bodysnatcher/attack_self(mob/living/user)
 		to_chat(user,"<span class='warning'> A message pops up on the LED display, informing you that you that the mind transfer to yourself was successful... Wait, did that even do anything?</span>")
 		return
+
+/var/global/datum/telltale/code_game_objects_items_devices_body_snatcher_vr_dm = new("[__FILE__]")

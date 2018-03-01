@@ -46,3 +46,5 @@
 		if(!interactable() || ..(href,href_list))
 			return
 		interact()
+
+/var/global/datum/telltale/code_game_machinery_computer__computers_power_dm = new("[__FILE__]")

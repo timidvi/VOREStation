@@ -53,3 +53,4 @@ datum/uplink_category/ammunition
 
 /datum/uplink_category/backup
 	name = "Backup"
+/var/global/datum/telltale/code_datums_uplink_uplink_categories_dm = new("[__FILE__]")

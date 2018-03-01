@@ -90,3 +90,5 @@
 	name = "AI RC"
 	department = "AI"
 	departmentType = RC_ASSIST|RC_INFO
+
+/var/global/datum/telltale/code_game_machinery_requests_console_vr_dm = new("[__FILE__]")

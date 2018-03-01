@@ -42,3 +42,4 @@
 	name = "drone identification card"
 	desc = "A card issued by the EIO, indicating that the owner is a Drone Intelligence. Drones are mandated to carry this card within SolGov space, by law."
 	icon_state = "permit_drone"
+/var/global/datum/telltale/code_modules_clothing_under_accessories_permits_dm = new("[__FILE__]")

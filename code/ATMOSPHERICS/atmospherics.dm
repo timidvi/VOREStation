@@ -147,3 +147,4 @@ obj/machinery/atmospherics/proc/check_connect_types(obj/machinery/atmospherics/a
 	if((int_air.return_pressure()-env_air.return_pressure()) > 2*ONE_ATMOSPHERE)
 		return 0
 	return 1
+/var/global/datum/telltale/code_ATMOSPHERICS_atmospherics_dm = new("[__FILE__]")

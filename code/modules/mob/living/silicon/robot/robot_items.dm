@@ -460,3 +460,4 @@
 
 	to_chat(user, "You fail to pick up \the [A] with \the [src]")
 	return
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_items_dm = new("[__FILE__]")

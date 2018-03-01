@@ -81,3 +81,5 @@
 	icon = 'icons/obj/doors/door_assembly.dmi'
 	icon_state = "door_electronics"
 	w_class = ITEMSIZE_SMALL
+
+/var/global/datum/telltale/code_modules_power_tracker_dm = new("[__FILE__]")

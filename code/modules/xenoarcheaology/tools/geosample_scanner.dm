@@ -361,3 +361,4 @@
 
 	add_fingerprint(usr)
 	return 1 // update UIs attached to this object
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_geosample_scanner_dm = new("[__FILE__]")

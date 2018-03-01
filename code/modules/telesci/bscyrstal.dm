@@ -44,3 +44,5 @@
 	desc = "An artificially made bluespace crystal, it looks delicate."
 	origin_tech = list(TECH_BLUESPACE = 3, TECH_PHORON = 4)
 	blink_range = 4 // Not as good as the organic stuff!
+
+/var/global/datum/telltale/code_modules_telesci_bscyrstal_dm = new("[__FILE__]")

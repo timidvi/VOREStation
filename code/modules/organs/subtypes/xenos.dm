@@ -49,3 +49,5 @@
 	parent_organ = BP_HEAD
 	icon_state = "xgibmid2"
 	organ_tag = O_RESIN
+
+/var/global/datum/telltale/code_modules_organs_subtypes_xenos_dm = new("[__FILE__]")

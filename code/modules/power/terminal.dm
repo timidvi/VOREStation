@@ -41,3 +41,5 @@
 /obj/machinery/power/terminal/overload(var/obj/machinery/power/source)
 	if(master)
 		master.overload(source)
+
+/var/global/datum/telltale/code_modules_power_terminal_dm = new("[__FILE__]")

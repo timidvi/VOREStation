@@ -5,3 +5,5 @@
 	icon_state = "tele0"
 	anchored = 1
 	density = 0
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_artifact_scanner_dm = new("[__FILE__]")

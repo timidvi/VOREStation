@@ -263,3 +263,5 @@ var/list/gear_datums = list()
 	for(var/datum/gear_tweak/gt in gear_tweaks)
 		gt.tweak_item(item, metadata["[gt]"])
 	return item
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_dm = new("[__FILE__]")

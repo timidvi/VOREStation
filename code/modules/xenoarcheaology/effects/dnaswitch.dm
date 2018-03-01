@@ -65,3 +65,5 @@
 						scramble(1, H, weakness * severity)
 					else
 						scramble(0, H, weakness * severity)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_dnaswitch_dm = new("[__FILE__]")

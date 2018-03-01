@@ -149,3 +149,5 @@
 		smallest.loc = src
 		picksToSort -= smallest
 	orient2hud()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_tools_pickaxe_dm = new("[__FILE__]")

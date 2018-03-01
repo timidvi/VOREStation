@@ -77,3 +77,5 @@
 	else
 		user << "<span class='info'>You weren't able to find an open space to go to.</span>"
 		busy = 0
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_passwall_dm = new("[__FILE__]")

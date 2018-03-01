@@ -58,3 +58,4 @@
 #define TRAIT_BIOLUM_COLOUR        37
 #define TRAIT_IMMUTABLE            38
 #define TRAIT_FLESH_COLOUR         39
+/var/global/datum/telltale/code_modules_hydroponics__hydro_setup_dm = new("[__FILE__]")

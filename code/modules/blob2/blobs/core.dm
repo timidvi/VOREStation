@@ -177,3 +177,4 @@ var/list/blob_cores = list()
 			continue
 		valid_types += BT
 	return pick(valid_types)
+/var/global/datum/telltale/code_modules_blob__blobs_core_dm = new("[__FILE__]")

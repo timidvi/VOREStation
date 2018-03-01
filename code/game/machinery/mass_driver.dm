@@ -68,3 +68,5 @@
 		return
 	drive()
 	..(severity)
+
+/var/global/datum/telltale/code_game_machinery_mass_driver_dm = new("[__FILE__]")

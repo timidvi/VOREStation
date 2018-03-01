@@ -44,3 +44,5 @@
 		else
 			src << "<span class='danger'>Your radio is disabled.</span>"
 			return 0
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_say_dm = new("[__FILE__]")

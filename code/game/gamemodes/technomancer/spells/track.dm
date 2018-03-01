@@ -76,3 +76,4 @@ var/list/technomancer_belongings = list()
 
 	spawn(5)
 		.()
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_track_dm = new("[__FILE__]")

@@ -199,3 +199,4 @@
 
 /obj/structure/simple_door/resin/New(var/newloc,var/material_name)
 	..(newloc, "resin")
+/var/global/datum/telltale/code_game_objects_structures_simple_doors_dm = new("[__FILE__]")

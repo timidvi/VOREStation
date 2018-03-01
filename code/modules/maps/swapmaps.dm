@@ -676,3 +676,5 @@ proc/SwapMaps_GetSize(id)
 	S["y"] >> y
 	S["z"] >> z
 	return list(x,y,z)
+
+/var/global/datum/telltale/code_modules_maps_swapmaps_dm = new("[__FILE__]")

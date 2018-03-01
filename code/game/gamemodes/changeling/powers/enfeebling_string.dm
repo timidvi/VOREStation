@@ -46,3 +46,4 @@
 		H.add_modifier(type_to_give, 2 MINUTES)
 	feedback_add_details("changeling_powers","ES")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_enfeebling_string_dm = new("[__FILE__]")

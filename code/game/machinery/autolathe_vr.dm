@@ -14,3 +14,5 @@
 /datum/category_item/autolathe/arms/classic_smg_9mmf
 	name = "SMG magazine (9mm flash)"
 	path = /obj/item/ammo_magazine/m9mml/flash
+
+/var/global/datum/telltale/code_game_machinery_autolathe_vr_dm = new("[__FILE__]")

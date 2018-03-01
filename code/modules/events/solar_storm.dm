@@ -50,3 +50,5 @@
 
 /datum/event/solar_storm/syndicate/radiate()
 	return
+
+/var/global/datum/telltale/code_modules_events_solar_storm_dm = new("[__FILE__]")

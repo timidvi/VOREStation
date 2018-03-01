@@ -3,3 +3,4 @@
 
 /obj/item/weapon/gun/energy/ionrifle/weak
 	projectile_type = /obj/item/projectile/ion/small
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_special_vr_dm = new("[__FILE__]")

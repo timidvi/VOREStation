@@ -368,3 +368,5 @@
 			selected_record = R
 			break
 	return selected_record
+
+/var/global/datum/telltale/code_game_machinery_computer_cloning_dm = new("[__FILE__]")

@@ -183,3 +183,4 @@
 	if(air_group)
 		return 0
 	return !density
+/var/global/datum/telltale/code_game_objects_effects_chem_foam_dm = new("[__FILE__]")

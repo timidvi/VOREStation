@@ -138,3 +138,4 @@
 	new /obj/item/clothing/under/lawyer/blue/skirt(src)
 	new /obj/item/device/tape/random(src)
 	new /obj/item/device/tape/random(src)
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_job_closets_dm = new("[__FILE__]")

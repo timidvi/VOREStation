@@ -114,3 +114,5 @@
 	icon_state = stored_mmi.icon_state
 
 	stored_mmi.brainmob.languages = owner.languages
+
+/var/global/datum/telltale/code_modules_organs_subtypes_machine_dm = new("[__FILE__]")

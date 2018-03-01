@@ -52,3 +52,5 @@
 		if (FF.plasma_temperature <= MINIMUM_PLASMA_TEMPERATURE)
 			icon_state = "mag_trap0"
 	return
+
+/var/global/datum/telltale/code_modules_power_fusion_magpower_dm = new("[__FILE__]")

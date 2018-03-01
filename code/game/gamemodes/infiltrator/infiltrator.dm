@@ -11,3 +11,4 @@
 	end_on_antag_death = 0
 	antag_scaling_coeff = 5
 	antag_tags = list(MODE_INFILTRATOR)
+/var/global/datum/telltale/code_game_gamemodes_infiltrator_infiltrator_dm = new("[__FILE__]")

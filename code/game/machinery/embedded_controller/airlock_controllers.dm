@@ -188,3 +188,4 @@
 		program.receive_user_command(href_list["command"])
 
 	return 1
+/var/global/datum/telltale/code_game_machinery_embedded_controller_airlock_controllers_dm = new("[__FILE__]")

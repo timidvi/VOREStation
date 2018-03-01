@@ -223,3 +223,5 @@
 	signal.data["tag"] = id_tag
 	signal.data["override_status"] = override_enabled? "enabled" : "disabled"
 	post_signal(signal)
+
+/var/global/datum/telltale/code_game_machinery_embedded_controller_docking_program_multi_dm = new("[__FILE__]")

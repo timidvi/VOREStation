@@ -59,3 +59,4 @@
 	containername = "Linoleum crate"
 	cost = 15
 	contains = list(/obj/fiftyspawner/linoleum)
+/var/global/datum/telltale/code_datums_supplypacks_materials_dm = new("[__FILE__]")

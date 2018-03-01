@@ -19,3 +19,5 @@
 		
  	if(!client)
  		handle_npc(src) 
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_diona_life_dm = new("[__FILE__]")

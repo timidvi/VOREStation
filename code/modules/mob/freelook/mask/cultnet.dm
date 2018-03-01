@@ -13,3 +13,5 @@
 
 /mob/living/silicon/provides_cult_vision()
 	return 0
+
+/var/global/datum/telltale/code_modules_mob_freelook_mask_cultnet_dm = new("[__FILE__]")

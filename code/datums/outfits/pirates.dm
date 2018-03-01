@@ -15,3 +15,5 @@
 	suit = /obj/item/clothing/suit/pirate
 	back = /obj/item/weapon/tank/jetpack/oxygen
 	flags = OUTFIT_HAS_JETPACK
+
+/var/global/datum/telltale/code_datums_outfits_pirates_dm = new("[__FILE__]")

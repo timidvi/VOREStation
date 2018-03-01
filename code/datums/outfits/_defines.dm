@@ -6,3 +6,4 @@
 #define OUTFIT_JOB_NAME(job_name) ("Job - " + job_name)
 #define OUTFIT_MILITARY(job_name) ("Military Uniform - " + job_name)
 #define OUTFIT_COSTUME(job_name) ("Costume - " + job_name)
+/var/global/datum/telltale/code_datums_outfits__defines_dm = new("[__FILE__]")

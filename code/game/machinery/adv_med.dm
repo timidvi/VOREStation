@@ -594,3 +594,5 @@
 		dat = "<font color='red'> Error: No Body Scanner connected.</font>"
 
 	printing_text = dat
+
+/var/global/datum/telltale/code_game_machinery_adv_med_dm = new("[__FILE__]")

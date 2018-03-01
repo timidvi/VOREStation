@@ -361,3 +361,5 @@
 
 
 
+
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_reagents_dm = new("[__FILE__]")

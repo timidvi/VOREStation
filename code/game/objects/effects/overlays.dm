@@ -88,3 +88,5 @@
 /obj/effect/overlay/snow/wall
 	icon_state = "snowwall"
 	layer = 5 //Same as lights so humans can stand under it
+
+/var/global/datum/telltale/code_game_objects_effects_overlays_dm = new("[__FILE__]")

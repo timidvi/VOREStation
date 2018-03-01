@@ -269,3 +269,5 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 #undef SSAIR_HOTSPOTS
 #undef SSAIR_ZONES
 #undef SSAIR_DONE
+
+/var/global/datum/telltale/code_controllers_subsystems_air_dm = new("[__FILE__]")

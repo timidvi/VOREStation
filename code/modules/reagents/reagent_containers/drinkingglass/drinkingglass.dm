@@ -164,3 +164,4 @@
 		return
 	else
 		..() //If they're splashed, no need to do anything else.
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_drinkingglass_drinkingglass_dm = new("[__FILE__]")

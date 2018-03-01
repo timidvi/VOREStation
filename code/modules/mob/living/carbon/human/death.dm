@@ -139,3 +139,4 @@
 	status_flags |= DISFIGURED
 	update_icons_body()
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_death_dm = new("[__FILE__]")

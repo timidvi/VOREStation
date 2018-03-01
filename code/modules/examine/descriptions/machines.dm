@@ -7,3 +7,4 @@
 	description_info = "This is a variant of the normal turret, utilizing an internal energy weapon.  This version can fire stun \
 	beams, or an xray laser, which is much harder for solid objects to stop than normal laser light, and can be configured remotely \
 	with a turret control switch.  This variant is also much more durable, and is hardened against electromagnetic pulses."
+/var/global/datum/telltale/code_modules_examine_descriptions_machines_dm = new("[__FILE__]")

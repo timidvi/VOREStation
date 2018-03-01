@@ -82,3 +82,5 @@
 		..()
 		hud = new /obj/item/clothing/glasses/hud/security(src)
 		return
+
+/var/global/datum/telltale/code_game_objects_items_robot_robot_items_dm = new("[__FILE__]")

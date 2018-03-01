@@ -50,3 +50,5 @@
 		overlays += image(icon, icon_state = "coat_cmo")
 	if (istype(coat, /obj/item/clothing/suit/storage/det_trench))
 		overlays += image(icon, icon_state = "coat_det")
+
+/var/global/datum/telltale/code_game_objects_structures_coathanger_dm = new("[__FILE__]")

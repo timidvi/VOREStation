@@ -77,3 +77,5 @@
 			if(uses <= 0)
 				user << "<span class='danger'>\The [src] has ran out of uses, and disintegrates from your hands.</span>"
 				qdel(src)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_devices_disposable_teleporter_dm = new("[__FILE__]")

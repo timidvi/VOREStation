@@ -248,3 +248,5 @@ note dizziness decrements automatically in the mob's Life() proc.
 			set_dir(D)
 			spintime -= speed
 	return
+
+/var/global/datum/telltale/code_modules_mob_animations_dm = new("[__FILE__]")

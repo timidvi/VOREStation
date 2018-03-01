@@ -151,3 +151,5 @@
 	src.program:initiate_undocking()
 
 */
+
+/var/global/datum/telltale/code_game_machinery_embedded_controller_airlock_docking_controller_multi_dm = new("[__FILE__]")

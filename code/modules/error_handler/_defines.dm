@@ -7,3 +7,5 @@
 
 // How long to wait between messaging admins about occurrences of a unique error
 #define ERROR_MSG_DELAY 50
+
+/var/global/datum/telltale/code_modules_error_handler_tilde_defines_dm = new("[__FILE__]")

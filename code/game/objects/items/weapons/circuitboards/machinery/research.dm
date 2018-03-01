@@ -86,3 +86,4 @@ obj/item/weapon/circuitboard/rdserver/attackby(obj/item/I as obj, mob/user as mo
 							/obj/item/weapon/stock_parts/manipulator = 1,
 							/obj/item/weapon/stock_parts/micro_laser = 1,
 							/obj/item/weapon/stock_parts/console_screen = 1)
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_research_dm = new("[__FILE__]")

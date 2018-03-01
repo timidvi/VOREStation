@@ -74,3 +74,5 @@
 /datum/reagent/vermicetol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(0, 110 * removed) //Not as potent as Kelotane, but lasts LONG.
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Chemistry_Reagents_Medicine_vr_dm = new("[__FILE__]")

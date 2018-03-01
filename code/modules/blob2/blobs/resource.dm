@@ -28,3 +28,4 @@
 		resource_delay = world.time + 4 SECONDS + (overmind.resource_blobs.len * 2.5) //4 seconds plus a quarter second for each resource blob the overmind has
 	else
 		resource_delay = world.time + 4 SECONDS
+/var/global/datum/telltale/code_modules_blob__blobs_resource_dm = new("[__FILE__]")

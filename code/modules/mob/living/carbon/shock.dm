@@ -36,3 +36,5 @@
 
 /mob/living/carbon/proc/handle_shock()
 	updateshock()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_shock_dm = new("[__FILE__]")

@@ -207,3 +207,5 @@
 	src.toocomplex = orig.toocomplex
 	src.sizemult = orig.sizemult
 	src.aflags = orig.aflags
+
+/var/global/datum/telltale/code_modules_resleeving_infocore_records_dm = new("[__FILE__]")

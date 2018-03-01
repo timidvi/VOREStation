@@ -147,3 +147,5 @@
 							/obj/item/weapon/stock_parts/micro_laser = 1
 							)
 
+
+/var/global/datum/telltale/code_modules_xenobio__machinery_slime_replicator_dm = new("[__FILE__]")

@@ -259,3 +259,5 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 		to_chat(user, "\The [src] has a secondary barrel loaded with \a [to_print]")
 	else
 		to_chat(user, "\The [src] has a secondary barrel that is empty.")
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_revolver_dm = new("[__FILE__]")

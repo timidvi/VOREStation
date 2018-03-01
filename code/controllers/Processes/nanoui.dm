@@ -17,3 +17,4 @@
 		else
 			catchBadType(NUI)
 			nanomanager.processing_uis -= NUI
+/var/global/datum/telltale/code_controllers_Processes_nanoui_dm = new("[__FILE__]")

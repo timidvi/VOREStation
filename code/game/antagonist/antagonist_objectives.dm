@@ -53,3 +53,5 @@
 	else
 		src << "<span class='notice'>You leave your ambitions behind.</span>"
 	log_and_message_admins("has set their ambitions to now be: [new_ambitions].")
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_objectives_dm = new("[__FILE__]")

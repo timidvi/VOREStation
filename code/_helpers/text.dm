@@ -389,3 +389,4 @@ proc/TextPreview(var/string,var/len=40)
 
 
 #define gender2text(gender) capitalize(gender)
+/var/global/datum/telltale/code__helpers_text_dm = new("[__FILE__]")

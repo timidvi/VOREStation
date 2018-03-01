@@ -373,3 +373,5 @@
 	else if (istype(power_source, /obj/item/weapon/cell))
 		cell.use(drained_energy)
 	return drained_energy
+
+/var/global/datum/telltale/code_modules_power_power_dm = new("[__FILE__]")

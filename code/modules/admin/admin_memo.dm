@@ -52,3 +52,4 @@
 
 #undef MEMOFILE
 #undef ENABLE_MEMOS
+/var/global/datum/telltale/code_modules_admin_admin_memo_dm = new("[__FILE__]")

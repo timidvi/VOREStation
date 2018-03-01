@@ -232,3 +232,5 @@
 			reagents.remove_reagent(R.id, reagents.maximum_volume/25)
 	update_name()
 	burn_time--
+
+/var/global/datum/telltale/code_modules_detectivework_tools_rag_dm = new("[__FILE__]")

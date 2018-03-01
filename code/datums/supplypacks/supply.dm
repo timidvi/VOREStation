@@ -135,3 +135,5 @@
 	cost = 15
 	containertype = /obj/structure/largecrate
 	containername = "Cargo Train Trolley Crate"
+
+/var/global/datum/telltale/code_datums_supplypacks_supply_dm = new("[__FILE__]")

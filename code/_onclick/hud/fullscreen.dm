@@ -112,3 +112,4 @@
 #undef BLIND_LAYER
 #undef DAMAGE_LAYER
 #undef CRIT_LAYER
+/var/global/datum/telltale/code__onclick_hud_fullscreen_dm = new("[__FILE__]")

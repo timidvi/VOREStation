@@ -127,3 +127,5 @@
 		/obj/item/rig_module/stealth_field,
 		/obj/item/rig_module/vision
 		)
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_suits_light_dm = new("[__FILE__]")

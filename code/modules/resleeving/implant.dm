@@ -150,3 +150,5 @@
 /obj/item/weapon/implant/backup/full
 	name = "khi backup implant"
 	desc = "A normal KHI wireless cortical stack with neutrino and QE transmission for constant-stream consciousness upload."
+
+/var/global/datum/telltale/code_modules_resleeving_implant_dm = new("[__FILE__]")

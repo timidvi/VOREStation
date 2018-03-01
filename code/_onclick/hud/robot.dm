@@ -279,3 +279,5 @@ var/obj/screen/robot_inventory
 	..()
 	if(modtype)
 		hands.icon_state = lowertext(modtype)
+
+/var/global/datum/telltale/code__onclick_hud_robot_dm = new("[__FILE__]")

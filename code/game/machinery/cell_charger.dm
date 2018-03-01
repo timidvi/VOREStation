@@ -114,3 +114,5 @@
 		update_icon()
 	else
 		update_use_power(1)
+
+/var/global/datum/telltale/code_game_machinery_cell_charger_dm = new("[__FILE__]")

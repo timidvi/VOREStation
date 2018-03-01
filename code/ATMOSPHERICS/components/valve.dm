@@ -312,3 +312,5 @@
 /obj/machinery/atmospherics/valve/examine(mob/user)
 	..()
 	user << "It is [open ? "open" : "closed"]."
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_valve_dm = new("[__FILE__]")

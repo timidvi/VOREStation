@@ -91,3 +91,5 @@ Slime definitions, Life and New live here.
 	resistances[TOX] = 1.5
 	GenerateChild()
 	return 1
+
+/var/global/datum/telltale/code_modules_xenobio__mob_slime_slime_dm = new("[__FILE__]")

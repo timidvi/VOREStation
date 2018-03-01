@@ -175,3 +175,5 @@
 						return
 				// If we're here, it couldn't find anyone with that name.
 				delayed_say("No... I don't know who to attack...", speaker)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_slime_life_dm = new("[__FILE__]")

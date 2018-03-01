@@ -55,3 +55,5 @@
 /obj/structure/closet/walllocker/emerglocker/east
 	pixel_x = 32
 	dir = EAST
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_walllocker_dm = new("[__FILE__]")

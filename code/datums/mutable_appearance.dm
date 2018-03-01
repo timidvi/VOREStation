@@ -17,3 +17,4 @@
 	MA.icon_state = icon_state
 	MA.layer = layer
 	return MA
+/var/global/datum/telltale/code_datums_mutable_appearance_dm = new("[__FILE__]")

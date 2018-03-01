@@ -81,3 +81,5 @@
 				assignedToBlock=blocks_assigned[G.block]
 			assignedToBlock.Add(G.name)
 			blocks_assigned[G.block]=assignedToBlock
+
+/var/global/datum/telltale/code_game_gamemodes_setupgame_dm = new("[__FILE__]")

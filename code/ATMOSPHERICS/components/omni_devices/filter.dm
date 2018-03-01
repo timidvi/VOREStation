@@ -262,3 +262,4 @@
 			initialize_directions |= P.dir
 			P.connect()
 	P.update = 1
+/var/global/datum/telltale/code_ATMOSPHERICS_components_omni_devices_filter_dm = new("[__FILE__]")

@@ -21,3 +21,4 @@
 		"Cookie" = /obj/item/weapon/reagent_containers/food/snacks/variable/cookie,
 		"Donut" = /obj/item/weapon/reagent_containers/food/snacks/variable/donut,
 		)
+/var/global/datum/telltale/code_game_machinery_kitchen_cooking_machines_oven_dm = new("[__FILE__]")

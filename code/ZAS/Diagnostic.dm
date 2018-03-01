@@ -98,3 +98,5 @@ client/proc/ZASSettings()
 	set category = "Debug"
 
 	vsc.SetDefault(mob)
+
+/var/global/datum/telltale/code_ZAS_Diagnostic_dm = new("[__FILE__]")

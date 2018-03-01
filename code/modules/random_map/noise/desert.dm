@@ -38,3 +38,5 @@
 				new /obj/structure/flora/bush(T)
 			else if(prob(20))
 				new /obj/structure/flora/tree/dead(T)
+
+/var/global/datum/telltale/code_modules_random_map_noise_desert_dm = new("[__FILE__]")

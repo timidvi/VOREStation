@@ -72,3 +72,5 @@
 	icon_state = "koi-swim"
 	icon_living = "koi-swim"
 	icon_dead = "koi-dead"
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_fish_dm = new("[__FILE__]")

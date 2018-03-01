@@ -174,3 +174,5 @@ var/list/datum/ai_icon/ai_icons
 	name = "Triumvirate Static"
 	alive_icon = "ai-static"
 	alive_light = "#020B2B"
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_icons_dm = new("[__FILE__]")

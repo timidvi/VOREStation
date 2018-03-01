@@ -194,3 +194,5 @@ var/global/list/tele_landmarks = list() // Terrible, but the alternative is loop
 	else
 		message_admins("ERROR: planetary_fall step trigger lacks a planet to fall onto.")
 		return
+
+/var/global/datum/telltale/code_game_objects_effects_step_triggers_dm = new("[__FILE__]")

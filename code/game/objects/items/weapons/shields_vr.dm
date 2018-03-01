@@ -19,3 +19,4 @@
 	attack_verb = list("shoved", "bashed")
 	var/cooldown = 0 //shield bash cooldown. based on world.time
 	allowed = list(/obj/item/weapon/melee/fluffstuff/awoosword)
+/var/global/datum/telltale/code_game_objects_items_weapons_shields_vr_dm = new("[__FILE__]")

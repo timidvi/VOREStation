@@ -136,3 +136,5 @@
 		return L
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_bear_dm = new("[__FILE__]")

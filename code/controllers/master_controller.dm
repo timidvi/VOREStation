@@ -120,3 +120,4 @@ datum/controller/game_controller/proc/setup_objects()
 			lift.initialize()
 			CHECK_SLEEP_MASTER
 	*/
+/var/global/datum/telltale/code_controllers_master_controller_dm = new("[__FILE__]")

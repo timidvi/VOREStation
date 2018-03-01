@@ -532,3 +532,5 @@
 
 	if(aircontents)
 		return aircontents
+
+/var/global/datum/telltale/code_modules_shuttles_shuttles_web_dm = new("[__FILE__]")

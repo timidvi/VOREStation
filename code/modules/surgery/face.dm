@@ -153,3 +153,4 @@
 	user.visible_message("<font color='red'>[user]'s hand slips, leaving a small burn on [target]'s face with \the [tool]!</font>", \
 	"<font color='red'>Your hand slips, leaving a small burn on [target]'s face with \the [tool]!</font>")
 	target.apply_damage(4, BURN, affected)
+/var/global/datum/telltale/code_modules_surgery_face_dm = new("[__FILE__]")

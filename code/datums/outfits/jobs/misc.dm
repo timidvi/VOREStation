@@ -9,3 +9,5 @@
 /decl/hierarchy/outfit/job/silicon/cyborg
 	name = OUTFIT_JOB_NAME("Cyborg")
 	suit = /obj/item/clothing/suit/cardborg
+
+/var/global/datum/telltale/code_datums_outfits_jobs_misc_dm = new("[__FILE__]")

@@ -19,3 +19,4 @@
 	pai.key = pai_key
 	card.setPersonality(pai)
 	pai.SetName(actual_pai_name)
+/var/global/datum/telltale/code__onclick_observer_vr_dm = new("[__FILE__]")

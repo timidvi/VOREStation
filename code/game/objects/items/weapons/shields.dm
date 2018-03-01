@@ -225,3 +225,4 @@
 
 	add_fingerprint(user)
 	return
+/var/global/datum/telltale/code_game_objects_items_weapons_shields_dm = new("[__FILE__]")

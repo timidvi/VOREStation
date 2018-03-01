@@ -235,3 +235,5 @@ PACK(cream,      /obj/item/weapon/reagent_containers/chem_disp_cartridge/cream, 
 
 #undef SEC_PACK
 #undef PACK
+
+/var/global/datum/telltale/code_modules_reagents_dispenser_supply_dm = new("[__FILE__]")

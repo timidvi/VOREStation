@@ -64,3 +64,4 @@
 	if(wearer.getCloneLoss())
 		wearer.adjustCloneLoss(-0.1)
 		wearer.nutrition = max(wearer.nutrition - 20, 0)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_devices_gloves_of_regen_dm = new("[__FILE__]")

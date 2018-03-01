@@ -374,3 +374,5 @@
 	..()
 	//reagents.add_reagent("adrenaline",5) //VOREStation Edit - No thanks.
 	reagents.add_reagent("hyperzine",10)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_syringes_dm = new("[__FILE__]")

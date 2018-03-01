@@ -61,3 +61,4 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	load_method = SINGLE_CASING|SPEEDLOADER
 	action_sound = 'sound/weapons/riflebolt.ogg'
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_boltaction_dm = new("[__FILE__]")

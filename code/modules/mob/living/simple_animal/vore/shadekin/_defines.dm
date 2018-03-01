@@ -11,3 +11,4 @@
 
 #define AB_PHASE_SHIFTED	0x1
 #define AB_SHADE_REGEN		0x2
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_shadekin_underscore_defines_dm = new("[__FILE__]")

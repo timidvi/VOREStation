@@ -263,3 +263,5 @@ Nah
 /obj/machinery/pipedispenser/disposal/orderable
 	anchored = 0
 	unwrenched = 1
+
+/var/global/datum/telltale/code_game_machinery_pipe_pipe_dispenser_dm = new("[__FILE__]")

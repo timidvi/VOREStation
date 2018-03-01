@@ -26,3 +26,5 @@
 		new /mob/living/simple_animal/solargrub_larva(get_turf(vent))
 		vents -= vent
 		spawncount--
+
+/var/global/datum/telltale/code_modules_events_grubinfestation_vr_dm = new("[__FILE__]")

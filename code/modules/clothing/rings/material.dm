@@ -45,3 +45,5 @@
 
 /obj/item/clothing/gloves/ring/material/glass/New(var/newloc)
 	..(newloc, "glass")
+
+/var/global/datum/telltale/code_modules_clothing_rings_material_dm = new("[__FILE__]")

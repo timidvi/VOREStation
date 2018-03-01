@@ -13,3 +13,5 @@
 		name = "Pun Pun"
 		real_name = name
 		w_uniform = new /obj/item/clothing/under/punpun(src)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_npcs_dm = new("[__FILE__]")

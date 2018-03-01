@@ -373,3 +373,5 @@
 
 	log_admin("[key_name(src)] mass modified [original_name]'s [variable] to [O.vars[variable]]")
 	message_admins("[key_name_admin(src)] mass modified [original_name]'s [variable] to [O.vars[variable]]", 1)
+
+/var/global/datum/telltale/code_modules_admin_verbs_massmodvar_dm = new("[__FILE__]")

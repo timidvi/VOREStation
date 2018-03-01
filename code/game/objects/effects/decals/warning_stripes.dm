@@ -9,3 +9,5 @@
 	I.color=color
 	T.overlays += I
 	qdel(src)
+
+/var/global/datum/telltale/code_game_objects_effects_decals_warning_stripes_dm = new("[__FILE__]")

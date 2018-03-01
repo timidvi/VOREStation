@@ -104,3 +104,5 @@ var/image/no_ceiling_image = null
 		I.layer = layer
 		flooring_cache[cache_key] = I
 	return flooring_cache[cache_key]
+
+/var/global/datum/telltale/code_game_turfs_simulated_floor_icon_dm = new("[__FILE__]")

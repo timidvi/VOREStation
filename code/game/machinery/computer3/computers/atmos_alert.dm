@@ -97,3 +97,5 @@
 					minor_air_alarms -= zone
 
 		computer.updateUsrDialog()
+
+/var/global/datum/telltale/code_game_machinery_computer__computers_atmos_alert_dm = new("[__FILE__]")

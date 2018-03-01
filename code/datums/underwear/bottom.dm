@@ -68,3 +68,4 @@
 	name = "Long John Bottoms"
 	icon_state = "ljonb"
 	has_color = TRUE
+/var/global/datum/telltale/code_datums_underwear_bottom_dm = new("[__FILE__]")

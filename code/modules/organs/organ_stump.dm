@@ -26,3 +26,5 @@
 
 /obj/item/organ/external/stump/is_usable()
 	return 0
+
+/var/global/datum/telltale/code_modules_organs_organ_stump_dm = new("[__FILE__]")

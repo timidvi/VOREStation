@@ -15,3 +15,4 @@
 
 /turf/simulated/floor/flesh/ex_act(severity)
 	return
+/var/global/datum/telltale/code_game_turfs_simulated_floor_types_vr_dm = new("[__FILE__]")

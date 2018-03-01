@@ -9,3 +9,5 @@
 			continue
 		if(H.client && H.appendicitis())
 			break
+
+/var/global/datum/telltale/code_modules_events_spontaneous_appendicitis_vr_dm = new("[__FILE__]")

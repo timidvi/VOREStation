@@ -160,3 +160,4 @@
 	damage = damage * damage_mod
 
 	return damage
+/var/global/datum/telltale/code_modules_mob_living_carbon_carbon_defense_dm = new("[__FILE__]")

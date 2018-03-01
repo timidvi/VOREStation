@@ -1613,3 +1613,5 @@ var/global/list/damage_icon_parts = list()
 #undef FIRE_LAYER
 #undef WATER_LAYER
 #undef TOTAL_LAYERS
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_update_icons_dm = new("[__FILE__]")

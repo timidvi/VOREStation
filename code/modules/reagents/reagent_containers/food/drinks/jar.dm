@@ -23,3 +23,5 @@
 		name = "empty jar"
 		desc = "A jar. You're not sure what it's supposed to hold."
 		return
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_drinks_jar_dm = new("[__FILE__]")

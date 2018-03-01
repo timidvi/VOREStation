@@ -110,3 +110,5 @@
 	icon_state = "microscope"
 	if(sample)
 		icon_state += "slide"
+
+/var/global/datum/telltale/code_modules_detectivework_microscope_microscope_dm = new("[__FILE__]")

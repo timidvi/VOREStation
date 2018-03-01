@@ -7,3 +7,5 @@
 #define PLANE_AUGMENTED				40 //Augmented-reality plane
 
 #define ABOVE_WINDOW_LAYER 3.25	//Above full tile windows so wall items are clickable
+
+/var/global/datum/telltale/code___defines__planes_layers_vr_dm = new("[__FILE__]")

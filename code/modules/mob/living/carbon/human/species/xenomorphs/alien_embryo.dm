@@ -159,3 +159,5 @@ Des: Removes the alien infection image from all aliens in the world located in p
 						if(dd_hasprefix_case(I.icon_state, "infected"))
 							qdel(I)
 */
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_xenomorphs_alien_embryo_dm = new("[__FILE__]")

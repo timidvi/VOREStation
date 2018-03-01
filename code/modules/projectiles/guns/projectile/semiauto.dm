@@ -19,3 +19,5 @@
 		icon_state = initial(icon_state)
 	else
 		icon_state = "[initial(icon_state)]-e"
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_semiauto_dm = new("[__FILE__]")

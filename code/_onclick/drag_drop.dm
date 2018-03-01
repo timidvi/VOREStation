@@ -26,3 +26,5 @@
 // recieve a mousedrop
 /atom/proc/MouseDrop_T(atom/dropping, mob/user)
 	return
+
+/var/global/datum/telltale/code__onclick_drag_drop_dm = new("[__FILE__]")

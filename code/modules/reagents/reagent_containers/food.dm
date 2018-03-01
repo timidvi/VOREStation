@@ -36,3 +36,5 @@
 
 #undef CELLS
 #undef CELLSIZE
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_dm = new("[__FILE__]")

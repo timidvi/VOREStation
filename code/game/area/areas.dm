@@ -339,3 +339,5 @@ var/list/mob/living/forced_ambiance_list = new
 
 /area/proc/shuttle_departed()
 	return TRUE
+
+/var/global/datum/telltale/code_game_area_areas_dm = new("[__FILE__]")

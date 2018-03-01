@@ -93,3 +93,5 @@
 /obj/item/weapon/evidencebag/examine(mob/user)
 	..(user)
 	if (stored_item) user.examinate(stored_item)
+
+/var/global/datum/telltale/code_modules_detectivework_tools_evidencebag_dm = new("[__FILE__]")

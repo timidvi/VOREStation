@@ -40,3 +40,5 @@ var/datum/controller/process/alarm/alarm_manager
 /datum/controller/process/alarm/statProcess()
 	..()
 	stat(null, "[number_of_active_alarms()] alarm\s")
+
+/var/global/datum/telltale/code_controllers_Processes_alarm_dm = new("[__FILE__]")

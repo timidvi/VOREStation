@@ -32,3 +32,5 @@
 	name = "magazine (.44 rubber)"
 	path =/obj/item/ammo_magazine/m44/rubber
 	hidden = 1
+
+/var/global/datum/telltale/code_datums_autolathe_arms_vr_dm = new("[__FILE__]")

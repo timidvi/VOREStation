@@ -102,3 +102,4 @@
 			log_and_message_admins("has blinked [AM] away.")
 		else
 			to_chat(user, "<span class='warning'>You need more energy to blink [AM] away!</span>")
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_blink_dm = new("[__FILE__]")

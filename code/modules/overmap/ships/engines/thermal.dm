@@ -97,3 +97,4 @@
 
 		spawn(20)
 			loc = null
+/var/global/datum/telltale/code_modules_overmap_ships_engines_thermal_dm = new("[__FILE__]")

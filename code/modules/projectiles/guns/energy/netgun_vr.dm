@@ -32,3 +32,5 @@
 		overlays += "[initial(icon_state)]_cell"
 		overlays += "[initial(icon_state)]_[ratio]"
 		overlays += "[initial(icon_state)]_[mode_name]"
+
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_netgun_vr_dm = new("[__FILE__]")

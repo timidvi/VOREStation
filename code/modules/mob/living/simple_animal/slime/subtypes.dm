@@ -745,3 +745,4 @@
 /mob/living/simple_animal/slime/rainbow/kendrick/New()
 	pacify()
 	..()
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_slime_subtypes_dm = new("[__FILE__]")

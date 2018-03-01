@@ -72,3 +72,4 @@
 	to_chat(user, "It is [enabled ? "enabled" : "disabled"].")
 	if(alarm)
 		to_chat(user, "A red LED labeled \"Proximity Alarm\" is blinking on the control panel.")
+/var/global/datum/telltale/code_modules_shieldgen_shield_diffuser_dm = new("[__FILE__]")

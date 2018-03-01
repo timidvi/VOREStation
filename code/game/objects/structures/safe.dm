@@ -186,3 +186,5 @@ obj/structure/safe/ex_act(severity)
 
 /obj/structure/safe/floor/hides_under_flooring()
 	return 1
+
+/var/global/datum/telltale/code_game_objects_structures_safe_dm = new("[__FILE__]")

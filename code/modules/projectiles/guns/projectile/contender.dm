@@ -41,3 +41,4 @@
 	desc = "A modified replica of an ancient one-shot hand-cannon, reinvented with a tactical look. For when you really want to make a hole. This one has been modified to work almost like a bolt-action. Uses .357 rounds."
 	icon_state = "pockrifle_b"
 	icon_retracted = "pockrifle_b-empty"
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_contender_dm = new("[__FILE__]")

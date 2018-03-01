@@ -406,3 +406,5 @@
 
 /obj/machinery/power/supermatter/shard/announce_warning() //Shards don't get announcements
 	return
+
+/var/global/datum/telltale/code_modules_power_supermatter_supermatter_dm = new("[__FILE__]")

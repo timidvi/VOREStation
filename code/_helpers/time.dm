@@ -135,3 +135,4 @@ var/round_start_time = 0
 	while (TICK_USAGE > min(TICK_LIMIT_TO_RUN, Master.current_ticklimit))
 
 #undef DELTA_CALC
+/var/global/datum/telltale/code__helpers_time_dm = new("[__FILE__]")

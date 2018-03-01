@@ -295,3 +295,4 @@ var/list/blobs = list()
 
 /turf/simulated/wall/blob_act()
 	take_damage(100)
+/var/global/datum/telltale/code_modules_blob__blobs_base_blob_dm = new("[__FILE__]")

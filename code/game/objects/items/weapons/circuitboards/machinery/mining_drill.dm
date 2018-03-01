@@ -19,3 +19,5 @@
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_DATA = 1, TECH_ENGINEERING = 1)
 	req_components = list()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_mining_drill_dm = new("[__FILE__]")

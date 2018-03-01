@@ -327,3 +327,5 @@
 		return 1
 	else
 		return 0
+
+/var/global/datum/telltale/code_modules_recycling_disposal_construction_dm = new("[__FILE__]")

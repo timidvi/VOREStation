@@ -22,3 +22,5 @@
 	name = T_BOARD("MRSPACMAN-type generator")
 	build_path = /obj/machinery/power/port_gen/pacman/mrs
 	origin_tech = list(TECH_DATA = 3, TECH_POWER = 5, TECH_ENGINEERING = 5)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_pacman_dm = new("[__FILE__]")

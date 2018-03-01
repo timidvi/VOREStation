@@ -90,3 +90,5 @@ proc/trigger_side_effect(mob/living/carbon/human/H)
 		if(!istype(H)) return
 		H.SetWeakened(0)
 		S.finish(H)
+
+/var/global/datum/telltale/code_modules_genetics_side_effects_dm = new("[__FILE__]")

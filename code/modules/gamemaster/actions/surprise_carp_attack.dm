@@ -51,3 +51,4 @@
 			C.target_mob = victim
 			C.stance = STANCE_ATTACK
 		number_of_carp--
+/var/global/datum/telltale/code_modules_gamemaster_actions_surprise_carp_attack_dm = new("[__FILE__]")

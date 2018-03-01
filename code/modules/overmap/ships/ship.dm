@@ -114,3 +114,5 @@
 			Move(newloc)
 		if(rotate)	
 			rotate(get_heading())
+
+/var/global/datum/telltale/code_modules_overmap_ships_ship_dm = new("[__FILE__]")

@@ -66,3 +66,4 @@
 		user << "You have a very bad feeling about this."
 
 	return
+/var/global/datum/telltale/code_game_machinery_wishgranter_dm = new("[__FILE__]")

@@ -339,3 +339,5 @@
 	"<font color='red'>Your hand slips, sawwing through the bone in [target]'s [affected.name] with \the [tool]!</font>")
 	affected.createwound(CUT, 30)
 	affected.fracture()
+
+/var/global/datum/telltale/code_modules_surgery_generic_dm = new("[__FILE__]")

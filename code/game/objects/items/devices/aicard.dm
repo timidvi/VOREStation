@@ -155,3 +155,5 @@
 	var/obj/item/weapon/rig/rig = src.get_rig()
 	if(istype(rig))
 		rig.forced_move(direction, user)
+
+/var/global/datum/telltale/code_game_objects_items_devices_aicard_dm = new("[__FILE__]")

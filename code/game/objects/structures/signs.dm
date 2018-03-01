@@ -790,3 +790,4 @@
 	name = "I.C.V."
 	desc = "The charred name of a cargo ship of some description."
 	icon_state = "poi_engine2"
+/var/global/datum/telltale/code_game_objects_structures_signs_dm = new("[__FILE__]")

@@ -254,3 +254,5 @@ var/global/list/grub_machine_overlays = list()
 				to_chat(user, "<span class='warning'>You disturb a grub nesting in \the [O]!</span>")
 				return
 	return ..()
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_solargrub_larva_dm = new("[__FILE__]")

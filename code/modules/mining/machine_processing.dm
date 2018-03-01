@@ -242,3 +242,5 @@
 			continue
 
 	console.updateUsrDialog()
+
+/var/global/datum/telltale/code_modules_mining_machine_processing_dm = new("[__FILE__]")

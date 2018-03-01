@@ -209,3 +209,5 @@
 
 /obj/effect/blob/shield/CanPass(var/atom/movable/mover, var/turf/target, var/height = 0, var/air_group = 0)
 	return !density
+
+/var/global/datum/telltale/code_modules_blob_blob_dm = new("[__FILE__]")

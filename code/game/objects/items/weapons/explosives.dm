@@ -91,3 +91,5 @@
 
 /obj/item/weapon/plastique/attack(mob/M as mob, mob/user as mob, def_zone)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_explosives_dm = new("[__FILE__]")

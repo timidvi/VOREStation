@@ -24,3 +24,4 @@
 	laws = new /datum/ai_laws/gravekeeper()
 
 	playsound(loc, 'sound/mecha/nominalsyndi.ogg', 75, 0)
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_subtypes_gravekeeper_dm = new("[__FILE__]")

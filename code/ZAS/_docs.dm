@@ -26,3 +26,5 @@ Notes for people who used ZAS before:
 		var/zone/connected_zone = edge.get_connected_zone(zone)
 
 */
+
+/var/global/datum/telltale/code_ZAS__docs_dm = new("[__FILE__]")

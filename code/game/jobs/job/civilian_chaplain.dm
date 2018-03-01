@@ -151,3 +151,5 @@
 
 /datum/job/chaplain/equip_preview(var/mob/living/carbon/human/H, var/alt_title)
 	return equip(H, alt_title, FALSE)
+
+/var/global/datum/telltale/code_game_jobs_job_civilian_chaplain_dm = new("[__FILE__]")

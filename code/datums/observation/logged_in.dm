@@ -19,3 +19,5 @@ var/decl/observ/logged_in/logged_in_event = new()
 /mob/Login()
 	..()
 	logged_in_event.raise_event(src)
+
+/var/global/datum/telltale/code_datums_observation_logged_in_dm = new("[__FILE__]")

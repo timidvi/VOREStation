@@ -1211,3 +1211,4 @@ I said no!
 /datum/recipe/cake/brain
 	items = list(/obj/item/organ/internal/brain)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/braincake
+/var/global/datum/telltale/code_modules_food_recipes_microwave_dm = new("[__FILE__]")

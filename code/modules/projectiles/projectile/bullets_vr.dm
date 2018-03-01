@@ -19,3 +19,4 @@
 	damage = 10
 	taser_effect = 1
 	agony = 100
+/var/global/datum/telltale/code_modules_projectiles_projectile_bullets_vr_dm = new("[__FILE__]")

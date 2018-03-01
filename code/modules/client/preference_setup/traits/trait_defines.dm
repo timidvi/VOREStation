@@ -251,3 +251,5 @@
 	desc = "Boilerplate racism for jellos goes here."
 	mutually_exclusive = list(/datum/trait/modifier/mental/xenophobe)
 */
+
+/var/global/datum/telltale/code_modules_client_preference_setup_traits_trait_defines_dm = new("[__FILE__]")

@@ -109,3 +109,5 @@
 	usr << run( file(path) )
 	feedback_add_details("admin_verb","SSAL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
+
+/var/global/datum/telltale/code_modules_admin_verbs_getlogs_dm = new("[__FILE__]")

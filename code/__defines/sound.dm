@@ -54,3 +54,5 @@
 #define SMALL_SOFTFLOOR ROOM
 #define ASTEROID CAVE
 #define SPACE UNDERWATER
+
+/var/global/datum/telltale/code___defines_sound_dm = new("[__FILE__]")

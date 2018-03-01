@@ -148,3 +148,5 @@
 	heat_proof = 1 //just so repairing them doesn't try to fireproof something that never takes fire damage
 
 
+
+/var/global/datum/telltale/code_game_machinery_doors_door_vr_dm = new("[__FILE__]")

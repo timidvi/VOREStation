@@ -68,3 +68,5 @@
 		L.adjustBruteLoss(5)
 		L.adjustBruteLoss(10)
 		L.adjustBruteLoss(15)
+
+/var/global/datum/telltale/code_modules_shuttles_crashes_dm = new("[__FILE__]")

@@ -210,3 +210,4 @@
 			coinsToProduce = temp_coins
 	src.updateUsrDialog()
 	return
+/var/global/datum/telltale/code_modules_mining_mint_dm = new("[__FILE__]")

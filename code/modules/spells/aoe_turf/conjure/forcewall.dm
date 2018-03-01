@@ -50,3 +50,5 @@
 	new /obj/effect/forcefield/cult(get_turf(src))
 	qdel(src)
 	return
+
+/var/global/datum/telltale/code_modules_spells_aoe_turf_conjure_forcewall_dm = new("[__FILE__]")

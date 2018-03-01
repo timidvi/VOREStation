@@ -46,3 +46,5 @@
 	item_state_slots = list(slot_r_hand_str = "jackboots", slot_l_hand_str = "jackboots")
 	siemens_coefficient = 0.6
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 30, bomb = 30, bio = 0, rad = 0)
+
+/var/global/datum/telltale/code_modules_clothing_shoes_leg_guards_dm = new("[__FILE__]")

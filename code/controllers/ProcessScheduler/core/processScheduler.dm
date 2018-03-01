@@ -232,3 +232,5 @@ var/global/datum/controller/processScheduler/processScheduler
 
 /datum/controller/processScheduler/proc/getProcess(var/process_name)
 	return nameToProcessMap[process_name]
+
+/var/global/datum/telltale/code_controllers_ProcessScheduler_core_processScheduler_dm = new("[__FILE__]")

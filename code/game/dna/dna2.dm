@@ -470,3 +470,5 @@ var/global/list/datum/dna/gene/dna_genes[0]
 
 	unique_enzymes = md5(character.real_name)
 	reg_dna[unique_enzymes] = character.real_name
+
+/var/global/datum/telltale/code_game_dna_dna__dm = new("[__FILE__]")

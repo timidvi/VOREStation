@@ -32,3 +32,4 @@ var/list/obj/effect/bump_teleporter/BUMP_TELEPORTERS = list()
 		if(BT.id == src.id_target)
 			usr.loc = BT.loc	//Teleport to location with correct id.
 			return
+/var/global/datum/telltale/code_game_objects_effects_bump_teleporter_dm = new("[__FILE__]")

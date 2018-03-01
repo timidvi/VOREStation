@@ -7,3 +7,4 @@
 
 /datum/gm_action/waste_disposal/get_weight()
 	return metric.count_people_in_department(ROLE_CARGO) * 50
+/var/global/datum/telltale/code_modules_gamemaster_actions_waste_disposal_dm = new("[__FILE__]")

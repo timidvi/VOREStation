@@ -36,3 +36,4 @@
 	icon_state = "sheet-rglass"
 	default_type = "rglass"
 	charge_costs = list(500, 1000)
+/var/global/datum/telltale/code_modules_materials_material_synth_dm = new("[__FILE__]")

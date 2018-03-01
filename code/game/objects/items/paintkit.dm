@@ -268,3 +268,4 @@
 	new_name = "Durand \"Gaoler\""
 	new_desc = "A bulky silver Gygax exosuit. The extra armour appears to be painted on, but it's very shiny."
 	new_icon = "recitence"
+/var/global/datum/telltale/code_game_objects_items_paintkit_dm = new("[__FILE__]")

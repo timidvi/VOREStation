@@ -21,3 +21,4 @@
 /datum/event/grid_check/end()
 	power_restore()
 */
+/var/global/datum/telltale/code_modules_events_grid_check_dm = new("[__FILE__]")

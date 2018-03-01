@@ -138,3 +138,5 @@
 /datum/gear/utility/wheelchair/color/New()
 	..()
 	gear_tweaks = list(gear_tweak_free_color_choice)
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_utility_dm = new("[__FILE__]")

@@ -672,3 +672,4 @@
 #undef FUSION_HEAT_CAP
 #undef FUSION_MAX_ENVIRO_HEAT
 #undef PLASMA_TEMP_RADIATION_DIVISIOR
+/var/global/datum/telltale/code_modules_power_fusion_core_core_field_dm = new("[__FILE__]")

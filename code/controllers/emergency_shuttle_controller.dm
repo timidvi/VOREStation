@@ -274,3 +274,4 @@ var/global/datum/emergency_shuttle_controller/emergency_shuttle
 		S.direction = spawndir
 		spawn()
 			S.startmove()
+/var/global/datum/telltale/code_controllers_emergency_shuttle_controller_dm = new("[__FILE__]")

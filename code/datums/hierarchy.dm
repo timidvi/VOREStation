@@ -28,3 +28,4 @@
 
 /decl/hierarchy/dd_SortValue()
 	return name
+/var/global/datum/telltale/code_datums_hierarchy_dm = new("[__FILE__]")

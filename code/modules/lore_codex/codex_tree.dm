@@ -138,3 +138,4 @@
 		usr << browse(null, "window=the_empress_protects")
 		return
 	display(usr)
+/var/global/datum/telltale/code_modules_lore_codex_codex_tree_dm = new("[__FILE__]")

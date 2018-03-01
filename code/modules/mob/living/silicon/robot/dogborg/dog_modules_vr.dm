@@ -387,3 +387,5 @@
 	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
 	if(prob(25))
 		T.apply_effect(3, WEAKEN, armor_block)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_dogborg_dog_modules_vr_dm = new("[__FILE__]")

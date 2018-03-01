@@ -255,3 +255,5 @@ var/syndicate_elite_shuttle_timeleft = 0
 	add_fingerprint(usr)
 	updateUsrDialog()
 	return
+
+/var/global/datum/telltale/code_game_machinery_computer_syndicate_specops_shuttle_dm = new("[__FILE__]")

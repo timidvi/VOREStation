@@ -114,3 +114,5 @@ var/list/ai_status_emotions = list(
 			overlays.Cut()
 	else
 		update()
+
+/var/global/datum/telltale/code_game_machinery_status_display_ai_dm = new("[__FILE__]")

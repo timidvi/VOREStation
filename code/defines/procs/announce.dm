@@ -115,3 +115,5 @@ datum/announcement/proc/Log(message as text, message_title as text)
 
 /proc/AnnounceArrivalSimple(var/name, var/rank = "visitor", var/join_message = "will arrive at the station shortly") //VOREStation Edit - Remove shuttle reference
 	global_announcer.autosay("[name], [rank], [join_message].", "Arrivals Announcement Computer")
+
+/var/global/datum/telltale/code_defines_procs_announce_dm = new("[__FILE__]")

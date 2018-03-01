@@ -157,3 +157,5 @@ proc/spawn_money(var/sum, spawnloc, mob/living/carbon/human/human_user as mob)
 	..(user)
 	if (!(user in view(2)) && user!=src.loc) return
 	user << "<font color='blue'>Charge card's owner: [src.owner_name]. Thalers remaining: [src.worth].</font>"
+
+/var/global/datum/telltale/code_modules_economy_cash_dm = new("[__FILE__]")

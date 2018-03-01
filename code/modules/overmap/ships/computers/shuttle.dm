@@ -137,3 +137,4 @@
 		shuttle.force_launch(src)
 	else if(href_list["cancel"])
 		shuttle.cancel_launch(src)
+/var/global/datum/telltale/code_modules_overmap_ships_computers_shuttle_dm = new("[__FILE__]")

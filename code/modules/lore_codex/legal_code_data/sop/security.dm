@@ -117,3 +117,4 @@
 	name = "Hostage Response"
 	data = "In the event of a serious hostage situation, the hostage's life is the highest priority.  Do not do anything that will present \
 	undue risk to the hostage, or otherwise will get them killed.  Negotiation should be the first response, as opposed to violently rushing the hostage taker."
+/var/global/datum/telltale/code_modules_lore_codex_legal_code_data_sop_security_dm = new("[__FILE__]")

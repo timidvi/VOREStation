@@ -159,3 +159,5 @@
 
 
 	return
+
+/var/global/datum/telltale/code_modules_assembly_proximity_dm = new("[__FILE__]")

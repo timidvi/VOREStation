@@ -65,3 +65,5 @@
 		var/mob/living/L = AM
 		message_admins("\The [AM] fell out of the sky.")
 		L.fall_impact(T, 42, 90, FALSE, TRUE)	//You will not be defibbed from this.
+
+/var/global/datum/telltale/code_game_turfs_unsimulated_sky_vr_dm = new("[__FILE__]")

@@ -19,3 +19,4 @@
 	w_class = ITEMSIZE_NORMAL
 	max_w_class = ITEMSIZE_SMALL
 	max_storage_space = ITEMSIZE_COST_SMALL * 4
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_briefcase_dm = new("[__FILE__]")

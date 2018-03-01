@@ -31,3 +31,4 @@
 		src << "<span class='notice'>Our cryogenic string is ready to be used once more.</span>"
 		src.verbs |= /mob/proc/changeling_cryo_sting
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_cryo_sting_dm = new("[__FILE__]")

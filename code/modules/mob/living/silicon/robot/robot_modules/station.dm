@@ -908,3 +908,5 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/storage/bag/ore(src)
 	src.modules += new /obj/item/weapon/storage/bag/sheetsnatcher/borg(src)
 	src.emag = new /obj/item/weapon/pickaxe/diamonddrill(src)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_modules_station_dm = new("[__FILE__]")

@@ -388,3 +388,4 @@ This saves us from having to call add_fingerprint() any time something is put in
 		if(istype(I, typepath))
 			return I
 	return FALSE
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_inventory_dm = new("[__FILE__]")

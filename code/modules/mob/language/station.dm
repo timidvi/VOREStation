@@ -259,3 +259,4 @@
 "ad", "al", "an", "ar", "as", "ci", "co", "de", "do", "el", "en", "er", "es", "ie", "in", "la", "lo", "me", "na",
 "no", "nt", "or", "os", "pa", "qu", "ra", "re", "ro", "se", "st", "ta", "te", "to", "ue", "un",
 "tod", "ser", "su", "no", "nue", "el")
+/var/global/datum/telltale/code_modules_mob_language_station_dm = new("[__FILE__]")

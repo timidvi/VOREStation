@@ -20,3 +20,5 @@
 		if(prob(1))
 			owner.custom_pain("A stabbing pain rolls through your chest!",1)
 			owner.apply_damage(damage = 25, damagetype = HALLOSS, def_zone = parent_organ)
+
+/var/global/datum/telltale/code_modules_organs_internal_heart_dm = new("[__FILE__]")

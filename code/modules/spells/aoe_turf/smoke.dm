@@ -15,3 +15,5 @@
 	smoke_amt = 5
 
 	hud_state = "wiz_smoke"
+
+/var/global/datum/telltale/code_modules_spells_aoe_turf_smoke_dm = new("[__FILE__]")

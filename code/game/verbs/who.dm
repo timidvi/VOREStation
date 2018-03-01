@@ -184,3 +184,5 @@
 		msg += "\n<b> Current Event Managers ([num_event_managers_online]):</b>\n" + eventMmsg
 
 	src << msg
+
+/var/global/datum/telltale/code_game_verbs_who_dm = new("[__FILE__]")

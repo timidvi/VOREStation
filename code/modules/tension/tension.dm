@@ -129,3 +129,5 @@
 		tension *= 2
 
 	return tension
+
+/var/global/datum/telltale/code_modules_tension_tension_dm = new("[__FILE__]")

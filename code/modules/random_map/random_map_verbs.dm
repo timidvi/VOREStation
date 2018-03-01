@@ -106,3 +106,5 @@
 		log_admin("[key_name(usr)] has applied [overlay_map.name] to [base_map.name] at x[tx],y[ty].")
 		overlay_map.overlay_with(base_map,tx,ty)
 		base_map.display_map(usr)
+
+/var/global/datum/telltale/code_modules_random_map_random_map_verbs_dm = new("[__FILE__]")

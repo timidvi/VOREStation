@@ -18,3 +18,5 @@
 /datum/trait/proc/remove(var/datum/species/S)
 	ASSERT(S)
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_traits_vr_trait_dm = new("[__FILE__]")

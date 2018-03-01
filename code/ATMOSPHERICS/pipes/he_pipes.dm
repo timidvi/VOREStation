@@ -153,3 +153,5 @@
 
 	update_icon()
 	return
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_he_pipes_dm = new("[__FILE__]")

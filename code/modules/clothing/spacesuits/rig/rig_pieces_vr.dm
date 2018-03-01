@@ -332,3 +332,5 @@
 	phoronproof = 1
 /obj/item/clothing/suit/space/rig
 	phoronproof = 1
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_rig_pieces_vr_dm = new("[__FILE__]")

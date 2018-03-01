@@ -28,3 +28,5 @@
 /obj/item/device/pipe_painter/examine(mob/user)
 	..(user)
 	user << "It is in [mode] mode."
+
+/var/global/datum/telltale/code_game_objects_items_devices_pipe_painter_dm = new("[__FILE__]")

@@ -212,3 +212,5 @@ var/prison_shuttle_timeleft = 0
 		hacked = 1
 		user << "<span class='notice'>You disable the lock.</span>"
 		return 1
+
+/var/global/datum/telltale/code_game_machinery_computer_prisonshuttle_dm = new("[__FILE__]")

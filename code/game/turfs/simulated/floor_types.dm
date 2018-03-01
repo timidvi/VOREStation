@@ -253,3 +253,4 @@
 /turf/simulated/shuttle/floor/voidcraft/external/dark
 
 /turf/simulated/shuttle/floor/voidcraft/external/light
+/var/global/datum/telltale/code_game_turfs_simulated_floor_types_dm = new("[__FILE__]")

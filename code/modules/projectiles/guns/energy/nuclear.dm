@@ -65,3 +65,5 @@
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun, modifystate="nucgunstun", charge_cost = 240),
 		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam, modifystate="nucgunkill", charge_cost = 480),
 		)
+
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_nuclear_dm = new("[__FILE__]")

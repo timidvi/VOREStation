@@ -47,3 +47,4 @@ var/XENOMORPH_EGG 	= "Xenomorph"
 			return TOPIC_REFRESH
 	else
 		return
+/var/global/datum/telltale/code_modules_client_preference_setup_vore____egg_dm = new("[__FILE__]")

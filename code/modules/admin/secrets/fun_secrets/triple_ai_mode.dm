@@ -11,3 +11,5 @@
 	. = ..()
 	if(.)
 		user.client.triple_ai()
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_triple_ai_mode_dm = new("[__FILE__]")

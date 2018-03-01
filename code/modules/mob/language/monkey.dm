@@ -72,3 +72,4 @@
 	machine_understands = 0
 	space_chance = 100
 	syllables = list("chirp", "squawk", "tweet")
+/var/global/datum/telltale/code_modules_mob_language_monkey_dm = new("[__FILE__]")

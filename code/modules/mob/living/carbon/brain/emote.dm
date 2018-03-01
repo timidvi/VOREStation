@@ -78,3 +78,4 @@
 		else if (m_type & 2)
 			for (var/mob/O in hearers(src.loc, null))
 				O.show_message(message, m_type)
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_emote_dm = new("[__FILE__]")

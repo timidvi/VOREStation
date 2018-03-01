@@ -12,3 +12,5 @@
 			dat += "<tr><td>[H]</td><td>[H.dna.unique_enzymes]</td><td>[H.b_type]</td></tr>"
 	dat += "</table>"
 	user << browse(dat, "window=DNA;size=440x410")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_list_dna_dm = new("[__FILE__]")

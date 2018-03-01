@@ -10,3 +10,4 @@
 	antag_tags = list(MODE_TECHNOMANCER, MODE_CULTIST)
 	require_all_templates = 1
 	votable = 1
+/var/global/datum/telltale/code_game_gamemodes_mixed_conflux_dm = new("[__FILE__]")

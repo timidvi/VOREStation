@@ -42,3 +42,5 @@
 		icon_state = "[chassis]_full"
 	else if(people_eaten && resting)
 		icon_state = "[chassis]_rest_full"
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_pai_vr_dm = new("[__FILE__]")

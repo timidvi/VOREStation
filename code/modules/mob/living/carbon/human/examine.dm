@@ -503,3 +503,5 @@
 				return 0
 	else
 		return 0
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_examine_dm = new("[__FILE__]")

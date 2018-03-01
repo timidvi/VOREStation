@@ -126,3 +126,5 @@
 		H.internals.icon_state = "internal1"
 	*/
 	return ..()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_blank_vr_dm = new("[__FILE__]")

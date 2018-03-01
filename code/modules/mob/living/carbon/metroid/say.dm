@@ -37,3 +37,5 @@
 		speech_buffer.Add(speaker)
 		speech_buffer.Add(lowertext(html_decode(message)))
 	..()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_say_dm = new("[__FILE__]")

@@ -23,3 +23,4 @@
 	emp_med = 2
 	emp_light = 3
 	emp_long = 4
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_emgrenade_dm = new("[__FILE__]")

@@ -59,3 +59,4 @@
 	throw_range = 4
 	w_class = ITEMSIZE_LARGE
 	deliveryamt = 6
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_spawnergrenade_dm = new("[__FILE__]")

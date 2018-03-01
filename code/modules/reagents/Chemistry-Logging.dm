@@ -26,3 +26,5 @@
 		html += "[entry]<br>"
 
 	usr << browse(html, "window=chemlogs")
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Logging_dm = new("[__FILE__]")

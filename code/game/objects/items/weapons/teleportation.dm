@@ -169,3 +169,5 @@ Frequency:
 	P.creator = src
 	src.add_fingerprint(user)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_teleportation_dm = new("[__FILE__]")

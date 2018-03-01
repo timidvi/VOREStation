@@ -137,3 +137,5 @@ THAT STUPID GAME KIT
 		for(var/mob/M in viewers(1, src))
 			if ((M.client && M.machine == src))
 				src.attack_hand(M)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_game_kit_dm = new("[__FILE__]")

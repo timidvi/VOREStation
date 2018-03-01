@@ -17,3 +17,4 @@
 	100;/obj/machinery/replicator,
 	150;/obj/structure/crystal,
 1000;/obj/machinery/artifact)
+/var/global/datum/telltale/code_modules_xenoarcheaology_artifacts_artifact_find_dm = new("[__FILE__]")

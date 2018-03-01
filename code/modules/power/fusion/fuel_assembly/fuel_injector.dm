@@ -153,3 +153,5 @@ var/list/fuel_injectors = list()
 		return
 
 	src.dir = turn(src.dir, 90)
+
+/var/global/datum/telltale/code_modules_power_fusion_fuel_assembly_fuel_injector_dm = new("[__FILE__]")

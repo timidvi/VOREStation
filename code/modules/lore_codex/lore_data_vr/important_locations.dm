@@ -141,3 +141,4 @@
 	<br><br>\
 	Today it houses a population of civilians, whom work to maintain the facility and support the local mining industry. Employees often commute to the \
 	installation via an underground transit network that links the facility to a neighboring colony." // ToDo: Add link to CentCom colony.
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_vr_important_locations_dm = new("[__FILE__]")

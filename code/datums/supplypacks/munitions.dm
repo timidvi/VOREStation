@@ -170,3 +170,5 @@
 	containertype = /obj/structure/closet/crate
 	containername = "Beanbag shells"
 	access = access_armory //VOREStation Edit - Guns are for the armory.
+
+/var/global/datum/telltale/code_datums_supplypacks_munitions_dm = new("[__FILE__]")

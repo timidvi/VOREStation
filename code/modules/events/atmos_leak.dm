@@ -88,3 +88,5 @@
 	air_contents.gas[gas_type] = 10 * MOLES_CELLSTANDARD
 	target_turf.assume_air(air_contents)
 	playsound(target_turf, 'sound/effects/smoke.ogg', 50, 1)
+
+/var/global/datum/telltale/code_modules_events_atmos_leak_dm = new("[__FILE__]")

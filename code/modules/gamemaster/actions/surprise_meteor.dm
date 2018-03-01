@@ -15,3 +15,4 @@
 	spawn(1)
 		spawn_meteors(rand(4, 8), meteors_normal, pick(cardinal))
 	message_admins("Surprise meteors event has ended.")
+/var/global/datum/telltale/code_modules_gamemaster_actions_surprise_meteor_dm = new("[__FILE__]")

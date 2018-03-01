@@ -45,3 +45,5 @@
 			return 1
 
 	return ..()
+
+/var/global/datum/telltale/code_modules_telesci_telepad_dm = new("[__FILE__]")

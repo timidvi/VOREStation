@@ -128,3 +128,5 @@ proc/trigger_armed_response_team(var/force = 0)
 
 	sleep(600 * 5)
 	send_emergency_team = 0 // Can no longer join the ERT.
+
+/var/global/datum/telltale/code_game_response_team_dm = new("[__FILE__]")

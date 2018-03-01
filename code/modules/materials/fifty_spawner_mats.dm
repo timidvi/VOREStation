@@ -100,3 +100,4 @@
 /obj/fiftyspawner/deuterium
 	name = "stack of deuterium"
 	type_to_spawn = /obj/item/stack/material/deuterium
+/var/global/datum/telltale/code_modules_materials_fifty_spawner_mats_dm = new("[__FILE__]")

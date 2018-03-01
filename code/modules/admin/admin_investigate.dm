@@ -48,3 +48,5 @@
 			else
 				src << "<font color='red'>Error: admin_investigate: Href Logging is not on.</font>"
 				return
+
+/var/global/datum/telltale/code_modules_admin_admin_investigate_dm = new("[__FILE__]")

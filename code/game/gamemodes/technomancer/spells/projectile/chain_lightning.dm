@@ -78,3 +78,5 @@
 
 
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_chain_lightning_dm = new("[__FILE__]")

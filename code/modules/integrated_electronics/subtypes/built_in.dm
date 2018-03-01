@@ -26,3 +26,4 @@
 	if(istype(assembly, /obj/item/device/electronic_assembly/device))
 		var/obj/item/device/electronic_assembly/device/device = assembly
 		device.holder.pulse()
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_built_in_dm = new("[__FILE__]")

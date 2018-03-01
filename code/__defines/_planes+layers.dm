@@ -126,3 +126,5 @@ What is the naming convention for planes or layers?
 
 // Check if a mob can "logically" see an atom plane
 #define MOB_CAN_SEE_PLANE(M, P) (P == PLANE_WORLD || (P >= OPENSPACE_PLANE_START && P <= OPENSPACE_PLANE_END) || (P in M.planes_visible))
+
+/var/global/datum/telltale/code___defines__planes_layers_dm = new("[__FILE__]")

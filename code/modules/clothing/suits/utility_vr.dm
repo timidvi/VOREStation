@@ -128,3 +128,4 @@
 			else
 				H << "<span class='warning'>You need to have a horse, wolf, or naga half to wear this.</span>"
 				return 0
+/var/global/datum/telltale/code_modules_clothing_suits_utility_vr_dm = new("[__FILE__]")

@@ -502,3 +502,5 @@
 	if(A && A.has_gravity())
 		return TRUE
 	return FALSE
+
+/var/global/datum/telltale/code_game_atoms_dm = new("[__FILE__]")

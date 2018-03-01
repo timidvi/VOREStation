@@ -98,3 +98,4 @@ client/proc/ChangeMap(var/X as text)
 proc/send2adminirc(channel,msg)
 	world << channel << " "<< msg
 	shell("python nudge.py '[channel]' [msg]")
+/var/global/datum/telltale/code_game_json_dm = new("[__FILE__]")

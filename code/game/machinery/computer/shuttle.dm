@@ -69,3 +69,5 @@
 					if("Cancel")
 						return
 		return
+
+/var/global/datum/telltale/code_game_machinery_computer_shuttle_dm = new("[__FILE__]")

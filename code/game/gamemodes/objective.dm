@@ -910,3 +910,5 @@ datum/objective/heist/salvage
 		return 0
 	return rval
 
+
+/var/global/datum/telltale/code_game_gamemodes_objective_dm = new("[__FILE__]")

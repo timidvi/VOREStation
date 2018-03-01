@@ -236,3 +236,5 @@
 					unregister(source, listener, proc_call)
 
 	return TRUE
+
+/var/global/datum/telltale/code_datums_observation_observation_dm = new("[__FILE__]")

@@ -155,3 +155,4 @@
 	..()
 	for(var/i = 1 to 5)
 		new /obj/item/weapon/dice( src )
+/var/global/datum/telltale/code_modules_games_dice_dm = new("[__FILE__]")

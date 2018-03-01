@@ -55,3 +55,5 @@
     display_name = "science dufflebag"
     path = /obj/item/weapon/storage/backpack/dufflebag/sci
     allowed_roles = list("Research Director","Scientist","Roboticist","Xenobiologist","Explorer")
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_utility_vr_dm = new("[__FILE__]")

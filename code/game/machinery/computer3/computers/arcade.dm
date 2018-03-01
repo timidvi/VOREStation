@@ -179,3 +179,4 @@
 		computer.updateUsrDialog()
 	blocked = 0
 	return
+/var/global/datum/telltale/code_game_machinery_computer__computers_arcade_dm = new("[__FILE__]")

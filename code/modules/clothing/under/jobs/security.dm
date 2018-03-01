@@ -166,3 +166,5 @@
 	icon_state = "wardenblueclothes"
 	item_state_slots = list(slot_r_hand_str = "ba_suit", slot_l_hand_str = "ba_suit")
 	rolled_sleeves = 0
+
+/var/global/datum/telltale/code_modules_clothing_under_jobs_security_dm = new("[__FILE__]")

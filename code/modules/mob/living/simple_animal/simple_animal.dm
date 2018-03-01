@@ -1719,3 +1719,5 @@
 /mob/living/simple_animal/retaliate
 	retaliate = 1
 	destroy_surroundings = 1
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_simple_animal_dm = new("[__FILE__]")

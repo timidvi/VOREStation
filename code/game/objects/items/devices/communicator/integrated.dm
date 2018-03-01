@@ -30,3 +30,4 @@
 		return
 
 	src.attack_self(usr)
+/var/global/datum/telltale/code_game_objects_items_devices_communicator_integrated_dm = new("[__FILE__]")

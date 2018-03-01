@@ -147,3 +147,5 @@
 	holder.interact(usr) // Refresh the main UI,
 	interact(usr) // and the list UI.
 
+
+/var/global/datum/telltale/code_modules_integrated_electronics_core_special_pins_list_pin_dm = new("[__FILE__]")

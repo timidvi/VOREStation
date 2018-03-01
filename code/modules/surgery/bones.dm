@@ -202,3 +202,4 @@
 	user.visible_message("<font color='red'>[user]'s hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</font>" , \
 		"<font color='red'>Your hand slips, damaging the bone in [target]'s [affected.name] with \the [tool]!</font>")
 	affected.createwound(BRUISE, 5)
+/var/global/datum/telltale/code_modules_surgery_bones_dm = new("[__FILE__]")

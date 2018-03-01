@@ -17,3 +17,5 @@
 
 	. = ..(gibbed,"gives one shrill beep before falling lifeless.")
 	density = 1
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_death_dm = new("[__FILE__]")

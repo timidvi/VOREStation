@@ -46,3 +46,5 @@
 		pref.resleeve_scan = pref.resleeve_scan ? 0 : 1;
 		return TOPIC_REFRESH
 	return ..();
+
+/var/global/datum/telltale/code_modules_client_preference_setup_vore____resleeving_dm = new("[__FILE__]")

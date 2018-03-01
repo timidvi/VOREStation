@@ -71,3 +71,4 @@ datum/category_group/underwear/dd_SortValue()
 	for(var/datum/gear_tweak/gt in tweaks)
 		gt.tweak_item(I, metadata && metadata["[gt]"] ? metadata["[gt]"] : gt.get_default())
 	return I
+/var/global/datum/telltale/code_datums_underwear_underwear_dm = new("[__FILE__]")

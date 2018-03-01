@@ -24,3 +24,4 @@
 		user.mind.tcrystals += amount
 		use(amount)
 	return
+/var/global/datum/telltale/code_game_objects_items_stacks_telecrystal_dm = new("[__FILE__]")

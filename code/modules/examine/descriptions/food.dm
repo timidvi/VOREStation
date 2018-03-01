@@ -48,3 +48,5 @@
   
 /obj/item/weapon/reagent_containers/food/snacks/unajerky
   description_fluff = "Removed from Getmore vendors pending approval from the SolGov Nutrition Council, Sissalik Jerky remains a popular snack for Unathi immigrants and daredevils looking for a meaty, spicy treat that makes Scaredy's look like tofu."
+
+/var/global/datum/telltale/code_modules_examine_descriptions_food_dm = new("[__FILE__]")

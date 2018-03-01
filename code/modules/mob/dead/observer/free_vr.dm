@@ -66,3 +66,5 @@ var/global/list/prevent_respawns = list()
 
 	//Feedback
 	to_chat(src,"<span class='notice'>Your job has been free'd up, and you can rejoin as another character or quit. Thanks for using this verb, it helps the server!</span>")
+
+/var/global/datum/telltale/code_modules_mob_dead_observer_free_vr_dm = new("[__FILE__]")

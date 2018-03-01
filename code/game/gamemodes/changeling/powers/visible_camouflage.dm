@@ -70,3 +70,4 @@
 		H.mind.changeling.chem_recharge_rate = old_regen_rate
 
 		animate(src,alpha = 10, alpha = 255, time = 10)
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_visible_camouflage_dm = new("[__FILE__]")

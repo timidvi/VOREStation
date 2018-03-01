@@ -95,3 +95,5 @@
 /obj/item/weapon/flame/candle/candelabra/everburn/initialize()
 	. = ..()
 	light("<span class='notice'>\The [src] mysteriously lights itself!.</span>")
+
+/var/global/datum/telltale/code_game_objects_items_weapons_candle_dm = new("[__FILE__]")

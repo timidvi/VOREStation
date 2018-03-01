@@ -206,3 +206,5 @@
 
 /obj/structure/bed/chair/wood/wings
 	icon_state = "wooden_chair_wings"
+
+/var/global/datum/telltale/code_game_objects_structures_stool_bed_chair_nest_chairs_dm = new("[__FILE__]")

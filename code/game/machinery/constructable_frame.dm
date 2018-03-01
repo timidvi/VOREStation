@@ -153,3 +153,5 @@
 							user << desc
 							if(P && P.loc != src && !istype(P, /obj/item/stack/cable_coil))
 								user << "<span class='warning'>You cannot add that component to the machine!</span>"
+
+/var/global/datum/telltale/code_game_machinery_constructable_frame_dm = new("[__FILE__]")

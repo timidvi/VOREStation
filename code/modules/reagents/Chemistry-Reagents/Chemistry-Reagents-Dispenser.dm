@@ -467,3 +467,5 @@
 	taste_mult = 0 //no taste
 	reagent_state = SOLID
 	color = "#DCDCDC"
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Chemistry_Reagents_Dispenser_dm = new("[__FILE__]")

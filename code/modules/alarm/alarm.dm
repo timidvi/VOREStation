@@ -143,3 +143,5 @@
 	return list()
 
 #undef ALARM_LOSS_DELAY
+
+/var/global/datum/telltale/code_modules_alarm_alarm_dm = new("[__FILE__]")

@@ -316,3 +316,5 @@
 		if (EB.energy > 0)
 			EB.energy -= min(EB.energy, max(10, round(EB.energy * 0.05)))
 	// VOREStation Edit End
+
+/var/global/datum/telltale/code_modules_power_tesla_energy_ball_dm = new("[__FILE__]")

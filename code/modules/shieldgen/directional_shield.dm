@@ -345,3 +345,4 @@
 	// Finished.
 	update_shield_colors()
 	return TRUE
+/var/global/datum/telltale/code_modules_shieldgen_directional_shield_dm = new("[__FILE__]")

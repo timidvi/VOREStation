@@ -137,3 +137,4 @@ var
 
 	ToString()
 		return "ref: [src.value] ([src.value.type])"
+/var/global/datum/telltale/code_modules_scripting_AST_AST_Nodes_dm = new("[__FILE__]")

@@ -53,3 +53,5 @@
 		else
 			overlays += icon(src.icon,"open")
 
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_guncabinet_dm = new("[__FILE__]")

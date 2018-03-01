@@ -113,3 +113,5 @@
 	walk(src, null, null)
 	..()
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_grenade_dm = new("[__FILE__]")

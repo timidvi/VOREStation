@@ -72,3 +72,5 @@
 /datum/event/prison_break/end()
 	for(var/area/A in shuffle(areas))
 		A.prison_break()
+
+/var/global/datum/telltale/code_modules_events_prison_break_dm = new("[__FILE__]")

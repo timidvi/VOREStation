@@ -97,3 +97,4 @@
 		else
 			M << "<span class='warning'>Your form morphs into that of \a [lowertext(randomize)].</span>"
 			return
+/var/global/datum/telltale/code_modules_projectiles_projectile_change_dm = new("[__FILE__]")

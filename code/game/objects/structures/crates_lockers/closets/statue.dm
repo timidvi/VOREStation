@@ -129,3 +129,5 @@
 	dump_contents()
 	visible_message("<span class='warning'>[src] shatters!.</span>")
 	qdel(src)
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_statue_dm = new("[__FILE__]")

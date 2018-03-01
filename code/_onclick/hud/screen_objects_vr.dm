@@ -18,3 +18,4 @@
 			return 0
 
 	return 1
+/var/global/datum/telltale/code__onclick_hud_screen_objects_vr_dm = new("[__FILE__]")

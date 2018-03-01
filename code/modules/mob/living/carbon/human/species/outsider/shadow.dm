@@ -29,3 +29,4 @@
 	spawn(1)
 		new /obj/effect/decal/cleanable/ash(H.loc)
 		qdel(H)
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_outsider_shadow_dm = new("[__FILE__]")

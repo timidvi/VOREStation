@@ -265,3 +265,5 @@ var/list/GPS_list = list()
 
 	var/result = dat.Join("<br>")
 	to_chat(user, result)
+
+/var/global/datum/telltale/code_game_objects_items_devices_gps_dm = new("[__FILE__]")

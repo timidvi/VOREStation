@@ -219,3 +219,5 @@
 
 /obj/item/integrated_circuit/logic/unary/not/do_check(var/datum/integrated_io/A)
 	return !A.data
+
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_logic_dm = new("[__FILE__]")

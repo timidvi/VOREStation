@@ -533,3 +533,5 @@
 		if(istype(A, /obj/machinery/clonepod))
 			A:malfunction()
 */
+
+/var/global/datum/telltale/code_game_machinery_cloning_dm = new("[__FILE__]")

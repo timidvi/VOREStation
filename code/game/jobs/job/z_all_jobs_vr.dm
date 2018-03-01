@@ -50,3 +50,5 @@
 	
 /datum/job/scientist
 	alt_titles = list("Xenoarcheologist", "Anomalist", "Phoron Researcher", "Circuit Designer")
+
+/var/global/datum/telltale/code_game_jobs_job_z_all_jobs_vr_dm = new("[__FILE__]")

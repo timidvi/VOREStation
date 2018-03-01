@@ -46,3 +46,5 @@
 				C.adjustOxyLoss(3 * weakness)
 				C.adjustBrainLoss(0.1 * weakness)
 				C.updatehealth()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_hurt_dm = new("[__FILE__]")

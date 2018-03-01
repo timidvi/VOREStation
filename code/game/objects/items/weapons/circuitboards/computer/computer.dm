@@ -192,3 +192,5 @@
 	name = T_BOARD("RCON remote control console")
 	build_path = /obj/machinery/computer/rcon
 	origin_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_POWER = 5)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_computer_computer_dm = new("[__FILE__]")

@@ -91,3 +91,5 @@
 	icon_state = "plaguedoctor"
 	item_state_slots = list(slot_r_hand_str = "bio", slot_l_hand_str = "bio")
 	flags_inv = HIDEGLOVES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
+
+/var/global/datum/telltale/code_modules_clothing_suits_bio_dm = new("[__FILE__]")

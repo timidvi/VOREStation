@@ -43,3 +43,5 @@
 	name = "EMT armband"
 	desc = "An armband, worn by the crew to display which department they're assigned to. This one is white and blue."
 	icon_state = "medblue"
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_armband_dm = new("[__FILE__]")

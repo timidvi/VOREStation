@@ -228,3 +228,5 @@ var/global/list/breach_burn_descriptors = list(
 	if(can_breach && breaches && breaches.len)
 		for(var/datum/breach/B in breaches)
 			user << "<font color='red'><B>It has \a [B.descriptor].</B></font>"
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_breaches_dm = new("[__FILE__]")

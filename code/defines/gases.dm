@@ -52,3 +52,4 @@
 	tile_overlay = "sleeping_agent"
 	overlay_limit = 1
 	flags = XGM_GAS_OXIDIZER
+/var/global/datum/telltale/code_defines_gases_dm = new("[__FILE__]")

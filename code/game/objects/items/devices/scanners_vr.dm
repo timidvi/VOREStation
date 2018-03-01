@@ -213,3 +213,5 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		icon_state = "[initial(icon_state)]_on"
 	else
 		icon_state = initial(icon_state)
+
+/var/global/datum/telltale/code_game_objects_items_devices_scanners_vr_dm = new("[__FILE__]")

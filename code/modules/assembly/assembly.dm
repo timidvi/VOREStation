@@ -179,3 +179,5 @@
 
 
 */
+
+/var/global/datum/telltale/code_modules_assembly_assembly_dm = new("[__FILE__]")

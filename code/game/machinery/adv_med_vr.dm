@@ -79,3 +79,5 @@
 		else
 			icon_state = "scanner_terminal_off"
 			set_light(0)
+
+/var/global/datum/telltale/code_game_machinery_adv_med_vr_dm = new("[__FILE__]")

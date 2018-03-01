@@ -291,3 +291,5 @@
 		user << "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
 		user << "You are too far away to read the gauge."
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_vent_scrubber_dm = new("[__FILE__]")

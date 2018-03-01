@@ -48,3 +48,4 @@
 
 /obj/item/weapon/cell/device/weapon/recharge/alien/update_icon()
 	return // No overlays please.
+/var/global/datum/telltale/code_modules_power_cells_device_cells_dm = new("[__FILE__]")

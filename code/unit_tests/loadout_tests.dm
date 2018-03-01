@@ -21,3 +21,5 @@
 	else
 		pass("All /datum/gear definitions had correct settings.")
 	return 1
+
+/var/global/datum/telltale/code_unit_tests_loadout_tests_dm = new("[__FILE__]")

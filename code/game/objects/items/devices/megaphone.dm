@@ -51,3 +51,5 @@
 		emagged = 1
 		insults = rand(1, 3)//to prevent dickflooding
 		return 1
+
+/var/global/datum/telltale/code_game_objects_items_devices_megaphone_dm = new("[__FILE__]")

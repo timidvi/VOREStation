@@ -23,3 +23,4 @@
 	speak_chance = 5
 	speak = list("Shuhn","Shrunnph?","Shunpf")
 	emote_see = list("scratches the ground","shakes out its mane","clinks gently as it moves")
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_sif_wildlife_shantak_dm = new("[__FILE__]")

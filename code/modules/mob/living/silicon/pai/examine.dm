@@ -24,3 +24,4 @@
 		msg += "\nIt is [pose]"
 
 	user << msg
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_examine_dm = new("[__FILE__]")

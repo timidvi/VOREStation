@@ -61,3 +61,5 @@
 		to_chat(user, "You remove the last piece of meat from \the [victim_name]!")
 		icon_state = "spike"
 		occupied = 0
+
+/var/global/datum/telltale/code_game_objects_structures_kitchen_spike_dm = new("[__FILE__]")

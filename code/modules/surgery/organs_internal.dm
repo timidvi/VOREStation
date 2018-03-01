@@ -408,3 +408,4 @@
 
 //	/datum/surgery_step/ribcage/heart/cut/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 //		return ..() && target.op_stage.ribcage == 2
+/var/global/datum/telltale/code_modules_surgery_organs_internal_dm = new("[__FILE__]")

@@ -481,3 +481,5 @@
 		var/mob/M = src.loc
 		M.update_inv_r_hand()
 		M.update_inv_l_hand()
+
+/var/global/datum/telltale/code_modules_clothing_chameleon_dm = new("[__FILE__]")

@@ -108,3 +108,5 @@
 			return
 		update_clothing_icon()
 
+
+/var/global/datum/telltale/code_modules_clothing_suits_storage_dm = new("[__FILE__]")

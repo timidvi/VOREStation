@@ -64,3 +64,5 @@
 			user.aiming.toggle_permission(TARGET_CAN_RADIO)
 		return 1
 	return 0
+
+/var/global/datum/telltale/code__onclick_hud_gun_mode_dm = new("[__FILE__]")

@@ -109,3 +109,5 @@
 		list(mode_name="semiauto", burst=1, fire_delay=0, move_delay=null, one_handed_penalty=15, burst_accuracy=null, dispersion=null),
 		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=5, one_handed_penalty=30, burst_accuracy=list(0,-15,-15), dispersion=list(0.0, 0.6, 1.0)),
 		)
+
+/var/global/datum/telltale/code_modules_projectiles_guns_magnetic_magnetic_railgun_dm = new("[__FILE__]")

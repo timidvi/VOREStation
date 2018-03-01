@@ -134,3 +134,4 @@
 /obj/item/weapon/reagent_containers/food/drinks/cans/gingerale/New()
 	..()
 	reagents.add_reagent("gingerale", 30)
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_cans_dm = new("[__FILE__]")

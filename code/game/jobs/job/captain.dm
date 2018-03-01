@@ -88,3 +88,5 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 	alt_titles = list("Command Liaison", "Bridge Secretary")
+
+/var/global/datum/telltale/code_game_jobs_job_captain_dm = new("[__FILE__]")

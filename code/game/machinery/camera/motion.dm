@@ -62,3 +62,5 @@
 		if(isliving(AM))
 			newTarget(AM)
 
+
+/var/global/datum/telltale/code_game_machinery_camera_motion_dm = new("[__FILE__]")

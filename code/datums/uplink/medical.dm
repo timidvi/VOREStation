@@ -68,3 +68,5 @@
 	name = "Combat medical kit"
 	item_cost = 60
 	path = /obj/item/weapon/storage/firstaid/combat
+
+/var/global/datum/telltale/code_datums_uplink_medical_dm = new("[__FILE__]")

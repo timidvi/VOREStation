@@ -155,3 +155,5 @@
 		new /obj/item/clothing/shoes/boots/jackboots(src)
 		new /obj/item/clothing/shoes/boots/jackboots/toeless(src)
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_security_vr_dm = new("[__FILE__]")

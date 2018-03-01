@@ -485,3 +485,5 @@
 	wires.MendAll()
 	update_icon()
 	update_coverage()
+
+/var/global/datum/telltale/code_game_machinery_camera_camera_dm = new("[__FILE__]")

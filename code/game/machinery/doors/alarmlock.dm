@@ -43,3 +43,5 @@
 			if("minor", "clear")
 				autoclose = 0
 				open()
+
+/var/global/datum/telltale/code_game_machinery_doors_alarmlock_dm = new("[__FILE__]")

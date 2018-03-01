@@ -158,3 +158,5 @@
 		return list(access_maint_tunnels)
 	else
 		return list()
+
+/var/global/datum/telltale/code_game_jobs_job_special_dm = new("[__FILE__]")

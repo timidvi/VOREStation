@@ -379,3 +379,5 @@
 
 	active = 0
 	use_power = 1
+
+/var/global/datum/telltale/code_modules_holodeck_HolodeckControl_dm = new("[__FILE__]")

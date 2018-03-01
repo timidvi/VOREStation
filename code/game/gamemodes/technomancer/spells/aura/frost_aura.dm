@@ -41,3 +41,5 @@
 			H.bodytemperature = max(H.bodytemperature - temp_change, temp_cap)
 
 	adjust_instability(1)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_aura_frost_aura_dm = new("[__FILE__]")

@@ -16,3 +16,4 @@ scope
 		src.variables = B.initial_variables.Copy()
 		src.functions = B.functions.Copy()
 		.=..()
+/var/global/datum/telltale/code_modules_scripting_Interpreter_Scope_dm = new("[__FILE__]")

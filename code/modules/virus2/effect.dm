@@ -532,3 +532,5 @@
 
 /datum/disease2/effect/headache/activate(var/mob/living/carbon/mob,var/multiplier)
 		mob << "<span class='warning'>Your head hurts a bit.</span>"
+
+/var/global/datum/telltale/code_modules_virus__effect_dm = new("[__FILE__]")

@@ -61,3 +61,5 @@
 
 
 	return 1
+
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_revive_dm = new("[__FILE__]")

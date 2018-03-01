@@ -32,3 +32,5 @@
 		smoke.start()
 
 	return
+
+/var/global/datum/telltale/code_modules_spells_aoe_turf_blink_dm = new("[__FILE__]")

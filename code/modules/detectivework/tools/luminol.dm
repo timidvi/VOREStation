@@ -11,3 +11,4 @@
 /obj/item/weapon/reagent_containers/spray/luminol/New()
 	..()
 	reagents.add_reagent("luminol", 250)
+/var/global/datum/telltale/code_modules_detectivework_tools_luminol_dm = new("[__FILE__]")

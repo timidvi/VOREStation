@@ -14,3 +14,5 @@
 		var/obj/O = change
 		new /mob/living/simple_animal/hostile/mimic/copy(O.loc, O, firer)
 	..()
+
+/var/global/datum/telltale/code_modules_projectiles_projectile_animate_dm = new("[__FILE__]")

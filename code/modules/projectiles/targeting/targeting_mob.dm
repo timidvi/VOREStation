@@ -64,3 +64,4 @@
 	if(hud_used)
 		if (hud_used.move_intent)
 			hud_used.move_intent.icon_state = intent == "walk" ? "walking" : "running"
+/var/global/datum/telltale/code_modules_projectiles_targeting_targeting_mob_dm = new("[__FILE__]")

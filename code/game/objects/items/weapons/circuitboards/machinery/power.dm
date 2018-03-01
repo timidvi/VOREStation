@@ -43,3 +43,5 @@
 		/obj/item/weapon/stock_parts/spring = 1,
 		/obj/item/weapon/stock_parts/manipulator = 1,
 		/obj/item/stack/cable_coil = 10)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_power_dm = new("[__FILE__]")

@@ -227,3 +227,5 @@
 	lift.open_doors()
 
 	qdel(src) // We're done.
+
+/var/global/datum/telltale/code_modules_turbolift_turbolift_map_dm = new("[__FILE__]")

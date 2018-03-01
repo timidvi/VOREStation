@@ -161,3 +161,4 @@
 	icon_state = "marshal_jacket"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 	body_parts_covered = UPPER_TORSO|ARMS
+/var/global/datum/telltale/code_modules_clothing_suits_solgov_dm = new("[__FILE__]")

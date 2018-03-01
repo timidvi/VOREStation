@@ -172,3 +172,4 @@
 	You can then travel to the new area to mine in that location.<br>
 	<br>
 	<font size=1>This technology produced under license from Thinktronic Systems, LTD.</font>"}
+/var/global/datum/telltale/code_modules_rogueminer_vr_zone_console_dm = new("[__FILE__]")

@@ -41,3 +41,4 @@
 		for(var/mob/living/L in range(src.effectrange,T))
 			apply_berserk(L)
 		return TRUE
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_berserk_dm = new("[__FILE__]")

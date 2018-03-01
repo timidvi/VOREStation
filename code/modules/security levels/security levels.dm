@@ -100,3 +100,4 @@
 /mob/verb/set_thing3()
 	set_security_level(3)
 */
+/var/global/datum/telltale/code_modules_security_levels_security_levels_dm = new("[__FILE__]")

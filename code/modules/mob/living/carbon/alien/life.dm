@@ -159,3 +159,5 @@
 		return
 	bodytemperature += BODYTEMP_HEATING_MAX //If you're on fire, you heat up!
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_life_dm = new("[__FILE__]")

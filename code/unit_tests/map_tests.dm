@@ -119,3 +119,5 @@
 		pass("No active edges.")
 
 	return 1
+
+/var/global/datum/telltale/code_unit_tests_map_tests_dm = new("[__FILE__]")

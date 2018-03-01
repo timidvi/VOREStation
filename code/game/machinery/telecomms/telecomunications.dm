@@ -701,3 +701,5 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			break
 
 	return can_comm
+
+/var/global/datum/telltale/code_game_machinery_telecomms_telecomunications_dm = new("[__FILE__]")

@@ -35,3 +35,5 @@
 	if (src.use_sound)
 		playsound(src.loc, src.use_sound, 50, 1, -5)
 	..()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_bible_dm = new("[__FILE__]")

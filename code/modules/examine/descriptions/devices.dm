@@ -30,3 +30,4 @@
 /obj/item/device/assembly/electronic_assembly
 	description_info = "This is the casing for the 'device' type of electronic assembly. It behaves like any other 'assembly' type device such as an igniter or signaler \
 	and can be attached to others in the same way. Use the 'toggle-open' verb (right click) or a crowbar to pop the electronic device open to add components and close when finished."
+/var/global/datum/telltale/code_modules_examine_descriptions_devices_dm = new("[__FILE__]")

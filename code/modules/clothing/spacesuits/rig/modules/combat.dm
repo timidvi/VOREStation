@@ -247,3 +247,5 @@
 			H.put_in_hands(new_weapon)
 
 	return 1
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_combat_dm = new("[__FILE__]")

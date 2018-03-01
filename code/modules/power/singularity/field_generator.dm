@@ -339,3 +339,5 @@ field_generator power level display
 					message_admins("A singulo exists and a containment field has failed.",1)
 					investigate_log("has <font color='red'>failed</font> whilst a singulo exists.","singulo")
 			O.last_warning = world.time
+
+/var/global/datum/telltale/code_modules_power_singularity_field_generator_dm = new("[__FILE__]")

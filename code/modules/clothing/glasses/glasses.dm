@@ -449,3 +449,5 @@ BLIND     // can't see anything
 	desc = "A set of implantable lenses designed to augment your vision"
 	icon_state = "thermalimplants"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
+
+/var/global/datum/telltale/code_modules_clothing_glasses_glasses_dm = new("[__FILE__]")

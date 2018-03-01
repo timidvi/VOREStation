@@ -92,3 +92,5 @@
 		if(chosen_stamp)
 			name = chosen_stamp.name
 			icon_state = chosen_stamp.icon_state
+
+/var/global/datum/telltale/code_modules_paperwork_stamps_dm = new("[__FILE__]")

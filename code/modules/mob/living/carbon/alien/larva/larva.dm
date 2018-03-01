@@ -13,3 +13,5 @@
 	..()
 	add_language("Xenomorph") //Bonus language.
 	internal_organs |= new /obj/item/organ/internal/xenos/hivenode(src)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_larva_larva_dm = new("[__FILE__]")

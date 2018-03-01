@@ -5,3 +5,5 @@
 	. = ..()
 	if(.)
 		only_one()
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_only_one_dm = new("[__FILE__]")

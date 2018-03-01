@@ -52,3 +52,5 @@
 		else
 			icon_screen = initial(icon_screen)
 	..()
+
+/var/global/datum/telltale/code_game_machinery_computer_station_alert_dm = new("[__FILE__]")

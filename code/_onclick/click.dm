@@ -344,3 +344,5 @@
 		if(T)
 			T.Click(location, control, params)
 	. = 1
+
+/var/global/datum/telltale/code__onclick_click_dm = new("[__FILE__]")

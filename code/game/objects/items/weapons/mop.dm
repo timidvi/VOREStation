@@ -36,3 +36,5 @@
 	if(istype(I, /obj/item/weapon/mop) || istype(I, /obj/item/weapon/soap))
 		return
 	..()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_mop_dm = new("[__FILE__]")

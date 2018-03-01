@@ -1945,3 +1945,5 @@ mob/living/silicon/ai/can_centcom_reply()
 
 	. = "<A HREF='?[source];adminplayerobservejump=\ref[target]'>JMP</A>"
 	. += target.extra_admin_link(source)
+
+/var/global/datum/telltale/code_modules_admin_topic_dm = new("[__FILE__]")

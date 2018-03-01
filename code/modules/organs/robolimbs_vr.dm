@@ -168,3 +168,5 @@
 
 /obj/item/weapon/disk/limb/dsi_spider
 	company = "DSI - Vasilissan"
+
+/var/global/datum/telltale/code_modules_organs_robolimbs_vr_dm = new("[__FILE__]")

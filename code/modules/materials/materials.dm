@@ -935,3 +935,4 @@ var/list/name_to_material
 	hardness = 1
 	weight = 1
 	protectiveness = 0 // 0%
+/var/global/datum/telltale/code_modules_materials_materials_dm = new("[__FILE__]")

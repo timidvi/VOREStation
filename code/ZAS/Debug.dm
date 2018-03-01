@@ -18,3 +18,4 @@ var/image/mark = image('icons/Testing/Zone.dmi', icon_state = "mark")
 
 proc/soft_assert(thing,fail)
 	if(!thing) message_admins(fail)
+/var/global/datum/telltale/code_ZAS_Debug_dm = new("[__FILE__]")

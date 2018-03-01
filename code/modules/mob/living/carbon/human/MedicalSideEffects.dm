@@ -147,3 +147,5 @@
 		if(31 to INFINITY)
 			H.emote("me",1,"shivers slightly.")
 			H.custom_pain("This itch makes it really hard to concentrate.",1)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_MedicalSideEffects_dm = new("[__FILE__]")

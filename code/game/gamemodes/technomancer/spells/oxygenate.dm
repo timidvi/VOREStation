@@ -31,3 +31,4 @@
 			T.assume_gas("nitrogen", 800)
 			playsound(src.loc, 'sound/effects/spray.ogg', 50, 1, -3)
 			adjust_instability(10)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_oxygenate_dm = new("[__FILE__]")

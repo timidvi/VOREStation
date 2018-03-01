@@ -42,3 +42,4 @@
 		else if(hit_atom.reagents && !ismob(hit_atom))		//TODO: Something for the scepter
 			hit_atom.reagents.add_reagent(id = "water", amount = 60, data = null, safety = 0)
 		adjust_instability(5)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_condensation_dm = new("[__FILE__]")

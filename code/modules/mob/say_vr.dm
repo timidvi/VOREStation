@@ -60,3 +60,5 @@
 /mob/proc/emote_vr(var/act, var/type, var/message) //This would normally go in say.dm
 	if(act == "me")
 		return custom_emote_vr(type, message)
+
+/var/global/datum/telltale/code_modules_mob_say_vr_dm = new("[__FILE__]")

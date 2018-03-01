@@ -153,3 +153,5 @@
 	else //Just unbuckled someone
 		M.can_pull_size = initial(M.can_pull_size)
 		qdel(src)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_weaponry_dm = new("[__FILE__]")

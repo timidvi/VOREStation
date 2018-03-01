@@ -54,3 +54,5 @@ effective or pretty fucking useless.
 	times_used += 1
 	if(times_used >= max_uses)
 		icon_state = "battererburnt"
+
+/var/global/datum/telltale/code_game_objects_items_devices_traitordevices_dm = new("[__FILE__]")

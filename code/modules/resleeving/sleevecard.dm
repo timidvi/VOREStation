@@ -108,3 +108,5 @@
 		var/rendered = "<span class='message'>[msg]</span>"
 		infomorph.show_message(rendered, type)
 	..()
+
+/var/global/datum/telltale/code_modules_resleeving_sleevecard_dm = new("[__FILE__]")

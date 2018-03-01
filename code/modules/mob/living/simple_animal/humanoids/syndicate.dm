@@ -194,3 +194,5 @@
 /mob/living/simple_animal/hostile/viscerator/death()
 	..(null,"is smashed into pieces!")
 	qdel(src)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_humanoids_syndicate_dm = new("[__FILE__]")

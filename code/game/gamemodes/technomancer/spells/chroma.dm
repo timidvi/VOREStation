@@ -43,3 +43,5 @@
 	if(new_color)
 		color_to_use = new_color
 		set_light(6, 5, l_color = new_color)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_chroma_dm = new("[__FILE__]")

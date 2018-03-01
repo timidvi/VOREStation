@@ -166,3 +166,5 @@ sd_alert
 			else validated = 1
 		spawn(2) qdel(src)
 		return response
+
+/var/global/datum/telltale/code_defines_procs_sd_Alert_dm = new("[__FILE__]")

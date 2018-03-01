@@ -49,3 +49,5 @@
 /turf/snow/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
+
+/var/global/datum/telltale/code_game_turfs_snow_snow_dm = new("[__FILE__]")

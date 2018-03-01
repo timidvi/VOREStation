@@ -27,3 +27,5 @@
 	pda_type = /obj/item/device/pda/shaftminer
 	backpack_contents = list(/obj/item/weapon/crowbar = 1, /obj/item/weapon/storage/bag/ore = 1)
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
+/var/global/datum/telltale/code_datums_outfits_jobs_cargo_dm = new("[__FILE__]")

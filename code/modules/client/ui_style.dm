@@ -70,3 +70,5 @@
 		prefs.UI_style_color = UI_style_color_new
 		prefs.save_preferences()
 		usr << "UI was saved"
+
+/var/global/datum/telltale/code_modules_client_ui_style_dm = new("[__FILE__]")

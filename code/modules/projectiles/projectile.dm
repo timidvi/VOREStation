@@ -488,3 +488,5 @@
 	var/output = trace.launch(target) //Test it!
 	qdel(trace) //No need for it anymore
 	return output //Send it back to the gun!
+
+/var/global/datum/telltale/code_modules_projectiles_projectile_dm = new("[__FILE__]")

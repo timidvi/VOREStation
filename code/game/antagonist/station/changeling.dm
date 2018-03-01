@@ -85,3 +85,5 @@
 		text += "<br>Bought [english_list(ling_datum.purchased_powers_history)]."
 
 	return text
+
+/var/global/datum/telltale/code_game_antagonist_station_changeling_dm = new("[__FILE__]")

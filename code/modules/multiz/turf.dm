@@ -148,3 +148,5 @@
 /turf/simulated/open/is_space()
 	var/turf/below = GetBelow(src)
 	return !below || below.is_space()
+
+/var/global/datum/telltale/code_modules_multiz_turf_dm = new("[__FILE__]")

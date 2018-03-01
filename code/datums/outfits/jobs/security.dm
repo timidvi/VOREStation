@@ -48,3 +48,5 @@
 	l_pocket = /obj/item/device/flash
 	id_type = /obj/item/weapon/card/id/security/officer
 	pda_type = /obj/item/device/pda/security
+
+/var/global/datum/telltale/code_datums_outfits_jobs_security_dm = new("[__FILE__]")

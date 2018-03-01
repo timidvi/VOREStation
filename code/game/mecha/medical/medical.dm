@@ -21,3 +21,4 @@
 	if(result)
 		playsound(src,'sound/mecha/mechstep.ogg',25,1)
 	return result
+/var/global/datum/telltale/code_game_mecha_medical_medical_dm = new("[__FILE__]")

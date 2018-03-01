@@ -703,3 +703,5 @@ obj/machinery/atmospherics/mains_pipe/valve
 					else
 						open()
 */
+
+/var/global/datum/telltale/code_ATMOSPHERICS_mainspipe_dm = new("[__FILE__]")

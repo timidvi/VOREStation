@@ -108,3 +108,4 @@
 			if(!current_cell)
 				continue
 			T.ChangeTurf(/turf/unsimulated/floor/shuttle_ceiling)
+/var/global/datum/telltale/code_game_machinery_transportpod_dm = new("[__FILE__]")

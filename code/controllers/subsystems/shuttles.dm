@@ -81,3 +81,5 @@ SUBSYSTEM_DEF(shuttles)
 		LAZYADD(docks_init_callbacks, cb)
 	else
 		cb.InvokeAsync()
+
+/var/global/datum/telltale/code_controllers_subsystems_shuttles_dm = new("[__FILE__]")

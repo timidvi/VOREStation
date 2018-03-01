@@ -250,3 +250,4 @@
 	name = "radio"
 	icon_state = "radio"
 	icon_state_broken = "radio_broken"
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_component_dm = new("[__FILE__]")

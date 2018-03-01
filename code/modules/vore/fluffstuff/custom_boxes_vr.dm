@@ -322,3 +322,5 @@ Swimsuits, for general use, to avoid arriving to work with your swimsuit.
 	..()
 	for(var/i = 1 to 4)
 		new /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/wolpincube(src)
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_custom_boxes_vr_dm = new("[__FILE__]")

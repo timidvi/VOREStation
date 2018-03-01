@@ -246,3 +246,5 @@
 		custom_emote(m_type,message)
 
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_emote_dm = new("[__FILE__]")

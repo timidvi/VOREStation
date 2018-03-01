@@ -132,3 +132,5 @@
 	console.updateUsrDialog()
 	return
 
+
+/var/global/datum/telltale/code_modules_mining_machine_stacking_dm = new("[__FILE__]")

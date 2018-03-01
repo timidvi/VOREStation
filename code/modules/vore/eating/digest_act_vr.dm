@@ -91,3 +91,5 @@
 /obj/item/device/mmi/digital/posibrain/digest_act(var/atom/movable/item_storage = null)
 	//Replace this with a VORE setting so all types of posibrains can/can't be digested on a whim
 	return FALSE
+
+/var/global/datum/telltale/code_modules_vore_eating_digest_act_vr_dm = new("[__FILE__]")

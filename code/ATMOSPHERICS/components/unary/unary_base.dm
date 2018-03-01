@@ -94,3 +94,4 @@
 	update_underlays()
 
 	return null
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_unary_base_dm = new("[__FILE__]")

@@ -289,3 +289,4 @@
 
 /obj/machinery/power/emitter/proc/get_emitter_beam()
 	return new /obj/item/projectile/beam/emitter(get_turf(src))
+/var/global/datum/telltale/code_modules_power_singularity_emitter_dm = new("[__FILE__]")

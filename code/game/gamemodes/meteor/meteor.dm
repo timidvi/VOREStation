@@ -47,3 +47,4 @@
 	return 1
 
 #undef METEOR_DELAY
+/var/global/datum/telltale/code_game_gamemodes_meteor_meteor_dm = new("[__FILE__]")

@@ -9,3 +9,5 @@
 	client.screen |= global_hud.darksight
 	client.images |= dsoverlay
 	return .
+
+/var/global/datum/telltale/code_modules_mob_living_login_dm = new("[__FILE__]")

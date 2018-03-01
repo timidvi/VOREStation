@@ -90,3 +90,5 @@
 		var/base_turf = get_base_turf_by_area(src)
 		if(ST.type != base_turf)
 			ST.ChangeTurf(base_turf)
+
+/var/global/datum/telltale/code_game_gamemodes_events_black_hole_dm = new("[__FILE__]")

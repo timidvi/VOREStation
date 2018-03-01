@@ -21,3 +21,5 @@
 		var/datum/gas_mixture/env = holder.loc.return_air()
 		if(env && env.temperature < target_temp)
 			env.temperature += pick(0, 0, 1)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_heat_dm = new("[__FILE__]")

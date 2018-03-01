@@ -140,3 +140,4 @@
 
 
 		)
+/var/global/datum/telltale/code_modules_reagents_dispenser_dispenser_presets_dm = new("[__FILE__]")

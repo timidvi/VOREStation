@@ -48,3 +48,5 @@ proc/send_byjax(receiver, control_id, target_element, new_content=null, callback
 		receiver << output(argums,"[control_id]:replaceContent")
 	return
 
+
+/var/global/datum/telltale/code_js_byjax_dm = new("[__FILE__]")

@@ -91,3 +91,5 @@
 /turf/simulated/floor/levelupdate()
 	for(var/obj/O in src)
 		O.hide(O.hides_under_flooring() && src.flooring)
+
+/var/global/datum/telltale/code_game_turfs_simulated_floor_dm = new("[__FILE__]")

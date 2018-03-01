@@ -218,3 +218,5 @@
 	)
 
 	news_network.SubmitArticle(body, author, channel, null, 1)
+
+/var/global/datum/telltale/code_modules_economy_Events_Mundane_dm = new("[__FILE__]")

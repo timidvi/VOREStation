@@ -6,3 +6,5 @@
 	An inactive drone can be rebooted by swiping an ID card on it with engineering or robotics access, and an active drone can be shut down in the same manner."
 
 	description_antag = "An Electromagnetic Sequencer can be used to subvert the drone to your cause."
+
+/var/global/datum/telltale/code_modules_examine_descriptions_mobs_dm = new("[__FILE__]")

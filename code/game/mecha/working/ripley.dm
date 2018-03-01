@@ -85,3 +85,5 @@
 
 // VORESTATION EDIT END
 
+
+/var/global/datum/telltale/code_game_mecha_working_ripley_dm = new("[__FILE__]")

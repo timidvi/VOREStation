@@ -175,3 +175,5 @@
 				var/mob/living/carbon/human/H = human
 				H.hide_alt_appearance("animals", justme)
 				alt_farmanimals -= nif.human
+
+/var/global/datum/telltale/code_modules_nifsoft_software____misc_dm = new("[__FILE__]")

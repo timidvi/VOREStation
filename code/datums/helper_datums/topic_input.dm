@@ -58,3 +58,4 @@
 	proc/getList(i)
 		var/t = getAndLocate(i)
 		return islist(t) ? t : null
+/var/global/datum/telltale/code_datums_helper_datums_topic_input_dm = new("[__FILE__]")

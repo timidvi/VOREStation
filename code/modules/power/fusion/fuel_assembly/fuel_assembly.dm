@@ -65,3 +65,5 @@
 
 /obj/item/weapon/fuel_assembly/supermatter/New(var/newloc)
 	..(newloc, "supermatter")
+
+/var/global/datum/telltale/code_modules_power_fusion_fuel_assembly_fuel_assembly_dm = new("[__FILE__]")

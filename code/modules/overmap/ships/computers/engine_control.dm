@@ -99,3 +99,5 @@
 /obj/machinery/computer/engines/proc/get_total_thrust()
 	for(var/datum/ship_engine/E in engines)
 		. += E.get_thrust()
+
+/var/global/datum/telltale/code_modules_overmap_ships_computers_engine_control_dm = new("[__FILE__]")

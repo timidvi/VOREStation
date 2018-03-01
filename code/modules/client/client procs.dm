@@ -372,3 +372,5 @@ client/verb/character_setup()
 	set category = "Preferences"
 	if(prefs)
 		prefs.ShowChoices(usr)
+
+/var/global/datum/telltale/code_modules_client_client_procs_dm = new("[__FILE__]")

@@ -161,3 +161,5 @@
 	mode = "best"
 	flash_protection = FLASH_PROTECTION_MAJOR
 	enables_planes = list(VIS_CH_ID,VIS_CH_HEALTH_VR,VIS_CH_STATUS_R,VIS_CH_BACKUP,VIS_CH_WANTED)
+
+/var/global/datum/telltale/code_modules_clothing_glasses_hud_vr_dm = new("[__FILE__]")

@@ -214,3 +214,4 @@
 	if (href_list["toggle_zoom"])
 		src.zoom()
 	return
+/var/global/datum/telltale/code_game_mecha_combat_marauder_dm = new("[__FILE__]")

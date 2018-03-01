@@ -105,3 +105,5 @@
 	flesh_color = "#34AF10"
 	base_color = "#066000"
 	reagent_tag = IS_UNATHI
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_monkey_dm = new("[__FILE__]")

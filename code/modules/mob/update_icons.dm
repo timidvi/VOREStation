@@ -95,3 +95,5 @@
 
 /mob/proc/update_targeted()
 	return
+
+/var/global/datum/telltale/code_modules_mob_update_icons_dm = new("[__FILE__]")

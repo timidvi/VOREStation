@@ -119,3 +119,4 @@
 	return text
 
 #undef NEWSFILE
+/var/global/datum/telltale/code_modules_admin_news_dm = new("[__FILE__]")

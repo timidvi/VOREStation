@@ -13,3 +13,5 @@
 		list(mode_name="endothermic beam", projectile_type = /obj/item/projectile/temp, charge_cost = 240),
 		list(mode_name="exothermic beam", projectile_type = /obj/item/projectile/temp/hot, charge_cost = 240),
 		)
+
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_temperature_dm = new("[__FILE__]")

@@ -4,3 +4,4 @@
 	O.object = supply_controller.supply_packs[pick(supply_controller.supply_packs)]
 	O.orderedby = random_name(pick(MALE,FEMALE), species = "Human")
 	supply_controller.shoppinglist += O
+/var/global/datum/telltale/code_modules_events_shipping_error_dm = new("[__FILE__]")

@@ -214,3 +214,5 @@
 						if(I)
 							step(I, pick(NORTH,SOUTH,EAST,WEST))
 							sleep(rand(2,4))
+
+/var/global/datum/telltale/code_game_objects_items_weapons_trays_dm = new("[__FILE__]")

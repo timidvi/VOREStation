@@ -29,3 +29,5 @@
 				A.gravitychange(gravity_is_on, A)
 
 		command_announcement.Announce("Gravity generators are again functioning within normal parameters. Sorry for any inconvenience.", "Gravity Restored")
+
+/var/global/datum/telltale/code_modules_events_gravity_dm = new("[__FILE__]")

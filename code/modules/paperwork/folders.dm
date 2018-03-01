@@ -137,3 +137,5 @@
 		attack_self(usr)
 		update_icon()
 	return
+
+/var/global/datum/telltale/code_modules_paperwork_folders_dm = new("[__FILE__]")

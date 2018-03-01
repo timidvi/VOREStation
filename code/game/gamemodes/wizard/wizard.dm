@@ -9,3 +9,5 @@
 	required_enemies = 1
 	end_on_antag_death = 0
 	antag_tags = list(MODE_WIZARD)
+
+/var/global/datum/telltale/code_game_gamemodes_wizard_wizard_dm = new("[__FILE__]")

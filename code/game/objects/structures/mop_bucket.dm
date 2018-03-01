@@ -27,3 +27,5 @@
 			reagents.trans_to_obj(I, 5)
 			to_chat(user, "<span class='notice'>You wet \the [I] in \the [src].</span>")
 			playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
+
+/var/global/datum/telltale/code_game_objects_structures_mop_bucket_dm = new("[__FILE__]")

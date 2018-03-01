@@ -115,3 +115,5 @@
 
 /obj/item/clothing/suit/space/cult/cultify()
 	return
+
+/var/global/datum/telltale/code_game_gamemodes_cult_cult_items_dm = new("[__FILE__]")

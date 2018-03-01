@@ -58,3 +58,4 @@
 #define INFECTION_LEVEL_TWO   500
 #define INFECTION_LEVEL_THREE 1000
 #define INFECTION_LEVEL_MAX   1500
+/var/global/datum/telltale/code___defines_damage_organs_dm = new("[__FILE__]")

@@ -27,3 +27,4 @@ SUBSYSTEM_DEF(creation)
 			A.initialize()
 		atoms_needing_initialize -= A
 	admin_notice("<span class='danger'>Initalized [total_atoms] atoms in submap.</span>", R_DEBUG)
+/var/global/datum/telltale/code_controllers_subsystems_creation_dm = new("[__FILE__]")

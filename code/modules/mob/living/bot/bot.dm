@@ -383,3 +383,5 @@
 		else return !D.check_access(ID)	// it's a real, air blocking door
 	return 0
 
+
+/var/global/datum/telltale/code_modules_mob_living_bot_bot_dm = new("[__FILE__]")

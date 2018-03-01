@@ -124,3 +124,4 @@
 		for(var/obj/item/clothing/accessory/A in accessories)
 			A.emp_act(severity)
 	..()
+/var/global/datum/telltale/code_modules_clothing_clothing_accessories_dm = new("[__FILE__]")

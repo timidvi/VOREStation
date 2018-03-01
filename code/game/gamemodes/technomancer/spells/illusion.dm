@@ -189,3 +189,5 @@
 
 /mob/living/simple_animal/illusion/ex_act()
 	return
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_illusion_dm = new("[__FILE__]")

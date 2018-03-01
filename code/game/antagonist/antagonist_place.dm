@@ -25,3 +25,5 @@
 		return
 	var/turf/T = pick_mobless_turf_if_exists(starting_locations)
 	mob.forceMove(T)
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_place_dm = new("[__FILE__]")

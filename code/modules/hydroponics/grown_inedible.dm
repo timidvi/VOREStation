@@ -59,3 +59,5 @@
 	throwforce = 0
 	throw_speed = 4
 	throw_range = 20
+
+/var/global/datum/telltale/code_modules_hydroponics_grown_inedible_dm = new("[__FILE__]")

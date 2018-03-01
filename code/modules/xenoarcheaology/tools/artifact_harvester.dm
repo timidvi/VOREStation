@@ -251,3 +251,5 @@
 		usr.unset_machine(src)
 
 	updateDialog()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_artifact_harvester_dm = new("[__FILE__]")

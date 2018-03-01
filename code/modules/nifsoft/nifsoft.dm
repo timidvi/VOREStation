@@ -322,3 +322,4 @@
 	..()
 	for(var/i = 0 to 7)
 		new /obj/item/weapon/disk/nifsoft/mining(src)
+/var/global/datum/telltale/code_modules_nifsoft_nifsoft_dm = new("[__FILE__]")

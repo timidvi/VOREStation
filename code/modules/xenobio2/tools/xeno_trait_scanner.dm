@@ -183,3 +183,4 @@
 		user << browse(dat,"window=xeno_analyzer")
 
 	return
+/var/global/datum/telltale/code_modules_xenobio__tools_xeno_trait_scanner_dm = new("[__FILE__]")

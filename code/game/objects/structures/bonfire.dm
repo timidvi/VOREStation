@@ -414,3 +414,4 @@
 /obj/structure/fireplace/water_act(amount)
 	if(prob(amount * 10))
 		extinguish()
+/var/global/datum/telltale/code_game_objects_structures_bonfire_dm = new("[__FILE__]")

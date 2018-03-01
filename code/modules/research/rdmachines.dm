@@ -71,3 +71,4 @@
 	var/obj/item/stack/material/S = new sheetType(loc)
 	S.amount = eject
 	materials[material] -= eject * perUnit
+/var/global/datum/telltale/code_modules_research_rdmachines_dm = new("[__FILE__]")

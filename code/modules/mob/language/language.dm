@@ -236,3 +236,5 @@
 		target.add_language(L.name)
 
 #undef SCRAMBLE_CACHE_LEN
+
+/var/global/datum/telltale/code_modules_mob_language_language_dm = new("[__FILE__]")

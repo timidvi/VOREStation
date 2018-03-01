@@ -176,3 +176,4 @@
 	reagents.add_reagent("protein", 15)
 	reagents.add_reagent("water", 45)
 	on_reagent_change()
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_drinks_drinkingglass_dm = new("[__FILE__]")

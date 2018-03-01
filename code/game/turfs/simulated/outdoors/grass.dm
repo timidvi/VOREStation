@@ -58,3 +58,5 @@ var/list/grass_types = list(
 	tree_chance = 10
 	grass_chance = 0
 
+
+/var/global/datum/telltale/code_game_turfs_simulated_outdoors_grass_dm = new("[__FILE__]")

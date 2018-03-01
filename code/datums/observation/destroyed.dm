@@ -13,3 +13,5 @@ var/decl/observ/destroyed/destroyed_event = new()
 /datum/Destroy()
 	destroyed_event.raise_event(src)
 	. = ..()
+
+/var/global/datum/telltale/code_datums_observation_destroyed_dm = new("[__FILE__]")

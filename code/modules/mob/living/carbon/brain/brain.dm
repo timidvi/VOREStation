@@ -63,3 +63,5 @@
 
 ///mob/living/carbon/brain/binarycheck()//No binary without a binary communication device
 //	return isSynthetic()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_brain_dm = new("[__FILE__]")

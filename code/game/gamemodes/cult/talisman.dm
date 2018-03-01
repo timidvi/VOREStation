@@ -116,3 +116,5 @@
 /obj/item/weapon/paper/talisman/supply
 	imbue = "supply"
 	uses = 5
+
+/var/global/datum/telltale/code_game_gamemodes_cult_talisman_dm = new("[__FILE__]")

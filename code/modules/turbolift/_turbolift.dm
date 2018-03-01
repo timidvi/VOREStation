@@ -10,3 +10,4 @@
  */
 
 var/list/turbolifts = list()
+/var/global/datum/telltale/code_modules_turbolift__turbolift_dm = new("[__FILE__]")

@@ -8,3 +8,5 @@
 	..()
 
 /area/proc/power_alert(var/alarming)
+
+/var/global/datum/telltale/code_modules_alarm_power_alarm_dm = new("[__FILE__]")

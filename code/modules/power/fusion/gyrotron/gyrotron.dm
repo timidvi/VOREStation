@@ -66,3 +66,4 @@ var/list/gyrotrons = list()
 		return
 
 	return ..()
+/var/global/datum/telltale/code_modules_power_fusion_gyrotron_gyrotron_dm = new("[__FILE__]")

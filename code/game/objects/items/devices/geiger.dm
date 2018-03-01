@@ -81,3 +81,4 @@
 #undef RAD_LEVEL_MODERATE
 #undef RAD_LEVEL_HIGH
 #undef RAD_LEVEL_VERY_HIGH
+/var/global/datum/telltale/code_game_objects_items_devices_geiger_dm = new("[__FILE__]")

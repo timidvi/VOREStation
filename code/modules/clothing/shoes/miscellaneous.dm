@@ -155,3 +155,5 @@
 	force = 0
 	w_class = ITEMSIZE_SMALL
 	species_restricted = null
+
+/var/global/datum/telltale/code_modules_clothing_shoes_miscellaneous_dm = new("[__FILE__]")

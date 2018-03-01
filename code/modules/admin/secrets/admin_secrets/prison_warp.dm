@@ -36,3 +36,5 @@
 			//teleport security person
 			H.loc = pick(prisonsecuritywarp)
 		prisonwarped += H
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_prison_warp_dm = new("[__FILE__]")

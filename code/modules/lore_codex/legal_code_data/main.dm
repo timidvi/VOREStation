@@ -99,3 +99,4 @@
 
 		data = data + HTML
 		..()
+/var/global/datum/telltale/code_modules_lore_codex_legal_code_data_main_dm = new("[__FILE__]")

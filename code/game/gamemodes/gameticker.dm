@@ -463,3 +463,5 @@ var/global/datum/controller/gameticker/ticker
 		log_game("[i]s[total_antagonists[i]].")
 
 	return 1
+
+/var/global/datum/telltale/code_game_gamemodes_gameticker_dm = new("[__FILE__]")

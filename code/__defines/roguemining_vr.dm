@@ -8,3 +8,5 @@
 #define RM_DIFF_VALUE_MOB_HARD 15
 #define RM_DIFF_VALUE_MOB_BOSS 100
 #define RM_DIFF_VALUE_ORE 10
+
+/var/global/datum/telltale/code___defines_roguemining_vr_dm = new("[__FILE__]")

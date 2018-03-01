@@ -119,3 +119,5 @@
 	desc = "A stylish wallet typically used by women."
 	icon_state = "girl_wallet"
 	item_state_slots = list(slot_r_hand_str = "wowallet", slot_l_hand_str = "wowallet")
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_wallets_dm = new("[__FILE__]")

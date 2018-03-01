@@ -38,3 +38,4 @@
 			continue
 		else if(M.stat == DEAD && M.is_preference_enabled(/datum/client_preference/ghost_ears))
 			M << "[src.truename] whispers to [host], \"[message]\""
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_borer_say_dm = new("[__FILE__]")

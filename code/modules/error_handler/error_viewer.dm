@@ -204,3 +204,5 @@ var/global/datum/ErrorViewer/ErrorCache/error_cache = null
 		return html_encode(name)
 	else
 		return ..()
+
+/var/global/datum/telltale/code_modules_error_handler_error_viewer_dm = new("[__FILE__]")

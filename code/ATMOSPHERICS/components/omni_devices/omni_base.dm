@@ -305,3 +305,5 @@
 	update_ports()
 
 	return null
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_omni_devices_omni_base_dm = new("[__FILE__]")

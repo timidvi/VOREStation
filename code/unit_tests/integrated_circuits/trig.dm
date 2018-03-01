@@ -31,3 +31,4 @@
 	circuit_type = /obj/item/integrated_circuit/trig/tangent
 	inputs_to_give = list(45)
 	expected_outputs = list(1)
+/var/global/datum/telltale/code_unit_tests_integrated_circuits_trig_dm = new("[__FILE__]")

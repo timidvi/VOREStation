@@ -148,3 +148,5 @@
 			"You hear a ratchet.")
 		new /obj/item/pipe(loc, make_from=src)
 		qdel(src)
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_portables_connector_dm = new("[__FILE__]")

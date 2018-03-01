@@ -913,3 +913,5 @@
 	w_class = ITEMSIZE_TINY
 	force = 1
 	throwforce = 1
+
+/var/global/datum/telltale/code_game_objects_items_toys_dm = new("[__FILE__]")

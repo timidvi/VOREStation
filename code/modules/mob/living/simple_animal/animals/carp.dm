@@ -90,3 +90,5 @@
 			L.Weaken(3)
 			L.visible_message("<span class='danger'>\the [src] knocks down \the [L]!</span>")
 
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_carp_dm = new("[__FILE__]")

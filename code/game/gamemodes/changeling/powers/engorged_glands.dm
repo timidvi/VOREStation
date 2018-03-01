@@ -11,3 +11,4 @@
 	src.mind.changeling.chem_storage += 30
 	src.mind.changeling.chem_recharge_rate *= 2
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_engorged_glands_dm = new("[__FILE__]")

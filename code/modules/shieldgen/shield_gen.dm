@@ -323,3 +323,5 @@
 		if (T) out += T
 
 	return out
+
+/var/global/datum/telltale/code_modules_shieldgen_shield_gen_dm = new("[__FILE__]")

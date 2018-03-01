@@ -146,3 +146,5 @@
 /obj/effect/dummy/chameleon/Destroy()
 	master.disrupt(0)
 	..()
+
+/var/global/datum/telltale/code_game_objects_items_devices_chameleonproj_dm = new("[__FILE__]")

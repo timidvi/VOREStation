@@ -174,3 +174,5 @@
 	if(C.idle_power_usage > C.avail())
 		return
 	. = 1
+
+/var/global/datum/telltale/code_modules_power_fusion_core_core_control_dm = new("[__FILE__]")

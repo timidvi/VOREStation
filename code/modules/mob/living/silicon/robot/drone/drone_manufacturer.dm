@@ -149,3 +149,5 @@
 	if(choice)
 		var/obj/machinery/drone_fabricator/chosen_fabricator = all_fabricators[choice]
 		chosen_fabricator.create_drone(src.client)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_manufacturer_dm = new("[__FILE__]")

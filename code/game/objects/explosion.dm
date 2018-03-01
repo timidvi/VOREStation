@@ -111,3 +111,5 @@ proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impa
 proc/secondaryexplosion(turf/epicenter, range)
 	for(var/turf/tile in range(range, epicenter))
 		tile.ex_act(2)
+
+/var/global/datum/telltale/code_game_objects_explosion_dm = new("[__FILE__]")

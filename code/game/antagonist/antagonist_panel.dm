@@ -59,3 +59,5 @@
 //Overridden elsewhere.
 /datum/antagonist/proc/get_additional_check_antag_output(var/datum/admins/caller)
 	return ""
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_panel_dm = new("[__FILE__]")

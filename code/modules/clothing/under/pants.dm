@@ -190,3 +190,4 @@
 	name = "baggy camo pants"
 	desc = "A pair of woodland camouflage pants. Probably not the best choice for a space station."
 	icon_state = "baggy_camopants"
+/var/global/datum/telltale/code_modules_clothing_under_pants_dm = new("[__FILE__]")

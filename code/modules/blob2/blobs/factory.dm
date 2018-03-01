@@ -35,3 +35,4 @@
 		S.overmind = overmind
 		S.update_icons()
 		overmind.blob_mobs.Add(S)
+/var/global/datum/telltale/code_modules_blob__blobs_factory_dm = new("[__FILE__]")

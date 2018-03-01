@@ -34,3 +34,4 @@
 		src.verbs += /mob/proc/changeling_digitalcamo
 	feedback_add_details("changeling_powers","CAM")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_digital_camo_dm = new("[__FILE__]")

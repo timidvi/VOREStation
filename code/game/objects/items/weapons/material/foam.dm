@@ -41,3 +41,4 @@
 
 /obj/item/weapon/material/twohanded/fireaxe/foam/afterattack()
 	return
+/var/global/datum/telltale/code_game_objects_items_weapons_material_foam_dm = new("[__FILE__]")

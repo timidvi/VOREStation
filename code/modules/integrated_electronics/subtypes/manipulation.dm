@@ -204,3 +204,4 @@
 	pre_attached_grenade_type = /obj/item/weapon/grenade/explosive
 	origin_tech = list(TECH_ENGINEERING = 3, TECH_DATA = 3, TECH_COMBAT = 10)
 	spawn_flags = null			// Used for world initializing, see the #defines above.
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_manipulation_dm = new("[__FILE__]")

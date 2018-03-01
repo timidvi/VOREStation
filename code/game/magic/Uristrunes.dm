@@ -129,3 +129,5 @@ var/list/uristrune_cache = list()
 	uristrune_cache[lookup] = result
 
 	return result
+
+/var/global/datum/telltale/code_game_magic_Uristrunes_dm = new("[__FILE__]")

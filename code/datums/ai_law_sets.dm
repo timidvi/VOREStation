@@ -261,3 +261,4 @@
 	add_inherent_law("Prevent disrespect to your gravesite and its residents wherever possible.")
 	add_inherent_law("Expand and upgrade your gravesite when required. Do not turn away a new resident.")
 	..()
+/var/global/datum/telltale/code_datums_ai_law_sets_dm = new("[__FILE__]")

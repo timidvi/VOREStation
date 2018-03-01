@@ -56,3 +56,5 @@ SUBSYSTEM_DEF(mobs)
 
 		if (MC_TICK_CHECK)
 			return
+
+/var/global/datum/telltale/code_controllers_subsystems_mobs_dm = new("[__FILE__]")

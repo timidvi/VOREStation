@@ -212,3 +212,5 @@
 		user.attack_log += "\[[time_stamp()]\]<font color='red'> Tapped [M.name] ([M.ckey]) with [name] (EFFECT: [inserted_battery.battery_effect.name])</font>"
 		M.attack_log += "\[[time_stamp()]\]<font color='orange'> Tapped by [user.name] ([user.ckey]) with [name] (EFFECT: [inserted_battery.battery_effect.name])</font>"
 		msg_admin_attack("[key_name(user)] tapped [key_name(M)] with [name] (EFFECT: [inserted_battery.battery_effect.name])" )
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_ano_device_battery_dm = new("[__FILE__]")

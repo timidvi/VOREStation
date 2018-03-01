@@ -99,3 +99,5 @@
 			stat &= ~EMPED
 	update_icon()
 	..()
+
+/var/global/datum/telltale/code_game_machinery_pda_multicaster_dm = new("[__FILE__]")

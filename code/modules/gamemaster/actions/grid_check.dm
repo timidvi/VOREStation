@@ -21,3 +21,4 @@
 		break // Just one engine, please.
 	// After that, the engine checks if a grid checker exists on the same powernet, and if so, it triggers a blackout.
 	// If not, lots of stuff breaks.  See code/modules/power/generator.dm for that piece of code.
+/var/global/datum/telltale/code_modules_gamemaster_actions_grid_check_dm = new("[__FILE__]")

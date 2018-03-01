@@ -61,3 +61,5 @@
 	if(defer_powernet_rebuild != 2)
 		defer_powernet_rebuild = 0
 	return
+
+/var/global/datum/telltale/code_modules_vore_resizing_grav_pull_vr_dm = new("[__FILE__]")

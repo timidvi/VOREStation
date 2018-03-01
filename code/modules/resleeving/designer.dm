@@ -390,3 +390,5 @@
 		new /obj/item/weapon/disk/body_record(src)
 
 #undef MOB_HEX_COLOR
+
+/var/global/datum/telltale/code_modules_resleeving_designer_dm = new("[__FILE__]")

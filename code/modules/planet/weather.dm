@@ -65,3 +65,5 @@
 
 /datum/weather/proc/process_effects()
 	return
+
+/var/global/datum/telltale/code_modules_planet_weather_dm = new("[__FILE__]")

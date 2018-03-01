@@ -34,3 +34,4 @@
 #undef IC_PINTYPE_PULSE_OUT
 
 #undef IC_MAX_LIST_LENGTH
+/var/global/datum/telltale/code_modules_integrated_electronics__defines__defines_dm = new("[__FILE__]")

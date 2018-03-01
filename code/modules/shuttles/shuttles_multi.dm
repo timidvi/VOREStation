@@ -288,3 +288,5 @@
 		MS.last_location = choice
 
 	updateUsrDialog()
+
+/var/global/datum/telltale/code_modules_shuttles_shuttles_multi_dm = new("[__FILE__]")

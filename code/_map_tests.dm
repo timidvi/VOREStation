@@ -8,3 +8,5 @@
  *   #define MAP_TEST 1
  */
 #define MAP_TEST 0
+
+/var/global/datum/telltale/code__map_tests_dm = new("[__FILE__]")

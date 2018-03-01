@@ -40,3 +40,5 @@
 
 /turf/proc/cultify_wall()
 	ChangeTurf(/turf/unsimulated/wall/cult)
+
+/var/global/datum/telltale/code_game_gamemodes_cult_cultify_turf_dm = new("[__FILE__]")

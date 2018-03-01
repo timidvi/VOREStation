@@ -145,3 +145,5 @@
 						if(!(F in affected_shields))
 							F.impact_effect(i, affected_shields) // Spread the effect to them.
 
+
+/var/global/datum/telltale/code_modules_shieldgen_energy_field_dm = new("[__FILE__]")

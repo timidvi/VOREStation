@@ -331,3 +331,4 @@ var/list/flooring_types
 	has_damage_range = 6
 	flags = TURF_ACID_IMMUNE | TURF_CAN_BREAK
 	can_paint = null
+/var/global/datum/telltale/code_game_turfs_flooring_flooring_dm = new("[__FILE__]")

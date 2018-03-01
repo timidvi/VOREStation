@@ -39,3 +39,5 @@
 		entopic_users -= my_mob
 		if(my_mob.client)
 			my_mob.client.images -= entopic_images
+
+/var/global/datum/telltale/code_modules_mob_mob_planes_vr_dm = new("[__FILE__]")

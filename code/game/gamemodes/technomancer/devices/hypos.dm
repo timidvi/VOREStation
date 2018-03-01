@@ -106,3 +106,5 @@
 	addictive hypo compared to others, as it contains a potent cocktail of various chemicals to optimize the recipient's combat \
 	ability."
 	filled_reagents = list("bicaridine" = 3, "kelotane" = 1.5, "dermaline" = 1.5, "oxycodone" = 3, "hyperzine" = 3, "tricordrazine" = 3)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_devices_hypos_dm = new("[__FILE__]")

@@ -234,3 +234,5 @@
 "}
 
 	state("The nearby computer prints out a report.")
+
+/var/global/datum/telltale/code_modules_virus__isolator_dm = new("[__FILE__]")

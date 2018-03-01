@@ -187,3 +187,5 @@ datum/uplink_item/dd_SortValue()
 		remaining_TC -= I.cost(remaining_TC, U)
 
 	return bought_items
+
+/var/global/datum/telltale/code_datums_uplink_uplink_items_dm = new("[__FILE__]")

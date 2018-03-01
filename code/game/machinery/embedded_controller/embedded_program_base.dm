@@ -25,3 +25,5 @@
 		master.post_signal(signal, comm_line)
 	else
 		qdel(signal)
+
+/var/global/datum/telltale/code_game_machinery_embedded_controller_embedded_program_base_dm = new("[__FILE__]")

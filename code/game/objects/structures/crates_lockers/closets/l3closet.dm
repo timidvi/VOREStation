@@ -89,3 +89,4 @@
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/mask/gas(src)
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_l_closet_dm = new("[__FILE__]")

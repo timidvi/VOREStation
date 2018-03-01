@@ -51,3 +51,5 @@
 		var/rads = (adjusted_power / 10) * ( 1 / (radius**2) )
 		L.apply_effect(rads, IRRADIATE)
 	adjust_instability(2)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_radiance_dm = new("[__FILE__]")

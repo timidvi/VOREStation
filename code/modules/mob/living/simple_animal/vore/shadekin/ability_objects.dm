@@ -163,3 +163,4 @@
 	if(!..())
 		return
 */
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_shadekin_ability_objects_dm = new("[__FILE__]")

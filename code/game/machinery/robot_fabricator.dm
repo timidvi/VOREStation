@@ -136,3 +136,5 @@ Please wait until completion...</TT><BR>
 	for (var/mob/M in viewers(1, src))
 		if(M.client && M.machine == src)
 			attack_hand(M)
+
+/var/global/datum/telltale/code_game_machinery_robot_fabricator_dm = new("[__FILE__]")

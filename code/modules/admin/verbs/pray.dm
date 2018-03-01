@@ -42,3 +42,4 @@
 		if(R_ADMIN & C.holder.rights)
 			C << msg
 			C << 'sound/machines/signal.ogg'
+/var/global/datum/telltale/code_modules_admin_verbs_pray_dm = new("[__FILE__]")

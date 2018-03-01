@@ -20,3 +20,5 @@
 	icon_state = "debugium"
 	default_type = "debugium"
 
+
+/var/global/datum/telltale/code_modules_tables_debug_dm = new("[__FILE__]")

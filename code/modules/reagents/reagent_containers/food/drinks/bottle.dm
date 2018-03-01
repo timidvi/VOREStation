@@ -549,3 +549,4 @@
 /obj/item/weapon/reagent_containers/food/drinks/bottle/champagne/New()
 	..()
 	reagents.add_reagent("champagne", 100)
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_drinks_bottle_dm = new("[__FILE__]")

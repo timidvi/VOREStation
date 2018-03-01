@@ -24,3 +24,4 @@
 	//Vorestation addition, so large mobs stop looking stupid in front of lights.
 	if (dir == 2)
 		layer = 5
+/var/global/datum/telltale/code_modules_power_lighting_vr_dm = new("[__FILE__]")

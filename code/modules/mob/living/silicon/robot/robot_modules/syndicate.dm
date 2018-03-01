@@ -194,3 +194,4 @@
 		S.desc = initial(S.desc)
 		S.update_icon()
 	..()
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_modules_syndicate_dm = new("[__FILE__]")

@@ -292,3 +292,4 @@
 #undef MODE_NONE
 #undef MODE_SERVER
 #undef MODE_CLIENT
+/var/global/datum/telltale/code_game_machinery_embedded_controller_docking_program_dm = new("[__FILE__]")

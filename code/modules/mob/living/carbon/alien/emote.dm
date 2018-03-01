@@ -129,3 +129,4 @@
 				O.show_message(message, m_type)
 				//Foreach goto(746)
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_emote_dm = new("[__FILE__]")

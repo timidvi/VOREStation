@@ -45,3 +45,5 @@ var/datum/antagonist/loyalists/loyalists
 		loyal_obj.target = player.mind
 		loyal_obj.explanation_text = "Protect [player.real_name], the [player.mind.assigned_role]."
 		global_objectives += loyal_obj
+
+/var/global/datum/telltale/code_game_antagonist_station_loyalist_dm = new("[__FILE__]")

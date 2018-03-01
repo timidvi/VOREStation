@@ -108,3 +108,4 @@
 /mob/living/simple_animal/hostile/blob/spore/GetIdCard()
 	if(infested) // If we've infested someone, use their ID.
 		return infested.GetIdCard()
+/var/global/datum/telltale/code_modules_blob__mobs_spore_dm = new("[__FILE__]")

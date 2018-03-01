@@ -96,3 +96,5 @@
 
 		icon_state = "lattice[dir_sum]"
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_lattice_dm = new("[__FILE__]")

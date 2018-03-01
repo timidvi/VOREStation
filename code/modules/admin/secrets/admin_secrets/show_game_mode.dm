@@ -12,3 +12,5 @@
 		return
 	if (ticker.mode) alert("The game mode is [ticker.mode.name]")
 	else alert("For some reason there's a ticker, but not a game mode")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_show_game_mode_dm = new("[__FILE__]")

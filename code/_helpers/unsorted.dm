@@ -1474,3 +1474,5 @@ var/mob/dview/dview_mob = new
 
 
 
+
+/var/global/datum/telltale/code__helpers_unsorted_dm = new("[__FILE__]")

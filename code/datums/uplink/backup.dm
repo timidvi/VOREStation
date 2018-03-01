@@ -33,3 +33,4 @@
 	item_cost = DEFAULT_TELECRYSTAL_AMOUNT * 1.5
 	antag_roles = list("mercenary")
 	path = /obj/item/weapon/antag_spawner/syndicate_drone/mechanist
+/var/global/datum/telltale/code_datums_uplink_backup_dm = new("[__FILE__]")

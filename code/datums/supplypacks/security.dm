@@ -375,3 +375,5 @@
 	cost = 50
 	containertype = "/obj/structure/closet/crate/secure"
 	containername = "Security biohazard gear"
+
+/var/global/datum/telltale/code_datums_supplypacks_security_dm = new("[__FILE__]")

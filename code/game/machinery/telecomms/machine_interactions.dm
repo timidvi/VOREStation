@@ -403,3 +403,5 @@
 
 #undef TELECOMM_Z
 #undef STATION_Z
+
+/var/global/datum/telltale/code_game_machinery_telecomms_machine_interactions_dm = new("[__FILE__]")

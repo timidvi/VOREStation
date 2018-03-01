@@ -36,3 +36,5 @@
 		var/new_smoke_color = input(user, "Choose a color for the smoke:", "Smoke Color", smoke_color) as color|null
 		if(new_smoke_color)
 			smoke_color = new_smoke_color
+
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_smokebomb_dm = new("[__FILE__]")

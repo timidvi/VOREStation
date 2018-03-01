@@ -11,3 +11,4 @@
 		current_turf = get_step(current_turf, starting_dir)
 	targets += current_turf
 	return targets
+/var/global/datum/telltale/code_modules_spells_targeted_projectile_dumbfire_dm = new("[__FILE__]")

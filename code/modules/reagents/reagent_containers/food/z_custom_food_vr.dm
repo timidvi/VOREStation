@@ -277,3 +277,5 @@ var/global/ingredientLimit = 20
 		qdel(src)
 	else
 		return ..()
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_z_custom_food_vr_dm = new("[__FILE__]")

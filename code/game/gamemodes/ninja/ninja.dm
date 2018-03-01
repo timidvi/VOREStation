@@ -15,3 +15,4 @@
 	end_on_antag_death = 0
 	antag_tags = list(MODE_NINJA)
 	votable = 0
+/var/global/datum/telltale/code_game_gamemodes_ninja_ninja_dm = new("[__FILE__]")

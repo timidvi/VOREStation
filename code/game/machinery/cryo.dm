@@ -365,3 +365,5 @@
 
 /datum/data/function/proc/display()
 	return
+
+/var/global/datum/telltale/code_game_machinery_cryo_dm = new("[__FILE__]")

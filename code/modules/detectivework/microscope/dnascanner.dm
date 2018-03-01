@@ -167,3 +167,5 @@
 		icon_state = "dnaclosed"
 	else
 		icon_state = "dnaopen"
+
+/var/global/datum/telltale/code_modules_detectivework_microscope_dnascanner_dm = new("[__FILE__]")

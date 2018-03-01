@@ -386,3 +386,4 @@
 /obj/screen/wizard/energy
 	name = "energy"
 	icon_state = "wiz_energy"
+/var/global/datum/telltale/code__onclick_hud_human_dm = new("[__FILE__]")

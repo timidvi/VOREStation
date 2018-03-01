@@ -236,3 +236,5 @@
 
 	newitem.loc = get_turf(M.loc)
 	return newitem
+
+/var/global/datum/telltale/code_modules_customitems_item_spawning_dm = new("[__FILE__]")

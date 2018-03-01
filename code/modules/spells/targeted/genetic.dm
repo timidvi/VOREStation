@@ -66,3 +66,5 @@ code\game\dna\genes\goon_powers.dm
 	cooldown_min = 300 //25 deciseconds reduction per rank
 
 	hud_state = "wiz_hulk"
+
+/var/global/datum/telltale/code_modules_spells_targeted_genetic_dm = new("[__FILE__]")

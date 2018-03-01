@@ -269,3 +269,4 @@
 	if(make_sound)
 		playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_generic_equip_procs_dm = new("[__FILE__]")

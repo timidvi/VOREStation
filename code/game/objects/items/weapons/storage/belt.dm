@@ -419,3 +419,5 @@
  	icon_state = "fannypack_yellow"
  	item_state = "fannypack_yellow"
 
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_belt_dm = new("[__FILE__]")

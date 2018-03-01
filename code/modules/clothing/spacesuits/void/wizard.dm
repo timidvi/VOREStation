@@ -24,3 +24,5 @@
 	sprite_sheets_refit = null
 	sprite_sheets_obj = null
 	wizard_garb = 1
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_void_wizard_dm = new("[__FILE__]")

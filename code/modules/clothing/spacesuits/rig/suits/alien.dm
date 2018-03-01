@@ -125,3 +125,4 @@
 		/obj/item/rig_module/power_sink,
 		/obj/item/rig_module/self_destruct
 		)
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_suits_alien_dm = new("[__FILE__]")

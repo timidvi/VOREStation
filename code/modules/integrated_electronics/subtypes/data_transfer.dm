@@ -144,3 +144,4 @@
 	icon_state = "dmux16"
 	w_class = ITEMSIZE_SMALL
 	number_of_outputs = 16
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_data_transfer_dm = new("[__FILE__]")

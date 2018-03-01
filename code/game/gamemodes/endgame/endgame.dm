@@ -69,3 +69,5 @@
 	universe = new newstate
 	if(on_enter)
 		universe.OnEnter()
+
+/var/global/datum/telltale/code_game_gamemodes_endgame_endgame_dm = new("[__FILE__]")

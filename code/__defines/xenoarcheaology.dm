@@ -71,3 +71,4 @@
 #define EFFECT_ORGANIC 5
 #define EFFECT_BLUESPACE 6
 #define EFFECT_SYNTH 7
+/var/global/datum/telltale/code___defines_xenoarcheaology_dm = new("[__FILE__]")

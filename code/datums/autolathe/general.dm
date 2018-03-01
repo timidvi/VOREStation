@@ -122,3 +122,5 @@
 	name = "handcuffs"
 	path =/obj/item/weapon/handcuffs
 	hidden = 1
+
+/var/global/datum/telltale/code_datums_autolathe_general_dm = new("[__FILE__]")

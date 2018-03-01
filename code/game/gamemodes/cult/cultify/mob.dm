@@ -61,3 +61,5 @@
 		if(narsimage)
 			qdel(narsimage)
 			qdel(narglow)
+
+/var/global/datum/telltale/code_game_gamemodes_cult_cultify_mob_dm = new("[__FILE__]")

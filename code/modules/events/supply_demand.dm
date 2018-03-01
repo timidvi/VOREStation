@@ -345,3 +345,5 @@
 		var/chosen_qty = Floor(rand(5, 100) * initial(A.product_mod))
 		required_items += new /datum/supply_demand_order/thing(chosen_qty, chosen_path)
 	return
+
+/var/global/datum/telltale/code_modules_events_supply_demand_dm = new("[__FILE__]")

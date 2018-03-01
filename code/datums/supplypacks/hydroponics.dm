@@ -149,3 +149,5 @@
 	contains = list(/obj/machinery/portable_atmospherics/hydroponics{anchored = 0} = 3)
 	access = access_hydroponics
 
+
+/var/global/datum/telltale/code_datums_supplypacks_hydroponics_dm = new("[__FILE__]")

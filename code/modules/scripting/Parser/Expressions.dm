@@ -312,3 +312,4 @@
 */
 		ParseParamExpression()
 			return ParseExpression(list(",", ")"))
+/var/global/datum/telltale/code_modules_scripting_Parser_Expressions_dm = new("[__FILE__]")

@@ -86,3 +86,5 @@
 	if(client)
 		var/is_antag = ((mind && mind.special_role) || isobserver(src)) //ghosts don't have minds
 		client.update_description_holders(A, is_antag)
+
+/var/global/datum/telltale/code_modules_examine_examine_dm = new("[__FILE__]")

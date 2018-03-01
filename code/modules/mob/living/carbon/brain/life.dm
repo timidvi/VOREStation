@@ -229,3 +229,4 @@
 		else
 			if(client && !client.adminobs)
 				reset_view(null)
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_life_dm = new("[__FILE__]")

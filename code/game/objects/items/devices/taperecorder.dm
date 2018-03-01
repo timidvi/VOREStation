@@ -439,3 +439,4 @@
 //Random colour tapes
 /obj/item/device/tape/random/New()
 	icon_state = "tape_[pick("white", "blue", "red", "yellow", "purple")]"
+/var/global/datum/telltale/code_game_objects_items_devices_taperecorder_dm = new("[__FILE__]")

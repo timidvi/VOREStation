@@ -19,3 +19,4 @@
 /obj/fiftyspawner/rods
 	name = "stack of rods" //this needs to be defined for cargo
 	type_to_spawn = /obj/item/stack/rods
+/var/global/datum/telltale/code_game_objects_items_stacks_fifty_spawner_dm = new("[__FILE__]")

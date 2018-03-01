@@ -67,3 +67,5 @@
 			else if(prob(25))
 				H.dizziness += rand(5,15)
 		return 1
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_badfeeling_dm = new("[__FILE__]")

@@ -29,3 +29,4 @@
 	//the second is the message in question.
 	var/last_taste_time = 0
 	var/last_taste_text = ""
+/var/global/datum/telltale/code_modules_mob_living_carbon_carbon_defines_dm = new("[__FILE__]")

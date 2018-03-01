@@ -22,3 +22,4 @@
 	preview_icon.Blend(stamp, ICON_OVERLAY, 112-stamp.Width()/2, 5)
 
 	preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
+/var/global/datum/telltale/code_modules_mob_new_player_preferences_setup_vr_dm = new("[__FILE__]")

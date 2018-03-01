@@ -19,3 +19,5 @@
 			return
 	else
 		return
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_blood_pack_vr_dm = new("[__FILE__]")

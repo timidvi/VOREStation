@@ -118,3 +118,4 @@
 
 /datum/job/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
 	return (supplied_title == desired_title) || (H.mind && H.mind.role_alt_title == desired_title)
+/var/global/datum/telltale/code_game_jobs_job_job_dm = new("[__FILE__]")

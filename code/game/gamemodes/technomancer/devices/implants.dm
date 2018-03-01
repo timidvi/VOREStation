@@ -9,3 +9,4 @@
 	desc = "A hidden implant which will explode if it hears a passphrase."
 	cost = 150
 	obj_path = /obj/item/weapon/storage/box/syndie_kit/imp_explosive
+/var/global/datum/telltale/code_game_gamemodes_technomancer_devices_implants_dm = new("[__FILE__]")

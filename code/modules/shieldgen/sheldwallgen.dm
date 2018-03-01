@@ -327,3 +327,5 @@
 			return prob(10)
 		else
 			return !src.density
+
+/var/global/datum/telltale/code_modules_shieldgen_sheldwallgen_dm = new("[__FILE__]")

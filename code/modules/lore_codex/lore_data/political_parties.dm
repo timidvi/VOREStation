@@ -97,3 +97,4 @@
 	the place of technological development as the primary issue of debate, the FTU has found itself adopting technological positions similar to the SEO as a matter \
 	of pragmatism, although the views of individual members vary. The FTU is known for their intense lobbying of SolGov to add tax rebates to the purchases of \
 	personal lathes and the creation of open-source firmware for experimental autolathes, but have thus far found little success."
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_political_parties_dm = new("[__FILE__]")

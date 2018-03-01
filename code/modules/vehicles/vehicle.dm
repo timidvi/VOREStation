@@ -419,3 +419,5 @@
 		new /obj/effect/decal/cleanable/blood/oil(src.loc)
 	spawn(1) healthcheck()
 	return 1
+
+/var/global/datum/telltale/code_modules_vehicles_vehicle_dm = new("[__FILE__]")

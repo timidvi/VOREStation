@@ -220,3 +220,5 @@
 	R.add_language(LANGUAGE_TERMINUS, 1)
 
 	return 1
+
+/var/global/datum/telltale/code_game_objects_items_robot_robot_upgrades_dm = new("[__FILE__]")

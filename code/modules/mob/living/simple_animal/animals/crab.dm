@@ -80,3 +80,5 @@
 	speak_emote = list("clicks")
 	emote_hear = list("clicks")
 	emote_see = list("clacks")
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_crab_dm = new("[__FILE__]")

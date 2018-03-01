@@ -200,3 +200,5 @@
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH|EAST
 	mirrored = TRUE
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_trinary_devices_filter_dm = new("[__FILE__]")

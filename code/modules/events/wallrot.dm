@@ -29,3 +29,4 @@ datum/event/wallrot/start()
 				// Only rot up to severity walls
 				if(rotcount >= actual_severity)
 					break
+/var/global/datum/telltale/code_modules_events_wallrot_dm = new("[__FILE__]")

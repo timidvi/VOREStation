@@ -83,3 +83,4 @@
 				</body>
 				</html>
 			"}
+/var/global/datum/telltale/code_modules_resleeving_documents_dm = new("[__FILE__]")

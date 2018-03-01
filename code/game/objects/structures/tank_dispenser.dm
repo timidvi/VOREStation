@@ -118,3 +118,5 @@
 		usr << browse(null, "window=dispenser")
 		return
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_tank_dispenser_dm = new("[__FILE__]")

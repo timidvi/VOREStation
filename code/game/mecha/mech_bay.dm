@@ -95,3 +95,4 @@
 
 		return
 	charging = null
+/var/global/datum/telltale/code_game_mecha_mech_bay_dm = new("[__FILE__]")

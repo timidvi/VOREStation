@@ -100,3 +100,5 @@
 			id_tag = new_ident
 		return
 	return ..()
+
+/var/global/datum/telltale/code_modules_power_fusion_fuel_assembly_fuel_control_dm = new("[__FILE__]")

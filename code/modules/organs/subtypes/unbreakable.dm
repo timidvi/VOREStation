@@ -41,3 +41,4 @@
 /obj/item/organ/external/head/unbreakable
 	cannot_break = 1
 	dislocated = -1
+/var/global/datum/telltale/code_modules_organs_subtypes_unbreakable_dm = new("[__FILE__]")

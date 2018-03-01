@@ -28,3 +28,5 @@
 					H.adjustFireLoss(-heal_power / 5)
 					sleep(1 SECOND)
 		on_expire()
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_insert_mend_burns_dm = new("[__FILE__]")

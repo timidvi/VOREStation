@@ -164,3 +164,5 @@
 		user << "<span class='notice'>You set the [name]'s tag to '[str]'.</span>"
 		name = initial(name) + " ([str])"
 		desc = initial(desc) + " The tag says \"[str]\"."
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_accessory_vr_dm = new("[__FILE__]")

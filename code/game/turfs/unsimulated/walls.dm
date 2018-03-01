@@ -12,3 +12,4 @@
 
 /turf/unsimulated/wall/other
 	icon_state = "r_wall"
+/var/global/datum/telltale/code_game_turfs_unsimulated_walls_dm = new("[__FILE__]")

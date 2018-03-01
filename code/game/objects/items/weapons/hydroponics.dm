@@ -111,3 +111,5 @@
 		if ((M.client && M.machine == src))
 			src.attack_self(M)
 */
+
+/var/global/datum/telltale/code_game_objects_items_weapons_hydroponics_dm = new("[__FILE__]")

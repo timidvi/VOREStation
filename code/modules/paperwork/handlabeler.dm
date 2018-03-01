@@ -65,3 +65,4 @@
 		user << "<span class='notice'>You set the text to '[str]'.</span>"
 	else
 		user << "<span class='notice'>You turn off \the [src].</span>"
+/var/global/datum/telltale/code_modules_paperwork_handlabeler_dm = new("[__FILE__]")

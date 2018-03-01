@@ -13,3 +13,4 @@
 	display_name = "universal translator, ear"
 	path = /obj/item/device/universal_translator/ear
 	cost = 8*/
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_ears_dm = new("[__FILE__]")

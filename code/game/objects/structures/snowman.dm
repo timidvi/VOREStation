@@ -22,3 +22,4 @@
 	name = "snow spider"
 	icon_state = "snowspider"
 	desc = "An impressively crafted snow spider. Not nearly as creepy as the real thing."
+/var/global/datum/telltale/code_game_objects_structures_snowman_dm = new("[__FILE__]")

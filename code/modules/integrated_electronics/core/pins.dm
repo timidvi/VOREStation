@@ -187,3 +187,5 @@ list[](
 
 /datum/integrated_io/activate/out // All this does is just make the UI say 'out' instead of 'in'
 	data = 1
+
+/var/global/datum/telltale/code_modules_integrated_electronics_core_pins_dm = new("[__FILE__]")

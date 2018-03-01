@@ -485,3 +485,5 @@
 	icon = 'icons/obj/doors/DoorHazardGlass.dmi'
 	icon_state = "door_open"
 	glass = 1
+
+/var/global/datum/telltale/code_game_machinery_doors_firedoor_dm = new("[__FILE__]")

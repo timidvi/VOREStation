@@ -119,3 +119,5 @@
 				if(agony == initial(agony))
 					agony = round((14 * agony) - agony) //60-4 = 56, 56 / 4 = 14. Prior was flat 60 - agony of the beam to equate to 60.
 	..()
+
+/var/global/datum/telltale/code_modules_xenobio_items_weapons_dm = new("[__FILE__]")

@@ -18,3 +18,5 @@
 	message_admins("[key_name_admin(usr)] set ckey of [key_name_admin(M)] to [selection]", 1)
 	M.ckey = selection.ckey
 	feedback_add_details("admin_verb","SCK") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/var/global/datum/telltale/code_modules_admin_ckey_vr_dm = new("[__FILE__]")

@@ -147,3 +147,5 @@ var/global/list/stool_cache = list() //haha stool
 		remove_padding()
 	else
 		..()
+
+/var/global/datum/telltale/code_game_objects_structures_stool_bed_chair_nest_stools_dm = new("[__FILE__]")

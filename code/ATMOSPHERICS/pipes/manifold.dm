@@ -242,3 +242,5 @@
 
 /obj/machinery/atmospherics/pipe/manifold/hidden/purple
 	color = PIPE_COLOR_PURPLE
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_manifold_dm = new("[__FILE__]")

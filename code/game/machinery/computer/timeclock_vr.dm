@@ -144,3 +144,5 @@
 /obj/machinery/computer/timeclock/premade/west
 	dir = 4
 	pixel_x = -26
+
+/var/global/datum/telltale/code_game_machinery_computer_timeclock_vr_dm = new("[__FILE__]")

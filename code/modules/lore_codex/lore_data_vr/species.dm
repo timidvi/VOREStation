@@ -367,3 +367,4 @@
 	security and deleted when encountered in SolGov space, with the producers prosecuted legally if it has a SolGov origin. The few Skrellian drone labs will usually \
 	rate their product with EIO to allow their product to be imported."
 */
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_vr_species_dm = new("[__FILE__]")

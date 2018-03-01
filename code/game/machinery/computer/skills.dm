@@ -418,3 +418,5 @@ What a mess.*/
 			continue
 
 	..(severity)
+
+/var/global/datum/telltale/code_game_machinery_computer_skills_dm = new("[__FILE__]")

@@ -142,3 +142,4 @@
 	icon_state = "fireaxe0101"
 	refund_amt = 4
 	build_machine_type = /obj/structure/closet/fireaxecabinet
+/var/global/datum/telltale/code_game_machinery_wall_frames_dm = new("[__FILE__]")

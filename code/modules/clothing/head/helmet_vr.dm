@@ -27,3 +27,4 @@
 	icon_state = "ge_helmcent"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
 	icon_override = 'icons/mob/head_vr.dmi'
+/var/global/datum/telltale/code_modules_clothing_head_helmet_vr_dm = new("[__FILE__]")

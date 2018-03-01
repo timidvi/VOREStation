@@ -93,3 +93,4 @@
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	user.visible_message("<span class='warning'>[user] jumped up and down on \the [target]'s [affecting.name]!</span>")
 	playsound(user.loc, attack_sound, 25, 1, -1)
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_species_attack_dm = new("[__FILE__]")

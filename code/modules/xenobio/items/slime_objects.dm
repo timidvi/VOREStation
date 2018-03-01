@@ -126,3 +126,4 @@
 /obj/item/weapon/reagent_containers/food/snacks/slime/New()
 	..()
 	bitesize = 5
+/var/global/datum/telltale/code_modules_xenobio_items_slime_objects_dm = new("[__FILE__]")

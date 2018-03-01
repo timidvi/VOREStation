@@ -51,3 +51,5 @@
 	materials = list("diamond" = 1500, "phoron" = 1500)
 	build_path = /obj/item/weapon/ore/bluespace_crystal/artificial
 	sort_string = "HAAEC"
+
+/var/global/datum/telltale/code_modules_telesci_construction_dm = new("[__FILE__]")

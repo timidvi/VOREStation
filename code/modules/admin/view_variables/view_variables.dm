@@ -181,3 +181,5 @@
 	L -= organs
 	L -= internal_organs
 	. += len_before - L.len
+
+/var/global/datum/telltale/code_modules_admin_view_variables_view_variables_dm = new("[__FILE__]")

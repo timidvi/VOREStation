@@ -107,3 +107,5 @@
 #define NIF_NEVERTICK	0
 #define NIF_ALWAYSTICK	1
 #define NIF_ACTIVETICK	2
+
+/var/global/datum/telltale/code___defines_nifsoft_dm = new("[__FILE__]")

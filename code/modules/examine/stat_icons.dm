@@ -33,3 +33,5 @@ var/global/list/description_icons = list(
 
 	"hatchet" = image(icon='icons/obj/weapons.dmi',icon_state="hatchet"),
 	)
+
+/var/global/datum/telltale/code_modules_examine_stat_icons_dm = new("[__FILE__]")

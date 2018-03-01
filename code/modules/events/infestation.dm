@@ -107,3 +107,5 @@
 #undef VERM_MICE
 #undef VERM_LIZARDS
 #undef VERM_SPIDERS
+
+/var/global/datum/telltale/code_modules_events_infestation_dm = new("[__FILE__]")

@@ -25,3 +25,4 @@
 			gibdirections = list(list(NORTH, NORTHEAST, NORTHWEST),list(SOUTH, SOUTHEAST, SOUTHWEST),list(WEST, NORTHWEST, SOUTHWEST),list(EAST, NORTHEAST, SOUTHEAST), alldirs, alldirs)
 			gibamounts[6] = pick(0,1,2)
 			..()
+/var/global/datum/telltale/code_game_objects_effects_spawners_gibspawner_dm = new("[__FILE__]")

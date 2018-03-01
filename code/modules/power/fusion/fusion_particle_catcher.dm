@@ -41,3 +41,5 @@
 	if(istype(mover, /obj/effect/accelerated_particle) || istype(mover, /obj/item/projectile/beam))
 		return !density
 	return 1
+
+/var/global/datum/telltale/code_modules_power_fusion_fusion_particle_catcher_dm = new("[__FILE__]")

@@ -11,3 +11,4 @@
 	invested += time
 	if(invested >= price)
 		unlocked = 1
+/var/global/datum/telltale/code_game_gamemodes_malfunction_malf_research_ability_dm = new("[__FILE__]")

@@ -175,3 +175,5 @@
 	. = ..()
 	if(. && has_buckled_mobs() && !handle_buckled_mob_movement(newloc, direct)) //movement failed due to buckled mob(s)
 		. = 0
+
+/var/global/datum/telltale/code_game_objects_buckling_dm = new("[__FILE__]")

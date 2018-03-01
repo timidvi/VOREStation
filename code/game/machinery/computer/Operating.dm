@@ -70,3 +70,4 @@
 
 	src.add_fingerprint(usr)
 	nanomanager.update_uis(src)
+/var/global/datum/telltale/code_game_machinery_computer_Operating_dm = new("[__FILE__]")

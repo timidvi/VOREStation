@@ -42,3 +42,5 @@ client/verb/showrevinfo()
 			src << revdata.revision
 	else
 		src << "Revision unknown"
+
+/var/global/datum/telltale/code_datums_helper_datums_getrev_dm = new("[__FILE__]")

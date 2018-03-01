@@ -101,3 +101,5 @@ var/datum/antagonist/rogue_ai/malf
 		player.SetName(newname)
 	if(player.mind) player.mind.name = player.name
 
+
+/var/global/datum/telltale/code_game_antagonist_station_rogue_ai_dm = new("[__FILE__]")

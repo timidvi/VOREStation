@@ -27,3 +27,4 @@
 			spawn(150) // Error! Check again in 15 seconds.
 				powernet_connection_failed = 0
 	add_avail(power_generation_rate)
+/var/global/datum/telltale/code_modules_power_fractal_reactor_dm = new("[__FILE__]")

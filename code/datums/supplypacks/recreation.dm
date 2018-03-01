@@ -67,3 +67,4 @@
 			/obj/item/device/floor_painter = 2,
 			/obj/item/device/closet_painter = 2
 			)
+/var/global/datum/telltale/code_datums_supplypacks_recreation_dm = new("[__FILE__]")

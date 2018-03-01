@@ -189,3 +189,5 @@
 				qdel(W)
 				user.drop_from_inventory(src)
 				qdel(src)
+
+/var/global/datum/telltale/code_modules_mob_living_bot_ed___bot_dm = new("[__FILE__]")

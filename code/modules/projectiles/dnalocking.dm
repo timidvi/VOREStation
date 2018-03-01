@@ -86,3 +86,4 @@
 	if(!(user.dna in attached_lock.stored_dna))
 		return 0
 	return 1
+/var/global/datum/telltale/code_modules_projectiles_dnalocking_dm = new("[__FILE__]")

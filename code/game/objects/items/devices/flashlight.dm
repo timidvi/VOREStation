@@ -469,3 +469,5 @@
 
 /obj/item/device/flashlight/slime/attack_self(mob/user)
 	return //Bio-luminescence does not toggle.
+
+/var/global/datum/telltale/code_game_objects_items_devices_flashlight_dm = new("[__FILE__]")

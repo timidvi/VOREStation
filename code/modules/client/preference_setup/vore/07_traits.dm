@@ -289,3 +289,5 @@
 #undef POSITIVE_MODE
 #undef NEUTRAL_MODE
 #undef NEGATIVE_MODE
+
+/var/global/datum/telltale/code_modules_client_preference_setup_vore____traits_dm = new("[__FILE__]")

@@ -37,3 +37,5 @@
 			status = 0
 
 	return status
+
+/var/global/datum/telltale/code_controllers_hooks_dm = new("[__FILE__]")

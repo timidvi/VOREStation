@@ -11,3 +11,4 @@
 
 #define isCardinal(x)			(x == NORTH || x == SOUTH || x == EAST || x == WEST)
 #define isDiagonal(x)			(x == NORTHEAST || x == SOUTHEAST || x == NORTHWEST || x == SOUTHWEST)
+/var/global/datum/telltale/code___defines_turfs_dm = new("[__FILE__]")

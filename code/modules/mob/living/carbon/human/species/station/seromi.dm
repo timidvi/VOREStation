@@ -120,3 +120,4 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_seromi_dm = new("[__FILE__]")

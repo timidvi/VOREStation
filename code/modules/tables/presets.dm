@@ -201,3 +201,4 @@
 	material = get_material_by_name("holowood")
 	..()
 */
+/var/global/datum/telltale/code_modules_tables_presets_dm = new("[__FILE__]")

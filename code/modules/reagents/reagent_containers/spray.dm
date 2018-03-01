@@ -199,3 +199,4 @@
 /obj/item/weapon/reagent_containers/spray/plantbgone/New()
 	..()
 	reagents.add_reagent("plantbgone", 100)
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_spray_dm = new("[__FILE__]")

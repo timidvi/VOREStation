@@ -13,3 +13,4 @@
 		var/obj/machinery/recharge_station/RC = loc
 		RC.go_out()
 	return ..(gibbed,deathmessage)
+/var/global/datum/telltale/code_modules_mob_living_silicon_death_dm = new("[__FILE__]")

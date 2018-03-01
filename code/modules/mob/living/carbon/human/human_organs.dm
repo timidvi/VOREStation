@@ -193,3 +193,5 @@
 	var/list/all_bits = internal_organs|organs
 	for(var/obj/item/organ/O in all_bits)
 		O.set_dna(dna)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_organs_dm = new("[__FILE__]")

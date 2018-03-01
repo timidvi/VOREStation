@@ -65,3 +65,4 @@
 		T.shot_delay = round(initial(T.shot_delay) / 2)
 		T.auto_repair = 1
 		T.active_power_usage = round(initial(T.active_power_usage) * 5)
+/var/global/datum/telltale/code_game_gamemodes_malfunction_malf_hardware_dm = new("[__FILE__]")

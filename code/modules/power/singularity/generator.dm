@@ -30,3 +30,5 @@
 				"You hear a ratchet.")
 		return
 	return ..()
+
+/var/global/datum/telltale/code_modules_power_singularity_generator_dm = new("[__FILE__]")

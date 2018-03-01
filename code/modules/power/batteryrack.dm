@@ -232,3 +232,5 @@
 	return
 
 #undef SMESRATE
+
+/var/global/datum/telltale/code_modules_power_batteryrack_dm = new("[__FILE__]")

@@ -39,3 +39,5 @@
 		nif.nifsofts = nifsofts
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_species_vr_dm = new("[__FILE__]")

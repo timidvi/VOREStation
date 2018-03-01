@@ -38,3 +38,5 @@
 	src << "<h2 class='alert'>A custom event is taking place. OOC Info:</h2>"
 	src << "<span class='alert'>[custom_event_msg]</span>"
 	src << "<br>"
+
+/var/global/datum/telltale/code_modules_admin_verbs_custom_event_dm = new("[__FILE__]")

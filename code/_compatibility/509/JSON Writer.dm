@@ -60,3 +60,4 @@ json_writer
 					return TRUE
 
 #endif
+/var/global/datum/telltale/code__compatibility_____JSON_Writer_dm = new("[__FILE__]")

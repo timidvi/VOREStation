@@ -100,3 +100,5 @@
 #undef AUTOHISS_BASIC
 #undef AUTOHISS_FULL
 #undef AUTOHISS_NUM
+
+/var/global/datum/telltale/code_modules_mob_living_autohiss_dm = new("[__FILE__]")

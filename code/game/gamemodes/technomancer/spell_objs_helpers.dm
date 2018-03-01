@@ -54,3 +54,4 @@
 			chosen_target = L
 			break
 	return chosen_target
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spell_objs_helpers_dm = new("[__FILE__]")

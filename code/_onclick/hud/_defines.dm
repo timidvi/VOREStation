@@ -142,3 +142,5 @@
 
 #define ui_spell_master "EAST-2:16,NORTH-1:26"
 #define ui_genetic_master "EAST-1:16,NORTH-3:16"
+
+/var/global/datum/telltale/code__onclick_hud__defines_dm = new("[__FILE__]")

@@ -218,3 +218,5 @@
 /obj/machinery/computer/pod/old/swf
 	name = "Magix System IV"
 	desc = "An arcane artifact that holds much magic. Running E-Knock 2.2: Sorceror's Edition"
+
+/var/global/datum/telltale/code_game_machinery_computer_pod_dm = new("[__FILE__]")

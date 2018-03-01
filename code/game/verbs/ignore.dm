@@ -46,3 +46,4 @@
 			return 0
 		return 1
 	return 0
+/var/global/datum/telltale/code_game_verbs_ignore_dm = new("[__FILE__]")

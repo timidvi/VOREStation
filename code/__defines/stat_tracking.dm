@@ -15,3 +15,5 @@
 	if (STAT_INCR_AMOUNT == 1 || prob(100/STAT_INCR_AMOUNT)) {\
 		STAT_ENTRY[STAT_ENTRY_COUNT] += STAT_INCR_AMOUNT;\
 	};\
+
+/var/global/datum/telltale/code___defines_stat_tracking_dm = new("[__FILE__]")

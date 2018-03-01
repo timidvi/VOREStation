@@ -102,3 +102,5 @@ var/global/datum/unarmed_attack/hardclaws/unarmed_hardclaws = new()
 	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "PDW"
 	item_state = "gun"
+
+/var/global/datum/telltale/code_modules_nifsoft_software____combat_dm = new("[__FILE__]")

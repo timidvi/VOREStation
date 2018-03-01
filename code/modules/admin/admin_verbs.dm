@@ -1066,3 +1066,5 @@ var/list/admin_verbs_event_manager = list(
 	feedback_add_details("admin_verb","GS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_admin("[key_name(usr)] gave [key_name(T)] the spell [S].")
 	message_admins("<font color='blue'>[key_name_admin(usr)] gave [key_name(T)] the spell [S].</font>", 1)
+
+/var/global/datum/telltale/code_modules_admin_admin_verbs_dm = new("[__FILE__]")

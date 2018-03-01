@@ -7,3 +7,5 @@
 			t = copytext(t, 1, index) + repl_chars[char] + copytext(t, index+5)
 			index = findtext(t, char)
 	return t
+
+/var/global/datum/telltale/code__helpers_text_vr_dm = new("[__FILE__]")

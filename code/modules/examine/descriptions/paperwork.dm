@@ -19,3 +19,5 @@ Pen exclusive commands
 \[list\] - \[/list\] : A list.
 \[*\] : A dot used for lists.
 \[hr\] : Adds a horizontal rule."}
+
+/var/global/datum/telltale/code_modules_examine_descriptions_paperwork_dm = new("[__FILE__]")

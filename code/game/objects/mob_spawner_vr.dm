@@ -197,3 +197,4 @@ It also makes it so a ghost wont know where all the goodies/mobs are.
 	spawn_types = list(
 	/mob/living/simple_animal/hostile/alien/queen = 5,
 	)
+/var/global/datum/telltale/code_game_objects_mob_spawner_vr_dm = new("[__FILE__]")

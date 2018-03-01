@@ -45,3 +45,5 @@ var/datum/antagonist/xenos/xenomorphs
 
 /datum/antagonist/xenos/place_mob(var/mob/living/player)
 	player.forceMove(get_turf(pick(get_vents())))
+
+/var/global/datum/telltale/code_game_antagonist_alien_xenomorph_dm = new("[__FILE__]")

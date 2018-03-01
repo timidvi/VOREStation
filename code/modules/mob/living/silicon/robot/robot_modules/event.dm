@@ -79,3 +79,5 @@
 	W.synths = list(wood)
 	src.modules += W
 
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_modules_event_dm = new("[__FILE__]")

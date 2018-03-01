@@ -110,3 +110,5 @@
 	for(var/datum/money_account/D in all_money_accounts)
 		if(D.account_number == account_number)
 			return D
+
+/var/global/datum/telltale/code_modules_economy_Accounts_dm = new("[__FILE__]")

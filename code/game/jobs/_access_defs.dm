@@ -14,3 +14,5 @@
 #define ACCESS_TYPE_SYNDICATE 4
 #define ACCESS_TYPE_PRIVATE 8
 #define ACCESS_TYPE_ALL (ACCESS_TYPE_CENTCOM|ACCESS_TYPE_STATION|ACCESS_TYPE_SYNDICATE|ACCESS_TYPE_PRIVATE)
+
+/var/global/datum/telltale/code_game_jobs__access_defs_dm = new("[__FILE__]")

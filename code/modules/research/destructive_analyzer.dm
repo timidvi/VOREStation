@@ -80,3 +80,5 @@ Note: Must be placed within 3 tiles of the R&D Console
 			busy = 0
 		return 1
 	return
+
+/var/global/datum/telltale/code_modules_research_destructive_analyzer_dm = new("[__FILE__]")

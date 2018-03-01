@@ -215,3 +215,5 @@
 	var/image/glow = image(icon = 'icons/obj/flora/deadtrees.dmi', icon_state = "[icon_state]_glow")
 	glow.plane = PLANE_LIGHTING_ABOVE
 	overlays = list(glow)
+
+/var/global/datum/telltale/code_game_objects_structures_flora_trees_dm = new("[__FILE__]")

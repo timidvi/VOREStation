@@ -93,3 +93,5 @@
 
 	else
 		return ..()
+
+/var/global/datum/telltale/code_modules_reagents_dispenser_cartridge_dm = new("[__FILE__]")

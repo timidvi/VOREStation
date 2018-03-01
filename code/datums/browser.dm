@@ -182,3 +182,5 @@
 		//world << "[src] was [src.mob.machine], setting to null"
 		src.mob.unset_machine()
 	return
+
+/var/global/datum/telltale/code_datums_browser_dm = new("[__FILE__]")

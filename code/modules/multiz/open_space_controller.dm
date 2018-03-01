@@ -103,3 +103,5 @@
 		if(isopenspace(T))
 			OS_controller.add_turf(T, 1)
 	. = ..() // Important that this be at the bottom, or we will have been moved to nullspace.
+
+/var/global/datum/telltale/code_modules_multiz_open_space_controller_dm = new("[__FILE__]")

@@ -21,3 +21,5 @@
 /turf/simulated/floor/fixed/set_flooring()
 	return
 
+
+/var/global/datum/telltale/code_game_turfs_simulated_floor_static_dm = new("[__FILE__]")

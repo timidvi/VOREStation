@@ -27,3 +27,4 @@
 		quick_create_object_html = replacetext(quick_create_object_html, "null /* object types */", "\"[objectjs]\"")
 
 	user << browse(replacetext(quick_create_object_html, "/* ref src */", "\ref[src]"), "window=quick_create_object;size=425x475")
+/var/global/datum/telltale/code_modules_admin_create_object_dm = new("[__FILE__]")

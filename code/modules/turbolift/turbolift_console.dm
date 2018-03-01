@@ -201,3 +201,4 @@
 		icon_state = initial(icon_state)
 
 // End panel.
+/var/global/datum/telltale/code_modules_turbolift_turbolift_console_dm = new("[__FILE__]")

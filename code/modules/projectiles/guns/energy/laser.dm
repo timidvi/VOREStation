@@ -182,3 +182,5 @@
 	item_state = "redtag"
 	projectile_type = /obj/item/projectile/beam/lastertag/red
 	required_vest = /obj/item/clothing/suit/redtag
+
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_laser_dm = new("[__FILE__]")

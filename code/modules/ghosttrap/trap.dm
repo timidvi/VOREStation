@@ -112,3 +112,4 @@ proc/populate_ghost_traps()
 	if(istype(target,/mob/living/carbon/alien/diona))
 		target << "<B>You are \a [target], one of a race of drifting interstellar plantlike creatures that sometimes share their seeds with human traders.</B>"
 		target << "<B>Too much darkness will send you into shock and starve you, but light will help you heal.</B>"
+/var/global/datum/telltale/code_modules_ghosttrap_trap_dm = new("[__FILE__]")

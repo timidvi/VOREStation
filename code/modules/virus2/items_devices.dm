@@ -110,3 +110,5 @@
 	effect = new /datum/disease2/effectholder
 	effect.effect = new /datum/disease2/effect/invisible
 	effect.stage = stage
+
+/var/global/datum/telltale/code_modules_virus__items_devices_dm = new("[__FILE__]")

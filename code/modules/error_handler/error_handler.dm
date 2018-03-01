@@ -116,3 +116,5 @@ var/total_runtimes_skipped = 0
 			e.desc = "  [extra_info]\n\n" + e.desc
 
 	world.Error(e, e_src)
+
+/var/global/datum/telltale/code_modules_error_handler_error_handler_dm = new("[__FILE__]")

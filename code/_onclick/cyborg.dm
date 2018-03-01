@@ -167,3 +167,5 @@
 /atom/proc/attack_robot(mob/user as mob)
 	attack_ai(user)
 	return
+
+/var/global/datum/telltale/code__onclick_cyborg_dm = new("[__FILE__]")

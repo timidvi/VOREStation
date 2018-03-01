@@ -41,3 +41,4 @@
 // Called when a new mob is summoned, override for special behaviour.
 /obj/item/weapon/spell/summon/proc/on_summon(var/mob/living/summoned)
 	return
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_summon_summon_dm = new("[__FILE__]")

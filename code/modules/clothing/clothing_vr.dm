@@ -98,3 +98,4 @@
 		"Xenochimera"	= 'icons/mob/species/tajaran/mask_vr.dmi'
 		)
 //"Spider" 		= 'icons/mob/species/spider/mask_vr.dmi' Add this later when they have custom mask sprites and everything.
+/var/global/datum/telltale/code_modules_clothing_clothing_vr_dm = new("[__FILE__]")

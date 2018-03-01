@@ -635,3 +635,4 @@ var/global/image/backplane
 		var/area/A = get_area(src)
 		return A.sound_env
 		
+/var/global/datum/telltale/code_modules_mob_mob_helpers_dm = new("[__FILE__]")

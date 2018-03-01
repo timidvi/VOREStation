@@ -488,3 +488,5 @@
 
 /obj/machinery/door/morgue
 	icon = 'icons/obj/doors/doormorgue.dmi'
+
+/var/global/datum/telltale/code_game_machinery_doors_door_dm = new("[__FILE__]")

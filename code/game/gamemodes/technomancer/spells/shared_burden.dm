@@ -27,3 +27,4 @@
 			user << "<span class='notice'>You draw instability away from \the [H] and towards you.</span>"
 			adjust_instability(instability_to_drain)
 			H.adjust_instability(-calculate_spell_power(instability_to_drain))
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_shared_burden_dm = new("[__FILE__]")

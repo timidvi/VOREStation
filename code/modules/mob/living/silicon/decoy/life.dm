@@ -13,3 +13,5 @@
 		stat = CONSCIOUS
 	else
 		health = 100 - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss()
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_decoy_life_dm = new("[__FILE__]")

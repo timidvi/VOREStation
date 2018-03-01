@@ -23,3 +23,4 @@
 	if(data == TRUE)
 		return "(True)"
 	return "(False)"
+/var/global/datum/telltale/code_modules_integrated_electronics_core_special_pins_boolean_pin_dm = new("[__FILE__]")

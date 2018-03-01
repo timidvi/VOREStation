@@ -45,3 +45,5 @@
 		var/obj/structure/bed/chair/e_chair/C = loc
 		C.shock()
 	return
+
+/var/global/datum/telltale/code_modules_assembly_shock_kit_dm = new("[__FILE__]")

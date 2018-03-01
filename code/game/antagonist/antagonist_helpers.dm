@@ -46,3 +46,4 @@
 
 /datum/antagonist/proc/is_latejoin_template()
 	return (flags & (ANTAG_OVERRIDE_MOB|ANTAG_OVERRIDE_JOB))
+/var/global/datum/telltale/code_game_antagonist_antagonist_helpers_dm = new("[__FILE__]")

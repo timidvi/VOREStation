@@ -83,3 +83,5 @@
 		density = 0
 		qdel(src)
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_stool_bed_chair_nest_alien_nests_dm = new("[__FILE__]")

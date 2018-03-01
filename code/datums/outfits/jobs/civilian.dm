@@ -106,3 +106,5 @@
 	pda_type = /obj/item/device/pda/cargo // Brown looks more rugged
 	r_pocket = /obj/item/device/gps/explorer
 	id_pda_assignment = "Explorer"
+
+/var/global/datum/telltale/code_datums_outfits_jobs_civilian_dm = new("[__FILE__]")

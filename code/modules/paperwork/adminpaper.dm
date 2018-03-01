@@ -153,3 +153,4 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 
 /obj/item/weapon/paper/admin/get_signature()
 	return input(usr, "Enter the name you wish to sign the paper with (will prompt for multiple entries, in order of entry)", "Signature") as text|null
+/var/global/datum/telltale/code_modules_paperwork_adminpaper_dm = new("[__FILE__]")

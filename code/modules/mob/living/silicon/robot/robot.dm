@@ -1112,3 +1112,4 @@
 
 /mob/living/silicon/robot/is_sentient()
 	return braintype != "Drone"
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_dm = new("[__FILE__]")

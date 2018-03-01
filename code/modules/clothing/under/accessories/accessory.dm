@@ -388,3 +388,4 @@
 	..(newloc, "glass")
 
 	..()
+/var/global/datum/telltale/code_modules_clothing_under_accessories_accessory_dm = new("[__FILE__]")

@@ -188,3 +188,4 @@
 				mecha.cell.charge -= min(20,mecha.cell.charge)
 				mecha.cell.maxcharge -= min(20,mecha.cell.maxcharge)
 		return
+/var/global/datum/telltale/code_game_vehicles_vehicle_dm = new("[__FILE__]")

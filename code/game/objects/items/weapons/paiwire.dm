@@ -17,3 +17,5 @@
 
 /obj/item/weapon/pai_cable/attack(obj/machinery/M as obj, mob/user as mob)
 	src.plugin(M, user)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_paiwire_dm = new("[__FILE__]")

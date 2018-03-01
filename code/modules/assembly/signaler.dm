@@ -189,3 +189,5 @@ Code:
 		radio_controller.remove_object(src,frequency)
 	frequency = 0
 	. = ..()
+
+/var/global/datum/telltale/code_modules_assembly_signaler_dm = new("[__FILE__]")

@@ -60,3 +60,5 @@
 	sec_briefcase.contents += new /obj/item/ammo_magazine/s357
 	sec_briefcase.contents += new /obj/item/weapon/plastique
 	H.equip_to_slot_or_del(sec_briefcase, slot_l_hand)
+
+/var/global/datum/telltale/code_datums_outfits_horror_killers_dm = new("[__FILE__]")

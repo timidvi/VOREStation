@@ -217,3 +217,5 @@
 		currently_vending = null
 		nanomanager.update_uis(src)
 	return 1
+
+/var/global/datum/telltale/code_modules_nifsoft_nif_softshop_dm = new("[__FILE__]")

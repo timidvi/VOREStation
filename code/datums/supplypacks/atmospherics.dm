@@ -106,3 +106,5 @@
 	cost = 35
 	containertype = /obj/structure/closet/crate/internals
 	containername = "Emergency crate"
+
+/var/global/datum/telltale/code_datums_supplypacks_atmospherics_dm = new("[__FILE__]")

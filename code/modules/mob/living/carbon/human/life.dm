@@ -1745,3 +1745,5 @@
 
 #undef HUMAN_MAX_OXYLOSS
 #undef HUMAN_CRIT_MAX_OXYLOSS
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_life_dm = new("[__FILE__]")

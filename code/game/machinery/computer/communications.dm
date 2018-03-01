@@ -543,3 +543,5 @@
 			status_signal.data["picture_state"] = data1
 
 	frequency.post_signal(src, status_signal)
+
+/var/global/datum/telltale/code_game_machinery_computer_communications_dm = new("[__FILE__]")

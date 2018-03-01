@@ -85,3 +85,5 @@
 /datum/language/gutter
 	flags = WHITELISTED
 	machine_understands = FALSE
+
+/var/global/datum/telltale/code_modules_mob_language_station_vr_dm = new("[__FILE__]")

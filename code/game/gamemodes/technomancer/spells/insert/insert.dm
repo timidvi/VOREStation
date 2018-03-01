@@ -57,3 +57,4 @@
 	if(istype(hit_atom, /mob/living))
 		var/mob/living/L = hit_atom
 		insert(L,user)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_insert_insert_dm = new("[__FILE__]")

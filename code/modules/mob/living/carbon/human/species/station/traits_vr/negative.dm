@@ -130,3 +130,5 @@
 /datum/trait/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.plane_holder.alter_values(VIS_D_COLORBLIND,list("variety" = "Paradise Taj"))
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_traits_vr_negative_dm = new("[__FILE__]")

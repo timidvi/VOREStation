@@ -54,3 +54,4 @@
 	name = "Mounted Laser Cannon"
 	item_cost = 80
 	path = /obj/item/rig_module/mounted
+/var/global/datum/telltale/code_datums_uplink_hardsuit_modules_dm = new("[__FILE__]")

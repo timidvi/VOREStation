@@ -109,3 +109,5 @@
 		return 0
 	change_gender_identity(new_gender_identity)
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_emote_vr_dm = new("[__FILE__]")

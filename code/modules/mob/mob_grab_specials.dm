@@ -176,3 +176,4 @@
 		target.loc = user
 		attacker.stomach_contents.Add(target)
 		qdel(src)
+/var/global/datum/telltale/code_modules_mob_mob_grab_specials_dm = new("[__FILE__]")

@@ -78,3 +78,4 @@
 		return
 	power_change()
 	..(severity)
+/var/global/datum/telltale/code_game_machinery_lightswitch_dm = new("[__FILE__]")

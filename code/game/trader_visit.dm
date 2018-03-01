@@ -67,3 +67,5 @@ proc/trigger_trader_visit()
 
 	sleep(600 * 5)
 	send_beruang = 0 // Can no longer join the traders.
+
+/var/global/datum/telltale/code_game_trader_visit_dm = new("[__FILE__]")

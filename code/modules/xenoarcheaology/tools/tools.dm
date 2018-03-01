@@ -310,3 +310,5 @@
 		usr << browse(null, "window=locater")
 
 	updateSelfDialog()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_tools_dm = new("[__FILE__]")

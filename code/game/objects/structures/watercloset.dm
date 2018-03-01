@@ -461,3 +461,5 @@
 	icon_state = "puddle-splash"
 	..()
 	icon_state = "puddle"
+
+/var/global/datum/telltale/code_game_objects_structures_watercloset_dm = new("[__FILE__]")

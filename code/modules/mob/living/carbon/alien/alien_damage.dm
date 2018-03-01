@@ -31,3 +31,5 @@
 	adjustFireLoss(f_loss)
 
 	updatehealth()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_alien_damage_dm = new("[__FILE__]")

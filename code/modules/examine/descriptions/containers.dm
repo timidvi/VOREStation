@@ -96,3 +96,5 @@
 	
 /obj/item/weapon/reagent_containers/food/drinks/bottle/sake
 	description_fluff = "An export from New Kyoto, Mono-no-Aware promises to show to the drinker the beautiful transience of all life. Mostly it just tastes like dry booze."
+
+/var/global/datum/telltale/code_modules_examine_descriptions_containers_dm = new("[__FILE__]")

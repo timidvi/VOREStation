@@ -188,3 +188,5 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 #undef ASSIGNMENT_MEDICAL
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
+
+/var/global/datum/telltale/code_modules_events_event_container_dm = new("[__FILE__]")

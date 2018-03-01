@@ -206,3 +206,5 @@ DBColumn/proc/SqlTypeName(type_handler=src.sql_type)
 #undef TIME
 #undef STRING
 #undef BLOB
+
+/var/global/datum/telltale/code_defines_procs_dbcore_dm = new("[__FILE__]")

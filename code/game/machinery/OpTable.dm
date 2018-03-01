@@ -136,3 +136,4 @@
 		usr << "<span class='notice'>Unbuckle \the [patient] first!</span>"
 		return 0
 	return 1
+/var/global/datum/telltale/code_game_machinery_OpTable_dm = new("[__FILE__]")

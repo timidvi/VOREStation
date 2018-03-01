@@ -4,3 +4,5 @@
 	if(user in src_object)
 		return STATUS_CLOSE
 	return ..()
+
+/var/global/datum/telltale/code_modules_nano_interaction_outside_dm = new("[__FILE__]")

@@ -256,3 +256,5 @@
 #define VIS_MESONS			20
 
 #define VIS_COUNT			20 //Must be highest number from above.
+
+/var/global/datum/telltale/code___defines_mobs_dm = new("[__FILE__]")

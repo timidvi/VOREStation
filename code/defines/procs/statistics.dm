@@ -142,3 +142,5 @@ proc/sql_commit_feedback()
 			if(!query.Execute())
 				var/err = query.ErrorMsg()
 				log_game("SQL ERROR during death reporting. Error : \[[err]\]\n")
+
+/var/global/datum/telltale/code_defines_procs_statistics_dm = new("[__FILE__]")

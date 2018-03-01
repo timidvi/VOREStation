@@ -135,3 +135,5 @@
 
 /obj/effect/forcefield/cult/cultify()
 	return
+
+/var/global/datum/telltale/code_modules_spells_aoe_turf_conjure_construct_dm = new("[__FILE__]")

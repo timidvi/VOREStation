@@ -292,3 +292,5 @@ obj/machinery/access_button/airlock_interior
 obj/machinery/access_button/airlock_exterior
 	frequency = 1379
 	command = "cycle_exterior"
+
+/var/global/datum/telltale/code_game_machinery_doors_airlock_control_dm = new("[__FILE__]")

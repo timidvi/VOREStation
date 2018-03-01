@@ -15,3 +15,4 @@
 
 /obj/structure/table/bench/CanPass(atom/movable/mover)
 	return 1
+/var/global/datum/telltale/code_modules_tables_bench_dm = new("[__FILE__]")

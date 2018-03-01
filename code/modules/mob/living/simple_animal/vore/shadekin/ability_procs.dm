@@ -131,3 +131,5 @@
 	visible_message("<span class='notice'>\The [src] gently places a hand on \the [target]...</span>")
 	face_atom(target)
 	return TRUE
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_shadekin_ability_procs_dm = new("[__FILE__]")

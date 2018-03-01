@@ -160,3 +160,4 @@
 /obj/item/clothing/shoes/hitops/yellow
 	name = "yellow high-tops"
 	icon_state = "yellowhi"
+/var/global/datum/telltale/code_modules_clothing_shoes_colour_dm = new("[__FILE__]")

@@ -21,3 +21,4 @@
 #define QDELING(X) (X.gc_destroyed)
 #define QDELETED(X) (!X || X.gc_destroyed)
 #define QDESTROYING(X) (!X || X.gc_destroyed == GC_CURRENTLY_BEING_QDELETED)
+/var/global/datum/telltale/code___defines_qdel_dm = new("[__FILE__]")

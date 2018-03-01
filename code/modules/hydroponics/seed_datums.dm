@@ -1209,3 +1209,5 @@
 	set_trait(TRAIT_YIELD,-1)
 	set_trait(TRAIT_SPREAD,2)
 	set_trait(TRAIT_POTENCY,50)
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_datums_dm = new("[__FILE__]")

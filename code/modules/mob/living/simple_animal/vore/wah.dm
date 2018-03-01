@@ -53,3 +53,5 @@
 	health = 100
 	melee_damage_lower = 10
 	melee_damage_upper = 20
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_wah_dm = new("[__FILE__]")

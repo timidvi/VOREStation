@@ -170,3 +170,5 @@
 		new /obj/item/clothing/shoes/boots/winter/atmos(src)
 		new /obj/item/weapon/tank/emergency/oxygen/engi(src)
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_engineering_dm = new("[__FILE__]")

@@ -53,3 +53,5 @@
 	preload_rsc = PRELOAD_RSC
 
 	var/global/obj/screen/click_catcher/void
+
+/var/global/datum/telltale/code_modules_client_client_defines_dm = new("[__FILE__]")

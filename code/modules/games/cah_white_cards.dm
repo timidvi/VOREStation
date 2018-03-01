@@ -781,3 +781,5 @@
 	"Drinking ten 5-hour ENERGYs to get fifty continuous hours of energy.",
 	"Sneezing, farting, and coming at the same time."
 	)
+
+/var/global/datum/telltale/code_modules_games_cah_white_cards_dm = new("[__FILE__]")

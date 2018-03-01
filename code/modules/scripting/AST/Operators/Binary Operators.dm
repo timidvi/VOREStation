@@ -172,3 +172,5 @@
 //
 	Modulo
 		precedence=OOP_MULTIPLY
+
+/var/global/datum/telltale/code_modules_scripting_AST_Operators_Binary_Operators_dm = new("[__FILE__]")

@@ -229,3 +229,5 @@ obj/machinery/atmospherics/pipe/zpipe/down/supply
 	layer = 2.39
 	icon_connect_type = "-supply"
 	color = PIPE_COLOR_BLUE
+
+/var/global/datum/telltale/code_modules_multiz_pipes_dm = new("[__FILE__]")

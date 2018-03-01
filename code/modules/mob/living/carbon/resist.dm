@@ -176,3 +176,5 @@
 			visible_message("<span class='danger'>[usr] manages to unbuckle themself!</span>",
 							"<span class='notice'>You successfully unbuckle yourself.</span>")
 			buckled.user_unbuckle_mob(src, src)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_resist_dm = new("[__FILE__]")

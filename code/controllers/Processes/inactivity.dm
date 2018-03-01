@@ -34,3 +34,5 @@
 
 					qdel(C)
 			SCHECK
+
+/var/global/datum/telltale/code_controllers_Processes_inactivity_dm = new("[__FILE__]")

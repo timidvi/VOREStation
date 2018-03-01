@@ -1293,3 +1293,5 @@
 		..()
 		feedback_inc("mecha_odysseus_created",1)
 		return
+
+/var/global/datum/telltale/code_game_mecha_mecha_construction_paths_dm = new("[__FILE__]")

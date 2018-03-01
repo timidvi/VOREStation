@@ -44,3 +44,5 @@
 
 /datum/debug
 	var/list/debuglist
+
+/var/global/datum/telltale/code_datums_mixed_dm = new("[__FILE__]")

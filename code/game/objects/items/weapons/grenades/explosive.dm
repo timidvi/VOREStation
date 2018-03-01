@@ -98,3 +98,5 @@
 	num_fragments = 200  //total number of fragments produced by the grenade
 
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
+
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_explosive_dm = new("[__FILE__]")

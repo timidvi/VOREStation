@@ -84,3 +84,5 @@
 		<option value='?_src_=vars;explode=\ref[src]'>Trigger explosion</option>
 		<option value='?_src_=vars;emp=\ref[src]'>Trigger EM pulse</option>
 		"}
+
+/var/global/datum/telltale/code_modules_admin_view_variables_helpers_dm = new("[__FILE__]")

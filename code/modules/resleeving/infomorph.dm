@@ -611,3 +611,5 @@ var/global/list/default_infomorph_software = list()
 		stat = CONSCIOUS
 	else
 		health = 100 - getBruteLoss() - getFireLoss()
+
+/var/global/datum/telltale/code_modules_resleeving_infomorph_dm = new("[__FILE__]")

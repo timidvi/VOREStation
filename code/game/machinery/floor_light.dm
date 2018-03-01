@@ -155,3 +155,4 @@ var/list/floor_light_cache = list()
 /obj/machinery/floor_light/cultify()
 	default_light_colour = "#FF0000"
 	update_brightness()
+/var/global/datum/telltale/code_game_machinery_floor_light_dm = new("[__FILE__]")

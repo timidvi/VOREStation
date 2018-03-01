@@ -22,3 +22,5 @@
 	..()
 	for (var/i = 1 to 7)
 		new /obj/item/weapon/reagent_containers/hypospray/autoinjector/beltminer(src)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_hypospray_vr_dm = new("[__FILE__]")

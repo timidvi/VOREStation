@@ -47,3 +47,5 @@
 		playsound(src, 'sound/effects/pop.ogg', 100, 1, 1)
 		qdel(src)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_beacon_dm = new("[__FILE__]")

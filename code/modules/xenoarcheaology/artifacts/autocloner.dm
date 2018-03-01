@@ -84,3 +84,5 @@
 		time_spent_spawning = max(time_spent_spawning + last_process - world.time, 0)
 
 	last_process = world.time
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_artifacts_autocloner_dm = new("[__FILE__]")

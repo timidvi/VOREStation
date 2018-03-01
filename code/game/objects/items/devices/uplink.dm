@@ -243,3 +243,5 @@
 	..()
 	hidden_uplink = new(src)
 	hidden_uplink.uses = DEFAULT_TELECRYSTAL_AMOUNT
+
+/var/global/datum/telltale/code_game_objects_items_devices_uplink_dm = new("[__FILE__]")

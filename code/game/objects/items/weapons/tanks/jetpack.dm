@@ -140,3 +140,5 @@
 		return 1
 	qdel(G)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_tanks_jetpack_dm = new("[__FILE__]")

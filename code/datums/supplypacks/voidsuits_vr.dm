@@ -78,3 +78,4 @@
 			/obj/item/clothing/mask/breath = 3,
 			/obj/item/weapon/tank/oxygen = 3
 			)
+/var/global/datum/telltale/code_datums_supplypacks_voidsuits_vr_dm = new("[__FILE__]")

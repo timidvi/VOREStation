@@ -14,3 +14,4 @@
 			return 0
 	//There are no false wall checks because that would be fucking retarded
 	return 1
+/var/global/datum/telltale/code_game_machinery_doors_checkForMultipleDoors_dm = new("[__FILE__]")

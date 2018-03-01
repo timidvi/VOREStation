@@ -49,3 +49,5 @@
 	icon_state = "datadisk_arcade"
 	spawn_files = list(/datum/file/program/cloning,/datum/file/program/dnascanner)
 */
+
+/var/global/datum/telltale/code_game_machinery_computer__program_disks_dm = new("[__FILE__]")

@@ -143,3 +143,4 @@
 	icon_closed = "alien_locker"
 	icon_opened = "alien_locker_open"
 	anchored = TRUE
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_gimmick_dm = new("[__FILE__]")

@@ -315,3 +315,5 @@
 /obj/item/weapon/reagent_containers/pill/diet/New()
 	..()
 	reagents.add_reagent("lipozine", 15) //VOREStation Edit
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_pill_dm = new("[__FILE__]")

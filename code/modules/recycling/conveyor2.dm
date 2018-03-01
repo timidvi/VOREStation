@@ -296,3 +296,5 @@
 		if(S.id == src.id)
 			S.position = position
 			S.update()
+
+/var/global/datum/telltale/code_modules_recycling_conveyor__dm = new("[__FILE__]")

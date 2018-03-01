@@ -55,3 +55,5 @@ proc/createRandomZlevel()
 	else
 		admin_notice("<font color='red'><B>No away missions found.</B></font>", R_DEBUG)
 		return
+
+/var/global/datum/telltale/code_modules_awaymissions_zlevel_dm = new("[__FILE__]")

@@ -9,3 +9,5 @@
 	. = ..()
 	if(.)
 		return user.client.strike_team()
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_send_strike_team_dm = new("[__FILE__]")

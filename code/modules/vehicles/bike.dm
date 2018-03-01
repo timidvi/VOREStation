@@ -141,3 +141,4 @@
 	qdel(ion)
 
 	..()
+/var/global/datum/telltale/code_modules_vehicles_bike_dm = new("[__FILE__]")

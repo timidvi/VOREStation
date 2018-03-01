@@ -43,3 +43,5 @@ mob/proc/weaveWebBindings()
 			src.put_in_hands(bindings)
 	else
 		src << "You do not have enough nutrition to create webbing!" //CK~
+
+/var/global/datum/telltale/code_modules_vore_appearance_spider_taur_powers_vr_dm = new("[__FILE__]")

@@ -44,3 +44,4 @@
 			gloves.ring = ring
 		src.gloves = null
 	wearer = null
+/var/global/datum/telltale/code_modules_clothing_gloves_gauntlets_dm = new("[__FILE__]")

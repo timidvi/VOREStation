@@ -457,3 +457,5 @@ steam.start() -- spawns the effect
 				round(min(light, BOMBCAP_LIGHT_RADIUS)),
 				round(min(flash, BOMBCAP_FLASH_RADIUS))
 				)
+
+/var/global/datum/telltale/code_game_objects_effects_effect_system_dm = new("[__FILE__]")

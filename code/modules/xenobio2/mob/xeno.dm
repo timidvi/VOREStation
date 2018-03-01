@@ -105,3 +105,4 @@ Also includes Life and New
 	traitdat.Destroy()	//Let's clean up after ourselves.
 	traitdat = null
 	..()
+/var/global/datum/telltale/code_modules_xenobio__mob_xeno_dm = new("[__FILE__]")

@@ -411,3 +411,5 @@
 
 /atom/proc/create_reagents(var/max_vol)
 	reagents = new/datum/reagents(max_vol, src)
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Holder_dm = new("[__FILE__]")

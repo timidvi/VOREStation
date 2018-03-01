@@ -354,3 +354,5 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 	icon_state = initial(icon_state)
 
+
+/var/global/datum/telltale/code_game_objects_items_devices_communicator_communicator_dm = new("[__FILE__]")

@@ -118,3 +118,5 @@
 		return
 
 	qdel(user)
+
+/var/global/datum/telltale/code_game_gamemodes_endgame_supermatter_cascade_blob_dm = new("[__FILE__]")

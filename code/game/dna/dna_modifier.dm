@@ -826,3 +826,5 @@
 
 
 /////////////////////////// DNA MACHINES
+
+/var/global/datum/telltale/code_game_dna_dna_modifier_dm = new("[__FILE__]")

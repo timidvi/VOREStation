@@ -37,3 +37,5 @@
 		magichead.flags_inv = null	//so you can still see their face
 		magichead.voicechange = 1	//NEEEEIIGHH
 	return new_item
+
+/var/global/datum/telltale/code_modules_spells_targeted_equip_horsemask_dm = new("[__FILE__]")

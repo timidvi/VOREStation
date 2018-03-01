@@ -136,3 +136,5 @@
 /datum/language/sign/can_speak_special(var/mob/speaker)
 	var/obj/item/organ/external/hand/hands = locate() in speaker //you can't sign without hands
 	return (hands || !iscarbon(speaker))
+
+/var/global/datum/telltale/code_modules_mob_language_generic_dm = new("[__FILE__]")

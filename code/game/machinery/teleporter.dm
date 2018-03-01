@@ -421,3 +421,5 @@
 
 /atom/proc/laserhit(L as obj)
 	return 1
+
+/var/global/datum/telltale/code_game_machinery_teleporter_dm = new("[__FILE__]")

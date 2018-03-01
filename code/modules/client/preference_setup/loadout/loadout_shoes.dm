@@ -219,3 +219,5 @@
 	display_name = "hydroponics winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/hydro
 	allowed_roles = list("Botanist", "Xenobiologist")
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_shoes_dm = new("[__FILE__]")

@@ -99,3 +99,5 @@
 	if(user.weight) //Just in case.
 		var/kilograms = round(text2num(user.weight),4) / 2.20463
 		visible_message("<span class='notice'>[src] displays a reading of [user.weight]lb / [kilograms]kg when [user] stands on it.</span>")
+
+/var/global/datum/telltale/code_modules_vore_weight_fitness_machines_vr_dm = new("[__FILE__]")

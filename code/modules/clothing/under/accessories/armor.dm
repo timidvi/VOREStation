@@ -337,3 +337,4 @@ obj/item/clothing/accessory/armor/helmcover
 	name = "\improper SAARE helmet cover"
 	desc = "A fabric cover for armored helmets. This one has SAARE's colors."
 	icon_state = "helmcover_saare"
+/var/global/datum/telltale/code_modules_clothing_under_accessories_armor_dm = new("[__FILE__]")

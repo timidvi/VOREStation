@@ -4,3 +4,4 @@
 
 /datum/controller/process/supply/doWork()
 	supply_controller.process()
+/var/global/datum/telltale/code_controllers_Processes_supply_dm = new("[__FILE__]")

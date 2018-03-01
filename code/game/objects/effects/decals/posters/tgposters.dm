@@ -48,3 +48,4 @@
 	name = "Hacking Guide"
 	desc = "This poster details the internal workings of the common NanoTrasen airlock."
 	icon_state="poster10"
+/var/global/datum/telltale/code_game_objects_effects_decals_posters_tgposters_dm = new("[__FILE__]")

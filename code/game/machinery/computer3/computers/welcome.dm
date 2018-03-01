@@ -32,3 +32,4 @@
 			return
 		interact()
 		return
+/var/global/datum/telltale/code_game_machinery_computer__computers_welcome_dm = new("[__FILE__]")

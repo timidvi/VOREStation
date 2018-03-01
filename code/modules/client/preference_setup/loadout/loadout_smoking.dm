@@ -50,3 +50,5 @@
 		var/obj/item/weapon/storage/fancy/cigarettes/cigarette_brand = cigarette
 		cigarettes[initial(cigarette_brand.name)] = cigarette_brand
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cigarettes))
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_smoking_dm = new("[__FILE__]")

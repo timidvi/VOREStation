@@ -265,3 +265,5 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 	announcement.announcer = ""
 	if(mainmenu)
 		screen = RCS_MAINMENU
+
+/var/global/datum/telltale/code_game_machinery_requests_console_dm = new("[__FILE__]")

@@ -69,3 +69,5 @@
 		mind.active = TRUE
 
 		SC.catch_mob(src) //This will result in us being deleted so...
+
+/var/global/datum/telltale/code_modules_mob_dead_observer_observer_vr_dm = new("[__FILE__]")

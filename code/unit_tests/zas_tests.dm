@@ -119,3 +119,5 @@
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"
 	area_path = /area/quartermaster/storage
+
+/var/global/datum/telltale/code_unit_tests_zas_tests_dm = new("[__FILE__]")

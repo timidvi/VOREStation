@@ -142,3 +142,4 @@ var/list/outdoor_turfs = list()
 			if(prob(66))
 				return
 	demote()
+/var/global/datum/telltale/code_game_turfs_simulated_outdoors_outdoors_dm = new("[__FILE__]")

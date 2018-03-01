@@ -486,3 +486,5 @@
         spawn(0)
             qdel(src)
         return gain
+
+/var/global/datum/telltale/code_modules_power_singularity_singularity_dm = new("[__FILE__]")

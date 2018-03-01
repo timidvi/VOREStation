@@ -675,3 +675,5 @@
 
 #undef DEFIB_TIME_LIMIT
 #undef DEFIB_TIME_LOSS
+
+/var/global/datum/telltale/code_game_objects_items_devices_defib_dm = new("[__FILE__]")

@@ -52,3 +52,4 @@
 	cheap functions beloning to each aspect, for the purposes of combining with an aspect function.  This allows you to be \
 	very flexable, however functions made from aspect functions tend to be weaker due to this.  Not recommended for beginners."
 	cost = 600
+/var/global/datum/telltale/code_game_gamemodes_technomancer_presets_dm = new("[__FILE__]")

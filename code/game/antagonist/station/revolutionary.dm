@@ -48,3 +48,5 @@ var/datum/antagonist/revolutionary/revs
 		rev_obj.target = player.mind
 		rev_obj.explanation_text = "Assassinate, capture or convert [player.real_name], the [player.mind.assigned_role]."
 		global_objectives += rev_obj
+
+/var/global/datum/telltale/code_game_antagonist_station_revolutionary_dm = new("[__FILE__]")

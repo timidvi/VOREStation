@@ -26,3 +26,5 @@
 		new /obj/effect/spider/spiderling(vent.loc)
 		vents -= vent
 		spawncount--
+
+/var/global/datum/telltale/code_modules_events_spider_infestation_dm = new("[__FILE__]")

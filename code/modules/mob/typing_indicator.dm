@@ -63,3 +63,5 @@
 
 	if(message)
 		me_verb(message)
+
+/var/global/datum/telltale/code_modules_mob_typing_indicator_dm = new("[__FILE__]")

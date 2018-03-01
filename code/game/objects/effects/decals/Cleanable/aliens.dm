@@ -31,3 +31,4 @@
 
 /obj/effect/decal/cleanable/blood/xtracks
 	basecolor = "#05EE05"
+/var/global/datum/telltale/code_game_objects_effects_decals_Cleanable_aliens_dm = new("[__FILE__]")

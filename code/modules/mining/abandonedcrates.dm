@@ -217,3 +217,5 @@
 				user << "<span class='notice'>Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions.</span>"
 			return
 	..()
+
+/var/global/datum/telltale/code_modules_mining_abandonedcrates_dm = new("[__FILE__]")

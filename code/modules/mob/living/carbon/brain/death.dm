@@ -12,3 +12,4 @@
 		if(istype(loc,/obj/item/organ/internal/brain))
 			qdel(loc)//Gets rid of the brain item
 	..(null,1)
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_death_dm = new("[__FILE__]")

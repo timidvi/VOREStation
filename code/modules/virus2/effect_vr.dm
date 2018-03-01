@@ -60,3 +60,5 @@
 		else
 			viewers(mob) << "<span class='warning'>[mob.name] does a backflip!</span>"
 			mob.SpinAnimation(7,1)
+
+/var/global/datum/telltale/code_modules_virus__effect_vr_dm = new("[__FILE__]")

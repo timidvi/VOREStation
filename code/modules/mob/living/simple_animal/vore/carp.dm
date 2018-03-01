@@ -28,3 +28,5 @@
 	vore_capacity = 1
 	vore_max_size = RESIZE_HUGE
 	vore_icons = SA_ICON_LIVING
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_carp_dm = new("[__FILE__]")

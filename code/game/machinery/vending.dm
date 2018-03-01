@@ -1128,3 +1128,4 @@
 					/obj/item/toy/plushie/therapy/yellow = 20,
 					/obj/item/toy/plushie/therapy/orange = 20,
 					/obj/item/toy/plushie/therapy/green = 20)
+/var/global/datum/telltale/code_game_machinery_vending_dm = new("[__FILE__]")

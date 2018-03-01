@@ -220,3 +220,4 @@ var/const/MAX_ACTIVE_TIME = 400
 			return 0
 	return 1
 */
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_xenomorphs_alien_facehugger_dm = new("[__FILE__]")

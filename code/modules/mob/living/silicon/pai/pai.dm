@@ -482,3 +482,5 @@
 	visible_message("<b>[src]</b> fades away from the screen, the pAI device goes silent.")
 	card.removePersonality()
 	clear_client()
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_pai_dm = new("[__FILE__]")

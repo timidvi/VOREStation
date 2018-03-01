@@ -264,3 +264,5 @@
 				if(i >= limit)
 					break
 
+
+/var/global/datum/telltale/code_modules_power_generator_dm = new("[__FILE__]")

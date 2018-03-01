@@ -222,3 +222,5 @@
 
 /datum/riding/boat/get_offsets(pass_index) // list(dir = x, y, layer)
 	return list("[NORTH]" = list(1, 2), "[SOUTH]" = list(1, 2), "[EAST]" = list(1, 2), "[WEST]" = list(1, 2))
+
+/var/global/datum/telltale/code_datums_riding_dm = new("[__FILE__]")

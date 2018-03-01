@@ -69,3 +69,4 @@ var/datum/category_collection/autolathe/autolathe_recipes
 
 /datum/category_item/autolathe/dd_SortValue()
 	return name
+/var/global/datum/telltale/code_datums_autolathe_autolathe_dm = new("[__FILE__]")

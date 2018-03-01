@@ -12,3 +12,5 @@
 	if(choice == "Nar-Singulo")
 		log_and_message_admins("has set narsie's behaviour to \"Nar-Singulo\".", user)
 		narsie_behaviour = choice
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_alter_narsie_dm = new("[__FILE__]")

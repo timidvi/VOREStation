@@ -309,3 +309,5 @@
 /datum/shuttle_autopath/proc/finish_path()
 	reset_path()
 	master.path_finished(src)
+
+/var/global/datum/telltale/code_modules_shuttles_web_datums_dm = new("[__FILE__]")

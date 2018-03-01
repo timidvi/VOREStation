@@ -38,3 +38,5 @@
 // 	legend.pixel_x = 3*WORLD_ICON_SIZE
 // 	legend.pixel_y = 3*WORLD_ICON_SIZE
 // 	station_map.overlays |= legend
+
+/var/global/datum/telltale/code_modules_holomap_holomap_datum_dm = new("[__FILE__]")

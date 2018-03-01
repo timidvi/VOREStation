@@ -10,3 +10,4 @@
 /obj/item/weapon/reagent_containers/spray/windowsealant/New()
 	..()
 	reagents.add_reagent("silicate", 80)
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_spray_vr_dm = new("[__FILE__]")

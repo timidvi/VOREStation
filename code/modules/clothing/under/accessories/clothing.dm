@@ -282,3 +282,5 @@
 	name = "Christmas turtleneck"
 	desc = "A really cheesy holiday sweater, it actually kinda itches."
 	icon_state = "turtleneck_winterred"
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_clothing_dm = new("[__FILE__]")

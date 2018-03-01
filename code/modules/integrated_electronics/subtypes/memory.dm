@@ -123,3 +123,4 @@
 		to_chat(user, "<span class='notice'>You set \the [src]'s memory to a reference to [O.display_data(O.data)].  The ref scanner is \
 		now off.</span>")
 		accepting_refs = 0
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_memory_dm = new("[__FILE__]")

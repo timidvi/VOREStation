@@ -31,3 +31,4 @@
 						out += T
 						break
 	return out
+/var/global/datum/telltale/code_modules_shieldgen_shield_gen_external_dm = new("[__FILE__]")

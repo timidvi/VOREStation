@@ -337,3 +337,5 @@
 	else
 		src.icon_state = malfunction ? "shieldoffbr":"shieldoff"
 	return
+
+/var/global/datum/telltale/code_modules_shieldgen_emergency_shield_dm = new("[__FILE__]")

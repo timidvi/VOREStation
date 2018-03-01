@@ -41,3 +41,5 @@
 		cooldown = world.time
 	else
 		return
+
+/var/global/datum/telltale/code_modules_games_tarot_dm = new("[__FILE__]")

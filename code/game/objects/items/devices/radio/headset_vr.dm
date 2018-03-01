@@ -15,3 +15,5 @@
 	icon_state = "nt_headset"
 	ks2type = /obj/item/device/encryptionkey/ert
 
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_headset_vr_dm = new("[__FILE__]")

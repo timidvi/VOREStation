@@ -81,3 +81,4 @@
 #undef SETUP_WARNING
 #undef SETUP_ERROR
 #undef SETUP_DELAYED
+/var/global/datum/telltale/code_modules_power_fusion__setup_dm = new("[__FILE__]")

@@ -19,3 +19,4 @@
 			build_path = /obj/machinery/computer/rdconsole/core
 			user << "<span class='notice'>Access protocols set to default.</span>"
 	return
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_computer_research_dm = new("[__FILE__]")

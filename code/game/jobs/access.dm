@@ -252,3 +252,5 @@ proc/get_all_job_icons() //For all existing HUD icons
 		return
 
 	return "Unknown" //Return unknown if none of the above apply
+
+/var/global/datum/telltale/code_game_jobs_access_dm = new("[__FILE__]")

@@ -341,3 +341,5 @@
 		return TRUE
 	return FALSE
 
+
+/var/global/datum/telltale/code_modules_integrated_electronics_core_assemblies_dm = new("[__FILE__]")

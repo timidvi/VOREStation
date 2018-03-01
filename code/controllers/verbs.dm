@@ -161,3 +161,5 @@
 	debug_variables(P)
 	feedback_add_details("admin_verb", "DProcCtrl")
 	message_admins("Admin [key_name_admin(usr)] is debugging the [controller] controller.")
+
+/var/global/datum/telltale/code_controllers_verbs_dm = new("[__FILE__]")

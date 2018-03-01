@@ -68,3 +68,5 @@
 	FG1 = master1
 	FG2 = master2
 	return 1
+
+/var/global/datum/telltale/code_modules_power_singularity_containment_field_dm = new("[__FILE__]")

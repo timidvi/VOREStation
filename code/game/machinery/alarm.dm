@@ -1110,3 +1110,5 @@ Just a object used in constructing fire alarms
 		usr << browse(null, "window=partyalarm")
 		return
 	return
+
+/var/global/datum/telltale/code_game_machinery_alarm_dm = new("[__FILE__]")

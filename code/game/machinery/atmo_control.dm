@@ -485,3 +485,4 @@ obj/machinery/computer/general_air_control/Destroy()
 		)
 
 		radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)
+/var/global/datum/telltale/code_game_machinery_atmo_control_dm = new("[__FILE__]")

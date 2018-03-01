@@ -196,3 +196,4 @@ var/global/list/edible_trash = list(/obj/item/trash,
 				positive_traits[path] = instance
 
 	return 1 // Hooks must return 1
+/var/global/datum/telltale/code__helpers_global_lists_vr_dm = new("[__FILE__]")

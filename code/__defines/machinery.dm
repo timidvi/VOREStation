@@ -139,3 +139,5 @@ if(DATUM.is_processing) {\
 
 #define START_PROCESSING_POWER_OBJECT(Datum) START_PROCESSING_IN_LIST(Datum, global.processing_power_items)
 #define STOP_PROCESSING_POWER_OBJECT(Datum) STOP_PROCESSING_IN_LIST(Datum, global.processing_power_items)
+
+/var/global/datum/telltale/code___defines_machinery_dm = new("[__FILE__]")

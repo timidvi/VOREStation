@@ -36,3 +36,4 @@
 // Technomancer specific subtype which keeps track of spell power and gets targeted specificially by Dispel.
 /datum/modifier/technomancer
 	var/spell_power = null // Set by on_add_modifier.
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_modifier_modifier_dm = new("[__FILE__]")

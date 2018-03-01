@@ -31,3 +31,4 @@
 
 	feedback_add_details("changeling_powers","EN")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_enrage_dm = new("[__FILE__]")

@@ -216,3 +216,4 @@
 	user.visible_message(msg, self_msg)
 
 	affected.open = 2
+/var/global/datum/telltale/code_modules_surgery_encased_dm = new("[__FILE__]")

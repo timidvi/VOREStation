@@ -137,3 +137,5 @@ obj/machinery/scanner/attack_hand(mob/living/carbon/human/user)
 	data_core.medical += M
 	data_core.security += S
 	data_core.locked += L
+
+/var/global/datum/telltale/code_game_machinery_records_scanner_dm = new("[__FILE__]")

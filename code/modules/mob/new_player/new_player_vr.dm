@@ -51,3 +51,5 @@
 	if (!pass)
 		alert(src,"There were problems with spawning your character. Check your message log for details.","Error","OK")
 	return pass
+
+/var/global/datum/telltale/code_modules_mob_new_player_new_player_vr_dm = new("[__FILE__]")

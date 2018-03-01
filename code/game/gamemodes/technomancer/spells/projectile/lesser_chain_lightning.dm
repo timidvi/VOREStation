@@ -21,3 +21,4 @@
 /obj/item/projectile/beam/chain_lightning/lesser
 	bounces = 2
 	power = 20
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_lesser_chain_lightning_dm = new("[__FILE__]")

@@ -151,3 +151,5 @@
 		return
 	src.set_dir(turn(src.dir, 270))
 	return
+
+/var/global/datum/telltale/code_modules_shieldgen_shield_capacitor_dm = new("[__FILE__]")

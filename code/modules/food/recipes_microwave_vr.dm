@@ -136,3 +136,5 @@
 		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/makaroni
+
+/var/global/datum/telltale/code_modules_food_recipes_microwave_vr_dm = new("[__FILE__]")

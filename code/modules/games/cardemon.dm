@@ -30,3 +30,5 @@
 			P.card_icon += "_[rarity]"
 		P.back_icon = "card_back_cardemon"
 		cards += P
+
+/var/global/datum/telltale/code_modules_games_cardemon_dm = new("[__FILE__]")

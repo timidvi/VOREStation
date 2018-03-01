@@ -30,3 +30,4 @@
 	if(stance == STANCE_ATTACK || stance == STANCE_ATTACKING)
 		if((health / maxHealth) <= 0.5) // At half health, and fighting someone currently.
 			add_modifier(/datum/modifier/berserk, 30 SECONDS)
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_sif_wildlife_savik_dm = new("[__FILE__]")

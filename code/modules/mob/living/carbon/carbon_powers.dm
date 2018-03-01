@@ -60,3 +60,4 @@
 	else
 		src << "<span class='warning'>You do not have enough chemicals stored to reproduce.</span>"
 		return
+/var/global/datum/telltale/code_modules_mob_living_carbon_carbon_powers_dm = new("[__FILE__]")

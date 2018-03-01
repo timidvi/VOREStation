@@ -354,3 +354,5 @@
 		M.apply_damage(50,BRUTE)
 		if(M.stat == 2)
 			M.gib()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_xenomorphs_alien_powers_dm = new("[__FILE__]")

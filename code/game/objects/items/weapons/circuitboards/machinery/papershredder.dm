@@ -11,3 +11,5 @@
 							/obj/item/weapon/stock_parts/motor = 1,
 							/obj/item/weapon/stock_parts/gear = 2,
 							/obj/item/weapon/stock_parts/micro_laser = 1)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_papershredder_dm = new("[__FILE__]")

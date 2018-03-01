@@ -449,3 +449,4 @@
 /datum/gear/uniform/bathrobe
 	display_name = "bathrobe"
 	path = /obj/item/clothing/under/bathrobe
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_uniform_dm = new("[__FILE__]")

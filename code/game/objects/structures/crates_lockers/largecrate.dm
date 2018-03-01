@@ -85,3 +85,5 @@
 	name = "chicken crate"
 	held_count = 5
 	held_type = /mob/living/simple_animal/chick
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_largecrate_dm = new("[__FILE__]")

@@ -58,3 +58,5 @@
 	fileaccess_timer = world.time + FTPDELAY
 	return 0
 #undef FTPDELAY
+
+/var/global/datum/telltale/code__helpers_files_dm = new("[__FILE__]")

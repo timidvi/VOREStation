@@ -180,3 +180,5 @@
 		targetVolume = M.volume
 		//MP_DEBUG("Found audio source: [M.media_url] @ [(world.time - start_time) / 10]s.")
 	push_music(targetURL, targetStartTime, targetVolume)
+
+/var/global/datum/telltale/code_modules_media_mediamanager_dm = new("[__FILE__]")

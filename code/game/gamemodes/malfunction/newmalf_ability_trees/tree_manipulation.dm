@@ -206,3 +206,4 @@
 			qdel(M)
 
 // END ABILITY VERBS
+/var/global/datum/telltale/code_game_gamemodes_malfunction_newmalf_ability_trees_tree_manipulation_dm = new("[__FILE__]")

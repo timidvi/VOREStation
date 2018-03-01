@@ -365,3 +365,5 @@ var/global/vs_control/vsc = new
 		else
 			newvalue = vars[V]
 		vars[V] = newvalue
+
+/var/global/datum/telltale/code_ZAS_Variable_Settings_dm = new("[__FILE__]")

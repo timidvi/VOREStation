@@ -51,3 +51,4 @@ proc/AreConnectedZLevels(var/zA, var/zB)
 		. = GetBelow(ref)
 	else
 		. = get_step(ref, dir)
+/var/global/datum/telltale/code_modules_multiz_basic_dm = new("[__FILE__]")

@@ -23,3 +23,5 @@
 
 			new loot_path(get_turf(src))
 	return INITIALIZE_HINT_QDEL
+
+/var/global/datum/telltale/code_modules_awaymissions_loot_dm = new("[__FILE__]")

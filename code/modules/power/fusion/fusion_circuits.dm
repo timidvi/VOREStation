@@ -97,3 +97,5 @@
 	id = "fusion_injector"
 	build_path = /obj/item/weapon/circuitboard/fusion_injector
 	sort_string = "LAAAI"
+
+/var/global/datum/telltale/code_modules_power_fusion_fusion_circuits_dm = new("[__FILE__]")

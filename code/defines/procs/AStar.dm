@@ -179,3 +179,5 @@ proc/AStar(var/start, var/end, var/proc/adjacent, var/proc/dist, var/max_nodes, 
 				open.Remove(open.Length())
 
 	return path
+
+/var/global/datum/telltale/code_defines_procs_AStar_dm = new("[__FILE__]")

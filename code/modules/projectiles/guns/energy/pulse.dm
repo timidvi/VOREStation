@@ -42,3 +42,4 @@
 		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam, fire_delay=null, charge_cost = 240),
 		list(mode_name="DESTROY", projectile_type=/obj/item/projectile/beam/pulse, fire_delay=null, charge_cost = 480),
 		)
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_pulse_dm = new("[__FILE__]")

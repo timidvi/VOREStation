@@ -328,3 +328,4 @@
 
 	if(icon_update_tick == 0)
 		build_overlays()
+/var/global/datum/telltale/code_game_machinery_rechargestation_dm = new("[__FILE__]")

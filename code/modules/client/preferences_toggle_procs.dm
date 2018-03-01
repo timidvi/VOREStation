@@ -238,3 +238,5 @@
 		prefs.save_preferences()
 
 	feedback_add_details("admin_verb","TBeSpecial") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/var/global/datum/telltale/code_modules_client_preferences_toggle_procs_dm = new("[__FILE__]")

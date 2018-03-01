@@ -173,3 +173,5 @@
 	qdel(prey)
 	qdel(pred)
 	return 1
+
+/var/global/datum/telltale/code_unit_tests_vore_tests_vr_dm = new("[__FILE__]")

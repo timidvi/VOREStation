@@ -21,3 +21,4 @@
 	display_name = "sterile mask"
 	path = /obj/item/clothing/mask/surgical
 	cost = 2
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_mask_dm = new("[__FILE__]")

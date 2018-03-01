@@ -285,3 +285,5 @@
 				if(comm == 2)
 					errors+=new/scriptError/UnterminatedComment()
 
+
+/var/global/datum/telltale/code_modules_scripting_Scanner_Scanner_dm = new("[__FILE__]")

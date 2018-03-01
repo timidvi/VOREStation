@@ -145,3 +145,5 @@
 
 /mob/new_player/singuloCanEat()
 	return 0
+
+/var/global/datum/telltale/code_modules_power_singularity_act_dm = new("[__FILE__]")

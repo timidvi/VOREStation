@@ -137,3 +137,4 @@
 	force = 20
 	armor_penetration = 20
 	pry = 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_armblade_dm = new("[__FILE__]")

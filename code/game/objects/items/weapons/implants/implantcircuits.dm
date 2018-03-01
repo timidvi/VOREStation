@@ -46,3 +46,4 @@
 
 /obj/item/weapon/implant/integrated_circuit/attack_self(mob/user)
 	IC.attack_self(user)
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implantcircuits_dm = new("[__FILE__]")

@@ -13,3 +13,4 @@
 #define PLANET_PROCESS_WEATHER	0x1
 #define PLANET_PROCESS_SUN		0x2
 #define PLANET_PROCESS_TEMP		0x4
+/var/global/datum/telltale/code___defines_planets_dm = new("[__FILE__]")

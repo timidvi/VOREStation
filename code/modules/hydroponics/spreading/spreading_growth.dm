@@ -164,3 +164,4 @@
 	spawn(1) if(src) qdel(src)
 
 #undef NEIGHBOR_REFRESH_TIME
+/var/global/datum/telltale/code_modules_hydroponics_spreading_spreading_growth_dm = new("[__FILE__]")

@@ -72,3 +72,4 @@
 			debugger.write_data(pin, usr)
 			return 1
 	return 0
+/var/global/datum/telltale/code_modules_integrated_electronics_core_helpers_dm = new("[__FILE__]")

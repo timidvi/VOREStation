@@ -8,3 +8,4 @@
 			client.perspective = EYE_PERSPECTIVE
 	src.view_core()
 	return
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_logout_dm = new("[__FILE__]")

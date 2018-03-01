@@ -656,3 +656,4 @@
 	H << "<span class='danger'>Your hardsuit returns to normal speed.</span>"
 
 	holder.slowdown = initial(holder.slowdown)
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_utility_dm = new("[__FILE__]")

@@ -582,3 +582,5 @@ var/datum/controller/master/Master = new()
 	for(var/S in subsystems)
 		var/datum/controller/subsystem/SS = S
 		SS.StopLoadingMap()
+
+/var/global/datum/telltale/code_controllers_master_dm = new("[__FILE__]")

@@ -44,3 +44,4 @@ obj/machinery/seed_extractor/attackby(var/obj/item/O as obj, var/mob/user as mob
 		return
 
 	return
+/var/global/datum/telltale/code_game_machinery_seed_extractor_dm = new("[__FILE__]")

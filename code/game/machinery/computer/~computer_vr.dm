@@ -15,3 +15,5 @@
 /obj/machinery/computer/rcon
 	icon_keyboard = "power_key"
 	icon_screen = "ai-fixer"
+
+/var/global/datum/telltale/code_game_machinery_computer__computer_vr_dm = new("[__FILE__]")

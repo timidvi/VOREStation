@@ -143,3 +143,4 @@
 	board_type = /datum/frame/frame_types/machine
 	origin_tech = list()	//To be filled,
 	req_components = list()	//To be filled,
+/var/global/datum/telltale/code_modules_xenobio__machinery_injector_dm = new("[__FILE__]")

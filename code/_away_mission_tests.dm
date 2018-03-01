@@ -8,3 +8,5 @@
  *   #define AWAY_MISSION_TEST 1
  */
 #define AWAY_MISSION_TEST 0
+
+/var/global/datum/telltale/code__away_mission_tests_dm = new("[__FILE__]")

@@ -64,3 +64,5 @@
 #define SKIN_NORMAL 0
 #define SKIN_THREAT 1
 #define SKIN_CLOAK  2
+
+/var/global/datum/telltale/code___defines_species_languages_dm = new("[__FILE__]")

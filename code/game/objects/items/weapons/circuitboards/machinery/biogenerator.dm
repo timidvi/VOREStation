@@ -10,3 +10,4 @@
 	req_components = list(
 							/obj/item/weapon/stock_parts/matter_bin = 1,
 							/obj/item/weapon/stock_parts/manipulator = 1)
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_biogenerator_dm = new("[__FILE__]")

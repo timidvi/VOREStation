@@ -143,3 +143,5 @@ SUBSYSTEM_DEF(atoms)
 #undef BAD_INIT_DIDNT_INIT
 #undef BAD_INIT_SLEPT
 #undef BAD_INIT_NO_HINT
+
+/var/global/datum/telltale/code_controllers_subsystems_atoms_dm = new("[__FILE__]")

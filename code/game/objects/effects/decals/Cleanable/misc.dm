@@ -138,3 +138,5 @@
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "mfloor1"
 	random_icon_states = list("mfloor1", "mfloor2", "mfloor3", "mfloor4", "mfloor5", "mfloor6", "mfloor7")
+
+/var/global/datum/telltale/code_game_objects_effects_decals_Cleanable_misc_dm = new("[__FILE__]")

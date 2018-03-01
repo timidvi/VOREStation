@@ -455,3 +455,5 @@
 	var/sink_pressure = sink.return_pressure()
 
 	return (source_pressure - sink_pressure)/(R_IDEAL_GAS_EQUATION * (source.temperature/source_volume + sink.temperature/sink_volume))
+
+/var/global/datum/telltale/code_ATMOSPHERICS__atmospherics_helpers_dm = new("[__FILE__]")

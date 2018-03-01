@@ -376,3 +376,5 @@
 	New(title, recipes)
 		src.title = title
 		src.recipes = recipes
+
+/var/global/datum/telltale/code_game_objects_items_stacks_stack_dm = new("[__FILE__]")

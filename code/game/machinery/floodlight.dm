@@ -125,3 +125,5 @@
 				cell = W
 				user << "You insert the power cell."
 	update_icon()
+
+/var/global/datum/telltale/code_game_machinery_floodlight_dm = new("[__FILE__]")

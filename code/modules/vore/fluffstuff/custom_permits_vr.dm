@@ -77,3 +77,5 @@
 	The individual named above is licensed by the Nanotrasen Department of Civil Protection to openly carry XYZ. CONDITIONS.
 	This license expires on DD/Mon/YYYY and must be renewed by CentCom prior to this date."}
 */
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_custom_permits_vr_dm = new("[__FILE__]")

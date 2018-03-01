@@ -179,3 +179,5 @@
 		b2y2 = pixel_y - pick(1,1,1,1,2,2,3,3,4)
 
 		Target.bulletholes.Add(src)
+
+/var/global/datum/telltale/code_game_objects_items_shooting_range_dm = new("[__FILE__]")

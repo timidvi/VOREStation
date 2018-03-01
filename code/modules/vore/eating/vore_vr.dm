@@ -128,3 +128,5 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	S["can_be_drop_pred"] << can_be_drop_pred
 
 	return 1
+
+/var/global/datum/telltale/code_modules_vore_eating_vore_vr_dm = new("[__FILE__]")

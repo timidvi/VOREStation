@@ -22,3 +22,5 @@
 	C.health = 0
 	C.healthcheck()
 	return
+
+/var/global/datum/telltale/code_modules_gamemaster_actions_canister_leak_dm = new("[__FILE__]")

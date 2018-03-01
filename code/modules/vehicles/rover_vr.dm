@@ -403,3 +403,5 @@
 		anchored = 0
 	else
 		anchored = 1
+
+/var/global/datum/telltale/code_modules_vehicles_rover_vr_dm = new("[__FILE__]")

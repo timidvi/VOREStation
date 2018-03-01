@@ -42,3 +42,4 @@
 		else if(istype(T,/turf/simulated/mineral))
 			var/turf/simulated/mineral/M = T
 			M.mined_turf = /turf/simulated/floor/airless/lava
+/var/global/datum/telltale/code_modules_random_map_noise_magma_dm = new("[__FILE__]")

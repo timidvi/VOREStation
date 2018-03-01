@@ -92,3 +92,4 @@
 		icon = image(initial(C.icon), initial(C.icon_state))
 
 	return "\icon[icon]"
+/var/global/datum/telltale/code_datums_uplink_badassery_dm = new("[__FILE__]")

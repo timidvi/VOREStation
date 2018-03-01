@@ -104,3 +104,5 @@
 	name = OUTFIT_JOB_NAME("Emergency Medical Technician")
 	uniform = /obj/item/clothing/under/rank/medical/paramedic
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/emt
+
+/var/global/datum/telltale/code_datums_outfits_jobs_medical_dm = new("[__FILE__]")

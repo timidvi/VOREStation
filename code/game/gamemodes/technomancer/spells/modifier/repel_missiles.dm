@@ -26,3 +26,4 @@
 	on_expired_text = "<span class='warning'>Your repulsion field has expired.</span>"
 	evasion = 45
 	stacks = MODIFIER_STACK_EXTEND
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_modifier_repel_missiles_dm = new("[__FILE__]")

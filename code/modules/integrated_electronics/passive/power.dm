@@ -164,3 +164,5 @@
 		if(A.powered(EQUIP) && assembly.give_power(power_amount))
 			A.use_power(power_amount, EQUIP)
 			// give_power() handles CELLRATE on its own.
+
+/var/global/datum/telltale/code_modules_integrated_electronics_passive_power_dm = new("[__FILE__]")

@@ -103,3 +103,5 @@
 	product.reagents.add_reagent("antibodies",30,data)
 
 	state("\The [src.name] buzzes", "blue")
+
+/var/global/datum/telltale/code_modules_virus__curer_dm = new("[__FILE__]")

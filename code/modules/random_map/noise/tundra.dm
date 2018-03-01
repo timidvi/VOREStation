@@ -70,3 +70,5 @@
 				new /obj/structure/flora/bush(T)
 		if(9)
 			new /obj/structure/flora/tree/pine(T)
+
+/var/global/datum/telltale/code_modules_random_map_noise_tundra_dm = new("[__FILE__]")

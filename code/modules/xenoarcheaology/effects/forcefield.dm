@@ -77,3 +77,5 @@
 		E.loc = locate(T.x - 2,T.y - 1,T.z)
 		E = created_field[16]
 		E.loc = locate(T.x - 2,T.y - 2,T.z)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_forcefield_dm = new("[__FILE__]")

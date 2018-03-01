@@ -189,3 +189,5 @@
 	magazine_icondata_keys["[M.type]"] = icon_keys
 	magazine_icondata_states["[M.type]"] = ammo_states
 
+
+/var/global/datum/telltale/code_modules_projectiles_ammunition_dm = new("[__FILE__]")

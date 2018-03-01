@@ -141,3 +141,4 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	return ..()
+/var/global/datum/telltale/code_modules_client_preference_setup_general____equipment_dm = new("[__FILE__]")

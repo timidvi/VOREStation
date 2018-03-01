@@ -412,3 +412,4 @@
 	icon_state = "permit"
 	primary_color = rgb(142,94,0)
 	secondary_color = rgb(191,159,95)
+/var/global/datum/telltale/code_game_objects_items_weapons_id_cards_station_ids_dm = new("[__FILE__]")

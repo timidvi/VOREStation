@@ -170,3 +170,5 @@
 	emagged = 1
 	emp_act(1)
 	return 1
+
+/var/global/datum/telltale/code_modules_power_pacman__dm = new("[__FILE__]")

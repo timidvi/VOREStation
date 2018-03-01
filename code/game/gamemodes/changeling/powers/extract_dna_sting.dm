@@ -44,3 +44,4 @@
 
 	feedback_add_details("changeling_powers","ED")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_extract_dna_sting_dm = new("[__FILE__]")

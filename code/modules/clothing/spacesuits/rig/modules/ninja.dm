@@ -218,3 +218,5 @@
 		for(var/i = 1 to smoke_strength)
 			smoke.start(272727)
 		holder.wearer.ash()
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_ninja_dm = new("[__FILE__]")

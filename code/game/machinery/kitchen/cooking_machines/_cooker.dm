@@ -254,3 +254,5 @@
 			I.color = food_color
 		product.overlays += I
 
+
+/var/global/datum/telltale/code_game_machinery_kitchen_cooking_machines__cooker_dm = new("[__FILE__]")

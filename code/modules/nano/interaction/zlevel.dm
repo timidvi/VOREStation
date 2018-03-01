@@ -11,3 +11,5 @@
 		return STATUS_CLOSE
 
 	return turf_obj.z == turf_usr.z ? STATUS_INTERACTIVE : STATUS_CLOSE
+
+/var/global/datum/telltale/code_modules_nano_interaction_zlevel_dm = new("[__FILE__]")

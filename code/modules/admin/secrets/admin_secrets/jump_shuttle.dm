@@ -34,3 +34,5 @@
 		S.short_jump(origin_area, destination_area)
 		message_admins("<span class='notice'>[key_name_admin(user)] has initiated a jump from [origin_area] to [destination_area] for the [shuttle_tag] shuttle</span>", 1)
 		log_admin("[key_name_admin(user)] has initiated a jump from [origin_area] to [destination_area] for the [shuttle_tag] shuttle")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_jump_shuttle_dm = new("[__FILE__]")

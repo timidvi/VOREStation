@@ -104,3 +104,4 @@ var/global/list/datum/stack_recipe/rods_recipes = list( \
 		use(2)
 	return
 */
+/var/global/datum/telltale/code_game_objects_items_stacks_rods_dm = new("[__FILE__]")

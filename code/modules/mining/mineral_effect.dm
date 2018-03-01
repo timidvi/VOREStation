@@ -24,3 +24,4 @@
 		else
 			world << "No ore data for [src]!"
 	return scanner_image
+/var/global/datum/telltale/code_modules_mining_mineral_effect_dm = new("[__FILE__]")

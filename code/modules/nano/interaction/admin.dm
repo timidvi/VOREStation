@@ -5,3 +5,5 @@
 
 /datum/topic_state/admin_state/can_use_topic(var/src_object, var/mob/user)
 	return check_rights(R_ADMIN, 0, user) ? STATUS_INTERACTIVE : STATUS_CLOSE
+
+/var/global/datum/telltale/code_modules_nano_interaction_admin_dm = new("[__FILE__]")

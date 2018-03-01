@@ -115,3 +115,4 @@
 			return
 		attack_hand(user)
 		return
+/var/global/datum/telltale/code_game_machinery_computer_computer_dm = new("[__FILE__]")

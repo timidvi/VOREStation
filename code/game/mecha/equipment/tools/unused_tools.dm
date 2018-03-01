@@ -25,3 +25,5 @@
 			return 1
 
 */
+
+/var/global/datum/telltale/code_game_mecha_equipment_tools_unused_tools_dm = new("[__FILE__]")

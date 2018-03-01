@@ -109,3 +109,5 @@
 /obj/item/dropped()
 	. = ..()
 	update_light()
+
+/var/global/datum/telltale/code_modules_lighting_lighting_atom_dm = new("[__FILE__]")

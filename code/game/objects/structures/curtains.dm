@@ -79,3 +79,5 @@
 
 #undef SHOWER_OPEN_LAYER
 #undef SHOWER_CLOSED_LAYER
+
+/var/global/datum/telltale/code_game_objects_structures_curtains_dm = new("[__FILE__]")

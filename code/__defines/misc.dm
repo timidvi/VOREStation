@@ -237,3 +237,5 @@
 #define USE_FAIL_INCAPACITATED 5
 #define USE_FAIL_NOT_IN_USER 6
 #define USE_FAIL_IS_SILICON 7
+
+/var/global/datum/telltale/code___defines_misc_dm = new("[__FILE__]")

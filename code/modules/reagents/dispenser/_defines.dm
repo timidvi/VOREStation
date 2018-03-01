@@ -6,3 +6,5 @@
 // ERT dispenser starts with 28
 #define DISPENSER_MAX_CARTRIDGES 30
 
+
+/var/global/datum/telltale/code_modules_reagents_dispenser__defines_dm = new("[__FILE__]")

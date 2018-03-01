@@ -98,3 +98,5 @@
 	for(var/datum/uplink_item/UI in H.purchase_log)
 		refined_log.Add("[H.purchase_log[UI]]x[UI.log_icon()][UI.name]")
 	. = english_list(refined_log, nothing_text = "")
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_print_dm = new("[__FILE__]")

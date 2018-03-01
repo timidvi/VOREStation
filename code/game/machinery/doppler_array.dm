@@ -47,3 +47,4 @@ var/list/doppler_arrays = list()
 			icon_state = initial(icon_state)
 		else
 			icon_state = "[initial(icon_state)]-off"
+/var/global/datum/telltale/code_game_machinery_doppler_array_dm = new("[__FILE__]")

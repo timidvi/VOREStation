@@ -10,3 +10,5 @@
 	for(var/l in bombers)
 		dat += text("[l]<BR>")
 	user << browse(dat, "window=bombers")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_bombing_list_dm = new("[__FILE__]")

@@ -2004,3 +2004,5 @@
 	..()
 	attack_verb = list("bapped", "thwapped", "bonked", "whacked")
 	icon_state = initial(icon_state)
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_custom_items_vr_dm = new("[__FILE__]")

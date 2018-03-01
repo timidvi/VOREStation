@@ -78,3 +78,5 @@
 	icon_state = "bottle15"
 	toxicity = 8
 	weed_kill_str = 7
+
+/var/global/datum/telltale/code_modules_hydroponics_trays_tray_reagents_dm = new("[__FILE__]")

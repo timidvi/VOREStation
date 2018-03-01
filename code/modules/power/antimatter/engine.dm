@@ -205,3 +205,4 @@
 	stopping = 0
 
 	return
+/var/global/datum/telltale/code_modules_power_antimatter_engine_dm = new("[__FILE__]")

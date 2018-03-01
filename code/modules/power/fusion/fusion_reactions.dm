@@ -159,3 +159,5 @@ proc/get_fusion_reaction(var/p_react, var/s_react, var/m_energy)
 	energy_production = 20
 	radiation = 5
 	instability = 5
+
+/var/global/datum/telltale/code_modules_power_fusion_fusion_reactions_dm = new("[__FILE__]")

@@ -216,3 +216,4 @@
 	registered_name = "Syndicate"
 	assignment = "Syndicate Overlord"
 	access = list(access_syndicate, access_external_airlocks)
+/var/global/datum/telltale/code_game_objects_items_weapons_id_cards_syndicate_ids_dm = new("[__FILE__]")

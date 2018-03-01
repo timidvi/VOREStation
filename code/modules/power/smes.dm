@@ -440,3 +440,5 @@
 /obj/machinery/power/smes/magical/process()
 	charge = 5000000
 	..()
+
+/var/global/datum/telltale/code_modules_power_smes_dm = new("[__FILE__]")

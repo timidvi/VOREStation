@@ -54,3 +54,4 @@
 
 /mob/living/carbon/alien/cannot_use_vents()
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_alien_dm = new("[__FILE__]")

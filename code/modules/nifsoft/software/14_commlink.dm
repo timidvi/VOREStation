@@ -132,3 +132,5 @@
 
 	if(ringer && nif.human)
 		nif.notify("Commlink message from [who]: \"[text]\" (<a href='?src=\ref[nifsoft];open=1'>Open</a>)")
+
+/var/global/datum/telltale/code_modules_nifsoft_software____commlink_dm = new("[__FILE__]")

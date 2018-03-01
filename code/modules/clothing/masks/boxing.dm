@@ -33,3 +33,4 @@
 	name = "Rudos Mask"
 	desc = "Worn by robust fighters who are willing to do anything to win."
 	icon_state = "luchar"
+/var/global/datum/telltale/code_modules_clothing_masks_boxing_dm = new("[__FILE__]")

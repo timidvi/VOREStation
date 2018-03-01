@@ -36,3 +36,5 @@
 	// Only return a functional camera, not installed in a silicon, and that exists somewhere players have access
 	var/turf/T = get_turf(C)
 	return T && C.can_use() && !istype(C.loc, /mob/living/silicon) && (T.z in using_map.player_levels)
+
+/var/global/datum/telltale/code_modules_events_camera_damage_dm = new("[__FILE__]")

@@ -44,3 +44,5 @@
 		gas_data.flags[gas.id] = gas.flags
 
 	return 1
+
+/var/global/datum/telltale/code_modules_xgm_xgm_gas_data_dm = new("[__FILE__]")

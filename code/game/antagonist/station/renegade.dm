@@ -104,3 +104,5 @@ var/datum/antagonist/renegade/renegades
 		if(H.stat == 2 || !(H.client)) continue
 		if(is_special_character(H)) continue
 		renegades.add_antagonist(H.mind)
+
+/var/global/datum/telltale/code_game_antagonist_station_renegade_dm = new("[__FILE__]")

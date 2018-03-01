@@ -273,3 +273,4 @@ var/global/list/datum/stack_recipe/wax_recipes = list( \
 	desc = initial(desc)
 	overlays.Cut()
 	overlays += "beepack-full"
+/var/global/datum/telltale/code_modules_hydroponics_beekeeping_beehive_dm = new("[__FILE__]")

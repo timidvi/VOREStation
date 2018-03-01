@@ -24,3 +24,4 @@
 	name = "roboticist's jumpsuit"
 	icon_state = "robotics"
 	rolled_sleeves = 0
+/var/global/datum/telltale/code_modules_clothing_under_jobs_engineering_dm = new("[__FILE__]")

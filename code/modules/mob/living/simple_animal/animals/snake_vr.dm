@@ -102,3 +102,5 @@
 	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
 	new /obj/item/weapon/reagent_containers/food/snacks/snakesnack(src)
 	..()
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_snake_vr_dm = new("[__FILE__]")

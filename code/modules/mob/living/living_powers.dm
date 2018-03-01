@@ -12,3 +12,4 @@
 	else
 		layer = MOB_LAYER
 		src << text("<font color='blue'>You have stopped hiding.</font>")
+/var/global/datum/telltale/code_modules_mob_living_living_powers_dm = new("[__FILE__]")

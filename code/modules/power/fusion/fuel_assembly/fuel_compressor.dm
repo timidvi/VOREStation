@@ -66,3 +66,4 @@
 		return
 
 	return ..()
+/var/global/datum/telltale/code_modules_power_fusion_fuel_assembly_fuel_compressor_dm = new("[__FILE__]")

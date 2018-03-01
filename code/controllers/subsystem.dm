@@ -199,3 +199,5 @@
 //usually called via datum/controller/subsystem/New() when replacing a subsystem (i.e. due to a recurring crash)
 //should attempt to salvage what it can from the old instance of subsystem
 /datum/controller/subsystem/Recover()
+
+/var/global/datum/telltale/code_controllers_subsystem_dm = new("[__FILE__]")

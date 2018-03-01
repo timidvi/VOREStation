@@ -25,3 +25,4 @@
 	if(isnull(results))
 		results = list("reading" = 0)
 	return results
+/var/global/datum/telltale/code_game_objects_items_devices_communicator_helper_dm = new("[__FILE__]")

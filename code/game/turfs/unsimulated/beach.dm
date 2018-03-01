@@ -57,3 +57,5 @@
 /turf/simulated/floor/beach/water/New()
 	..()
 	add_overlay(image("icon"='icons/misc/beach.dmi',"icon_state"="water5","layer"=MOB_LAYER+0.1))
+
+/var/global/datum/telltale/code_game_turfs_unsimulated_beach_dm = new("[__FILE__]")

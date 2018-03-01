@@ -34,3 +34,4 @@
 		lift.open_doors(src)
 	if(ext_panel)
 		ext_panel.reset()
+/var/global/datum/telltale/code_modules_turbolift_turbolift_floor_dm = new("[__FILE__]")

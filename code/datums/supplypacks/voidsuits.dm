@@ -211,3 +211,4 @@
 	containertype = "/obj/structure/closet/crate/secure"
 	containername = "Frontier Mining voidsuit crate"
 	access = access_mining
+/var/global/datum/telltale/code_datums_supplypacks_voidsuits_dm = new("[__FILE__]")

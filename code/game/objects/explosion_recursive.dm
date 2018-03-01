@@ -117,3 +117,4 @@ proc/explosion_rec(turf/epicenter, power)
 
 /turf/unsimulated/explosion_spread(power)
 	return //So it doesn't get to the parent proc, which simulates explosions
+/var/global/datum/telltale/code_game_objects_explosion_recursive_dm = new("[__FILE__]")

@@ -70,3 +70,5 @@ mechanisms<BR>
 life can drive down to only 1 use.<HR>
 No Implant Specifics"}
 	return dat
+
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implantfreedom_dm = new("[__FILE__]")

@@ -338,3 +338,4 @@ var/list/mechtoys = list(
                 slip.info += "CHECK CONTENTS AND STAMP BELOW THE LINE TO CONFIRM RECEIPT OF GOODS<hr>"
 
         return
+/var/global/datum/telltale/code_game_supplyshuttle_dm = new("[__FILE__]")

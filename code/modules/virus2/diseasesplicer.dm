@@ -192,3 +192,5 @@
 		return 1
 
 	return 0
+
+/var/global/datum/telltale/code_modules_virus__diseasesplicer_dm = new("[__FILE__]")

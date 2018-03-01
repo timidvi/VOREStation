@@ -150,3 +150,5 @@
 		obscured += t.obfuscations[obfuscation.type]
 
 #undef UPDATE_BUFFER
+
+/var/global/datum/telltale/code_modules_mob_freelook_chunk_dm = new("[__FILE__]")

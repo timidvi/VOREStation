@@ -63,3 +63,4 @@
 
 /mob/living/carbon/alien/proc/show_evolution_blurb()
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_progression_dm = new("[__FILE__]")

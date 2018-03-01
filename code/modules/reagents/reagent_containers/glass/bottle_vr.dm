@@ -11,3 +11,5 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle-3"
 	prefill = list("unsorbitol" = 60)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_glass_bottle_vr_dm = new("[__FILE__]")

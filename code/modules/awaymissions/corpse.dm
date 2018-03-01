@@ -232,3 +232,5 @@
 	corpseid = 1
 	corpseidjob = "Commander"
 	corpseidaccess = "Captain"
+
+/var/global/datum/telltale/code_modules_awaymissions_corpse_dm = new("[__FILE__]")

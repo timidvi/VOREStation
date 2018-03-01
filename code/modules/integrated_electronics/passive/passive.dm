@@ -5,3 +5,4 @@
 	activators = list()
 	power_draw_idle = 0
 	power_draw_per_use = 0
+/var/global/datum/telltale/code_modules_integrated_electronics_passive_passive_dm = new("[__FILE__]")

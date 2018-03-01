@@ -90,3 +90,4 @@
 		return NANOMAP_BADOUTPUT
 
 	return NANOMAP_SUCCESS
+/var/global/datum/telltale/code_modules_nano_nanomapgen_dm = new("[__FILE__]")

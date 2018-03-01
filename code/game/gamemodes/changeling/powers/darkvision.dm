@@ -24,3 +24,4 @@
 			to_chat(C, "<span class='notice'>We no longer need light to see.</span>")
 
 	return 0
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_darkvision_dm = new("[__FILE__]")

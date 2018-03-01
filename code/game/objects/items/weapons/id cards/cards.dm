@@ -105,3 +105,4 @@
 		uses = ceil(uses) //Ensures no decimal uses nonsense, rounds up to be nice
 		usr << "<span class='notice'>You add \the [O] to \the [src]. Increasing the uses of \the [src] to [uses].</span>"
 		qdel(O)
+/var/global/datum/telltale/code_game_objects_items_weapons_id_cards_cards_dm = new("[__FILE__]")

@@ -38,3 +38,4 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_frog_dm = new("[__FILE__]")

@@ -258,3 +258,5 @@
 	R.dogborg = TRUE
 	..()
 
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_modules_station_vr_dm = new("[__FILE__]")

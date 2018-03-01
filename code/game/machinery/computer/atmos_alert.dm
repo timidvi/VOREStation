@@ -80,3 +80,5 @@ var/datum/topic_state/air_alarm_topic/air_alarm_topic = new()
 	extra_href["remote_access"] = 1
 
 	return extra_href
+
+/var/global/datum/telltale/code_game_machinery_computer_atmos_alert_dm = new("[__FILE__]")

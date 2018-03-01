@@ -234,3 +234,5 @@
 	name = "fleet command beret"
 	desc = "An SCG Fleet beret with a command crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_command"
+
+/var/global/datum/telltale/code_modules_clothing_head_solgov_dm = new("[__FILE__]")

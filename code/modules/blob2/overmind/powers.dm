@@ -227,3 +227,5 @@
 		var/mob/living/victim = pick(potential_targets)
 		var/turf/T = get_turf(victim)
 		expand_blob(T)
+
+/var/global/datum/telltale/code_modules_blob__overmind_powers_dm = new("[__FILE__]")

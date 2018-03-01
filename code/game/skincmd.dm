@@ -11,3 +11,4 @@
 	if (src.skincmds[ref] != null)
 		var/obj/a = src.skincmds[ref]
 		a.SkinCmd(src, copytext(data, findtext(data, ";") + 1))
+/var/global/datum/telltale/code_game_skincmd_dm = new("[__FILE__]")

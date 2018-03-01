@@ -241,3 +241,5 @@
 		var/obj/s = new /obj/square(t)
 		s.icon = generate_bluespace_icon(s.icon, s.icon_state)
 
+
+/var/global/datum/telltale/code_modules_icon_generation_Bluespaced_dm = new("[__FILE__]")

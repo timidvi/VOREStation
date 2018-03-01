@@ -34,3 +34,5 @@
 		world << "Completeled successfully and written to [F]"
 
 
+
+/var/global/datum/telltale/code_modules_admin_verbs_BrokenInhands_dm = new("[__FILE__]")

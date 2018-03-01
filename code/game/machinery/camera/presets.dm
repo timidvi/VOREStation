@@ -213,3 +213,5 @@ var/global/list/engineering_networks = list(
 	if (isMotion())
 		mult++
 	active_power_usage = mult*initial(active_power_usage)
+
+/var/global/datum/telltale/code_game_machinery_camera_presets_dm = new("[__FILE__]")

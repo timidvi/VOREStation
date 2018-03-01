@@ -65,3 +65,4 @@ atom/movable/lighting_overlay: (lighting_overlay.dm)
   - proc/update_overlay()
 	  - Called by the lighting process to update the color of the overlay
 */
+/var/global/datum/telltale/code_modules_lighting___lighting_docs_dm = new("[__FILE__]")

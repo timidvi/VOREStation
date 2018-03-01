@@ -18,3 +18,4 @@
 	icon_override = 'icons/mob/mask_vr.dmi'
 	body_parts_covered = FACE|EYES
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
+/var/global/datum/telltale/code_modules_clothing_masks_gasmask_vr_dm = new("[__FILE__]")

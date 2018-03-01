@@ -297,3 +297,5 @@
 
 /obj/machinery/computer/card/centcom/is_centcom()
 	return 1
+
+/var/global/datum/telltale/code_game_machinery_computer_card_dm = new("[__FILE__]")

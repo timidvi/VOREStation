@@ -76,3 +76,5 @@
 	results += "[desc_panel_image("air tank")]to fill the air tank from this canister."
 
 	return results
+
+/var/global/datum/telltale/code_modules_examine_descriptions_engineering_dm = new("[__FILE__]")

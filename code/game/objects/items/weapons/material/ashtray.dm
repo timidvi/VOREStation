@@ -100,3 +100,5 @@ var/global/list/ashtray_cache = list()
 
 /obj/item/weapon/material/ashtray/glass/New(var/newloc)
 	..(newloc, "glass")
+
+/var/global/datum/telltale/code_game_objects_items_weapons_material_ashtray_dm = new("[__FILE__]")

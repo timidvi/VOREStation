@@ -25,3 +25,4 @@
 
 /datum/integrated_io/char/display_pin_type()
 	return IC_FORMAT_CHAR
+/var/global/datum/telltale/code_modules_integrated_electronics_core_special_pins_char_pin_dm = new("[__FILE__]")

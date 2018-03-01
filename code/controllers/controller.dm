@@ -17,3 +17,5 @@
 /datum/controller/proc/Recover()
 
 /datum/controller/proc/stat_entry()
+
+/var/global/datum/telltale/code_controllers_controller_dm = new("[__FILE__]")

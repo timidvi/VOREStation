@@ -72,3 +72,4 @@ proc/empulse(turf/epicenter, first_range, second_range, third_range, fourth_rang
 			log_and_message_admins("EMPDEBUG: [T.name] - [T.type] - took [world.timeofday - time]ds to process emp_act()!")
 		#endif
 	return 1
+/var/global/datum/telltale/code_game_objects_empulse_dm = new("[__FILE__]")

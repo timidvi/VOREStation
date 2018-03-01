@@ -192,3 +192,4 @@ var/list/ventcrawl_machinery = list(
 		client.eye = src
 
 	pipes_shown.len = 0
+/var/global/datum/telltale/code_modules_ventcrawl_ventcrawl_dm = new("[__FILE__]")

@@ -162,3 +162,4 @@
 	fragile = 1	//It's a haphazard thing of glass, wire, and steel
 	reach = 2 // Spears are long.
 	attackspeed = 14
+/var/global/datum/telltale/code_game_objects_items_weapons_material_twohanded_dm = new("[__FILE__]")

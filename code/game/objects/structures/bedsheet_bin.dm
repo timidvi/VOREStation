@@ -245,3 +245,5 @@ LINEN BINS
 
 
 	add_fingerprint(user)
+
+/var/global/datum/telltale/code_game_objects_structures_bedsheet_bin_dm = new("[__FILE__]")

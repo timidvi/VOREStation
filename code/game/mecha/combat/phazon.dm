@@ -89,3 +89,4 @@
 		send_byjax(src.occupant,"exosuit.browser","phasing_command","[phasing?"Dis":"En"]able phasing")
 		src.occupant_message("<font color=\"[phasing?"#00f\">En":"#f00\">Dis"]abled phasing.</font>")
 	return
+/var/global/datum/telltale/code_game_mecha_combat_phazon_dm = new("[__FILE__]")

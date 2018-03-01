@@ -82,3 +82,4 @@
 		return
 
 	create_occupant(user)
+/var/global/datum/telltale/code_game_objects_structures_ghost_pods_ghost_pods_dm = new("[__FILE__]")

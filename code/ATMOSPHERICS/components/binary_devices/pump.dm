@@ -238,3 +238,5 @@ Thus, the two variables affect pump operation are set in New():
 			"You hear ratchet.")
 		new /obj/item/pipe(loc, make_from=src)
 		qdel(src)
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_pump_dm = new("[__FILE__]")

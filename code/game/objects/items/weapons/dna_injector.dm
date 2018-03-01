@@ -601,3 +601,5 @@
 	New()
 		block = MONKEYBLOCK
 		..()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_dna_injector_dm = new("[__FILE__]")

@@ -300,3 +300,5 @@
 				usr << "There is already \an [net] in [src]!"
 
 
+
+/var/global/datum/telltale/code_game_machinery_computer__buildandrepair_dm = new("[__FILE__]")

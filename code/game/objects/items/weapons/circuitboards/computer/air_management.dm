@@ -25,3 +25,5 @@
 /obj/item/weapon/circuitboard/air_management/deconstruct(var/obj/machinery/computer/general_air_control/C)
 	if (..(C))
 		frequency = C.frequency
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_computer_air_management_dm = new("[__FILE__]")

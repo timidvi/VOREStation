@@ -167,3 +167,5 @@ var/const/tk_maxrange = 15
 	if(focus && focus.icon && focus.icon_state)
 		overlays += icon(focus.icon,focus.icon_state)
 	return
+
+/var/global/datum/telltale/code__onclick_telekinesis_dm = new("[__FILE__]")

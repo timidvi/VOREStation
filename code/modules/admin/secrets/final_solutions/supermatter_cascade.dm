@@ -11,3 +11,5 @@
 		new /turf/unsimulated/wall/supermatter(get_turf(user))
 		SetUniversalState(/datum/universal_state/supermatter_cascade)
 		message_admins("[key_name_admin(user)] has managed to destroy the universe with a supermatter cascade. Good job, [key_name_admin(user)]")
+
+/var/global/datum/telltale/code_modules_admin_secrets_final_solutions_supermatter_cascade_dm = new("[__FILE__]")

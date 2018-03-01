@@ -28,3 +28,4 @@
 	invisibility = 101
 	light_range = 6
 	light_power = -20
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_spawner_darkness_dm = new("[__FILE__]")

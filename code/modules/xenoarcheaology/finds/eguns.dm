@@ -23,3 +23,5 @@
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	update_icon()
 		return
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_eguns_dm = new("[__FILE__]")

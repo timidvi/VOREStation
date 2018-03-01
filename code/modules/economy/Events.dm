@@ -96,3 +96,5 @@
 		affected_dest.temp_price_change[good_type] = 1
 	for(var/good_type in cheaper_goods)
 		affected_dest.temp_price_change[good_type] = 1
+
+/var/global/datum/telltale/code_modules_economy_Events_dm = new("[__FILE__]")

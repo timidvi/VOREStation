@@ -524,3 +524,4 @@
 
 		usr << "<font color='blue'>Vote successful.</font>"
 		usr << browse(null,"window=playerpoll")
+/var/global/datum/telltale/code_modules_mob_new_player_poll_dm = new("[__FILE__]")

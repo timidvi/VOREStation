@@ -87,3 +87,5 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
 	alt_titles = list("Biomechanical Engineer","Mechatronic Engineer")
+
+/var/global/datum/telltale/code_game_jobs_job_science_dm = new("[__FILE__]")

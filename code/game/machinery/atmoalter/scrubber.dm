@@ -245,3 +245,5 @@
 		return
 
 	..()
+
+/var/global/datum/telltale/code_game_machinery_atmoalter_scrubber_dm = new("[__FILE__]")

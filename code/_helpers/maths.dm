@@ -129,3 +129,5 @@
 
 /proc/RoundUpToPowerOfTwo(var/val)
     return 2 ** -round(-log(2,val))
+
+/var/global/datum/telltale/code__helpers_maths_dm = new("[__FILE__]")

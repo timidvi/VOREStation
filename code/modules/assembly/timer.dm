@@ -103,3 +103,5 @@
 		attack_self(usr)
 
 	return
+
+/var/global/datum/telltale/code_modules_assembly_timer_dm = new("[__FILE__]")

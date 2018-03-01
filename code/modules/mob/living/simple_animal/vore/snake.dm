@@ -24,3 +24,5 @@
 	vore_pounce_chance = 25
 	vore_icons = SA_ICON_LIVING
 	swallowTime = 2 SECONDS // Hungry little bastards.
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_snake_dm = new("[__FILE__]")

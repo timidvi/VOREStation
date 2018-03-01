@@ -214,3 +214,4 @@
 
 /mob/living/simple_animal/borer/cannot_use_vents()
 	return
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_borer_borer_dm = new("[__FILE__]")

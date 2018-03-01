@@ -7,3 +7,4 @@
 	if (mood)
 		overlays += image('icons/mob/slimes.dmi', icon_state = "aslime-[mood]")
 	..()
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_update_icons_dm = new("[__FILE__]")

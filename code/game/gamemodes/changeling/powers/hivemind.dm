@@ -78,3 +78,4 @@ var/list/datum/dna/hivemind_bank = list()
 	src << "<span class='notice'>We absorb the DNA of [S] from the air.</span>"
 	feedback_add_details("changeling_powers","HD")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_hivemind_dm = new("[__FILE__]")

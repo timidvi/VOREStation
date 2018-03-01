@@ -135,3 +135,4 @@
 
 		src.set_dir(turn(src.dir, 90))
 		return
+/var/global/datum/telltale/code_game_objects_structures_gravemarker_dm = new("[__FILE__]")

@@ -66,3 +66,4 @@
 /datum/locations/rota
 	name = "Rota"
 	desc = "A Neptune-like ice giant, with a beautiful ring system circling it. It is 165 kelvin (-157°C)."
+/var/global/datum/telltale/code_datums_locations_vir_dm = new("[__FILE__]")

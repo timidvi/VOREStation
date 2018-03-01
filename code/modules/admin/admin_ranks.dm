@@ -159,3 +159,5 @@ var/list/admin_ranks = list()								//list of all ranks with associated rights
 	holder.associate(src)
 
 #endif
+
+/var/global/datum/telltale/code_modules_admin_admin_ranks_dm = new("[__FILE__]")

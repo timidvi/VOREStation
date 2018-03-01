@@ -402,3 +402,5 @@
 					S.name = created_name
 					user.drop_from_inventory(src)
 					qdel(src)
+
+/var/global/datum/telltale/code_modules_mob_living_bot_medbot_dm = new("[__FILE__]")

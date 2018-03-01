@@ -121,3 +121,5 @@
 	//NC.mergeConnectedNetworksOnTurf()
 	last_piece = NC
 	return 1
+
+/var/global/datum/telltale/code_game_machinery_CableLayer_dm = new("[__FILE__]")

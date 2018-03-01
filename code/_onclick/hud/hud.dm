@@ -424,3 +424,4 @@ datum/hud/New(mob/owner)
 
 /mob/new_player/add_click_catcher()
 	return
+/var/global/datum/telltale/code__onclick_hud_hud_dm = new("[__FILE__]")

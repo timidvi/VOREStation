@@ -78,3 +78,4 @@
 	return TRUE
 /area/shuttle/holomapAlwaysDraw()
 	return FALSE
+/var/global/datum/telltale/code_modules_holomap_holomap_area_dm = new("[__FILE__]")

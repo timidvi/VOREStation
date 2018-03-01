@@ -24,3 +24,4 @@
 /datum/controller/process/obj/statProcess()
 	..()
 	stat(null, "[processing_objects.len] objects")
+/var/global/datum/telltale/code_controllers_Processes_obj_dm = new("[__FILE__]")

@@ -22,3 +22,4 @@
 
 /obj/item/weapon/material/star/ninja
 	default_material = "uranium"
+/var/global/datum/telltale/code_game_objects_items_weapons_material_thrown_dm = new("[__FILE__]")

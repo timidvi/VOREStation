@@ -78,3 +78,4 @@
 	possible_transfer_amounts = list(5, 10, 15, 25)
 	rim_pos = list(25, 12, 21)
 	matter = list("glass" = 50)
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_drinkingglass_glass_types_dm = new("[__FILE__]")

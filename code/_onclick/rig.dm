@@ -82,3 +82,5 @@
 #undef ALT_CLICK
 #undef CTRL_CLICK
 #undef MAX_HARDSUIT_CLICK_MODE
+
+/var/global/datum/telltale/code__onclick_rig_dm = new("[__FILE__]")

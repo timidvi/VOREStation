@@ -42,3 +42,4 @@
 		for(var/obj/machinery/door/door in T.contents)
 			spawn door.cultify()
 	return
+/var/global/datum/telltale/code_modules_spells_aoe_turf_knock_dm = new("[__FILE__]")

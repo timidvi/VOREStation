@@ -30,3 +30,4 @@
 	T.eye_blurry = 20
 	feedback_add_details("changeling_powers","BS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_blind_sting_dm = new("[__FILE__]")

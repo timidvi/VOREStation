@@ -70,3 +70,5 @@
 	answer = replacetext(answer, "mm", minute_text)
 	answer = replacetext(answer, "ss", second_text)
 	return answer
+
+/var/global/datum/telltale/code_modules_planet_time_dm = new("[__FILE__]")

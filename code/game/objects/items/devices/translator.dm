@@ -84,3 +84,4 @@
 	slot_flags = SLOT_EARS
 	visual = 0
 	audio = 1
+/var/global/datum/telltale/code_game_objects_items_devices_translator_dm = new("[__FILE__]")

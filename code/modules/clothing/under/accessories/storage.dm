@@ -104,3 +104,5 @@
 
 	new /obj/item/weapon/material/knife/machete/hatchet/unathiknife(hold)
 	new /obj/item/weapon/material/knife/machete/hatchet/unathiknife(hold)
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_storage_dm = new("[__FILE__]")

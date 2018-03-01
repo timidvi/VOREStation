@@ -196,3 +196,5 @@
 		user << "<span class='notice'>You you disable the security protocols</span>"
 		src.updateUsrDialog()
 		return 1
+
+/var/global/datum/telltale/code_game_machinery_telecomms_logbrowser_dm = new("[__FILE__]")

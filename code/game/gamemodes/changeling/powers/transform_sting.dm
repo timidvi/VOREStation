@@ -46,3 +46,4 @@
 	domutcheck(T, null)
 	feedback_add_details("changeling_powers","TS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_transform_sting_dm = new("[__FILE__]")

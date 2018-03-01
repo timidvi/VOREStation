@@ -164,3 +164,5 @@
 				highest_count = count
 				. = recipe
 		return .
+
+/var/global/datum/telltale/code_datums_recipe_dm = new("[__FILE__]")

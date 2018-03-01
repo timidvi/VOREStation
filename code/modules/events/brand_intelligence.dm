@@ -74,3 +74,5 @@
 	for(var/obj/machinery/vending/infectedMachine in infectedVendingMachines)
 		infectedMachine.shut_up = 1
 		infectedMachine.shoot_inventory = 0
+
+/var/global/datum/telltale/code_modules_events_brand_intelligence_dm = new("[__FILE__]")

@@ -329,3 +329,5 @@ var/specops_shuttle_timeleft = 0
 	add_fingerprint(usr)
 	updateUsrDialog()
 	return
+
+/var/global/datum/telltale/code_game_machinery_computer_specops_shuttle_dm = new("[__FILE__]")

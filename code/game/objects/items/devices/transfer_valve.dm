@@ -221,3 +221,5 @@
 // eventually maybe have it update icon to show state (timer, prox etc.) like old bombs
 /obj/item/device/transfer_valve/proc/c_state()
 	return
+
+/var/global/datum/telltale/code_game_objects_items_devices_transfer_valve_dm = new("[__FILE__]")

@@ -193,3 +193,5 @@
 		user << "The charge meter reads [round(cell.percent())]%."
 	else
 		user << "It doesn't have a power cell installed."
+
+/var/global/datum/telltale/code_game_objects_items_devices_suit_cooling_dm = new("[__FILE__]")

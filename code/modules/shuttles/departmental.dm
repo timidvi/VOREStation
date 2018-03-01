@@ -15,3 +15,5 @@
 	shuttle_tag = "Research"
 	//req_access = list(access_research)
 	circuit = /obj/item/weapon/circuitboard/research_shuttle
+
+/var/global/datum/telltale/code_modules_shuttles_departmental_dm = new("[__FILE__]")

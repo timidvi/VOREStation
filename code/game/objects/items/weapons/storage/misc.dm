@@ -24,3 +24,5 @@
 
 /obj/item/weapon/storage/box/donut/empty
 	empty = TRUE
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_misc_dm = new("[__FILE__]")

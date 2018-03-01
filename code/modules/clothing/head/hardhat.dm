@@ -32,3 +32,5 @@
 /obj/item/clothing/head/hardhat/dblue
 	name = "blue hard hat"
 	icon_state = "hardhat0_dblue"
+
+/var/global/datum/telltale/code_modules_clothing_head_hardhat_dm = new("[__FILE__]")

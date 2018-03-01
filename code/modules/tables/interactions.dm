@@ -147,3 +147,5 @@
 
 /obj/structure/table/attack_tk() // no telehulk sorry
 	return
+
+/var/global/datum/telltale/code_modules_tables_interactions_dm = new("[__FILE__]")

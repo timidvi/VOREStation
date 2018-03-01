@@ -53,3 +53,5 @@
 	build_path = /obj/machinery/computer/timeclock
 	board_type = new /datum/frame/frame_types/timeclock_terminal
 	matter = list(DEFAULT_WALL_MATERIAL = 50, "glass" = 50)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_circuitboards_vr_dm = new("[__FILE__]")

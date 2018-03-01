@@ -272,3 +272,5 @@
 		new /obj/item/inflatable(src)
 		new /obj/item/inflatable(src)
 		new /obj/item/inflatable(src)
+
+/var/global/datum/telltale/code_game_objects_structures_inflatable_dm = new("[__FILE__]")

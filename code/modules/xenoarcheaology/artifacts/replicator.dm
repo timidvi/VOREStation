@@ -147,3 +147,5 @@
 				icon_state = "borgcharger1(old)"
 			else
 				src.visible_message(fail_message)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_artifacts_replicator_dm = new("[__FILE__]")

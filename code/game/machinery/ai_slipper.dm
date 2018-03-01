@@ -127,3 +127,4 @@
 		cooldown_on = 0
 	power_change()
 	return
+/var/global/datum/telltale/code_game_machinery_ai_slipper_dm = new("[__FILE__]")

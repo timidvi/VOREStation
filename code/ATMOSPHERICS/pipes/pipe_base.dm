@@ -135,3 +135,5 @@
 		..()
 	else
 		. = PROCESS_KILL
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_pipe_base_dm = new("[__FILE__]")

@@ -266,3 +266,5 @@ var/list/rune_animation = list(
 		                                       		list(0.125, 1),
 		                                       	))
 */
+
+/var/global/datum/telltale/code_modules_icon_generation_Uristrunes_dm = new("[__FILE__]")

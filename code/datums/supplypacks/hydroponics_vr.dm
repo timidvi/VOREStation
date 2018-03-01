@@ -32,3 +32,5 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/freezer
 	containername = "Wolpin crate"	
+
+/var/global/datum/telltale/code_datums_supplypacks_hydroponics_vr_dm = new("[__FILE__]")

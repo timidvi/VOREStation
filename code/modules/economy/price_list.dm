@@ -1025,3 +1025,4 @@
 
 /datum/reagent/ethanol/euphoria
 	price_tag = 30
+/var/global/datum/telltale/code_modules_economy_price_list_dm = new("[__FILE__]")

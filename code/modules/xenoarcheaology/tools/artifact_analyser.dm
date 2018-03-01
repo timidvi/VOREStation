@@ -155,3 +155,5 @@
 			return out
 		else
 			return "[scanned_obj.name] - mundane application."
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_artifact_analyser_dm = new("[__FILE__]")

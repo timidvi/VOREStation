@@ -107,3 +107,4 @@
 		else
 			return null
 	
+/var/global/datum/telltale/code_ATMOSPHERICS_components_omni_devices__omni_extras_dm = new("[__FILE__]")

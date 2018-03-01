@@ -17,3 +17,4 @@
 	anchored = 1.0
 	New()
 		icon_state = "blank"
+/var/global/datum/telltale/code_modules_mining_machine_input_output_plates_dm = new("[__FILE__]")

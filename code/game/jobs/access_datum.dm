@@ -468,3 +468,5 @@
 	id = access_alien
 	desc = "#%_^&*@!"
 	access_type = ACCESS_TYPE_PRIVATE
+
+/var/global/datum/telltale/code_game_jobs_access_datum_dm = new("[__FILE__]")

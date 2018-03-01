@@ -553,3 +553,5 @@
 	. = ..()
 	mind.assigned_role = "Juggernaut"
 	mind.special_role = "Cultist"
+
+/var/global/datum/telltale/code_datums_mind_dm = new("[__FILE__]")

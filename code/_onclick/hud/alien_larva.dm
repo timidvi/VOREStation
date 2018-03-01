@@ -31,3 +31,4 @@
 	mymob.client.screen += list( mymob.healths, mymob.fire) //, mymob.rest, mymob.sleep, mymob.mach )
 	mymob.client.screen += src.adding + src.other
 	mymob.client.screen += mymob.client.void
+/var/global/datum/telltale/code__onclick_hud_alien_larva_dm = new("[__FILE__]")

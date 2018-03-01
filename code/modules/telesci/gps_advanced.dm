@@ -74,3 +74,5 @@
 /obj/item/device/gps/advanced/security
 	icon_state = "gps-sec"
 	gpstag = "SEC0"
+
+/var/global/datum/telltale/code_modules_telesci_gps_advanced_dm = new("[__FILE__]")

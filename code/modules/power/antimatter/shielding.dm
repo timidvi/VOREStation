@@ -205,3 +205,4 @@ proc/cardinalrange(var/center)
 		return
 	..()
 	return
+/var/global/datum/telltale/code_modules_power_antimatter_shielding_dm = new("[__FILE__]")

@@ -142,3 +142,4 @@ Quick adjacency (to turf):
 
 	Since I don't want to complicate the click code rework by messing with unrelated systems it won't be changed here.
 */
+/var/global/datum/telltale/code__onclick_adjacent_dm = new("[__FILE__]")

@@ -322,3 +322,5 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 
 /obj/item/weapon/disk/limb/nanotrasen
 	company = "NanoTrasen"
+
+/var/global/datum/telltale/code_modules_organs_robolimbs_dm = new("[__FILE__]")

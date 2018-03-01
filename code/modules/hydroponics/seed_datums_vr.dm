@@ -39,3 +39,5 @@
 	set_trait(TRAIT_PRODUCT_ICON,"mushroom6")
 	set_trait(TRAIT_PLANT_ICON,"tree")
 	set_trait(TRAIT_PRODUCT_COLOUR,"#DADA00")
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_datums_vr_dm = new("[__FILE__]")

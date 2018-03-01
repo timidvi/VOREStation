@@ -138,3 +138,5 @@
 
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_dm = new("[__FILE__]")

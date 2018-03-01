@@ -52,3 +52,5 @@ Slime cube lives here.
 	if(S.mind)
 		S.mind.name = S.name
 	qdel(src)
+
+/var/global/datum/telltale/code_modules_xenobio__mob_slime_slime_monkey_dm = new("[__FILE__]")

@@ -103,3 +103,5 @@ Macros:
 	#endif
 
 #undef check
+
+/var/global/datum/telltale/code_ZAS_ConnectionManager_dm = new("[__FILE__]")

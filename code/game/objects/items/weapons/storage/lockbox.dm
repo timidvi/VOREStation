@@ -102,3 +102,5 @@
 		/obj/item/clothing/accessory/medal/gold/captain,
 		/obj/item/clothing/accessory/medal/gold/heroism
 	)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_lockbox_dm = new("[__FILE__]")

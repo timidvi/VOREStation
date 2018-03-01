@@ -20,3 +20,5 @@
 	icon_state = "scuttlebug-broken"
 	icon = 'icons/mecha/mecha_vr.dmi'
 
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_custom_mecha_vr_dm = new("[__FILE__]")

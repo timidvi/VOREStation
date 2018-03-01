@@ -284,3 +284,5 @@ proc/virology_letterhead(var/report_name)
 			return 0
 
 	return 1
+
+/var/global/datum/telltale/code_modules_virus__disease__dm = new("[__FILE__]")

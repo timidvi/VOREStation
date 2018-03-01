@@ -43,3 +43,5 @@
 			held = O
 		return
 	..()
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_lockets_dm = new("[__FILE__]")

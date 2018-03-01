@@ -166,3 +166,4 @@
 			src << "<span class='notice'>I am not ready to reproduce yet...</span>"
 	else
 		src << "<span class='notice'>I am not old enough to reproduce yet...</span>"
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_powers_dm = new("[__FILE__]")

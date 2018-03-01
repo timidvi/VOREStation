@@ -52,3 +52,5 @@
 		return
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_slime_ai_dm = new("[__FILE__]")

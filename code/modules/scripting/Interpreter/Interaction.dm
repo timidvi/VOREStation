@@ -140,3 +140,4 @@
 	- <runtimeError>
 */
 		HandleError(runtimeError/e)
+/var/global/datum/telltale/code_modules_scripting_Interpreter_Interaction_dm = new("[__FILE__]")

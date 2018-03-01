@@ -4,3 +4,4 @@
 
 /datum/controller/process/event/doWork()
 	event_manager.process()
+/var/global/datum/telltale/code_controllers_Processes_event_dm = new("[__FILE__]")

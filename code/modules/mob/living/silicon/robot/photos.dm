@@ -18,3 +18,5 @@
 
 	if(synced)
 		src << "<span class='notice'>Images synced with AI. Local images will be retained in the case of loss of connection with the AI.</span>"
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_photos_dm = new("[__FILE__]")

@@ -142,3 +142,5 @@
 		return ..()
 	else
 		return QDEL_HINT_LETMELIVE
+
+/var/global/datum/telltale/code_modules_lighting_lighting_overlay_dm = new("[__FILE__]")

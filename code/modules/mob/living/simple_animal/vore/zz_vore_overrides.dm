@@ -233,3 +233,5 @@
 		B.digest_mode = safe ? DM_HOLD : vore_default_mode
 		B.digestchance = safe ? 0 : vore_digest_chance
 		B.absorbchance = safe ? 0 : vore_absorb_chance
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_zz_vore_overrides_dm = new("[__FILE__]")

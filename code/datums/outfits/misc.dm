@@ -53,3 +53,4 @@
 	shoes = /obj/item/clothing/shoes/boots/jackboots/toeless
 	uniform = /obj/item/clothing/under/vox/vox_robes
 	suit = /obj/item/clothing/suit/armor/vox_scrap
+/var/global/datum/telltale/code_datums_outfits_misc_dm = new("[__FILE__]")

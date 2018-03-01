@@ -29,3 +29,5 @@
 /datum/category_item/autolathe/engineering/grounding_rod
 	name = "grounding rod electronics"
 	path = /obj/item/weapon/circuitboard/grounding_rod
+
+/var/global/datum/telltale/code_modules_power_tesla_telsa_construction_dm = new("[__FILE__]")

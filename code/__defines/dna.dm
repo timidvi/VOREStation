@@ -74,3 +74,5 @@ var/HALLUCINATIONBLOCK = 0
 var/NOPRINTSBLOCK      = 0
 var/SHOCKIMMUNITYBLOCK = 0
 var/SMALLSIZEBLOCK     = 0
+
+/var/global/datum/telltale/code___defines_dna_dm = new("[__FILE__]")

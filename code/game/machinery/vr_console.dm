@@ -225,3 +225,5 @@
 	else
 		occupant.enter_vr(avatar)
 
+
+/var/global/datum/telltale/code_game_machinery_vr_console_dm = new("[__FILE__]")

@@ -49,3 +49,4 @@
  updating.dm	=	Everything about triggers that will update chunks.
 
 */
+/var/global/datum/telltale/code_modules_mob_freelook_read_me_dm = new("[__FILE__]")

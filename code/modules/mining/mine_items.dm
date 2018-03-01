@@ -222,3 +222,5 @@
 	newflag.icon_state = "[newflag.base_state]_open"
 	newflag.visible_message("<b>[user]</b> plants [newflag] firmly in the ground.")
 	src.use(1)
+
+/var/global/datum/telltale/code_modules_mining_mine_items_dm = new("[__FILE__]")

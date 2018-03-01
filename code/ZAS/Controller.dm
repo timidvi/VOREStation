@@ -230,3 +230,5 @@ Class Procs:
 /datum/controller/subsystem/air/proc/remove_edge(connection_edge/E)
 	edges.Remove(E)
 	if(!E.sleeping) active_edges.Remove(E)
+
+/var/global/datum/telltale/code_ZAS_Controller_dm = new("[__FILE__]")

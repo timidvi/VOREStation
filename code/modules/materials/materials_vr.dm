@@ -18,3 +18,4 @@
 	sheet_plural_name = "fluffs"
 	hardness = 60
 	weight = 20 //Strong as iron.
+/var/global/datum/telltale/code_modules_materials_materials_vr_dm = new("[__FILE__]")

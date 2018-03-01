@@ -577,3 +577,5 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)
+
+/var/global/datum/telltale/code_modules_nifsoft_software____soulcatcher_dm = new("[__FILE__]")

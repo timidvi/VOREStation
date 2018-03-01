@@ -10,3 +10,5 @@
 		icon_state = icon_closed
 	else
 		icon_state = icon_opened
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_coffin_dm = new("[__FILE__]")

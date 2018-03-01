@@ -100,3 +100,5 @@
 	else
 		sleep(lag)
 		move(lag)
+
+/var/global/datum/telltale/code_modules_power_singularity_particle_accelerator_particle_dm = new("[__FILE__]")

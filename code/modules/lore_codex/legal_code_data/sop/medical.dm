@@ -71,3 +71,4 @@
 	suit.  Emergency softsuits are available in cyan colored lockers at key locations on your facility, if an untrained person requires short term EVA \
 	capability.  Those exposed to vacuum without protection will almost certainly require advanced medical care, so bring anyone harmed to Medical.  \
 	Remember to avoid risking your own life, as stated in the Triage section."
+/var/global/datum/telltale/code_modules_lore_codex_legal_code_data_sop_medical_dm = new("[__FILE__]")

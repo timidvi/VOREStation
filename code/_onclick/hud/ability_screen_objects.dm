@@ -383,3 +383,4 @@
 	ability_objects.Add(A)
 	if(my_mob.client)
 		toggle_open(2) //forces the icons to refresh on screen
+/var/global/datum/telltale/code__onclick_hud_ability_screen_objects_dm = new("[__FILE__]")

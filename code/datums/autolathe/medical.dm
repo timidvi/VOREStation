@@ -41,3 +41,5 @@
 /datum/category_item/autolathe/medical/implanter
 	name = "implanter"
 	path =/obj/item/weapon/implanter
+
+/var/global/datum/telltale/code_datums_autolathe_medical_dm = new("[__FILE__]")

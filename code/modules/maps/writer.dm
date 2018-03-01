@@ -172,3 +172,4 @@ dmm_suite{
 			}
 		}
 	}
+/var/global/datum/telltale/code_modules_maps_writer_dm = new("[__FILE__]")

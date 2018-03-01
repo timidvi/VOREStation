@@ -8,3 +8,5 @@ proc/findNullRod(var/atom/target)
 			if(findNullRod(A))
 				return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_spells_construct_spells_dm = new("[__FILE__]")

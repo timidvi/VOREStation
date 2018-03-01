@@ -33,3 +33,5 @@ var/decl/observ/dir_set/dir_set_event = new()
 /atom/movable/Exited(var/atom/movable/am, atom/old_loc)
 	. = ..()
 	dir_set_event.unregister(src, am, /atom/proc/recursive_dir_set)
+
+/var/global/datum/telltale/code_datums_observation_dir_set_dm = new("[__FILE__]")

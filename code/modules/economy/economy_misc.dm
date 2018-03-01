@@ -163,3 +163,5 @@ var/global/economy_init = 0
 	all_money_accounts.Add(department_account)
 
 	department_accounts[department] = department_account
+
+/var/global/datum/telltale/code_modules_economy_economy_misc_dm = new("[__FILE__]")

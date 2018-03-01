@@ -329,3 +329,4 @@
 	icon_state = "s-casing-spent"
 	BB = null
 	projectile_type = null
+/var/global/datum/telltale/code_modules_projectiles_ammunition_rounds_dm = new("[__FILE__]")

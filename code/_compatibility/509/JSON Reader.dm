@@ -207,3 +207,4 @@ json_reader
 			CRASH("Unexpected token: [T.value].")
 
 #endif
+/var/global/datum/telltale/code__compatibility_____JSON_Reader_dm = new("[__FILE__]")

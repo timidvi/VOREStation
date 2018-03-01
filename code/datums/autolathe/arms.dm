@@ -428,3 +428,5 @@
 	name = "flamethrower"
 	path =/obj/item/weapon/flamethrower/full
 	hidden = 1
+
+/var/global/datum/telltale/code_datums_autolathe_arms_dm = new("[__FILE__]")

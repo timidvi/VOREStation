@@ -13,3 +13,5 @@
 		ROLE_SYNTHETIC
 		)
 
+
+/var/global/datum/telltale/code_modules_metric_metric_dm = new("[__FILE__]")

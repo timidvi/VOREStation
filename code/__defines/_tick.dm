@@ -7,3 +7,5 @@
 #define CHECK_TICK if TICK_CHECK stoplag()
 
 #define TICK_USAGE world.tick_usage
+
+/var/global/datum/telltale/code___defines__tick_dm = new("[__FILE__]")

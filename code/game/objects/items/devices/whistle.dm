@@ -55,3 +55,5 @@ obj/item/device/hailer/attack_self(mob/living/carbon/user as mob)
 		return 1
 	else
 		user << "The hailer is fried. You can't even fit the sequencer into the input slot."
+
+/var/global/datum/telltale/code_game_objects_items_devices_whistle_dm = new("[__FILE__]")

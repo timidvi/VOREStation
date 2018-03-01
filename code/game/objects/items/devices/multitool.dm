@@ -45,3 +45,4 @@
 	icon_state = "multitool"
 	toolspeed = 0.1
 	origin_tech = list(TECH_MAGNET = 5, TECH_ENGINEERING = 5)
+/var/global/datum/telltale/code_game_objects_items_devices_multitool_dm = new("[__FILE__]")

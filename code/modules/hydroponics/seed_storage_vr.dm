@@ -87,3 +87,5 @@
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3)
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_storage_vr_dm = new("[__FILE__]")

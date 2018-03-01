@@ -1543,3 +1543,5 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/emp_act(severity)
 	for(var/atom/A in src)
 		A.emp_act(severity)
+
+/var/global/datum/telltale/code_game_objects_items_devices_PDA_PDA_dm = new("[__FILE__]")

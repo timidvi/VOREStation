@@ -21,3 +21,5 @@
 
 				air_processing_killed = TRUE
 				air_master.failed_ticks = 0
+
+/var/global/datum/telltale/code_controllers_Processes_air_dm = new("[__FILE__]")

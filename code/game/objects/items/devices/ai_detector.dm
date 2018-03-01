@@ -119,3 +119,4 @@
 #undef PROXIMITY_ON_SCREEN
 #undef PROXIMITY_TRACKING
 #undef PROXIMITY_TRACKING_FAIL
+/var/global/datum/telltale/code_game_objects_items_devices_ai_detector_dm = new("[__FILE__]")

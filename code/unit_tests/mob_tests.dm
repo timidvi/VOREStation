@@ -27,3 +27,5 @@
 
 	qdel(H)
 	return 1
+
+/var/global/datum/telltale/code_unit_tests_mob_tests_dm = new("[__FILE__]")

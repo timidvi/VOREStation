@@ -202,3 +202,4 @@
 #undef SIPHON_CELL_TO_ENERGY
 #undef SIPHON_FBP_TO_ENERGY
 #undef SIPHON_CORE_TO_ENERGY
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_energy_siphon_dm = new("[__FILE__]")

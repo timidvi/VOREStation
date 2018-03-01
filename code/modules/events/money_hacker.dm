@@ -65,3 +65,5 @@
 	for(var/obj/machinery/message_server/MS in world)
 		if(!MS.active) continue
 		MS.send_rc_message("Head of Personnel's Desk", my_department, message, "", "", 2)
+
+/var/global/datum/telltale/code_modules_events_money_hacker_dm = new("[__FILE__]")

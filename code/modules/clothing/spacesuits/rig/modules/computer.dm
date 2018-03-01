@@ -501,3 +501,5 @@
 
 	holder.emp_protection = max(0,(holder.emp_protection - protection_amount))
 */
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_computer_dm = new("[__FILE__]")

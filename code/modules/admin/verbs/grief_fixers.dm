@@ -49,3 +49,4 @@
 
 	usr << "\[5/5\] - ZAS Rebooted"
 	world << "<span class = 'danger'>Atmosphere restart completed in <b>[(world.timeofday - current_time)/10]</b> seconds.</span>"
+/var/global/datum/telltale/code_modules_admin_verbs_grief_fixers_dm = new("[__FILE__]")

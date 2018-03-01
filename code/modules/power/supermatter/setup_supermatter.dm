@@ -269,3 +269,5 @@
 #undef ENERGY_NITROGEN
 #undef ENERGY_CARBONDIOXIDE
 #undef ENERGY_PHORON
+
+/var/global/datum/telltale/code_modules_power_supermatter_setup_supermatter_dm = new("[__FILE__]")

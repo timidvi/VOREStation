@@ -51,3 +51,4 @@
 	heat_level_3 = 4000
 
 	body_temperature = T20C
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_outsider_skeleton_dm = new("[__FILE__]")

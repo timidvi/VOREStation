@@ -104,3 +104,5 @@ RSF
 	else
 		stored_matter--
 		user << "The RSF now holds [stored_matter]/30 fabrication-units."
+
+/var/global/datum/telltale/code_game_objects_items_weapons_RSF_dm = new("[__FILE__]")

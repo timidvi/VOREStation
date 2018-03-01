@@ -27,3 +27,5 @@
 //							myturf.reset_delay()
 //							zturf_conn.reset_delay()
 						my_air.share(conn_air)
+
+/var/global/datum/telltale/code_game_machinery_atmoalter_zvent_dm = new("[__FILE__]")

@@ -25,3 +25,4 @@
 	update_icon()
 
 	return
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_slime_death_dm = new("[__FILE__]")

@@ -217,3 +217,5 @@ datum/pipeline
 		air.add_thermal_energy(heat_gain)
 		if(network)
 			network.update = 1
+
+/var/global/datum/telltale/code_ATMOSPHERICS_datum_pipeline_dm = new("[__FILE__]")

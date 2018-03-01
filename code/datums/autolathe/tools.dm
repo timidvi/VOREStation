@@ -42,3 +42,5 @@
 /datum/category_item/autolathe/tools/welder_industrial
 	name = "industrial welding tool"
 	path =/obj/item/weapon/weldingtool/largetank
+
+/var/global/datum/telltale/code_datums_autolathe_tools_dm = new("[__FILE__]")

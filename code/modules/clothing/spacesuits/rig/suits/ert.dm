@@ -86,3 +86,4 @@
 		/obj/item/rig_module/device/rcd,
 		/obj/item/rig_module/datajack
 		)
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_suits_ert_dm = new("[__FILE__]")

@@ -83,3 +83,4 @@
 		invocation += "[uppertext(chosenarea.name)]"
 		..()
 	return
+/var/global/datum/telltale/code_modules_spells_general_area_teleport_dm = new("[__FILE__]")

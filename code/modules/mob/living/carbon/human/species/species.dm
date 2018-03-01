@@ -429,3 +429,5 @@
 // Used to override normal fall behaviour. Use only when the species does fall down a level.
 /datum/species/proc/fall_impact_special(var/mob/living/carbon/human/H, var/atom/A)
 	return FALSE
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_species_dm = new("[__FILE__]")

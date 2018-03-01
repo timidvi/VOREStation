@@ -21,3 +21,5 @@
 	tag = null
 	nanomanager.close_uis(src)
 	return QDEL_HINT_QUEUE
+
+/var/global/datum/telltale/code_datums_datum_dm = new("[__FILE__]")

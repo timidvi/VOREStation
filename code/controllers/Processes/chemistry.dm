@@ -31,3 +31,5 @@ var/datum/controller/process/chemistry/chemistryProcess
 	//Process once, right away. If we still need to continue then add to the active_holders list and continue later
 	if(holder.process_reactions())
 		active_holders += holder
+
+/var/global/datum/telltale/code_controllers_Processes_chemistry_dm = new("[__FILE__]")

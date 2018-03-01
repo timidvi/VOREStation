@@ -742,3 +742,5 @@ proc/dd_sortedTextList(list/incoming)
 	for(var/i = 1 to l.len)
 		if(islist(.[i]))
 			.[i] = .(.[i])
+
+/var/global/datum/telltale/code__helpers_lists_dm = new("[__FILE__]")

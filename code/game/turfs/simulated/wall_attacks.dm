@@ -362,3 +362,5 @@
 		return attack_hand(user)
 
 
+
+/var/global/datum/telltale/code_game_turfs_simulated_wall_attacks_dm = new("[__FILE__]")

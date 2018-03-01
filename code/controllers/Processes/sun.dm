@@ -5,3 +5,5 @@
 
 /datum/controller/process/sun/doWork()
 	sun.calc_position()
+
+/var/global/datum/telltale/code_controllers_Processes_sun_dm = new("[__FILE__]")

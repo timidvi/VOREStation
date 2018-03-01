@@ -15,3 +15,4 @@
 /datum/gm_action/dust/start()
 	..()
 	dust_swarm("norm")
+/var/global/datum/telltale/code_modules_gamemaster_actions_dust_dm = new("[__FILE__]")

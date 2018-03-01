@@ -8,3 +8,5 @@
 	oxygen = 0
 	nitrogen = 0
 	temperature = TCMB
+
+/var/global/datum/telltale/code_game_turfs_flooring_shuttle_vr_dm = new("[__FILE__]")

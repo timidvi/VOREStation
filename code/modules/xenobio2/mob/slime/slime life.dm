@@ -53,3 +53,4 @@ Slime specific life events go here.
 		return 0 //Everything worked okay
 	
 	return 	//xeno/Life() returned 0.
+/var/global/datum/telltale/code_modules_xenobio__mob_slime_slime_life_dm = new("[__FILE__]")

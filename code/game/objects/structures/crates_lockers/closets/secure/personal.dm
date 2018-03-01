@@ -127,3 +127,5 @@
 			src.registered_name = null
 			src.desc = "It's a secure locker for personnel. The first card swiped gains control."
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_personal_dm = new("[__FILE__]")

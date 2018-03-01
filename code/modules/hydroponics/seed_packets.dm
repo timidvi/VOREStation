@@ -281,3 +281,5 @@ var/global/list/plant_seed_sprites = list()
 
 /obj/item/seeds/thaadra
 	seed_type = "thaadra"
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_packets_dm = new("[__FILE__]")

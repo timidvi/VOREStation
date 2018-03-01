@@ -133,3 +133,5 @@
 /decl/plantgene/special/mutate(var/datum/seed/S)
 	if(prob(65))
 		S.set_trait(TRAIT_TELEPORTING, !S.get_trait(TRAIT_TELEPORTING))
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_gene_mut_dm = new("[__FILE__]")

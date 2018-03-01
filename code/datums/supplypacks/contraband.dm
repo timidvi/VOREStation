@@ -104,3 +104,5 @@
 	contraband = 1
 	containertype = /obj/structure/largecrate
 	containername = "Suspicious crate"
+
+/var/global/datum/telltale/code_datums_supplypacks_contraband_dm = new("[__FILE__]")

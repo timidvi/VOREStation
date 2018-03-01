@@ -145,3 +145,5 @@
 				R.amount = R.max_amount
 
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_syndicate_dm = new("[__FILE__]")

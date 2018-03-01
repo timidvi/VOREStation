@@ -143,3 +143,5 @@
 /mob/living/voice/custom_emote(var/m_type=1,var/message = null,var/range=world.view)
 	if(!comm) return
 	..(m_type,message,comm.video_range)
+
+/var/global/datum/telltale/code_modules_mob_living_voice_voice_dm = new("[__FILE__]")

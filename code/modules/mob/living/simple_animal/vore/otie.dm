@@ -316,3 +316,5 @@
 	icon_state = icon_dead
 	update_icon()
 	..()
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_otie_dm = new("[__FILE__]")

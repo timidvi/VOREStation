@@ -135,3 +135,4 @@
 	mymob.client.screen += mymob.client.void
 
 	return
+/var/global/datum/telltale/code__onclick_hud_ai_dm = new("[__FILE__]")

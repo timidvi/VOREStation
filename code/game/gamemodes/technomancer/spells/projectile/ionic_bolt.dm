@@ -18,3 +18,4 @@
 	cooldown = 10
 	pre_shot_delay = 0
 	fire_sound = 'sound/effects/supermatter.ogg'
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_ionic_bolt_dm = new("[__FILE__]")

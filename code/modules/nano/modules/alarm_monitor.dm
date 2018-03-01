@@ -86,3 +86,5 @@
 		ui.set_initial_data(data)
 		ui.open()
 		ui.set_auto_update(1)
+
+/var/global/datum/telltale/code_modules_nano_modules_alarm_monitor_dm = new("[__FILE__]")

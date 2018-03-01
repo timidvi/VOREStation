@@ -936,3 +936,4 @@ var/list/turret_icons
 #undef TURRET_PRIORITY_TARGET
 #undef TURRET_SECONDARY_TARGET
 #undef TURRET_NOT_TARGET
+/var/global/datum/telltale/code_game_machinery_portable_turret_dm = new("[__FILE__]")

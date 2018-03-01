@@ -81,3 +81,5 @@
 	attack_hand(user)
 
 */
+
+/var/global/datum/telltale/code__onclick_observer_dm = new("[__FILE__]")

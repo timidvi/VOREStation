@@ -49,3 +49,5 @@ var/const/SMARTFRIDGE_WIRE_IDSCAN		= 4
 				S.seconds_electrified = -1
 		if(SMARTFRIDGE_WIRE_IDSCAN)
 			S.scan_id = 1
+
+/var/global/datum/telltale/code_datums_wires_smartfridge_dm = new("[__FILE__]")

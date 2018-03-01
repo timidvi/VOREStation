@@ -327,3 +327,5 @@
 			if(S.climbable) continue
 		if(O && O.density && !(O.flags & ON_BORDER && !(turn(O.dir, 180) & dir)))
 			return O
+
+/var/global/datum/telltale/code_game_objects_structures_railing_dm = new("[__FILE__]")

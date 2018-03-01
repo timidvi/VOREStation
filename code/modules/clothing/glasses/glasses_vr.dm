@@ -60,3 +60,5 @@
 /obj/item/clothing/glasses/sunglasses/sechud/tactical
 	item_flags = AIRTIGHT
 	body_parts_covered = EYES
+
+/var/global/datum/telltale/code_modules_clothing_glasses_glasses_vr_dm = new("[__FILE__]")

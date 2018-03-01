@@ -89,3 +89,5 @@
 		receptions.receiver_reception[receiver] = get_receiver_reception(receiver, signal)
 
 	return receptions
+
+/var/global/datum/telltale/code_defines_procs_radio_dm = new("[__FILE__]")

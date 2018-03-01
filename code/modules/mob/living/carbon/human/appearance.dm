@@ -210,3 +210,5 @@
 	for(var/obj/item/organ/external/O in organs)
 		O.sync_colour_to_human(src)
 	update_icons_body(FALSE)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_appearance_dm = new("[__FILE__]")

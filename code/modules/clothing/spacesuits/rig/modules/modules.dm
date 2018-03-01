@@ -336,3 +336,5 @@
 		name = "[charge.display_name] ([charge.charges]C) - Change"
 		return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_modules_dm = new("[__FILE__]")

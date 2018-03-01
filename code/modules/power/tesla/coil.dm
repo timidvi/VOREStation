@@ -131,3 +131,5 @@
 		flick("grounding_rodhit", src)
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_power_tesla_coil_dm = new("[__FILE__]")

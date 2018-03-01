@@ -126,3 +126,4 @@
 
 	layer = TURF_LAYER+0.2
 	to_chat(usr, "<span class='notice'>You hide [src].</span>")
+/var/global/datum/telltale/code_modules_assembly_mousetrap_dm = new("[__FILE__]")

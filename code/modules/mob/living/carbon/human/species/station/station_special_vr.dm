@@ -311,3 +311,5 @@
 			H.eye_blurry = 5
 		H.shock_stage = min(H.shock_stage + coldshock, 160) //cold hurts and gives them pain messages, eventually weakening and paralysing, but doesn't damage.
 		return
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_station_special_vr_dm = new("[__FILE__]")

@@ -102,3 +102,4 @@
 		if(!A.hidden)
 			visible_alarms.Add(A)
 	return visible_alarms
+/var/global/datum/telltale/code_modules_alarm_alarm_handler_dm = new("[__FILE__]")

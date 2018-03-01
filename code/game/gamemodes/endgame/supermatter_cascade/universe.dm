@@ -124,3 +124,5 @@ The access requirements on the Asteroid Shuttles' consoles have now been revoked
 			M.current.flash_eyes()
 
 		clear_antag_roles(M)
+
+/var/global/datum/telltale/code_game_gamemodes_endgame_supermatter_cascade_universe_dm = new("[__FILE__]")

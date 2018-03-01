@@ -99,3 +99,5 @@
 	storage_slots = 7
 	can_hold = list(/obj/item/clothing/mask/smokable/cigarette/cigar/havana)
 	icon_type = "cigar"
+
+/var/global/datum/telltale/code_game_objects_items_contraband_vr_dm = new("[__FILE__]")

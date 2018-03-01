@@ -149,3 +149,5 @@
 			return L
 
 	return null
+
+/var/global/datum/telltale/code_modules_mob_say_dm = new("[__FILE__]")

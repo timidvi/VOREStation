@@ -51,3 +51,5 @@ var/const/VENDING_WIRE_IDSCAN = 8
 				V.seconds_electrified = -1
 		if(VENDING_WIRE_IDSCAN)
 			V.scan_id = 1
+
+/var/global/datum/telltale/code_datums_wires_vending_dm = new("[__FILE__]")

@@ -15,3 +15,4 @@
 	if(!istype(player))
 		return 0
 	return 1
+/var/global/datum/telltale/code_game_antagonist_antagonist_equip_dm = new("[__FILE__]")

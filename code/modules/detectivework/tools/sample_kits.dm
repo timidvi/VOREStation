@@ -156,3 +156,5 @@
 
 /obj/item/weapon/forensics/sample_kit/powder/can_take_sample(var/mob/user, var/atom/supplied)
 	return (supplied.fingerprints && supplied.fingerprints.len)
+
+/var/global/datum/telltale/code_modules_detectivework_tools_sample_kits_dm = new("[__FILE__]")

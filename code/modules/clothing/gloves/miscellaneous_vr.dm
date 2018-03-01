@@ -19,3 +19,5 @@
 	desc = "A pair of gloves, they don't look special in any way."
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 	icon_state = "latex"
+
+/var/global/datum/telltale/code_modules_clothing_gloves_miscellaneous_vr_dm = new("[__FILE__]")

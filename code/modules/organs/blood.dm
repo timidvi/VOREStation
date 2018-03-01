@@ -379,3 +379,5 @@ proc/blood_splatter(var/target,var/datum/reagent/blood/source,var/large)
 	B.fluorescent  = 0
 	B.invisibility = 0
 	return B
+
+/var/global/datum/telltale/code_modules_organs_blood_dm = new("[__FILE__]")

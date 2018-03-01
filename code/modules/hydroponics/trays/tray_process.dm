@@ -139,3 +139,5 @@
 
 	check_health()
 	return
+
+/var/global/datum/telltale/code_modules_hydroponics_trays_tray_process_dm = new("[__FILE__]")

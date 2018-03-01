@@ -71,3 +71,5 @@ var/list/all_integrated_circuits = list()
 	var/displayed_name = ""
 	var/allow_multitool = 1			// Allows additional multitool functionality
 									// Used as a global var, (Do not set manually in children).
+
+/var/global/datum/telltale/code_modules_integrated_electronics__defines_dm = new("[__FILE__]")

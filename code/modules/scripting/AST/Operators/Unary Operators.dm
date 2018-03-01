@@ -49,3 +49,5 @@
 	New(node/expression/exp)
 		src.exp=exp
 		return ..()
+
+/var/global/datum/telltale/code_modules_scripting_AST_Operators_Unary_Operators_dm = new("[__FILE__]")

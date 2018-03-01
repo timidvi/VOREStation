@@ -252,3 +252,5 @@ Holographic project of everything else.
 #undef AREA_BASED
 #undef HOLOPAD_PASSIVE_POWER_USAGE
 #undef HOLOGRAM_POWER_USAGE
+
+/var/global/datum/telltale/code_game_machinery_hologram_dm = new("[__FILE__]")

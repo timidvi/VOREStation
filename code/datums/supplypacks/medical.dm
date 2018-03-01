@@ -335,3 +335,4 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate/medical
 	containername = "Defibrillator crate"
+/var/global/datum/telltale/code_datums_supplypacks_medical_dm = new("[__FILE__]")

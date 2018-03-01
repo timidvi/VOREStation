@@ -761,3 +761,4 @@
 			var/log = "[key_name(src)] changed [planet.name]'s time to [planet.current_time.show_time("hh:mm")]."
 			message_admins(log)
 			log_admin(log)
+/var/global/datum/telltale/code_modules_admin_verbs_debug_dm = new("[__FILE__]")

@@ -159,3 +159,5 @@
 	user.visible_message("<span class='warning'> [user]'s hand slips, damaging [target]'s flesh!</span>", \
 	"<span class='warning'> Your hand slips, damaging [target]'s flesh!</span>")
 	target.apply_damage(10, BRUTE, null, sharp=1)
+
+/var/global/datum/telltale/code_modules_surgery_limb_reattach_dm = new("[__FILE__]")

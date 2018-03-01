@@ -181,3 +181,5 @@
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "bottle-4"
 	prefill = list("frostoil" = 60)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_glass_bottle_dm = new("[__FILE__]")

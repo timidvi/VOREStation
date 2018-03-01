@@ -53,3 +53,4 @@
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
 	armor = list(melee = 50, bullet = 40, laser = 40, energy = 25, bomb = 25, bio = 0, rad = 0)
 	slowdown = 0.5
+/var/global/datum/telltale/code_modules_clothing_under_nanotrasen_vr_dm = new("[__FILE__]")

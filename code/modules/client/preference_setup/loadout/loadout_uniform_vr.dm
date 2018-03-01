@@ -169,3 +169,4 @@ Swimsuits
 /datum/gear/uniform/siren
 	display_name = "jumpsuit, Siren"
 	path = /obj/item/clothing/under/fluff/siren
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_uniform_vr_dm = new("[__FILE__]")

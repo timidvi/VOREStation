@@ -35,3 +35,4 @@
 /obj/item/weapon/reagent_containers/food/snacks/meat/corgi
 	name = "Corgi meat"
 	desc = "Tastes like... well, you know."
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_snacks_meat_dm = new("[__FILE__]")

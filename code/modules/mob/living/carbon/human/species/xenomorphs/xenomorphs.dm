@@ -54,3 +54,5 @@ Des: Removes all infected images from the alien.
 				qdel(I)
 	return
 */
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_xenomorphs_xenomorphs_dm = new("[__FILE__]")

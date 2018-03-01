@@ -9,3 +9,5 @@
 /proc/log_subtle(text)
 	if (config.log_emote)
 		diary << "\[[time_stamp()]]SUBTLE: [text][log_end]"
+
+/var/global/datum/telltale/code__helpers_logging_vr_dm = new("[__FILE__]")

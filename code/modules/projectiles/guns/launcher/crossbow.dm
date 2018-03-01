@@ -274,3 +274,5 @@
 		return
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_projectiles_guns_launcher_crossbow_dm = new("[__FILE__]")

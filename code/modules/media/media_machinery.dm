@@ -72,3 +72,5 @@
 	disconnect_media_source()
 	. = ..()
 
+
+/var/global/datum/telltale/code_modules_media_media_machinery_dm = new("[__FILE__]")

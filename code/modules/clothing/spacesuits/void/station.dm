@@ -244,3 +244,5 @@
 	name = "heavy duty atmos voidsuit"
 	armor = list(melee = 20, bullet = 5, laser = 20,energy = 15, bomb = 45, bio = 100, rad = 50)
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_void_station_dm = new("[__FILE__]")

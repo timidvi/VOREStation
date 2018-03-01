@@ -172,3 +172,4 @@
 	cell_type = /obj/item/weapon/cell //We're bigger. We can use much larger power cells.
 	origin_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 6, TECH_MATERIAL = 5, TECH_BLUESPACE = 4) //its a damn cannon capable of holding a huge amount of parts.
 	burst_delay = 4 //preventing extreme silliness.
+/var/global/datum/telltale/code_modules_projectiles_guns_modular_guns_dm = new("[__FILE__]")

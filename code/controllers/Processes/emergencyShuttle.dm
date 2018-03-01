@@ -7,3 +7,5 @@
 
 /datum/controller/process/emergencyShuttle/doWork()
 	emergency_shuttle.process()
+
+/var/global/datum/telltale/code_controllers_Processes_emergencyShuttle_dm = new("[__FILE__]")

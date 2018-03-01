@@ -10,3 +10,4 @@
 	antag_tags = list(MODE_MERCENARY, MODE_TECHNOMANCER)
 	require_all_templates = 1
 	votable = 0
+/var/global/datum/telltale/code_game_gamemodes_mixed_mercwiz_dm = new("[__FILE__]")

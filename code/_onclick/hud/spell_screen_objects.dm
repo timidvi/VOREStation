@@ -212,3 +212,5 @@
 
 	spell.perform(usr)
 	update_charge(1)
+
+/var/global/datum/telltale/code__onclick_hud_spell_screen_objects_dm = new("[__FILE__]")

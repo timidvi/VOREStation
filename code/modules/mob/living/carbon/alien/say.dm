@@ -23,3 +23,4 @@
 		return
 
 	..(message, speaking, verb, null, null, message_range, null)
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_say_dm = new("[__FILE__]")

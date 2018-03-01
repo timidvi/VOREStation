@@ -41,3 +41,5 @@
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
 	vision_flags = SEE_MOBS
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
+
+/var/global/datum/telltale/code_modules_clothing_glasses_hud_dm = new("[__FILE__]")

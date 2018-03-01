@@ -17,3 +17,5 @@
 				dat += "<tr><td>[H]</td><td>H.dna = null</td></tr>"
 	dat += "</table>"
 	user << browse(dat, "window=fingerprints;size=440x410")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_list_fingerprints_dm = new("[__FILE__]")

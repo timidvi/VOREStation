@@ -61,3 +61,5 @@
 
 	outgoing_melee_damage_percent = 0.5 //50% less outgoing melee damage.
 	attack_speed_percent = 1.2 //20% slower attack speed.
+
+/var/global/datum/telltale/code_modules_mob__modifiers_cloning_dm = new("[__FILE__]")

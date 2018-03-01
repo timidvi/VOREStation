@@ -35,3 +35,5 @@
 	if(lockdown)
 		. = STATUS_DISABLED
 	return min(., ..())
+
+/var/global/datum/telltale/code_modules_nano_interaction_base_dm = new("[__FILE__]")

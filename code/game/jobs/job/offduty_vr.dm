@@ -79,3 +79,5 @@
 	access = list(access_maint_tunnels)
 	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant
+
+/var/global/datum/telltale/code_game_jobs_job_offduty_vr_dm = new("[__FILE__]")

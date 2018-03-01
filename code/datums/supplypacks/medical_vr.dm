@@ -32,3 +32,4 @@
 	containertype = "/obj/structure/closet/crate/secure"
 	containername = "Virology biohazard equipment"
 	access = access_medical_equip
+/var/global/datum/telltale/code_datums_supplypacks_medical_vr_dm = new("[__FILE__]")

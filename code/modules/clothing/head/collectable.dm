@@ -124,3 +124,5 @@
 	name = "collectable SWAT helmet"
 	desc = "Now you can be in the Deathsquad too!"
 	icon_state = "swat"
+
+/var/global/datum/telltale/code_modules_clothing_head_collectable_dm = new("[__FILE__]")

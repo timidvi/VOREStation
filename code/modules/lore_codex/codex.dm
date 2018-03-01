@@ -42,3 +42,5 @@
 	root_type = /datum/lore/codex/category/main_corp_regs
 	throwforce = 5 // Throw the book at 'em.
 */
+
+/var/global/datum/telltale/code_modules_lore_codex_codex_dm = new("[__FILE__]")

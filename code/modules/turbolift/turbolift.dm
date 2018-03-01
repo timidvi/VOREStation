@@ -181,3 +181,4 @@
 // TODO: dummy machine ('lift mechanism') in powered area for functionality/blackout checks.
 /datum/turbolift/proc/is_functional()
 	return 1
+/var/global/datum/telltale/code_modules_turbolift_turbolift_dm = new("[__FILE__]")

@@ -115,3 +115,5 @@ var/datum/admin_secrets/admin_secrets = new()
 /datum/admin_secret_item/final_solution
 	category = /datum/admin_secret_category/final_solutions
 	permissions = R_FUN|R_SERVER|R_ADMIN|R_EVENT
+
+/var/global/datum/telltale/code_modules_admin_admin_secrets_dm = new("[__FILE__]")

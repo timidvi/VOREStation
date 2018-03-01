@@ -17,3 +17,4 @@
 
 /datum/cache_entry/valid_until/is_valid()
 	return world.time < timestamp
+/var/global/datum/telltale/code_datums_repositories_repository_dm = new("[__FILE__]")

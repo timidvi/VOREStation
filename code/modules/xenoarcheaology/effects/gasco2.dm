@@ -17,3 +17,5 @@
 		var/turf/holder_loc = holder.loc
 		if(istype(holder_loc))
 			holder_loc.assume_gas("carbon_dioxide", pick(0, 0, 0.1, rand()))
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_gasco__dm = new("[__FILE__]")

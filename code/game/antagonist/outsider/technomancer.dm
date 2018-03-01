@@ -103,3 +103,5 @@ var/datum/antagonist/technomancer/technomancers
 			text += "<br>They've lost their core."
 
 	return text
+
+/var/global/datum/telltale/code_game_antagonist_outsider_technomancer_dm = new("[__FILE__]")

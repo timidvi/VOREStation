@@ -207,3 +207,5 @@
 				prob(3);/obj/item/weapon/storage/firstaid/o2,
 				prob(2);/obj/item/weapon/storage/firstaid/adv,
 				prob(3);/obj/item/weapon/storage/firstaid/fire)
+
+/var/global/datum/telltale/code_game_objects_random_random_vr_dm = new("[__FILE__]")

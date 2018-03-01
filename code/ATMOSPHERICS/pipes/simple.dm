@@ -255,3 +255,5 @@
 	alert_pressure = 900*ONE_ATMOSPHERE
 
 	level = 2
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_simple_dm = new("[__FILE__]")

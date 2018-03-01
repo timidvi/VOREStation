@@ -302,3 +302,5 @@
 		event_manager.Interact(usr)
 	feedback_add_details("admin_verb","EMP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
+
+/var/global/datum/telltale/code_modules_events_event_manager_dm = new("[__FILE__]")

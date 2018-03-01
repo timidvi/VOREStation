@@ -71,3 +71,5 @@
 
 /datum/category_item/player_setup_item/player_global/ui/proc/can_select_ooc_color(var/mob/user)
 	return config.allow_admin_ooccolor && check_rights(R_ADMIN, 0, user)
+
+/var/global/datum/telltale/code_modules_client_preference_setup_global____ui_dm = new("[__FILE__]")

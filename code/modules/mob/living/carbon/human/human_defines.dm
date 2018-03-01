@@ -109,3 +109,4 @@
 	var/mob/living/carbon/human/vr_holder = null
 	// Used by "real" mobs after they leave a VR session
 	var/mob/living/carbon/human/vr_link = null
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_defines_dm = new("[__FILE__]")

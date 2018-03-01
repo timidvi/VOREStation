@@ -56,3 +56,5 @@
 			solars_list.Remove(SC)
 			continue
 		SC.update()
+
+/var/global/datum/telltale/code_datums_sun_dm = new("[__FILE__]")

@@ -90,3 +90,5 @@
 		// Minimum: initial_spawn_target
 		// Maximum: hard_cap or hard_cap_round
 		cur_max = max(initial_spawn_target,min(round(count/ticker.mode.antag_scaling_coeff),cur_max))
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_update_dm = new("[__FILE__]")

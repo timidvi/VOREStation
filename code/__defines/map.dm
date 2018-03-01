@@ -9,3 +9,4 @@
 
 // Misc map defines.
 #define SUBMAP_MAP_EDGE_PAD 15 // Automatically created submaps are forbidden from being this close to the main map's edge.
+/var/global/datum/telltale/code___defines_map_dm = new("[__FILE__]")

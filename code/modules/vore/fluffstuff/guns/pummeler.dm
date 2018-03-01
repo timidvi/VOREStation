@@ -55,3 +55,5 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 3000, "uranium" = 1000)
 	build_path = /obj/item/weapon/gun/energy/pummeler
 	sort_string = "TAADC"
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_guns_pummeler_dm = new("[__FILE__]")

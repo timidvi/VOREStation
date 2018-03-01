@@ -24,3 +24,4 @@
 
 /datum/gm_action/proc/announce()
 	return
+/var/global/datum/telltale/code_modules_gamemaster_actions_action_dm = new("[__FILE__]")

@@ -10,3 +10,4 @@
 	antag_tags = list(MODE_TECHNOMANCER, MODE_NINJA)
 	require_all_templates = 1
 	votable = 1
+/var/global/datum/telltale/code_game_gamemodes_mixed_visitors_dm = new("[__FILE__]")

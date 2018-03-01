@@ -40,3 +40,5 @@
 	if(src.unEquip(I))
 		target.put_in_hands(I) // If this fails it will just end up on the floor, but that's fitting for things like dionaea.
 		target.visible_message("<span class='notice'>\The [src] handed \the [I] to \the [target].</span>")
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_give_dm = new("[__FILE__]")

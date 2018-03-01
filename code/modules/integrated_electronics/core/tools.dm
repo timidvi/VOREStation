@@ -548,3 +548,4 @@
 			for(var/i = 1 to 4)
 				new IC.type(src)
 	make_exact_fit()
+/var/global/datum/telltale/code_modules_integrated_electronics_core_tools_dm = new("[__FILE__]")

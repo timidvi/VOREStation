@@ -1059,3 +1059,5 @@
 #undef ORION_STATUS_NORMAL
 #undef ORION_STATUS_GAMEOVER
 #undef ORION_STATUS_MARKET
+
+/var/global/datum/telltale/code_game_machinery_computer_arcade_dm = new("[__FILE__]")

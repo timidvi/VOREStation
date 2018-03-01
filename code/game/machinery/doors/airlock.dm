@@ -1260,3 +1260,5 @@ About the new airlock wires panel:
 		src.open()
 		src.lock()
 	return
+
+/var/global/datum/telltale/code_game_machinery_doors_airlock_dm = new("[__FILE__]")

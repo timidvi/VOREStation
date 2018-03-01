@@ -20,3 +20,5 @@
 		T.emp_act(1)
 	for(var/obj/machinery/exonet_node/N in machines)
 		N.emp_act(1)
+
+/var/global/datum/telltale/code_modules_events_communications_blackout_dm = new("[__FILE__]")

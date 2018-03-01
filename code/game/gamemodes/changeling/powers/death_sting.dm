@@ -23,3 +23,4 @@
 	if(T.reagents)	T.reagents.add_reagent("lexorin", 40)
 	feedback_add_details("changeling_powers","DTHS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_death_sting_dm = new("[__FILE__]")

@@ -1085,3 +1085,5 @@
 
 	if(helmet) helmet.name = "refitted [helmet.name]"
 	if(suit) suit.name = "refitted [suit.name]"
+
+/var/global/datum/telltale/code_game_machinery_suit_storage_unit_dm = new("[__FILE__]")

@@ -12,3 +12,5 @@
 	..(gibbed)
 	ghostize()
 	qdel(src)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_death_dm = new("[__FILE__]")

@@ -54,3 +54,4 @@
 		var/turf/west = locate(T.x - 1, T.y, T.z)
 		if(istype(west, /turf/simulated/floor))
 			new /obj/machinery/conveyor(west, WEST, 1)
+/var/global/datum/telltale/code_game_machinery_transformer_dm = new("[__FILE__]")

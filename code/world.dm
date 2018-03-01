@@ -679,3 +679,5 @@ proc/establish_old_db_connection()
 		return 1
 
 #undef FAILED_DB_CONNECTION_CUTOFF
+
+/var/global/datum/telltale/code_world_dm = new("[__FILE__]")

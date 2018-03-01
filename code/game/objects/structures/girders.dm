@@ -346,3 +346,5 @@
 		to_chat(user, "<span class='notice'>You drill through the girder!</span>")
 		new /obj/effect/decal/remains/human(get_turf(src))
 		dismantle()
+
+/var/global/datum/telltale/code_game_objects_structures_girders_dm = new("[__FILE__]")

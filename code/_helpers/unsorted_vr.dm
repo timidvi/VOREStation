@@ -52,3 +52,5 @@
 		if(sender)
 			query_string += "&from=[url_encode(sender)]"
 		world.Export("[config.chat_webhook_url]?[query_string]")
+
+/var/global/datum/telltale/code__helpers_unsorted_vr_dm = new("[__FILE__]")

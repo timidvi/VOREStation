@@ -104,3 +104,5 @@
 	else
 		sprint = initial
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_freelook_eye_dm = new("[__FILE__]")

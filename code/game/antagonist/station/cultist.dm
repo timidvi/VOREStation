@@ -126,3 +126,5 @@ var/datum/antagonist/cultist/cult
 		if(L && (L.imp_in == player.current))
 			return 0
 	return 1
+
+/var/global/datum/telltale/code_game_antagonist_station_cultist_dm = new("[__FILE__]")

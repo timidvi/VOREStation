@@ -18,3 +18,5 @@
 		return 0
 	return !air_group // Anything except zones can pass
 
+
+/var/global/datum/telltale/code_game_objects_effects_zone_divider_dm = new("[__FILE__]")

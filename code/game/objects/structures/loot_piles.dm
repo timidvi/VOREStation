@@ -568,3 +568,5 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
         /obj/item/weapon/gun/launcher/crossbow
     )
 
+
+/var/global/datum/telltale/code_game_objects_structures_loot_piles_dm = new("[__FILE__]")

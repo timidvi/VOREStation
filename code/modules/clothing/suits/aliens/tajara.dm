@@ -11,3 +11,4 @@
 	icon_state = "zhan_scarf"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 	body_parts_covered = HEAD|FACE
+/var/global/datum/telltale/code_modules_clothing_suits_aliens_tajara_dm = new("[__FILE__]")

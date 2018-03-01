@@ -90,3 +90,4 @@
 	icon = I
 
 //------------------------
+/var/global/datum/telltale/code_game_turfs_space_transit_dm = new("[__FILE__]")

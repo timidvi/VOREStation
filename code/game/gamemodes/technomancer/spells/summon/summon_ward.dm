@@ -125,3 +125,5 @@
 /mob/living/simple_animal/ward/invisible_detect
 	true_sight = 1
 	see_invisible = SEE_INVISIBLE_LEVEL_TWO
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_summon_summon_ward_dm = new("[__FILE__]")

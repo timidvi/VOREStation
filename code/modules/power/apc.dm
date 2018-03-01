@@ -1340,3 +1340,5 @@ obj/machinery/power/apc/proc/autoset(var/cur_state, var/on)
 			grid_check = FALSE
 
 #undef APC_UPDATE_ICON_COOLDOWN
+
+/var/global/datum/telltale/code_modules_power_apc_dm = new("[__FILE__]")

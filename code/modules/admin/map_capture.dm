@@ -57,3 +57,5 @@
 		usr << browse_rsc(cap, file_name)
 	else
 		usr << "Target coordinates are incorrect."
+
+/var/global/datum/telltale/code_modules_admin_map_capture_dm = new("[__FILE__]")

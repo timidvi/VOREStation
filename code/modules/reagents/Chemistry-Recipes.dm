@@ -2237,3 +2237,4 @@
 	result = "qerr_quem"
 	required_reagents = list("nicotine" = 1, "carbon" = 1, "sugar" = 2)
 	result_amount = 4
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Recipes_dm = new("[__FILE__]")

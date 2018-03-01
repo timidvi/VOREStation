@@ -201,3 +201,5 @@
 /obj/effect/decal/mecha_wreckage/hoverpod
 	name = "Hover pod wreckage"
 	icon_state = "engineering_pod-broken"
+
+/var/global/datum/telltale/code_game_mecha_mecha_wreckage_dm = new("[__FILE__]")

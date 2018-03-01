@@ -26,3 +26,4 @@
 	world << "<font size = 3><b>This terrible, terrible day has finally ended!</b></font>"
 
 #undef ANTAG_TYPE_RATIO
+/var/global/datum/telltale/code_game_gamemodes_calamity_calamity_dm = new("[__FILE__]")

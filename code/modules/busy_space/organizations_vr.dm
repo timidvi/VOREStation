@@ -436,3 +436,5 @@
 							"near Cor Galaxia",
 							"Segmentum Obscurum", // Basically their home territory, where our telescopes can't see. They prefer to keep it that way. They call it something else internally.
 							)
+
+/var/global/datum/telltale/code_modules_busy_space_organizations_vr_dm = new("[__FILE__]")

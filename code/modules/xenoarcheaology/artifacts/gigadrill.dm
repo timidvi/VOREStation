@@ -32,3 +32,5 @@
 					src.loc = M
 				drilling_turf = null
 				anchored = 0
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_artifacts_gigadrill_dm = new("[__FILE__]")

@@ -81,3 +81,5 @@ var/list/whitelist = list()
 	return 0
 
 #undef WHITELISTFILE
+
+/var/global/datum/telltale/code_game_jobs_whitelist_dm = new("[__FILE__]")

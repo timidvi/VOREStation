@@ -139,3 +139,5 @@ return_turf()
 
 /datum/vector_loc/proc/return_turf()
 	return loc
+
+/var/global/datum/telltale/code__helpers_vector_dm = new("[__FILE__]")

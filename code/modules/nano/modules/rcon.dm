@@ -113,3 +113,5 @@
 	for(var/obj/machinery/power/breakerbox/breaker in machines)
 		if(breaker.RCon_tag != "NO_TAG")
 			known_breakers.Add(breaker)
+
+/var/global/datum/telltale/code_modules_nano_modules_rcon_dm = new("[__FILE__]")

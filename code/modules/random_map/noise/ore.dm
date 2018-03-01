@@ -88,3 +88,4 @@
 		return "R"
 	else
 		return "D"
+/var/global/datum/telltale/code_modules_random_map_noise_ore_dm = new("[__FILE__]")

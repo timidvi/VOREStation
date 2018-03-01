@@ -78,3 +78,4 @@
 	door_bottom.set_opacity(0)
 	door_bottom.dir = src.dir
 	door_bottom.icon_state = "rampbottom"
+/var/global/datum/telltale/code_modules_random_map_drop_droppod_doors_dm = new("[__FILE__]")

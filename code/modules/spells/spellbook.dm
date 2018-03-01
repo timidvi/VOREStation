@@ -433,3 +433,5 @@
 	..()
 	user <<"<span class='warning'>[src] suddenly feels very warm!</span>"
 	empulse(src, 1, 1, 1, 1)
+
+/var/global/datum/telltale/code_modules_spells_spellbook_dm = new("[__FILE__]")

@@ -10,3 +10,5 @@
 	screen -= usr.item_use_icon
 	screen -= usr.gun_move_icon
 	screen -= usr.radio_use_icon
+
+/var/global/datum/telltale/code_modules_projectiles_targeting_targeting_client_dm = new("[__FILE__]")

@@ -210,3 +210,4 @@
 	circuit_type = /obj/item/integrated_circuit/logic/unary/not
 	inputs_to_give = list(0)
 	expected_outputs = list(1)
+/var/global/datum/telltale/code_unit_tests_integrated_circuits_logic_dm = new("[__FILE__]")

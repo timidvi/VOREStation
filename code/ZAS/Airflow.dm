@@ -150,3 +150,5 @@ zone/proc/movables()
 			if(!A.simulated || A.anchored || istype(A, /obj/effect) || istype(A, /mob/observer))
 				continue
 			. += A
+
+/var/global/datum/telltale/code_ZAS_Airflow_dm = new("[__FILE__]")

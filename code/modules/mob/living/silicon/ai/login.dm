@@ -8,3 +8,4 @@
 			O.emotion = "Neutral"
 	src.view_core()
 	return
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_login_dm = new("[__FILE__]")

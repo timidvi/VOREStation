@@ -46,3 +46,5 @@
 		step(D, pick(cardinal))
 	if(prob(1))
 		D.emote(pick("scratch","jump","chirp","roll"))
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_diona_diona_dm = new("[__FILE__]")

@@ -575,3 +575,5 @@ the implant may become unstable and either pre-maturely inject the subject or si
 
 /obj/item/weapon/implant/compressed/islegal()
 	return 0
+
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implant_dm = new("[__FILE__]")

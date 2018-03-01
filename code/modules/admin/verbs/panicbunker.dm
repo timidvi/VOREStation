@@ -13,3 +13,5 @@
 		message_admins("The Database is not connected! Panic bunker will not work until the connection is reestablished.")
 	feedback_add_details("admin_verb","PANIC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+
+/var/global/datum/telltale/code_modules_admin_verbs_panicbunker_dm = new("[__FILE__]")

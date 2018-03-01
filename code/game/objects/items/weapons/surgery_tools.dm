@@ -247,3 +247,4 @@
 /obj/item/weapon/surgical/bone_clamp/alien
 	icon = 'icons/obj/abductor.dmi'
 	toolspeed = 0.75
+/var/global/datum/telltale/code_game_objects_items_weapons_surgery_tools_dm = new("[__FILE__]")

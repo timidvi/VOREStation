@@ -132,3 +132,5 @@ var/global/list/alt_farmanimals = list()
 	var/icon/HI = getHologramIcon(CI)
 
 	usr << ftp(holo ? HI : CI,"[A.name].dmi")
+
+/var/global/datum/telltale/code_modules_entopics_vr_entopics_dm = new("[__FILE__]")

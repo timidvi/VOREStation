@@ -92,3 +92,5 @@
 				flick("harpoon-1-change",src)
 				icon_state = "harpoon-2"
 		transforming = 0
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_guns_bsharpoon_dm = new("[__FILE__]")

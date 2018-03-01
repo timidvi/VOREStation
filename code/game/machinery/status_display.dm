@@ -234,3 +234,4 @@
 #undef FONT_COLOR
 #undef FONT_STYLE
 #undef SCROLL_SPEED
+/var/global/datum/telltale/code_game_machinery_status_display_dm = new("[__FILE__]")

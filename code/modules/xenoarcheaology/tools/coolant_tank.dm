@@ -37,3 +37,5 @@
 	sleep(10)
 	if(src)
 		qdel(src)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_coolant_tank_dm = new("[__FILE__]")

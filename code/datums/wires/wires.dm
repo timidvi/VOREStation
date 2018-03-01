@@ -311,3 +311,5 @@ var/const/POWER = 8
 /datum/wires/proc/Shuffle()
 	wires_status = 0
 	GenerateWires()
+
+/var/global/datum/telltale/code_datums_wires_wires_dm = new("[__FILE__]")

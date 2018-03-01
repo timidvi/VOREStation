@@ -125,3 +125,5 @@
 		new /obj/item/mecha_parts/mecha_tracking(src)
 		new /obj/item/mecha_parts/mecha_tracking(src)
 		new /obj/item/mecha_parts/mecha_tracking(src)
+
+/var/global/datum/telltale/code_game_mecha_mecha_control_console_dm = new("[__FILE__]")

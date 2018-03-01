@@ -4,3 +4,4 @@
 		if(languages.len >= 2) // They have sucked down some blood.
 			return 1
 	return ..()
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_diona_say_understands_dm = new("[__FILE__]")

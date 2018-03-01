@@ -136,3 +136,5 @@ var/global/repository/radiation/radiation_repository = new()
 		src.apply_effect(severity, IRRADIATE, src.getarmor(null, "rad"))
 		for(var/atom/I in src)
 			I.rad_act(severity)
+
+/var/global/datum/telltale/code_datums_repositories_radiation_dm = new("[__FILE__]")

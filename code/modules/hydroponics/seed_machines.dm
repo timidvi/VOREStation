@@ -325,3 +325,5 @@
 
 	usr.set_machine(src)
 	src.add_fingerprint(usr)
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_machines_dm = new("[__FILE__]")

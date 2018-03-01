@@ -396,3 +396,4 @@ var/list/organ_cache = list()
 	if(robotic && robotic < ORGAN_LIFELIKE)	//Super fancy humanlike robotics probably have sensors, or something?
 		return 0
 	return 1
+/var/global/datum/telltale/code_modules_organs_organ_dm = new("[__FILE__]")

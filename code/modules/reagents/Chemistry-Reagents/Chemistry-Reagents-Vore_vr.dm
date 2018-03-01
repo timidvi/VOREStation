@@ -135,3 +135,5 @@
 
 /datum/reagent/grubshock/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.take_organ_damage(0, removed * power * 0.2)
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Chemistry_Reagents_Vore_vr_dm = new("[__FILE__]")

@@ -191,3 +191,5 @@
 
 /obj/item/weapon/storage/secure/safe/attack_hand(mob/user as mob)
 	return attack_self(user)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_secure_dm = new("[__FILE__]")

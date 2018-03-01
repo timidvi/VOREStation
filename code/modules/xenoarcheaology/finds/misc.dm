@@ -39,3 +39,5 @@
 					apply_image_decorations = 1
 				*/
 			//machinery type artifacts?
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_misc_dm = new("[__FILE__]")

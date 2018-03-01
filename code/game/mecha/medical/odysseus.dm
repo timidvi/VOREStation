@@ -126,3 +126,4 @@
 	ME.attach(src)
 	ME = new /obj/item/mecha_parts/mecha_equipment/tool/syringe_gun
 	ME.attach(src)
+/var/global/datum/telltale/code_game_mecha_medical_odysseus_dm = new("[__FILE__]")

@@ -109,3 +109,5 @@
 		user << "<span class='warning'>You can't afford the energy cost!</span>"
 		return 0
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_mark_recall_dm = new("[__FILE__]")

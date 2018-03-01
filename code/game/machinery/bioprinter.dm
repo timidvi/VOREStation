@@ -274,3 +274,4 @@
 		return
 	return ..()
 // END FLESH ORGAN PRINTER
+/var/global/datum/telltale/code_game_machinery_bioprinter_dm = new("[__FILE__]")

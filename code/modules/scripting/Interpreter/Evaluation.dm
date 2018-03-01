@@ -167,3 +167,4 @@
 		Minus(a)						return -a
 		LogicalNot(a)				return !a
 		BitwiseNot(a)				return ~a
+/var/global/datum/telltale/code_modules_scripting_Interpreter_Evaluation_dm = new("[__FILE__]")

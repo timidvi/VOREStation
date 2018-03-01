@@ -83,3 +83,5 @@ atom/proc/add_fibers(mob/living/carbon/human/M)
 			prints[print] = stringmerge(prints[print], o_prints[print])
 			.=1
 	fields["fprints"] = prints
+
+/var/global/datum/telltale/code_modules_detectivework_forensics_dm = new("[__FILE__]")

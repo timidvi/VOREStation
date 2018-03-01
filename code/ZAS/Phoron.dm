@@ -190,3 +190,5 @@ turf/Entered(obj/item/I)
 			if(gas_data.flags[g] & XGM_GAS_CONTAMINANT && env.gas[g] > gas_data.overlay_limit[g] + 1)
 				I.contaminate()
 				break
+
+/var/global/datum/telltale/code_ZAS_Phoron_dm = new("[__FILE__]")

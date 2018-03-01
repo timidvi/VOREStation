@@ -382,3 +382,4 @@
 #undef MODE_SINGLE
 #undef MODE_DOUBLE
 #undef MODE_CANISTER
+/var/global/datum/telltale/code_game_machinery_bomb_tester_vr_dm = new("[__FILE__]")

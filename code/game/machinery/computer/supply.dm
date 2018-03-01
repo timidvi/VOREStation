@@ -420,3 +420,5 @@
 	status_signal.data["command"] = command
 
 	frequency.post_signal(src, status_signal)
+
+/var/global/datum/telltale/code_game_machinery_computer_supply_dm = new("[__FILE__]")

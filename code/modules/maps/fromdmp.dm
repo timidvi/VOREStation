@@ -235,3 +235,5 @@ proc/d2sm_Contents(list/conts,n,tabs="")
 	for(i=0,i<n,++i)
 		.+="[tabs].[i]\n"
 		.+=d2sm_ConvertType(conts[i+1],tabs+"\t")
+
+/var/global/datum/telltale/code_modules_maps_fromdmp_dm = new("[__FILE__]")

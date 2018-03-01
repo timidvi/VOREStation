@@ -24,3 +24,5 @@
 		log_and_message_admins("forced the [shuttle_tag] shuttle", user)
 	else
 		alert(user, "The [shuttle_tag] shuttle launch cannot be forced at this time. It's busy, or hasn't been launched yet.")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_launch_shuttle_forced_dm = new("[__FILE__]")

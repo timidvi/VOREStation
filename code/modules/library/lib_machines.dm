@@ -472,3 +472,5 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 		qdel(O)
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_library_lib_machines_dm = new("[__FILE__]")

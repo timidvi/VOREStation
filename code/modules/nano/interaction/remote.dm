@@ -37,3 +37,5 @@
 
 	// This is the (generally) heavy checking, making sure the user is capable, within range of the remoter source, etc.
 	return min(., remoter.CanUseTopic(user, remoter_state))
+
+/var/global/datum/telltale/code_modules_nano_interaction_remote_dm = new("[__FILE__]")

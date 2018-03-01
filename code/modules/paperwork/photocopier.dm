@@ -258,3 +258,5 @@
 	name = "toner cartridge"
 	icon_state = "tonercartridge"
 	var/toner_amount = 30
+
+/var/global/datum/telltale/code_modules_paperwork_photocopier_dm = new("[__FILE__]")

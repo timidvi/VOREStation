@@ -14,3 +14,4 @@
 	// Two of the three.
 	antag_tags -= pick(antag_tags)
 	..()
+/var/global/datum/telltale/code_game_gamemodes_mixed_infestation_dm = new("[__FILE__]")

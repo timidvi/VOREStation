@@ -65,3 +65,4 @@
 	stat(null, "[powernets.len] powernets")
 	stat(null, "[pipe_networks.len] pipenets")
 	stat(null, "[processing_power_items.len] power item\s")
+/var/global/datum/telltale/code_controllers_Processes_machinery_dm = new("[__FILE__]")

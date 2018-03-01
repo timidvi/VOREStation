@@ -108,3 +108,5 @@
 		msg += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[master];ooc_notes=1'>\[View\]</a>\n"
 
 	user << msg
+
+/var/global/datum/telltale/code_modules_vore_eating_silicon_vr_dm = new("[__FILE__]")

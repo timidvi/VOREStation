@@ -205,3 +205,4 @@
 		icon_state = "launcherbtt"
 	else
 		icon_state = "launcheract"
+/var/global/datum/telltale/code_game_machinery_door_control_dm = new("[__FILE__]")

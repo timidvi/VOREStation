@@ -68,3 +68,5 @@
 	machine_understands = 0
 	flags = RESTRICTED | HIVEMIND
 	drone_only = 1
+
+/var/global/datum/telltale/code_modules_mob_language_synthetic_dm = new("[__FILE__]")

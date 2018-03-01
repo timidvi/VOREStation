@@ -373,3 +373,5 @@ var/list/all_technomancer_assistance = typesof(/datum/technomancer/assistance) -
 				return
 	to_chat(user, "<span class='warn'>\The [src] is unable to refund \the [AM].</span>")
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_catalog_dm = new("[__FILE__]")

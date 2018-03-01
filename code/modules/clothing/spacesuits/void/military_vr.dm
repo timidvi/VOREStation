@@ -24,3 +24,4 @@
 	item_state_slots = null
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'
+/var/global/datum/telltale/code_modules_clothing_spacesuits_void_military_vr_dm = new("[__FILE__]")

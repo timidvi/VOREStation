@@ -26,3 +26,5 @@
 /obj/structure/table/rack/holorack/dismantle(obj/item/weapon/wrench/W, mob/user)
 	user << "<span class='warning'>You cannot dismantle \the [src].</span>"
 	return
+
+/var/global/datum/telltale/code_modules_tables_rack_dm = new("[__FILE__]")

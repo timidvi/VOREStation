@@ -35,3 +35,4 @@
 	for(var/atom/movable/A in src)
 		A.forceMove(here)
 	return ..()
+/var/global/datum/telltale/code_modules_vore_resizing_holder_micro_vr_dm = new("[__FILE__]")

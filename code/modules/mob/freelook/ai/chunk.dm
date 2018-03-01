@@ -47,3 +47,5 @@
 
 /mob/living/silicon/ai/proc/seen_camera_turfs()
 	return seen_turfs_in_range(src, world.view)
+
+/var/global/datum/telltale/code_modules_mob_freelook_ai_chunk_dm = new("[__FILE__]")

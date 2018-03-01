@@ -89,3 +89,5 @@
 
 	set_light(0)
 	return
+
+/var/global/datum/telltale/code_modules_hydroponics_trays_tray_update_icons_dm = new("[__FILE__]")

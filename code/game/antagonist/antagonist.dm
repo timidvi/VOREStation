@@ -213,3 +213,5 @@
 			player.assigned_role = null
 		player.special_role = null
 	pending_antagonists.Cut()
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_dm = new("[__FILE__]")

@@ -36,3 +36,5 @@ mob/living/carbon/proc/handle_dreams()
 		dream()
 
 mob/living/carbon/var/dreaming = 0
+
+/var/global/datum/telltale/code_modules_flufftext_Dreaming_dm = new("[__FILE__]")

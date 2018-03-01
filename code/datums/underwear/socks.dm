@@ -57,3 +57,4 @@
 /datum/category_item/underwear/socks/fishnet
 	name = "Fishnet"
 	icon_state = "fishnet"
+/var/global/datum/telltale/code_datums_underwear_socks_dm = new("[__FILE__]")

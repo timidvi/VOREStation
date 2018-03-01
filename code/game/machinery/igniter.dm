@@ -147,3 +147,4 @@
 	active = 0
 
 	return
+/var/global/datum/telltale/code_game_machinery_igniter_dm = new("[__FILE__]")

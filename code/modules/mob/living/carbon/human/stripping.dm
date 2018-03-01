@@ -163,3 +163,5 @@
 			internals.icon_state = "internal1"
 	else
 		visible_message("<span class='danger'>\The [user] disables \the [src]'s internals!</span>")
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_stripping_dm = new("[__FILE__]")

@@ -44,3 +44,5 @@ var/global/list/wing_icon_cache = list()
 		else
 			return image(tail_s)
 	return null
+
+/var/global/datum/telltale/code_modules_vore_appearance_update_icons_vr_dm = new("[__FILE__]")

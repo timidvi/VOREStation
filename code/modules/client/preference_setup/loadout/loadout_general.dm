@@ -99,3 +99,5 @@
 	display_name = "Cards Against The Galaxy (black deck)"
 	path = /obj/item/weapon/deck/cah/black
 	description = "The ever-popular Cards Against The Galaxy word game. Warning: may include traces of broken fourth wall. This is the black deck."
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_general_dm = new("[__FILE__]")

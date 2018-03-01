@@ -4,3 +4,4 @@
 
 /datum/controller/process/game_master/doWork()
 	game_master.process()
+/var/global/datum/telltale/code_controllers_Processes_game_master_dm = new("[__FILE__]")

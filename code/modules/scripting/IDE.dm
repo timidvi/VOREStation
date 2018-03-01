@@ -209,3 +209,5 @@ client/verb/tcsclearmem()
 	else
 		src << output(null, "tcserror")
 		src << output("<font color = red>Failed to clear memory: Unable to locate machine.</font>", "tcserror")
+
+/var/global/datum/telltale/code_modules_scripting_IDE_dm = new("[__FILE__]")

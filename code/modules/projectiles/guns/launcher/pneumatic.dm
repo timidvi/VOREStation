@@ -214,3 +214,5 @@
 		return
 	else
 		..()
+
+/var/global/datum/telltale/code_modules_projectiles_guns_launcher_pneumatic_dm = new("[__FILE__]")

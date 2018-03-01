@@ -104,3 +104,4 @@
 	return
 /obj/effect/dummy/spell_jaunt/bullet_act(blah)
 	return
+/var/global/datum/telltale/code_modules_spells_targeted_ethereal_jaunt_dm = new("[__FILE__]")

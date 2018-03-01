@@ -20,3 +20,4 @@
 		if(T)	T.hallucination += 400
 	feedback_add_details("changeling_powers","HS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_lsd_sting_dm = new("[__FILE__]")

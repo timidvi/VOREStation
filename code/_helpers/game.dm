@@ -605,3 +605,5 @@ datum/projectile_data
 
 /proc/SecondsToTicks(var/seconds)
 	return seconds * 10
+
+/var/global/datum/telltale/code__helpers_game_dm = new("[__FILE__]")

@@ -53,3 +53,5 @@
 			for(var/i in 1 to comp_amt)
 				M.component_parts += new comp_path(contain_parts ? M : null)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_circuitboard_dm = new("[__FILE__]")

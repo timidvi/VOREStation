@@ -44,3 +44,5 @@
 			return meteors_threatening
 		else
 			return meteors_normal
+
+/var/global/datum/telltale/code_modules_events_meteors_dm = new("[__FILE__]")

@@ -573,3 +573,4 @@ emp_act
 		flick(G.hud.icon_state, G.hud)
 
 	return 1
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_defense_dm = new("[__FILE__]")

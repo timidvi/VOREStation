@@ -129,3 +129,5 @@ var/global/list/default_pai_software = list()
 		if(1 <= img && img <= 9)
 			card.setEmotion(img)
 		return 1
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_software_dm = new("[__FILE__]")

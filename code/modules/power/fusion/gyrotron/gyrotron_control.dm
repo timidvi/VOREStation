@@ -95,3 +95,5 @@
 			id_tag = new_ident
 		return
 	return ..()
+
+/var/global/datum/telltale/code_modules_power_fusion_gyrotron_gyrotron_control_dm = new("[__FILE__]")

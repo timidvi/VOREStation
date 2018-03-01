@@ -153,3 +153,5 @@
 	if(new_dir && !isnull(paint_dirs[new_dir]))
 		paint_dir = new_dir
 		usr << "<span class='notice'>You set \the [src] direction to '[paint_dir]'.</span>"
+
+/var/global/datum/telltale/code_game_objects_items_devices_floor_painter_dm = new("[__FILE__]")

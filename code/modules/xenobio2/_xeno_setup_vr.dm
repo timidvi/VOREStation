@@ -63,3 +63,4 @@
 	xenoChemList += "condensedcapsaicin"
 	xenoChemList += "neurotoxin"
 	return 1
+/var/global/datum/telltale/code_modules_xenobio___xeno_setup_vr_dm = new("[__FILE__]")

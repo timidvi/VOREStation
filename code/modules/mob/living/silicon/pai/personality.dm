@@ -58,3 +58,5 @@
 	F["role"] >> src.role
 	F["comments"] >> src.comments
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_personality_dm = new("[__FILE__]")

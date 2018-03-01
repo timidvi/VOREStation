@@ -53,3 +53,4 @@
 
 	feedback_add_details("changeling_powers","AP")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_panacea_dm = new("[__FILE__]")

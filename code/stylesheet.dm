@@ -110,3 +110,5 @@ h1.alert, h2.alert		{color: #000000;}
 BIG IMG.icon 			{width: 32px; height: 32px;}
 
 </style>"}
+
+/var/global/datum/telltale/code_stylesheet_dm = new("[__FILE__]")

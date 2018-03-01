@@ -51,3 +51,4 @@
 	name = "Wire Synthesizer"
 	max_energy = 50
 	recharge_rate = 2
+/var/global/datum/telltale/code_game_objects_items_stacks_matter_synth_dm = new("[__FILE__]")

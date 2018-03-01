@@ -100,3 +100,5 @@ var/datum/controller/failsafe/Failsafe
 		statclick = new/obj/effect/statclick/debug(null, "Initializing...", src)
 
 	stat("Failsafe Controller:", statclick.update("Defcon: [defcon_pretty()] (Interval: [Failsafe.processing_interval] | Iteration: [Failsafe.master_iteration])"))
+
+/var/global/datum/telltale/code_controllers_failsafe_dm = new("[__FILE__]")

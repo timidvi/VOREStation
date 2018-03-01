@@ -310,3 +310,4 @@
 	id_with_upload_string = "1"
 	id_with_download_string = "1"
 	server_id = 1
+/var/global/datum/telltale/code_modules_research_server_dm = new("[__FILE__]")

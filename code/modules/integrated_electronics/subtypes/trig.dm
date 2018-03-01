@@ -138,3 +138,4 @@
 	set_pin_data(IC_OUTPUT, 1, result)
 	push_data()
 	activate_pin(2)
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_trig_dm = new("[__FILE__]")

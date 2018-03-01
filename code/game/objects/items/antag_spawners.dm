@@ -133,3 +133,4 @@
 
 /obj/item/weapon/antag_spawner/syndicate_drone/mechanist
 	drone_type = /mob/living/silicon/robot/syndicate/mechanist
+/var/global/datum/telltale/code_game_objects_items_antag_spawners_dm = new("[__FILE__]")

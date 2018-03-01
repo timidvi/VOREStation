@@ -30,3 +30,4 @@
 	<br><br>\
 	Eshi Tache has also written other <i>The Traveler's Guide</i> books, including <i>Sol Edition</i>, <i>Tau Ceti Edition</i>, <i>Alpha Centauri Edition</i>, and more, \
 	which you can find in your local book store, library, or e-reader device."
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_main_dm = new("[__FILE__]")

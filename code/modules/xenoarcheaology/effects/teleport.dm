@@ -56,3 +56,5 @@
 				sparks = new /datum/effect/effect/system/spark_spread()
 				sparks.set_up(3, 0, M.loc)
 				sparks.start()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_teleport_dm = new("[__FILE__]")

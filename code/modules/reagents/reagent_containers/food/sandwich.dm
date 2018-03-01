@@ -99,3 +99,5 @@
 		H << "<font color='red'>You lacerate your mouth on a [shard.name] in the sandwich!</font>"
 		H.adjustBruteLoss(5) //TODO: Target head if human. //This TODO has been here for 4 years.
 	..()
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_sandwich_dm = new("[__FILE__]")

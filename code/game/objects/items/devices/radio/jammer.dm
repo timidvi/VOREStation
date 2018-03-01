@@ -111,3 +111,5 @@ var/global/list/active_radio_jammers = list()
 		overlays += I
 		last_overlay_percent = overlay_percent
 
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_jammer_dm = new("[__FILE__]")

@@ -138,3 +138,5 @@
 	S.screen_loc = screen_l
 
 	screen += S
+
+/var/global/datum/telltale/code__onclick_hud_movable_screen_objects_dm = new("[__FILE__]")

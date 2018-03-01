@@ -149,3 +149,5 @@ datum/hSB
 					var/hsbitem = input(usr, "Choose an object to spawn.", "Sandbox:") in selectable + "Cancel"
 					if(hsbitem != "Cancel")
 						new hsbitem(usr.loc)
+
+/var/global/datum/telltale/code_game_gamemodes_sandbox_h_sandbox_dm = new("[__FILE__]")

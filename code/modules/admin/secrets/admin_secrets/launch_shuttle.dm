@@ -24,3 +24,5 @@
 		log_and_message_admins("launched the [shuttle_tag] shuttle", user)
 	else
 		alert(user, "The [shuttle_tag] shuttle cannot be launched at this time. It's probably busy.")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_launch_shuttle_dm = new("[__FILE__]")

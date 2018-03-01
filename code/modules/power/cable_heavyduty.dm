@@ -27,3 +27,4 @@
 
 /obj/structure/cable/heavyduty/cableColor(var/colorC)
 	return
+/var/global/datum/telltale/code_modules_power_cable_heavyduty_dm = new("[__FILE__]")

@@ -169,3 +169,5 @@
 	broken = 1
 	locked = 0
 	..()
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_secure_closets_dm = new("[__FILE__]")

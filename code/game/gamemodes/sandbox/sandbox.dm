@@ -15,3 +15,5 @@
 	..()
 	if(emergency_shuttle)
 		emergency_shuttle.auto_recall = 1
+
+/var/global/datum/telltale/code_game_gamemodes_sandbox_sandbox_dm = new("[__FILE__]")

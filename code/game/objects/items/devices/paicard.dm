@@ -334,3 +334,5 @@
 		var/rendered = "<span class='message'>[msg]</span>"
 		pai.show_message(rendered, type)
 	..()
+
+/var/global/datum/telltale/code_game_objects_items_devices_paicard_dm = new("[__FILE__]")

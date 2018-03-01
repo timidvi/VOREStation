@@ -189,3 +189,5 @@
 			on = 0
 			power_change()
 			update_icon()
+
+/var/global/datum/telltale/code_game_machinery_spaceheater_dm = new("[__FILE__]")

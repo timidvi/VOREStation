@@ -856,3 +856,5 @@
 		set_pin_data(IC_OUTPUT, 1, 0)
 	push_data()
 	activate_pin(2)
+
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_input_dm = new("[__FILE__]")

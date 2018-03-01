@@ -49,3 +49,4 @@
 					if(prob(75))
 						qdel(C)
 			sleep(1)
+/var/global/datum/telltale/code_modules_events_carp_migration_dm = new("[__FILE__]")

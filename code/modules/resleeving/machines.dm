@@ -606,3 +606,5 @@
 		return
 	put_mob(usr)
 	return
+
+/var/global/datum/telltale/code_modules_resleeving_machines_dm = new("[__FILE__]")

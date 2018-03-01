@@ -203,3 +203,5 @@
 	New()
 		name = "[colourName] crayon"
 		..()
+
+/var/global/datum/telltale/code_modules_paperwork_pen_dm = new("[__FILE__]")

@@ -145,3 +145,5 @@ datum/admins/proc/notes_gethtml(var/ckey)
 			dat += "[I.content]\nby [I.author] ([I.rank]) on [I.timestamp]\n\n"
 
 	return list2params(list(dat))
+
+/var/global/datum/telltale/code_modules_admin_player_notes_dm = new("[__FILE__]")

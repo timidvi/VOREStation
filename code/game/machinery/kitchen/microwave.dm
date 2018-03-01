@@ -391,3 +391,5 @@
 		if ("dispose")
 			dispose()
 	return
+
+/var/global/datum/telltale/code_game_machinery_kitchen_microwave_dm = new("[__FILE__]")

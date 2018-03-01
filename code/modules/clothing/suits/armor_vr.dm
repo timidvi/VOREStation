@@ -82,3 +82,4 @@
 	name = "imperial centurion armor"
 	desc = "Not all heroes wear capes, but it'd be cooler if they did."
 	icon_state = "ge_armorcent"
+/var/global/datum/telltale/code_modules_clothing_suits_armor_vr_dm = new("[__FILE__]")

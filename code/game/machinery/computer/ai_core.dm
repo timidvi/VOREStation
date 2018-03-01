@@ -270,3 +270,5 @@
 	else
 		empty_playable_ai_cores += D
 		src << "\The [id] is now <font color=\"#008000\">available</font> for latejoining AIs."
+
+/var/global/datum/telltale/code_game_machinery_computer_ai_core_dm = new("[__FILE__]")

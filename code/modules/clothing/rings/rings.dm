@@ -83,3 +83,4 @@
 /obj/item/clothing/gloves/ring/seal/signet/proc/change_name(var/signet_name = "Unknown")
 	name = "[signet_name]'s signet ring"
 	desc = "A signet ring belonging to [signet_name], for when you're too sophisticated to sign letters."
+/var/global/datum/telltale/code_modules_clothing_rings_rings_dm = new("[__FILE__]")

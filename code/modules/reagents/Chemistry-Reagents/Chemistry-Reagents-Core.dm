@@ -204,3 +204,5 @@
 /datum/reagent/fuel/touch_mob(var/mob/living/L, var/amount)
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 10) // Splashing people with welding fuel to make them easy to ignite!
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Chemistry_Reagents_Core_dm = new("[__FILE__]")

@@ -449,3 +449,5 @@
 	density			= 0
 	pixel_y			= -3
 	show_keyboard	= 0
+
+/var/global/datum/telltale/code_game_machinery_computer__computer_dm = new("[__FILE__]")

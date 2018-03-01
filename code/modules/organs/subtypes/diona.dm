@@ -208,3 +208,5 @@
 	dislocated = -1
 	vital = 0
 	slot_flags = SLOT_BELT
+
+/var/global/datum/telltale/code_modules_organs_subtypes_diona_dm = new("[__FILE__]")

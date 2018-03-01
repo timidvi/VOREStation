@@ -35,3 +35,4 @@ function dropdowns() {
     }
 }
 "}
+/var/global/datum/telltale/code_js_menus_dm = new("[__FILE__]")

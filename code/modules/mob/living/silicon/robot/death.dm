@@ -18,3 +18,5 @@
 	remove_robot_verbs()
 	sql_report_cyborg_death(src)
 	..(gibbed,"shudders violently for a moment, then becomes motionless, its eyes slowly darkening.")
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_death_dm = new("[__FILE__]")

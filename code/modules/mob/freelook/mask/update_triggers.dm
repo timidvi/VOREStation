@@ -48,3 +48,5 @@
 	..()
 	if(src == cult)
 		cultnet.updateVisibility(player.current, 0)
+
+/var/global/datum/telltale/code_modules_mob_freelook_mask_update_triggers_dm = new("[__FILE__]")

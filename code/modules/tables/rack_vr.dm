@@ -17,3 +17,5 @@
 /obj/structure/table/rack/shelf/steel/New()
 	material = get_material_by_name(DEFAULT_WALL_MATERIAL)
 	..()
+
+/var/global/datum/telltale/code_modules_tables_rack_vr_dm = new("[__FILE__]")

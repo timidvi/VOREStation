@@ -37,3 +37,4 @@
 /obj/item/projectile/spell_projectile/fireball
 	name = "fireball"
 	icon_state = "fireball"
+/var/global/datum/telltale/code_modules_spells_targeted_projectile_fireball_dm = new("[__FILE__]")

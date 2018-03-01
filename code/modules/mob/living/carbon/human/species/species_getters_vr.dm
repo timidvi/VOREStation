@@ -5,3 +5,4 @@
 		return wing
 /datum/species/proc/get_wing_animation(var/mob/living/carbon/human/H)
 	return wing_animation
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_species_getters_vr_dm = new("[__FILE__]")

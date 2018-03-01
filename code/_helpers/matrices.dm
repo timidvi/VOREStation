@@ -122,3 +122,4 @@
 #undef LUMR
 #undef LUMG
 #undef LUMB
+/var/global/datum/telltale/code__helpers_matrices_dm = new("[__FILE__]")

@@ -585,3 +585,4 @@
 		return
 	to_chat(src, "<span class='notice'>This item is not appropriate for ethical consumption.</span>")
 	return
+/var/global/datum/telltale/code_modules_vore_eating_living_vr_dm = new("[__FILE__]")

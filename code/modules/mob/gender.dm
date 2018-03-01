@@ -66,3 +66,5 @@
 	himself = "itself"
 	s = "s"
 	hes = "it's"
+
+/var/global/datum/telltale/code_modules_mob_gender_dm = new("[__FILE__]")

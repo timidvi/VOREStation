@@ -22,3 +22,4 @@
 	if(node2 in target)
 		return node2
 	return
+/var/global/datum/telltale/code_modules_ventcrawl_ventcrawl_multiz_dm = new("[__FILE__]")

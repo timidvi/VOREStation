@@ -450,3 +450,5 @@
 				src.anchored = 1
 	else
 		..()
+
+/var/global/datum/telltale/code_game_objects_structures_musician_dm = new("[__FILE__]")

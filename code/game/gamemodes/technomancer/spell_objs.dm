@@ -321,3 +321,4 @@
 	spawn(20)
 		if(src)
 			qdel(src)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spell_objs_dm = new("[__FILE__]")

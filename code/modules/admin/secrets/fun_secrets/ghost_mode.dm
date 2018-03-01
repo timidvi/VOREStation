@@ -46,3 +46,5 @@
 		M.show_message(text("<span class='notice'>The chilling wind suddenly stops...</span>"), 1)
 	affected_mobs.Cut()
 	affected_areas.Cut()
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_ghost_mode_dm = new("[__FILE__]")

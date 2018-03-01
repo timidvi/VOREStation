@@ -262,3 +262,5 @@
 /area/outpost/research/xenobiology
 	name = "\improper Research Outpost Xenobiology Lab"
 	icon_state = "xeno_lab"
+
+/var/global/datum/telltale/code_game_area_asteroid_areas_dm = new("[__FILE__]")

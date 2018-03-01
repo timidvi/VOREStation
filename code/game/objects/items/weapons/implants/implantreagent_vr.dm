@@ -97,3 +97,5 @@
 			if(rimplant.reagents.total_volume == rimplant.reagents.maximum_volume * 0.05)
 				to_chat(src, "<span class='notice'>[pick(rimplant.empty_message)]</span>")
 
+
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implantreagent_vr_dm = new("[__FILE__]")

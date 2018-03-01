@@ -155,3 +155,5 @@ obj/item/device/camera/siliconcam/proc/getsource()
 	if(!aiCamera)
 		return
 	return aiCamera.selectpicture()
+
+/var/global/datum/telltale/code_modules_paperwork_silicon_photography_dm = new("[__FILE__]")

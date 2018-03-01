@@ -18,3 +18,5 @@
 	compatible_mobs = list(/mob/living/carbon/human)
 
 	hud_state = "wiz_subj"
+
+/var/global/datum/telltale/code_modules_spells_targeted_subjugate_dm = new("[__FILE__]")

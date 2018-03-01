@@ -660,3 +660,5 @@
 			S.reagents.add_reagent(reagent,amount)
 			S.chassis.use_power(energy_drain)
 		return 1
+
+/var/global/datum/telltale/code_game_mecha_equipment_tools_medical_tools_dm = new("[__FILE__]")

@@ -525,3 +525,5 @@
 
 /mob/living/carbon/slime/slip() //Can't slip something without legs.
 	return 0
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_life_dm = new("[__FILE__]")

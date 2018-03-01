@@ -155,3 +155,5 @@
 			S.remove_from_storage(A)
 		A.loc.contents.Remove(A)
 		update()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implanter_dm = new("[__FILE__]")

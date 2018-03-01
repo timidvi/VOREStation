@@ -60,3 +60,5 @@ The hooks you're calling should return nonzero values on success.
 	catch(var/exception/e)
 		error("hook_vr itself failed or runtimed. Exception below.")
 		error("hook_vr catch: [e] on [e.file]:[e.line]")
+
+/var/global/datum/telltale/code_modules_vore_trycatch_vr_dm = new("[__FILE__]")

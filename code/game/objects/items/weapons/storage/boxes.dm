@@ -478,3 +478,5 @@
 	name = "ambrosia deus seeds box"
 	desc = "Contains the seeds you need to get a proper healthy high."
 	starts_with = list(/obj/item/seeds/ambrosiadeusseed = 7)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_boxes_dm = new("[__FILE__]")

@@ -485,3 +485,5 @@
 	dat += resources
 
 	src << browse(dat, "window=robotmod")
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_items_dm = new("[__FILE__]")

@@ -693,3 +693,5 @@
 	M.adjustOxyLoss(-4 * removed)
 	M.adjustToxLoss(-2 * removed)
 	M.adjustCloneLoss(-2 * removed)
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Chemistry_Reagents_Medicine_dm = new("[__FILE__]")

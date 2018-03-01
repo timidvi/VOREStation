@@ -90,3 +90,5 @@
 
 /obj/item/weapon/melee/cultblade
 	description_antag = "This sword is a powerful weapon, capable of severing limbs easily, if they are targeted.  Nonbelievers are unable to use this weapon."
+
+/var/global/datum/telltale/code_modules_examine_descriptions_weapons_dm = new("[__FILE__]")

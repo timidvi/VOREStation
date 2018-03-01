@@ -223,3 +223,4 @@
 #undef AB_WEST_OFFSET
 #undef AB_NORTH_OFFSET
 #undef AB_MAX_COLUMNS
+/var/global/datum/telltale/code__onclick_hud_action_dm = new("[__FILE__]")

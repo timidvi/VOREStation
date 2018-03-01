@@ -23,3 +23,4 @@
 	for(var/turf/target in targets)
 		empulse(get_turf(target), emp_heavy, emp_med, emp_light, emp_long)
 	return
+/var/global/datum/telltale/code_modules_spells_aoe_turf_disable_tech_dm = new("[__FILE__]")

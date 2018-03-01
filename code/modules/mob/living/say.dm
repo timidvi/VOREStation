@@ -382,3 +382,5 @@ proc/get_radio_key_from_channel(var/channel)
 
 /mob/proc/speech_bubble_appearance()
 	return "normal"
+
+/var/global/datum/telltale/code_modules_mob_living_say_dm = new("[__FILE__]")

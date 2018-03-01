@@ -163,3 +163,5 @@
 		icon_state = "sampler0"
 	else
 		user << "<span class='warning'>The core sampler is empty.</span>"
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_sampling_dm = new("[__FILE__]")

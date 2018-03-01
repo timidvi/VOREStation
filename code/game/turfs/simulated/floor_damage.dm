@@ -23,3 +23,4 @@
 	else
 		burnt = 0
 	update_icon()
+/var/global/datum/telltale/code_game_turfs_simulated_floor_damage_dm = new("[__FILE__]")

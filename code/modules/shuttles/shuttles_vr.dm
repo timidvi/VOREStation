@@ -22,3 +22,5 @@
 /obj/machinery/computer/shuttle_control/research
 	name = "research elevator control console"
 
+
+/var/global/datum/telltale/code_modules_shuttles_shuttles_vr_dm = new("[__FILE__]")

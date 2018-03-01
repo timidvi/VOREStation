@@ -54,3 +54,5 @@
 
 					sleep(1 SECOND)
 		on_expire()
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_insert_mend_organs_dm = new("[__FILE__]")

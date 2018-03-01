@@ -36,3 +36,4 @@
 //we don't want the silly text overlay!
 /obj/item/weapon/paper/pamphlet/update_icon()
 	return
+/var/global/datum/telltale/code_modules_awaymissions_pamphlet_dm = new("[__FILE__]")

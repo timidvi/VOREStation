@@ -10,3 +10,5 @@
 	var/lift_announce_str = "Ding!"
 	var/arrival_sound = 'sound/machines/ding.ogg'
 	var/delay_time
+
+/var/global/datum/telltale/code_modules_turbolift_turbolift_areas_dm = new("[__FILE__]")

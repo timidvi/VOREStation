@@ -504,3 +504,5 @@
 
 	else if(talkative)
 		src.talking_atom = new(src)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_find_spawning_dm = new("[__FILE__]")

@@ -33,3 +33,5 @@
 	name = "Random Toxin - Beaker"
 	item_cost = 10
 	path = /obj/item/weapon/storage/box/syndie_kit/toxin
+
+/var/global/datum/telltale/code_datums_uplink_stealthy_weapons_dm = new("[__FILE__]")

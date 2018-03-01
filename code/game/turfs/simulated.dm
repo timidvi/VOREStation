@@ -168,3 +168,4 @@
 		new /obj/effect/decal/cleanable/blood/oil(src)
 	else if(ishuman(M))
 		add_blood(M)
+/var/global/datum/telltale/code_game_turfs_simulated_dm = new("[__FILE__]")

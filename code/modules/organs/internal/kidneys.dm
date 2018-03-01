@@ -35,3 +35,5 @@
 			owner.custom_pain("You feel extremely tired, like you can't move!",1)
 			owner.m_intent = "walk"
 			owner.hud_used.move_intent.icon_state = "walking"
+
+/var/global/datum/telltale/code_modules_organs_internal_kidneys_dm = new("[__FILE__]")

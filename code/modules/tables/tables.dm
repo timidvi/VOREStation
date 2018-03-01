@@ -474,3 +474,5 @@ var/list/table_icon_cache = list()
 #undef CORNER_COUNTERCLOCKWISE
 #undef CORNER_DIAGONAL
 #undef CORNER_CLOCKWISE
+
+/var/global/datum/telltale/code_modules_tables_tables_dm = new("[__FILE__]")

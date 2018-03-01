@@ -272,3 +272,4 @@
 	name = "incendiary mine"
 	desc = "A small explosive mine with a fire symbol on the side."
 	minetype = /obj/effect/mine/incendiary
+/var/global/datum/telltale/code_game_objects_effects_mines_dm = new("[__FILE__]")

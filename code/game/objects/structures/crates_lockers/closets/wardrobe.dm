@@ -689,3 +689,5 @@
 	new /obj/item/clothing/glasses/sunglasses(src)
 	new /obj/item/clothing/head/caphat(src)
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_wardrobe_dm = new("[__FILE__]")

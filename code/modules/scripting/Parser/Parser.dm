@@ -187,3 +187,4 @@
 				var/node/expression/P=ParseParamExpression()
 				stmt.parameters+=P
 				if(istype(curToken, /token/symbol) && curToken.value==",") NextToken()
+/var/global/datum/telltale/code_modules_scripting_Parser_Parser_dm = new("[__FILE__]")

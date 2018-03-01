@@ -69,3 +69,4 @@ var/global/list/power_update_requests_by_area = list()
 	usr << "Total profiling time: [power_profiled_time] ticks"
 	for (var/A in power_update_requests_by_area)
 		usr << "[A] = [power_update_requests_by_area[A]]"
+/var/global/datum/telltale/code_modules_power_profiling_dm = new("[__FILE__]")

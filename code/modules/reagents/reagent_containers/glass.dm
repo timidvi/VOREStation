@@ -328,3 +328,5 @@ obj/item/weapon/reagent_containers/glass/bucket/wood
 	amount_per_transfer_from_this = 20
 	possible_transfer_amounts = list(10,20,30,60,120)
 	volume = 120
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_glass_dm = new("[__FILE__]")

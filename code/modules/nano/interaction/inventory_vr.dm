@@ -30,3 +30,5 @@
 			return user.shared_nano_interaction()
 
 	return STATUS_CLOSE
+
+/var/global/datum/telltale/code_modules_nano_interaction_inventory_vr_dm = new("[__FILE__]")

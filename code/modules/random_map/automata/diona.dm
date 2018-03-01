@@ -170,3 +170,4 @@
 			V.update_icon()
 			spawn(1)
 				V.spread()
+/var/global/datum/telltale/code_modules_random_map_automata_diona_dm = new("[__FILE__]")

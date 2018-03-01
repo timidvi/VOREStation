@@ -71,3 +71,5 @@
 		pass("[name] matched all expected outputs.")
 		return TRUE
 
+
+/var/global/datum/telltale/code_unit_tests_integrated_circuits_circuits_dm = new("[__FILE__]")

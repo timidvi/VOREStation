@@ -265,3 +265,4 @@ Protectiveness | Armor %
 
 /obj/item/clothing/head/helmet/material/makeshift/durasteel
 	default_material = "durasteel"
+/var/global/datum/telltale/code_game_objects_items_weapons_material_material_armor_dm = new("[__FILE__]")

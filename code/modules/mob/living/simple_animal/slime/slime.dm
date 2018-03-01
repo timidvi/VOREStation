@@ -462,3 +462,5 @@
 	lines.Add(description_info)
 	return lines.Join("\n")
 
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_slime_slime_dm = new("[__FILE__]")

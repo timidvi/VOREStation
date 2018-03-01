@@ -448,3 +448,4 @@
 	display_name = "snowsuit, supply"
 	path = /obj/item/clothing/suit/storage/snowsuit/cargo
 	allowed_roles = list("Quartermaster","shaft Miner","Cargo Technician","Head of Personnel")
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_suit_dm = new("[__FILE__]")

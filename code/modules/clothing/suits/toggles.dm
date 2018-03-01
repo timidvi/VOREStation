@@ -61,3 +61,4 @@
 				H.update_inv_wear_suit()
 	else
 		RemoveHood()
+/var/global/datum/telltale/code_modules_clothing_suits_toggles_dm = new("[__FILE__]")

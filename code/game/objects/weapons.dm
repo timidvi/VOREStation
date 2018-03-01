@@ -47,3 +47,4 @@
 /obj/item/weapon/proc/cleave_visual(var/mob/living/user, var/mob/living/target)
 	var/obj/effect/temporary_effect/cleave_attack/E = new(get_turf(src))
 	E.dir = get_dir(user, target)
+/var/global/datum/telltale/code_game_objects_weapons_dm = new("[__FILE__]")

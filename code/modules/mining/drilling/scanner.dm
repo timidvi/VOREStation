@@ -47,3 +47,4 @@
 			if(76 to INFINITY) result = "huge quantities"
 
 		user << "- [result] of [ore_type]."
+/var/global/datum/telltale/code_modules_mining_drilling_scanner_dm = new("[__FILE__]")

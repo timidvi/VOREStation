@@ -11,3 +11,4 @@
 	desc = "A rather grisly selection of cured hides and skin, sewn together to form a ragged mantle."
 	icon_state = "mantle-unathi"
 	body_parts_covered = UPPER_TORSO
+/var/global/datum/telltale/code_modules_clothing_suits_aliens_unathi_dm = new("[__FILE__]")

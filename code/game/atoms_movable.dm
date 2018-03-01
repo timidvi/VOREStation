@@ -300,3 +300,4 @@
 // Stub for now, override with better things.
 /atom/movable/proc/drop_location()
 	return loc
+/var/global/datum/telltale/code_game_atoms_movable_dm = new("[__FILE__]")

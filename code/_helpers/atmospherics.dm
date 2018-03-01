@@ -45,3 +45,5 @@
 
 /obj/item/weapon/flamethrower/atmosanalyze(var/mob/user)
 	if(ptank)	return atmosanalyzer_scan(src, ptank.air_contents, user)
+
+/var/global/datum/telltale/code__helpers_atmospherics_dm = new("[__FILE__]")

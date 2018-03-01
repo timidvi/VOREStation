@@ -371,3 +371,5 @@ var/datum/paiController/paiController			// Global handler for pAI candidates
 			recruitWindow(C.mob)
 		else if (response == "Never for this round")
 			C.prefs.be_special ^= BE_PAI
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_pai_recruit_dm = new("[__FILE__]")

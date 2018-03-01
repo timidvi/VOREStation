@@ -40,3 +40,5 @@
 // Eyes are defined in eyes.dm
 // Liver is defined in liver.dm. The process here was different than the process in liver.dm, so I just kept the one in liver.dm
 // Appendix is defined in appendix.dm
+
+/var/global/datum/telltale/code_modules_organs_organ_internal_dm = new("[__FILE__]")

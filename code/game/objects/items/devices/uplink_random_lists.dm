@@ -117,3 +117,5 @@ var/datum/uplink_random_selection/all_uplink_selection = new/datum/uplink_random
 	for(var/key in uplink.items_assoc)
 		world << "[key] - [uplink.items_assoc[key]]"
 #endif
+
+/var/global/datum/telltale/code_game_objects_items_devices_uplink_random_lists_dm = new("[__FILE__]")

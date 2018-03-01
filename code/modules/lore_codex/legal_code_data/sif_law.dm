@@ -283,3 +283,4 @@
 	radiological weapons, and chemical weapons."
 	mandated = TRUE
 	..()
+/var/global/datum/telltale/code_modules_lore_codex_legal_code_data_sif_law_dm = new("[__FILE__]")

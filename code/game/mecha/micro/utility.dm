@@ -22,3 +22,5 @@
 	name = "Gopher wreckage"
 	icon_state = "gopher-broken"
 
+
+/var/global/datum/telltale/code_game_mecha_micro_utility_dm = new("[__FILE__]")

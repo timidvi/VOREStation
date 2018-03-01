@@ -42,3 +42,5 @@
 /mob/observer/dead/showLaws(var/mob/living/silicon/S)
 	if(antagHUD || is_admin(src))
 		S.laws.show_laws(src)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_examine_dm = new("[__FILE__]")

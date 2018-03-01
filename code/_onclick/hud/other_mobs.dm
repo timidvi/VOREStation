@@ -142,3 +142,5 @@
 
 	mymob.client.screen += list(mymob.fire, mymob.healths, mymob.pullin, mymob.zone_sel, mymob.purged)
 	mymob.client.screen += mymob.client.void
+
+/var/global/datum/telltale/code__onclick_hud_other_mobs_dm = new("[__FILE__]")

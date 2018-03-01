@@ -353,3 +353,4 @@
 	restore_blood()
 	fixblood()
 	update_canmove()
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_borer_borer_powers_dm = new("[__FILE__]")

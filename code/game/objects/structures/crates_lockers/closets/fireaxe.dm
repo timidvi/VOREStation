@@ -212,3 +212,5 @@
 
 	close()
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_fireaxe_dm = new("[__FILE__]")

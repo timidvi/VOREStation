@@ -37,3 +37,5 @@
 	name = "Militaries"
 	auto_keywords = list("Mil","Military", "Militaries")
 	desired_type = /datum/lore/organization/mil
+
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_vr_orgs_dm = new("[__FILE__]")

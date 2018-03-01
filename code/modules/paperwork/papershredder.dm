@@ -188,3 +188,5 @@
 		M.drop_from_inventory(src)
 	new /obj/effect/decal/cleanable/ash(get_turf(src))
 	qdel(src)
+
+/var/global/datum/telltale/code_modules_paperwork_papershredder_dm = new("[__FILE__]")

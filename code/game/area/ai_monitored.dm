@@ -24,3 +24,5 @@
 		motioncamera.lostTarget(O)
 
 
+
+/var/global/datum/telltale/code_game_area_ai_monitored_dm = new("[__FILE__]")

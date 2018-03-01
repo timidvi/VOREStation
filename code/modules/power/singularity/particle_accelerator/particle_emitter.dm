@@ -45,3 +45,5 @@
 			A.set_dir(src.dir)
 			return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_power_singularity_particle_accelerator_particle_emitter_dm = new("[__FILE__]")

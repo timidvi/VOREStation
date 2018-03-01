@@ -27,3 +27,5 @@
 	icon_state = "cespace_helmet"
 	item_state = "cespace_helmet"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_equipment_dm = new("[__FILE__]")

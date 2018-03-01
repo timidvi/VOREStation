@@ -328,3 +328,4 @@
 
 	updateDialog()
 	return
+/var/global/datum/telltale/code_modules_power_antimatter_control_dm = new("[__FILE__]")

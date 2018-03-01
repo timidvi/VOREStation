@@ -210,3 +210,5 @@
 #define SUIT_SENSOR_BINARY   1
 #define SUIT_SENSOR_VITAL    2
 #define SUIT_SENSOR_TRACKING 3
+
+/var/global/datum/telltale/code___defines_items_clothing_dm = new("[__FILE__]")

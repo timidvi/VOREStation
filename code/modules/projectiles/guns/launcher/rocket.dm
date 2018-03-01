@@ -46,3 +46,5 @@
 	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].")
 	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	..()
+
+/var/global/datum/telltale/code_modules_projectiles_guns_launcher_rocket_dm = new("[__FILE__]")

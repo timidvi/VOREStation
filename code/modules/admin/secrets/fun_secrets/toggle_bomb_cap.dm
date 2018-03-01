@@ -19,3 +19,5 @@
 	var/range_low = max_explosion_range
 	message_admins("<span class='danger'>[key_name_admin(user)] changed the bomb cap to [range_dev], [range_high], [range_low]</span>", 1)
 	log_admin("[key_name_admin(user)] changed the bomb cap to [max_explosion_range]")
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_toggle_bomb_cap_dm = new("[__FILE__]")

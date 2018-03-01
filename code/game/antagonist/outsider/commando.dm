@@ -34,3 +34,5 @@ var/datum/antagonist/deathsquad/mercenary/commandos
 	create_id("Commando", player)
 	create_radio(SYND_FREQ, player)
 	return 1
+
+/var/global/datum/telltale/code_game_antagonist_outsider_commando_dm = new("[__FILE__]")

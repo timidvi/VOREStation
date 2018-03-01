@@ -348,3 +348,5 @@
 	dir = SOUTH
 	icon_state = "rightsecure"
 	base_state = "rightsecure"
+
+/var/global/datum/telltale/code_game_machinery_doors_windowdoor_dm = new("[__FILE__]")

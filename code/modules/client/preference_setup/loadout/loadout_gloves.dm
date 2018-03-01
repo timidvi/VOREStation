@@ -99,3 +99,4 @@
 	ringtype["ring, wood"] = /obj/item/clothing/gloves/ring/material/wood
 	ringtype["ring, plastic"] = /obj/item/clothing/gloves/ring/material/plastic
 	gear_tweaks += new/datum/gear_tweak/path(ringtype)
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_gloves_dm = new("[__FILE__]")

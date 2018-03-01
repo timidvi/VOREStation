@@ -808,3 +808,5 @@ datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/re
 			randmuti(M)
 			M << "<span class='warning'>You feel odd!</span>"
 	M.apply_effect(6 * removed, IRRADIATE, 0)
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Chemistry_Reagents_Toxins_dm = new("[__FILE__]")

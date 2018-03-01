@@ -149,3 +149,5 @@
 	AA.hide(hideFrom)
 
 
+
+/var/global/datum/telltale/code_modules_entopics_vr_alternate_appearance_dm = new("[__FILE__]")

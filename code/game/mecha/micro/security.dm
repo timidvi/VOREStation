@@ -56,3 +56,5 @@
 /obj/effect/decal/mecha_wreckage/micro/sec/weasel
 	name = "Weasel wreckage"
 	icon_state = "weasel-broken"
+
+/var/global/datum/telltale/code_game_mecha_micro_security_dm = new("[__FILE__]")

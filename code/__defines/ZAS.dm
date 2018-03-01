@@ -4,3 +4,5 @@
 #define BLOCKED 3		// Blocked, zone boundaries will not cross even if opened.
 
 #define ZONE_MIN_SIZE 14 // Zones with less than this many turfs will always merge, even if the connection is not direct
+
+/var/global/datum/telltale/code___defines_ZAS_dm = new("[__FILE__]")

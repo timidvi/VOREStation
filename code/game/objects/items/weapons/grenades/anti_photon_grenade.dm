@@ -20,3 +20,5 @@
 			..()
 			playsound(src.loc, 'sound/effects/bang.ogg', 50, 1, 5)
 			qdel(src)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_anti_photon_grenade_dm = new("[__FILE__]")

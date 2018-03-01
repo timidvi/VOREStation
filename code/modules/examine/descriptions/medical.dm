@@ -62,3 +62,4 @@
 	occupant will not use up the bag, and you can pick it back up.<br>\
 	<br>\
 	You can use a health analyzer to scan the occupant's vitals without opening the bag by clicking the occupied bag with the analyzer."
+/var/global/datum/telltale/code_modules_examine_descriptions_medical_dm = new("[__FILE__]")

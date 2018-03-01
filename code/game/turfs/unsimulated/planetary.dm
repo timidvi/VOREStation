@@ -69,3 +69,5 @@ var/list/planetary_walls = list()
 	nitrogen = MOLES_N2STANDARD
 	temperature = 310.92 // About 37.7C / 100F
 
+
+/var/global/datum/telltale/code_game_turfs_unsimulated_planetary_dm = new("[__FILE__]")

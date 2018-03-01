@@ -199,3 +199,5 @@
 	name = "shaft miner's jumpsuit"
 	icon_state = "miner"
 	rolled_sleeves = 0
+
+/var/global/datum/telltale/code_modules_clothing_under_jobs_civilian_dm = new("[__FILE__]")

@@ -71,3 +71,5 @@
 	.=..()
 	resting = 0
 	icon_state = icon_dead
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_badboi_dm = new("[__FILE__]")

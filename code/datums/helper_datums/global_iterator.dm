@@ -157,3 +157,5 @@ Data storage vars:
 	stop()
 	return QDEL_HINT_LETMELIVE
 	//Do not call ..()
+
+/var/global/datum/telltale/code_datums_helper_datums_global_iterator_dm = new("[__FILE__]")

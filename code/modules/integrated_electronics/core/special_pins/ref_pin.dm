@@ -12,3 +12,4 @@
 
 /datum/integrated_io/ref/display_pin_type()
 	return IC_FORMAT_REF
+/var/global/datum/telltale/code_modules_integrated_electronics_core_special_pins_ref_pin_dm = new("[__FILE__]")

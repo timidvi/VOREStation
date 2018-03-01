@@ -7,3 +7,5 @@
 
 	var/obj/screen/plane_master/augmented/aug = plane_holder.plane_masters[VIS_AUGMENTED]
 	aug.apply()
+
+/var/global/datum/telltale/code_modules_mob_login_vr_dm = new("[__FILE__]")

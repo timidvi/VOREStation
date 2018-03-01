@@ -364,3 +364,4 @@
 
 	src.set_dir(turn(src.dir, 90))
 	return 1
+/var/global/datum/telltale/code_modules_mining_drilling_drill_dm = new("[__FILE__]")

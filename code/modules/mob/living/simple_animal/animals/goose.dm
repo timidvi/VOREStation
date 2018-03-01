@@ -57,3 +57,5 @@
 
 /mob/living/simple_animal/hostile/goose/Process_Spacemove(var/check_drift = 0)
 	return 1 // VOREStation Edit No drifting in space!
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_goose_dm = new("[__FILE__]")

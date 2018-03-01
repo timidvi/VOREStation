@@ -8,3 +8,4 @@
 /obj/item/weapon/melee/energy/sword/imperial/activate(mob/living/user)
 	..()
 	icon_state = "sword1"
+/var/global/datum/telltale/code_game_objects_items_weapons_melee_energy_vr_dm = new("[__FILE__]")

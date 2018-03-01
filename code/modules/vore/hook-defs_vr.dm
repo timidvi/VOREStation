@@ -38,3 +38,4 @@
 
 	//Return 1 to superhook
 	return result
+/var/global/datum/telltale/code_modules_vore_hook_defs_vr_dm = new("[__FILE__]")

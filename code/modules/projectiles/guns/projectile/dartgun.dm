@@ -238,3 +238,5 @@
 
 /obj/item/projectile/bullet/chemdart/small
 	reagent_amount = 10
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_dartgun_dm = new("[__FILE__]")

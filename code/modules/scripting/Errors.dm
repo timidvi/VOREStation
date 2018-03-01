@@ -130,3 +130,4 @@
 	MaxCPU
 		name="MaxComputationalUse"
 		message="Maximum amount of computational cycles reached (>= 1000)."
+/var/global/datum/telltale/code_modules_scripting_Errors_dm = new("[__FILE__]")

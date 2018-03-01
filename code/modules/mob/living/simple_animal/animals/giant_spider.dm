@@ -569,3 +569,5 @@ Spider Procs
 #undef LAYING_EGGS
 #undef MOVING_TO_TARGET
 #undef SPINNING_COCOON
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_giant_spider_dm = new("[__FILE__]")

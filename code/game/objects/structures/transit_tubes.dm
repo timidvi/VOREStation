@@ -608,3 +608,5 @@ obj/structure/ex_act(severity)
 			return "SW"
 		else
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_transit_tubes_dm = new("[__FILE__]")

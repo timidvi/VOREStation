@@ -282,3 +282,4 @@
 
 /obj/item/weapon/melee/baton/shocker/robot/attackby(obj/item/weapon/W, mob/user)
 	return
+/var/global/datum/telltale/code_game_objects_items_weapons_stunbaton_dm = new("[__FILE__]")

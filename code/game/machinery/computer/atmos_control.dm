@@ -44,3 +44,5 @@
 	if(!atmos_control)
 		atmos_control = new(src, req_access, req_one_access, monitored_alarm_ids)
 	atmos_control.ui_interact(user)
+
+/var/global/datum/telltale/code_game_machinery_computer_atmos_control_dm = new("[__FILE__]")

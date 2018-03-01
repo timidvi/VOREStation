@@ -155,3 +155,5 @@
 
 /datum/computer/file/embedded_program/docking/simple/escape_pod/prepare_for_undocking()
 	eject_time = world.time + eject_delay*10
+
+/var/global/datum/telltale/code_modules_shuttles_escape_pods_dm = new("[__FILE__]")

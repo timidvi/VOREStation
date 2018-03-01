@@ -63,3 +63,4 @@
 		L+=T
 	var/loc = pick(L)
 	explosion(loc,2,5,11)*/
+/var/global/datum/telltale/code_modules_awaymissions_bluespaceartillery_dm = new("[__FILE__]")

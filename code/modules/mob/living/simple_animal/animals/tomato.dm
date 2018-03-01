@@ -21,3 +21,5 @@
 	attacktext = list("mauled")
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/tomatomeat
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_tomato_dm = new("[__FILE__]")

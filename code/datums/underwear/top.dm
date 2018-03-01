@@ -63,3 +63,4 @@
 	name = "Striped Bra"
 	icon_state = "striped_bra"
 	has_color = TRUE
+/var/global/datum/telltale/code_datums_underwear_top_dm = new("[__FILE__]")

@@ -70,3 +70,4 @@
 		if(guess_department(M) != department) // Ignore people outside the department we're counting.
 			continue
 		. += 1
+/var/global/datum/telltale/code_modules_metric_department_dm = new("[__FILE__]")

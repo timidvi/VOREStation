@@ -130,3 +130,5 @@
 				var/mob/dead/observer/D = O.orbiter
 				D.ManualFollow(target)
 */
+
+/var/global/datum/telltale/code_datums_orbit_dm = new("[__FILE__]")

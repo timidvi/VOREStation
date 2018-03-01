@@ -50,3 +50,5 @@ var/decl/observ/moved/moved_event = new()
 	. = ..()
 	if(. && !loc)
 		moved_event.raise_event(src, old_loc, null)
+
+/var/global/datum/telltale/code_datums_observation_moved_dm = new("[__FILE__]")

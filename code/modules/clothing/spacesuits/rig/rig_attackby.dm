@@ -194,3 +194,5 @@
 		subverted = 1
 		user << "<span class='danger'>You short out the access protocol for the suit.</span>"
 		return 1
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_rig_attackby_dm = new("[__FILE__]")

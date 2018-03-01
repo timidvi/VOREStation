@@ -49,3 +49,4 @@
 	circuit_type = /obj/item/integrated_circuit/converter/degrees2radians
 	inputs_to_give = list(90)
 	expected_outputs = list(1) // 1.570796
+/var/global/datum/telltale/code_unit_tests_integrated_circuits_converter_dm = new("[__FILE__]")

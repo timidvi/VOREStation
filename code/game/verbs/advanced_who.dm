@@ -80,3 +80,5 @@
 
 	msg += "<b>Total Players: [length(Lines)]</b>"
 	src << msg
+
+/var/global/datum/telltale/code_game_verbs_advanced_who_dm = new("[__FILE__]")

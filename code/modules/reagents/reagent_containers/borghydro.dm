@@ -157,3 +157,5 @@
 	reagent_volumes[reagent_ids[mode]] -= t
 	user << "<span class='notice'>You transfer [t] units of the solution to [target].</span>"
 	return
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_borghydro_dm = new("[__FILE__]")

@@ -230,3 +230,4 @@
 
 	stat_text()
 		return "Store Backup"
+/var/global/datum/telltale/code_modules_nifsoft_software____health_dm = new("[__FILE__]")

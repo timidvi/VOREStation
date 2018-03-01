@@ -77,3 +77,5 @@
 	cost = 15
 	containertype = /obj/machinery/holoplant/shipped
 	containername = "holoplant"
+
+/var/global/datum/telltale/code_datums_supplypacks_misc_dm = new("[__FILE__]")

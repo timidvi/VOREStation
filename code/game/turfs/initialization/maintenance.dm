@@ -59,3 +59,5 @@ var/global/list/random_junk
 			if(dir == EAST)
 				new /obj/effect/decal/cleanable/cobweb2(T)
 			return
+
+/var/global/datum/telltale/code_game_turfs_initialization_maintenance_dm = new("[__FILE__]")

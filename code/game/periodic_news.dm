@@ -143,3 +143,5 @@ proc/announce_newscaster_news(datum/news_announcement/news)
 
 	var/author = news.author ? news.author : sendto.author
 	news_network.SubmitArticle(news.message, author, news.channel_name, null, !news.can_be_redacted, news.message_type)
+
+/var/global/datum/telltale/code_game_periodic_news_dm = new("[__FILE__]")

@@ -134,3 +134,4 @@
 	name = "Al-Benj S'ri"
 	desc = "An astroid belt seperating S'randarr and Messa from Ahdomai. This is known also as \"The Sea of Souls\". Those sould in Al-Benj S'ri \
 	are said to be in limbo between S'randarr and Messa, as they both fight over them."
+/var/global/datum/telltale/code_datums_locations_s_randarr_dm = new("[__FILE__]")

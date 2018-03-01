@@ -56,3 +56,5 @@
 		command_announcement.Announce("The drones that were malfunctioning have been recovered safely.", "Rogue drone alert")
 	else
 		command_announcement.Announce("We're disappointed at the loss of the drones, but the survivors have been recovered.", "Rogue drone alert")
+
+/var/global/datum/telltale/code_modules_events_rogue_drones_dm = new("[__FILE__]")

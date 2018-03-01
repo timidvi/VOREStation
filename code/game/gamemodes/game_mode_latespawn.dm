@@ -65,3 +65,5 @@
 			return
 	message_admins("[uppertext(name)]: Failed to proc a viable spawn template.")
 	next_spawn = world.time + rand(min_autotraitor_delay, max_autotraitor_delay)
+
+/var/global/datum/telltale/code_game_gamemodes_game_mode_latespawn_dm = new("[__FILE__]")

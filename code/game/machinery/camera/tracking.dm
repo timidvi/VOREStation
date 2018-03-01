@@ -279,3 +279,5 @@ mob/living/silicon/robot/tracking_initiated()
 #undef TRACKING_POSSIBLE
 #undef TRACKING_NO_COVERAGE
 #undef TRACKING_TERMINATE
+
+/var/global/datum/telltale/code_game_machinery_camera_tracking_dm = new("[__FILE__]")

@@ -52,3 +52,4 @@
 /obj/item/poi/brokenoldreactor/Destroy()
 	processing_objects -= src
 	return ..()
+/var/global/datum/telltale/code_game_objects_items_poi_items_dm = new("[__FILE__]")

@@ -110,3 +110,4 @@
 	if(istype(vr_holder.loc, /obj/machinery/vr_sleeper))
 		var/obj/machinery/vr_sleeper/V = vr_holder.loc
 		V.go_out()
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_virtual_reality_avatar_dm = new("[__FILE__]")

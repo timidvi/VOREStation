@@ -59,3 +59,5 @@
 	else
 		var/msg = pick(comments)
 		src.say(msg)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_humanoids_head_dm = new("[__FILE__]")

@@ -386,3 +386,5 @@ var/global/list/round_voters = list() // Keeps track of the individuals voting f
 
 	if(vote)
 		src << browse(vote.interface(src), "window=vote;size=500x[300 + vote.choices.len * 25]")
+
+/var/global/datum/telltale/code_controllers_voting_dm = new("[__FILE__]")

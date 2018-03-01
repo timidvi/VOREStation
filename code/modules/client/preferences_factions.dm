@@ -66,3 +66,4 @@ var/global/list/religion_choices = list(
 	"Agnosticism",
 	"Deism"
 	)
+/var/global/datum/telltale/code_modules_client_preferences_factions_dm = new("[__FILE__]")

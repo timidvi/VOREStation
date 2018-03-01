@@ -16,3 +16,4 @@ var/maze_cell_count = 0
 	y = ny
 	ox = nox
 	oy = noy
+/var/global/datum/telltale/code_modules_random_map_mazes_maze_cell_dm = new("[__FILE__]")

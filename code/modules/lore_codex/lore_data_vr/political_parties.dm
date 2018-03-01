@@ -12,3 +12,5 @@
 	name = "Blank Page"
 	keywords += list("Blank")
 	data = "<i>For some weird reason, this page is blank. This looks like a publishing error.</i>"
+
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_vr_political_parties_dm = new("[__FILE__]")

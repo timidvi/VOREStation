@@ -400,3 +400,5 @@ datum/wound/puncture/massive
 
 /datum/wound/lost_limb/can_merge(var/datum/wound/other)
 	return 0 //cannot be merged
+
+/var/global/datum/telltale/code_modules_organs_wound_dm = new("[__FILE__]")

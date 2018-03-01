@@ -54,3 +54,4 @@
 /datum/gear/accessory/flops/New()
 	..()
 	gear_tweaks = list(gear_tweak_free_color_choice)
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_accessories_vr_dm = new("[__FILE__]")

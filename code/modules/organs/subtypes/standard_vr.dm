@@ -56,3 +56,5 @@
 
 /obj/item/organ/external/head/vr/sergal
 	eye_icon_vr = "eyes_sergal"
+
+/var/global/datum/telltale/code_modules_organs_subtypes_standard_vr_dm = new("[__FILE__]")

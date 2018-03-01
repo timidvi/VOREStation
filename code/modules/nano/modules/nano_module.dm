@@ -14,3 +14,5 @@
 
 /datum/nano_module/proc/can_still_topic(var/datum/topic_state/state = default_state)
 	return CanUseTopic(usr, state) == STATUS_INTERACTIVE
+
+/var/global/datum/telltale/code_modules_nano_modules_nano_module_dm = new("[__FILE__]")

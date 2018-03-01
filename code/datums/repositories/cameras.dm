@@ -32,3 +32,5 @@ var/global/datum/repository/cameras/camera_repository = new()
 				networks[network] = list()
 			var/list/netlist = networks[network]
 			netlist[++netlist.len] = cam
+
+/var/global/datum/telltale/code_datums_repositories_cameras_dm = new("[__FILE__]")

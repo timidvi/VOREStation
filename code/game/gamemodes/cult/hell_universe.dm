@@ -82,3 +82,5 @@ In short:
 		if (!(APC.stat & BROKEN) && !APC.is_critical)
 			APC.emagged = 1
 			APC.queue_icon_update()
+
+/var/global/datum/telltale/code_game_gamemodes_cult_hell_universe_dm = new("[__FILE__]")

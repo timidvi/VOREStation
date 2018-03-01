@@ -70,3 +70,5 @@
 				src.state("\The [src] buzzes, \"Insufficient growth density to complete analysis.\"")
 				pause = 0
 	return
+
+/var/global/datum/telltale/code_modules_virus__analyser_dm = new("[__FILE__]")

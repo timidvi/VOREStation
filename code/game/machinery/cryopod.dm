@@ -687,3 +687,5 @@
 
 		//Despawning occurs when process() is called with an occupant without a client.
 		add_fingerprint(M)
+
+/var/global/datum/telltale/code_game_machinery_cryopod_dm = new("[__FILE__]")

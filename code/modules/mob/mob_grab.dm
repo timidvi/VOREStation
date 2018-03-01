@@ -412,3 +412,5 @@
 	qdel(hud)
 	hud = null
 	return ..()
+
+/var/global/datum/telltale/code_modules_mob_mob_grab_dm = new("[__FILE__]")

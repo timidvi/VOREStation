@@ -26,3 +26,5 @@
 
 	S.move(origin_area, destination_area)
 	log_and_message_admins("moved the [shuttle_tag] shuttle", user)
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_move_shuttle_dm = new("[__FILE__]")

@@ -122,3 +122,4 @@
 		chambered = null
 	else
 		user << "<span class='warning'>[src] is empty.</span>"
+/var/global/datum/telltale/code_modules_projectiles_guns_launcher_grenade_launcher_dm = new("[__FILE__]")

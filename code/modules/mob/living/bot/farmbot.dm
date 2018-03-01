@@ -403,3 +403,4 @@
 
 /obj/item/weapon/farmbot_arm_assembly/attack_hand(mob/user as mob)
 	return //it's a converted watertank, no you cannot pick it up and put it in your backpack
+/var/global/datum/telltale/code_modules_mob_living_bot_farmbot_dm = new("[__FILE__]")

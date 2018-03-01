@@ -253,3 +253,5 @@ var/global/list/image/splatter_cache=list()
 	...()
 	virus2 = new /datum/disease2/disease
 	virus2.makerandom()
+
+/var/global/datum/telltale/code_game_objects_effects_decals_Cleanable_humans_dm = new("[__FILE__]")

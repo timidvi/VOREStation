@@ -996,3 +996,5 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	else if(isliving(M))
 		M.ghostize()
 		qdel(M) //Bye
+
+/var/global/datum/telltale/code_modules_admin_verbs_randomverbs_dm = new("[__FILE__]")

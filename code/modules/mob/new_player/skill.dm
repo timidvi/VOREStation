@@ -210,3 +210,5 @@ var/global/list/SKILL_PRE = list("Engineer" = SKILL_ENGINEER, "Roboticist" = SKI
 	set name = "Show Own Skills"
 
 	show_skill_window(src, src)
+
+/var/global/datum/telltale/code_modules_mob_new_player_skill_dm = new("[__FILE__]")

@@ -86,3 +86,5 @@
 
 	for(var/obj/screen/movable/spell_master/spell_master in spell_masters)
 		spell_master.silence_spells(amount)
+
+/var/global/datum/telltale/code_modules_spells_spells_dm = new("[__FILE__]")

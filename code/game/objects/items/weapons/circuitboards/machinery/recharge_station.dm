@@ -12,3 +12,4 @@
 							/obj/item/weapon/stock_parts/capacitor = 2,
 							/obj/item/weapon/stock_parts/manipulator = 2,
 							/obj/item/weapon/cell = 1)
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_recharge_station_dm = new("[__FILE__]")

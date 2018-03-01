@@ -137,3 +137,5 @@
 
 		src.updateUsrDialog()
 		return
+
+/var/global/datum/telltale/code_modules_power_gravitygenerator_dm = new("[__FILE__]")

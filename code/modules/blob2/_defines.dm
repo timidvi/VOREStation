@@ -8,3 +8,4 @@
 #define BLOB_DIFFICULTY_MEDIUM		1
 #define BLOB_DIFFICULTY_HARD		2
 #define BLOB_DIFFICULTY_SUPERHARD	3
+/var/global/datum/telltale/code_modules_blob___defines_dm = new("[__FILE__]")

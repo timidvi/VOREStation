@@ -48,3 +48,5 @@
 	maxHealth = 200
 	health = 200
 	faction = "virgo3b"
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_dragon_dm = new("[__FILE__]")

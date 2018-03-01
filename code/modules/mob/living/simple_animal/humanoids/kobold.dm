@@ -41,3 +41,5 @@
 	..()
 	if(!stat)
 		flick("kobold_walk",src)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_humanoids_kobold_dm = new("[__FILE__]")

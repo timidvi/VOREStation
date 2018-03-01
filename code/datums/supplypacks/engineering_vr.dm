@@ -25,3 +25,5 @@
 	containertype = /obj/structure/closet/crate/secure/engineering
 	containername = "Tesla Generator crate"
 	access = access_ce
+
+/var/global/datum/telltale/code_datums_supplypacks_engineering_vr_dm = new("[__FILE__]")

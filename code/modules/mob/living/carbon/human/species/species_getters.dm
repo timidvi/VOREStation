@@ -104,3 +104,5 @@
 
 /datum/species/proc/get_vision_flags(var/mob/living/carbon/human/H)
 	return vision_flags
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_species_getters_dm = new("[__FILE__]")

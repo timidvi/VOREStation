@@ -132,3 +132,4 @@
 		potential_spells = all_technomancer_gambit_spells.Copy()
 
 	return pick(potential_spells)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_gambit_dm = new("[__FILE__]")

@@ -185,3 +185,5 @@
 	for(var/t in jobban_keylist)
 		if(findtext(t, job_filter))
 			usr << "[t]"
+
+/var/global/datum/telltale/code_modules_admin_verbs_diagnostics_dm = new("[__FILE__]")

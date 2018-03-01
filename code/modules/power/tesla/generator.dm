@@ -8,3 +8,5 @@
 /obj/machinery/the_singularitygen/tesla/tesla_act(power, explosive = FALSE)
 	if(explosive)
 		energy += power
+
+/var/global/datum/telltale/code_modules_power_tesla_generator_dm = new("[__FILE__]")

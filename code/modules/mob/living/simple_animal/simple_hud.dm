@@ -306,3 +306,5 @@
 	client.screen += client.void
 
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_simple_hud_dm = new("[__FILE__]")

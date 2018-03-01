@@ -1162,3 +1162,5 @@ var/list/floor_decals = list()
 /obj/effect/floor_decal/grass_edge/corner
 	name = "grass edge"
 	icon_state = "grass_edge_corner"
+
+/var/global/datum/telltale/code_game_turfs_flooring_flooring_decals_dm = new("[__FILE__]")

@@ -52,3 +52,5 @@ var/datum/antagonist/ert/ert
 
 	create_id(role_text, player)
 	return 1
+
+/var/global/datum/telltale/code_game_antagonist_outsider_ert_dm = new("[__FILE__]")

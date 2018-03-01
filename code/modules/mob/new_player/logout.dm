@@ -11,3 +11,5 @@
 		key = null//We null their key before deleting the mob, so they are properly kicked out.
 		qdel(src)
 	return
+
+/var/global/datum/telltale/code_modules_mob_new_player_logout_dm = new("[__FILE__]")

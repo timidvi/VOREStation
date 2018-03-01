@@ -39,3 +39,5 @@ SUBSYSTEM_DEF(bellies)
 
 		if (MC_TICK_CHECK)
 			return
+
+/var/global/datum/telltale/code_controllers_subsystems_bellies_vr_dm = new("[__FILE__]")

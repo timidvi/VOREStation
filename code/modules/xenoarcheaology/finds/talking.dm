@@ -120,3 +120,5 @@
 	for(var/mob/M in listening)
 		M << "\icon[holder_atom] <b>[holder_atom]</b> reverberates, \"<font color='blue'>[msg]</font>\""
 	last_talk_time = world.time
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_talking_dm = new("[__FILE__]")

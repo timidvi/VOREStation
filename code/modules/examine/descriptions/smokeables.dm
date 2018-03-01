@@ -37,3 +37,5 @@
 	description_fluff = "ClassiCo Accessories and Haberdashers is a widespread company originating out of Mars.  They seek to create quality goods to give men a more 'classy' look.  Most of their items are high-end and expensive, but they plege to back their prices up with quality.<br>\
 	<br>\
 	This pipe is a ClassiCo pipe.  It is made out of fine, stained cherry wood."
+
+/var/global/datum/telltale/code_modules_examine_descriptions_smokeables_dm = new("[__FILE__]")

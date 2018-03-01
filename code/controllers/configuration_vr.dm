@@ -54,3 +54,5 @@
 				config.time_off = TRUE
 
 	return 1
+
+/var/global/datum/telltale/code_controllers_configuration_vr_dm = new("[__FILE__]")

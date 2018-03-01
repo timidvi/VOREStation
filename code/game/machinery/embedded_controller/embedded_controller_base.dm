@@ -82,3 +82,4 @@ obj/machinery/embedded_controller/radio/Destroy()
 	radio_controller.remove_object(src, frequency)
 	frequency = new_frequency
 	radio_connection = radio_controller.add_object(src, frequency, radio_filter)
+/var/global/datum/telltale/code_game_machinery_embedded_controller_embedded_controller_base_dm = new("[__FILE__]")

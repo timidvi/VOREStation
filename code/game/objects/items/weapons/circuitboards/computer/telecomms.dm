@@ -16,3 +16,5 @@
 	name = T_BOARD("telecommunications traffic control console")
 	build_path = /obj/machinery/computer/telecomms/traffic
 	origin_tech = list(TECH_DATA = 3)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_computer_telecomms_dm = new("[__FILE__]")

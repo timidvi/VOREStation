@@ -11,3 +11,4 @@
 	//No fun!
 	return 0
 	
+/var/global/datum/telltale/code_datums_helper_datums_teleport_vr_dm = new("[__FILE__]")

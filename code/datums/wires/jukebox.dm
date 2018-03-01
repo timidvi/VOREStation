@@ -76,3 +76,5 @@ var/const/WIRE_NEXT = 1024
 			if (IsIndexCut(WIRE_SPEEDDOWN))
 				newfreq *= 0.5
 			A.freq = newfreq
+
+/var/global/datum/telltale/code_datums_wires_jukebox_dm = new("[__FILE__]")

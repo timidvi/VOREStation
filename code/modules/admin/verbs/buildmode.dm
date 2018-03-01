@@ -488,3 +488,4 @@
 					T.ChangeTurf(floor_type)
 				else
 					new floor_type(T)
+/var/global/datum/telltale/code_modules_admin_verbs_buildmode_dm = new("[__FILE__]")

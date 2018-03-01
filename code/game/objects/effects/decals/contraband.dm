@@ -163,3 +163,5 @@
 	// Description suffix
 	var/desc=""
 	var/icon_state=""
+
+/var/global/datum/telltale/code_game_objects_effects_decals_contraband_dm = new("[__FILE__]")

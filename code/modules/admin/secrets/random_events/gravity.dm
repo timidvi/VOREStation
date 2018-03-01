@@ -29,3 +29,5 @@
 		log_admin("[key_name(user)] toggled gravity off.", 1)
 		message_admins("<span class='notice'>[key_name_admin(usr)] toggled gravity off.</span>", 1)
 		command_announcement.Announce("Feedback surge detected in mass-distributions systems. Artificial gravity has been disabled whilst the system reinitializes. Further failures may result in a gravitational collapse and formation of blackholes. Have a nice day.")
+
+/var/global/datum/telltale/code_modules_admin_secrets_random_events_gravity_dm = new("[__FILE__]")

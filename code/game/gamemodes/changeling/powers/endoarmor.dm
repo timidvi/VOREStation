@@ -21,3 +21,4 @@
 		H.add_modifier(/datum/modifier/endoarmor)
 	//	H.maxHealth += 50
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_endoarmor_dm = new("[__FILE__]")

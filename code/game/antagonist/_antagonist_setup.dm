@@ -81,3 +81,5 @@ var/global/list/antag_names_to_ids = list()
 		if(player in antag.pending_antagonists)
 			return 1
 	return 0
+
+/var/global/datum/telltale/code_game_antagonist__antagonist_setup_dm = new("[__FILE__]")

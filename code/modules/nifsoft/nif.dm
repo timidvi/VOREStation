@@ -603,3 +603,5 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	else
 		nif.examine_msg = new_flavor
 		nif.save_data["examine_msg"] = new_flavor
+
+/var/global/datum/telltale/code_modules_nifsoft_nif_dm = new("[__FILE__]")

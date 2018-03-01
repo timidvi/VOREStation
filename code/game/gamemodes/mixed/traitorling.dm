@@ -9,3 +9,5 @@
 	end_on_antag_death = 1
 	require_all_templates = 1
 	antag_tags = list(MODE_CHANGELING, MODE_TRAITOR)
+
+/var/global/datum/telltale/code_game_gamemodes_mixed_traitorling_dm = new("[__FILE__]")

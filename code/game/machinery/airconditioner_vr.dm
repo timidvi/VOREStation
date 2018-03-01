@@ -157,3 +157,4 @@
 #undef MODE_IDLE
 #undef MODE_HEATING
 #undef MODE_COOLING
+/var/global/datum/telltale/code_game_machinery_airconditioner_vr_dm = new("[__FILE__]")

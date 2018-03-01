@@ -237,3 +237,5 @@ Transponder Codes:<UL>"}
 /obj/machinery/navbeacon/patrol/New()
 	codes = list("patrol" = 1, "next_patrol" = next_patrol)
 	..()
+
+/var/global/datum/telltale/code_game_machinery_navbeacon_dm = new("[__FILE__]")

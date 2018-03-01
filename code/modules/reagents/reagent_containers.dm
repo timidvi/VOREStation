@@ -149,3 +149,5 @@
 	var/trans = reagents.trans_to(target, amount_per_transfer_from_this)
 	user << "<span class='notice'>You transfer [trans] units of the solution to [target].</span>"
 	return 1
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_dm = new("[__FILE__]")

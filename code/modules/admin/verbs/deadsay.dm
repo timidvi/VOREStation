@@ -26,3 +26,5 @@
 	say_dead_direct("<span class='name'>[stafftype]([src.holder.fakekey ? src.holder.fakekey : src.key])</span> says, <span class='message'>\"[msg]\"</span>")
 
 	feedback_add_details("admin_verb","D") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/var/global/datum/telltale/code_modules_admin_verbs_deadsay_dm = new("[__FILE__]")

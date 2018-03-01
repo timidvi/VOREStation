@@ -129,3 +129,5 @@
 		var/datum/chunk/chunk = cameranet.getCameraChunk(x, y, z)
 		usr.client.debug_variables(chunk)
 */
+
+/var/global/datum/telltale/code_modules_mob_freelook_visualnet_dm = new("[__FILE__]")

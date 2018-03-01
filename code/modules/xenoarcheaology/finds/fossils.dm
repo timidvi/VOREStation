@@ -102,3 +102,5 @@
 
 /obj/item/weapon/fossil/plant/New()
 	icon_state = "plant[rand(1,4)]"
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_fossils_dm = new("[__FILE__]")

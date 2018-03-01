@@ -263,3 +263,5 @@
 #undef REGULATE_NONE
 #undef REGULATE_INPUT
 #undef REGULATE_OUTPUT
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_passive_gate_dm = new("[__FILE__]")

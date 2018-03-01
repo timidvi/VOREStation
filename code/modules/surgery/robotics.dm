@@ -478,3 +478,5 @@
 /datum/surgery_step/robotics/install_mmi/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message("<span class='warning'>[user]'s hand slips.</span>", \
 	"<span class='warning'>Your hand slips.</span>")
+
+/var/global/datum/telltale/code_modules_surgery_robotics_dm = new("[__FILE__]")

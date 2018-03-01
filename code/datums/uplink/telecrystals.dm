@@ -37,3 +37,4 @@
 
 /datum/uplink_item/item/telecrystal/all/cost(var/telecrystals)
 	return max(1, telecrystals)
+/var/global/datum/telltale/code_datums_uplink_telecrystals_dm = new("[__FILE__]")

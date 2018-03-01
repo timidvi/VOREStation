@@ -175,3 +175,5 @@
 /datum/shuttle/ferry/proc/arrived()
 	return	//do nothing for now
 
+
+/var/global/datum/telltale/code_modules_shuttles_shuttle_ferry_dm = new("[__FILE__]")

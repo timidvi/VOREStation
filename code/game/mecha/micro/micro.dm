@@ -141,3 +141,5 @@
 /obj/effect/decal/mecha_wreckage/micro
 	icon = 'icons/mecha/micro.dmi'
 
+
+/var/global/datum/telltale/code_game_mecha_micro_micro_dm = new("[__FILE__]")

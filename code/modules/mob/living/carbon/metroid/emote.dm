@@ -97,3 +97,4 @@
 	if(updateicon)
 		regenerate_icons()
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_emote_dm = new("[__FILE__]")

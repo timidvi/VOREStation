@@ -44,3 +44,4 @@
 		"sand" = 2
 		)
 	product = /obj/item/stack/material/glass/phoronglass
+/var/global/datum/telltale/code_modules_mining_alloys_dm = new("[__FILE__]")

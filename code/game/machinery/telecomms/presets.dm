@@ -220,3 +220,4 @@
 	network = "tcommsat"
 	produces_heat = 0
 	autolinkers = list("broadcasterCent")
+/var/global/datum/telltale/code_game_machinery_telecomms_presets_dm = new("[__FILE__]")

@@ -172,3 +172,4 @@
 	circuit_type = /obj/item/integrated_circuit/arithmetic/modulo
 	inputs_to_give = list(20, 5)
 	expected_outputs = list(0)
+/var/global/datum/telltale/code_unit_tests_integrated_circuits_arithmetic_dm = new("[__FILE__]")

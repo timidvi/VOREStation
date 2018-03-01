@@ -17,3 +17,5 @@
 				var/obj/item/seeds/S = new(get_turf(host))
 				S.seed_type = name
 				S.update_seed()
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_mobs_dm = new("[__FILE__]")

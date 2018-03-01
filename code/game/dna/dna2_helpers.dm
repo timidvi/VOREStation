@@ -255,3 +255,5 @@
 // Used below, simple injection modifier.
 /proc/probinj(var/pr, var/inj)
 	return prob(pr+inj*pr)
+
+/var/global/datum/telltale/code_game_dna_dna__helpers_dm = new("[__FILE__]")

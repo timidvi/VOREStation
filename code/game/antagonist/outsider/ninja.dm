@@ -171,3 +171,5 @@ var/datum/antagonist/ninja/ninjas
 		else
 			directive += "There are no special supplemental instructions at this time."
 	return directive
+
+/var/global/datum/telltale/code_game_antagonist_outsider_ninja_dm = new("[__FILE__]")

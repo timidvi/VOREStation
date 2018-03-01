@@ -38,3 +38,5 @@
 
 /spell/targeted/equip_item/proc/summon_item(var/newtype)
 	return new newtype
+
+/var/global/datum/telltale/code_modules_spells_targeted_equip_equip_dm = new("[__FILE__]")

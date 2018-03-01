@@ -42,3 +42,4 @@
 	uses--
 	if(uses == 0)
 		qdel(src)
+/var/global/datum/telltale/code_modules_awaymissions_trigger_dm = new("[__FILE__]")

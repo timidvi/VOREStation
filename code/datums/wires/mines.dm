@@ -79,3 +79,5 @@
 /datum/wires/mines/CanUse(var/mob/living/L)
 	var/obj/effect/mine/M = holder
 	return M.panel_open
+
+/var/global/datum/telltale/code_datums_wires_mines_dm = new("[__FILE__]")

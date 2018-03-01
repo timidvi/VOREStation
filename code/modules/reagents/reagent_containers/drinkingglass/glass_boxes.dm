@@ -78,3 +78,5 @@
 /obj/item/weapon/storage/box/glass_extras/sticks
 	name = "box of drink sticks"
 	extra_type = /obj/item/weapon/glass_extra/stick
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_drinkingglass_glass_boxes_dm = new("[__FILE__]")

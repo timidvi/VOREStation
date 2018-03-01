@@ -543,3 +543,4 @@
 
 /datum/blob_type/radioactive_ooze/on_pulse(var/obj/structure/blob/B)
 	radiation_repository.radiate(B, 200)
+/var/global/datum/telltale/code_modules_blob__overmind_types_dm = new("[__FILE__]")

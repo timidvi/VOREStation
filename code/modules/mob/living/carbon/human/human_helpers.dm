@@ -171,3 +171,5 @@
 #undef HUMAN_EATING_NO_ISSUE
 #undef HUMAN_EATING_NO_MOUTH
 #undef HUMAN_EATING_BLOCKED_MOUTH
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_helpers_dm = new("[__FILE__]")

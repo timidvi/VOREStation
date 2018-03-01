@@ -72,3 +72,4 @@ How they spawn stuff is decided by behaviour vars, which are explained below
 
 /spell/aoe_turf/conjure/proc/conjure_animation(var/atom/movable/overlay/animation, var/turf/target)
 	qdel(animation)
+/var/global/datum/telltale/code_modules_spells_aoe_turf_conjure_conjure_dm = new("[__FILE__]")

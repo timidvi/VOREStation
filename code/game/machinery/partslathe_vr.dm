@@ -382,3 +382,5 @@
 
 /datum/category_item/partslathe/proc/build(var/loc)
 	return new path(loc)
+
+/var/global/datum/telltale/code_game_machinery_partslathe_vr_dm = new("[__FILE__]")

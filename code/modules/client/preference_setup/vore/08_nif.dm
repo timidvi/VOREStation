@@ -50,3 +50,5 @@
 
 /datum/category_item/player_setup_item/vore/nif/content(var/mob/user)
 	. += "<b>NIF:</b> [ispath(pref.nif_path) ? "Present" : "None"]"
+
+/var/global/datum/telltale/code_modules_client_preference_setup_vore____nif_dm = new("[__FILE__]")

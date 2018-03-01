@@ -12,3 +12,5 @@
 	required_enemies = 1
 	end_on_antag_death = 0
 	antag_tags = list(MODE_TECHNOMANCER)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_technomancer_dm = new("[__FILE__]")

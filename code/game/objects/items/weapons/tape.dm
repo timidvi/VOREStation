@@ -204,3 +204,5 @@
 				pixel_y += 32
 			else if(dir_offset & SOUTH)
 				pixel_y -= 32
+
+/var/global/datum/telltale/code_game_objects_items_weapons_tape_dm = new("[__FILE__]")

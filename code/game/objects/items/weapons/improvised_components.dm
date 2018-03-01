@@ -69,3 +69,4 @@
 		qdel(src)
 		user.put_in_hands(finished)
 	update_icon(user)
+/var/global/datum/telltale/code_game_objects_items_weapons_improvised_components_dm = new("[__FILE__]")

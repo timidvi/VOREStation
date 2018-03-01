@@ -240,3 +240,5 @@
 			playsound(imp.loc, 'sound/items/countdown.ogg', 75, 1, -3)
 			spawn(25)
 				imp.activate()
+
+/var/global/datum/telltale/code_modules_surgery_implant_dm = new("[__FILE__]")

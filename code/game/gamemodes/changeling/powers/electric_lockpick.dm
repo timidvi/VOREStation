@@ -94,3 +94,4 @@
 
 		return 1
 	return 0
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_electric_lockpick_dm = new("[__FILE__]")

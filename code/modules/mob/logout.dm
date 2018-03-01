@@ -13,3 +13,4 @@
 	..()
 
 	return 1
+/var/global/datum/telltale/code_modules_mob_logout_dm = new("[__FILE__]")

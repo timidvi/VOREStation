@@ -91,3 +91,5 @@ var/list/nuke_disks = list()
 
 	..()
 	return
+
+/var/global/datum/telltale/code_game_gamemodes_nuclear_nuclear_dm = new("[__FILE__]")

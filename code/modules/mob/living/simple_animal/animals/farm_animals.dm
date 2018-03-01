@@ -286,3 +286,5 @@ var/global/chicken_count = 0
 			qdel(src)
 	else
 		processing_objects.Remove(src)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_farm_animals_dm = new("[__FILE__]")

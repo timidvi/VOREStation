@@ -40,3 +40,4 @@
 
 /mob/living/simple_animal/hostile/dino/virgo3b
 	faction = "virgo3b"
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_dino_dm = new("[__FILE__]")

@@ -68,3 +68,5 @@ var/global/list/cached_icons = list()
 		icon_state = "paint_white"
 		paint_type = "white"
 
+
+/var/global/datum/telltale/code_game_objects_items_weapons_paint_dm = new("[__FILE__]")

@@ -61,3 +61,5 @@ var/global/list/all_lobby_tracks = list()
 		if(T.lobby)
 			all_lobby_tracks += T
 	return 1
+
+/var/global/datum/telltale/code_modules_media_media_tracks_dm = new("[__FILE__]")

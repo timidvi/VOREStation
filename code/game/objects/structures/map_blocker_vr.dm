@@ -13,3 +13,5 @@
 	. = ..()
 	icon = null
 	icon_state = null
+
+/var/global/datum/telltale/code_game_objects_structures_map_blocker_vr_dm = new("[__FILE__]")

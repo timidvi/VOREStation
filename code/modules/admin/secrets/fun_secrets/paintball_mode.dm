@@ -12,3 +12,5 @@
 	for(var/obj/effect/decal/cleanable/blood/B in world)
 		B.basecolor = "rainbow"
 		B.update_icon()
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_paintball_mode_dm = new("[__FILE__]")

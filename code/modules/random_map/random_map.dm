@@ -207,3 +207,5 @@ var/global/list/map_count = list()
 
 /datum/random_map/proc/handle_post_overlay_on(var/datum/random_map/target_map, var/tx, var/ty)
 	return
+
+/var/global/datum/telltale/code_modules_random_map_random_map_dm = new("[__FILE__]")

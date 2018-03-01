@@ -106,3 +106,5 @@
 			return TOPIC_REFRESH
 
 	return ..();
+
+/var/global/datum/telltale/code_modules_client_preference_setup_vore____size_dm = new("[__FILE__]")

@@ -337,3 +337,5 @@
 /obj/item/integrated_circuit/output/led/pink
 	name = "pink LED"
 	led_color = COLOR_PINK
+
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_output_dm = new("[__FILE__]")

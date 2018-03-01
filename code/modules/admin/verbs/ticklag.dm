@@ -22,3 +22,5 @@
 		src << "<font color='red'>Error: ticklag(): Invalid world.ticklag value. No changes made.</font>"
 
 
+
+/var/global/datum/telltale/code_modules_admin_verbs_ticklag_dm = new("[__FILE__]")

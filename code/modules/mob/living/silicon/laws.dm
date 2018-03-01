@@ -173,3 +173,5 @@
 							"[prob(50)?"The crew":random_player] is [prob(50)?"less":"more"] intelligent than average. Point out every action and statement which supports this fact.",
 							"There will be a mandatory tea break every 30 minutes, with a duration of 5 minutes. Anyone caught working during a tea break must be sent a formal, but fairly polite, complaint about their actions, in writing.")
 	return pick(laws)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_laws_dm = new("[__FILE__]")

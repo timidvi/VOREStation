@@ -317,3 +317,5 @@
 	data = "X-class drones emerge from unrated software, are produced by rogue labs, or cross the border from foreign space. They are considered a threat to national \
 	security and deleted when encountered in SolGov space, with the producers prosecuted legally if it has a SolGov origin. The few Skrellian drone labs will usually \
 	rate their product with EIO to allow their product to be imported."
+
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_species_dm = new("[__FILE__]")

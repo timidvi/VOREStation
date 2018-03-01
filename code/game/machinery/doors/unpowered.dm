@@ -23,3 +23,5 @@
 	icon_state = "door1"
 	opacity = 1
 	density = 1
+
+/var/global/datum/telltale/code_game_machinery_doors_unpowered_dm = new("[__FILE__]")

@@ -114,3 +114,5 @@
 		return 1
 	else
 		user << "<span class='warning'>You must select a camera network circuit!</span>"
+
+/var/global/datum/telltale/code_game_machinery_computer_camera_circuit_dm = new("[__FILE__]")

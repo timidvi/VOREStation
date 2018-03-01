@@ -242,3 +242,5 @@
 
 /proc/isLeap(y)
 	return ((y) % 4 == 0 && ((y) % 100 != 0 || (y) % 400 == 0))
+
+/var/global/datum/telltale/code__helpers_type_type_dm = new("[__FILE__]")

@@ -140,3 +140,4 @@
 	..()
 	if(prob(2))
 		throw_item()
+/var/global/datum/telltale/code_game_objects_stumble_into_vr_dm = new("[__FILE__]")

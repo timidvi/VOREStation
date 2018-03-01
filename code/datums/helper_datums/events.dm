@@ -65,3 +65,4 @@
 			call(listener,proc_name)(arglist(args))
 			return 1
 		return
+/var/global/datum/telltale/code_datums_helper_datums_events_dm = new("[__FILE__]")

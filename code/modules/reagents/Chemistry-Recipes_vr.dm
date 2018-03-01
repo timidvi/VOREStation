@@ -331,3 +331,5 @@
 			if(prob(50))
 				for(var/j = 1, j <= rand(1, 3), j++)
 					step(C, pick(NORTH,SOUTH,EAST,WEST))
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Recipes_vr_dm = new("[__FILE__]")

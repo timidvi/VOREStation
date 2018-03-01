@@ -217,3 +217,5 @@
 
 	if(a_intent == I_GRAB && isliving(A) && !has_hands)
 		animal_nom(A)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_simple_animal_vr_dm = new("[__FILE__]")

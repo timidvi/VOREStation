@@ -46,3 +46,4 @@
 				V.dead = 1
 
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_viruses_dm = new("[__FILE__]")

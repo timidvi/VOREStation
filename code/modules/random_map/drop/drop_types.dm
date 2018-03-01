@@ -321,3 +321,4 @@ datum/supply_drop_loot/riot
 		/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline,
 		/obj/item/weapon/storage/box/syringes,
 		/obj/item/weapon/storage/box/autoinjectors)
+/var/global/datum/telltale/code_modules_random_map_drop_drop_types_dm = new("[__FILE__]")

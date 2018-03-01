@@ -261,3 +261,5 @@
 	new /obj/item/clothing/mask/gas/sexymime(src.loc)
 	new /obj/item/clothing/under/sexymime(src.loc)
 	delete_me = 1
+
+/var/global/datum/telltale/code_game_objects_effects_landmarks_dm = new("[__FILE__]")

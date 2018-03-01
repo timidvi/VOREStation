@@ -313,3 +313,5 @@
 
 /obj/effect/plant/proc/is_mature()
 	return (health >= (max_health/3) && world.time > mature_time)
+
+/var/global/datum/telltale/code_modules_hydroponics_spreading_spreading_dm = new("[__FILE__]")

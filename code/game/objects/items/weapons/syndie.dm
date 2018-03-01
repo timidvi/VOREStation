@@ -104,3 +104,5 @@
 		detonator_mode = !detonator_mode
 		playsound(src, W.usesound, 50, 1)
 		user << "<span class='notice'>You unscrew the top panel of \the [src] revealing a button.</span>"
+
+/var/global/datum/telltale/code_game_objects_items_weapons_syndie_dm = new("[__FILE__]")

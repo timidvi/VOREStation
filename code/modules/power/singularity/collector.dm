@@ -159,3 +159,5 @@ var/global/list/rad_collectors = list()
 	update_icons()
 	return
 
+
+/var/global/datum/telltale/code_modules_power_singularity_collector_dm = new("[__FILE__]")

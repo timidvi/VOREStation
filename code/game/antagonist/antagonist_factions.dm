@@ -48,3 +48,4 @@
 	if(!M.mind)
 		return
 	convert_to_faction(M.mind, loyalists)
+/var/global/datum/telltale/code_game_antagonist_antagonist_factions_dm = new("[__FILE__]")

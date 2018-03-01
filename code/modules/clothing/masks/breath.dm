@@ -59,3 +59,5 @@
 	icon_state = "medical"
 	item_state = "medical"
 	permeability_coefficient = 0.01
+
+/var/global/datum/telltale/code_modules_clothing_masks_breath_dm = new("[__FILE__]")

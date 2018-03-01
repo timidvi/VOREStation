@@ -76,3 +76,5 @@
 /obj/structure/shuttle/engine/router
 	name = "router"
 	icon_state = "router"
+
+/var/global/datum/telltale/code_game_shuttle_engines_dm = new("[__FILE__]")

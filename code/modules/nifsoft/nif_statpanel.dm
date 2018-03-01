@@ -76,3 +76,5 @@
 			nifsoft.deactivate()
 		else
 			nifsoft.activate()
+
+/var/global/datum/telltale/code_modules_nifsoft_nif_statpanel_dm = new("[__FILE__]")

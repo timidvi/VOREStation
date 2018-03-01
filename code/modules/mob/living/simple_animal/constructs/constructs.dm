@@ -336,3 +336,5 @@
 			if(25 to 49)			healths.icon_state = "harvester_health5"
 			if(1 to 24)				healths.icon_state = "harvester_health6"
 			else					healths.icon_state = "harvester_health7"
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_constructs_constructs_dm = new("[__FILE__]")

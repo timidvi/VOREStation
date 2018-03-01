@@ -13,3 +13,5 @@
 	for(var/sig in lastsignalers)
 		dat += "[sig]<BR>"
 	user << browse(dat, "window=lastsignalers;size=800x500")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_show_signalers_dm = new("[__FILE__]")

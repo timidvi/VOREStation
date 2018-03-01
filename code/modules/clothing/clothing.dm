@@ -837,3 +837,5 @@
 /obj/item/clothing/under/rank/New()
 	sensor_mode = pick(0,1,2,3)
 	..()
+
+/var/global/datum/telltale/code_modules_clothing_clothing_dm = new("[__FILE__]")

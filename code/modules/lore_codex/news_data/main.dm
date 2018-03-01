@@ -75,3 +75,5 @@
 	While the Association currently lists only a handful of Almach Rim systems as \"Constituent Organizations\", it has named Shelf, the Free Relan Federation, and the Eutopian Foreign Relations Board as \"observers\". The implications of this status are yet to be identified.\
 	<br><br>\
 	The fate of the SCG-R Song Shi and her crew remain unknown."
+
+/var/global/datum/telltale/code_modules_lore_codex_news_data_main_dm = new("[__FILE__]")

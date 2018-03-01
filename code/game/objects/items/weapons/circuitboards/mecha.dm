@@ -81,3 +81,5 @@
 
 //Undef the macro, shouldn't be needed anywhere else
 #undef T_BOARD_MECHA
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_mecha_dm = new("[__FILE__]")

@@ -40,3 +40,5 @@
 				C.stuttering = 4 * susceptibility
 				if(prob(10))
 					C.SetStunned(1 * susceptibility)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_stun_dm = new("[__FILE__]")

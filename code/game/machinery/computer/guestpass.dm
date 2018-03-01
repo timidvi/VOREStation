@@ -241,3 +241,4 @@
 
 	src.add_fingerprint(usr)
 	nanomanager.update_uis(src)
+/var/global/datum/telltale/code_game_machinery_computer_guestpass_dm = new("[__FILE__]")

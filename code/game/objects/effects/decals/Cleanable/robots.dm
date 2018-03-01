@@ -46,3 +46,4 @@
 /obj/effect/decal/cleanable/blood/oil/streak
 	random_icon_states = list("mgibbl1", "mgibbl2", "mgibbl3", "mgibbl4", "mgibbl5")
 	amount = 2
+/var/global/datum/telltale/code_game_objects_effects_decals_Cleanable_robots_dm = new("[__FILE__]")

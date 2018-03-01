@@ -18,3 +18,4 @@
 	display_name = "purple comb"
 	path = /obj/item/weapon/haircomb
 	sort_category = "Cosmetics"
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_cosmetics_dm = new("[__FILE__]")

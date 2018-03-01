@@ -51,3 +51,4 @@
 	M.verbs += /proc/possess
 	M.verbs += /proc/release
 	feedback_add_details("admin_verb","GPV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+/var/global/datum/telltale/code_modules_admin_verbs_possess_dm = new("[__FILE__]")

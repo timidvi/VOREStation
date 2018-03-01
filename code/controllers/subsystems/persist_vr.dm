@@ -79,3 +79,5 @@ SUBSYSTEM_DEF(persist)
 	// Let's check the mind.
 	if(M.mind && M.mind.assigned_role)
 		. = job_master.GetJob(M.mind.assigned_role)
+
+/var/global/datum/telltale/code_controllers_subsystems_persist_vr_dm = new("[__FILE__]")

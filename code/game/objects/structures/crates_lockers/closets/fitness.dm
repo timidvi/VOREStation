@@ -87,3 +87,4 @@
 	new /obj/item/clothing/suit/bluetag(src)
 	new /obj/item/clothing/suit/bluetag(src)
 	new /obj/item/clothing/suit/bluetag(src)
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_fitness_dm = new("[__FILE__]")

@@ -58,3 +58,5 @@
 
 	//set macro to normal incase it was overriden (like cyborg currently does)
 	client.set_hotkeys_macro("macro", "hotkeymode")
+
+/var/global/datum/telltale/code_modules_mob_login_dm = new("[__FILE__]")

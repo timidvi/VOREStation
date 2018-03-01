@@ -14,3 +14,5 @@ var/list/chatrooms = list()
 /datum/chatroom/proc/attempt_connect(var/obj/item/device/pda/device, var/obj/password)
 	if(!device)
 		return
+
+/var/global/datum/telltale/code_game_objects_items_devices_PDA_chatroom_dm = new("[__FILE__]")

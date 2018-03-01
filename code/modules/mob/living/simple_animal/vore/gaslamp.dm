@@ -64,3 +64,5 @@ TODO: Make them light up and heat the air when exposed to oxygen.
 	vore_stomach_name = "internal chamber"
 	vore_stomach_flavor	= "You are squeezed into the tight embrace of the alien creature's warm and cozy insides."
 	vore_icons = SA_ICON_LIVING
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_gaslamp_dm = new("[__FILE__]")

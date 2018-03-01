@@ -13,3 +13,4 @@
 /datum/gear/shoes/siren
 	display_name = "boots, Siren"
 	path = /obj/item/clothing/shoes/boots/fluff/siren
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_shoes_vr_dm = new("[__FILE__]")

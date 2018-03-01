@@ -25,3 +25,4 @@
 			R.visible_message("<span class='warning'>[user] feeds [R] with [src]!</span>")
 			return
 	..()
+/var/global/datum/telltale/code_game_objects_items_trash_vr_dm = new("[__FILE__]")

@@ -441,3 +441,4 @@ Alien plants should do something if theres a lot of poison
 
 		Burst(0)
 */
+/var/global/datum/telltale/code_game_objects_effects_alien_aliens_dm = new("[__FILE__]")

@@ -115,3 +115,4 @@
 	update_icon()
 
 	return 1
+/var/global/datum/telltale/code_modules_tables_flipping_dm = new("[__FILE__]")

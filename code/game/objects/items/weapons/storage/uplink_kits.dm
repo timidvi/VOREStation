@@ -263,3 +263,5 @@
 		/obj/item/weapon/fuel_assembly/phoron,
 		/obj/item/weapon/screwdriver
 	)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_uplink_kits_dm = new("[__FILE__]")

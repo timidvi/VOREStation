@@ -135,3 +135,4 @@
 	name = "black engineering space suit"
 	desc = "A black spacesuit sporting red and yellow stripes and durable plating. Robust, reliable, and slightly suspicious."
 	icon_state = "syndicate-black-engie"
+/var/global/datum/telltale/code_modules_clothing_spacesuits_syndi_dm = new("[__FILE__]")

@@ -172,3 +172,5 @@
 	name = "bone repair injector"
 	desc = "A refined version of the standard autoinjector, allowing greater capacity. This one excels at treating damage to bones."
 	filled_reagents = list("inaprovaline" = 5, "osteodaxon" = 10)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_hypospray_dm = new("[__FILE__]")

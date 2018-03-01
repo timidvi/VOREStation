@@ -34,3 +34,4 @@
 /obj/item/device/assembly/voice/toggle_secure()
 	. = ..()
 	listening = 0
+/var/global/datum/telltale/code_modules_assembly_voice_dm = new("[__FILE__]")

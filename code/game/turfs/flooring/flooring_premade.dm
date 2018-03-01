@@ -418,3 +418,4 @@
             add_overlay(image(icon, "footprint[i]", text2num(d)))
 
 //**** Here ends snow ****
+/var/global/datum/telltale/code_game_turfs_flooring_flooring_premade_dm = new("[__FILE__]")

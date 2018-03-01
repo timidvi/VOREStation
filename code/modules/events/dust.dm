@@ -20,3 +20,5 @@
 		if(EVENT_LEVEL_MAJOR)
 			return "super"
 	return "weak"
+
+/var/global/datum/telltale/code_modules_events_dust_dm = new("[__FILE__]")

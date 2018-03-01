@@ -22,3 +22,4 @@
 
 /obj/item/stack/material
 	description_info = "Use in your hand to bring up the recipe menu.  If you have enough sheets, click on something on the list to build it."
+/var/global/datum/telltale/code_modules_examine_descriptions_stacks_dm = new("[__FILE__]")

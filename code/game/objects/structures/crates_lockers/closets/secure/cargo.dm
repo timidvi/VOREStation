@@ -98,3 +98,4 @@
 	new /obj/item/clothing/suit/storage/hooded/wintercoat/miner(src)
 	new /obj/item/clothing/shoes/boots/winter/mining(src)
 	new /obj/item/stack/marker_beacon/thirty(src)
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_cargo_dm = new("[__FILE__]")

@@ -223,3 +223,5 @@
 	for(var/mob/living/silicon/robot/R in AI.connected_robots)
 		R.sync()
 	log_and_message_admins("has syncronized [AI]'s laws with its borgs.")
+
+/var/global/datum/telltale/code_modules_nano_modules_law_manager_dm = new("[__FILE__]")

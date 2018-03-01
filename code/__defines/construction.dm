@@ -16,3 +16,5 @@
 // Does the frame get built on the floor or a wall?
 #define FRAME_STYLE_FLOOR "floor"
 #define FRAME_STYLE_WALL "wall"
+
+/var/global/datum/telltale/code___defines_construction_dm = new("[__FILE__]")

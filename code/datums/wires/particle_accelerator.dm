@@ -50,3 +50,5 @@ var/const/PARTICLE_LIMIT_POWER_WIRE = 8 // Determines how strong the PA can be.
 			C.strength_upper_limit = (mended ? 2 : 3)
 			if(C.strength_upper_limit < C.strength)
 				C.remove_strength()
+
+/var/global/datum/telltale/code_datums_wires_particle_accelerator_dm = new("[__FILE__]")

@@ -260,3 +260,5 @@
 	desc = "A fine black bandana with nanotech lining and a skull emblem. Can be worn on the head or face."
 	icon_state = "bandskull"
 	item_state_slots = list(slot_r_hand_str = "bandskull", slot_l_hand_str = "bandskull")
+
+/var/global/datum/telltale/code_modules_clothing_masks_miscellaneous_dm = new("[__FILE__]")

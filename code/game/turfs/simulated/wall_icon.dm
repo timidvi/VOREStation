@@ -119,3 +119,5 @@
 	if(material && W.material && material.icon_base == W.material.icon_base)
 		return 1
 	return 0
+
+/var/global/datum/telltale/code_game_turfs_simulated_wall_icon_dm = new("[__FILE__]")

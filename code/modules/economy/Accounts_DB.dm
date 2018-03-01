@@ -275,3 +275,5 @@
 				state("The terminal prints out a report.")
 
 	return 1
+
+/var/global/datum/telltale/code_modules_economy_Accounts_DB_dm = new("[__FILE__]")

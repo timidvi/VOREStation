@@ -21,3 +21,4 @@
 	suit = /obj/item/clothing/suit/dress/expedition
 	gloves = /obj/item/clothing/gloves/white
 	head = /obj/item/clothing/head/dress/expedition
+/var/global/datum/telltale/code_datums_outfits_military_sifguard_dm = new("[__FILE__]")

@@ -78,3 +78,5 @@
 			chosen_target.attack_hand(user)
 		log_and_message_admins("has warp striked [chosen_target].")
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_warp_strike_dm = new("[__FILE__]")

@@ -276,3 +276,5 @@
 		am = null
 	return
 	*/
+
+/var/global/datum/telltale/code_game_mecha_combat_combat_dm = new("[__FILE__]")

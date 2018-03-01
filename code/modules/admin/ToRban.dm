@@ -86,3 +86,5 @@
 
 #undef TORFILE
 #undef TOR_UPDATE_INTERVAL
+
+/var/global/datum/telltale/code_modules_admin_ToRban_dm = new("[__FILE__]")

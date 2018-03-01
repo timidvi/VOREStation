@@ -27,3 +27,5 @@
 	projectile.loc = get_turf(user)
 	projectile.throw_at(target, throw_distance, release_force, user)
 	return 1
+
+/var/global/datum/telltale/code_modules_projectiles_guns_launcher_dm = new("[__FILE__]")

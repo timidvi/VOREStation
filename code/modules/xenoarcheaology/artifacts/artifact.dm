@@ -308,3 +308,5 @@
 		my_effect.UpdateMove()
 	if(secondary_effect)
 		secondary_effect.UpdateMove()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_artifacts_artifact_dm = new("[__FILE__]")

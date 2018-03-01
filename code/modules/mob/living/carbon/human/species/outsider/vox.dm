@@ -96,3 +96,4 @@
 	H.internal = locate(/obj/item/weapon/tank) in H.contents
 	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
 		H.internals.icon_state = "internal1"
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_outsider_vox_dm = new("[__FILE__]")

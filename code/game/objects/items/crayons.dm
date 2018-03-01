@@ -103,3 +103,5 @@
 				qdel(src)
 	else
 		..()
+
+/var/global/datum/telltale/code_game_objects_items_crayons_dm = new("[__FILE__]")

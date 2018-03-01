@@ -119,3 +119,4 @@
 		usr << "<span class='notice'>You [dronefab.produce_drones ? "enable" : "disable"] drone production in the nearby fabricator.</span>"
 
 	src.updateUsrDialog()
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_console_dm = new("[__FILE__]")

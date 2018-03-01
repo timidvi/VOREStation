@@ -112,3 +112,5 @@ DEBUG
 			jobban_savebanfile()
 			return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_admin_banjob_dm = new("[__FILE__]")

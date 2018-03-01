@@ -172,3 +172,5 @@
 	default_type = "reinforced phoron glass"
 	created_window = /obj/structure/window/phoronreinforced
 	is_reinforced = 1
+
+/var/global/datum/telltale/code_game_objects_items_stacks_sheets_glass_dm = new("[__FILE__]")

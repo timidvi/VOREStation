@@ -359,3 +359,5 @@ var/list/mob_hat_cache = list()
 /mob/living/silicon/robot/drone/mining/updatename()
 	real_name = "mining drone ([rand(100,999)])"
 	name = real_name
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_dm = new("[__FILE__]")

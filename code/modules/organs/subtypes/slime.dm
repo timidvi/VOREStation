@@ -45,3 +45,4 @@
 	vital = 0
 	max_damage = 5
 	encased = 0
+/var/global/datum/telltale/code_modules_organs_subtypes_slime_dm = new("[__FILE__]")

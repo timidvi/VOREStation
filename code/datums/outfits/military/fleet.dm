@@ -20,3 +20,4 @@
 	suit = /obj/item/clothing/suit/storage/toggle/dress/fleet
 	gloves = /obj/item/clothing/gloves/white
 	head = /obj/item/clothing/head/dress/fleet
+/var/global/datum/telltale/code_datums_outfits_military_fleet_dm = new("[__FILE__]")

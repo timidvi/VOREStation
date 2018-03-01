@@ -331,3 +331,5 @@
 		files.RefreshResearch()
 		sync_message = "Sync complete."
 	update_categories()
+
+/var/global/datum/telltale/code_game_mecha_mech_prosthetics_dm = new("[__FILE__]")

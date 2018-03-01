@@ -30,3 +30,4 @@
 		P.name = "Blank Card"
 		P.card_icon = "[icon_state]_card_back"
 		P.back_icon = "[icon_state]_card_back"
+/var/global/datum/telltale/code_modules_games_cah_dm = new("[__FILE__]")

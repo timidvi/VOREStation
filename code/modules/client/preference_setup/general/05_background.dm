@@ -133,3 +133,5 @@
 		return TOPIC_REFRESH
 
 	return ..()
+
+/var/global/datum/telltale/code_modules_client_preference_setup_general____background_dm = new("[__FILE__]")

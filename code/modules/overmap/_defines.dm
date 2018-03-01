@@ -99,3 +99,5 @@ proc/overmap_spacetravel(var/turf/space/T, var/atom/movable/A)
 			testing("Catching [M] for future use")
 			source.loc = null
 			cached_space += source
+
+/var/global/datum/telltale/code_modules_overmap__defines_dm = new("[__FILE__]")

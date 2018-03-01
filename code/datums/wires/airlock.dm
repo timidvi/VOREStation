@@ -173,3 +173,5 @@ var/const/AIRLOCK_WIRE_LIGHT = 2048
 		if(AIRLOCK_WIRE_LIGHT)
 			A.lights = !A.lights
 			A.update_icon()
+
+/var/global/datum/telltale/code_datums_wires_airlock_dm = new("[__FILE__]")

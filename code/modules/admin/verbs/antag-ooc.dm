@@ -40,3 +40,4 @@
 				to_chat(M, "<span class='ooc'><span class='aooc'>[create_text_tag("aooc", "Antag-OOC:", M.client)] <EM>[player_display]:</EM> <span class='message'>[msg]</span></span></span>")
 
 	log_ooc("(ANTAG) [key] : [msg]")
+/var/global/datum/telltale/code_modules_admin_verbs_antag_ooc_dm = new("[__FILE__]")

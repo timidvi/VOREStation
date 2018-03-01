@@ -333,3 +333,4 @@ proc/getb(col)
 
 	mapobjs = null
 	src.unset_machine()
+/var/global/datum/telltale/code_game_machinery_overview_dm = new("[__FILE__]")

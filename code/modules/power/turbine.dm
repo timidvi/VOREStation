@@ -405,3 +405,5 @@
 #undef TURBPRES
 #undef TURBGENQ
 #undef TURBGENG
+
+/var/global/datum/telltale/code_modules_power_turbine_dm = new("[__FILE__]")

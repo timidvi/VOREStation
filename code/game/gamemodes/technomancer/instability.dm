@@ -287,3 +287,5 @@
 			to_chat(src, "<span class='cult'><font size='4'>The purple glow makes you feel strange...</font></span>")
 	adjust_instability(amount)
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_instability_dm = new("[__FILE__]")

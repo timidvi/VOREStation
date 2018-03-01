@@ -36,3 +36,5 @@ var/decl/observ/item_unequipped/item_unequipped_event = new()
 	..()
 	mob_unequipped_event.raise_event(user, src)
 	item_unequipped_event.raise_event(src, user)
+
+/var/global/datum/telltale/code_datums_observation_unequipped_dm = new("[__FILE__]")

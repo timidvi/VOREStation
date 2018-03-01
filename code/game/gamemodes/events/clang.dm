@@ -91,3 +91,5 @@ In my current plan for it, 'solid' will be defined as anything with density == 1
 		return
 	sleep(50)
 	command_announcement.Announce("What the fuck was that?!", "General Alert")
+
+/var/global/datum/telltale/code_game_gamemodes_events_clang_dm = new("[__FILE__]")

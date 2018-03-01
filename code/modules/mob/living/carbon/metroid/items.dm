@@ -391,3 +391,5 @@
 	else
 		..()
 */
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_items_dm = new("[__FILE__]")

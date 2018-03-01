@@ -375,3 +375,5 @@
 				</body>
 				</html>
 			"}
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_manuals_dm = new("[__FILE__]")

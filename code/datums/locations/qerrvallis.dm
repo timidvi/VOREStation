@@ -55,3 +55,4 @@
 	the biggest research center of the planet, covering dozens of scientific fields. Its Academy is just as much renowned, and even the lowest \
 	Qrri-Mog (although most of its students prefer to continue their studies until they become Qerr-Mog) coming out of its classrooms is \
 	considered part of the elite."
+/var/global/datum/telltale/code_datums_locations_qerrvallis_dm = new("[__FILE__]")

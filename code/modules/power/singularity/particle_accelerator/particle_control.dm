@@ -254,3 +254,5 @@
 	user << browse(dat, "window=pacontrol;size=420x500")
 	onclose(user, "pacontrol")
 	return
+
+/var/global/datum/telltale/code_modules_power_singularity_particle_accelerator_particle_control_dm = new("[__FILE__]")

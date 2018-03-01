@@ -111,3 +111,5 @@
 	desc = "designed to be somewhat more resistant to hacking than standard electronics."
 	origin_tech = list(TECH_DATA = 2)
 	secure = 1
+
+/var/global/datum/telltale/code_game_machinery_doors_airlock_electronics_dm = new("[__FILE__]")

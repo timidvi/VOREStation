@@ -55,3 +55,5 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 2000)
 	build_path = /obj/item/weapon/gun/energy/sickshot
 	sort_string = "TAADB"
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_guns_sickshot_dm = new("[__FILE__]")

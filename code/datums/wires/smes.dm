@@ -58,3 +58,4 @@ var/const/SMES_WIRE_FAILSAFES = 16	// Cut to disable failsafes, mend to reenable
 				S.safeties_enabled = 0
 				spawn(10)
 					S.safeties_enabled = 1
+/var/global/datum/telltale/code_datums_wires_smes_dm = new("[__FILE__]")

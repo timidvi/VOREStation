@@ -37,3 +37,5 @@
 		desc = "The container of oriental luxuries."
 		center_of_mass = list("x"=16, "y"=16)
 		return
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_drinks_cup_dm = new("[__FILE__]")

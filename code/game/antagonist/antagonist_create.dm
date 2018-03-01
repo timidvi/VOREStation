@@ -122,3 +122,5 @@
 	if(player.mind) player.mind.name = player.name
 	// Update any ID cards.
 	update_access(player)
+
+/var/global/datum/telltale/code_game_antagonist_antagonist_create_dm = new("[__FILE__]")

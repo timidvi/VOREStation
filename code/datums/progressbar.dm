@@ -43,3 +43,5 @@
 	if (!shown && user.is_preference_enabled(/datum/client_preference/show_progress_bar))
 		user.client.images += bar
 		shown = 1
+
+/var/global/datum/telltale/code_datums_progressbar_dm = new("[__FILE__]")

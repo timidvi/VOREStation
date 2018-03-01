@@ -26,3 +26,5 @@
 	if(message)
 		var/obj/item/device/text_to_speech/O = src
 		audible_message("\icon[O] \The [O.name] states, \"[message]\"")
+
+/var/global/datum/telltale/code_game_objects_items_devices_text_to_speech_dm = new("[__FILE__]")

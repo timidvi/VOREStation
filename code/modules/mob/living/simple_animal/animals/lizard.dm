@@ -21,3 +21,5 @@
 
 	speak_chance = 1
 	speak_emote = list("hisses")
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_lizard_dm = new("[__FILE__]")

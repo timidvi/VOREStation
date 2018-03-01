@@ -22,3 +22,4 @@
 	src.mind.changeling.recursive_enhancement = 1
 	feedback_add_details("changeling_powers","RE")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_recursive_enhancement_dm = new("[__FILE__]")

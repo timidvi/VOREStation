@@ -129,3 +129,4 @@ var/list/be_special_flags = list(
 #define Sp_HOLDVAR	"holdervar"
 
 #define CHANGELING_STASIS_COST 20
+/var/global/datum/telltale/code___defines_gamemode_dm = new("[__FILE__]")

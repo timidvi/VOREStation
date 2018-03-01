@@ -350,3 +350,4 @@
 
 	canremove = !canremove
 	to_chat(usr, "<span class='notice'>You [canremove ? "de" : ""]activate the locking mechanism on \the [src].</span>")
+/var/global/datum/telltale/code_game_gamemodes_technomancer_core_obj_dm = new("[__FILE__]")

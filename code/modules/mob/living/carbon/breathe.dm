@@ -93,3 +93,5 @@
 /mob/living/carbon/proc/handle_post_breath(datum/gas_mixture/breath)
 	if(breath)
 		loc.assume_air(breath) //by default, exhale
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_breathe_dm = new("[__FILE__]")

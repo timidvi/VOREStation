@@ -295,3 +295,4 @@
 
 	usr << "<font color='blue'><b>You attempt to engage the [module.interface_name].</b></font>"
 	module.engage()
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_rig_verbs_dm = new("[__FILE__]")

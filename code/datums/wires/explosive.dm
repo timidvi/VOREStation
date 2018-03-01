@@ -29,3 +29,5 @@ var/const/WIRE_EXPLODE = 1
 /datum/wires/explosive/c4/explode()
 	var/obj/item/weapon/plastique/P = holder
 	P.explode(get_turf(P))
+
+/var/global/datum/telltale/code_datums_wires_explosive_dm = new("[__FILE__]")

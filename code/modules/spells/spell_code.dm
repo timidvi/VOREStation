@@ -340,3 +340,5 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 		if(!user || (!(spell_flags & (STATALLOWED|GHOSTCAST)) && user.stat != originalstat)  || !(user.loc == Location))
 			return 0
 	return 1
+
+/var/global/datum/telltale/code_modules_spells_spell_code_dm = new("[__FILE__]")

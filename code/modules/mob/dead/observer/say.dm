@@ -61,3 +61,5 @@
 //				M.show_message("<span class='game'><i>[stutter(message)]</i></span>", 2)
 					playsound(src.loc, pick('sound/effects/ghost.ogg','sound/effects/ghost2.ogg'), 10, 1)
 */
+
+/var/global/datum/telltale/code_modules_mob_dead_observer_say_dm = new("[__FILE__]")

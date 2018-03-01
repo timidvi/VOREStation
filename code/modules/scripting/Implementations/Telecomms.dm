@@ -273,3 +273,5 @@ datum/signal
 		if(!pass)
 			S.relay_information(newsign, "/obj/machinery/telecomms/broadcaster") // send this simple message to broadcasters
 
+
+/var/global/datum/telltale/code_modules_scripting_Implementations_Telecomms_dm = new("[__FILE__]")

@@ -177,3 +177,4 @@
 	containertype = /obj/structure/closet/crate/secure/science
 	containername = "Jumper kit crate"
 	access = access_robotics
+/var/global/datum/telltale/code_datums_supplypacks_robotics_dm = new("[__FILE__]")

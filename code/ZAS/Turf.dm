@@ -302,3 +302,5 @@
 	if(!air) air = new/datum/gas_mixture
 	air.copy_from(zone.air)
 	air.group_multiplier = 1
+
+/var/global/datum/telltale/code_ZAS_Turf_dm = new("[__FILE__]")

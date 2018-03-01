@@ -553,3 +553,5 @@ var/list/solars_list = list()
 	var/rate = "[href]=-[Max]'>-</A>[href]=-[Min]'>-</A> [(C?C : 0)] [href]=[Min]'>+</A>[href]=[Max]'>+</A>"
 	if(Limit) return "[href]=-[Limit]'>-</A>"+rate+"[href]=[Limit]'>+</A>"
 	return rate
+
+/var/global/datum/telltale/code_modules_power_solar_dm = new("[__FILE__]")

@@ -41,3 +41,5 @@
 	muzzle_type = /obj/effect/projectile/laser_blue/muzzle
 	tracer_type = /obj/effect/projectile/laser_blue/tracer
 	impact_type = /obj/effect/projectile/laser_blue/impact
+
+/var/global/datum/telltale/code_modules_projectiles_projectile_beams_vr_dm = new("[__FILE__]")

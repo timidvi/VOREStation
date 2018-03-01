@@ -9,3 +9,4 @@
 	w_class = ITEMSIZE_SMALL
 	var/repair_amount = 5
 	var/repair_time = 40
+/var/global/datum/telltale/code_game_objects_items_weapons_material_whetstone_dm = new("[__FILE__]")

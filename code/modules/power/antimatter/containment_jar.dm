@@ -39,3 +39,4 @@
 		wanted = fuel
 	fuel -= wanted
 	return wanted
+/var/global/datum/telltale/code_modules_power_antimatter_containment_jar_dm = new("[__FILE__]")

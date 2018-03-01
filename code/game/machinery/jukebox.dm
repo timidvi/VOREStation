@@ -330,3 +330,5 @@
 	if(playing)
 		start_stop_song()
 	updateDialog()
+
+/var/global/datum/telltale/code_game_machinery_jukebox_dm = new("[__FILE__]")

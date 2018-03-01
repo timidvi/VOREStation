@@ -205,3 +205,5 @@
 	name = "emergency response team medical helmet"
 	desc = "A set of armor worn by medical members of the NanoTrasen Emergency Response Team. Has red and white highlights."
 	icon_state = "erthelmet_med"
+
+/var/global/datum/telltale/code_modules_clothing_head_helmet_dm = new("[__FILE__]")

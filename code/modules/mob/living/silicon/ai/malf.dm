@@ -138,3 +138,5 @@
 	if(psupply)
 		qdel(psupply)
 	psupply = new/obj/machinery/ai_powersupply(src)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_malf_dm = new("[__FILE__]")

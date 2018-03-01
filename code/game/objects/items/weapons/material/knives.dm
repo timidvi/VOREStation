@@ -116,3 +116,5 @@
 	item_state = "knife"
 	applies_material_colour = FALSE
 	toolspeed = 2 // Use a real axe if you want to chop logs.
+
+/var/global/datum/telltale/code_game_objects_items_weapons_material_knives_dm = new("[__FILE__]")

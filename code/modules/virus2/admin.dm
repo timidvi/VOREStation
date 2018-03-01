@@ -220,3 +220,5 @@
 				infect_virus2(infectee, D, forced=1)
 
 		show_ui(usr)
+
+/var/global/datum/telltale/code_modules_virus__admin_dm = new("[__FILE__]")

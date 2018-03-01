@@ -100,3 +100,4 @@
 	desc = "A superneptune massing at 46 time that of Earth, Euthenia is one of the few planets still commonly called it's original survey designation. \
 	(The surveyor is noted to have a preference for ancient Greek mythology) As an ice giant, Euthenia has had consistent economic stability thanks to \
 	the presence of fuel depots supplied by the giants atmosphere."
+/var/global/datum/telltale/code_datums_locations_nyx_dm = new("[__FILE__]")

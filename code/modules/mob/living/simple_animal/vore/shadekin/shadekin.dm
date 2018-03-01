@@ -450,3 +450,5 @@
 	key = "s"
 	machine_understands = 0
 	flags = RESTRICTED | HIVEMIND
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_shadekin_shadekin_dm = new("[__FILE__]")

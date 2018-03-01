@@ -372,3 +372,4 @@
 		playsound(user.loc, 'sound/weapons/blade1.ogg', 50, 1)
 		return 1
 	return 0
+/var/global/datum/telltale/code_game_objects_items_weapons_melee_energy_dm = new("[__FILE__]")

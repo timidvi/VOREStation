@@ -34,3 +34,4 @@
 	..()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/weapon/sample/print(src)
+/var/global/datum/telltale/code_modules_detectivework_tools_storage_dm = new("[__FILE__]")

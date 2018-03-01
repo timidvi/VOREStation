@@ -297,3 +297,5 @@
 
 /mob/living/simple_animal/spiderbot/binarycheck()
 	return positronic
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_spiderbot_dm = new("[__FILE__]")

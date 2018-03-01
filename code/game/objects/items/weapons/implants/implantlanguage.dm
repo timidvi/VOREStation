@@ -35,3 +35,4 @@
 <b>Special Features:</b> None.<BR>
 <b>Integrity:</b> Implant will function for expected life, barring physical damage."}
 	return dat
+/var/global/datum/telltale/code_game_objects_items_weapons_implants_implantlanguage_dm = new("[__FILE__]")

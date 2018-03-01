@@ -359,3 +359,5 @@
 		return H.job
 	else
 		return "Unassigned"
+
+/var/global/datum/telltale/code_datums_datacore_dm = new("[__FILE__]")

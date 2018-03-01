@@ -160,3 +160,4 @@
 		HTML += line + "<br>"
 	HTML +="</body></html>"
 	usr << browse(HTML, "window=log;size=400x444;border=1;can_resize=1;can_close=1;can_minimize=0")
+/var/global/datum/telltale/code_game_objects_items_devices_communicator_messaging_dm = new("[__FILE__]")

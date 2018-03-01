@@ -76,3 +76,4 @@
 				return
 
 	return
+/var/global/datum/telltale/code_game_machinery_holosign_dm = new("[__FILE__]")

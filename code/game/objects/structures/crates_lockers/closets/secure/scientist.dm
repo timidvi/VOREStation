@@ -59,3 +59,5 @@
 		new /obj/item/clothing/suit/storage/hooded/wintercoat/science(src)
 		new /obj/item/clothing/shoes/boots/winter/science(src)
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_scientist_dm = new("[__FILE__]")

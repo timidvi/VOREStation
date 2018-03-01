@@ -381,3 +381,5 @@
 			powerlevel = 10
 			adjustToxLoss(-10)
 	nutrition = max(nutrition, get_max_nutrition())
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_metroid_dm = new("[__FILE__]")

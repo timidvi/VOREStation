@@ -366,3 +366,5 @@
 /obj/machinery/atmospherics/tvalve/digital/mirrored/bypass
 	icon_state = "map_tvalvem1"
 	state = 1
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_tvalve_dm = new("[__FILE__]")

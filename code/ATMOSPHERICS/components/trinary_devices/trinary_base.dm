@@ -255,3 +255,5 @@
 		node2_connect = turn(dir, -90)
 		node3_connect = dir
 	return list(node1_connect, node2_connect, node3_connect)
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_trinary_devices_trinary_base_dm = new("[__FILE__]")

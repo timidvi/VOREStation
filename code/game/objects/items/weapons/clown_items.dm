@@ -72,3 +72,5 @@
 		spawn(20)
 			spam_flag = 0
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_clown_items_dm = new("[__FILE__]")

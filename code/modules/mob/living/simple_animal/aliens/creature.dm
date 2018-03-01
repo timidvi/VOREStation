@@ -72,3 +72,5 @@
 /mob/living/simple_animal/hostile/creature/cult/Life()
 	..()
 	check_horde()
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_aliens_creature_dm = new("[__FILE__]")

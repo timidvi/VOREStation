@@ -237,3 +237,5 @@
 
 #undef MAX_ROWS
 #undef MAX_COLUMNS
+
+/var/global/datum/telltale/code_game_machinery_computer__NTOS_dm = new("[__FILE__]")

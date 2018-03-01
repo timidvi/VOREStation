@@ -795,3 +795,5 @@ mob/observer/dead/MayRespawn(var/feedback = 0)
 
 /mob/observer/dead/is_deaf()
 	return FALSE
+
+/var/global/datum/telltale/code_modules_mob_dead_observer_observer_dm = new("[__FILE__]")

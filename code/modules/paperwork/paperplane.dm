@@ -100,3 +100,5 @@
 		user.put_in_hands(I)
 	else
 		to_chat(user, "<span class='notice'> You lack the dexterity to fold \the [src]. </span>")
+
+/var/global/datum/telltale/code_modules_paperwork_paperplane_dm = new("[__FILE__]")

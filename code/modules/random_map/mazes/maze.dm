@@ -63,3 +63,5 @@
 	map[get_map_cell(tx,ty)] = DOOR_CHAR
 	var/datum/maze_cell/new_cell = new(tx,ty,nx,ny)
 	openlist |= new_cell
+
+/var/global/datum/telltale/code_modules_random_map_mazes_maze_dm = new("[__FILE__]")

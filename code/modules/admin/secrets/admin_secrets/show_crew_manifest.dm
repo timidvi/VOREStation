@@ -10,3 +10,5 @@
 	dat += data_core.get_manifest()
 
 	user << browse(dat, "window=manifest;size=370x420;can_close=1")
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_show_crew_manifest_dm = new("[__FILE__]")

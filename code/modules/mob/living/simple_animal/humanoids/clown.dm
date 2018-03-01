@@ -46,3 +46,5 @@
 	speak_chance = 1
 	speak = list("HONK", "Honk!", "Welcome to clown planet!")
 	emote_see = list("honks")
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_humanoids_clown_dm = new("[__FILE__]")

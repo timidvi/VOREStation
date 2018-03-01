@@ -165,3 +165,5 @@
 	for(var/mob/living/silicon/robot/R in mob_list)
 		if(R.name == name)
 			return R
+
+/var/global/datum/telltale/code_game_machinery_computer_robot_dm = new("[__FILE__]")

@@ -51,3 +51,4 @@
 /obj/fiftyspawner/linoleum
 	name = "stack of linoleum tiles"
 	type_to_spawn = /obj/item/stack/tile/linoleum
+/var/global/datum/telltale/code_game_objects_items_stacks_tiles_fifty_spawner_tiles_dm = new("[__FILE__]")

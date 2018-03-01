@@ -57,3 +57,5 @@
 					if ((O.client && !( O.blinded )))
 						O.show_message(text("<font color='red'><B>[] has attempted to punch []!</B></font>", M, src), 1)
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_alien_attacks_dm = new("[__FILE__]")

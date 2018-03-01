@@ -188,3 +188,5 @@
 	AltClick()
 		if(Adjacent(usr))
 			close_computer()
+
+/var/global/datum/telltale/code_game_machinery_computer__laptop_dm = new("[__FILE__]")

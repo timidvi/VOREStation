@@ -24,3 +24,5 @@
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 	siemens_coefficient = 1
 	rolled_sleeves = 0
+
+/var/global/datum/telltale/code_modules_clothing_under_syndicate_dm = new("[__FILE__]")

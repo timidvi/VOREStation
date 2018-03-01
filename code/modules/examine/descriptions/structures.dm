@@ -19,3 +19,5 @@
 	<br>\
 	Anyone with restraints, such as handcuffs, will not be able to unbuckle themselves. They must use the Resist button, or verb, to break free of \
 	the buckles, instead."
+
+/var/global/datum/telltale/code_modules_examine_descriptions_structures_dm = new("[__FILE__]")

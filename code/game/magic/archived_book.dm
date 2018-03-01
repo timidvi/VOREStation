@@ -124,3 +124,5 @@ datum/archived_book/proc/save()
 #undef BOOK_VERSION_MIN
 #undef BOOK_VERSION_MAX
 #undef BOOK_PATH
+
+/var/global/datum/telltale/code_game_magic_archived_book_dm = new("[__FILE__]")

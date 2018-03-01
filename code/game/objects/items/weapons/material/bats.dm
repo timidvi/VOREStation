@@ -27,3 +27,4 @@
 
 /obj/item/weapon/material/twohanded/baseballbat/diamond/New(var/newloc)
 	..(newloc,"diamond")
+/var/global/datum/telltale/code_game_objects_items_weapons_material_bats_dm = new("[__FILE__]")

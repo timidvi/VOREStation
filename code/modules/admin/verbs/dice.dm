@@ -22,3 +22,4 @@
 		world << "<h2 style=\"color:#A50400\">Gods rolled [dice], result is [result]</h2>"
 
 	message_admins("[key_name_admin(src)] rolled dice [dice], result is [result]", 1)
+/var/global/datum/telltale/code_modules_admin_verbs_dice_dm = new("[__FILE__]")

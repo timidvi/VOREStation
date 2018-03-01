@@ -90,3 +90,4 @@
 	if(href_list["force"])
 		gm.run_action(src)
 		message_admins("GM event [name] was forced by [usr.key].")
+/var/global/datum/telltale/code_modules_gamemaster_controller_dm = new("[__FILE__]")

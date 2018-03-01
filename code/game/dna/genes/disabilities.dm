@@ -127,3 +127,5 @@
 
 	New()
 		block=GLASSESBLOCK
+
+/var/global/datum/telltale/code_game_dna_genes_disabilities_dm = new("[__FILE__]")

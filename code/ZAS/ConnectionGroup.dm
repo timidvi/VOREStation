@@ -253,3 +253,5 @@ proc/ShareHeat(datum/gas_mixture/A, datum/gas_mixture/B, connecting_tiles)
 
 	A.temperature -= energy_delta / (A.heat_capacity() * A.group_multiplier)
 	B.temperature += energy_delta / (B.heat_capacity() * B.group_multiplier)
+
+/var/global/datum/telltale/code_ZAS_ConnectionGroup_dm = new("[__FILE__]")

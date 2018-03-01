@@ -787,3 +787,5 @@
 
 	//Refresh when interacted with, returning 1 makes vore_look.Topic update
 	return 1
+
+/var/global/datum/telltale/code_modules_vore_eating_vorepanel_vr_dm = new("[__FILE__]")

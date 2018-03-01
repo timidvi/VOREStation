@@ -79,3 +79,5 @@
 		//After a certain amount of time the victim gets a message about being in a different body.
 		spawn(msg_wait)
 			caster << "<span class='danger'>You feel woozy and lightheaded. Your body doesn't seem like your own.</span>"
+
+/var/global/datum/telltale/code_modules_spells_targeted_mind_transfer_dm = new("[__FILE__]")

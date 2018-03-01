@@ -60,3 +60,4 @@
 		"coffee", "cafe_latte", "soy_latte", "hot_coco", "milk", "cream", "tea", "ice",
 		"orangejuice", "lemonjuice", "limejuice", "berryjuice", "mint"
 		)
+/var/global/datum/telltale/code_modules_reagents_dispenser_dispenser__energy_dm = new("[__FILE__]")

@@ -390,3 +390,5 @@
 		if((M.client && M.machine == src))
 			attack_self(M)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_devices_violin_dm = new("[__FILE__]")

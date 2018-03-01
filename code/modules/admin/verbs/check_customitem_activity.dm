@@ -83,3 +83,5 @@ var/inactive_keys = "None<br>"
 	checked_for_inactives = 1
 	if(C)
 		C.check_customitem_activity()
+
+/var/global/datum/telltale/code_modules_admin_verbs_check_customitem_activity_dm = new("[__FILE__]")

@@ -283,3 +283,4 @@
 	desc = "An automated combat drone with an aged apperance."
 	returns_home = TRUE
 	move_to_delay = 6
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_aliens_drone_dm = new("[__FILE__]")

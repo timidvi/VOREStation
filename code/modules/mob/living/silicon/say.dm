@@ -156,3 +156,5 @@
 #undef IS_AI
 #undef IS_ROBOT
 #undef IS_PAI
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_say_dm = new("[__FILE__]")

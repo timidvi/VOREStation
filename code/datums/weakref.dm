@@ -24,3 +24,4 @@
 	if(D && D.weakref == src)
 		return D
 	return null
+/var/global/datum/telltale/code_datums_weakref_dm = new("[__FILE__]")

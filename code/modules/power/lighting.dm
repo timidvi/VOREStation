@@ -881,3 +881,4 @@
 	icon = 'icons/obj/lighting.dmi'
 	icon_state = "lampshade"
 	w_class = ITEMSIZE_TINY
+/var/global/datum/telltale/code_modules_power_lighting_dm = new("[__FILE__]")

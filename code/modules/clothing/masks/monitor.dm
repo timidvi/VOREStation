@@ -67,3 +67,4 @@
 	icon_state = monitor_states[monitor_state_index]
 	var/mob/living/carbon/human/H = loc
 	if(istype(H)) H.update_inv_wear_mask()
+/var/global/datum/telltale/code_modules_clothing_masks_monitor_dm = new("[__FILE__]")

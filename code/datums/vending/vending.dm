@@ -11,3 +11,4 @@
 	src.price = price
 	src.display_color = color
 	src.category = category
+/var/global/datum/telltale/code_datums_vending_vending_dm = new("[__FILE__]")

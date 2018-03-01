@@ -506,3 +506,5 @@
 		if(!isnull(M.evasion))
 			result += M.evasion
 	return result
+
+/var/global/datum/telltale/code_modules_mob_living_living_defense_dm = new("[__FILE__]")

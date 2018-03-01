@@ -99,3 +99,5 @@
 //In case anyone stumbles upon this, MAJOR thanks to Vorrakul and Nightwing. Without them, this wouldn't be a reality.
 //Also, huge thanks for Ace for helping me through with this and getting me to work at my full potential instead of tapping out early, along with coding advice.
 //Additionally, huge thanks to the entire Virgo community for giving suggestions about egg TF, the sprites, descriptions, etc etc. Cheers to everyone. Also, you should totally eat Cadence. ~CK
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_egg_vr_dm = new("[__FILE__]")

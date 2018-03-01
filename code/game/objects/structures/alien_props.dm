@@ -77,3 +77,4 @@
 		var/new_tech = pick(techs)
 		techs -= new_tech
 		origin_tech[new_tech] = rand(5, 9)
+/var/global/datum/telltale/code_game_objects_structures_alien_props_dm = new("[__FILE__]")

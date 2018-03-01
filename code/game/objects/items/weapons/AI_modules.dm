@@ -412,3 +412,5 @@ AI MODULES
 	desc = "An 'Antimov' Core AI Module: 'Reconfigures the AI's core laws.'"
 	origin_tech = list(TECH_DATA = 4)
 	laws = new/datum/ai_laws/antimov()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_AI_modules_dm = new("[__FILE__]")

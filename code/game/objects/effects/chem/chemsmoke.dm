@@ -224,3 +224,5 @@
 	targetTurfs = complete
 
 	return
+
+/var/global/datum/telltale/code_game_objects_effects_chem_chemsmoke_dm = new("[__FILE__]")

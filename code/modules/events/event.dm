@@ -139,3 +139,5 @@
 
 	setup()
 	..()
+
+/var/global/datum/telltale/code_modules_events_event_dm = new("[__FILE__]")

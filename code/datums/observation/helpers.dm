@@ -16,3 +16,5 @@
 /proc/unregister_all_movement(var/event_source, var/listener)
 	moved_event.unregister(event_source, listener, /atom/movable/proc/recursive_move)
 	dir_set_event.unregister(event_source, listener, /atom/proc/recursive_dir_set)
+
+/var/global/datum/telltale/code_datums_observation_helpers_dm = new("[__FILE__]")

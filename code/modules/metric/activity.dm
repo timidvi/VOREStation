@@ -80,3 +80,4 @@
 		num++
 	if(num)
 		. = round(. / num, 0.1)
+/var/global/datum/telltale/code_modules_metric_activity_dm = new("[__FILE__]")

@@ -171,3 +171,5 @@
 			. += list(
 				"[desc_panel_image("screwdriver")]to finish construction.",
 				"[desc_panel_image("wirecutters")]to reverse construction.")
+
+/var/global/datum/telltale/code_modules_power_lightswitch_vr_dm = new("[__FILE__]")

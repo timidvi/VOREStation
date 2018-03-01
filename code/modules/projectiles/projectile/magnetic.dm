@@ -117,3 +117,4 @@
 
 /obj/item/projectile/bullet/magnetic/fuelrod/supermatter/check_penetrate()
 	return 1
+/var/global/datum/telltale/code_modules_projectiles_projectile_magnetic_dm = new("[__FILE__]")

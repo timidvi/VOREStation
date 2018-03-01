@@ -16,3 +16,5 @@
 /obj/machinery/cooker/candy/change_product_appearance(var/obj/item/weapon/reagent_containers/food/snacks/cooked/product)
 	food_color = get_random_colour(1)
 	. = ..()
+
+/var/global/datum/telltale/code_game_machinery_kitchen_cooking_machines_candy_dm = new("[__FILE__]")

@@ -7,3 +7,5 @@
 	if(src_object != user)
 		return STATUS_CLOSE
 	return user.shared_nano_interaction()
+
+/var/global/datum/telltale/code_modules_nano_interaction_self_dm = new("[__FILE__]")

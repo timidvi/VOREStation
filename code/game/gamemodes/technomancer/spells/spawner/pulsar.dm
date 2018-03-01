@@ -47,3 +47,5 @@
 		pulses_remaining--
 	qdel(src)
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_spawner_pulsar_dm = new("[__FILE__]")

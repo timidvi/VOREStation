@@ -11,3 +11,4 @@
 
 /turf/simulated/wall/dungeon/ex_act()
 	return
+/var/global/datum/telltale/code_game_turfs_simulated_dungeon_wall_dm = new("[__FILE__]")

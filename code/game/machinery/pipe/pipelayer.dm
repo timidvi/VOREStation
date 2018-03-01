@@ -176,3 +176,5 @@
 	P.attackby(W , src)
 
 	return 1
+
+/var/global/datum/telltale/code_game_machinery_pipe_pipelayer_dm = new("[__FILE__]")

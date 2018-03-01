@@ -63,3 +63,4 @@
 	if(!use_next_map)
 		use_next_map = map
 	use_next_map[target_cell] = cell_dead_value
+/var/global/datum/telltale/code_modules_random_map_automata_automata_dm = new("[__FILE__]")

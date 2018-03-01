@@ -177,3 +177,5 @@
 	if(stat & BROKEN)
 		return
 	ui_interact(user)
+
+/var/global/datum/telltale/code_modules_reagents_dispenser_dispenser__dm = new("[__FILE__]")

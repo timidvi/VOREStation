@@ -650,3 +650,5 @@ var/global/datum/controller/occupations/job_master
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)
 		.["msg"] = "has arrived on the station"
+
+/var/global/datum/telltale/code_game_jobs_job_controller_dm = new("[__FILE__]")

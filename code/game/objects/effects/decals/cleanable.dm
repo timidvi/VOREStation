@@ -11,3 +11,5 @@
 	if (random_icon_states && length(src.random_icon_states) > 0)
 		src.icon_state = pick(src.random_icon_states)
 	..()
+
+/var/global/datum/telltale/code_game_objects_effects_decals_cleanable_dm = new("[__FILE__]")

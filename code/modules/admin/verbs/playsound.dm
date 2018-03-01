@@ -96,3 +96,5 @@ client/proc/honk_theme()
 		if(M.client)
 			if(M.client.midis)
 				M << 'honk_theme.ogg'*/
+
+/var/global/datum/telltale/code_modules_admin_verbs_playsound_dm = new("[__FILE__]")

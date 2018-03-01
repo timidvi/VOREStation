@@ -27,3 +27,4 @@
 		/obj/item/rig_module/electrowarfare_suite,
 		/obj/item/rig_module/chem_dispenser/combat
 		)
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_suits_combat_dm = new("[__FILE__]")

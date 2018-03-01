@@ -166,3 +166,4 @@
 					map[current_cell]-=cell_smooth_amt
 				map[current_cell] = max(0,min(cell_range,map[current_cell]))
 		map = next_map
+/var/global/datum/telltale/code_modules_random_map_noise_noise_dm = new("[__FILE__]")

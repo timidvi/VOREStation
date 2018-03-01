@@ -22,3 +22,4 @@
 
 /spell/targeted/ethereal_jaunt/shift/jaunt_steam(var/mobloc)
 	return
+/var/global/datum/telltale/code_modules_spells_targeted_shift_dm = new("[__FILE__]")

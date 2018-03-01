@@ -559,3 +559,5 @@
 
 /mob/new_player/MayRespawn()
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_new_player_new_player_dm = new("[__FILE__]")

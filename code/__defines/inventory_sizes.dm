@@ -23,3 +23,4 @@
 #define INVENTORY_STANDARD_SPACE	ITEMSIZE_COST_NORMAL * 7 // 28
 #define INVENTORY_DUFFLEBAG_SPACE	ITEMSIZE_COST_NORMAL * 9 // 36
 #define INVENTORY_BOX_SPACE			ITEMSIZE_COST_SMALL * 4 // 8
+/var/global/datum/telltale/code___defines_inventory_sizes_dm = new("[__FILE__]")

@@ -29,3 +29,5 @@
 		new /obj/item/clothing/shoes/boots/winter/hydro(src)
 //		new /obj/item/weapon/bee_net(src) //No more bees, March 2014
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_hydroponics_dm = new("[__FILE__]")

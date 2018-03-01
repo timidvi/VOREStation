@@ -10,3 +10,5 @@
 
 /mob/living/carbon/alien/larva/show_evolution_blurb()
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_larva_progression_dm = new("[__FILE__]")

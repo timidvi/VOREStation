@@ -191,3 +191,5 @@
 			GetDrilled()
 	..()
 
+
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_particle_dm = new("[__FILE__]")

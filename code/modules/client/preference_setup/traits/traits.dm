@@ -194,3 +194,4 @@ var/list/trait_categories = list() // The categories available for the trait men
 		var/datum/trait/T = trait_datums[trait]
 		if(istype(T))
 			T.apply_trait_post_spawn(src)
+/var/global/datum/telltale/code_modules_client_preference_setup_traits_traits_dm = new("[__FILE__]")

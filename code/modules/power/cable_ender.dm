@@ -36,3 +36,5 @@
 /obj/structure/cable/ender/ex_act(severity)
 	return
 
+
+/var/global/datum/telltale/code_modules_power_cable_ender_dm = new("[__FILE__]")

@@ -182,3 +182,4 @@
 /obj/structure/stairs/west
 	dir = WEST
 	bound_width = 64
+/var/global/datum/telltale/code_modules_multiz_structures_dm = new("[__FILE__]")

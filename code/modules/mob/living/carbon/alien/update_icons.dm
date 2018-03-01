@@ -18,3 +18,5 @@
 		icon_state = "[initial(icon_state)][state]_sleep"
 	else
 		icon_state = "[initial(icon_state)][state]"
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_update_icons_dm = new("[__FILE__]")

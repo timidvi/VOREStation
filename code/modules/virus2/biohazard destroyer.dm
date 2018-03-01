@@ -18,3 +18,4 @@
 
 	for(var/mob/O in hearers(src, null))
 		O.show_message("\icon[src] <font color='blue'>The [src.name] beeps.</font>", 2)
+/var/global/datum/telltale/code_modules_virus__biohazard_destroyer_dm = new("[__FILE__]")

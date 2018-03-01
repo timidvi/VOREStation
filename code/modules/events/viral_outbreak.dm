@@ -27,3 +27,5 @@ datum/event/viral_outbreak/start()
 
 		candidates.Remove(candidates[1])
 		severity--
+
+/var/global/datum/telltale/code_modules_events_viral_outbreak_dm = new("[__FILE__]")

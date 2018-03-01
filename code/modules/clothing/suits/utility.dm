@@ -96,3 +96,4 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 60, rad = 100)
 	flags_inv = HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
 	item_flags = THICKMATERIAL
+/var/global/datum/telltale/code_modules_clothing_suits_utility_dm = new("[__FILE__]")

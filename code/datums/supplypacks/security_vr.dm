@@ -29,3 +29,5 @@
 			/obj/item/weapon/storage/box/gloves
 			)
 	cost = 40
+
+/var/global/datum/telltale/code_datums_supplypacks_security_vr_dm = new("[__FILE__]")

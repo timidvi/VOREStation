@@ -11,3 +11,5 @@
 /mob/observer/eye/maskEye/New()
 	..()
 	visualnet = cultnet
+
+/var/global/datum/telltale/code_modules_mob_freelook_mask_eye_dm = new("[__FILE__]")

@@ -210,3 +210,5 @@
 	if(..(user, 0) && air_contents.gas["nitrogen"] < 10)
 		user << text("<span class='danger'>The meter on \the [src] indicates you are almost out of nitrogen!</span>")
 		//playsound(user, 'sound/effects/alert.ogg', 50, 1)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_tanks_tank_types_dm = new("[__FILE__]")

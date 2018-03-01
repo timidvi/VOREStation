@@ -99,3 +99,5 @@
 /obj/effect/wingrille_spawn/reinforced/polarized/handle_window_spawn(var/obj/structure/window/reinforced/polarized/P)
 	if(id)
 		P.id = id
+
+/var/global/datum/telltale/code_game_objects_structures_window_spawner_dm = new("[__FILE__]")

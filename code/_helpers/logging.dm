@@ -189,3 +189,5 @@
 	if(!istype(d))
 		return json_encode(d)
 	return d.log_info_line()
+
+/var/global/datum/telltale/code__helpers_logging_dm = new("[__FILE__]")

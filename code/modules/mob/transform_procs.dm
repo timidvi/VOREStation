@@ -336,3 +336,5 @@
 
 
 
+
+/var/global/datum/telltale/code_modules_mob_transform_procs_dm = new("[__FILE__]")

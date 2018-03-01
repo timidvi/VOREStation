@@ -1491,3 +1491,5 @@ datum/objective/silence
 #undef NORMAL
 #undef HARD
 #undef IMPOSSIBLE
+
+/var/global/datum/telltale/code_game_gamemodes_newobjective_dm = new("[__FILE__]")

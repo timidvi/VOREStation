@@ -60,3 +60,4 @@
 /obj/item/organ/internal/stack/vox/stack
 	name = "vox cortical stack"
 	icon_state = "cortical_stack"
+/var/global/datum/telltale/code_modules_organs_misc_dm = new("[__FILE__]")

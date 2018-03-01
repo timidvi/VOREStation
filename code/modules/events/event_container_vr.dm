@@ -114,3 +114,5 @@
 #undef ASSIGNMENT_MEDICAL
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
+
+/var/global/datum/telltale/code_modules_events_event_container_vr_dm = new("[__FILE__]")

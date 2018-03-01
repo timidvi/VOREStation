@@ -278,3 +278,5 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 
 		if("Christmas","Christmas Eve")
 			if(prob(eventchance))	ChristmasEvent()
+
+/var/global/datum/telltale/code_game_gamemodes_events_holidays_Holidays_dm = new("[__FILE__]")

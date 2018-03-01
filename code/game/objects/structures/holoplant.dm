@@ -103,3 +103,4 @@
 	anchored = FALSE
 /obj/machinery/holoplant/shipped/initialize()
 	. = ..()
+/var/global/datum/telltale/code_game_objects_structures_holoplant_dm = new("[__FILE__]")

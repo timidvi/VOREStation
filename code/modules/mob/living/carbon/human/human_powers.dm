@@ -296,3 +296,5 @@
 		layer = MOB_LAYER
 		hiding = 0
 		to_chat(src, "<font color='blue'>You have stopped hiding.</font>")
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_powers_dm = new("[__FILE__]")

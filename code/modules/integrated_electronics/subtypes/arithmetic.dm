@@ -312,3 +312,5 @@
 	push_data()
 	activate_pin(2)
 
+
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_arithmetic_dm = new("[__FILE__]")

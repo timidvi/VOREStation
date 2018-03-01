@@ -9,3 +9,5 @@
 	if(choice == "PRAISE SATAN")
 		new /obj/singularity/narsie/large(get_turf(user))
 		log_and_message_admins("has summoned Nar-Sie and brought about a new realm of suffering.", user)
+
+/var/global/datum/telltale/code_modules_admin_secrets_final_solutions_summon_narsie_dm = new("[__FILE__]")

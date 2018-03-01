@@ -60,3 +60,4 @@
 	P.name = "wormhole"
 	spawn(rand(300,600))
 		qdel(P)
+/var/global/datum/telltale/code_game_gamemodes_events_wormholes_dm = new("[__FILE__]")

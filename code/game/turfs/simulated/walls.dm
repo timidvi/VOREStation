@@ -287,3 +287,5 @@
 				W.burn((temperature/4))
 			for(var/obj/machinery/door/airlock/phoron/D in range(3,src))
 				D.ignite(temperature/4)
+
+/var/global/datum/telltale/code_game_turfs_simulated_walls_dm = new("[__FILE__]")

@@ -51,3 +51,4 @@ var/list/all_supply_groups = list("Atmospherics",
 /datum/supply_packs/randomised/New()
 	manifest += "Contains any [num_contained] of:"
 	..()
+/var/global/datum/telltale/code_datums_supplypacks_supplypacks_dm = new("[__FILE__]")

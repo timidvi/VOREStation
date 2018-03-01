@@ -216,3 +216,5 @@
 		if(/obj/item/clothing/head/soft)
 			name = "Corgi Tech [real_name]"
 			desc = "The reason your yellow gloves have chew-marks."
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_corgi_vr_dm = new("[__FILE__]")

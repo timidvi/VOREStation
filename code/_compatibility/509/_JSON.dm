@@ -12,3 +12,4 @@ proc
 		var/static/json_writer/_jsonw = new()
 		return _jsonw.write(L)
 #endif
+/var/global/datum/telltale/code__compatibility______JSON_dm = new("[__FILE__]")

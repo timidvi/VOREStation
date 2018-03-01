@@ -271,3 +271,5 @@
 #undef PRESSURE_CHECK_EXTERNAL
 #undef PRESSURE_CHECK_INPUT
 #undef PRESSURE_CHECK_OUTPUT
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_dp_vent_pump_dm = new("[__FILE__]")

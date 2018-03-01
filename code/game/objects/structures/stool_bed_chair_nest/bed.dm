@@ -332,3 +332,4 @@
 
 /obj/structure/bed/alien/attackby(obj/item/weapon/W, mob/user)
 	return // No deconning.
+/var/global/datum/telltale/code_game_objects_structures_stool_bed_chair_nest_bed_dm = new("[__FILE__]")

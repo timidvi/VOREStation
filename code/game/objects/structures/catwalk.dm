@@ -104,3 +104,4 @@
 		playsound(loc, 'sound/effects/grillehit.ogg', 50, 1)
 		new /obj/item/stack/rods(get_turf(src))
 		Destroy()
+/var/global/datum/telltale/code_game_objects_structures_catwalk_dm = new("[__FILE__]")

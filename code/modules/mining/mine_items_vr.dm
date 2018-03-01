@@ -26,3 +26,5 @@
 
 /obj/item/weapon/pickaxe/borgdrill
 	digspeed = 13
+
+/var/global/datum/telltale/code_modules_mining_mine_items_vr_dm = new("[__FILE__]")

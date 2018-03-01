@@ -147,3 +147,4 @@
 
 /obj/machinery/power/breakerbox/process()
 	return 1
+/var/global/datum/telltale/code_modules_power_breaker_box_dm = new("[__FILE__]")

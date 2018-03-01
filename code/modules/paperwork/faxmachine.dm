@@ -209,3 +209,5 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 	var/faxid = export_fax(sent)
 	message_chat_admins(sender, faxname, sent, faxid, font_colour)
 	// VoreStation Edit End
+
+/var/global/datum/telltale/code_modules_paperwork_faxmachine_dm = new("[__FILE__]")

@@ -65,3 +65,4 @@
 				else
 					user << "<span class='warning'>The body of \the [H] doesn't seem to respond, perhaps you could try again?</span>"
 					adjust_instability(10)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_resurrect_dm = new("[__FILE__]")

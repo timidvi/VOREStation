@@ -41,3 +41,4 @@
 	if(istype(over_object) && Adjacent(over_object) && CanMouseDrop(over_object, usr))
 		Bumped(usr)
 		over_object.contain(src)
+/var/global/datum/telltale/code_modules_xenoarcheaology_anomaly_container_dm = new("[__FILE__]")

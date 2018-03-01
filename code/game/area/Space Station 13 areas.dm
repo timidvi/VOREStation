@@ -2871,3 +2871,5 @@ var/list/the_station_areas = list (
 
 		spawn(60) .()
 */
+
+/var/global/datum/telltale/code_game_area_Space_Station____areas_dm = new("[__FILE__]")

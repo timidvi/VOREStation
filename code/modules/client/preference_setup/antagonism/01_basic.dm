@@ -70,3 +70,5 @@ var/global/list/uplink_locations = list("PDA", "Headset", "None")
 		return TOPIC_REFRESH
 
 	return ..()
+
+/var/global/datum/telltale/code_modules_client_preference_setup_antagonism____basic_dm = new("[__FILE__]")

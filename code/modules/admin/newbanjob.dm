@@ -272,3 +272,5 @@ var/savefile/Banlistjob
 	Banlistjob.cd = "/base"
 	for (var/A in Banlistjob.dir)
 		RemoveBanjob(A, "full")
+
+/var/global/datum/telltale/code_modules_admin_newbanjob_dm = new("[__FILE__]")

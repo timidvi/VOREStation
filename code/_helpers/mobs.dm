@@ -273,3 +273,5 @@ Proc for attack log creation, because really why not
 	else
 		. = getCompoundIcon(desired)
 		cached_character_icons[cachekey] = .
+
+/var/global/datum/telltale/code__helpers_mobs_dm = new("[__FILE__]")

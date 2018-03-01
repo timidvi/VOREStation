@@ -409,3 +409,5 @@ var/list/non_fakeattack_weapons = list(/obj/item/weapon/gun/projectile, /obj/ite
 	*/
 
 	F.updateimage()
+
+/var/global/datum/telltale/code_modules_flufftext_Hallucination_dm = new("[__FILE__]")

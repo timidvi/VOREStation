@@ -148,3 +148,4 @@
 
 
 #undef OVERLAY_CACHE_LEN
+/var/global/datum/telltale/code_game_objects_items_devices_t_scanner_dm = new("[__FILE__]")

@@ -245,3 +245,5 @@ var/list/slot_equipment_priority = list( \
 	for(var/entry in get_equipped_items())
 		drop_from_inventory(entry)
 		qdel(entry)
+
+/var/global/datum/telltale/code_modules_mob_inventory_dm = new("[__FILE__]")

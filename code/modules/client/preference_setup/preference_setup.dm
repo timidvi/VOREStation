@@ -305,3 +305,4 @@
 		if(PREF_FBP_SOFTWARE)
 			return 150
 	return S.max_age // welp
+/var/global/datum/telltale/code_modules_client_preference_setup_preference_setup_dm = new("[__FILE__]")

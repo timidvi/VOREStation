@@ -15,3 +15,4 @@
 	add_language(LANGUAGE_ECUREUILIAN,	1)
 	add_language(LANGUAGE_DAEMON,		1)
 	add_language(LANGUAGE_ENOCHIAN,		1)
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_ai_vr_dm = new("[__FILE__]")

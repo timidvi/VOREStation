@@ -92,3 +92,5 @@
 	else
 		if(riftimage)
 			qdel(riftimage)
+
+/var/global/datum/telltale/code_game_gamemodes_endgame_supermatter_cascade_portal_dm = new("[__FILE__]")

@@ -67,3 +67,5 @@ obj/structure/firedoor_assembly/attackby(obj/item/C, mob/user as mob)
 			user << "<span class='notice'>You need more welding fuel.</span>"
 	else
 		..(C, user)
+
+/var/global/datum/telltale/code_game_machinery_doors_firedoor_assembly_dm = new("[__FILE__]")

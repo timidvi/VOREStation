@@ -127,3 +127,5 @@
 	overgloves = 1
 	force = 5
 	punch_force = 5
+
+/var/global/datum/telltale/code_modules_clothing_gloves_miscellaneous_dm = new("[__FILE__]")

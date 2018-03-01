@@ -53,3 +53,5 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 		return
 
 	team.attempt_random_spawn()
+
+/var/global/datum/telltale/code_modules_admin_verbs_striketeam_dm = new("[__FILE__]")

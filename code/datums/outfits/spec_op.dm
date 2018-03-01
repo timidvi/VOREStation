@@ -67,3 +67,5 @@
 	id_pda_assignment = "Mercenary"
 
 	flags = OUTFIT_HAS_BACKPACK
+
+/var/global/datum/telltale/code_datums_outfits_spec_op_dm = new("[__FILE__]")

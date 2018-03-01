@@ -39,3 +39,4 @@
 	M.reagents.add_reagent("toxin", 2)
 	M.reagents.add_reagent("impedrezene", 1)
 	return 1
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_fish_vr_dm = new("[__FILE__]")

@@ -65,3 +65,4 @@
 			return 0
 		if(direction == DOWN) //on a turf above, trying to enter
 			return 1
+/var/global/datum/telltale/code_modules_multiz_movement_vr_dm = new("[__FILE__]")

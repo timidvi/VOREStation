@@ -268,3 +268,5 @@
 	return TRUE
 
 #undef NORMAL_LAYER
+
+/var/global/datum/telltale/code_modules_multiz_hoist_dm = new("[__FILE__]")

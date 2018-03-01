@@ -28,3 +28,5 @@
 
 /obj/item/organ/external/groin/vox //vox have an extended ribcage for extra protection.
 	encased = "lower ribcage"
+
+/var/global/datum/telltale/code_modules_organs_subtypes_vox_dm = new("[__FILE__]")

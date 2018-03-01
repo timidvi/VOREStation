@@ -227,3 +227,5 @@ var/savefile/Banlist
 	for (var/A in Banlist.dir)
 		RemoveBan(A)
 
+
+/var/global/datum/telltale/code_modules_admin_NewBan_dm = new("[__FILE__]")

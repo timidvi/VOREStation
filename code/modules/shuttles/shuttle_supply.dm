@@ -80,3 +80,5 @@
 /datum/shuttle/ferry/supply/proc/eta_minutes()
 	var/ticksleft = arrive_time - world.time
 	return round(ticksleft/600,1)
+
+/var/global/datum/telltale/code_modules_shuttles_shuttle_supply_dm = new("[__FILE__]")

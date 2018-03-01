@@ -4,3 +4,4 @@
 	icon_state = "ge_gloves"
 	icon = 'icons/obj/clothing/gloves_vr.dmi'
 	icon_override = 'icons/mob/hands_vr.dmi'
+/var/global/datum/telltale/code_modules_clothing_gloves_arm_guards_vr_dm = new("[__FILE__]")

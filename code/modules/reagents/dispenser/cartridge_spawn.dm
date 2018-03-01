@@ -11,3 +11,5 @@
 	var/datum/reagent/R = chemical_reagents_list[reagent]
 	C.setLabel(R.name)
 	log_admin("[key_name(usr)] spawned a [size] reagent container containing [reagent] at ([usr.x],[usr.y],[usr.z])")
+
+/var/global/datum/telltale/code_modules_reagents_dispenser_cartridge_spawn_dm = new("[__FILE__]")

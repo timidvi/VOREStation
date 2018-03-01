@@ -112,3 +112,5 @@
 				var/B = new src.circuit.build_path ( src.loc )
 				src.circuit.construct(B)
 				qdel(src)
+
+/var/global/datum/telltale/code_game_machinery_computer_buildandrepair_dm = new("[__FILE__]")

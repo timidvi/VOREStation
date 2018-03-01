@@ -535,3 +535,5 @@
 		var/mob/living/carbon/C = hud.mymob
 		if(C.handcuffed)
 			overlays |= handcuff_overlay
+
+/var/global/datum/telltale/code__onclick_hud_screen_objects_dm = new("[__FILE__]")

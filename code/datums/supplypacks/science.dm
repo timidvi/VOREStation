@@ -64,3 +64,5 @@
 	cost = 30
 	containertype = /obj/structure/closet/crate
 	containername = "Integrated circuit crate"
+
+/var/global/datum/telltale/code_datums_supplypacks_science_dm = new("[__FILE__]")

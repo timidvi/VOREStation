@@ -93,3 +93,4 @@
 				else
 					M.make_jittery(50)
 				M << "<font color='red' size='7'><b>HONK</b></font>"
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_audible_deception_dm = new("[__FILE__]")

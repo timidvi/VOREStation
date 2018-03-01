@@ -42,3 +42,5 @@ SUBSYSTEM_DEF(orbit)
 			return
 
 
+
+/var/global/datum/telltale/code_controllers_subsystems_orbits_dm = new("[__FILE__]")

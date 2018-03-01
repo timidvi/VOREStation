@@ -566,3 +566,5 @@ var/list/mining_overlay_cache = list()
 		mineral = ore_data[mineral_name]
 		UpdateMineral()
 	update_icon()
+
+/var/global/datum/telltale/code_modules_mining_mine_turfs_dm = new("[__FILE__]")

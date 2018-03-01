@@ -40,3 +40,5 @@ var/global/datum/controller/process/ticker/tickerProcess
 
 /datum/controller/process/ticker/proc/IsRoundInProgress()
 	return (ticker && ticker.current_state == GAME_STATE_PLAYING)
+
+/var/global/datum/telltale/code_controllers_Processes_ticker_dm = new("[__FILE__]")

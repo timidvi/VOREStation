@@ -231,3 +231,5 @@ var/global/list/PDA_Manifest = list()
 
 /obj/effect/spawner
 	name = "object spawner"
+
+/var/global/datum/telltale/code_defines_obj_dm = new("[__FILE__]")

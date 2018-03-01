@@ -60,3 +60,4 @@
 	blurb = "Ook ook."
 	icobase = 'icons/mob/human_races/subspecies/r_upliftedchimp.dmi'
 */
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_human_subspecies_dm = new("[__FILE__]")

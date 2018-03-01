@@ -39,3 +39,4 @@
 	pda_type = /obj/item/device/pda/roboticist
 	backpack = /obj/item/weapon/storage/backpack
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/norm
+/var/global/datum/telltale/code_datums_outfits_jobs_science_dm = new("[__FILE__]")

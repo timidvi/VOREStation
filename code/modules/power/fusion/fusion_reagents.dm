@@ -16,3 +16,4 @@
 	New()
 		..()
 		reagents.add_reagent("helium-3",1000)
+/var/global/datum/telltale/code_modules_power_fusion_fusion_reagents_dm = new("[__FILE__]")

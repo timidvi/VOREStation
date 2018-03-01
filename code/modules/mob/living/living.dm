@@ -1225,3 +1225,4 @@ default behaviour is:
 	else
 		return ..()
 		
+/var/global/datum/telltale/code_modules_mob_living_living_dm = new("[__FILE__]")

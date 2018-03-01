@@ -59,3 +59,5 @@
 //  - Make books/book cases burn when exposed to flame.
 //  - Make book binder hackable.
 //  - Books shouldn't print straight from the library computer. Make it synch with a machine like the book binder to print instead. This should consume some sort of resource.
+
+/var/global/datum/telltale/code_modules_library_lib_readme_dm = new("[__FILE__]")

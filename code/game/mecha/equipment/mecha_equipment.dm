@@ -145,3 +145,5 @@
 	if(chassis)
 		chassis.log_message("<i>[src]:</i> [message]")
 	return
+
+/var/global/datum/telltale/code_game_mecha_equipment_mecha_equipment_dm = new("[__FILE__]")

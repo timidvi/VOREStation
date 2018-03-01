@@ -786,3 +786,5 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/core
 	name = "Core R&D Console"
 	id = 1
+
+/var/global/datum/telltale/code_modules_research_rdconsole_dm = new("[__FILE__]")

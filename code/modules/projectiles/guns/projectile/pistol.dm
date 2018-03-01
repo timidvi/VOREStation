@@ -346,3 +346,4 @@
 
 /obj/item/weapon/gun/projectile/p92x/large
 	magazine_type = /obj/item/ammo_magazine/m9mm/large // Spawns with illegal magazines.
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_pistol_dm = new("[__FILE__]")

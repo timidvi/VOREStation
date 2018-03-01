@@ -16,3 +16,5 @@ var/const/WIRE_ZAP = 1
 		if(WIRE_ZAP)
 			T.zap()
 	..()
+
+/var/global/datum/telltale/code_datums_wires_tesla_coil_dm = new("[__FILE__]")

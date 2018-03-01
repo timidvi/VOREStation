@@ -74,3 +74,5 @@ var/global/datum/locations/milky_way/all_locations = new()
 	var/location_number = locations.count_locations()
 	world << location_number
 */
+
+/var/global/datum/telltale/code_datums_locations_locations_dm = new("[__FILE__]")

@@ -73,3 +73,5 @@
 	if(..())
 		// If true, the mob went from living to dead (assuming everyone has been overriding as they should...)
 		cameranet.updateVisibility(src, 0)
+
+/var/global/datum/telltale/code_modules_mob_freelook_ai_update_triggers_dm = new("[__FILE__]")

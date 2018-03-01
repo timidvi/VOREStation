@@ -48,3 +48,5 @@
 /obj/item/weapon/reagent_containers/glass/beaker/vial/hyronalin
 	name = "vial (hyronalin)"
 	prefill = list("hyronalin" = 30)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_glass_vr_dm = new("[__FILE__]")

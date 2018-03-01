@@ -83,3 +83,4 @@
 	desc = "Your body is smaller than average."
 
 	icon_scale_percent = 0.9
+/var/global/datum/telltale/code_modules_mob__modifiers_traits_dm = new("[__FILE__]")

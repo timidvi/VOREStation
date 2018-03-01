@@ -239,3 +239,5 @@ var/list/_client_preferences_by_type
 	key = "CHAT_RLOOC"
 	enabled_description = "Show"
 	disabled_description = "Hide"
+
+/var/global/datum/telltale/code_modules_client_preference_setup_global_setting_datums_dm = new("[__FILE__]")

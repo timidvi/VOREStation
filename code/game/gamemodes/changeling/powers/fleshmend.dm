@@ -39,3 +39,4 @@
 		src.verbs += /mob/proc/changeling_fleshmend
 	feedback_add_details("changeling_powers","FM")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_fleshmend_dm = new("[__FILE__]")

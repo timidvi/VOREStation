@@ -105,3 +105,5 @@
 		.          += copytext(text, last_found, found)
 		last_found  = found + delim_len
 	while (found)
+
+/var/global/datum/telltale/code__helpers_type_type_vr_dm = new("[__FILE__]")

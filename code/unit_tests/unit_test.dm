@@ -107,3 +107,4 @@ var/total_unit_tests = 0
 
 /datum/unit_test/proc/log_debug(var/message)
 	log_unit_test("[ASCII_YELLOW]---  DEBUG  --- \[[name]\]: [message][ASCII_RESET]")
+/var/global/datum/telltale/code_unit_tests_unit_test_dm = new("[__FILE__]")

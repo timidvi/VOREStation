@@ -24,3 +24,5 @@
 		H.mind_initialize("TestKey[rand(0,10000)]")
 
 	return H
+
+/var/global/datum/telltale/code_unit_tests_unit_test_vr_dm = new("[__FILE__]")

@@ -62,3 +62,5 @@
 			to_chat(user,"<span class='notice'>\The [src] contains [supply.total_volume] units of programmed nanites, ready for dispensing.</span>")
 		else
 			to_chat(user,"<span class='notice'>\The [src] is empty and ready to accept nanopaste.</span>")
+
+/var/global/datum/telltale/code_game_objects_items_devices_advnifrepair_dm = new("[__FILE__]")

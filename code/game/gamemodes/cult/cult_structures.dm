@@ -138,3 +138,5 @@
 	var/mob/living/M = A
 
 	M << "<span class='danger'>Walking into \the [src] is probably a bad idea, you think.</span>"
+
+/var/global/datum/telltale/code_game_gamemodes_cult_cult_structures_dm = new("[__FILE__]")

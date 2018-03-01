@@ -225,3 +225,4 @@
 		return
 
 	new /datum/random_map/droppod(null, usr.x-1, usr.y-1, usr.z, supplied_drops = spawned_mobs, automated = automatic_pod)
+/var/global/datum/telltale/code_modules_random_map_drop_droppod_dm = new("[__FILE__]")

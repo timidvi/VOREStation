@@ -42,3 +42,4 @@ var/global/datum/controller/xenobio/xenobio_controller // Set in New().
 		used_masks += gene_mask
 		xenobio_traits -= gene_tag
 		gene_tag_masks[gene_tag] = gene_mask
+/var/global/datum/telltale/code_modules_xenobio__controller_dm = new("[__FILE__]")

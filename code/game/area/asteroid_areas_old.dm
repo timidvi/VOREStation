@@ -135,3 +135,4 @@
 /area/research_outpost/maintstore2
 	name = "Maintenance Storage"
 	icon_state = "auxstorage"
+/var/global/datum/telltale/code_game_area_asteroid_areas_old_dm = new("[__FILE__]")

@@ -89,3 +89,4 @@
 			sparks.start()
 			visible_message("<span class='warning'>\The [assembly] makes some sparks!</span>")
 			qdel(sparks)
+/var/global/datum/telltale/code_modules_integrated_electronics_subtypes_power_dm = new("[__FILE__]")

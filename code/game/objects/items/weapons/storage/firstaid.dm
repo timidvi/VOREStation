@@ -232,3 +232,5 @@
 	name = "bottle of Iron pills"
 	desc = "Contains pills used to aid in blood regeneration."
 	starts_with = list(/obj/item/weapon/reagent_containers/pill/iron = 7)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_firstaid_dm = new("[__FILE__]")

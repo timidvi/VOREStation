@@ -53,3 +53,4 @@
 		pass("All integrated circuit prefabs are within complexity and size limits.")
 
 	return 1
+/var/global/datum/telltale/code_unit_tests_integrated_circuits_prefabs_dm = new("[__FILE__]")

@@ -3867,3 +3867,4 @@
 	reagents.add_reagent("nutriment", 6)
 	reagents.add_reagent("protein", 4)
 	bitesize = 3
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_snacks_dm = new("[__FILE__]")

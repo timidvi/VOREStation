@@ -424,3 +424,5 @@
 		query_list += word
 
 	return query_list
+
+/var/global/datum/telltale/code_modules_admin_verbs_SDQL___dm = new("[__FILE__]")

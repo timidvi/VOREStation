@@ -171,3 +171,5 @@
 		return 1
 	busy = 0
 	return 0
+
+/var/global/datum/telltale/code_game_machinery_camera_camera_assembly_dm = new("[__FILE__]")

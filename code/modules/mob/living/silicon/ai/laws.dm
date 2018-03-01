@@ -25,3 +25,5 @@
 	set category = "AI Commands"
 	set name = "State Laws"
 	subsystem_law_manager()
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_laws_dm = new("[__FILE__]")

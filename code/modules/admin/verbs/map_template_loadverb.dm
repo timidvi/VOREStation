@@ -72,3 +72,5 @@
 		message_admins("<span class='adminnotice'>[key_name_admin(usr)] has uploaded a map template ([map])</span>")
 	else
 		to_chat(usr, "Map template '[map]' failed to load properly")
+
+/var/global/datum/telltale/code_modules_admin_verbs_map_template_loadverb_dm = new("[__FILE__]")

@@ -116,3 +116,4 @@
 	if(user.stat || user.incapacitated(INCAPACITATION_DISABLED) || !istype(user))
 		return
 	insert(AM, user)
+/var/global/datum/telltale/code_modules_xenobio_machinery_processor_dm = new("[__FILE__]")

@@ -111,3 +111,5 @@
 			ticker.mode:station_was_nuked = 1
 
 
+
+/var/global/datum/telltale/code_game_gamemodes_malfunction_newmalf_ability_trees_HARDWARE_dm = new("[__FILE__]")

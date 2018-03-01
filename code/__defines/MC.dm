@@ -80,3 +80,5 @@ if(current_step == this_step || (initial_step && !resumed)) /* So we start at st
     PreInit();\
 }\
 /datum/controller/subsystem/##X
+
+/var/global/datum/telltale/code___defines_MC_dm = new("[__FILE__]")

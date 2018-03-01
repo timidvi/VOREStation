@@ -90,3 +90,4 @@ obj/item/clothing/gloves/fingerless
 	name = "fingerless gloves"
 	icon_state = "fingerlessgloves"
 	fingerprint_chance = 100
+/var/global/datum/telltale/code_modules_clothing_gloves_color_dm = new("[__FILE__]")

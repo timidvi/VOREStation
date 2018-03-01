@@ -166,3 +166,4 @@
 	var/head_reattach = 0
 	var/current_organ = "organ"
 	var/list/in_progress = list()
+/var/global/datum/telltale/code_modules_surgery_surgery_dm = new("[__FILE__]")

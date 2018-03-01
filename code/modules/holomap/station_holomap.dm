@@ -248,3 +248,5 @@ var/global/list/station_holomaps = list()
 // TODO
 // OHHHH YEAH - STRATEGIC HOLOMAP! NICE!
 // It will need to wait until later tho.
+
+/var/global/datum/telltale/code_modules_holomap_station_holomap_dm = new("[__FILE__]")

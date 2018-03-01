@@ -46,3 +46,4 @@ If the spell_projectile is seeking, it will update its target every process and 
 
 /spell/targeted/projectile/proc/prox_cast(var/list/targets, var/atom/movable/spell_holder)
 	return targets
+/var/global/datum/telltale/code_modules_spells_targeted_projectile_projectile_dm = new("[__FILE__]")

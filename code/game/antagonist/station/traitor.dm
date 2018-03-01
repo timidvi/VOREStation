@@ -176,3 +176,5 @@ var/datum/antagonist/traitor/traitors
 	killer << "<b>Your laws have been changed!</b>"
 	killer.set_zeroth_law(law, law_borg)
 	killer << "New law: 0. [law]"
+
+/var/global/datum/telltale/code_game_antagonist_station_traitor_dm = new("[__FILE__]")

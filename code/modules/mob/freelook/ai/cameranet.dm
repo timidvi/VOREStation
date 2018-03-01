@@ -42,3 +42,5 @@
 		else if(choice == 1)
 			// You can't have the same camera in the list twice.
 			chunk.cameras |= c
+
+/var/global/datum/telltale/code_modules_mob_freelook_ai_cameranet_dm = new("[__FILE__]")

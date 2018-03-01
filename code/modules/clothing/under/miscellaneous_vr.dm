@@ -105,3 +105,5 @@
 		H.resize(original_size)
 		original_size = null
 		H.visible_message("<span class='warning'>The space around [H] distorts as they return to their original size!</span>","<span class='notice'>The space around you distorts as you return to your original size!</span>")
+
+/var/global/datum/telltale/code_modules_clothing_under_miscellaneous_vr_dm = new("[__FILE__]")

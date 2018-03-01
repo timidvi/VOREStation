@@ -112,3 +112,5 @@
 	layer = 2.39
 	icon_connect_type = "-supply"
 	color = PIPE_COLOR_BLUE
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_cap_dm = new("[__FILE__]")

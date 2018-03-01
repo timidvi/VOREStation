@@ -127,3 +127,4 @@
 	if(!(stat & (NOPOWER|BROKEN)))
 		on = 1
 		update_icon()
+/var/global/datum/telltale/code_game_machinery_atmoalter_pump_vr_dm = new("[__FILE__]")

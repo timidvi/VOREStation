@@ -222,3 +222,5 @@ var/syndicate_code_response//Code response for traitors.
 			code_phrase += ", "
 
 	return code_phrase
+
+/var/global/datum/telltale/code__helpers_names_dm = new("[__FILE__]")

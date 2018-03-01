@@ -109,3 +109,5 @@
 
 
 	return 1
+
+/var/global/datum/telltale/code_modules_mob_death_dm = new("[__FILE__]")

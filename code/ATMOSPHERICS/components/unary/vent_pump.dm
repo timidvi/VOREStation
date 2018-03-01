@@ -437,3 +437,5 @@
 
 #undef PRESSURE_CHECK_EXTERNAL
 #undef PRESSURE_CHECK_INTERNAL
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_vent_pump_dm = new("[__FILE__]")

@@ -425,3 +425,5 @@
 							/obj/item/weapon/stock_parts/matter_bin = 2,
 							/obj/item/weapon/stock_parts/scanning_module = 2
 							)
+
+/var/global/datum/telltale/code_modules_xenobio__machinery_gene_manipulators_dm = new("[__FILE__]")

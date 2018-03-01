@@ -141,3 +141,5 @@ var/list/shoreline_icon_cache = list()
 		shoreline_icon_cache[cache_string] = shoreline_water
 		add_overlay(shoreline_icon_cache[cache_string])
 
+
+/var/global/datum/telltale/code_game_turfs_simulated_water_dm = new("[__FILE__]")

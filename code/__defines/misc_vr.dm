@@ -32,3 +32,4 @@
 
 //Assistant/Visitor/Whatever
 #define USELESS_JOB "Visitor"
+/var/global/datum/telltale/code___defines_misc_vr_dm = new("[__FILE__]")

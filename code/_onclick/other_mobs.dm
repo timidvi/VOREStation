@@ -121,3 +121,5 @@
 		ShootTarget(A)
 		target_mob = null
 
+
+/var/global/datum/telltale/code__onclick_other_mobs_dm = new("[__FILE__]")

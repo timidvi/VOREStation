@@ -132,3 +132,5 @@
 #undef CONSTRUCTION_UNANCHORED
 #undef CONSTRUCTION_WRENCHED
 #undef CONSTRUCTION_WELDED
+
+/var/global/datum/telltale/code_modules_multiz_ladder_assembly_vr_dm = new("[__FILE__]")

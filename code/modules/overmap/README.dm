@@ -102,3 +102,4 @@ non-zlevel overmap objects
 				EMP
 		nebulaes
 */
+/var/global/datum/telltale/code_modules_overmap_README_dm = new("[__FILE__]")

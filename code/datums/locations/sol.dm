@@ -40,3 +40,4 @@
 
 /datum/locations/neptune
 	name = "Neptune"
+/var/global/datum/telltale/code_datums_locations_sol_dm = new("[__FILE__]")

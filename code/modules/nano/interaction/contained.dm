@@ -16,3 +16,5 @@
 		return 1
 
 	return contains(location.loc)
+
+/var/global/datum/telltale/code_modules_nano_interaction_contained_dm = new("[__FILE__]")

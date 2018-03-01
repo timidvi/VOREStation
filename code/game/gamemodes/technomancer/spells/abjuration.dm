@@ -38,3 +38,4 @@
 	if(istype(hit_atom, /obj/singularity/narsie))
 		user << "<span class='danger'>One does not simply abjurate Nar'sie away.</span>"
 		adjust_instability(200)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_abjuration_dm = new("[__FILE__]")

@@ -48,3 +48,4 @@
 
 /obj/item/organ/internal/brain/unathi
 	color = "#b3cbc3"
+/var/global/datum/telltale/code_modules_organs_subtypes_unathi_dm = new("[__FILE__]")

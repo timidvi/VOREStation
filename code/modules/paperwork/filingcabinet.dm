@@ -177,3 +177,5 @@
 /obj/structure/filingcabinet/medical/attack_tk()
 	populate()
 	..()
+
+/var/global/datum/telltale/code_modules_paperwork_filingcabinet_dm = new("[__FILE__]")

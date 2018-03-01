@@ -67,3 +67,4 @@
 	else
 		charged_item.visible_message("<span class='notice'>[charged_item] suddenly sparks with energy!</span>")
 		return 1
+/var/global/datum/telltale/code_modules_spells_aoe_turf_charge_dm = new("[__FILE__]")

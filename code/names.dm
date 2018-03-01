@@ -14,3 +14,4 @@ var/list/verbs = file2list("config/names/verbs.txt")
 var/list/adjectives = file2list("config/names/adjectives.txt")
 //loaded on startup because of "
 //would include in rsc if ' was used
+/var/global/datum/telltale/code_names_dm = new("[__FILE__]")

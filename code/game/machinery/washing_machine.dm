@@ -167,3 +167,4 @@
 			washing.Cut()
 
 	update_icon()
+/var/global/datum/telltale/code_game_machinery_washing_machine_dm = new("[__FILE__]")

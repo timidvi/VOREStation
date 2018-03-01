@@ -189,3 +189,5 @@
 
 /turf/space/ChangeTurf(var/turf/N, var/tell_universe=1, var/force_lighting_update = 0)
 	return ..(N, tell_universe, 1)
+
+/var/global/datum/telltale/code_game_turfs_space_space_dm = new("[__FILE__]")

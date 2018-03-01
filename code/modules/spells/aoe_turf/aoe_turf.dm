@@ -23,3 +23,4 @@ Aoe turf spells have two useful flags: IGNOREDENSE and IGNORESPACE. These are ex
 		return
 
 	return targets
+/var/global/datum/telltale/code_modules_spells_aoe_turf_aoe_turf_dm = new("[__FILE__]")

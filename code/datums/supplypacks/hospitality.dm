@@ -75,3 +75,4 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate
 	containername = "crate of gifts"
+/var/global/datum/telltale/code_datums_supplypacks_hospitality_dm = new("[__FILE__]")

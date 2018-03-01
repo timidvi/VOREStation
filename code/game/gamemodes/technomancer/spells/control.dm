@@ -163,3 +163,5 @@
 			user << "<span class='notice'>You command your [controlled_mobs.len > 1 ? "entities" : "[controlled_mobs[1]]"] to move \
 			towards \the [T].</span>"
 
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_control_dm = new("[__FILE__]")

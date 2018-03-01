@@ -985,3 +985,5 @@
 
 
 
+
+/var/global/datum/telltale/code_modules_xenobio_items_extracts_dm = new("[__FILE__]")

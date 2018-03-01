@@ -65,3 +65,5 @@
 	if(prob(33))
 		src.visible_message("<span class='warning'>[src] crumbles away, leaving some dust and gravel behind.</span>")
 		qdel(src)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_finds_dm = new("[__FILE__]")

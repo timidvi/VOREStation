@@ -102,3 +102,5 @@
 	chloral		spawn_reagent = "chloralhydrate"
 	cryoxadone	spawn_reagent = "cryoxadone"
 	clonexadone	spawn_reagent = "clonexadone"
+
+/var/global/datum/telltale/code_modules_reagents_dispenser_cartridge_presets_dm = new("[__FILE__]")

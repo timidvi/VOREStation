@@ -326,3 +326,5 @@
 		heard = "<span class = 'game_say'>...<i>You almost hear someone talking</i>...</span>"
 
 	src << heard
+
+/var/global/datum/telltale/code_modules_mob_hear_say_dm = new("[__FILE__]")

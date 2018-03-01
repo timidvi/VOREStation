@@ -30,3 +30,5 @@
 	head = /obj/item/clothing/head/beret/centcom/captain
 	belt = /obj/item/weapon/gun/energy
 	id_pda_assignment = "NanoTrasen Navy Captain"
+
+/var/global/datum/telltale/code_datums_outfits_nanotrasen_dm = new("[__FILE__]")

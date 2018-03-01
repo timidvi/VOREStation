@@ -132,3 +132,4 @@
 	name = "brown and grey cloak"
 	icon_state = "tesh_cloak_brg"
 	item_state = "tesh_cloak_brg"
+/var/global/datum/telltale/code_modules_clothing_suits_aliens_seromi_dm = new("[__FILE__]")

@@ -330,3 +330,5 @@
 		"storage1" =     list("loc" = ui_storage1,  "name" = "Left Pocket",  "slot" = slot_l_store,   "state" = "pocket"),
 		"storage2" =     list("loc" = ui_storage2,  "name" = "Right Pocket", "slot" = slot_r_store,   "state" = "pocket"),
 		)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_xenomorphs_alien_species_dm = new("[__FILE__]")

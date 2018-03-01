@@ -13,3 +13,5 @@
 	name = "colony director's encryption key"
 	icon_state = "cap_cypherkey"
 	channels = list("Command" = 1, "Security" = 1, "Engineering" = 0, "Science" = 0, "Medical" = 0, "Supply" = 0, "Service" = 0, "Explorer" = 0)
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_encryptionkey_vr_dm = new("[__FILE__]")

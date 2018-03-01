@@ -61,3 +61,4 @@ dmm_suite{
 		// no_changeturf: When true, turf/AfterChange won't be called on loaded turfs
 		}
 }
+/var/global/datum/telltale/code_modules_maps_tg_dmm_suite_dm = new("[__FILE__]")

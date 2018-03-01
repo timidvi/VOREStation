@@ -183,3 +183,5 @@
 	user.do_attack_animation(src)
 	spawn(1) qdel(src)
 	return 1
+
+/var/global/datum/telltale/code_game_objects_structures_dm = new("[__FILE__]")

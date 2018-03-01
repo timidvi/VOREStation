@@ -456,3 +456,5 @@
 /mob/living/simple_animal/hostile/carp/holodeck/proc/derez()
 	visible_message("<span class='notice'>\The [src] fades away!</span>")
 	qdel(src)
+
+/var/global/datum/telltale/code_modules_holodeck_HolodeckObjects_dm = new("[__FILE__]")

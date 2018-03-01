@@ -164,3 +164,5 @@ for now put it on a disk
 /datum/file/data/genome/cloning
 	name = "Cloning Data"
 	var/datum/data/record/record
+
+/var/global/datum/telltale/code_game_machinery_computer__file_dm = new("[__FILE__]")

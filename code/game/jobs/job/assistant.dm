@@ -51,3 +51,5 @@
 	else
 		return list()
 //VOREStation Add End
+
+/var/global/datum/telltale/code_game_jobs_job_assistant_dm = new("[__FILE__]")

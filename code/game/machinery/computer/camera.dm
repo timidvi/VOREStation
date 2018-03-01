@@ -282,3 +282,4 @@
 /obj/machinery/computer/security/nuclear/New()
 	..()
 	req_access = list(150)
+/var/global/datum/telltale/code_game_machinery_computer_camera_dm = new("[__FILE__]")

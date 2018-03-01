@@ -67,3 +67,4 @@
 	minimal_player_age = 3
 
 	outfit_type = /decl/hierarchy/outfit/job/engineering/atmos
+/var/global/datum/telltale/code_game_jobs_job_engineering_dm = new("[__FILE__]")

@@ -661,3 +661,5 @@
 	closed_system = !closed_system
 	user << "You [closed_system ? "close" : "open"] the tray's lid."
 	update_icon()
+
+/var/global/datum/telltale/code_modules_hydroponics_trays_tray_dm = new("[__FILE__]")

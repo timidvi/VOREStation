@@ -197,3 +197,5 @@
 				loc.contents += stomachContent
 
 		return
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_worm_dm = new("[__FILE__]")

@@ -114,3 +114,4 @@
 	T.death(0)
 	T.Drain()
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_absorb_dm = new("[__FILE__]")

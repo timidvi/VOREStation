@@ -178,3 +178,5 @@ client/proc/edit_report(ID as num)
 	found.body = body
 
 	Reports["reports"]   << reports
+
+/var/global/datum/telltale/code_modules_admin_admin_report_dm = new("[__FILE__]")

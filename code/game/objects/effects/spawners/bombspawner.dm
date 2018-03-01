@@ -254,3 +254,5 @@
 	qdel(src)
 
 
+
+/var/global/datum/telltale/code_game_objects_effects_spawners_bombspawner_dm = new("[__FILE__]")

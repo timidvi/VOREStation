@@ -238,3 +238,5 @@
 	if(abs)
 		return "[abs( ((multi - 1) * 100) )]%"
 	return "[((multi - 1) * 100)]%"
+
+/var/global/datum/telltale/code_modules_mob__modifiers_modifiers_dm = new("[__FILE__]")

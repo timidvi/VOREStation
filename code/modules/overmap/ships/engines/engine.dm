@@ -58,3 +58,4 @@ var/list/ship_engines = list()
 			E.engines -= src
 			break
 	qdel(src)
+/var/global/datum/telltale/code_modules_overmap_ships_engines_engine_dm = new("[__FILE__]")

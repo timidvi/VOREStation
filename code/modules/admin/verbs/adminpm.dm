@@ -143,3 +143,5 @@
 			continue
 		if(X.holder.rights & R_ADMIN|R_MOD)
 			X << "<span class='pm'><span class='other'>" + create_text_tag("pm_other", "PM:", X) + " <span class='name'>[key_name(src, X, 0)]</span> to <span class='name'>IRC-[sender]</span>: <span class='message'>[msg]</span></span></span>"
+
+/var/global/datum/telltale/code_modules_admin_verbs_adminpm_dm = new("[__FILE__]")

@@ -161,3 +161,5 @@
 //		O.update_icon = 1	//queue a full icon update at next life() call
 	qdel(M)
 	return
+
+/var/global/datum/telltale/code_game_dna_genes_monkey_dm = new("[__FILE__]")

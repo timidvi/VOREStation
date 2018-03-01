@@ -207,3 +207,5 @@
 	status = 1
 	update_icon()
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_flamethrower_dm = new("[__FILE__]")

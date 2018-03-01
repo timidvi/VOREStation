@@ -453,3 +453,5 @@
 
 /obj/item/weapon/hand/pickup(mob/user as mob)
 	src.update_icon()
+
+/var/global/datum/telltale/code_modules_games_cards_dm = new("[__FILE__]")

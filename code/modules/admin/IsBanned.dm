@@ -83,3 +83,5 @@ world/IsBanned(key,address,computer_id)
 #endif
 #undef OVERRIDE_BAN_SYSTEM
 
+
+/var/global/datum/telltale/code_modules_admin_IsBanned_dm = new("[__FILE__]")

@@ -602,3 +602,4 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/weapon/flame/lighter/zippo/rainbow
 	name = "\improper rainbow Zippo lighter"
 	icon_state = "rainbowzippo"
+/var/global/datum/telltale/code_game_objects_items_weapons_cigs_lighters_dm = new("[__FILE__]")

@@ -42,3 +42,4 @@
 
 
 	adjust_instability(3)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_aura_shock_aura_dm = new("[__FILE__]")

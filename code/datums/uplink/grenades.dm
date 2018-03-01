@@ -67,3 +67,4 @@
 /datum/uplink_item/item/grenades/flashbangs_singular
 	name = "1xFlashbang"
 	item_cost = 8
+/var/global/datum/telltale/code_datums_uplink_grenades_dm = new("[__FILE__]")

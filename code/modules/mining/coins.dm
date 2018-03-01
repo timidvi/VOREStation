@@ -79,3 +79,5 @@
 		comment = "heads"
 	user.visible_message("<span class='notice'>[user] has thrown \the [src]. It lands on [comment]! </span>", \
 						 "<span class='notice'>You throw \the [src]. It lands on [comment]! </span>")
+
+/var/global/datum/telltale/code_modules_mining_coins_dm = new("[__FILE__]")

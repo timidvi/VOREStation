@@ -48,16 +48,27 @@ var/global/list/runlevel_flags = list(RUNLEVEL_LOBBY, RUNLEVEL_SETUP, RUNLEVEL_G
 		if(LAZYLEN(po)){\
 			if(LAZYLEN(oo)){\
 				A.overlays = oo + po;\
+				if(A.overlays.len != (oo.len + po.len)) {\
+					log_debug("UH OH1 COMPILE_OVERLAYS([A]:[log_info_line(A)] unexpected overlay len!")\
+				}\
 			}\
 			else{\
 				A.overlays = po;\
+				if(A.overlays.len != po.len) {\
+					log_debug("UH OH2 COMPILE_OVERLAYS([A]:[log_info_line(A)] unexpected overlay len!")\
+				}\
 			}\
 		}\
 		else if(LAZYLEN(oo)){\
 			A.overlays = oo;\
+			if(A.overlays.len != oo.len) {\
+				log_debug("UH OH3 COMPILE_OVERLAYS([A]:[log_info_line(A)] unexpected overlay len!")\
+			}\
 		}\
 		else{\
 			A.overlays.Cut();\
 		}\
 		A.flags &= ~OVERLAY_QUEUED;\
 	}
+
+/var/global/datum/telltale/code___defines_subsystems_dm = new("[__FILE__]")

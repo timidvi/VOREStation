@@ -120,3 +120,5 @@
 	if(deactivation_messages.len)
 		var/msg = pick(deactivation_messages)
 		M << "<span class='warning'>[msg]</span>"
+
+/var/global/datum/telltale/code_game_dna_genes_gene_dm = new("[__FILE__]")

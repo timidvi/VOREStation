@@ -16,3 +16,4 @@
 			if(istype(AM, /obj/item/weapon/gun))
 				to_chat(user, "You have chosen \the [AM]. Say hello to your new friend.")
 		qdel(src)
+/var/global/datum/telltale/code_game_objects_items_gunbox_vr_dm = new("[__FILE__]")

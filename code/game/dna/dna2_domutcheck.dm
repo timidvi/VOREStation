@@ -41,3 +41,5 @@
 				if(M)
 					M.active_genes -= gene.type
 					M.update_icon = 1
+
+/var/global/datum/telltale/code_game_dna_dna__domutcheck_dm = new("[__FILE__]")

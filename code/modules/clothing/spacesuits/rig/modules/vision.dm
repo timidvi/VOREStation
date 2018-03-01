@@ -216,3 +216,4 @@
 		processed_vision += vision_datum
 
 	vision_modes = processed_vision
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_vision_dm = new("[__FILE__]")

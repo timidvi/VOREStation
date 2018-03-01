@@ -411,3 +411,4 @@ send an additional command to open the door again.
 #undef TARGET_NONE
 #undef TARGET_INOPEN
 #undef TARGET_OUTOPEN
+/var/global/datum/telltale/code_game_machinery_embedded_controller_airlock_program_dm = new("[__FILE__]")

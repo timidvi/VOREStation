@@ -52,3 +52,5 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 		return TOPIC_REFRESH
 
 	return ..()
+
+/var/global/datum/telltale/code_modules_client_preference_setup_antagonism____candidacy_dm = new("[__FILE__]")

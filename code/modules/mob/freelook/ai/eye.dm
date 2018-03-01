@@ -91,3 +91,5 @@
 
 	eyeobj.acceleration = !eyeobj.acceleration
 	usr << "Camera acceleration has been toggled [eyeobj.acceleration ? "on" : "off"]."
+
+/var/global/datum/telltale/code_modules_mob_freelook_ai_eye_dm = new("[__FILE__]")

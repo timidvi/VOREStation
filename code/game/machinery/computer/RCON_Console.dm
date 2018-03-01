@@ -41,3 +41,4 @@
 	..()
 	if(!(stat & (NOPOWER|BROKEN)))
 		overlays += image(icon, "ai-fixer-empty", overlay_layer) //VOREStation Edit
+/var/global/datum/telltale/code_game_machinery_computer_RCON_Console_dm = new("[__FILE__]")

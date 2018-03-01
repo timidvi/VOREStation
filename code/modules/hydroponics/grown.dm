@@ -367,3 +367,5 @@ var/list/fruit_icon_cache = list()
 		I.color = flesh_colour
 		fruit_icon_cache["slice-[rind_colour]"] = I
 	overlays |= fruit_icon_cache["slice-[rind_colour]"]
+
+/var/global/datum/telltale/code_modules_hydroponics_grown_dm = new("[__FILE__]")

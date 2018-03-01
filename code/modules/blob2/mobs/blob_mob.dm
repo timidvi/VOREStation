@@ -55,3 +55,5 @@
 	for(var/obj/structure/blob/B in range(1, src))
 		return TRUE
 	return ..()
+
+/var/global/datum/telltale/code_modules_blob__mobs_blob_mob_dm = new("[__FILE__]")

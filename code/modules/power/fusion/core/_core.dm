@@ -138,3 +138,4 @@ var/list/fusion_cores = list()
 		return FALSE
 	owned_field.plasma_temperature = field_temperature
 	return TRUE
+/var/global/datum/telltale/code_modules_power_fusion_core__core_dm = new("[__FILE__]")

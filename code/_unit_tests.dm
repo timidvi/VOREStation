@@ -8,3 +8,5 @@
  *   #define UNIT_TEST 1
  */
 #define UNIT_TEST 0
+
+/var/global/datum/telltale/code__unit_tests_dm = new("[__FILE__]")

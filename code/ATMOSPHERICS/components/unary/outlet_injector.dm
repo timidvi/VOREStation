@@ -156,3 +156,4 @@
 
 /obj/machinery/atmospherics/unary/outlet_injector/hide(var/i)
 	update_underlays()
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_outlet_injector_dm = new("[__FILE__]")

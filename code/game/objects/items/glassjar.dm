@@ -106,3 +106,4 @@
 				name = "glass jar with [S]"
 				desc = "A small jar with [S] inside."
 	return
+/var/global/datum/telltale/code_game_objects_items_glassjar_dm = new("[__FILE__]")

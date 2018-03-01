@@ -88,3 +88,5 @@
 			icon_state = "extinguisher_full"
 	else
 		icon_state = "extinguisher_empty"
+
+/var/global/datum/telltale/code_game_objects_structures_extinguisher_dm = new("[__FILE__]")

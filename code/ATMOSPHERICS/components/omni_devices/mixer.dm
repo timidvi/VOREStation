@@ -294,3 +294,4 @@
 	for(var/datum/omni_port/P in inputs)
 		if(P.dir == port)
 			P.con_lock = !P.con_lock
+/var/global/datum/telltale/code_ATMOSPHERICS_components_omni_devices_mixer_dm = new("[__FILE__]")

@@ -71,3 +71,5 @@
 
 //This pseudo code is being left in place to serve as references to the modifications to gun.dm, the Fire() proc, and the afterattack() proc. -k22
 //Code donated by Mport.
+
+/var/global/datum/telltale/code_modules_projectiles_guns_automatic_fire_dm = new("[__FILE__]")

@@ -45,3 +45,5 @@
 	name = T_BOARD("body design console")
 	build_path = /obj/machinery/computer/transhuman/designer
 	origin_tech = list(TECH_DATA = 5)
+
+/var/global/datum/telltale/code_modules_resleeving_circuitboards_dm = new("[__FILE__]")

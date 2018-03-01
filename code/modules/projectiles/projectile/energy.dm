@@ -208,3 +208,4 @@
 	damage = 5
 	SA_bonus_damage = 55 // 60 total on animals.
 	SA_vulnerability = SA_ANIMAL
+/var/global/datum/telltale/code_modules_projectiles_projectile_energy_dm = new("[__FILE__]")

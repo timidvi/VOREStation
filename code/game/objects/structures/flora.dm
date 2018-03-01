@@ -316,3 +316,4 @@
 /obj/structure/flora/sif/eyes/initialize()
 	icon_state = "[initial(icon_state)][rand(1,3)]"
 	. = ..()
+/var/global/datum/telltale/code_game_objects_structures_flora_dm = new("[__FILE__]")

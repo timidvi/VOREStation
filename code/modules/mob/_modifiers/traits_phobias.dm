@@ -667,3 +667,5 @@
 		)
 	return pick(generic_responses)
 
+
+/var/global/datum/telltale/code_modules_mob__modifiers_traits_phobias_dm = new("[__FILE__]")

@@ -38,3 +38,4 @@
 
 /obj/item/device/assembly/igniter/is_hot()
 	return TRUE
+/var/global/datum/telltale/code_modules_assembly_igniter_dm = new("[__FILE__]")

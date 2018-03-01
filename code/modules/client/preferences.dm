@@ -324,3 +324,5 @@ datum/preferences
 /datum/preferences/proc/close_load_dialog(mob/user)
 	//user << browse(null, "window=saves")
 	panel.close()
+
+/var/global/datum/telltale/code_modules_client_preferences_dm = new("[__FILE__]")

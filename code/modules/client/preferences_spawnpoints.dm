@@ -66,3 +66,4 @@ var/list/spawntypes = list()
 /datum/spawnpoint/cyborg/New()
 	..()
 	turfs = latejoin_cyborg
+/var/global/datum/telltale/code_modules_client_preferences_spawnpoints_dm = new("[__FILE__]")

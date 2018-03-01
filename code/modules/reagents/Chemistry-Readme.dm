@@ -303,3 +303,4 @@ About the Tools:
 			tools to manipulate it.
 
 */
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Readme_dm = new("[__FILE__]")

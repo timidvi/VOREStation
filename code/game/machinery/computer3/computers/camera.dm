@@ -349,3 +349,5 @@
 		// On interact, override camera key selection
 		select_key(special_key)
 		..()
+
+/var/global/datum/telltale/code_game_machinery_computer__computers_camera_dm = new("[__FILE__]")

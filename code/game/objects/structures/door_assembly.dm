@@ -327,3 +327,5 @@
 	if(prob(40)) // Chance for the frame to let the bullet keep going.
 		return PROJECTILE_CONTINUE
 	return ..()
+
+/var/global/datum/telltale/code_game_objects_structures_door_assembly_dm = new("[__FILE__]")

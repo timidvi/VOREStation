@@ -7,3 +7,5 @@
 		create_mob_html = replacetext(create_mob_html, "null /* object types */", "\"[mobjs]\"")
 
 	user << browse(replacetext(create_mob_html, "/* ref src */", "\ref[src]"), "window=create_mob;size=425x475")
+
+/var/global/datum/telltale/code_modules_admin_create_mob_dm = new("[__FILE__]")

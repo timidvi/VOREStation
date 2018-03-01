@@ -31,3 +31,4 @@
 
 /datum/modifier/technomancer/corona/tick()
 	holder.break_cloak()
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_modifier_corona_dm = new("[__FILE__]")

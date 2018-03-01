@@ -33,3 +33,5 @@
 			s.start()
 			return
 	// Sadly no ian feasible.
+
+/var/global/datum/telltale/code_modules_events_ian_storm_vr_dm = new("[__FILE__]")

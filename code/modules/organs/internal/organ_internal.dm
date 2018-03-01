@@ -62,3 +62,5 @@
 		if (prob(50))
 			take_damage(1,silent=prob(15))
 
+
+/var/global/datum/telltale/code_modules_organs_internal_organ_internal_dm = new("[__FILE__]")

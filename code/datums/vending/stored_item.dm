@@ -57,3 +57,4 @@
 	for(var/i = 1 to amount)
 		var/new_product = new item_path(stored)
 		instances += new_product
+/var/global/datum/telltale/code_datums_vending_stored_item_dm = new("[__FILE__]")

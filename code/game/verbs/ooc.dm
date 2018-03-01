@@ -172,3 +172,5 @@
 	if(eyeobj)
 		return eyeobj
 	return src
+
+/var/global/datum/telltale/code_game_verbs_ooc_dm = new("[__FILE__]")

@@ -15,3 +15,5 @@
 		sortInstance.timSort(fromIndex, toIndex)
 
 	return L
+
+/var/global/datum/telltale/code__helpers_sorts_TimSort_dm = new("[__FILE__]")

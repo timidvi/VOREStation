@@ -365,3 +365,5 @@ var/global/list/narsie_list = list()
 	sleep(11)
 	move_self = 1
 	icon = initial(icon)
+
+/var/global/datum/telltale/code_game_gamemodes_cult_narsie_dm = new("[__FILE__]")

@@ -98,3 +98,4 @@
 	var/datum/gender/T = gender_datums[user.get_visible_gender()]
 	user.visible_message("<font color='red'>[user]'s hand slips, causing [T.him] to miss the core!</font>", \
 	"<font color='red'>Your hand slips, causing you to miss the core!</font>")
+/var/global/datum/telltale/code_modules_surgery_slimes_dm = new("[__FILE__]")

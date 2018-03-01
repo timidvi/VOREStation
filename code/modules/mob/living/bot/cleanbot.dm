@@ -202,3 +202,5 @@
 		if(!in_range(src, usr) && src.loc != usr)
 			return
 		created_name = t
+
+/var/global/datum/telltale/code_modules_mob_living_bot_cleanbot_dm = new("[__FILE__]")

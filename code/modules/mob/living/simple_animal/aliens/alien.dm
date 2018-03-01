@@ -138,3 +138,4 @@
 	..()
 	visible_message("[src] lets out a waning guttural screech, green blood bubbling from its maw...")
 	playsound(src, 'sound/voice/hiss6.ogg', 100, 1)
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_aliens_alien_dm = new("[__FILE__]")

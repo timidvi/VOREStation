@@ -72,3 +72,5 @@ var/const/CAMERA_WIRE_NOTHING2 = 32
 		return 1
 	else
 		return 0
+
+/var/global/datum/telltale/code_datums_wires_camera_dm = new("[__FILE__]")

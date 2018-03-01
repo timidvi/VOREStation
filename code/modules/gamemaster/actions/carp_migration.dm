@@ -63,3 +63,4 @@
 			if(istype(T, /turf/space))
 				if(!prob(25))
 					qdel(C)
+/var/global/datum/telltale/code_modules_gamemaster_actions_carp_migration_dm = new("[__FILE__]")

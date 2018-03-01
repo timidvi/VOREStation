@@ -106,3 +106,5 @@
 
 /obj/item/weapon/material/shard/phoron/New(loc)
 	..(loc, "phglass")
+
+/var/global/datum/telltale/code_game_objects_items_weapons_material_shards_dm = new("[__FILE__]")

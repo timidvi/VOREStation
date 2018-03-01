@@ -76,3 +76,4 @@
 		armor_stats += "It can be worn on your [english_list(slots)]. \n"
 
 	return armor_stats
+/var/global/datum/telltale/code_modules_examine_descriptions_armor_dm = new("[__FILE__]")

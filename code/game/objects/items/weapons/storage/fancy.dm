@@ -330,3 +330,5 @@
 /obj/item/weapon/storage/fancy/heartbox/update_icon(var/itemremoved = 0)
 	if (contents.len == 0)
 		icon_state = "heartbox_empty"
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_fancy_dm = new("[__FILE__]")

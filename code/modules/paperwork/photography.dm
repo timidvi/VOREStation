@@ -323,3 +323,5 @@ var/global/photo_count = 0
 		p.id = id
 
 	return p
+
+/var/global/datum/telltale/code_modules_paperwork_photography_dm = new("[__FILE__]")

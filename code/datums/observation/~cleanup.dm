@@ -68,3 +68,5 @@ var/list/event_listen_count = list()
 				log_debug("[event] - [listener] was deleted while still listening to [event_source].")
 				if(!(--listener_count))
 					return
+
+/var/global/datum/telltale/code_datums_observation__cleanup_dm = new("[__FILE__]")

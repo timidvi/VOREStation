@@ -289,3 +289,4 @@
 		return
 
 	..()
+/var/global/datum/telltale/code_modules_clothing_spacesuits_void_void_dm = new("[__FILE__]")

@@ -129,3 +129,5 @@
 	desc = "Twoooo!"
 	icon_state = "owl"
 	body_parts_covered = HEAD|FACE|EYES
+
+/var/global/datum/telltale/code_modules_clothing_masks_gasmask_dm = new("[__FILE__]")

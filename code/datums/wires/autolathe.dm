@@ -58,3 +58,5 @@ var/const/AUTOLATHE_DISABLE_WIRE = 4
 				if(A && !IsIndexCut(index))
 					A.disabled = 0
 					Interact(usr)
+
+/var/global/datum/telltale/code_datums_wires_autolathe_dm = new("[__FILE__]")

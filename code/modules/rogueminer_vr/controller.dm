@@ -171,3 +171,4 @@ var/datum/controller/rogue/rm_controller = new()
 			ZM_oldest.clean_zone()
 
 	return ZM_target
+/var/global/datum/telltale/code_modules_rogueminer_vr_controller_dm = new("[__FILE__]")

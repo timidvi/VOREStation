@@ -13,3 +13,5 @@
 	new /obj/item/weapon/crowbar(src)
 	new /obj/item/weapon/cell(src)
 	new /obj/item/device/multitool(src)
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_malfunction_dm = new("[__FILE__]")

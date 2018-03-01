@@ -33,3 +33,5 @@
 	..()
 
 //todo: laser_act
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_artifacts_crystal_dm = new("[__FILE__]")

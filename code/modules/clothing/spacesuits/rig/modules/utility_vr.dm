@@ -167,3 +167,5 @@
 	if(charge.charges < 0) charge.charges = 0
 
 	return 1
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_modules_utility_vr_dm = new("[__FILE__]")

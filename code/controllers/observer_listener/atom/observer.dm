@@ -29,3 +29,5 @@
 		listeners = list()
 		observer_events[observer_event] = listeners
 	return listeners
+
+/var/global/datum/telltale/code_controllers_observer_listener_atom_observer_dm = new("[__FILE__]")

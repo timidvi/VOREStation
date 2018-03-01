@@ -42,3 +42,5 @@
 	. = B[STAT_ENTRY_TIME] - A[STAT_ENTRY_TIME]
 	if (!.)
 		. = B[STAT_ENTRY_COUNT] - A[STAT_ENTRY_COUNT]
+
+/var/global/datum/telltale/code__helpers_sorts_comparators_dm = new("[__FILE__]")

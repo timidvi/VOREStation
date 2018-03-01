@@ -28,3 +28,5 @@
 
 /datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
 	return //This nullifies them gibbing.
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_prometheans_vr_dm = new("[__FILE__]")

@@ -16,3 +16,4 @@
 		lines += "Extreme caution is advised."
 
 	command_announcement.Announce(lines.Join("\n"), "Biohazard Alert", new_sound = 'sound/AI/outbreak7.ogg')
+/var/global/datum/telltale/code_modules_blob__announcement_dm = new("[__FILE__]")

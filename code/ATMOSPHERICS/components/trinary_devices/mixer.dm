@@ -145,3 +145,5 @@ obj/machinery/atmospherics/trinary/mixer/t_mixer
 	dir = SOUTH
 	initialize_directions = SOUTH|NORTH|EAST
 	mirrored = TRUE
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_trinary_devices_mixer_dm = new("[__FILE__]")

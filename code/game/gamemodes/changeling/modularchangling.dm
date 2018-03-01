@@ -358,3 +358,5 @@ var/list/datum/power/changeling/powerinstances = list()
 	else if(remake_verbs)
 		M.current.make_changeling()
 
+
+/var/global/datum/telltale/code_game_gamemodes_changeling_modularchangling_dm = new("[__FILE__]")

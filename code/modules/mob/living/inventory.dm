@@ -175,3 +175,5 @@
 	if((src.l_hand && !( src.l_hand.abstract )) || (src.r_hand && !( src.r_hand.abstract )))
 		return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_mob_living_inventory_dm = new("[__FILE__]")

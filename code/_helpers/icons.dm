@@ -962,3 +962,5 @@ proc/sort_atoms_by_layer(var/list/atoms)
 
 	//Animate it growing
 	animate(img, alpha = 0, transform = matrix()*grow_to, time = anim_duration, loop = loops)
+
+/var/global/datum/telltale/code__helpers_icons_dm = new("[__FILE__]")

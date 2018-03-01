@@ -44,3 +44,5 @@
 					M << "<font color='blue'>SYSTEM ALERT: Energy boost detected!</font>"
 					last_message = world.time
 		return 1
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_cellcharge_dm = new("[__FILE__]")

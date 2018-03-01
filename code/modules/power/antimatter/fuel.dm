@@ -97,3 +97,5 @@
 		for(var/mob/O in viewers(M, null))
 			O.show_message(text("<font color='red'>[M] ate the [content ? content : "empty canister"]!</font>"), 1)
 		src.injest(M)
+
+/var/global/datum/telltale/code_modules_power_antimatter_fuel_dm = new("[__FILE__]")

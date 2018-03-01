@@ -50,3 +50,4 @@
 				tracked |= C
 	return 1
 */
+/var/global/datum/telltale/code_modules_nano_modules_crew_monitor_dm = new("[__FILE__]")

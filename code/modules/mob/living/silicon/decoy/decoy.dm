@@ -10,3 +10,4 @@
 	src.icon_state = "ai"
 	src.anchored = 1
 	src.canmove = 0
+/var/global/datum/telltale/code_modules_mob_living_silicon_decoy_decoy_dm = new("[__FILE__]")

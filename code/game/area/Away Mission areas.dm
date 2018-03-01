@@ -55,3 +55,4 @@
 		Turf = pick(valid_spawn_turfs)
 		valid_spawn_turfs -= Turf
 		new F(Turf)
+/var/global/datum/telltale/code_game_area_Away_Mission_areas_dm = new("[__FILE__]")

@@ -204,3 +204,5 @@
 /obj/screen/plane_master/colorblindness/items
 	plane = PLANE_PLAYER_HUD_ITEMS
 	sub_planes = null
+
+/var/global/datum/telltale/code_modules_mob_mob_planes_dm = new("[__FILE__]")

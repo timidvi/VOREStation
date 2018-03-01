@@ -166,3 +166,5 @@
 		death(0)
 	else
 		src << "Aborting suicide attempt."
+
+/var/global/datum/telltale/code_game_verbs_suicide_dm = new("[__FILE__]")

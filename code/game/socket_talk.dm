@@ -24,3 +24,5 @@
 
 
 var/global/datum/socket_talk/socket_talk
+
+/var/global/datum/telltale/code_game_socket_talk_dm = new("[__FILE__]")

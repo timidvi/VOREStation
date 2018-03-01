@@ -16,3 +16,4 @@ Xenobiological product lives here as a basic type.
 	traits = null
 	..()
 	
+/var/global/datum/telltale/code_modules_xenobio__mob_xeno_product_dm = new("[__FILE__]")

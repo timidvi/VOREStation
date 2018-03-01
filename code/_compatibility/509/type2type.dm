@@ -100,3 +100,4 @@
 		last_found  = found + delim_len
 	while (found)
 #endif
+/var/global/datum/telltale/code__compatibility_____type_type_dm = new("[__FILE__]")

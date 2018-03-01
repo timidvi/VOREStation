@@ -106,3 +106,5 @@
 		icon_state = "paper_bin0"
 	else
 		icon_state = "paper_bin1"
+
+/var/global/datum/telltale/code_modules_paperwork_paperbin_dm = new("[__FILE__]")

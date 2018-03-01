@@ -286,3 +286,5 @@ var/global/const/base_law_type = /datum/ai_laws/nanotrasen
 	var/index = laws.Find(law)
 	if(index)
 		state[index] = do_state
+
+/var/global/datum/telltale/code_datums_ai_laws_dm = new("[__FILE__]")

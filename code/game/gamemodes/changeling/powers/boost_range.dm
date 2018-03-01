@@ -29,3 +29,4 @@
 		src.verbs += /mob/proc/changeling_boost_range
 	feedback_add_details("changeling_powers","RS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_boost_range_dm = new("[__FILE__]")

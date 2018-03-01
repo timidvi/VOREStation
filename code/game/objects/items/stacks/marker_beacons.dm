@@ -137,3 +137,5 @@ var/list/marker_beacon_colors = list(
 	if(input_color)
 		picked_color = input_color
 		update_icon()
+
+/var/global/datum/telltale/code_game_objects_items_stacks_marker_beacons_dm = new("[__FILE__]")

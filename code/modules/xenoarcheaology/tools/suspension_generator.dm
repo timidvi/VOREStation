@@ -249,3 +249,5 @@
 	for(var/atom/movable/I in src)
 		I.dropInto(loc)
 	return ..()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_suspension_generator_dm = new("[__FILE__]")

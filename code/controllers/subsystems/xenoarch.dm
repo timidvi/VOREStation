@@ -114,3 +114,5 @@ SUBSYSTEM_DEF(xenoarch)
 #undef DIGSITESIZE_UPPER
 #undef ARTIFACTSPAWNNUM_LOWER
 #undef ARTIFACTSPAWNNUM_UPPER
+
+/var/global/datum/telltale/code_controllers_subsystems_xenoarch_dm = new("[__FILE__]")

@@ -57,3 +57,4 @@
 	playsound(loc, 'sound/effects/woodcutting.ogg', 100, 1)
 	new /obj/item/stack/material/wood(loc)
 	qdel(src)
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_tree_dm = new("[__FILE__]")

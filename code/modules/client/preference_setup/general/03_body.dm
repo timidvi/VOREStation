@@ -792,3 +792,5 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	dat += "</center></body>"
 
 	user << browse(dat, "window=species;size=700x400")
+
+/var/global/datum/telltale/code_modules_client_preference_setup_general____body_dm = new("[__FILE__]")

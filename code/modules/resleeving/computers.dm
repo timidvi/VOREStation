@@ -405,3 +405,5 @@
 	item_state = "card-id"
 	w_class = ITEMSIZE_SMALL
 	var/datum/transhuman/mind_record/list/stored = list()
+
+/var/global/datum/telltale/code_modules_resleeving_computers_dm = new("[__FILE__]")

@@ -311,3 +311,4 @@
 	suggested_punishments = "Demotion of the user.  Termination at discretion of Station Director.  Return confiscated equipment to evidence storage."
 	notes = "Security shouldn't be using evidence for anything but evidence, and should never use contraband.  This is meant for people misusing evidence for personal use.  Evidence stolen \
 	in order to cover up a crime would fall under Theft or Tampering with Evidence."
+/var/global/datum/telltale/code_modules_lore_codex_legal_code_data_corporate_regulations_dm = new("[__FILE__]")

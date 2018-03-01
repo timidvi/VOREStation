@@ -14,3 +14,5 @@ var/datum/lore/loremaster/loremaster = new/datum/lore/loremaster
 		if(initial(instance.name))
 			instance = new path()
 			organizations[path] = instance
+
+/var/global/datum/telltale/code_modules_busy_space_loremaster_dm = new("[__FILE__]")

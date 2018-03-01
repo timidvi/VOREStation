@@ -407,3 +407,5 @@
 			qdel(D)
 
 	H.visible_message("<span class='danger'>\The [H] splits apart with a wet slithering noise!</span>")
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_station_dm = new("[__FILE__]")

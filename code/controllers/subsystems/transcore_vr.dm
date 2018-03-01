@@ -196,3 +196,4 @@ SUBSYSTEM_DEF(transcore)
 
 #undef SSTRANSCORE_BACKUPS
 #undef SSTRANSCORE_IMPLANTS
+/var/global/datum/telltale/code_controllers_subsystems_transcore_vr_dm = new("[__FILE__]")

@@ -1316,3 +1316,5 @@ Buildable meters
 #undef PIPE_SCRUBBERS_MANIFOLD
 #undef PIPE_UNIVERSAL
 //#undef PIPE_MANIFOLD4W
+
+/var/global/datum/telltale/code_game_machinery_pipe_construction_dm = new("[__FILE__]")

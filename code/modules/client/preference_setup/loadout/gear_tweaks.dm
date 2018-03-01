@@ -140,3 +140,5 @@
 	else
 		. = valid_reagents[metadata]
 	I.reagents.add_reagent(., I.reagents.get_free_space())
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_gear_tweaks_dm = new("[__FILE__]")

@@ -16,3 +16,5 @@
 	#define USING_MAP_DATUM /datum/map
 	#define MAP_OVERRIDE 1
 #endif
+
+/var/global/datum/telltale/code___defines__compile_options_dm = new("[__FILE__]")

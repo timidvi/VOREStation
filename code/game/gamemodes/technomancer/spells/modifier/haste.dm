@@ -26,3 +26,4 @@
 	on_expired_text = "<span class='warning'>You feel slow again.</span>"
 	haste = TRUE
 	stacks = MODIFIER_STACK_EXTEND
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_modifier_haste_dm = new("[__FILE__]")

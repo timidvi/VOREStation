@@ -25,3 +25,4 @@
 	message_admins("[key_name_admin(src)] launched cinematic \"[cinematic]\"", 1)
 
 	return
+/var/global/datum/telltale/code_modules_admin_verbs_cinematic_dm = new("[__FILE__]")

@@ -240,3 +240,5 @@ turf/proc/AdjacentTurfsRangedSting()
 	if(!T.mind || !T.mind.changeling)	return T	//T will be affected by the sting
 	T << "<span class='warning'>You feel a tiny prick.</span>"
 	return
+
+/var/global/datum/telltale/code_game_gamemodes_changeling_changeling_powers_dm = new("[__FILE__]")

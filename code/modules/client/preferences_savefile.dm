@@ -100,3 +100,4 @@
 
 #undef SAVEFILE_VERSION_MAX
 #undef SAVEFILE_VERSION_MIN
+/var/global/datum/telltale/code_modules_client_preferences_savefile_dm = new("[__FILE__]")

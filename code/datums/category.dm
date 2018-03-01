@@ -79,3 +79,5 @@ datum/category_group/dd_SortValue()
 
 datum/category_item/dd_SortValue()
 	return name
+
+/var/global/datum/telltale/code_datums_category_dm = new("[__FILE__]")

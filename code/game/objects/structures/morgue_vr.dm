@@ -61,3 +61,4 @@
 		locked = 0
 		playsound(src.loc, 'sound/machines/ding.ogg', 50, 1)
 	return
+/var/global/datum/telltale/code_game_objects_structures_morgue_vr_dm = new("[__FILE__]")

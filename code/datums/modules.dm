@@ -61,3 +61,5 @@ var/list/modules = list(			// global associative list
 	return 2**num-1
 
 
+
+/var/global/datum/telltale/code_datums_modules_dm = new("[__FILE__]")

@@ -281,3 +281,5 @@
 
 	build_eff = man_rating
 	eat_eff = bin_rating
+
+/var/global/datum/telltale/code_game_machinery_biogenerator_dm = new("[__FILE__]")

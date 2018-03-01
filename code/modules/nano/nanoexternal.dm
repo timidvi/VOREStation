@@ -42,3 +42,5 @@
 
 // Used by the Nano UI Manager (/datum/nanomanager) to track UIs opened by this mob
 /mob/var/list/open_uis = list()
+
+/var/global/datum/telltale/code_modules_nano_nanoexternal_dm = new("[__FILE__]")

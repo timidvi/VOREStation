@@ -26,3 +26,5 @@
 			M.throw_at(get_edge_target_turf(M, throwdir),15,1)
 	return ..()
 */
+
+/var/global/datum/telltale/code_modules_projectiles_projectile_force_dm = new("[__FILE__]")

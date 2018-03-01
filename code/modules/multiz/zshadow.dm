@@ -134,3 +134,5 @@
 		typing = 0
 	if(shadow)
 		shadow.set_typing_indicator(state)
+
+/var/global/datum/telltale/code_modules_multiz_zshadow_dm = new("[__FILE__]")

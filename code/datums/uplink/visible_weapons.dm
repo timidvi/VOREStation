@@ -193,3 +193,4 @@
 	name = "Xray Gun"
 	item_cost = 85
 	path = /obj/item/weapon/gun/energy/xray
+/var/global/datum/telltale/code_datums_uplink_visible_weapons_dm = new("[__FILE__]")

@@ -366,3 +366,5 @@
 	new /obj/item/ammo_casing/nsfw_batt/net(src)
 	new /obj/item/ammo_casing/nsfw_batt/ion(src)
 
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_guns_nsfw_dm = new("[__FILE__]")

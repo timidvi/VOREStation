@@ -42,3 +42,4 @@
 	if(!isnull(data))
 		return "(<font color='[data]'>[data]</font>)"
 	return ..()
+/var/global/datum/telltale/code_modules_integrated_electronics_core_special_pins_color_pin_dm = new("[__FILE__]")

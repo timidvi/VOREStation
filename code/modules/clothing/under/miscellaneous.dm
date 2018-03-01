@@ -843,3 +843,4 @@
 	name = "hazard cohesion suit"
 	desc = "An orange cohesion suit with yellow hazard stripes intended to assist Prometheans in maintaining their form and prevent direct skin exposure."
 	icon_state = "cohesionsuit_hazard"
+/var/global/datum/telltale/code_modules_clothing_under_miscellaneous_dm = new("[__FILE__]")

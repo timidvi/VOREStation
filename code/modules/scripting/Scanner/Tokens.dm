@@ -36,3 +36,5 @@
 			src.column=c
 
 	end
+
+/var/global/datum/telltale/code_modules_scripting_Scanner_Tokens_dm = new("[__FILE__]")

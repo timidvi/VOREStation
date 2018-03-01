@@ -170,3 +170,5 @@
 			H.see_in_dark += 7
 			if(H.client)
 				H.client.screen |= global_hud.nvg
+
+/var/global/datum/telltale/code_modules_nifsoft_software____vision_dm = new("[__FILE__]")

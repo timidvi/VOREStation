@@ -65,3 +65,5 @@
 	..()
 	var/depth = excavation_amount
 	user << "<span class='info'>It is currently set at [depth]cms.</span>"
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_tools_tools_pickaxe_vr_dm = new("[__FILE__]")

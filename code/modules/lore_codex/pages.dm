@@ -64,3 +64,4 @@
 	for(var/datum/lore/codex/child in children)
 		results += child.index_page()
 	return results
+/var/global/datum/telltale/code_modules_lore_codex_pages_dm = new("[__FILE__]")

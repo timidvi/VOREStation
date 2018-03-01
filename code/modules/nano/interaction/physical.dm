@@ -16,3 +16,5 @@
 
 /mob/living/silicon/check_physical_distance(var/src_object)
 	return max(STATUS_UPDATE, shared_living_nano_distance(src_object))
+
+/var/global/datum/telltale/code_modules_nano_interaction_physical_dm = new("[__FILE__]")

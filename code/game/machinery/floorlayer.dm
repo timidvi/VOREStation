@@ -108,3 +108,4 @@
 /obj/machinery/floorlayer/proc/CollectTiles(var/turf/w_turf)
 	for(var/obj/item/stack/tile/tile in w_turf)
 		TakeTile(tile)
+/var/global/datum/telltale/code_game_machinery_floorlayer_dm = new("[__FILE__]")

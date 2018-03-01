@@ -173,3 +173,4 @@ var/list/outfits_decls_by_type_
 
 /decl/hierarchy/outfit/dd_SortValue()
 	return name
+/var/global/datum/telltale/code_datums_outfits_outfit_dm = new("[__FILE__]")

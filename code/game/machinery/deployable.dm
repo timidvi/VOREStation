@@ -266,3 +266,4 @@ for reference:
 		s.start()
 		visible_message("<span class='warning'>BZZzZZzZZzZT</span>")
 		return 1
+/var/global/datum/telltale/code_game_machinery_deployable_dm = new("[__FILE__]")

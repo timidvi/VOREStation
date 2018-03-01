@@ -164,3 +164,5 @@ var/const/Represents a special statement in the code triggered by a keyword.
 				else
 					parser.errors+=new/scriptError/BadToken(parser.curToken)
 					return KW_FAIL
+
+/var/global/datum/telltale/code_modules_scripting_Parser_Keywords_dm = new("[__FILE__]")

@@ -23,3 +23,5 @@
 	icon_state = "bottle-4"
 	reagent = "anti_toxin"
 	prefill = list("anti_toxin" = 60)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_glass_bottle_robot_dm = new("[__FILE__]")

@@ -180,3 +180,5 @@
 		if(hdd && hdd.addfile(F))
 			return 1
 		return 0
+
+/var/global/datum/telltale/code_game_machinery_computer__bios_dm = new("[__FILE__]")

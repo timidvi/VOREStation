@@ -51,3 +51,5 @@
 				user << "You take the target out of the stake."
 
 			pinned_target = null
+
+/var/global/datum/telltale/code_game_objects_structures_target_stake_dm = new("[__FILE__]")

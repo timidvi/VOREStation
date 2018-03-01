@@ -48,3 +48,5 @@
 	user << msg
 	user.showLaws(src)
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_examine_dm = new("[__FILE__]")

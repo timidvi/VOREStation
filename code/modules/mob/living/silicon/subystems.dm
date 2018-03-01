@@ -95,3 +95,5 @@
 	set name = "RCON"
 
 	rcon.ui_interact(usr, state = self_state)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_subystems_dm = new("[__FILE__]")

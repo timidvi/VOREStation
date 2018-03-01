@@ -303,3 +303,5 @@ var/last_chew = 0
 	target.legcuffed = lcuffs
 	target.update_inv_legcuffed()
 	return 1
+
+/var/global/datum/telltale/code_game_objects_items_weapons_handcuffs_dm = new("[__FILE__]")

@@ -227,3 +227,5 @@
 	response_help  = "pets"
 	response_disarm = "bops"
 	response_harm   = "kicks"
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_corgi_dm = new("[__FILE__]")

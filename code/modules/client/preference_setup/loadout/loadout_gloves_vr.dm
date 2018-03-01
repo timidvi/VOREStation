@@ -26,3 +26,4 @@
 /datum/gear/gloves/siren
 	display_name = "gloves, Siren"
 	path = /obj/item/clothing/gloves/fluff/siren
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_gloves_vr_dm = new("[__FILE__]")

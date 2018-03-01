@@ -119,3 +119,5 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/diona/foot/right)
 		)
 
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_virtual_reality_opaque_form_dm = new("[__FILE__]")

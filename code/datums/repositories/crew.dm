@@ -69,3 +69,5 @@ var/global/datum/repository/crew/crew_repository = new()
 			if (C.has_sensor)
 				tracked |= C
 	return tracked
+
+/var/global/datum/telltale/code_datums_repositories_crew_dm = new("[__FILE__]")

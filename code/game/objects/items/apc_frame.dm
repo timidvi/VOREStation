@@ -41,3 +41,5 @@
 			qdel(T)
 	new /obj/machinery/power/apc(loc, ndir, 1)
 	qdel(src)
+
+/var/global/datum/telltale/code_game_objects_items_apc_frame_dm = new("[__FILE__]")

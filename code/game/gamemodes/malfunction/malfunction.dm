@@ -11,3 +11,5 @@
 	antag_tags = list(MODE_MALFUNCTION)
 	disabled_jobs = list("AI")
 	votable = 0
+
+/var/global/datum/telltale/code_game_gamemodes_malfunction_malfunction_dm = new("[__FILE__]")

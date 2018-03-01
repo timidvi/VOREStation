@@ -403,3 +403,5 @@ datum/species/harpy
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_station_vr_dm = new("[__FILE__]")

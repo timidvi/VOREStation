@@ -160,3 +160,4 @@
 /obj/item/clothing/under/mildress/marine/command
 	name = "marine command dress uniform"
 	desc = "The dress uniform of the USDF Marine Corps, even classier in gold."
+/var/global/datum/telltale/code_modules_clothing_under_solgov_vr_dm = new("[__FILE__]")

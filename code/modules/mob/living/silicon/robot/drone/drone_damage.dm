@@ -22,3 +22,4 @@
 
 /mob/living/silicon/robot/drone/getBruteLoss()
 	return bruteloss
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_damage_dm = new("[__FILE__]")

@@ -767,3 +767,5 @@
 		growth_stages = plant_controller.plant_sprites[get_trait(TRAIT_PLANT_ICON)]
 	else
 		growth_stages = 0
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_dm = new("[__FILE__]")

@@ -589,3 +589,5 @@ var/list/VVckey_edit = list("key", "ckey")
 	world.log << "### VarEdit by [src]: [O.type] [variable]=[html_encode("[O.vars[variable]]")]"
 	log_admin("[key_name(src)] modified [original_name]'s [variable] to [O.vars[variable]]")
 	message_admins("[key_name_admin(src)] modified [original_name]'s [variable] to [O.vars[variable]]")
+
+/var/global/datum/telltale/code_modules_admin_verbs_modifyvariables_dm = new("[__FILE__]")

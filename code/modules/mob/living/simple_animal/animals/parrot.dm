@@ -765,3 +765,5 @@
 	parrot_state = PARROT_SWOOP | PARROT_ATTACK //Attack other animals regardless
 	icon_state = "parrot_fly"
 	return success
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_parrot_dm = new("[__FILE__]")

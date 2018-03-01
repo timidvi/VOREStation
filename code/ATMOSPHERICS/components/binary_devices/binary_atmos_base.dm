@@ -133,3 +133,4 @@
 	update_underlays()
 
 	return null
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_binary_atmos_base_dm = new("[__FILE__]")

@@ -529,3 +529,4 @@
 
 
 /*EXPLAIN SELECT * WHERE 42 = 6 * 9 OR val = - 5 == 7*/
+/var/global/datum/telltale/code_modules_admin_verbs_SDQL___parser_dm = new("[__FILE__]")

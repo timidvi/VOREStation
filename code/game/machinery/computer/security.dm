@@ -614,3 +614,5 @@ What a mess.*/
 
 /obj/machinery/computer/secure_data/detective_computer
 	icon_state = "messyfiles"
+
+/var/global/datum/telltale/code_game_machinery_computer_security_dm = new("[__FILE__]")

@@ -289,3 +289,5 @@ proc/n_inrange(var/num, var/min=-1, var/max=1)
 			log_misc("[buf]")
 		buf+=copytext(haystack,lastReadPos, 0)
 		return buf
+
+/var/global/datum/telltale/code_modules_scripting_Implementations__Logic_dm = new("[__FILE__]")

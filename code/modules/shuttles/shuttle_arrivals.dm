@@ -63,3 +63,4 @@
 		return null // Nothing to dock to in space.
 	return ..()
 */
+/var/global/datum/telltale/code_modules_shuttles_shuttle_arrivals_dm = new("[__FILE__]")

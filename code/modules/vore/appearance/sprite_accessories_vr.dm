@@ -1355,3 +1355,5 @@
 
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
+
+/var/global/datum/telltale/code_modules_vore_appearance_sprite_accessories_vr_dm = new("[__FILE__]")

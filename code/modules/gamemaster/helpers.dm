@@ -7,3 +7,4 @@
 /datum/game_master/proc/adjust_staleness(var/amt)
 	amt = amt * staleness_modifier
 	staleness = round( Clamp(staleness + amt, -50, 200), 0.1)
+/var/global/datum/telltale/code_modules_gamemaster_helpers_dm = new("[__FILE__]")

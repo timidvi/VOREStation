@@ -255,3 +255,5 @@
 			var/mob/living/carbon/human/H = usr
 			if (!read_authorization(H.get_active_hand()))	//try to read what's in their hand first
 				read_authorization(H.wear_id)
+
+/var/global/datum/telltale/code_modules_shuttles_shuttle_emergency_dm = new("[__FILE__]")

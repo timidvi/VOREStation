@@ -127,3 +127,4 @@
 /datum/uplink_item/item/ammo/cell
 	name = "weapon cell"
 	path = /obj/item/weapon/cell/device/weapon
+/var/global/datum/telltale/code_datums_uplink_ammunition_dm = new("[__FILE__]")

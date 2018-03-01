@@ -242,3 +242,5 @@
 	else
 		brightness_color = initial(brightness_color)
 	update()
+
+/var/global/datum/telltale/code_modules_shuttles_shuttle_specops_dm = new("[__FILE__]")

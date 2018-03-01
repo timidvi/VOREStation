@@ -22,3 +22,4 @@
 			continue
 
 		new /atom/movable/lighting_overlay(T, TRUE)
+/var/global/datum/telltale/code_modules_lighting_lighting_setup_dm = new("[__FILE__]")

@@ -18,3 +18,5 @@
 		flick(flick_anim, animation)
 	spawn(max(sleeptime, 15))
 		qdel(animation)
+
+/var/global/datum/telltale/code_game_turfs_turf_flick_animations_dm = new("[__FILE__]")

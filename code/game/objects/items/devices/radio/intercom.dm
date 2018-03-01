@@ -207,3 +207,4 @@
 /obj/item/device/radio/intercom/locked/confessional
 	name = "confessional intercom"
 	frequency = 1480
+/var/global/datum/telltale/code_game_objects_items_devices_radio_intercom_dm = new("[__FILE__]")

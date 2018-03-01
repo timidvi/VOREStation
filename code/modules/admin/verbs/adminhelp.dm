@@ -126,3 +126,5 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	// VoreStation Edit End
 	return
 
+
+/var/global/datum/telltale/code_modules_admin_verbs_adminhelp_dm = new("[__FILE__]")

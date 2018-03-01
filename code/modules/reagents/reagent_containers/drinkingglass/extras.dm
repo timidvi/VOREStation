@@ -70,3 +70,5 @@
 	icon_state = "straw"
 
 #undef DRINK_ICON_FILE
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_drinkingglass_extras_dm = new("[__FILE__]")

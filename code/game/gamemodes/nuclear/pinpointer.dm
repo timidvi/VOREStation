@@ -318,3 +318,4 @@
 
 /obj/item/weapon/pinpointer/shuttle/heist
 	shuttle_comp_id = "Skipjack"
+/var/global/datum/telltale/code_game_gamemodes_nuclear_pinpointer_dm = new("[__FILE__]")

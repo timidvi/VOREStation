@@ -89,3 +89,4 @@
 		set_light(0, 0, l_color = "#000000")
 	..()
 	return
+/var/global/datum/telltale/code_game_gamemodes_technomancer_devices_shield_armor_dm = new("[__FILE__]")

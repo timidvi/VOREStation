@@ -148,3 +148,4 @@
 
 		if(prob(30))
 			spot_add(3,3,/mob/living/simple_animal/hostile/alien) //And maybe a friend.
+/var/global/datum/telltale/code_modules_rogueminer_vr_asteroid_dm = new("[__FILE__]")

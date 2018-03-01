@@ -131,3 +131,5 @@ Made a proc so this is not repeated 14 (or more) times.*/
 		src << "<span class='warning'>I don't feel strong enough without my hat.</span>"
 		return 0
 	return 1
+
+/var/global/datum/telltale/code_game_antagonist_outsider_wizard_dm = new("[__FILE__]")

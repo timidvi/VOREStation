@@ -71,3 +71,4 @@ dmm_suite{
 		// flags: Any, or a combination, of several bit flags (Optional, see documentation).
 		}
 	}
+/var/global/datum/telltale/code_modules_maps_dmm_suite_dm = new("[__FILE__]")

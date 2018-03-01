@@ -53,3 +53,5 @@
 			to_chat(M, "<span class='warning'>You slide across the ice!</span>")
 		M.SetStunned(2)
 		step(M,M.dir)
+
+/var/global/datum/telltale/code_game_turfs_simulated_outdoors_snow_dm = new("[__FILE__]")

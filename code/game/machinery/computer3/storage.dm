@@ -182,3 +182,5 @@
 				F.device = src
 				files += F
 				volume += F.volume
+
+/var/global/datum/telltale/code_game_machinery_computer__storage_dm = new("[__FILE__]")

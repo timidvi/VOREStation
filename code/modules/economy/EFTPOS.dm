@@ -300,3 +300,5 @@
 		..()
 
 	//emag?
+
+/var/global/datum/telltale/code_modules_economy_EFTPOS_dm = new("[__FILE__]")

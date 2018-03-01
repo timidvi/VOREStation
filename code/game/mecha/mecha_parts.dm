@@ -294,3 +294,5 @@
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 	construction_time = 200
 	construction_cost = list(DEFAULT_WALL_MATERIAL=15000)*/
+
+/var/global/datum/telltale/code_game_mecha_mecha_parts_dm = new("[__FILE__]")

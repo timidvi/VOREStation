@@ -78,3 +78,4 @@
 		G.dir = user.dir
 		qdel_null(src)
 	return
+/var/global/datum/telltale/code_game_objects_items_weapons_material_gravemarker_dm = new("[__FILE__]")

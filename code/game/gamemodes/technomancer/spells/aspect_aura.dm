@@ -133,3 +133,4 @@
 /obj/item/weapon/spell/aura/biomed/on_use_cast(mob/living/user)
 	heal_allies_only = !heal_allies_only
 	user << "Your aura will now heal [heal_allies_only ? "your allies" : "everyone"] near you."
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_aspect_aura_dm = new("[__FILE__]")

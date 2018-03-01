@@ -132,3 +132,5 @@ The "dust" will damage the hull of the station causin minor hull breaches.
 	ex_act(severity)
 		qdel(src)
 		return
+
+/var/global/datum/telltale/code_game_gamemodes_events_dust_dm = new("[__FILE__]")

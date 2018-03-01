@@ -118,3 +118,5 @@
 	name = "Wolfgirl Crate"
 	desc = "A sketchy looking crate with airholes that shakes and thuds every now and then. Someone seems to be demanding they be let out."
 	held_type = /mob/living/simple_animal/retaliate/awoo
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_largecrate_vr_dm = new("[__FILE__]")

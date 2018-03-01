@@ -7,3 +7,5 @@
 		/obj/item/weapon/cell,
 		/obj/screen/movable/ability_master,
 		/obj/item/weapon/card/id/synthetic)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_vr_dm = new("[__FILE__]")

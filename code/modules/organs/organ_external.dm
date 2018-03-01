@@ -1311,3 +1311,5 @@ Note that amputating the affected organ does in fact remove the infection from t
 				if(6 to INFINITY)
 					flavor_text += "a ton of [wound]\s"
 		return english_list(flavor_text)
+
+/var/global/datum/telltale/code_modules_organs_organ_external_dm = new("[__FILE__]")

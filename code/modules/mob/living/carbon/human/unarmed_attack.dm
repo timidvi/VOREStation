@@ -266,3 +266,4 @@ var/global/list/sparring_attack_cache = list()
 	damage = 0
 	sharp = 0
 	edge = 0
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_unarmed_attack_dm = new("[__FILE__]")

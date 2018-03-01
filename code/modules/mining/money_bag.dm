@@ -97,3 +97,4 @@
 	new /obj/item/weapon/coin/silver(src)
 	new /obj/item/weapon/coin/gold(src)
 	new /obj/item/weapon/coin/gold(src)
+/var/global/datum/telltale/code_modules_mining_money_bag_dm = new("[__FILE__]")

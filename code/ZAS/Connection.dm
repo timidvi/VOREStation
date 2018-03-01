@@ -166,3 +166,4 @@ Class Procs:
 
 
 	//world << "valid."
+/var/global/datum/telltale/code_ZAS_Connection_dm = new("[__FILE__]")

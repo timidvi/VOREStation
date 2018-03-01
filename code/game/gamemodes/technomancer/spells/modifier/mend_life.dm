@@ -42,3 +42,4 @@
 		var/mob/living/L = origin.resolve()
 		if(istype(L))
 			L.adjust_instability(1)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_modifier_mend_life_dm = new("[__FILE__]")

@@ -36,3 +36,5 @@
 /obj/structure/flora/pumpkin/carved/owo
 	desc = "A fat, freshly picked pumpkin. This one has a face carved into it! This one has large, round eyes and a squiggly, cat-like smiling mouth. Its pleasantly surprised expression seems to suggest that the pumpkin has noticed something about you."
 	icon_state = "decor-jackolantern-owo"
+
+/var/global/datum/telltale/code_game_objects_structures_flora_vr_dm = new("[__FILE__]")

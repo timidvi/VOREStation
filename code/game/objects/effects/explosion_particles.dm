@@ -74,3 +74,4 @@
 	var/datum/effect/system/expl_particles/P = new/datum/effect/system/expl_particles()
 	P.set_up(10,location)
 	P.start()
+/var/global/datum/telltale/code_game_objects_effects_explosion_particles_dm = new("[__FILE__]")

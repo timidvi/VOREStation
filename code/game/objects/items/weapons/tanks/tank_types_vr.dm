@@ -90,3 +90,5 @@
 	icon_state = "oxygen_fr"
 	gauge_icon = "indicator_bigtank"
 	gauge_cap = 3
+
+/var/global/datum/telltale/code_game_objects_items_weapons_tanks_tank_types_vr_dm = new("[__FILE__]")

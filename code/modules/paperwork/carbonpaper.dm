@@ -49,3 +49,4 @@
 		c.update_icon()
 	else
 		usr << "There are no more carbon copies attached to this paper!"
+/var/global/datum/telltale/code_modules_paperwork_carbonpaper_dm = new("[__FILE__]")

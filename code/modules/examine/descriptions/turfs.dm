@@ -31,3 +31,4 @@
 			if(0)
 				results += "[desc_panel_image("crowbar")]to finish deconstruction."
 	return results
+/var/global/datum/telltale/code_modules_examine_descriptions_turfs_dm = new("[__FILE__]")

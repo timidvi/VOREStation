@@ -201,3 +201,5 @@
 
 /obj/effect/shadow_wight/Bump(var/atom/obstacle)
 	obstacle << "<font color='red'>You feel a chill run down your spine!</font>"
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_special_dm = new("[__FILE__]")

@@ -31,3 +31,5 @@
 
 	// Custom Species Name
 	var/custom_species
+
+/var/global/datum/telltale/code_modules_vore_appearance_preferences_vr_dm = new("[__FILE__]")

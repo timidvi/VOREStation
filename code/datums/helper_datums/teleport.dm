@@ -192,3 +192,4 @@
 		to_chat(teleatom, "<span class='warning'>The portal refuses to carry you that far away!</span>")
 	return 0
 	//VOREStation Edit End
+/var/global/datum/telltale/code_datums_helper_datums_teleport_dm = new("[__FILE__]")

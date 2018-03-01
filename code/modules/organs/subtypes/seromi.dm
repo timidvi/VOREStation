@@ -6,3 +6,5 @@
 	body_hair = "feathers"
 /obj/item/organ/external/hand/right/seromi
 	body_hair = "feathers"
+
+/var/global/datum/telltale/code_modules_organs_subtypes_seromi_dm = new("[__FILE__]")

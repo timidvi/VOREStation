@@ -31,3 +31,4 @@
 	..()
 	hold.max_storage_space = slots * ITEMSIZE_COST_NORMAL
 	hold.max_w_class = ITEMSIZE_NORMAL
+/var/global/datum/telltale/code_modules_clothing_under_xenos_vox_dm = new("[__FILE__]")

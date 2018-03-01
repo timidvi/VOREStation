@@ -646,3 +646,5 @@
 	icon_state = "spring"
 	origin_tech = list(TECH_ENGINEERING = 1)
 	matter = list(DEFAULT_WALL_MATERIAL = 40)
+
+/var/global/datum/telltale/code_defines_obj_weapon_dm = new("[__FILE__]")

@@ -264,3 +264,5 @@
 /datum/shuttle/proc/message_passengers(area/A, var/message)
 	for(var/mob/M in A)
 		M.show_message(message, 2)
+
+/var/global/datum/telltale/code_modules_shuttles_shuttle_dm = new("[__FILE__]")

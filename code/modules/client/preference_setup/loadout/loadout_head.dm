@@ -372,3 +372,5 @@
 /datum/gear/head/surgical/purple
 	display_name = "surgical cap, purple"
 	path = /obj/item/clothing/head/surgery/purple
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_head_dm = new("[__FILE__]")

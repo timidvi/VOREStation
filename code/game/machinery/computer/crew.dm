@@ -33,3 +33,5 @@
 
 /obj/machinery/computer/crew/interact(mob/user)
 	crew_monitor.ui_interact(user)
+
+/var/global/datum/telltale/code_game_machinery_computer_crew_dm = new("[__FILE__]")

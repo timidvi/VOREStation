@@ -8,3 +8,4 @@
 			for(var/i=1,i<=4,i++)
 				spawn_dynamic_event()
 				sleep(50)
+/var/global/datum/telltale/code_game_gamemodes_events_holidays_Other_dm = new("[__FILE__]")

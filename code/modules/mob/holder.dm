@@ -180,3 +180,5 @@ var/list/holder_mob_icon_cache = list()
 
 	// Handle the rest of sync().
 	..(M)
+
+/var/global/datum/telltale/code_modules_mob_holder_dm = new("[__FILE__]")

@@ -88,3 +88,4 @@
 	name = "alien armour"
 	icon_state = "vox-medic"
 	desc = "An almost organic looking nonhuman pressure suit."
+/var/global/datum/telltale/code_modules_clothing_spacesuits_alien_dm = new("[__FILE__]")

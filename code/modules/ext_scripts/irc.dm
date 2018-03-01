@@ -38,3 +38,5 @@
 	send2mainirc("Server starting up on byond://[config.serverurl ? config.serverurl : (config.server ? config.server : "[world.address]:[world.port]")]")
 	return 1
 
+
+/var/global/datum/telltale/code_modules_ext_scripts_irc_dm = new("[__FILE__]")

@@ -138,3 +138,5 @@
 	HTML += "<tt>"
 	user << browse(HTML, "window=flavour_text_robot;size=430x300")
 	return
+
+/var/global/datum/telltale/code_modules_client_preference_setup_general____flavor_dm = new("[__FILE__]")

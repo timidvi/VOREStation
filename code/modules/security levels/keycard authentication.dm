@@ -200,3 +200,4 @@ var/global/maint_all_access = 0
 	if(maint_all_access && src.check_access_list(list(access_maint_tunnels)))
 		return 1
 	return ..(M)
+/var/global/datum/telltale/code_modules_security_levels_keycard_authentication_dm = new("[__FILE__]")

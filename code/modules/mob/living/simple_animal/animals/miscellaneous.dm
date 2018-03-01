@@ -17,3 +17,4 @@
 	icon = 'icons/jungle.dmi'
 
 	faction = "tindalos"
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_miscellaneous_dm = new("[__FILE__]")

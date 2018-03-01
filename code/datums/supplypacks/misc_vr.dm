@@ -32,3 +32,4 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "industrial hardsuit crate"
 	access = access_mining
+/var/global/datum/telltale/code_datums_supplypacks_misc_vr_dm = new("[__FILE__]")

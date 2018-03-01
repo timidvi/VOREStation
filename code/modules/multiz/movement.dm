@@ -551,3 +551,4 @@
 	if(istype(hit_atom, /turf/simulated/floor))
 		var/turf/simulated/floor/ground = hit_atom
 		ground.break_tile()
+/var/global/datum/telltale/code_modules_multiz_movement_dm = new("[__FILE__]")

@@ -10,3 +10,4 @@
 
 /turf/unsimulated/floor/shuttle_ceiling
 	icon_state = "reinforced"
+/var/global/datum/telltale/code_game_turfs_unsimulated_floor_dm = new("[__FILE__]")

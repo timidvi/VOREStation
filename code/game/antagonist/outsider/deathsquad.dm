@@ -87,3 +87,5 @@ var/datum/antagonist/deathsquad/deathsquad
 /datum/antagonist/deathsquad/create_antagonist()
 	if(..() && !deployed)
 		deployed = 1
+
+/var/global/datum/telltale/code_game_antagonist_outsider_deathsquad_dm = new("[__FILE__]")

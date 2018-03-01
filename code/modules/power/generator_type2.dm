@@ -141,3 +141,4 @@
 /obj/machinery/power/generator_type2/power_change()
 	..()
 	updateicon()
+/var/global/datum/telltale/code_modules_power_generator_type__dm = new("[__FILE__]")

@@ -34,3 +34,5 @@
 		src << "<span class='notice'>You are currently speaking [default_language] by default.</span>"
 	else
 		src << "<span class='notice'>Your current default language is your species or mob type default.</span>"
+
+/var/global/datum/telltale/code_modules_mob_living_default_language_dm = new("[__FILE__]")

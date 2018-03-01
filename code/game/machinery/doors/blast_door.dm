@@ -261,3 +261,5 @@ obj/machinery/door/blast/regular/open
 	icon_state_closed = "shutter1"
 	icon_state_closing = "shutterc1"
 	icon_state = "shutter1"
+
+/var/global/datum/telltale/code_game_machinery_doors_blast_door_dm = new("[__FILE__]")

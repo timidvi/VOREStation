@@ -204,3 +204,4 @@ S|       A1       |       A2       |
 	teleport_x_offset =
 	teleport_y_offset =
 */
+/var/global/datum/telltale/code_modules_rogueminer_vr_wrappers_dm = new("[__FILE__]")

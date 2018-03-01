@@ -119,3 +119,5 @@
 	ammo_type = /obj/item/ammo_casing/a12g/pellet
 	w_class = ITEMSIZE_NORMAL
 	force = 5
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_shotgun_dm = new("[__FILE__]")

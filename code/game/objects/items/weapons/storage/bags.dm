@@ -347,3 +347,5 @@
 	max_w_class = ITEMSIZE_NORMAL
 	w_class = ITEMSIZE_SMALL
 	can_hold = list(/obj/item/weapon/reagent_containers/food/snacks,/obj/item/weapon/reagent_containers/food/condiment)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_bags_dm = new("[__FILE__]")

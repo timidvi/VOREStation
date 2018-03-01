@@ -350,3 +350,5 @@ var/global/datum/controller/radio/radio_controller
 			var/list/L = data[i]
 			for(var/t in L)
 				. += "data\[\"[i]\"\] list has: [t]"
+
+/var/global/datum/telltale/code_controllers_communications_dm = new("[__FILE__]")

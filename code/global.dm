@@ -200,3 +200,5 @@ var/static/icon/ingame_hud_med = icon('icons/mob/hud_med.dmi')
 //Keyed list for caching icons so you don't need to make them for records, IDs, etc all separately.
 //Could be useful for AI impersonation or something at some point?
 var/static/list/cached_character_icons = list()
+
+/var/global/datum/telltale/code_global_dm = new("[__FILE__]")

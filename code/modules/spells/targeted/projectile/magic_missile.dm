@@ -38,3 +38,5 @@
 	proj_trail = 1
 	proj_trail_lifespan = 5
 	proj_trail_icon_state = "magicmd"
+
+/var/global/datum/telltale/code_modules_spells_targeted_projectile_magic_missile_dm = new("[__FILE__]")

@@ -345,3 +345,5 @@
 		AM.layer = initial(AM.layer)
 		AM.pixel_y = initial(AM.pixel_y)
 	busy = 0
+
+/var/global/datum/telltale/code_modules_mob_living_bot_mulebot_dm = new("[__FILE__]")

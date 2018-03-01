@@ -229,3 +229,5 @@
 
 /obj/vehicle/train/proc/update_car(var/train_length, var/active_engines)
 	return
+
+/var/global/datum/telltale/code_modules_vehicles_train_dm = new("[__FILE__]")

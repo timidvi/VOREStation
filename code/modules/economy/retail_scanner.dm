@@ -426,3 +426,4 @@
 /obj/item/device/retail_scanner/civilian
 	account_to_connect = "Civilian"
 	..()
+/var/global/datum/telltale/code_modules_economy_retail_scanner_dm = new("[__FILE__]")

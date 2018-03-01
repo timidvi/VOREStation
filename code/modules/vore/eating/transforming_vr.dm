@@ -262,3 +262,4 @@
 	if(message)
 		to_chat(M, "<span class='notice'>You lose sensation of your body, feeling only the warmth around you as you're encased in an egg.</span>")
 		to_chat(O, "<span class='notice'>Your body shifts as you encase [M] in an egg.</span>")
+/var/global/datum/telltale/code_modules_vore_eating_transforming_vr_dm = new("[__FILE__]")

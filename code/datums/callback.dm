@@ -170,3 +170,5 @@
 	usr = M
 	. = CB.Invoke()
 	usr = temp
+
+/var/global/datum/telltale/code_datums_callback_dm = new("[__FILE__]")

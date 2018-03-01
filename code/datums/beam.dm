@@ -136,3 +136,5 @@
 	spawn(0)
 		newbeam.Start()
 	return newbeam
+
+/var/global/datum/telltale/code_datums_beam_dm = new("[__FILE__]")

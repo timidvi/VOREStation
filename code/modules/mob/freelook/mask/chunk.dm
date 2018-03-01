@@ -34,3 +34,5 @@
 /proc/seen_turfs_in_range(var/source, var/range)
 	var/turf/pos = get_turf(source)
 	return hear(range, pos)
+
+/var/global/datum/telltale/code_modules_mob_freelook_mask_chunk_dm = new("[__FILE__]")

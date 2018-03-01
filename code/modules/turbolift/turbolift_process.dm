@@ -34,3 +34,5 @@ var/datum/controller/process/turbolift/turbolift_controller
 
 /datum/controller/process/turbolift/proc/lift_is_moving(var/datum/turbolift/lift,var/floor_delay)
 	moving_lifts["\ref[lift]"] = world.time + floor_delay
+
+/var/global/datum/telltale/code_modules_turbolift_turbolift_process_dm = new("[__FILE__]")

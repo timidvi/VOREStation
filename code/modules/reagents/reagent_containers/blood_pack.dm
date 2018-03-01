@@ -98,3 +98,4 @@
 	desc = "Seems pretty useless... Maybe if there were a way to fill it?"
 	icon_state = "empty"
 	item_state = "bloodpack_empty"
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_blood_pack_dm = new("[__FILE__]")

@@ -185,3 +185,5 @@
 #undef LIGHT_EMPTY
 #undef LIGHT_BROKEN
 #undef LIGHT_BURNED
+
+/var/global/datum/telltale/code_game_objects_items_devices_lightreplacer_dm = new("[__FILE__]")

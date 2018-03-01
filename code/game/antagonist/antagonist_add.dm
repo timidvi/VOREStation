@@ -65,3 +65,4 @@
 			player.ambitions = ""
 		return 1
 	return 0
+/var/global/datum/telltale/code_game_antagonist_antagonist_add_dm = new("[__FILE__]")

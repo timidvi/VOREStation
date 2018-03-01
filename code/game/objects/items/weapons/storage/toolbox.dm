@@ -182,3 +182,5 @@
 
 /obj/item/weapon/storage/toolbox/lunchbox/syndicate/filled
 	filled = TRUE
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_toolbox_dm = new("[__FILE__]")

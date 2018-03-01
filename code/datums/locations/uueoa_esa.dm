@@ -38,3 +38,4 @@
 /datum/locations/yoos
 	name = "Yoos"
 	desc = "A tiny (1/8th the size of Moghes) frozen planet at the very edge of the Uueoa-Esa system of very little note."
+/var/global/datum/telltale/code_datums_locations_uueoa_esa_dm = new("[__FILE__]")

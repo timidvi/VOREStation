@@ -118,3 +118,5 @@ var/list/lunchables_ethanol_reagents_ = list(/datum/reagent/ethanol/acid_spit,
 		var/datum/reagent/reagent = reagent_type
 		.[initial(reagent.name)] = initial(reagent.id)
 	return sortAssoc(.)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_lunch_dm = new("[__FILE__]")

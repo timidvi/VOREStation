@@ -116,3 +116,5 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, "glass" = 2000, "silver" = 1000)
 	build_path = /obj/item/weapon/gun/energy/protector
 	sort_string = "TAADA"
+
+/var/global/datum/telltale/code_modules_vore_fluffstuff_guns_protector_dm = new("[__FILE__]")

@@ -132,3 +132,4 @@ var/global/list/ore_data = list()
 	smelts_to = "tritium"
 	compresses_to = "mhydrogen"
 	scan_icon = "mineral_rare"
+/var/global/datum/telltale/code_modules_mining_ore_datum_dm = new("[__FILE__]")

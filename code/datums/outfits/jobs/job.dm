@@ -21,3 +21,5 @@
 			var/datum/money_account/A = M.initial_account
 			C.associated_account_number = A.account_number
 	return C
+
+/var/global/datum/telltale/code_datums_outfits_jobs_job_dm = new("[__FILE__]")

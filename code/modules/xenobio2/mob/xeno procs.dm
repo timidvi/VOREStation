@@ -174,3 +174,5 @@ Divergence proc, used in mutation to make unique datums.
 		traitdat.chems[chemtype] = chemamount
 
 	traitdat.chems += default_chems
+
+/var/global/datum/telltale/code_modules_xenobio__mob_xeno_procs_dm = new("[__FILE__]")

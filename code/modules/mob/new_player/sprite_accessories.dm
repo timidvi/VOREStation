@@ -1371,3 +1371,5 @@
 		icon_state = "default"
 		icon = 'icons/mob/human_races/r_skrell.dmi'
 		species_allowed = list("Skrell")
+
+/var/global/datum/telltale/code_modules_mob_new_player_sprite_accessories_dm = new("[__FILE__]")

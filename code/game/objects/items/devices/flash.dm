@@ -222,3 +222,5 @@
 		broken = 1
 		to_chat(user, "<span class='warning'>The bulb has burnt out!</span>")
 		icon_state = "flashburnt"
+
+/var/global/datum/telltale/code_game_objects_items_devices_flash_dm = new("[__FILE__]")

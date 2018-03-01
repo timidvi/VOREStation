@@ -24,3 +24,5 @@
 	head = /obj/item/clothing/head/wizard/marisa
 	suit = /obj/item/clothing/suit/wizrobe/marisa
 	shoes = /obj/item/clothing/shoes/sandal/marisa
+
+/var/global/datum/telltale/code_datums_outfits_wizardry_dm = new("[__FILE__]")

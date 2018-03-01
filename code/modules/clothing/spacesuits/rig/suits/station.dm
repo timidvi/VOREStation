@@ -242,3 +242,4 @@
 		/obj/item/rig_module/grenade_launcher,
 		/obj/item/rig_module/mounted/taser
 		)
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_suits_station_dm = new("[__FILE__]")

@@ -100,3 +100,5 @@
 
 /obj/machinery/alarm/monitor/isolation
 	req_one_access = list(access_research, access_atmospherics, access_engine_equip)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_misc_dm = new("[__FILE__]")

@@ -132,3 +132,5 @@
 	question = "A curious explorer has touched a mysterious rune. \
 	Would you like to play as the creature it summons?"
 	cutoff_number = 1
+
+/var/global/datum/telltale/code_datums_ghost_query_dm = new("[__FILE__]")

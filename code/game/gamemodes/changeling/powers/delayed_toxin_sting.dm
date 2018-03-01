@@ -42,3 +42,4 @@
 
 	feedback_add_details("changeling_powers","DTS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_delayed_toxin_sting_dm = new("[__FILE__]")

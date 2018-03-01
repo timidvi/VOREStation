@@ -11,3 +11,5 @@
 		adjustFireLoss(-1)
 		adjustToxLoss(-1)
 		adjustOxyLoss(-1)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_larva_life_dm = new("[__FILE__]")

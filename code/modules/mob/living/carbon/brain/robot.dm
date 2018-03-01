@@ -21,3 +21,4 @@
 
 /obj/item/device/mmi/digital/robot/attack_self(mob/user as mob)
 	return //This object is technically a brain, and should not be dumping brains out of itself like its parent object does.
+/var/global/datum/telltale/code_modules_mob_living_carbon_brain_robot_dm = new("[__FILE__]")

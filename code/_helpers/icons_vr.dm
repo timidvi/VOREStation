@@ -43,3 +43,4 @@
 			if (I.GetPixel(x_pixel, y_pixel))
 				return y_pixel - 1
 	return null
+/var/global/datum/telltale/code__helpers_icons_vr_dm = new("[__FILE__]")

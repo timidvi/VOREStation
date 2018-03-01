@@ -122,3 +122,4 @@
 	name = "plain black dufflebag"
 	desc = "A large dufflebag for holding extra tactical supplies."
 	icon_state = "duffle_syndie"
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_backpack_vr_dm = new("[__FILE__]")

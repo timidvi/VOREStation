@@ -615,3 +615,5 @@ var/list/civilian_cartridges = list(
 				M.obeyCommand(href_list["command"])
 
 	return 1
+
+/var/global/datum/telltale/code_game_objects_items_devices_PDA_cart_dm = new("[__FILE__]")

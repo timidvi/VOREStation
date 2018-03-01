@@ -185,3 +185,5 @@ var/global/list/extraMiniMaps = list()
 #undef IS_ROCK
 #undef IS_OBSTACLE
 #undef IS_PATH
+
+/var/global/datum/telltale/code_modules_holomap_generate_holomap_dm = new("[__FILE__]")

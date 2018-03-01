@@ -43,3 +43,5 @@
 /mob/living/simple_animal/retaliate/bee
 	vore_active = 1
 	vore_icons = SA_ICON_LIVING
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_bee_dm = new("[__FILE__]")

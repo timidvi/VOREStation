@@ -14,3 +14,4 @@
 	new /obj/item/device/uv_light(src)
 	new /obj/item/weapon/forensics/sample_kit(src)
 	new /obj/item/weapon/forensics/sample_kit/powder(src)
+/var/global/datum/telltale/code_modules_detectivework_tools_crimekit_dm = new("[__FILE__]")

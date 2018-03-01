@@ -382,3 +382,4 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 
 #undef STEP_TEXT_OWNER
 #undef STEP_TEXT_PREY
+/var/global/datum/telltale/code_modules_vore_resizing_resize_vr_dm = new("[__FILE__]")

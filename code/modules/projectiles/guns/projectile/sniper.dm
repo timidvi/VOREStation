@@ -101,3 +101,4 @@
 	set popup_menu = 1
 
 	toggle_scope(2.0)
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_sniper_dm = new("[__FILE__]")

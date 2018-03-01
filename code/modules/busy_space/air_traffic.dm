@@ -127,3 +127,4 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	//Ship sends response to ATC
 	msg(full_closure,"[prefix] [shipname]")
 	return
+/var/global/datum/telltale/code_modules_busy_space_air_traffic_dm = new("[__FILE__]")

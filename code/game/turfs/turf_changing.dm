@@ -115,3 +115,5 @@
 				lighting_build_overlay()
 			else
 				lighting_clear_overlay()
+
+/var/global/datum/telltale/code_game_turfs_turf_changing_dm = new("[__FILE__]")

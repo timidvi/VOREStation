@@ -105,3 +105,4 @@
 	if (href_list["toggle_leg_overload"])
 		src.overload()
 	return
+/var/global/datum/telltale/code_game_mecha_combat_gygax_dm = new("[__FILE__]")

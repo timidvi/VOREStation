@@ -219,3 +219,5 @@
 	to_chat(usr, "<span class='info'>You empty the ore box</span>")
 
 	return
+
+/var/global/datum/telltale/code_game_mecha_micro_micro_equipment_dm = new("[__FILE__]")

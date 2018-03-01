@@ -54,3 +54,5 @@
 /datum/controller/process/radiation/statProcess()
 	..()
 	stat(null, "[linked.sources.len] sources, [linked.resistance_cache.len] cached turfs")
+
+/var/global/datum/telltale/code_controllers_Processes_radiation_dm = new("[__FILE__]")

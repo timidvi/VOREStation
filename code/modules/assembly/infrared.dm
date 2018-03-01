@@ -256,3 +256,5 @@
 		qdel(next)
 		next = null
 	..()
+
+/var/global/datum/telltale/code_modules_assembly_infrared_dm = new("[__FILE__]")

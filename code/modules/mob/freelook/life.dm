@@ -5,3 +5,5 @@
 		visibleChunks.Cut()
 	/*else if(owner && !owner.client)
 		visibleChunks.Cut()*/
+
+/var/global/datum/telltale/code_modules_mob_freelook_life_dm = new("[__FILE__]")

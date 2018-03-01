@@ -187,3 +187,5 @@
 			user << "<span class='warning'>You need more paper.</span>"
 	else
 		user << "They are moving around too much. A straightjacket would help."
+
+/var/global/datum/telltale/code_game_objects_items_weapons_gift_wrappaper_dm = new("[__FILE__]")

@@ -81,3 +81,5 @@
 		set_dir(get_dir(src, node1))
 	else
 		icon_state = "exposed"
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_vent_dm = new("[__FILE__]")

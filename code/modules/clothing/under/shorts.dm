@@ -234,3 +234,4 @@
 	desc = "It's a fashionable jumpskirt worn by those few with the dedication to achieve the position of \"Head of Security\". It has additional armor to protect the wearer."
 	name = "head of security's jumpskirt"
 	icon_state = "hosf"
+/var/global/datum/telltale/code_modules_clothing_under_shorts_dm = new("[__FILE__]")

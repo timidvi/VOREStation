@@ -137,3 +137,5 @@
 	icon_state = "holster_leg"
 	overlay_state = "holster_leg"
 	concealed_holster = 0
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_holster_dm = new("[__FILE__]")

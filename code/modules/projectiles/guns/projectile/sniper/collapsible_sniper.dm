@@ -174,3 +174,5 @@
 		icon_state = "heavysniper-open"
 	else
 		icon_state = "heavysniper"
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_sniper_collapsible_sniper_dm = new("[__FILE__]")

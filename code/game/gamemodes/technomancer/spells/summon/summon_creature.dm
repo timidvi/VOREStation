@@ -63,3 +63,4 @@
 
 	// Now we hurt their new pal, because being forcefully abducted by teleportation can't be healthy.
 	summoned.health = round(summoned.getMaxHealth() * 0.7)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_summon_summon_creature_dm = new("[__FILE__]")

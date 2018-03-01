@@ -390,3 +390,5 @@
 	if(isnull(caught) || !istype(caught) || QDELETED(caught))
 		return // Only bother with types we can identify and that don't belong
 	catchException("Type [caught.type] does not belong in process' queue")
+
+/var/global/datum/telltale/code_controllers_ProcessScheduler_core_process_dm = new("[__FILE__]")

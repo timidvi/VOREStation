@@ -45,3 +45,4 @@
 		H.update_inv_l_hand(0)
 		H.update_inv_r_hand()
 	..()
+/var/global/datum/telltale/code_game_objects_items_weapons_melee_misc_dm = new("[__FILE__]")

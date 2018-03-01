@@ -41,3 +41,5 @@ var/list/tachycardics  = list("coffee", "inaprovaline", "hyperzine", "nitroglyce
 var/list/bradycardics  = list("neurotoxin", "cryoxadone", "clonexadone", "space_drugs", "stoxin")                 // Decrease heart rate.
 var/list/heartstopper  = list("potassium_chlorophoride", "zombie_powder") // This stops the heart.
 var/list/cheartstopper = list("potassium_chloride")                       // This stops the heart when overdose is met. -- c = conditional
+
+/var/global/datum/telltale/code___defines_chemistry_dm = new("[__FILE__]")

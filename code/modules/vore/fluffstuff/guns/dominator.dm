@@ -29,3 +29,4 @@
 	muzzle_type = /obj/effect/projectile/xray/muzzle
 	tracer_type = /obj/effect/projectile/xray/tracer
 	impact_type = /obj/effect/projectile/xray/impact
+/var/global/datum/telltale/code_modules_vore_fluffstuff_guns_dominator_dm = new("[__FILE__]")

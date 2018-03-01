@@ -188,3 +188,5 @@
 	src.add_data(S)
 
 	return 1
+
+/var/global/datum/telltale/code_game_objects_items_weapons_autopsy_dm = new("[__FILE__]")

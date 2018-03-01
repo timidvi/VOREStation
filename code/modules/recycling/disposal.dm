@@ -1539,3 +1539,5 @@
 		dirs = alldirs.Copy()
 
 	src.streak(dirs)
+
+/var/global/datum/telltale/code_modules_recycling_disposal_dm = new("[__FILE__]")

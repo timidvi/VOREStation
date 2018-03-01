@@ -67,3 +67,4 @@
 
 /mob/living/carbon/human/vulpkaninm/New(var/new_loc)
 	..(new_loc, "Wolpin")
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_monkey_vr_dm = new("[__FILE__]")

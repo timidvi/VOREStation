@@ -93,3 +93,4 @@
 		C.sample_item(src, user)
 	else
 		return ..()
+/var/global/datum/telltale/code_modules_mining_ore_dm = new("[__FILE__]")

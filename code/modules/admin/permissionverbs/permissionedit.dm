@@ -147,3 +147,4 @@
 		var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO `test`.`erro_admin_log` (`id` ,`datetime` ,`adminckey` ,`adminip` ,`log` ) VALUES (NULL , NOW( ) , '[usr.ckey]', '[usr.client.address]', 'Added permission [rights2text(new_permission)] (flag = [new_permission]) to admin [adm_ckey]')")
 		log_query.Execute()
 		usr << "<font color='blue'>Permission added.</font>"
+/var/global/datum/telltale/code_modules_admin_permissionverbs_permissionedit_dm = new("[__FILE__]")

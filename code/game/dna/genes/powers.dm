@@ -193,3 +193,5 @@
 		block=TELEBLOCK
 	OnDrawUnderlays(var/mob/M,var/g,var/fat)
 		return "telekinesishead[fat]_s"
+
+/var/global/datum/telltale/code_game_dna_genes_powers_dm = new("[__FILE__]")

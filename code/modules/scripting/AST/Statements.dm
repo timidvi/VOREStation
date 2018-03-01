@@ -120,3 +120,4 @@
 	ReturnStatement
 		var
 			node/expression/value
+/var/global/datum/telltale/code_modules_scripting_AST_Statements_dm = new("[__FILE__]")

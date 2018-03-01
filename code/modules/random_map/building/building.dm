@@ -53,3 +53,4 @@
 			target_map.map[placing_door] = DOOR_CHAR
 
 	return
+/var/global/datum/telltale/code_modules_random_map_building_building_dm = new("[__FILE__]")

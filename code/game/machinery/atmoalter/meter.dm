@@ -139,3 +139,5 @@
 
 /obj/machinery/meter/turf/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
 	return
+
+/var/global/datum/telltale/code_game_machinery_atmoalter_meter_dm = new("[__FILE__]")

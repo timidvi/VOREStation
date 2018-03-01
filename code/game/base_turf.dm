@@ -29,3 +29,4 @@ proc/get_base_turf_by_area(var/turf/T)
 	using_map.base_turf_by_z["[choice]"] = new_base_path
 	message_admins("[key_name_admin(usr)] has set the base turf for z-level [choice] to [get_base_turf(choice)].")
 	log_admin("[key_name(usr)] has set the base turf for z-level [choice] to [get_base_turf(choice)].")
+/var/global/datum/telltale/code_game_base_turf_dm = new("[__FILE__]")

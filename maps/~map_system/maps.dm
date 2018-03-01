@@ -243,7 +243,7 @@ var/list/all_maps = list()
 
 /datum/telltale/New(var/name)
 	src.name = name
-	time_newd = world.timeofday
+	time_newd = world.time
 	world.log << "Telltale [name] (\ref[src]) Newd() at [time_newd] tick_usage=[TICK_USAGE]"
 
 /obj/telltale
@@ -252,12 +252,12 @@ var/list/all_maps = list()
 	name = "map telltale"
 
 /obj/telltale/New()
-	time_newd = world.timeofday
+	time_newd = world.time
 	world.log << "Map Telltale [name] (\ref[src]) Newd() at [time_newd] tick_usage=[TICK_USAGE]"
 	..()
 
 /obj/telltale/initialize()
-	time_init = world.timeofday
+	time_init = world.time
 	world.log << "Map Telltale [name] (\ref[src]) init() at [time_init] tick_usage=[TICK_USAGE]"
 	..()
 

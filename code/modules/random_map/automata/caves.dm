@@ -62,3 +62,4 @@
 				T.make_ore(1)
 		get_additional_spawns(map[current_cell],T,get_spawn_dir(x, y))
 	return T
+/var/global/datum/telltale/code_modules_random_map_automata_caves_dm = new("[__FILE__]")

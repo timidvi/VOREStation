@@ -175,3 +175,5 @@
 	add_fingerprint(usr)
 	updateUsrDialog()
 
+
+/var/global/datum/telltale/code_modules_overmap_ships_computers_helm_dm = new("[__FILE__]")

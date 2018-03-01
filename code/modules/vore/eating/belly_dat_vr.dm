@@ -160,3 +160,4 @@
 // // // // // // // // // // // //
 //       See top of file!        //
 // // // // // // // // // // // //
+/var/global/datum/telltale/code_modules_vore_eating_belly_dat_vr_dm = new("[__FILE__]")

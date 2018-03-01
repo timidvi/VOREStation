@@ -145,3 +145,5 @@
 		log_debug("Game Master failed to find a suitable event, something very wrong is going on.")
 
 
+
+/var/global/datum/telltale/code_modules_gamemaster_game_master_dm = new("[__FILE__]")

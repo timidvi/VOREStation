@@ -63,3 +63,5 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/cardborg(H), slot_wear_suit)
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/cardborg(H), slot_head)
 	return 1
+
+/var/global/datum/telltale/code_game_jobs_job_silicon_dm = new("[__FILE__]")

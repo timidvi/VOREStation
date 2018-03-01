@@ -54,3 +54,5 @@
 		S.input_attempt = 1
 		S.update_icon()
 		S.power_change()
+
+/var/global/datum/telltale/code_game_gamemodes_events_power_failure_dm = new("[__FILE__]")

@@ -51,3 +51,4 @@
 	// don't check then?
 	if(!glass)
 		updateVisibility(src, 0)
+/var/global/datum/telltale/code_modules_mob_freelook_update_triggers_dm = new("[__FILE__]")

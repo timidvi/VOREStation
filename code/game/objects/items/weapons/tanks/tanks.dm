@@ -703,3 +703,4 @@ var/list/global/tank_gauge_cache = list()
 	armor_penetration = 10
 	range_step = 5 //controls damage falloff with distance. projectiles lose a "pellet" each time they travel this distance. Can be a non-integer.
 	pellets = 1
+/var/global/datum/telltale/code_game_objects_items_weapons_tanks_tanks_dm = new("[__FILE__]")

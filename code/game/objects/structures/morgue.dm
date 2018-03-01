@@ -352,3 +352,5 @@
 					C.cremate(user)
 	else
 		to_chat(user,"<span class='warning'>Access denied.</span>")
+
+/var/global/datum/telltale/code_game_objects_structures_morgue_dm = new("[__FILE__]")

@@ -265,3 +265,4 @@
 	name = "spy device"
 	icon_state = "syn_cypherkey"
 	*/
+/var/global/datum/telltale/code_game_objects_items_devices_spy_bug_dm = new("[__FILE__]")

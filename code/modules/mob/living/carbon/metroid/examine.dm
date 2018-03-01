@@ -29,3 +29,4 @@
 	msg += "*---------*"
 	user << msg
 	return
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_examine_dm = new("[__FILE__]")

@@ -300,3 +300,4 @@ var/global/list/changeling_fabricated_clothing = list(
 		usr.set_id_info(src)
 	ui_interact(registered_user)
 	..()
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_fabricate_clothing_dm = new("[__FILE__]")

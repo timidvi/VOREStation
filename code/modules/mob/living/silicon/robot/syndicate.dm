@@ -26,3 +26,5 @@
 	radio.recalculateChannels()
 
 	playsound(loc, 'sound/mecha/nominalsyndi.ogg', 75, 0)
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_syndicate_dm = new("[__FILE__]")

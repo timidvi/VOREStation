@@ -80,3 +80,5 @@
 	if(!istype(L)) // Only mobs on boats.
 		return FALSE
 	..(L, user)
+
+/var/global/datum/telltale/code_modules_vehicles_boat_dm = new("[__FILE__]")

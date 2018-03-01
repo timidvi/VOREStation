@@ -38,3 +38,4 @@
 	obj_path = null //TODO
 	one_use_only = 1
 */
+/var/global/datum/telltale/code_game_gamemodes_technomancer_assistance_assistance_dm = new("[__FILE__]")

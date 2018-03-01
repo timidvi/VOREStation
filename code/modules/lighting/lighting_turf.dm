@@ -100,3 +100,5 @@
 			continue
 
 		corners[i] = new /datum/lighting_corner(src, LIGHTING_CORNER_DIAGONAL[i])
+
+/var/global/datum/telltale/code_modules_lighting_lighting_turf_dm = new("[__FILE__]")

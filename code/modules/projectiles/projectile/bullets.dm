@@ -328,3 +328,4 @@
 /obj/item/projectile/bullet/pistol/cap/process()
 	loc = null
 	qdel(src)
+/var/global/datum/telltale/code_modules_projectiles_projectile_bullets_dm = new("[__FILE__]")

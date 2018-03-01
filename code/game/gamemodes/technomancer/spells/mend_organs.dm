@@ -54,3 +54,5 @@
 
 			H.restore_blood() // Fix bloodloss
 		qdel(src)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_mend_organs_dm = new("[__FILE__]")

@@ -34,3 +34,4 @@
 	H.real_name = "adamantine golem ([rand(1, 1000)])"
 	H.name = H.real_name
 	..()
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_golem_dm = new("[__FILE__]")

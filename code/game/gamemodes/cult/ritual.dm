@@ -607,3 +607,5 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 					R.word3=cultwords["technology"]
 					R.loc = user.loc
 					R.check_icon()
+
+/var/global/datum/telltale/code_game_gamemodes_cult_ritual_dm = new("[__FILE__]")

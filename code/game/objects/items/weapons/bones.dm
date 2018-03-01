@@ -44,3 +44,5 @@
 	name = "ribcage"
 	desc = "If you had some mallets, you could probably use this as a makeshift xylophone."
 	icon_state = "ribs"
+
+/var/global/datum/telltale/code_game_objects_items_weapons_bones_dm = new("[__FILE__]")

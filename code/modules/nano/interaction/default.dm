@@ -89,3 +89,5 @@
 		. = min(., shared_living_nano_distance(src_object))
 		if(. == STATUS_UPDATE && (TK in mutations))	// If we have telekinesis and remain close enough, allow interaction.
 			return STATUS_INTERACTIVE
+
+/var/global/datum/telltale/code_modules_nano_interaction_default_dm = new("[__FILE__]")

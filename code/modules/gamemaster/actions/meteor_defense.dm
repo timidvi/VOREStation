@@ -49,3 +49,4 @@
 		announcement = "The colony has cleared the incoming debris."
 		command_announcement.Announce(announcement, "Meteor Alert - Update")
 		message_admins("Meteor defense event has ended.")
+/var/global/datum/telltale/code_modules_gamemaster_actions_meteor_defense_dm = new("[__FILE__]")

@@ -503,3 +503,4 @@ Drinks Data
 /datum/reagent/ethanol/specialwhiskey
 	glass_icon_state = "whiskeyglass"
 	glass_center_of_mass = list("x"=16, "y"=12)
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_drinkingglass_metaglass_dm = new("[__FILE__]")

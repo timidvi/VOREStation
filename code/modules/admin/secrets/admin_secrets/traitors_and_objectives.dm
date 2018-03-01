@@ -5,3 +5,5 @@
 	. = ..()
 	if(.)
 		user.client.holder.check_antagonists()
+
+/var/global/datum/telltale/code_modules_admin_secrets_admin_secrets_traitors_and_objectives_dm = new("[__FILE__]")

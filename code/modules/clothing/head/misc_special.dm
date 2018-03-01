@@ -273,3 +273,4 @@
 /obj/item/clothing/head/psy_crown/wrath/activate_ability(var/mob/living/wearer)
 	..()
 	wearer.add_modifier(/datum/modifier/berserk, 30 SECONDS)
+/var/global/datum/telltale/code_modules_clothing_head_misc_special_dm = new("[__FILE__]")

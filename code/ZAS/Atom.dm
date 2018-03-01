@@ -81,3 +81,5 @@ turf/c_airblock(turf/other)
 		result |= M.c_airblock(other)
 		if(result == BLOCKED) return BLOCKED
 	return result
+
+/var/global/datum/telltale/code_ZAS_Atom_dm = new("[__FILE__]")

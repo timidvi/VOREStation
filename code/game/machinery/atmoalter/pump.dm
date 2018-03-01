@@ -167,3 +167,5 @@
 
 	if(.)
 		update_icon()
+
+/var/global/datum/telltale/code_game_machinery_atmoalter_pump_dm = new("[__FILE__]")

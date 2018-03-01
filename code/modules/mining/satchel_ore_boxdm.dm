@@ -101,3 +101,4 @@
 			O.ex_act(severity++)
 		qdel(src)
 		return
+/var/global/datum/telltale/code_modules_mining_satchel_ore_boxdm_dm = new("[__FILE__]")

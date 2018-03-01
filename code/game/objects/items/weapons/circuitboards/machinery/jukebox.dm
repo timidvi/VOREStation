@@ -11,3 +11,5 @@
 							/obj/item/weapon/stock_parts/capacitor = 1,
 							/obj/item/weapon/stock_parts/console_screen = 1,
 							/obj/item/stack/cable_coil = 5)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_circuitboards_machinery_jukebox_dm = new("[__FILE__]")

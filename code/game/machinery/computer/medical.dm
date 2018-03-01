@@ -554,3 +554,5 @@
 	icon_keyboard = "laptop_key"
 	icon_screen = "medlaptop"
 	throwpass = 1 //VOREStation Edit - Really???
+
+/var/global/datum/telltale/code_game_machinery_computer_medical_dm = new("[__FILE__]")

@@ -39,3 +39,5 @@ var/const/WIRE_TRANSMIT = 4
 		if(WIRE_TRANSMIT)
 			R.broadcasting = mended && !IsIndexCut(WIRE_SIGNAL)
 	nanomanager.update_uis(holder)
+
+/var/global/datum/telltale/code_datums_wires_radio_dm = new("[__FILE__]")

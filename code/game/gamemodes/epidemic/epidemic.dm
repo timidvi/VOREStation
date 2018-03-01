@@ -209,3 +209,5 @@
 		world << "<font size = 3><span class='danger'> The crew succumbed to the epidemic!</span></font>"
 	..()
 	return 1
+
+/var/global/datum/telltale/code_game_gamemodes_epidemic_epidemic_dm = new("[__FILE__]")

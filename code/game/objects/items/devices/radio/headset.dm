@@ -431,3 +431,5 @@
 			radio_text += ", "
 
 	radio_desc = radio_text
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_headset_dm = new("[__FILE__]")

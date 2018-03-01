@@ -44,3 +44,5 @@
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.durability = min(nif.durability + removed, initial(nif.durability))
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_vr_dm = new("[__FILE__]")

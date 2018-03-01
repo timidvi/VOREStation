@@ -197,3 +197,4 @@
 	desc = "Install this into your integrated circuit printer to enhance it.  This one allows the printer to duplicate assemblies."
 	icon_state = "upgrade_disk_clone"
 	origin_tech = list(TECH_ENGINEERING = 5, TECH_DATA = 6)
+/var/global/datum/telltale/code_modules_integrated_electronics_core_printer_dm = new("[__FILE__]")

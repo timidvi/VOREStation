@@ -14,3 +14,4 @@ HasBelow(var/z)
 // These give either the turf or null.
 GetAbove(var/atom/atom)
 GetBelow(var/atom/atom)
+/var/global/datum/telltale/code_modules_multiz__stubs_dm = new("[__FILE__]")

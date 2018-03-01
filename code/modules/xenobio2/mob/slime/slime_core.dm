@@ -10,3 +10,4 @@ Slime core lives here.
 	product = "core"
 
 	
+/var/global/datum/telltale/code_modules_xenobio__mob_slime_slime_core_dm = new("[__FILE__]")

@@ -45,3 +45,4 @@
 		uniform = /obj/item/clothing/under/suit_jacket/female/skirt
 	else
 		uniform = /obj/item/clothing/under/suit_jacket/charcoal
+/var/global/datum/telltale/code_datums_outfits_jobs_command_dm = new("[__FILE__]")

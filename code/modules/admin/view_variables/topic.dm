@@ -531,3 +531,5 @@
 			debug_variables(DAT)
 
 	return
+
+/var/global/datum/telltale/code_modules_admin_view_variables_topic_dm = new("[__FILE__]")

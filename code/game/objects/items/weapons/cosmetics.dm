@@ -88,3 +88,4 @@
 			if(FEMALE)
 				text = "lady"
 	user.visible_message("<span class='notice'>[user] uses [src] to comb their hair with incredible style and sophistication. What a [text].</span>")
+/var/global/datum/telltale/code_game_objects_items_weapons_cosmetics_dm = new("[__FILE__]")

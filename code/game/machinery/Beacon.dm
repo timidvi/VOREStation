@@ -49,3 +49,4 @@
 			Beacon.loc = src.loc
 
 	updateicon()
+/var/global/datum/telltale/code_game_machinery_Beacon_dm = new("[__FILE__]")

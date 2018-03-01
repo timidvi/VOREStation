@@ -270,3 +270,4 @@ var/list/global/map_templates = list()
 	else
 		admin_notice("Submaps loaded.", R_DEBUG)
 	admin_notice("Loaded: [english_list(pretty_submap_list)]", R_DEBUG)
+/var/global/datum/telltale/code_modules_maps_tg_map_template_dm = new("[__FILE__]")

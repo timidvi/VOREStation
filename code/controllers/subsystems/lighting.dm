@@ -164,3 +164,4 @@ SUBSYSTEM_DEF(lighting)
 #undef SSLIGHTING_STAGE_CORNERS
 #undef SSLIGHTING_STAGE_OVERLAYS
 #undef SSLIGHTING_STAGE_STATS
+/var/global/datum/telltale/code_controllers_subsystems_lighting_dm = new("[__FILE__]")

@@ -23,3 +23,5 @@
 
 	product.overlays += food_image
 
+
+/var/global/datum/telltale/code_game_machinery_kitchen_cooking_machines_cereal_dm = new("[__FILE__]")

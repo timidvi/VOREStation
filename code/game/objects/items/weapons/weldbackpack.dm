@@ -144,3 +144,5 @@
 	..(user)
 	user << text("\icon[] [] units of fuel left!", src, src.reagents.total_volume)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_weldbackpack_dm = new("[__FILE__]")

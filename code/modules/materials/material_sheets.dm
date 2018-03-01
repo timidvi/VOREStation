@@ -313,3 +313,5 @@
 	icon_state = "sheet-phoronrglass"
 	default_type = "reinforced borosilicate glass"
 	no_variants = FALSE
+
+/var/global/datum/telltale/code_modules_materials_material_sheets_dm = new("[__FILE__]")

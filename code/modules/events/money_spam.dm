@@ -124,3 +124,5 @@
 
 			if(L)
 				L << "\icon[P] <b>Message from [sender] (Unknown / spam?), </b>\"[message]\" (Unable to Reply)"
+
+/var/global/datum/telltale/code_modules_events_money_spam_dm = new("[__FILE__]")

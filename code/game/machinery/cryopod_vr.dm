@@ -32,3 +32,4 @@
 	name = "residential oversight console"
 	desc = "An interface between visitors and the residential oversight systems tasked with keeping track of all visitors in the residential district."
 */
+/var/global/datum/telltale/code_game_machinery_cryopod_vr_dm = new("[__FILE__]")

@@ -293,3 +293,5 @@ var/global/list/pipe_colors = list("grey" = PIPE_COLOR_GREY, "red" = PIPE_COLOR_
 						pipe_underlays_intact["[D]" + pipe_colors[pipe_color]] = I
 
 */
+
+/var/global/datum/telltale/code_ATMOSPHERICS__atmos_setup_dm = new("[__FILE__]")

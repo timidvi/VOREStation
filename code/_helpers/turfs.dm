@@ -39,3 +39,4 @@
 	if(pressure < SOUND_MINIMUM_PRESSURE)
 		return TRUE
 	return FALSE
+/var/global/datum/telltale/code__helpers_turfs_dm = new("[__FILE__]")

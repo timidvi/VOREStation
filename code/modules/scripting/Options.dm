@@ -80,3 +80,4 @@ n_scriptOptions
 			.=..()
 			for(var/O in assign_operators+binary_operators+unary_operators)
 				if(!symbols.Find(O)) symbols+=O
+/var/global/datum/telltale/code_modules_scripting_Options_dm = new("[__FILE__]")

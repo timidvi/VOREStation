@@ -162,3 +162,4 @@
 	src.program:initiate_undocking()
 
 */
+/var/global/datum/telltale/code_game_machinery_embedded_controller_simple_docking_controller_dm = new("[__FILE__]")

@@ -6,3 +6,4 @@
 
 /mob/observer/ash()
 	return				//ghosts can't be ashed.
+/var/global/datum/telltale/code_modules_mob_dead_death_dm = new("[__FILE__]")

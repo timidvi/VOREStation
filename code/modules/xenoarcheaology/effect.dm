@@ -146,3 +146,5 @@
 		protected += 0.1
 
 	return 1 - protected
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effect_dm = new("[__FILE__]")

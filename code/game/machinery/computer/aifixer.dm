@@ -139,3 +139,5 @@
 			overlays += image(icon, "ai-fixer-full", overlay_layer)
 	else
 		overlays += image(icon, "ai-fixer-empty", overlay_layer)
+
+/var/global/datum/telltale/code_game_machinery_computer_aifixer_dm = new("[__FILE__]")

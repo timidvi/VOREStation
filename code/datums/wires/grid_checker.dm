@@ -64,3 +64,4 @@ var/const/GRID_CHECKER_WIRE_NOTHING_2 = 128		// Does nothing, but makes it a bit
 			if(G.wire_locked_out)
 				return
 			G.shock(usr, 70)
+/var/global/datum/telltale/code_datums_wires_grid_checker_dm = new("[__FILE__]")

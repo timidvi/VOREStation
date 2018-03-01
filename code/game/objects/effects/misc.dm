@@ -46,3 +46,4 @@
 /obj/effect/temporary_effect/shuttle_landing/initialize()
 	flick("shuttle_warning", src) // flick() forces the animation to always begin at the start.
 	. = ..()
+/var/global/datum/telltale/code_game_objects_effects_misc_dm = new("[__FILE__]")

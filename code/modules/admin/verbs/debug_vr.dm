@@ -30,3 +30,5 @@
 
 	log_and_message_admins("[key_name(src)] Quick NIF'd [H.real_name].")
 	feedback_add_details("admin_verb","QNIF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/var/global/datum/telltale/code_modules_admin_verbs_debug_vr_dm = new("[__FILE__]")

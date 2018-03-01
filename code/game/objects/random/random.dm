@@ -1582,3 +1582,5 @@ var/list/multi_point_spawns
 				prob(5);/mob/living/simple_animal/hostile/hivebot/range/laser,
 				prob(5);/mob/living/simple_animal/hostile/hivebot/range/strong,
 				prob(5);/mob/living/simple_animal/hostile/hivebot/range/guard)
+
+/var/global/datum/telltale/code_game_objects_random_random_dm = new("[__FILE__]")

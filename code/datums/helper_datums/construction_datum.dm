@@ -103,3 +103,4 @@
 
 	custom_action(index, diff, used_atom, user)
 		return 1
+/var/global/datum/telltale/code_datums_helper_datums_construction_datum_dm = new("[__FILE__]")

@@ -571,3 +571,5 @@
 			dupe.emote_lists[K] += I
 
 	return dupe
+
+/var/global/datum/telltale/code_modules_vore_eating_belly_obj_vr_dm = new("[__FILE__]")

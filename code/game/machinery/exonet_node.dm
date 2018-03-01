@@ -188,3 +188,5 @@
 	var/timestamp = "[stationdate2text()] [stationtime2text()]"
 	var/msg = "[timestamp] | FROM [origin_address] TO [target_address] | TYPE: [data_type] | CONTENT: [content]"
 	logs.Add(msg)
+
+/var/global/datum/telltale/code_game_machinery_exonet_node_dm = new("[__FILE__]")

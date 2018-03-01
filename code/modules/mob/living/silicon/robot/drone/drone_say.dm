@@ -36,3 +36,4 @@
 				if(M.client) M << "<b>[src]</b> transmits, \"[message]\""
 		return 1
 	return ..(message, 0)
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_drone_drone_say_dm = new("[__FILE__]")

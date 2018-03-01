@@ -528,3 +528,5 @@
 				qdel(O)
 			if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 				break
+
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Machinery_dm = new("[__FILE__]")

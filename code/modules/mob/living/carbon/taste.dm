@@ -64,3 +64,4 @@ calculate text size per text.
 			out += "[intensity_desc] [taste_desc]"
 
 	return english_list(out, "something indescribable")
+/var/global/datum/telltale/code_modules_mob_living_carbon_taste_dm = new("[__FILE__]")

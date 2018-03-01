@@ -253,3 +253,5 @@
 	M.reproduce()
 	playsound(src, 'sound/effects/bubbles.ogg', 50, 1)
 	qdel(src)
+
+/var/global/datum/telltale/code_modules_xenobio_items_slimepotions_dm = new("[__FILE__]")

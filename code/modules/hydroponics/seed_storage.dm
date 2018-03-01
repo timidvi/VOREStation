@@ -323,3 +323,5 @@
 
 	piles += new /datum/seed_pile(O, newID)
 	return
+
+/var/global/datum/telltale/code_modules_hydroponics_seed_storage_dm = new("[__FILE__]")

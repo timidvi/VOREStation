@@ -211,3 +211,5 @@
 
 /obj/item/weapon/rcd/mounted/can_use(var/mob/user,var/turf/T)
 	return (user.Adjacent(T) && !user.stat && !user.restrained())
+
+/var/global/datum/telltale/code_game_objects_items_weapons_RCD_dm = new("[__FILE__]")

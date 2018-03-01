@@ -55,3 +55,4 @@
 		icon_state = "appendixinflamed"
 		name = "inflamed appendix"
 	..()
+/var/global/datum/telltale/code_modules_organs_internal_appendix_dm = new("[__FILE__]")

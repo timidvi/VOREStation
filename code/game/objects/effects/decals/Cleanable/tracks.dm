@@ -200,3 +200,4 @@ var/global/list/image/fluidtrack_cache=list()
 	gender = PLURAL
 	random_icon_states = null
 	amount = 0
+/var/global/datum/telltale/code_game_objects_effects_decals_Cleanable_tracks_dm = new("[__FILE__]")

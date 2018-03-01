@@ -24,3 +24,5 @@ var/global/list/ALL_ANTIGENS = list(
 		return none
 
 	return code
+
+/var/global/datum/telltale/code_modules_virus__antibodies_dm = new("[__FILE__]")

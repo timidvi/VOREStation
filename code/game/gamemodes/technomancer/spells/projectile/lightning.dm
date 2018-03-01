@@ -40,3 +40,4 @@
 	else
 		target_mob.electrocute_act(power, src, 0.75, BP_TORSO)
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_lightning_dm = new("[__FILE__]")

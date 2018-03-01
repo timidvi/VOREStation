@@ -23,3 +23,4 @@
 		name = "[base_name] [overmind.blob_type.name]"
 	else
 		name = "inert [base_name] blob"
+/var/global/datum/telltale/code_modules_blob__blobs_shield_dm = new("[__FILE__]")

@@ -21,3 +21,4 @@
 		target.remove_modifiers_of_type(/datum/modifier/technomancer)
 	user.adjust_instability(10)
 	qdel(src)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_dispel_dm = new("[__FILE__]")

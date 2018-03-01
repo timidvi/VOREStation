@@ -113,3 +113,5 @@
 	..(S,H)
 	H.verbs |= /mob/living/proc/glow_toggle
 	H.verbs |= /mob/living/proc/glow_color
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_traits_vr_neutral_dm = new("[__FILE__]")

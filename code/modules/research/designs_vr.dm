@@ -253,3 +253,5 @@
 	id = "rigmod_orescanner"
 	build_path = /obj/item/rig_module/device/orescanner
 	sort_string = "HCAAI"
+
+/var/global/datum/telltale/code_modules_research_designs_vr_dm = new("[__FILE__]")

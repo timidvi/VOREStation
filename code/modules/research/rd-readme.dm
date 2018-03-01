@@ -30,3 +30,4 @@ researching. Existing tech (ie, anything you can find on the station or get from
 level 5 or 7. Everything past that should be stuff you research.
 
 */
+/var/global/datum/telltale/code_modules_research_rd_readme_dm = new("[__FILE__]")

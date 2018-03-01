@@ -257,3 +257,5 @@
 	if(!S) WARNING ("Persist (NIF): Couldn't load NIF save savefile? [prefs.real_name]")
 	S.cd = "/character[prefs.default_slot]"
 	nif_prefs.save_character(S)
+
+/var/global/datum/telltale/code_modules_vore_persist_persist_vr_dm = new("[__FILE__]")

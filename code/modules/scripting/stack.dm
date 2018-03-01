@@ -21,3 +21,4 @@
 
 		Clear()
 			contents.Cut()
+/var/global/datum/telltale/code_modules_scripting_stack_dm = new("[__FILE__]")

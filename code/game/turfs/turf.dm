@@ -280,3 +280,5 @@ var/const/enterloopsanity = 100
 		if(isliving(AM))
 			var/mob/living/M = AM
 			M.turf_collision(src, speed)
+
+/var/global/datum/telltale/code_game_turfs_turf_dm = new("[__FILE__]")

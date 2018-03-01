@@ -137,3 +137,5 @@
 	icon_state = "darkred"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 	rolled_sleeves = 0
+
+/var/global/datum/telltale/code_modules_clothing_under_color_dm = new("[__FILE__]")

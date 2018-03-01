@@ -98,3 +98,4 @@
 /obj/item/clothing/suit/dress/marine/command
 	name = "marine command dress jacket"
 	desc = "A tailored black USDF Marine Corps dress jacket with gold trim. Smells like ceremony."
+/var/global/datum/telltale/code_modules_clothing_suits_solgov_vr_dm = new("[__FILE__]")

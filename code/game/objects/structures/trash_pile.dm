@@ -294,3 +294,4 @@
 /obj/structure/mob_spawner/mouse_nest/get_death_report(var/mob/living/L)
 	..()
 	last_spawn = rand(world.time - spawn_delay, world.time)
+/var/global/datum/telltale/code_game_objects_structures_trash_pile_dm = new("[__FILE__]")

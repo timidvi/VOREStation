@@ -25,3 +25,5 @@
 	name = "plating"
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "plating"
+
+/var/global/datum/telltale/code_game_turfs_unsimulated_shuttle_dm = new("[__FILE__]")

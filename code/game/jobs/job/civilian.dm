@@ -168,3 +168,4 @@
 	if(.)
 		H.implant_loyalty(H)
 */
+/var/global/datum/telltale/code_game_jobs_job_civilian_dm = new("[__FILE__]")

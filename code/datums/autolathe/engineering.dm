@@ -101,3 +101,5 @@
 /datum/category_item/autolathe/engineering/camera_assembly
 	name = "camera assembly"
 	path =/obj/item/weapon/camera_assembly
+
+/var/global/datum/telltale/code_datums_autolathe_engineering_dm = new("[__FILE__]")

@@ -782,3 +782,5 @@
 	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Done\]</a>"
 	HTML += "<tt>"
 	src << browse(HTML, "window=flavor_changes;size=430x300")
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_emote_dm = new("[__FILE__]")

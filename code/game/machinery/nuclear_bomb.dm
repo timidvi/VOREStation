@@ -423,3 +423,5 @@ obj/machinery/nuclearbomb/proc/nukehack_win(mob/user as mob)
 
 /obj/item/weapon/disk/nuclear/touch_map_edge()
 	qdel(src)
+
+/var/global/datum/telltale/code_game_machinery_nuclear_bomb_dm = new("[__FILE__]")

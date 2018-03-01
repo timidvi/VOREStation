@@ -252,3 +252,4 @@
 
 	nanomanager.update_uis(src)
 	add_fingerprint(usr)
+/var/global/datum/telltale/code_game_objects_items_devices_communicator_UI_dm = new("[__FILE__]")

@@ -753,3 +753,5 @@
 
 /obj/item/weapon/gun/attack_self(mob/user)
 	switch_firemodes(user)
+
+/var/global/datum/telltale/code_modules_projectiles_gun_dm = new("[__FILE__]")

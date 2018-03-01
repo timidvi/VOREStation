@@ -45,3 +45,5 @@
 		for (var/mob/living/silicon/robot/R in range(src.effectrange,holder))
 			R << "<font color='red'>SYSTEM ALERT: CPU cycles slowing down.</font>"
 		return 1
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_sleepy_dm = new("[__FILE__]")

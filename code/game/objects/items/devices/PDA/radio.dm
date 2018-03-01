@@ -153,3 +153,5 @@
 	if(radio_controller)
 		radio_controller.remove_object(src, frequency)
 	return ..()
+
+/var/global/datum/telltale/code_game_objects_items_devices_PDA_radio_dm = new("[__FILE__]")

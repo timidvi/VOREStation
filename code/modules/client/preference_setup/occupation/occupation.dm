@@ -293,3 +293,5 @@
 				if(3)
 					return job_engsec_low
 	return 0
+
+/var/global/datum/telltale/code_modules_client_preference_setup_occupation_occupation_dm = new("[__FILE__]")

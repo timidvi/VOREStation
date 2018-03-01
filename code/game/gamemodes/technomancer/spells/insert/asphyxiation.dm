@@ -73,3 +73,4 @@
 		return 1
 	//If we're at this point, the spell is not going to result in critting.
 	return 0
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_insert_asphyxiation_dm = new("[__FILE__]")

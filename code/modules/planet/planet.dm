@@ -50,3 +50,5 @@
 	sun["color"] = new_color
 	needs_work |= PLANET_PROCESS_SUN
 
+
+/var/global/datum/telltale/code_modules_planet_planet_dm = new("[__FILE__]")

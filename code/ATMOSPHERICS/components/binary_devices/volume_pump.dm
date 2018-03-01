@@ -17,3 +17,4 @@
 		icon_state = "off"
 	else
 		icon_state = "[use_power ? "on" : "off"]"
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_volume_pump_dm = new("[__FILE__]")

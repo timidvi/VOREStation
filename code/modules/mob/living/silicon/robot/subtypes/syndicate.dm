@@ -44,3 +44,4 @@
 
 /mob/living/silicon/robot/syndicate/speech_bubble_appearance()
 	return "synthetic_evil"
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_subtypes_syndicate_dm = new("[__FILE__]")

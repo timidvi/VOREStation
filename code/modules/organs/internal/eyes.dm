@@ -99,3 +99,5 @@
 	if(robotic >= ORGAN_ASSISTED)
 		return
 	owner.eye_blurry += (4/severity)
+
+/var/global/datum/telltale/code_modules_organs_internal_eyes_dm = new("[__FILE__]")

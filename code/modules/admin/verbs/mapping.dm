@@ -423,3 +423,5 @@ var/global/movement_disabled_exception //This is the client that calls the proc,
 		movement_disabled_exception = usr.ckey
 	else
 		message_admins("[src.ckey] used 'Disable all movement', restoring all movement.")*/
+
+/var/global/datum/telltale/code_modules_admin_verbs_mapping_dm = new("[__FILE__]")

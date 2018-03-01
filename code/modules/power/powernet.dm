@@ -158,3 +158,5 @@
 
 /area/proc/get_apc()
 	return apc
+
+/var/global/datum/telltale/code_modules_power_powernet_dm = new("[__FILE__]")

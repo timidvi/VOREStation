@@ -73,3 +73,4 @@
 	containertype = /obj/structure/largecrate/animal/otie/phoron
 	containername = "VARMAcorp adaptive beta subject (Experimental)"
 	access = access_xenobiology
+/var/global/datum/telltale/code_datums_supplypacks_science_vr_dm = new("[__FILE__]")

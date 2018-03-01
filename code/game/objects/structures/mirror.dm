@@ -141,3 +141,4 @@
 					raiders.update_access(vox)
 				qdel(user)
 	..()
+/var/global/datum/telltale/code_game_objects_structures_mirror_dm = new("[__FILE__]")

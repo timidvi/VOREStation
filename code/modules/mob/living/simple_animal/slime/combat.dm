@@ -275,3 +275,5 @@
 /mob/living/simple_animal/slime/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null)
 	power_charge = between(0, power_charge + round(shock_damage / 10), 10)
 	to_chat(src, "<span class='notice'>\The [source] shocks you, and it charges you.</span>")
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_slime_combat_dm = new("[__FILE__]")

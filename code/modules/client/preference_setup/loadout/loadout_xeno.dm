@@ -161,3 +161,4 @@
 		var/obj/item/clothing/under/cohesion/cohesion_type = cohesionsuit
 		cohesionsuits[initial(cohesion_type.name)] = cohesion_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cohesionsuits))
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_xeno_dm = new("[__FILE__]")

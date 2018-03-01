@@ -189,3 +189,4 @@
 	possible_genders = possible_genders.Copy()
 	possible_genders |= NEUTER
 	return possible_genders
+/var/global/datum/telltale/code_modules_nano_modules_human_appearance_dm = new("[__FILE__]")

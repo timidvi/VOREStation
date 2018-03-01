@@ -82,3 +82,5 @@
 
 /obj/item/trash/attack(mob/M as mob, mob/living/user as mob)
 	return
+
+/var/global/datum/telltale/code_game_objects_items_trash_dm = new("[__FILE__]")

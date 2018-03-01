@@ -340,3 +340,5 @@
 	if(areaColor_turfs.len)
 		seeAreaColors_remove()
 	return ..()
+
+/var/global/datum/telltale/code_game_objects_items_blueprints_dm = new("[__FILE__]")

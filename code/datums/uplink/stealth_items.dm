@@ -38,3 +38,5 @@
 	name = "Camera Network Access - Floppy"
 	item_cost = 15
 	path = /obj/item/weapon/disk/file/cameras/syndicate
+
+/var/global/datum/telltale/code_datums_uplink_stealth_items_dm = new("[__FILE__]")

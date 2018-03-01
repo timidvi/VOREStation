@@ -26,3 +26,5 @@ datum/controller/transfer_controller/proc/process()
 	else if (round_duration_in_ticks >= timerbuffer - 1 MINUTE) //VOREStation Edit END
 		vote.autotransfer()
 		timerbuffer = timerbuffer + config.vote_autotransfer_interval
+
+/var/global/datum/telltale/code_controllers_autotransfer_dm = new("[__FILE__]")

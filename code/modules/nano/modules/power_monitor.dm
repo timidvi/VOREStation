@@ -63,3 +63,5 @@
 		refresh_sensors()
 	else if( href_list["setsensor"] )
 		active_sensor = href_list["setsensor"]
+
+/var/global/datum/telltale/code_modules_nano_modules_power_monitor_dm = new("[__FILE__]")

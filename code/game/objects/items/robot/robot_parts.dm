@@ -307,3 +307,5 @@
 		user << "<span class='warning'>You short out the safeties.</span>"
 		sabotaged = 1
 		return 1
+
+/var/global/datum/telltale/code_game_objects_items_robot_robot_parts_dm = new("[__FILE__]")

@@ -20,3 +20,4 @@
 #define MONSTER_CHAR 5
 #define ARTIFACT_TURF_CHAR 6
 #define ARTIFACT_CHAR 7
+/var/global/datum/telltale/code_modules_random_map__random_map_setup_dm = new("[__FILE__]")

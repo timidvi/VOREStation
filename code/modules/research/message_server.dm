@@ -406,3 +406,4 @@ proc/feedback_add_details(var/variable,var/details)
 	if(!FV) return
 
 	FV.add_details(details)
+/var/global/datum/telltale/code_modules_research_message_server_dm = new("[__FILE__]")

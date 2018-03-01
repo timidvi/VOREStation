@@ -137,3 +137,5 @@
 	if(new_colour_secure && !isnull(colours_secure[new_colour_secure]))
 		colour_secure = new_colour_secure
 		usr << "<span class='notice'>You set \the [src] secure closet colour to '[colour_secure]'.</span>"
+
+/var/global/datum/telltale/code_game_objects_items_devices_locker_painter_dm = new("[__FILE__]")

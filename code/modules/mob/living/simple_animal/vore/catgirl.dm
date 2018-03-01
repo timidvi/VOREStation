@@ -58,3 +58,5 @@
 
 /mob/living/simple_animal/catgirl/retaliate
 	retaliate = 1
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_catgirl_dm = new("[__FILE__]")

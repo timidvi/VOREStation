@@ -192,3 +192,4 @@ Class Procs:
 
 	//for(var/turf/T in unsimulated_contents)
 	//	M << "[T] at ([T.x],[T.y])"
+/var/global/datum/telltale/code_ZAS_Zone_dm = new("[__FILE__]")

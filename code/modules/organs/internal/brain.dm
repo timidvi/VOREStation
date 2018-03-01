@@ -144,3 +144,5 @@
 	desc = "A tightly furled roll of paper, covered with indecipherable runes."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
+
+/var/global/datum/telltale/code_modules_organs_internal_brain_dm = new("[__FILE__]")

@@ -34,3 +34,5 @@
 			user << target_image
 			sleep(5)
 			qdel(target_image)
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_targeting_matrix_dm = new("[__FILE__]")

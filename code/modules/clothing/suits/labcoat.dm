@@ -104,3 +104,4 @@
 	name = "blue-edged labcoat"
 	desc = "A suit that protects against minor chemical spills. This one has blue trim."
 	icon_state = "blue_edge_labcoat"
+/var/global/datum/telltale/code_modules_clothing_suits_labcoat_dm = new("[__FILE__]")

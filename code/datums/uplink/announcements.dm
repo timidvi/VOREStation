@@ -115,3 +115,5 @@
 	new/datum/event/radiation_storm/syndicate(EM)
 	return 1
 
+
+/var/global/datum/telltale/code_datums_uplink_announcements_dm = new("[__FILE__]")

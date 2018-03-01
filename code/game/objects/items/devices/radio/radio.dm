@@ -778,3 +778,5 @@ var/global/list/default_medbay_channels = list(
 /obj/item/device/radio/phone/medbay/New()
 	..()
 	internal_channels = default_medbay_channels.Copy()
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_radio_dm = new("[__FILE__]")

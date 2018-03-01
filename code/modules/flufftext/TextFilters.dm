@@ -81,3 +81,5 @@ proc/Ellipsis(original_msg, chance = 50)
 	new_msg = jointext(new_words," ")
 
 	return new_msg
+
+/var/global/datum/telltale/code_modules_flufftext_TextFilters_dm = new("[__FILE__]")

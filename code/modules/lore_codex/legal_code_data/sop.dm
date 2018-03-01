@@ -346,3 +346,5 @@
 	Suit sensors with tracking beacon active are mandatory.  Employees and guests are required to comply with all requests from Security or Command.  \
 	Employees are advised to remain within their departments if it is safe to do so.  An Emergency Response Team may be authorized.  If one is called, \
 	all crew and visitors are to comply with their direction.  Privacy policy is the same as Blue alert.  Command can demand that only Galactic Common is spoken on the radio."
+
+/var/global/datum/telltale/code_modules_lore_codex_legal_code_data_sop_dm = new("[__FILE__]")

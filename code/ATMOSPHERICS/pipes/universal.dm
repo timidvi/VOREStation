@@ -100,3 +100,5 @@
 			underlays += icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "intact" + icon_connect_type)
 	else
 		underlays += icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "retracted" + icon_connect_type)
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_universal_dm = new("[__FILE__]")

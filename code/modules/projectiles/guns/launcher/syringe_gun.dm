@@ -138,3 +138,5 @@
 	icon_state = "rapidsyringegun"
 	item_state = "rapidsyringegun"
 	max_darts = 5
+
+/var/global/datum/telltale/code_modules_projectiles_guns_launcher_syringe_gun_dm = new("[__FILE__]")

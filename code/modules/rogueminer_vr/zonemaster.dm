@@ -417,3 +417,5 @@
 ///////////////////////////////
 
 //Throw a meteor at a player in the zone
+
+/var/global/datum/telltale/code_modules_rogueminer_vr_zonemaster_dm = new("[__FILE__]")

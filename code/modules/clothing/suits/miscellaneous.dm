@@ -1039,3 +1039,5 @@ obj/item/clothing/suit/storage/toggle/peacoat
 /obj/item/clothing/suit/storage/snowsuit/science
 	name = "science snowsuit"
 	icon_state = "snowsuit_science"
+
+/var/global/datum/telltale/code_modules_clothing_suits_miscellaneous_dm = new("[__FILE__]")

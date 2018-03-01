@@ -290,3 +290,4 @@
 
 #undef RELAY_POWER_TRANSFER
 #undef LOGIC_HIGH
+/var/global/datum/telltale/code_modules_power_cable_logic_dm = new("[__FILE__]")

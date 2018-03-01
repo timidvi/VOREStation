@@ -187,3 +187,5 @@ VOREStation Removal End */
 			return "<span class='warning'>[t_she] glowing brightly with high levels of electrical activity.</span>"
 		if(35 to INFINITY)
 			return "<span class='danger'>[t_she] radiating massive levels of electrical activity!</span>"
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_station_prometheans_dm = new("[__FILE__]")

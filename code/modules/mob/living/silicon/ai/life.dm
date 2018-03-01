@@ -170,3 +170,5 @@
 	..()
 	add_ai_verbs(src)
 
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_life_dm = new("[__FILE__]")

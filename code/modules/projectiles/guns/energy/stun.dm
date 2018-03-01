@@ -65,3 +65,4 @@
 	fire_delay = 20
 	charge_cost = 600
 	projectile_type = /obj/item/projectile/energy/plasmastun
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_stun_dm = new("[__FILE__]")

@@ -8,3 +8,4 @@
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
 	species_restricted = list("Vox")
 	siemens_coefficient = 1 //Its literally metal
+/var/global/datum/telltale/code_modules_clothing_suits_aliens_vox_dm = new("[__FILE__]")

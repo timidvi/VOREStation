@@ -220,3 +220,5 @@
 			transfer_shade(target,U)
 		if("CONSTRUCT")
 			transfer_construct(target,U)
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_constructs_soulstone_dm = new("[__FILE__]")

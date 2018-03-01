@@ -362,3 +362,4 @@
 		return
 	user.electrocute_act(shock_damage, src)
 	return chassis.dynattackby(W,user)
+/var/global/datum/telltale/code_game_mecha_equipment_weapons_weapons_dm = new("[__FILE__]")

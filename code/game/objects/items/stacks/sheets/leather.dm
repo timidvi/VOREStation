@@ -142,3 +142,5 @@
 			HS.amount = 1
 			wetness = initial(wetness)
 			src.use(1)
+
+/var/global/datum/telltale/code_game_objects_items_stacks_sheets_leather_dm = new("[__FILE__]")

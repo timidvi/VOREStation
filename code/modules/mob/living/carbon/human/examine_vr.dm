@@ -145,3 +145,5 @@
 /mob/living/carbon/human/proc/examine_nif(mob/living/carbon/human/H)
 	if(nif && nif.examine_msg) //If you have one set, anyway.
 		return "<span class='notice'>[nif.examine_msg]</span>\n"
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_examine_vr_dm = new("[__FILE__]")

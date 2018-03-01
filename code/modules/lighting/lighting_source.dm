@@ -288,3 +288,5 @@
 #undef LUM_FALLOFF
 #undef REMOVE_CORNER
 #undef APPLY_CORNER
+
+/var/global/datum/telltale/code_modules_lighting_lighting_source_dm = new("[__FILE__]")

@@ -159,3 +159,5 @@
 
 	..()
 	icon_state = "n2o"
+
+/var/global/datum/telltale/code_ATMOSPHERICS_pipes_tank_dm = new("[__FILE__]")

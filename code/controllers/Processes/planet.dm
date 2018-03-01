@@ -77,3 +77,5 @@ var/datum/controller/process/planet/planet_controller = null
 				var/turf/unsimulated/wall/planetary/wall = W
 				wall.set_temperature(P.weather_holder.temperature)
 				SCHECK
+
+/var/global/datum/telltale/code_controllers_Processes_planet_dm = new("[__FILE__]")

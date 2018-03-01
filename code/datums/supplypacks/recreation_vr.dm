@@ -39,3 +39,4 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate
 	containername = "wolfgirl cosplay crate"
+/var/global/datum/telltale/code_datums_supplypacks_recreation_vr_dm = new("[__FILE__]")

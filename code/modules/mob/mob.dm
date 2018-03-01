@@ -1143,3 +1143,5 @@ mob/proc/yank_out_object()
 //Throwing stuff
 /mob/proc/throw_item(atom/target)
 	return
+
+/var/global/datum/telltale/code_modules_mob_mob_dm = new("[__FILE__]")

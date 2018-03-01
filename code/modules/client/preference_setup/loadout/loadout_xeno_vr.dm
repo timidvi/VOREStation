@@ -38,3 +38,4 @@
 	display_name = "loincloth"
 	path = /obj/item/clothing/suit/storage/fluff/loincloth
 	sort_category = "Xenowear"
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_xeno_vr_dm = new("[__FILE__]")

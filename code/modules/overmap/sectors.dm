@@ -122,3 +122,5 @@ var/global/list/map_sectors = list()
 			testing("There are people on it.")
 			return 0
 	return 1
+
+/var/global/datum/telltale/code_modules_overmap_sectors_dm = new("[__FILE__]")

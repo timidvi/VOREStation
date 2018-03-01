@@ -306,3 +306,4 @@
 		beakers += B1
 		beakers += B2
 		icon_state = initial(icon_state) +"_locked"
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_chem_grenade_dm = new("[__FILE__]")

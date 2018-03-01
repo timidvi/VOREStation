@@ -19,3 +19,5 @@
 
 /obj/item/weapon/spell/aura/process()
 	return
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_aura_aura_dm = new("[__FILE__]")

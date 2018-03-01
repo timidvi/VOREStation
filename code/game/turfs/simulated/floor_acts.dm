@@ -45,3 +45,5 @@
 			W.fire_act(adj_air, adj_temp, adj_volume)
 
 	attempt_vr(src,"adjacent_fire_act_vr",list(adj_turf,adj_air,adj_temp,adj_volume))
+
+/var/global/datum/telltale/code_game_turfs_simulated_floor_acts_dm = new("[__FILE__]")

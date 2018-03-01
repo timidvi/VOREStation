@@ -215,3 +215,4 @@ var/global/list/xenoChemList = list("mutationtoxin",
 	
 
 	
+/var/global/datum/telltale/code_modules_xenobio___xeno_setup_dm = new("[__FILE__]")

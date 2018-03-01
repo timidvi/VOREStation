@@ -939,3 +939,4 @@ obj/structure/cable/proc/cableColor(var/colorC)
 		msg += " It doesn't seem to have a beginning, or an end."
 
 	to_chat(user, msg)
+/var/global/datum/telltale/code_modules_power_cable_dm = new("[__FILE__]")

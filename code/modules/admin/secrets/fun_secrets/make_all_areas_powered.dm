@@ -5,3 +5,5 @@
 	. = ..()
 	if(.)
 		power_restore()
+
+/var/global/datum/telltale/code_modules_admin_secrets_fun_secrets_make_all_areas_powered_dm = new("[__FILE__]")

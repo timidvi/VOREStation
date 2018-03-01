@@ -74,3 +74,5 @@
 	else
 		..()
 
+
+/var/global/datum/telltale/code_modules_vore_eating_simple_animal_vr_dm = new("[__FILE__]")

@@ -180,3 +180,5 @@ the artifact triggers the rage.
 	accuracy = -75				// Aiming requires focus.
 	accuracy_dispersion = 3		// Ditto.
 	evasion = -45				// Too angry to dodge.
+
+/var/global/datum/telltale/code_modules_mob__modifiers_modifiers_misc_dm = new("[__FILE__]")

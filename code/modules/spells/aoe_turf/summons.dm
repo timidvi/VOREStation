@@ -39,3 +39,4 @@
 	summon_type = list(/mob/living/simple_animal/hostile/creature/vore) // Vorestation Edit
 
 	hud_state = "wiz_creature"
+/var/global/datum/telltale/code_modules_spells_aoe_turf_summons_dm = new("[__FILE__]")

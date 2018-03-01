@@ -11,3 +11,5 @@
 	if(valid_types.len)
 		var/datum/antagonist/antag = pick(valid_types)
 		antag.attempt_random_spawn()
+
+/var/global/datum/telltale/code_modules_events_random_antagonist_dm = new("[__FILE__]")

@@ -153,3 +153,4 @@
 		var/throwdir = get_dir(firer,target)
 		target.throw_at(get_edge_target_turf(target, throwdir), rand(1,6), 10)
 		return 1
+/var/global/datum/telltale/code_modules_projectiles_guns_vox_dm = new("[__FILE__]")

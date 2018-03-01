@@ -107,3 +107,4 @@
 	if(flooring)
 		return
 	attackby(T, user)
+/var/global/datum/telltale/code_game_turfs_simulated_floor_attackby_dm = new("[__FILE__]")

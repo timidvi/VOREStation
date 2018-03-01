@@ -365,3 +365,4 @@
 	req_tech = list(TECH_DATA = 6, TECH_MATERIAL = 6)
 	materials = list(DEFAULT_WALL_MATERIAL = 25000, "glass" = 3000, "gold" = 350)
 	build_path = /obj/item/borg/upgrade/language
+/var/global/datum/telltale/code_modules_research_prosfab_designs_dm = new("[__FILE__]")

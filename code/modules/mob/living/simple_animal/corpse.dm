@@ -156,3 +156,4 @@
 
 /obj/effect/landmark/mobcorpse/russian/ranged
 	corpsehelmet = /obj/item/clothing/head/ushanka
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_corpse_dm = new("[__FILE__]")

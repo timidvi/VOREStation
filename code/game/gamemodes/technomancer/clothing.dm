@@ -43,3 +43,4 @@
 	name = "master's hat"
 	desc = "It's a somewhat silly looking blue pointed hat.  This one has a gold colored metalic feather strapped to it."
 	icon_state = "technomancer"
+/var/global/datum/telltale/code_game_gamemodes_technomancer_clothing_dm = new("[__FILE__]")

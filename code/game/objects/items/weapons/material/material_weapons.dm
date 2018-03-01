@@ -160,3 +160,4 @@ Commenting this out pending rebalancing of radiation based on small objects.
 	else
 		return ..()
 */
+/var/global/datum/telltale/code_game_objects_items_weapons_material_material_weapons_dm = new("[__FILE__]")

@@ -12,3 +12,5 @@ function SetMusic(url, time, volume) {
 	player.Settings.volume = +volume;
 }
 	</script>"}
+
+/var/global/datum/telltale/code_modules_media_media_player_wmp_dm = new("[__FILE__]")

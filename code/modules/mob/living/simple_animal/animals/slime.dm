@@ -67,3 +67,4 @@
 	S2.icon_dead = "[src.colour] baby slime dead"
 	S2.colour = "[src.colour]"
 	qdel(src)
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_slime_dm = new("[__FILE__]")

@@ -62,3 +62,5 @@
 				C.adjustOxyLoss(-5 * weakness)
 				C.adjustBrainLoss(-5 * weakness)
 				C.updatehealth()
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_effects_heal_dm = new("[__FILE__]")

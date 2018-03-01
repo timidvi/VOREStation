@@ -161,3 +161,5 @@ SUBSYSTEM_DEF(airflow)
 	airflow_dest = null
 
 	SSairflow.processing += src
+
+/var/global/datum/telltale/code_controllers_subsystems_airflow_dm = new("[__FILE__]")

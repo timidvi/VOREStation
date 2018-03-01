@@ -134,3 +134,5 @@
 
 /mob/living/simple_animal/mouse/cannot_use_vents()
 	return
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_mouse_dm = new("[__FILE__]")

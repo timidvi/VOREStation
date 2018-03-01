@@ -28,3 +28,4 @@
 		overlays += shadeOverlay
 
 		add_hiddenprint(usr)
+/var/global/datum/telltale/code_game_objects_effects_decals_crayon_dm = new("[__FILE__]")

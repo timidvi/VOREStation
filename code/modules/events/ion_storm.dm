@@ -194,3 +194,5 @@ Would like to add a law like "Law x is _______" where x = a number, and _____ is
 
 	world << "Ion Storm Main Done"
 	*/
+
+/var/global/datum/telltale/code_modules_events_ion_storm_dm = new("[__FILE__]")

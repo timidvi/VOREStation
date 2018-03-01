@@ -19,3 +19,4 @@
 
 /mob/living/carbon/human/spider/New(var/new_loc)
 	..(new_loc, "Vasilissan")
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_human_species_vr_dm = new("[__FILE__]")

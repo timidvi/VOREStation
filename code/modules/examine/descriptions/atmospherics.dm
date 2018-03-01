@@ -165,3 +165,5 @@
 	description_info = "This can be moved by using a wrench.  You will need to wrench it again when you want to use it.  You can put \
 	excess (atmospheric) pipes into the dispenser, as well.  The dispenser requires electricity to function."
 
+
+/var/global/datum/telltale/code_modules_examine_descriptions_atmospherics_dm = new("[__FILE__]")

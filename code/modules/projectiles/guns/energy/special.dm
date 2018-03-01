@@ -210,3 +210,4 @@ obj/item/weapon/gun/energy/staff/focus
 		list(mode_name="five shot burst", burst = 5, burst_accuracy = list(75,75,75,75,75), dispersion = list(1,1,1,1,1)),
 		list(mode_name="ten shot burst", burst = 10, burst_accuracy = list(75,75,75,75,75,75,75,75,75,75), dispersion = list(2,2,2,2,2,2,2,2,2,2)),
 		)
+/var/global/datum/telltale/code_modules_projectiles_guns_energy_special_dm = new("[__FILE__]")

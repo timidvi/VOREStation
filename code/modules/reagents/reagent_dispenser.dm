@@ -384,3 +384,5 @@
 /obj/structure/reagent_dispensers/acid/New()
 	..()
 	reagents.add_reagent("sacid", 1000)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_dispenser_dm = new("[__FILE__]")

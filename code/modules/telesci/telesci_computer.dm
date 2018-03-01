@@ -382,3 +382,5 @@
 	var/dest_x = src_x + distance*sin(rotation);
 	var/dest_y = src_y + distance*cos(rotation);
 	return new /datum/projectile_data(src_x, src_y, time, distance, 0, 0, dest_x, dest_y)
+
+/var/global/datum/telltale/code_modules_telesci_telesci_computer_dm = new("[__FILE__]")

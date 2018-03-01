@@ -170,3 +170,4 @@
 /obj/item/clothing/head/beret/sol/fleet/command
 	name = "fleet command beret"
 	desc = "An USDF Fleet beret with a command crest. For personnel that are more inclined towards style than safety."
+/var/global/datum/telltale/code_modules_clothing_head_solgov_vr_dm = new("[__FILE__]")

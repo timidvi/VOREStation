@@ -65,3 +65,5 @@
 	icon_state = off_icon
 	cooking = 0
 	return
+
+/var/global/datum/telltale/code_game_machinery_kitchen_cooking_machines_fryer_dm = new("[__FILE__]")

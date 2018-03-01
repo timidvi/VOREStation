@@ -345,3 +345,5 @@
 			to_chat(user, "The subject has too many chemicals in their bloodstream.")
 	else
 		to_chat(user, "There's no suitable occupant in \the [src].")
+
+/var/global/datum/telltale/code_game_machinery_Sleeper_dm = new("[__FILE__]")

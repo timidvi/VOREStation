@@ -26,3 +26,5 @@
 	required_players_secret = 0
 	required_enemies = 0
 	antag_scaling_coeff = 5
+
+/var/global/datum/telltale/code_game_gamemodes_traitor_traitor_dm = new("[__FILE__]")

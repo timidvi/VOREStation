@@ -130,3 +130,5 @@
 		new /obj/item/clothing/accessory/badge/holo/cord(src)
 		..()
 		return
+
+/var/global/datum/telltale/code_modules_clothing_under_accessories_badges_dm = new("[__FILE__]")

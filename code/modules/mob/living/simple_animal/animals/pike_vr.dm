@@ -32,3 +32,5 @@
 /mob/living/simple_animal/hostile/carp/strong
 	maxHealth = 50
 	health = 50
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_pike_vr_dm = new("[__FILE__]")

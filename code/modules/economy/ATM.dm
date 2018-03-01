@@ -493,3 +493,5 @@ log transactions
 		human_user.put_in_hands(E)
 	E.worth = sum
 	E.owner_name = authenticated_account.owner_name
+
+/var/global/datum/telltale/code_modules_economy_ATM_dm = new("[__FILE__]")

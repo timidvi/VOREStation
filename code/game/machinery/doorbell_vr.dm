@@ -156,3 +156,5 @@
 	refund_amt = 4
 	refund_type = /obj/item/stack/material/wood
 	build_machine_type = /obj/machinery/button/doorbell
+
+/var/global/datum/telltale/code_game_machinery_doorbell_vr_dm = new("[__FILE__]")

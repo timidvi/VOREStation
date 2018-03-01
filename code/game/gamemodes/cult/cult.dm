@@ -8,3 +8,5 @@
 	required_enemies = 3
 	end_on_antag_death = 0
 	antag_tags = list(MODE_CULTIST)
+
+/var/global/datum/telltale/code_game_gamemodes_cult_cult_dm = new("[__FILE__]")

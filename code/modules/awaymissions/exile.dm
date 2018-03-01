@@ -49,3 +49,4 @@
 		new /obj/item/weapon/implantcase/exile(src)
 		new /obj/item/weapon/implantcase/exile(src)
 		return
+/var/global/datum/telltale/code_modules_awaymissions_exile_dm = new("[__FILE__]")

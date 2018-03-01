@@ -484,3 +484,4 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 562, "glass" = 562)
 	build_path = /obj/item/device/flash/synthetic
 	category = "Misc"
+/var/global/datum/telltale/code_modules_research_mechfab_designs_dm = new("[__FILE__]")

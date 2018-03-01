@@ -25,3 +25,4 @@
 /obj/structure/flora/grass/both/New()
 	..()
 	icon_state = "snowgrassall[rand(1, 3)]"
+/var/global/datum/telltale/code_game_objects_structures_flora_grass_dm = new("[__FILE__]")

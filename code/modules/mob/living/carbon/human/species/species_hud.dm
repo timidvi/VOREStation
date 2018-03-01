@@ -72,3 +72,5 @@
 		"mask" =         list("loc" = ui_shoes,     "name" = "Mask", "slot" = slot_wear_mask, "state" = "mask",  "toggle" = 1),
 		"back" =         list("loc" = ui_sstore1,   "name" = "Back", "slot" = slot_back,      "state" = "back"),
 		)
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_species_species_hud_dm = new("[__FILE__]")

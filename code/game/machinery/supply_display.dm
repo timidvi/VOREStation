@@ -32,3 +32,5 @@
 		mode = STATUS_DISPLAY_CUSTOM
 	else
 		..(signal)
+
+/var/global/datum/telltale/code_game_machinery_supply_display_dm = new("[__FILE__]")

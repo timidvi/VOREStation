@@ -54,3 +54,5 @@
 	name = "chemicals"
 	icon = 'icons/obj/chempuff.dmi'
 	icon_state = ""
+
+/var/global/datum/telltale/code_game_objects_effects_chem_water_dm = new("[__FILE__]")

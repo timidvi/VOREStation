@@ -198,3 +198,5 @@
 	throw_range = 20
 	flags = 0
 	no_variants = FALSE
+
+/var/global/datum/telltale/code_game_objects_items_stacks_tiles_tile_types_dm = new("[__FILE__]")

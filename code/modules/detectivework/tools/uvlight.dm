@@ -68,3 +68,4 @@
 						if(O.was_bloodied && !(O.blood_overlay in O.overlays))
 							O.overlays |= O.blood_overlay
 							reset_objects |= O
+/var/global/datum/telltale/code_modules_detectivework_tools_uvlight_dm = new("[__FILE__]")

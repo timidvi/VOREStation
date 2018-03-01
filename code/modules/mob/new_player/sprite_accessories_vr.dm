@@ -880,3 +880,5 @@
 		icon_state = "catwomanleft"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG)
+
+/var/global/datum/telltale/code_modules_mob_new_player_sprite_accessories_vr_dm = new("[__FILE__]")

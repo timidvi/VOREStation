@@ -156,3 +156,5 @@
 /obj/machinery/power/singularity_beacon/syndicate
 	icontype = "beaconsynd"
 	icon_state = "beaconsynd0"
+
+/var/global/datum/telltale/code_game_machinery_syndicatebeacon_dm = new("[__FILE__]")

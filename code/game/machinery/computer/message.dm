@@ -520,3 +520,5 @@
 						info_links = info
 						icon_state = "paper_words"
 						break
+
+/var/global/datum/telltale/code_game_machinery_computer_message_dm = new("[__FILE__]")

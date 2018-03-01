@@ -58,3 +58,5 @@
 	vore_active = 1
 	vore_pounce_chance = 40
 	vore_icons = SA_ICON_LIVING
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_awoo_dm = new("[__FILE__]")

@@ -39,3 +39,4 @@
 				return FALSE // We got dropped before the firing occured.
 			return TRUE // No delay, no need to check.
 	return FALSE
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_projectile_dm = new("[__FILE__]")

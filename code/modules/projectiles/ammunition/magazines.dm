@@ -660,3 +660,4 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 600)
 	max_ammo = 7
 	multiple_sprites = 1
+/var/global/datum/telltale/code_modules_projectiles_ammunition_magazines_dm = new("[__FILE__]")

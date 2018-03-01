@@ -327,3 +327,5 @@
 	icon_state = "tape-splint"
 	amount = 1
 	splintable_organs = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
+
+/var/global/datum/telltale/code_game_objects_items_stacks_medical_dm = new("[__FILE__]")

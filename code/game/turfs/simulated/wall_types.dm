@@ -228,3 +228,5 @@
 		var/image/I = image(icon = src.icon, icon_state = "o_[icon_state]")
 		I.color = stripe_color
 		add_overlay(I)
+
+/var/global/datum/telltale/code_game_turfs_simulated_wall_types_dm = new("[__FILE__]")

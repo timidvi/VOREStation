@@ -307,3 +307,5 @@ obj/structure/windoor_assembly/Destroy()
 
 	update_icon()
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_windoor_assembly_dm = new("[__FILE__]")

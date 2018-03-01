@@ -416,3 +416,5 @@
 
 /obj/structure/closet/onDropInto(var/atom/movable/AM)
 	return
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_dm = new("[__FILE__]")

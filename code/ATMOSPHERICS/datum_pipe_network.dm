@@ -81,3 +81,5 @@ var/global/list/datum/pipe_network/pipe_networks = list()	// TODO - Move into SS
 
 	proc/reconcile_air()
 		equalize_gases(gases)
+
+/var/global/datum/telltale/code_ATMOSPHERICS_datum_pipe_network_dm = new("[__FILE__]")

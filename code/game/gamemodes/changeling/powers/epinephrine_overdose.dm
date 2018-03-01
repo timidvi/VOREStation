@@ -64,3 +64,4 @@
 	M.AdjustWeakened(-2)
 	..()
 	return
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_epinephrine_overdose_dm = new("[__FILE__]")

@@ -165,3 +165,4 @@ datum/supply_packs/costumes/witch
 			/obj/item/clothing/under/dress/dress_yellow,
 			/obj/item/clothing/under/dress/dress_saloon
 			)
+/var/global/datum/telltale/code_datums_supplypacks_costumes_dm = new("[__FILE__]")

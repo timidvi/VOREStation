@@ -23,3 +23,5 @@
 		P.back_icon = "card_back_spaceball"
 
 		cards += P
+
+/var/global/datum/telltale/code_modules_games_spaceball_cards_dm = new("[__FILE__]")

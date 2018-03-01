@@ -83,3 +83,5 @@
 			visible_message("<span class='deadsay'><B>[src]</B> [input]</span>")
 		else
 			say_dead_direct(input, src)
+
+/var/global/datum/telltale/code_modules_mob_emote_dm = new("[__FILE__]")

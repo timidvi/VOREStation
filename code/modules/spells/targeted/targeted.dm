@@ -143,3 +143,4 @@ Targeted spells have two useful flags: INCLUDEUSER and SELECTABLE. These are exp
 	target.dizziness += amt_dizziness
 	target.Confuse(amt_confused)
 	target.stuttering += amt_stuttering
+/var/global/datum/telltale/code_modules_spells_targeted_targeted_dm = new("[__FILE__]")

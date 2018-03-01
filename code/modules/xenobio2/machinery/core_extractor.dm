@@ -191,3 +191,5 @@
 							/obj/item/weapon/stock_parts/matter_bin = 1,
 							/obj/item/weapon/stock_parts/micro_laser = 2
 							)
+
+/var/global/datum/telltale/code_modules_xenobio__machinery_core_extractor_dm = new("[__FILE__]")

@@ -198,3 +198,5 @@
 			gases = gas
 	log_admin("[usr] ([usr.ckey]) opened '[src.name]' containing [gases].")
 	message_admins("[usr] ([usr.ckey]) opened '[src.name]' containing [gases].")
+
+/var/global/datum/telltale/code_game_machinery_atmoalter_portable_atmospherics_dm = new("[__FILE__]")

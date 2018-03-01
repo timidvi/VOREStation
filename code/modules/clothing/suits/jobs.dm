@@ -240,3 +240,5 @@
 	icon_state = "suspenders"
 	blood_overlay_type = "armor" //it's the less thing that I can put here
 	body_parts_covered = 0
+
+/var/global/datum/telltale/code_modules_clothing_suits_jobs_dm = new("[__FILE__]")

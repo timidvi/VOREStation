@@ -238,3 +238,5 @@
 /obj/item/projectile/bullet/hivebot
 	damage = 10
 	damage_type = BRUTE
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_aliens_hivebot_dm = new("[__FILE__]")

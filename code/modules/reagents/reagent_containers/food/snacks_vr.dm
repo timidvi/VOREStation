@@ -308,3 +308,5 @@
 /obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/wolpincube
 	name = "wolpin cube"
 	monkey_type = "Wolpin"
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_food_snacks_vr_dm = new("[__FILE__]")

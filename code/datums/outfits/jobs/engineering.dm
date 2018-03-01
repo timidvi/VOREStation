@@ -32,3 +32,5 @@
 	belt = /obj/item/weapon/storage/belt/utility/atmostech
 	id_type = /obj/item/weapon/card/id/engineering/atmos
 	pda_type = /obj/item/device/pda/atmos
+
+/var/global/datum/telltale/code_datums_outfits_jobs_engineering_dm = new("[__FILE__]")

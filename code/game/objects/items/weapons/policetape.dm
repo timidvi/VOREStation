@@ -352,3 +352,5 @@ var/list/tape_roll_applications = list()
 
 	qdel(src) //TODO: Dropping a trash item holding fibers/fingerprints of all broken tape parts
 	return
+
+/var/global/datum/telltale/code_game_objects_items_weapons_policetape_dm = new("[__FILE__]")

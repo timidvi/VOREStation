@@ -403,3 +403,4 @@
 	desc = "Keeps hair out of the way for important... jobs."
 	icon_state = "maid"
 	body_parts_covered = 0
+/var/global/datum/telltale/code_modules_clothing_head_misc_dm = new("[__FILE__]")

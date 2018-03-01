@@ -205,3 +205,5 @@
 		returns[1] = sound(pick(species.speech_sounds))
 		returns[2] = 50
 	return ..()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_say_dm = new("[__FILE__]")

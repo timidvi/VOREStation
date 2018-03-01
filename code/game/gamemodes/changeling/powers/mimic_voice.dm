@@ -39,3 +39,4 @@
 			sleep(40)
 		if(src && src.mind && src.mind.changeling)
 			src.mind.changeling.mimicing = ""
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_mimic_voice_dm = new("[__FILE__]")

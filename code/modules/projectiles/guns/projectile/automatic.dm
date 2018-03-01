@@ -389,3 +389,5 @@
 		item_state = "bullpup-empty"
 	if(!ignore_inhands)
 		update_held_icon()
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_automatic_dm = new("[__FILE__]")

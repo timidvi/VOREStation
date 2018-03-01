@@ -50,3 +50,4 @@
 #define HOLOMAP_EXTRA_STATIONMAP			"stationmapformatted"
 #define HOLOMAP_EXTRA_STATIONMAPAREAS		"stationareas"
 #define HOLOMAP_EXTRA_STATIONMAPSMALL		"stationmapsmall"
+/var/global/datum/telltale/code___defines_holomap_dm = new("[__FILE__]")

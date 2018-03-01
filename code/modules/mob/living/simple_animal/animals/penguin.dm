@@ -24,3 +24,5 @@
 	speak_chance = 0
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_penguin_dm = new("[__FILE__]")

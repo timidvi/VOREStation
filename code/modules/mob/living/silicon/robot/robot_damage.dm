@@ -153,3 +153,4 @@
 /mob/living/silicon/robot/emp_act(severity)
 	uneq_all()
 	..() //Damage is handled at /silicon/ level.
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_damage_dm = new("[__FILE__]")

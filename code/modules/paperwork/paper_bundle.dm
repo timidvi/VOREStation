@@ -241,3 +241,4 @@
 		desc += "\nThere is a photo attached to it."
 	overlays += image('icons/obj/bureaucracy.dmi', "clip")
 	return
+/var/global/datum/telltale/code_modules_paperwork_paper_bundle_dm = new("[__FILE__]")

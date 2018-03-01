@@ -110,3 +110,5 @@ avoid code duplication. This includes items that may sometimes act as a standard
 		power *= 2
 	return target.hit_with_weapon(src, user, power, hit_zone)
 
+
+/var/global/datum/telltale/code__onclick_item_attack_dm = new("[__FILE__]")

@@ -21,3 +21,5 @@
 		user.visible_message("<span class='notice'>\The [user] puts \the [W] on \the [src].</span>")
 		return
 	return ..()
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_alien_diona_diona_attacks_dm = new("[__FILE__]")

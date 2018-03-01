@@ -394,3 +394,5 @@ a creative player the means to solve many problems.  Circuits are held inside an
 		O.disconnect()
 	for(var/datum/integrated_io/activate/A in activators)
 		A.disconnect()
+
+/var/global/datum/telltale/code_modules_integrated_electronics_core_integrated_circuit_dm = new("[__FILE__]")

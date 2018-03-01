@@ -66,3 +66,5 @@
 
 
 
+
+/var/global/datum/telltale/code_modules_power_tesla_tesla_act_dm = new("[__FILE__]")

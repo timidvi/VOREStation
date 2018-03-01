@@ -19,3 +19,4 @@
 	proc
 		return_exchange_air()
 			return air_contents
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_generator_input_dm = new("[__FILE__]")

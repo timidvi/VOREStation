@@ -81,3 +81,4 @@
 	lightning.launch(target)
 	visible_message("<span class='danger'>\The [src] strikes \the [target] with lightning!</span>")
 	playsound(get_turf(src), 'sound/weapons/gauss_shoot.ogg', 75, 1)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_devices_tesla_armor_dm = new("[__FILE__]")

@@ -116,3 +116,5 @@ var/global/list/finds_as_strings = list(
 			25;ARCHAEO_HANDCUFFS,
 			25;ARCHAEO_BEARTRAP,
 			25;ARCHAEO_TOOL)
+
+/var/global/datum/telltale/code_modules_xenoarcheaology_finds_finds_defines_dm = new("[__FILE__]")

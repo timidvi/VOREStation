@@ -121,3 +121,4 @@
 	suit = /obj/item/clothing/suit/storage/hooded/chaplain_hoodie/whiteout
 	gloves = /obj/item/clothing/gloves/white
 	mask = /obj/item/clothing/mask/surgical
+/var/global/datum/telltale/code_datums_outfits_costumes_halloween_dm = new("[__FILE__]")

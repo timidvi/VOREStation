@@ -297,3 +297,4 @@
 		else
 			user << "<font color=red>No associated computer found. Only local scans will function properly.</font>"
 		user << "\n"
+/var/global/datum/telltale/code_modules_library_lib_items_dm = new("[__FILE__]")

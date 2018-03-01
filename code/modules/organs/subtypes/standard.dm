@@ -314,3 +314,5 @@
 
 /obj/item/organ/external/head/no_eyes
 	eye_icon = "blank_eyes"
+
+/var/global/datum/telltale/code_modules_organs_subtypes_standard_dm = new("[__FILE__]")

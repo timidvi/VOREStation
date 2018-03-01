@@ -303,3 +303,5 @@
 	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "keys"
 	w_class = ITEMSIZE_TINY
+
+/var/global/datum/telltale/code_game_objects_structures_janicart_dm = new("[__FILE__]")

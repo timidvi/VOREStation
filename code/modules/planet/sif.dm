@@ -341,3 +341,5 @@ datum/weather/sif
 	transition_chances = list(
 		WEATHER_BLOODMOON = 100
 		)
+
+/var/global/datum/telltale/code_modules_planet_sif_dm = new("[__FILE__]")

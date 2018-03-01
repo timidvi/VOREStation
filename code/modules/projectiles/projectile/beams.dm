@@ -203,3 +203,4 @@
 	name = "stun beam"
 	icon_state = "stun"
 	agony = 35
+/var/global/datum/telltale/code_modules_projectiles_projectile_beams_dm = new("[__FILE__]")

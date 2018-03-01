@@ -159,3 +159,4 @@ datum/preferences/proc/set_biological_gender(var/gender)
 	possible_genders = possible_genders.Copy()
 	possible_genders |= NEUTER
 	return possible_genders
+/var/global/datum/telltale/code_modules_client_preference_setup_general____basic_dm = new("[__FILE__]")

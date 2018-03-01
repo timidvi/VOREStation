@@ -98,3 +98,5 @@
 			victim << "<span class='danger'>Tendrils [pick("wind", "tangle", "tighten")] around you!</span>"
 			victim.Weaken(0.5)
 			seed.do_thorns(victim,src)
+
+/var/global/datum/telltale/code_modules_hydroponics_spreading_spreading_response_dm = new("[__FILE__]")

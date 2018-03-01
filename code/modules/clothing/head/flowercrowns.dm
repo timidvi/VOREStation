@@ -54,3 +54,4 @@
 	desc = "A flower crown weaved with poppies."
 	icon_state = "poppy_crown"
 	body_parts_covered = 0
+/var/global/datum/telltale/code_modules_clothing_head_flowercrowns_dm = new("[__FILE__]")

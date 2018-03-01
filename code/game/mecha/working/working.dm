@@ -57,3 +57,5 @@
 
 /obj/mecha/working/range_action(atom/target as obj|mob|turf)
 	return
+
+/var/global/datum/telltale/code_game_mecha_working_working_dm = new("[__FILE__]")

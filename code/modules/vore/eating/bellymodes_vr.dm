@@ -474,3 +474,5 @@
 	if(play_sound)
 		playsound(src, play_sound, vol = 100, vary = 1, falloff = VORE_SOUND_FALLOFF, ignore_walls = FALSE, preference = /datum/client_preference/digestion_noises)
 	return SSBELLIES_PROCESSED
+
+/var/global/datum/telltale/code_modules_vore_eating_bellymodes_vr_dm = new("[__FILE__]")

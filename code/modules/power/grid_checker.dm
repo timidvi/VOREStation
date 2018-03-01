@@ -109,3 +109,5 @@
 
 	for(var/obj/machinery/power/smes/smes in powernet.nodes) // These are "upstream"
 		smes.grid_check = FALSE
+
+/var/global/datum/telltale/code_modules_power_grid_checker_dm = new("[__FILE__]")

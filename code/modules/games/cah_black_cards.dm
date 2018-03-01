@@ -204,3 +204,5 @@
 	"As part of his contract, Prince won’t perform without _____ in his dressing room.",
 	"(Pick 2) Listen, son. If you want to get involved with _____, I won’t stop you. Just steer clear of _____."
 	)
+
+/var/global/datum/telltale/code_modules_games_cah_black_cards_dm = new("[__FILE__]")

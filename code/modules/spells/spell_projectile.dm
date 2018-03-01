@@ -53,3 +53,5 @@
 
 /obj/item/projectile/spell_projectile/seeking
 	name = "seeking spell"
+
+/var/global/datum/telltale/code_modules_spells_spell_projectile_dm = new("[__FILE__]")

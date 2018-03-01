@@ -72,3 +72,4 @@ var/datum/antagonist/borer/borers
 			if(temp_vent.network.normal_members.len > 50)
 				vents += temp_vent
 	return vents
+/var/global/datum/telltale/code_game_antagonist_alien_borer_dm = new("[__FILE__]")

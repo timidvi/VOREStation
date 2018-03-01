@@ -166,3 +166,4 @@
 /datum/category_item/underwear/undershirt/tiedye
 	name = "Tiedye Shirt"
 	icon_state = "tiedye"
+/var/global/datum/telltale/code_datums_underwear_undershirts_dm = new("[__FILE__]")

@@ -127,3 +127,4 @@
 	name = "Rota (Gas Giant)"
 	keywords += list("Rota")
 	data = "An ice giant, with a beautiful ring system circling it. The average temperature for it is 165 kelvin (-157°C)."
+/var/global/datum/telltale/code_modules_lore_codex_lore_data_important_locations_dm = new("[__FILE__]")

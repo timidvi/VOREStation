@@ -269,3 +269,5 @@
 	for(var/file in asset_files)
 		client << browse_rsc(file)	// send the file to the client
 
+
+/var/global/datum/telltale/code_modules_nano_nanomanager_dm = new("[__FILE__]")

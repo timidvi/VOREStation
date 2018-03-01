@@ -641,3 +641,5 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 	return signal
 
+
+/var/global/datum/telltale/code_game_machinery_telecomms_broadcaster_dm = new("[__FILE__]")

@@ -98,3 +98,5 @@
 	if(!hacktool || !hacktool.in_hack_mode || !(src_object in hacktool.known_targets))
 		return STATUS_CLOSE
 	return ..()
+
+/var/global/datum/telltale/code_game_objects_items_devices_hacktool_dm = new("[__FILE__]")

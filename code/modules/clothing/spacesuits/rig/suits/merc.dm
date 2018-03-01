@@ -33,3 +33,4 @@
 		/obj/item/rig_module/ai_container,
 		/obj/item/rig_module/electrowarfare_suite, //might as well
 		)
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_suits_merc_dm = new("[__FILE__]")

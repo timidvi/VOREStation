@@ -803,3 +803,5 @@ var/list/ai_verbs_default = list(
 
 #undef AI_CHECK_WIRELESS
 #undef AI_CHECK_RADIO
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_ai_dm = new("[__FILE__]")

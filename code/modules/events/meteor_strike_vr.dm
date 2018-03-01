@@ -112,3 +112,4 @@
 			O.forceMove(get_turf(src))
 		qdel(src)
 		return
+/var/global/datum/telltale/code_modules_events_meteor_strike_vr_dm = new("[__FILE__]")

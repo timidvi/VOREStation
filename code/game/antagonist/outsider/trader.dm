@@ -65,3 +65,4 @@ var/datum/antagonist/trader/traders
 			id.name = "[player.real_name]'s Passport"
 			id.registered_name = player.real_name
 			W.name = "[initial(W.name)] ([id.name])"
+/var/global/datum/telltale/code_game_antagonist_outsider_trader_dm = new("[__FILE__]")

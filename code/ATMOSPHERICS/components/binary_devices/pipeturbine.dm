@@ -284,3 +284,5 @@
 			return
 
 		src.set_dir(turn(src.dir, 90))
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_binary_devices_pipeturbine_dm = new("[__FILE__]")

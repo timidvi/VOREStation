@@ -179,3 +179,5 @@ SUBSYSTEM_DEF(machines)
 #undef SSMACHINES_MACHINERY
 #undef SSMACHINES_POWER
 #undef SSMACHINES_POWER_OBJECTS
+
+/var/global/datum/telltale/code_controllers_subsystems_machines_dm = new("[__FILE__]")

@@ -72,3 +72,5 @@
 			else
 				if (A.aidisabled == 1)
 					A.aidisabled = 0
+
+/var/global/datum/telltale/code_datums_wires_apc_dm = new("[__FILE__]")

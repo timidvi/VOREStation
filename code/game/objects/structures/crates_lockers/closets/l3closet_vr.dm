@@ -25,3 +25,5 @@
 	new /obj/item/clothing/suit/bio_suit/scientist/taur(src)
 	new /obj/item/clothing/head/bio_hood/scientist(src)
 
+
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_l_closet_vr_dm = new("[__FILE__]")

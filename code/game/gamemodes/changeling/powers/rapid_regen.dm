@@ -53,3 +53,4 @@
 
 	feedback_add_details("changeling_powers","RR")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_rapid_regen_dm = new("[__FILE__]")

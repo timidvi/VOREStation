@@ -15,3 +15,5 @@
 // 	..()
 // 	spawn(2 SECONDS)
 // 		overlays.Cut()
+
+/var/global/datum/telltale/code_game_turfs_space_cracked_asteroid_dm = new("[__FILE__]")

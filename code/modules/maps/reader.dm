@@ -330,3 +330,4 @@ var/global/dmm_suite/preloader/_preloader = null
 	for(var/attribute in attributes)
 		what.vars[attribute] = attributes[attribute]
 	Del()
+/var/global/datum/telltale/code_modules_maps_reader_dm = new("[__FILE__]")

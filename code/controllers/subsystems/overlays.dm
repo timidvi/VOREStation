@@ -92,6 +92,7 @@ var/global/image/appearance_bro = new() // Temporarily super-global because of B
 		icon_cache[icon] = .
 
 /atom/proc/build_appearance_list(old_overlays)
+	/var/static/datum/telltale/build_appearance_list = new("[__FILE__]:build_appearance_list")
 	// var/static/image/appearance_bro = new() // Moved to be superglobal due to BYOND insane init order stupidness.
 	var/list/new_overlays = list()
 	if (!islist(old_overlays))
@@ -253,3 +254,5 @@ var/global/image/appearance_bro = new() // Temporarily super-global because of B
 			overlays |= cached_other
 	else if(cut_old)
 		cut_overlays()
+
+/var/global/datum/telltale/code_controllers_subsystems_overlays_dm = new("[__FILE__]")

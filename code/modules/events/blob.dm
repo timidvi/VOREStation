@@ -19,3 +19,5 @@
 		Blob = null
 		kill()
 		return
+
+/var/global/datum/telltale/code_modules_events_blob_dm = new("[__FILE__]")

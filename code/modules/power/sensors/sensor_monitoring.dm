@@ -60,3 +60,5 @@
 		if(S.check_grid_warning())
 			return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_power_sensors_sensor_monitoring_dm = new("[__FILE__]")

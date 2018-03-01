@@ -73,3 +73,4 @@
 	if (href_list["toggle_defence_mode"])
 		src.defence_mode()
 	return
+/var/global/datum/telltale/code_game_mecha_combat_durand_dm = new("[__FILE__]")

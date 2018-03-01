@@ -27,3 +27,4 @@
 /obj/structure/closet/hydrant/New()
 	..()
 	new /obj/item/weapon/storage/toolbox/emergency(src)
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_utility_closets_vr_dm = new("[__FILE__]")

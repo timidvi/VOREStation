@@ -21,3 +21,5 @@
 	if(..()) return 1
 	playsound(loc, 'sound/machines/button.ogg', 100, 1)
 // VOREStation Edit End
+
+/var/global/datum/telltale/code_game_machinery_buttons_dm = new("[__FILE__]")

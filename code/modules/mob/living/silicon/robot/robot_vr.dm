@@ -89,3 +89,4 @@
 		icon = 'icons/mob/robots_vr.dmi'
 	else if(!(icon_state in vr_icons))
 		icon = original_icon
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_robot_vr_dm = new("[__FILE__]")

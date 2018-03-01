@@ -548,3 +548,5 @@ proc/get_nt_opposed()
 	else
 		usr << "<i>Shhhh</i>. It's a secret."
 	return
+
+/var/global/datum/telltale/code_game_gamemodes_game_mode_dm = new("[__FILE__]")

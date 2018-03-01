@@ -17,3 +17,4 @@
 	desc = "This slick flesh ripples and squishes under your touch"
 	icon = 'icons/turf/stomach_vr.dmi'
 	icon_base = "flesh_floor"
+/var/global/datum/telltale/code_game_turfs_flooring_flooring_vr_dm = new("[__FILE__]")

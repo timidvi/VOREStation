@@ -19,3 +19,5 @@
 	..()
 	for(var/obj/machinery/telecomms/T in telecomms_list)
 		T.emp_act(1)
+
+/var/global/datum/telltale/code_modules_gamemaster_actions_comms_blackout_dm = new("[__FILE__]")

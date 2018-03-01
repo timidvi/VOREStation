@@ -244,3 +244,4 @@
 /datum/gear/accessory/locket
 	display_name = "locket"
 	path = /obj/item/clothing/accessory/locket
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_accessories_dm = new("[__FILE__]")

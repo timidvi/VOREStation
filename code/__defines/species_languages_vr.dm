@@ -11,3 +11,5 @@
 #define LANGUAGE_FARWA "Farwa"
 
 #define LANGUAGE_SHADEKIN "Shadekin Empathy"
+
+/var/global/datum/telltale/code___defines_species_languages_vr_dm = new("[__FILE__]")

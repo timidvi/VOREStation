@@ -256,3 +256,5 @@
 	cell = new /obj/item/weapon/cell/high
 	capacitor = new /obj/item/weapon/stock_parts/capacitor
 	. = ..()
+
+/var/global/datum/telltale/code_modules_projectiles_guns_magnetic_magnetic_dm = new("[__FILE__]")

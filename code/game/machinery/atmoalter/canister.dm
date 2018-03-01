@@ -448,3 +448,4 @@ update_flag
 	src.air_contents.adjust_gas("phoron", MolesForPressure())
 	src.update_icon()
 	return 1
+/var/global/datum/telltale/code_game_machinery_atmoalter_canister_dm = new("[__FILE__]")

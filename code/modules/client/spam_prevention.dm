@@ -11,3 +11,4 @@
 	else
 		spam_alert = max(0, spam_alert--)
 	last_message_time = world.time
+/var/global/datum/telltale/code_modules_client_spam_prevention_dm = new("[__FILE__]")

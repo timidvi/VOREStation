@@ -128,3 +128,5 @@
 	overlays.Cut()
 	target.nutrition += amount
 	user.custom_emote(message = "connects \the [src] to [user == target ? "their" : "[target]'s"] charging port, expending it.")
+
+/var/global/datum/telltale/code_modules_power_cells_power_cells_dm = new("[__FILE__]")

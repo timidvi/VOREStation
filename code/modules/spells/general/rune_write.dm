@@ -173,3 +173,5 @@
 	else
 		user << "<span class='warning'> You do not have enough space to write a proper rune.</span>"
 	return
+
+/var/global/datum/telltale/code_modules_spells_general_rune_write_dm = new("[__FILE__]")

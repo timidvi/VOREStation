@@ -478,3 +478,5 @@
 			gasmix.multiply(gasmix.volume)
 
 	return 1
+
+/var/global/datum/telltale/code_modules_xgm_xgm_gas_mixture_dm = new("[__FILE__]")

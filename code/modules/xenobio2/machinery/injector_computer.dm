@@ -111,3 +111,5 @@
 	name = T_BOARD("injector control console")
 	build_path = /obj/machinery/computer/xenobio2
 	origin_tech = list()	//To be filled
+
+/var/global/datum/telltale/code_modules_xenobio__machinery_injector_computer_dm = new("[__FILE__]")

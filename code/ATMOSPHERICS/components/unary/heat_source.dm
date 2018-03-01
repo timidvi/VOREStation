@@ -171,3 +171,5 @@
 	..(user)
 	if(panel_open)
 		user << "The maintenance hatch is open."
+
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_heat_source_dm = new("[__FILE__]")

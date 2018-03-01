@@ -31,3 +31,5 @@
 						O.heal_damage(0, heal_power / 5, internal = 1, robo_repair = 1)
 					sleep(1 SECOND)
 		on_expire()
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_insert_mend_wires_dm = new("[__FILE__]")

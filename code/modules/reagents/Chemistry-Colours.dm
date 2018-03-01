@@ -21,3 +21,4 @@
 		tot_w += R.volume * R.color_weight
 
 	return rgb(colors[1] / tot_w, colors[2] / tot_w, colors[3] / tot_w, colors[4] / tot_w)
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Colours_dm = new("[__FILE__]")

@@ -98,3 +98,5 @@
  	name = "shipping cap"
  	desc = "It's a ballcap bearing the colors of Major Bill's Shipping."
  	icon_state = "mbillsoft"
+
+/var/global/datum/telltale/code_modules_clothing_head_soft_caps_dm = new("[__FILE__]")

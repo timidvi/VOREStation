@@ -26,3 +26,5 @@
 	for(var/obj/effect/landmark/epicentre in epicentreList)
 		for(var/obj/machinery/power/apc/apc in range(epicentre,lightsoutRange))
 			apc.overload_lighting()
+
+/var/global/datum/telltale/code_modules_events_electrical_storm_dm = new("[__FILE__]")

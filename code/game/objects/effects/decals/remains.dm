@@ -64,3 +64,5 @@
 
 /obj/effect/decal/remains/robot/attack_hand(mob/user as mob)
 	return
+
+/var/global/datum/telltale/code_game_objects_effects_decals_remains_dm = new("[__FILE__]")

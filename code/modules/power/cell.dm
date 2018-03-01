@@ -237,3 +237,4 @@
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 	viewers(user) << "<span class='danger'>\The [user] is licking the electrodes of \the [src]! It looks like [TU.he] [TU.is] trying to commit suicide.</span>"
 	return (FIRELOSS)
+/var/global/datum/telltale/code_modules_power_cell_dm = new("[__FILE__]")

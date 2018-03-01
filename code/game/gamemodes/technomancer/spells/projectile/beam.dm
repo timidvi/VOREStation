@@ -25,3 +25,5 @@
 	muzzle_type = /obj/effect/projectile/laser_blue/muzzle
 	tracer_type = /obj/effect/projectile/laser_blue/tracer
 	impact_type = /obj/effect/projectile/laser_blue/impact
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_beam_dm = new("[__FILE__]")

@@ -45,3 +45,4 @@
 
 /turf/simulated/sky/moving/west
 	dir = WEST
+/var/global/datum/telltale/code_game_turfs_simulated_outdoors_sky_dm = new("[__FILE__]")

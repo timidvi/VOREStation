@@ -240,3 +240,5 @@ research holder datum.
 /obj/item/weapon/disk/design_disk/New()
 	pixel_x = rand(-5.0, 5)
 	pixel_y = rand(-5.0, 5)
+
+/var/global/datum/telltale/code_modules_research_research_dm = new("[__FILE__]")

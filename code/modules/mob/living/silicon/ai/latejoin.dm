@@ -30,3 +30,4 @@ var/global/list/empty_playable_ai_cores = list()
 
 	//Handle job slot/tater cleanup.
 	clear_client()
+/var/global/datum/telltale/code_modules_mob_living_silicon_ai_latejoin_dm = new("[__FILE__]")

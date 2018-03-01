@@ -501,3 +501,5 @@ HALOGEN COUNTER	- Radcount on mobs
 	else
 		to_chat(user, "<span class='notice'>No radiation detected.</span>")
 	return
+
+/var/global/datum/telltale/code_game_objects_items_devices_scanners_dm = new("[__FILE__]")

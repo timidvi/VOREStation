@@ -28,3 +28,5 @@
 	if(loc && istype(loc,/turf/space) && istype(loc.loc,/area/asteroid/rogue))
 		var/area/asteroid/rogue/A = loc.loc
 		A.mob_spawns += src
+
+/var/global/datum/telltale/code_modules_rogueminer_vr_landmarks_dm = new("[__FILE__]")

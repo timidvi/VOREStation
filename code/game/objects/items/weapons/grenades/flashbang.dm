@@ -162,3 +162,5 @@
 		spawn(dettime)
 		prime()
 	..()
+
+/var/global/datum/telltale/code_game_objects_items_weapons_grenades_flashbang_dm = new("[__FILE__]")

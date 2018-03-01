@@ -47,3 +47,4 @@ obj/machinery/atmospherics/unary/oxygen_generator
 				network.update = 1
 
 		return 1
+/var/global/datum/telltale/code_ATMOSPHERICS_components_unary_oxygen_generator_dm = new("[__FILE__]")

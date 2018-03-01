@@ -181,3 +181,5 @@
 	if(height && istype(mover) && mover.checkpass(PASSTABLE)) //allow bullets, beams, thrown objects, mice, drones, and the like through.
 		return 1
 	return ..()
+
+/var/global/datum/telltale/code_game_machinery_iv_drip_dm = new("[__FILE__]")

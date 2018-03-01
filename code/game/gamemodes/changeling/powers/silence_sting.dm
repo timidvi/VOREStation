@@ -25,3 +25,4 @@
 	T.silent += duration
 	feedback_add_details("changeling_powers","SS")
 	return 1
+/var/global/datum/telltale/code_game_gamemodes_changeling_powers_silence_sting_dm = new("[__FILE__]")

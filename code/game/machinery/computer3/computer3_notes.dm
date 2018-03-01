@@ -32,3 +32,4 @@
 		*	Needs file copy and file move - I think I know how I'm gonna do it
 		*	Needs a peripheral view (eject disks and cards, network actions, ???)
 */
+/var/global/datum/telltale/code_game_machinery_computer__computer__notes_dm = new("[__FILE__]")

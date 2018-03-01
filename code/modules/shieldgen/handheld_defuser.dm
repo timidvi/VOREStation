@@ -47,3 +47,4 @@
 	. = ..()
 	to_chat(usr, "The charge meter reads [cell ? cell.percent() : 0]%")
 	to_chat(usr, "It is [enabled ? "enabled" : "disabled"].")
+/var/global/datum/telltale/code_modules_shieldgen_handheld_defuser_dm = new("[__FILE__]")

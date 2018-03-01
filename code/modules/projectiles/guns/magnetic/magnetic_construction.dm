@@ -99,3 +99,5 @@
 			if(7) to_chat(user, "<span class='notice'>It has a single superconducting coil threaded onto the barrel.</span>")
 			if(8) to_chat(user, "<span class='notice'>It has a pair of superconducting coils threaded onto the barrel.</span>")
 			if(9) to_chat(user, "<span class='notice'>It has three superconducting coils attached to the body, waiting to be secured.</span>")
+
+/var/global/datum/telltale/code_modules_projectiles_guns_magnetic_magnetic_construction_dm = new("[__FILE__]")

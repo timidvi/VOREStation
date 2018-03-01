@@ -87,3 +87,4 @@
 	visible_message("<span class='warning'>With a bright flash of light, \the [src] disappears, and in its place stands a small corgi.</span>")
 	log_and_message_admins("successfully touched \a [src] and summoned a corgi.")
 	..()
+/var/global/datum/telltale/code_game_objects_structures_ghost_pods_silicon_dm = new("[__FILE__]")

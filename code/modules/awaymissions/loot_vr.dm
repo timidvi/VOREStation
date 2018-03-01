@@ -391,3 +391,4 @@
 /obj/structure/symbol/sa
 	desc = "It looks like a right triangle with a dot to the side. It reminds you of a wooden strut between a wall and ceiling."
 	icon_state = "sa"
+/var/global/datum/telltale/code_modules_awaymissions_loot_vr_dm = new("[__FILE__]")

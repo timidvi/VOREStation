@@ -21,3 +21,4 @@
 /datum/gear/suit/gntop
 	display_name = "GN crop jacket"
 	path = /obj/item/clothing/suit/storage/fluff/gntop
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_suit_vr_dm = new("[__FILE__]")

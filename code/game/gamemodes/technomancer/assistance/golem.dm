@@ -256,3 +256,4 @@
 	src.visible_message("<span class='notice'>\The [src] vanishes!</span>")
 	src.forceMove(get_turf(target))
 	return
+/var/global/datum/telltale/code_game_gamemodes_technomancer_assistance_golem_dm = new("[__FILE__]")

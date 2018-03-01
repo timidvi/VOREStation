@@ -391,3 +391,5 @@ So, hopefully this is helpful if any more icons are to be added/changed/wonderin
 		update_icon()
 		return 1
 	return 0
+
+/var/global/datum/telltale/code_modules_power_singularity_particle_accelerator_particle_accelerator_dm = new("[__FILE__]")

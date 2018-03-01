@@ -91,3 +91,5 @@ var/const/AALARM_WIRE_AALARM = 16
 			if (A.alarm_area.atmosalert(0, A))
 				A.post_alert(0)
 			A.update_icon()
+
+/var/global/datum/telltale/code_datums_wires_alarm_dm = new("[__FILE__]")

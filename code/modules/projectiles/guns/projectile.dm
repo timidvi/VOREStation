@@ -252,3 +252,5 @@
 
 	unload_ammo(usr)
 */
+
+/var/global/datum/telltale/code_modules_projectiles_guns_projectile_dm = new("[__FILE__]")

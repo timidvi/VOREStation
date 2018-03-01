@@ -138,3 +138,5 @@
 	cold_protection =    HANDS
 	species_restricted = null
 	gender = PLURAL
+
+/var/global/datum/telltale/code_modules_clothing_spacesuits_rig_rig_pieces_dm = new("[__FILE__]")

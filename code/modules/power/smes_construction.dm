@@ -389,3 +389,4 @@
 /obj/machinery/power/smes/buildable/proc/set_output(var/new_output = 0)
 	output_level = between(0, new_output, output_level_max)
 	update_icon()
+/var/global/datum/telltale/code_modules_power_smes_construction_dm = new("[__FILE__]")

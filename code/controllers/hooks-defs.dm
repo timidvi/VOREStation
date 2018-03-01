@@ -94,3 +94,5 @@
  * Parameters: var/area/area_shuttle
  */
 /hook/sell_shuttle
+
+/var/global/datum/telltale/code_controllers_hooks_defs_dm = new("[__FILE__]")

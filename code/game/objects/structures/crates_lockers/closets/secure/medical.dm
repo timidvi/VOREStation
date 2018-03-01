@@ -355,3 +355,4 @@
 		new /obj/item/clothing/mask/breath/medical(src)
 		new /obj/item/clothing/mask/breath/medical(src)
 		return
+/var/global/datum/telltale/code_game_objects_structures_crates_lockers_closets_secure_medical_dm = new("[__FILE__]")

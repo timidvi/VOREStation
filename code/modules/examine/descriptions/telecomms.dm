@@ -34,3 +34,4 @@
 
 	description_antag = "An EMP will disable this device for a short period of time.  A longer downage can be achieved by turning it off, or rigging \
 	the APC it uses to turn off remotely, such as with a signaler in the right wire."
+/var/global/datum/telltale/code_modules_examine_descriptions_telecomms_dm = new("[__FILE__]")

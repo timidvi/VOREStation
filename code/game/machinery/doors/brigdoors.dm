@@ -346,3 +346,5 @@
 #undef FONT_COLOR
 #undef FONT_STYLE
 #undef CHARS_PER_LINE
+
+/var/global/datum/telltale/code_game_machinery_doors_brigdoors_dm = new("[__FILE__]")

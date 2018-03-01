@@ -1923,3 +1923,5 @@
 	//src.check_for_internal_damage(list(MECHA_INT_FIRE,MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 	return
 */
+
+/var/global/datum/telltale/code_game_mecha_mecha_dm = new("[__FILE__]")

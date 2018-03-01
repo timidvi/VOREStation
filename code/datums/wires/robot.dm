@@ -77,3 +77,5 @@ var/const/BORG_WIRE_CAMERA = 16
 
 /datum/wires/robot/proc/LockedCut()
 	return wires_status & BORG_WIRE_LOCKED_DOWN
+
+/var/global/datum/telltale/code_datums_wires_robot_dm = new("[__FILE__]")

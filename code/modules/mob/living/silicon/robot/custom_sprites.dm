@@ -30,3 +30,5 @@ var/list/robot_custom_icons
 		icon = CUSTOM_ITEM_SYNTH
 		if(icon_state == "robot")
 			icon_state = "[ckey]-[name]-Standard" //Compliant with robot.dm line 236 ~Mech
+
+/var/global/datum/telltale/code_modules_mob_living_silicon_robot_custom_sprites_dm = new("[__FILE__]")

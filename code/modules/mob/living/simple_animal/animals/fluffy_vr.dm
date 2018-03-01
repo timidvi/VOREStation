@@ -37,3 +37,5 @@
 
 	if(resting && prob(5))
 		audible_emote("snuffles.")
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_animals_fluffy_vr_dm = new("[__FILE__]")

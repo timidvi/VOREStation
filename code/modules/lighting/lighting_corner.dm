@@ -137,3 +137,5 @@
 		return QDEL_HINT_LETMELIVE
 	crash_with("Who decided to force qdel() a lighting corner? Why did you do this?")
 	return ..()
+
+/var/global/datum/telltale/code_modules_lighting_lighting_corner_dm = new("[__FILE__]")

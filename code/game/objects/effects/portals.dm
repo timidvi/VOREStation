@@ -51,3 +51,5 @@
 		else
 			do_teleport(M, target, 1) ///You will appear adjacent to the beacon
 
+
+/var/global/datum/telltale/code_game_objects_effects_portals_dm = new("[__FILE__]")

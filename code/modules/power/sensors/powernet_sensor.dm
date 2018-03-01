@@ -202,3 +202,5 @@
 
 
 
+
+/var/global/datum/telltale/code_modules_power_sensors_powernet_sensor_dm = new("[__FILE__]")

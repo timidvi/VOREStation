@@ -29,3 +29,5 @@
 	reagents.add_reagent("iron", 10)
 	reagents.add_reagent("protein", 35)
 	reagents.add_reagent("water", 25)
+
+/var/global/datum/telltale/code_modules_reagents_reagent_containers_drinkingglass_shaker_dm = new("[__FILE__]")

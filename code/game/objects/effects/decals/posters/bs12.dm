@@ -288,3 +288,4 @@
 	icon_state="bsposter58"
 	name = "space carp information poster"
 	desc = "This poster showcases an old spacer saying on the dangers of migrant space carp."
+/var/global/datum/telltale/code_game_objects_effects_decals_posters_bs___dm = new("[__FILE__]")

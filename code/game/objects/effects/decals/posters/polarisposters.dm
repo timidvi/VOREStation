@@ -44,3 +44,4 @@
 	desc = "This poster appears to be reference material for maintenance personnel, instructing to always wear insulated gloves, that wirecutters and \
 	a multitool are the optimal tools to use, and where to find the maintenance panel on most airlocks.  Unfortunately, the poster does not mention any \
 	wire codes."
+/var/global/datum/telltale/code_game_objects_effects_decals_posters_polarisposters_dm = new("[__FILE__]")

@@ -93,3 +93,5 @@
 	user << browse(dat, "window=communications;size=400x500")
 	onclose(user, "communications")
 
+
+/var/global/datum/telltale/code_modules_power_antimatter_computer_dm = new("[__FILE__]")

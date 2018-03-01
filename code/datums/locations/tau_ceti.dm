@@ -50,3 +50,4 @@
 	seismic activity. The planet is completely void of anything making settlement worthwhile, but recently there have been rumours of illegitimate \
 	shipping here. Security patrols have thus far turned up nothing, but some parties hypothesize that any smugglers or bandits could hide in the dense \
 	molecular band in a median orbit around Tau Ceti to fool in-system sensors."
+/var/global/datum/telltale/code_datums_locations_tau_ceti_dm = new("[__FILE__]")

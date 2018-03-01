@@ -55,3 +55,5 @@
 	var/chat_webhook_url = ""		// URL of the webhook for sending announcements/faxes to discord chat.
 	var/chat_webhook_key = ""		// Shared secret for authenticating to the chat webhook
 	var/fax_export_dir = "data/faxes"	// Directory in which to write exported fax HTML files.
+
+/var/global/datum/telltale/code_modules_paperwork_faxmachine_vr_dm = new("[__FILE__]")

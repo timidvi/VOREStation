@@ -312,3 +312,5 @@
 			//TODO: check for invalid name
 			S.variables["[name]"] = value
 
+
+/var/global/datum/telltale/code_modules_scripting_Interpreter_Interpreter_dm = new("[__FILE__]")

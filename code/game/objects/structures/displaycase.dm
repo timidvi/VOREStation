@@ -79,3 +79,5 @@
 		src.health -= 2
 		healthcheck()
 		return
+
+/var/global/datum/telltale/code_game_objects_structures_displaycase_dm = new("[__FILE__]")

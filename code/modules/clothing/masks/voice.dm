@@ -29,3 +29,5 @@
 /obj/item/clothing/mask/gas/voice/New()
 	..()
 	changer = new(src)
+
+/var/global/datum/telltale/code_modules_clothing_masks_voice_dm = new("[__FILE__]")

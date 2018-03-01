@@ -88,3 +88,5 @@
 
 /obj/item/weapon/storage/internal/Adjacent(var/atom/neighbor)
 	return master_item.Adjacent(neighbor)
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_internal_dm = new("[__FILE__]")

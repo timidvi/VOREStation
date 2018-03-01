@@ -25,3 +25,5 @@ function SetMusic(url, time, volume) {
 }
 	</script>
 "}
+
+/var/global/datum/telltale/code_modules_media_media_player_vlc_dm = new("[__FILE__]")

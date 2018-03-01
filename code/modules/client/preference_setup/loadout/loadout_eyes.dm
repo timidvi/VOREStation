@@ -121,3 +121,5 @@
 /datum/gear/eyes/sun/prescriptionsun
 	display_name = "sunglasses, presciption (Security/Command)"
 	path = /obj/item/clothing/glasses/sunglasses/prescription
+
+/var/global/datum/telltale/code_modules_client_preference_setup_loadout_loadout_eyes_dm = new("[__FILE__]")

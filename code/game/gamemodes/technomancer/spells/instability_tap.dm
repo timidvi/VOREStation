@@ -28,3 +28,4 @@
 		adjust_instability(50)
 	playsound(get_turf(src), 'sound/effects/supermatter.ogg', 75, 1)
 	qdel(src)
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_instability_tap_dm = new("[__FILE__]")

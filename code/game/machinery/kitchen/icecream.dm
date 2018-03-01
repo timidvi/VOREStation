@@ -194,3 +194,4 @@
 #undef FLAVOUR_BLUE
 #undef CONE_WAFFLE
 #undef CONE_CHOC
+/var/global/datum/telltale/code_game_machinery_kitchen_icecream_dm = new("[__FILE__]")

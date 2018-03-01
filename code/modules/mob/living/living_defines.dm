@@ -56,3 +56,5 @@
 	var/glow_color = "#FFFFFF"			// The color they're glowing!
 
 	var/see_invisible_default = SEE_INVISIBLE_LIVING
+
+/var/global/datum/telltale/code_modules_mob_living_living_defines_dm = new("[__FILE__]")

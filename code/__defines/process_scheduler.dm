@@ -16,3 +16,5 @@
 
 // Sleep check macro
 #define SCHECK if(TICK_USAGE >= next_sleep_usage) defer()
+
+/var/global/datum/telltale/code___defines_process_scheduler_dm = new("[__FILE__]")

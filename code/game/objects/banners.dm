@@ -33,3 +33,4 @@
 	name = "\improper VirGov banner"
 	icon_state = "banner-virgov"
 	desc = "A banner with the symbol of the local government, the Vir Governmental Authority, also known as SifGov."
+/var/global/datum/telltale/code_game_objects_banners_dm = new("[__FILE__]")

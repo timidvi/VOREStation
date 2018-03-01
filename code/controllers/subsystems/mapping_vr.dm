@@ -92,3 +92,5 @@ SUBSYSTEM_DEF(mapping)
 	if (!Debug2)
 		return // Only show up in stat panel if debugging is enabled.
 	. = ..()
+
+/var/global/datum/telltale/code_controllers_subsystems_mapping_vr_dm = new("[__FILE__]")

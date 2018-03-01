@@ -291,3 +291,4 @@
 	containername = "Tritium crate"
 	containertype = /obj/structure/closet/crate/engineering
 	contains = list(/obj/fiftyspawner/tritium)
+/var/global/datum/telltale/code_datums_supplypacks_engineering_dm = new("[__FILE__]")

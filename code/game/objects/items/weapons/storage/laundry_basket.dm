@@ -85,3 +85,5 @@
 	user.drop_from_inventory(linked)
 	return
 
+
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_laundry_basket_dm = new("[__FILE__]")

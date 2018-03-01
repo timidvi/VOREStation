@@ -165,3 +165,4 @@
 	name = "brown and grey undercoat"
 	icon_state = "tesh_uniform_brg"
 	item_state = "tesh_uniform_brg"
+/var/global/datum/telltale/code_modules_clothing_under_xenos_seromi_dm = new("[__FILE__]")

@@ -206,3 +206,5 @@
 	desc = "A cap surgeons wear during operations. Keeps their hair from tickling your internal organs. This one is navy blue."
 	icon_state = "surgcap_navyblue"
 	item_state_slots = list(slot_r_hand_str = "beret_navy", slot_l_hand_str = "beret_navy")
+
+/var/global/datum/telltale/code_modules_clothing_head_jobs_dm = new("[__FILE__]")

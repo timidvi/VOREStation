@@ -544,3 +544,4 @@
 /obj/machinery/cash_register/civilian
 	account_to_connect = "Civilian"
 	..()
+/var/global/datum/telltale/code_modules_economy_cash_register_dm = new("[__FILE__]")

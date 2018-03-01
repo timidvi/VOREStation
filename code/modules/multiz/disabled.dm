@@ -8,3 +8,4 @@ proc/GetAbove(var/turf/turf)
 	return null
 proc/GetBelow(var/turf/turf)
 	return null
+/var/global/datum/telltale/code_modules_multiz_disabled_dm = new("[__FILE__]")

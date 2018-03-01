@@ -77,3 +77,4 @@
 			slime_mutation[3] = colour
 			slime_mutation[4] = colour
 	return(slime_mutation)
+/var/global/datum/telltale/code_modules_mob_living_carbon_metroid_subtypes_dm = new("[__FILE__]")

@@ -309,3 +309,5 @@
 	..()
 	if(prob(20))
 		explosion(src.loc,2,4,6,8)
+
+/var/global/datum/telltale/code_game_gamemodes_meteor_meteors_dm = new("[__FILE__]")

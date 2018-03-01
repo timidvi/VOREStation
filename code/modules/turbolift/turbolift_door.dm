@@ -44,3 +44,4 @@
 				cur_command = null // the door will just keep trying otherwise
 				return 0
 	return ..()
+/var/global/datum/telltale/code_modules_turbolift_turbolift_door_dm = new("[__FILE__]")

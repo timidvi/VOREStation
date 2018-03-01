@@ -64,3 +64,5 @@
 			user << "<span class='warning'>You don't have enough energy to make a rift!</span>"
 	else //We're already in a rift or something like a closet.
 		user << "<span class='warning'>Making a rift here would probably be a bad idea.</span>"
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_phase_shift_dm = new("[__FILE__]")

@@ -65,3 +65,4 @@
 		new corpse (src.loc)
 	qdel(src)
 	return
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_humanoids_pirate_dm = new("[__FILE__]")

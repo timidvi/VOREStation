@@ -52,3 +52,5 @@
 		adjust_instability(instability_per_shot)
 		return 1
 */
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_spells_projectile_overload_dm = new("[__FILE__]")

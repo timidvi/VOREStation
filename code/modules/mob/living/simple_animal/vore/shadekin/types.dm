@@ -254,3 +254,5 @@
 	you to curl up a bit. You can feel her rub at you some through the layers of flesh and fluff, while aches \
 	and pains begin to fade away across your body."
 	player_msg = "Mar? Mar mar. Mar mar mar. Mar. Mar mar? Mar! Mar. Marrrr."
+
+/var/global/datum/telltale/code_modules_mob_living_simple_animal_vore_shadekin_types_dm = new("[__FILE__]")

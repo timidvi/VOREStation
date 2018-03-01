@@ -724,3 +724,4 @@
 	if(open && contents.len)
 		var/display_item = contents[1]
 		to_chat(user, "<span class='notice'>\The [src] contains \the [display_item]!</span>")
+/var/global/datum/telltale/code_game_objects_items_weapons_storage_storage_dm = new("[__FILE__]")

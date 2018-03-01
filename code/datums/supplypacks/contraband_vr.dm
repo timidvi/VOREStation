@@ -19,3 +19,5 @@
 	containertype = /obj/structure/largecrate/animal/catgirl
 	containername = "Catgirl crate"
 	contraband = 1
+
+/var/global/datum/telltale/code_datums_supplypacks_contraband_vr_dm = new("[__FILE__]")

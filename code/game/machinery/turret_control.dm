@@ -232,3 +232,5 @@
 				updateTurrets()
 
 	..()
+
+/var/global/datum/telltale/code_game_machinery_turret_control_dm = new("[__FILE__]")

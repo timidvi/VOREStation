@@ -150,3 +150,5 @@
 
 	usr << "<span class='info'>[procname]() returned: [isnull(returnval) ? "null" : returnval]</span>"
 	feedback_add_details("admin_verb","APC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/var/global/datum/telltale/code_modules_admin_callproc_callproc_dm = new("[__FILE__]")

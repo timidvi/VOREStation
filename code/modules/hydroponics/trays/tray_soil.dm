@@ -66,3 +66,5 @@
 		if(plant.invisibility == INVISIBILITY_MAXIMUM)
 			plant.invisibility = initial(plant.invisibility)
 	..()
+
+/var/global/datum/telltale/code_modules_hydroponics_trays_tray_soil_dm = new("[__FILE__]")

@@ -859,3 +859,4 @@
 			to_chat(user, "<span class='warning'>The safety device prevents the gun from firing this close to the facility.</span>")
 			return 0
 	return ..()
+/var/global/datum/telltale/code_modules_vore_fluffstuff_custom_guns_vr_dm = new("[__FILE__]")

@@ -215,3 +215,5 @@
 "}
 
 	state("The nearby computer prints out a pathology report.")
+
+/var/global/datum/telltale/code_modules_virus__centrifuge_dm = new("[__FILE__]")

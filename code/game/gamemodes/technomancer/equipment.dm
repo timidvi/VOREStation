@@ -218,3 +218,5 @@
 	desc = "It's a hand-held telescope, useful for star-gazing, peeping, and recon."
 	icon_state = "spyglass"
 	slot_flags = SLOT_BELT
+
+/var/global/datum/telltale/code_game_gamemodes_technomancer_equipment_dm = new("[__FILE__]")

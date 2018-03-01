@@ -69,3 +69,5 @@
 		// Moving around increases germ_level faster
 		if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8))
 			germ_level++
+
+/var/global/datum/telltale/code_modules_mob_living_carbon_human_life_vr_dm = new("[__FILE__]")

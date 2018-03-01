@@ -402,3 +402,5 @@ Programs are a file that can be executed
 
 
 
+
+/var/global/datum/telltale/code_game_machinery_computer__program_dm = new("[__FILE__]")

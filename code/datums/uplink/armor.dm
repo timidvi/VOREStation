@@ -13,3 +13,5 @@
 	name = "Heavy Armor Vest"
 	item_cost = 40
 	path = /obj/item/clothing/suit/storage/vest/heavy/merc
+
+/var/global/datum/telltale/code_datums_uplink_armor_dm = new("[__FILE__]")

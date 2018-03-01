@@ -240,3 +240,4 @@
 	materials[material] -= ejected * S.perunit
 	if(recursive && materials[material] >= S.perunit)
 		eject_materials(material, -1)
+/var/global/datum/telltale/code_modules_research_protolathe_dm = new("[__FILE__]")

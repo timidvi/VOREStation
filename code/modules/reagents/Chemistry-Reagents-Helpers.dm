@@ -12,3 +12,4 @@
 
 /mob/living/can_be_injected_by(var/atom/injector)
 	return ..() && (can_inject(null, 0, BP_TORSO) || can_inject(null, 0, BP_GROIN))
+/var/global/datum/telltale/code_modules_reagents_Chemistry_Reagents_Helpers_dm = new("[__FILE__]")

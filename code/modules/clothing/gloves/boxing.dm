@@ -27,3 +27,5 @@
 	desc = "These look pretty fancy."
 	icon_state = "latex"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
+
+/var/global/datum/telltale/code_modules_clothing_gloves_boxing_dm = new("[__FILE__]")

@@ -56,3 +56,5 @@
 		spawn(1)
 			qdel(src)
 	return M
+
+/var/global/datum/telltale/code_modules_mob_mob_transformation_simple_dm = new("[__FILE__]")

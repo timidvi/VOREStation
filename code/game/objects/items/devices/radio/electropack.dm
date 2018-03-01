@@ -130,3 +130,5 @@ Code:
 	user << browse(dat, "window=radio")
 	onclose(user, "radio")
 	return
+
+/var/global/datum/telltale/code_game_objects_items_devices_radio_electropack_dm = new("[__FILE__]")

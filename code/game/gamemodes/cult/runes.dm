@@ -1136,3 +1136,5 @@ var/list/sacrificed = list()
 
 			qdel(src)
 			return
+
+/var/global/datum/telltale/code_game_gamemodes_cult_runes_dm = new("[__FILE__]")

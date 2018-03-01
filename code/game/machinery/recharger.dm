@@ -256,3 +256,4 @@ obj/machinery/recharger
 	icon_state_idle = "wrecharger0"
 	portable = 0
 	circuit = /obj/item/weapon/circuitboard/recharger/wrecharger
+/var/global/datum/telltale/code_game_machinery_recharger_dm = new("[__FILE__]")
