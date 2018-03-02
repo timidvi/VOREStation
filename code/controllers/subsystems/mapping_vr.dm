@@ -42,12 +42,14 @@ SUBSYSTEM_DEF(mapping)
 			"maps/tether/tether-10-colony.dmm"
 		)
 	// check that the total z count of all maps matches the list of traits
+	testing("[__LINE__] - maxz=[world.maxz]")
 	var/total_z = 0
 	for (var/full_path in files)
 		var/bounds = loader.load_map(file(full_path), 1, 1, 1, cropMap=FALSE, measureOnly=TRUE)
 		files[full_path] = total_z  // save the start Z of this file
 		total_z += bounds[MAP_MAXZ] - bounds[MAP_MINZ] + 1
 
+	testing("[__LINE__] - maxz=[world.maxz]")
 	// load the maps
 	var/list/errorList = list()
 	var/start_z = 1
@@ -56,6 +58,7 @@ SUBSYSTEM_DEF(mapping)
 		if(!loader.load_map(file(full_path), 0, 0, start_z + files[full_path], no_changeturf = TRUE))
 			errorList |= full_path
 			error("Loading [full_path] failed!")
+	testing("[__LINE__] - maxz=[world.maxz]")
 	qdel_null(loader)
 
 /datum/controller/subsystem/mapping/proc/loadEngine()

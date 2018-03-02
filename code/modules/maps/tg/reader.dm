@@ -96,7 +96,7 @@ var/global/use_preloader = FALSE
 			var/zcrd = text2num(dmmRegex.group[5]) + z_offset - 1
 
 			var/zexpansion = zcrd > world.maxz
-			if(zexpansion)
+			if(zexpansion && !measureOnly)
 				if(cropMap)
 					continue
 				else

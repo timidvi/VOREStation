@@ -49,6 +49,7 @@
 
 /obj/effect/landmark/engine_loader/proc/get_turfs_to_clean()
 	. = list()
+	testing("Okay in [__FILE__]:[__LINE__] - gonna load [clean_turfs]  and src.z = [src.z]")
 	if(clean_turfs)
 		for(var/list/coords in clean_turfs)
 			. += block(locate(coords[1], coords[2], src.z), locate(coords[3], coords[4], src.z))
@@ -57,6 +58,7 @@
 	var/deleted_atoms = 0
 	admin_notice("<span class='danger'>Annihilating objects in engine loading locatation.</span>", R_DEBUG)
 	var/list/turfs_to_clean = get_turfs_to_clean()
+	testing("gonna clean [LAZYLEN(turfs_to_clean)] turfs")
 	if(turfs_to_clean.len)
 		for(var/x in 1 to 2) // Requires two passes to get everything.
 			for(var/turf/T in turfs_to_clean)
