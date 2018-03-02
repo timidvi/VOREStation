@@ -32074,7 +32074,7 @@
 	},
 /obj/machinery/door/airlock/glass_security{
 	name = "Security Medical";
-	req_access = newlist()
+	req_access = list()
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/aid_station)
@@ -33811,7 +33811,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/atmos{
 	name = "Riot Control Maintenance";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(2,12,24)
 	},
 /turf/simulated/floor/plating,
@@ -72810,7 +72810,7 @@
 	},
 /obj/machinery/door/window/westright{
 	name = "EVA Suit Storage";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(5,18)
 	},
 /obj/item/weapon/rig/medical/equipped,
@@ -80696,7 +80696,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance{
 	name = "Firefighting Equipment";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(12,25,27,28,35)
 	},
 /turf/simulated/floor/plating,
@@ -87480,7 +87480,7 @@
 /obj/machinery/door/airlock/medical{
 	id_tag = "surgery_observation";
 	name = "Observation Room";
-	req_access = newlist()
+	req_access = list()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -90192,7 +90192,7 @@
 "ddq" = (
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -90205,7 +90205,7 @@
 /obj/structure/table/marble,
 /obj/machinery/door/window/southright{
 	name = "Hydroponics";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -90695,7 +90695,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -90900,7 +90900,7 @@
 	},
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -96832,7 +96832,7 @@
 /obj/structure/table/woodentable,
 /obj/machinery/photocopier/faxmachine{
 	department = "Public Office";
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)

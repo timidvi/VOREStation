@@ -14784,7 +14784,7 @@
 	},
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -15674,7 +15674,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
-	req_access = newlist();
+	req_access = list();
 	req_one_access = list(35,28)
 	},
 /turf/simulated/floor/tiled/steel_grid,

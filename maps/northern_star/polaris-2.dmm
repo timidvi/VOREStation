@@ -1665,7 +1665,7 @@
 "Ga" = (/obj/machinery/smartfridge/chemistry,/obj/effect/floor_decal/corner/green/full{dir = 8},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "Gb" = (/obj/structure/closet/secure_closet/medical3,/obj/effect/floor_decal/corner/green/full{dir = 1},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "Gc" = (/obj/machinery/door/airlock/glass_command{name = "Escape Shuttle Cockpit"; req_access = list(19)},/turf/simulated/shuttle/floor,/area/shuttle/escape/centcom)
-"Gd" = (/obj/machinery/door/airlock/multi_tile/glass{id_tag = "MedbayFoyerPort"; req_access = newlist()},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
+"Gd" = (/obj/machinery/door/airlock/multi_tile/glass{id_tag = "MedbayFoyerPort"; req_access = list()},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "Ge" = (/obj/structure/table/glass,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/effect/floor_decal/corner/green/full{dir = 8},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "Gf" = (/obj/structure/table/glass,/obj/effect/floor_decal/corner/green{dir = 5},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "Gg" = (/obj/structure/table/glass,/obj/machinery/computer/med_data/laptop,/obj/structure/window/reinforced{dir = 1},/obj/effect/floor_decal/corner/green{dir = 5},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)

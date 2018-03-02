@@ -14084,7 +14084,7 @@
 "aHx" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{

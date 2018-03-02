@@ -4362,7 +4362,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	desc = "SHIT IS LIT";
 	name = "TACTICAL TOILET";
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /turf/unsimulated/floor{
 	icon_state = "vault";
@@ -7110,7 +7110,7 @@
 "mO" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Security";
-	req_access = newlist()
+	req_access = list()
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/security)
@@ -12658,7 +12658,7 @@
 	dir = 8;
 	icon_state = "leftsecure";
 	req_access = list(63);
-	req_one_access = newlist();
+	req_one_access = list();
 	tag = "icon-leftsecure (WEST)"
 	},
 /obj/machinery/button/remote/airlock{
@@ -12718,7 +12718,7 @@
 	dir = 8;
 	icon_state = "leftsecure";
 	req_access = list(63);
-	req_one_access = newlist();
+	req_one_access = list();
 	tag = "icon-leftsecure (WEST)"
 	},
 /turf/unsimulated/floor{
@@ -13867,7 +13867,7 @@
 "yD" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Security";
-	req_access = newlist()
+	req_access = list()
 	},
 /turf/unsimulated/floor{
 	icon_state = "vault";
@@ -14424,7 +14424,7 @@
 	dir = 8;
 	icon_state = "leftsecure";
 	req_access = list(63);
-	req_one_access = newlist();
+	req_one_access = list();
 	tag = "icon-leftsecure (WEST)"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -15403,7 +15403,7 @@
 	dir = 8;
 	icon_state = "leftsecure";
 	req_access = list(63);
-	req_one_access = newlist();
+	req_one_access = list();
 	tag = "icon-leftsecure (WEST)"
 	},
 /obj/machinery/button/remote/blast_door{

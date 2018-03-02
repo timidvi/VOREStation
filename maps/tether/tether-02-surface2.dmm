@@ -16885,7 +16885,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Telecomms Storage";
 	req_access = list(61);
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /obj/structure/cable/green{
 	d1 = 1;

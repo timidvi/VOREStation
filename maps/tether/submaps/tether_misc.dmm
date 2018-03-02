@@ -3968,7 +3968,7 @@
 /obj/machinery/door/airlock/glass_medical{
 	name = "Medical Bay";
 	req_access = list(160);
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -4482,7 +4482,7 @@
 /obj/machinery/door/airlock/command{
 	name = "Bridge";
 	req_access = list(160);
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -4868,7 +4868,7 @@
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering";
 	req_access = list(160);
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -5048,7 +5048,7 @@
 /obj/machinery/door/airlock/command{
 	name = "Captain's Quarters";
 	req_access = list(160);
-	req_one_access = newlist()
+	req_one_access = list()
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)

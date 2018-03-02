@@ -2065,7 +2065,7 @@
 "aNK" = (/obj/machinery/embedded_controller/radio/simple_docking_controller{frequency = 1380; id_tag = "escape_pod_2_recovery"; pixel_x = -25; pixel_y = 25; req_one_access = list(13); tag_door = "escape_pod_2_recovery_hatch"},/turf/simulated/shuttle/floor/yellow,/area/centcom/evac)
 "aNL" = (/obj/machinery/embedded_controller/radio/simple_docking_controller{frequency = 1380; id_tag = "cryostorage_shuttle_recovery"; pixel_x = -25; pixel_y = 25; req_one_access = list(13); tag_door = "cryostorage_shuttle_recovery_hatch"},/turf/simulated/shuttle/floor/yellow,/area/centcom/evac)
 "aNM" = (/obj/machinery/vending/coffee,/turf/simulated/shuttle/floor/yellow,/area/centcom/evac)
-"aNN" = (/obj/machinery/door/airlock/multi_tile/glass{id_tag = "MedbayFoyerPort"; req_access = newlist()},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
+"aNN" = (/obj/machinery/door/airlock/multi_tile/glass{id_tag = "MedbayFoyerPort"; req_access = list()},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "aNO" = (/obj/structure/table/glass,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/effect/floor_decal/corner/green/full{dir = 8},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "aNP" = (/obj/structure/table/glass,/obj/effect/floor_decal/corner/green{dir = 5},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)
 "aNQ" = (/obj/structure/table/glass,/obj/machinery/computer/med_data/laptop,/obj/structure/window/reinforced{dir = 1},/obj/effect/floor_decal/corner/green{dir = 5},/turf/unsimulated/floor{icon_state = "white"},/area/centcom/medical)

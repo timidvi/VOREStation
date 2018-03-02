@@ -25,9 +25,9 @@
 
 
 // WARNING - TOTAL HACK - HOOKING INIT
-/datum/controller/game_controller/setup_objects()
-	..()
-	generateHoloMinimaps()
+// /datum/controller/game_controller/setup_objects()
+// 	..()
+// 	generateHoloMinimaps()
 
 /// Generates all the holo minimaps, initializing it all nicely, probably.
 // TODO - This should be a subsystem ~Leshana

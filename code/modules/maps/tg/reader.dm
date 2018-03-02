@@ -385,6 +385,8 @@ var/global/use_preloader = FALSE
 /dmm_suite/proc/readlist(text as text, delimiter=",", keys_only_string = FALSE)
 
 	var/list/to_return = list()
+	if(text == "")
+		return to_return // Fast bail-out
 
 	var/position
 	var/old_position = 1
