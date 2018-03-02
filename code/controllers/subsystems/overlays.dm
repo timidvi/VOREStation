@@ -11,7 +11,7 @@ SUBSYSTEM_DEF(overlays)
 	var/list/overlay_icon_state_caches	// Cache thing
 	var/list/overlay_icon_cache			// Cache thing
 
-var/global/image/appearance_bro = new() // Temporarily super-global because of BYOND init order dumbness.
+//var/global/image/appearance_bro = new() // Temporarily super-global because of BYOND init order dumbness.
 
 /datum/controller/subsystem/overlays/PreInit()
 	overlay_icon_state_caches = list()
@@ -92,8 +92,9 @@ var/global/image/appearance_bro = new() // Temporarily super-global because of B
 		icon_cache[icon] = .
 
 /atom/proc/build_appearance_list(old_overlays)
-	/var/static/datum/telltale/build_appearance_list = new("[__FILE__]:build_appearance_list")
-	// var/static/image/appearance_bro = new() // Moved to be superglobal due to BYOND insane init order stupidness.
+	var/static/datum/telltale/build_appearance_list = new("[__FILE__]:build_appearance_list")
+	var/static/image/appearance_bro = new() // Moved to be superglobal due to BYOND insane init order stupidness.
+	//var/datum/telltale/in_build_appearance_list = new ("[__FILE__]:non-static build_appearance_list")
 	var/list/new_overlays = list()
 	if (!islist(old_overlays))
 		old_overlays = list(old_overlays)
