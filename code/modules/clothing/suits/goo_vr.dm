@@ -35,12 +35,16 @@
 	return ..()
 
 /obj/item/clothing/suit/storage/hooded/wearable_mob/dropped()
+	if(pockets)
+		var/atom/dest = drop_location(src)
+		for(var/obj/item/I in pockets)
+			pockets.remove_from_storage(I, dest)
 	qdel(src)
 
 /obj/item/clothing/suit/storage/hooded/wearable_mob/proc/put_mob(var/mob/living/wearable)
+	wearable.be_worn(src)
 	wearable.forceMove(src)
 	worn_mob = wearable
-	wearable.be_worn(src)
 
 /obj/item/clothing/suit/storage/hooded/wearable_mob/proc/undo_wearing(var/mob/user)
 	if(user)

@@ -33,7 +33,8 @@
 		/mob/living/carbon/human/proc/succubus_drain_finalize,
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
 		/mob/living/carbon/human/proc/slime_feed,
-		/mob/living/proc/eat_trash
+		/mob/living/proc/eat_trash,
+		/mob/living/carbon/human/proc/shapeshifter_wear_suit
 		)
 
 	can_be_worn = TRUE

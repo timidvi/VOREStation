@@ -176,10 +176,10 @@
 	if(!(user in view(1)))
 		return
 
-	//Play initial message
-	visible_message("<span class='notice'>[user] climbs into [src], wearing them like a suit!</span>",
-					"<span class='notice'>[user] climbs into you, wearing you like a suit!</span>",
-					"<span class='warning'>There's a wet 'splat' sound.</span>")
-	
-	//Puttem on
-	convert_to_suit(user)
+	if((. = convert_to_suit(user)))
+		//Play initial message
+		visible_message("<span class='notice'>[user] climbs into [src], wearing them like a suit!</span>",
+						"<span class='notice'>[user] climbs into you, wearing you like a suit!</span>",
+						"<span class='warning'>There's a wet 'splat' sound.</span>")
+	else
+		to_chat(user,"<span class='warning'>You couldn't put them on! Something in the way, perhaps? Or maybe one of you isn't in the right state!</span>")

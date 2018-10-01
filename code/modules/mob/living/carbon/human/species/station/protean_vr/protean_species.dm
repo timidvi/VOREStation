@@ -211,6 +211,11 @@
 			var/obj/effect/protean_ability/A = ability
 			stat("[A.ability_name]",A.atom_button_text())
 
+/datum/species/protean/handle_wearing(var/obj/worn_item, var/mob/living/carbon/human/H)
+	//worn_item.icon = ''
+	//worn_item.icon_state = ""
+	return ..()
+
 // Various modifiers
 /datum/modifier/protean
 	stacks = MODIFIER_STACK_FORBID
