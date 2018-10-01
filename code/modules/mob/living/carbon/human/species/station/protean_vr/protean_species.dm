@@ -98,12 +98,15 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_gender,
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
-		/mob/living/carbon/human/proc/shapeshifter_select_ears
+		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/shapeshifter_wear_suit
 		)
 
 	var/global/list/abilities = list()
 
 	var/monochromatic = FALSE //IGNORE ME
+
+	can_be_worn = TRUE
 
 /datum/species/protean/New()
 	..()

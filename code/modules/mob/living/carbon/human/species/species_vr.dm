@@ -16,6 +16,7 @@
 	var/wing
 	var/wing_animation
 	var/icobase_wing
+	var/can_be_worn
 
 /datum/species/proc/update_attack_types()
 	unarmed_attacks = list()
@@ -40,3 +41,10 @@
 		nif.nifsofts = nifsofts
 	else
 		..()
+
+//Handles a species being worn, not them wearing something
+/datum/species/proc/handle_wearing(var/obj/worn_item)
+	return //Stub for wearable species
+
+/datum/species/proc/handle_stop_wearing(var/obj/worn_item)
+	return //Stub for wearable species

@@ -35,3 +35,5 @@
 		/mob/living/carbon/human/proc/slime_feed,
 		/mob/living/proc/eat_trash
 		)
+
+	can_be_worn = TRUE

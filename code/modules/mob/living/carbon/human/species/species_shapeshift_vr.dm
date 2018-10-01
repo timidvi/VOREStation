@@ -122,3 +122,64 @@
 		b_wing = new_color_rgb_list[3]
 
 	update_wing_showing()
+
+/mob/living/carbon/human/proc/shapeshifter_wear_suit()
+	set name = "Wear person as suit"
+	set desc = "Put this gooperson on as a suit"
+	set category = "Object"	
+	set src in oview(1)
+
+	//Needs to not be a ghost okay
+	var/mob/living/user = usr
+	if(!istype(user))
+		return
+	
+	//Needs to not be on special cooldowns
+	if((world.time < last_special) || (world.time < user.last_special))
+		return
+
+	//Needs to not be dead or anything like that. User needs to be able to move, goo needs to not be dead.
+	if(user.incapacitated() || src.stat >= DEAD)
+		return
+
+	//Increment counter
+	last_special = world.time + 10
+	user.last_special = world.time + 10
+
+	//Play initial message
+	visible_message("<span class='warning'>[user] attempts to shove their arms into [src]!</span>",
+					"<span class='warning'>[user] attempts to shove their arms into you!</span>",
+					"<span class='warning'>There's a wet 'splat' sound.</span>")
+	
+	//Choice box - WARNING, user input
+	var/accept = alert(src,"[user] is attempting to put you on as a suit! Allow them to?","Suiting Request","Deny","Allow")
+	if(accept != "Allow" && user in view(1)) //They said no and they're still nearby.
+		visible_message("<span class='warning'>[src] shoves [user] away!</span>",
+					"<span class='warning'>You shove [user] away!</span>",
+					"<span class='warning'>There's a wet 'splat' sound.</span>")
+		return
+
+	//Re-test validity
+	//Needs to not be a ghost okay
+	if(!istype(user))
+		return
+	
+	//Needs to not be on special cooldowns
+	if((world.time < last_special) || (world.time < user.last_special))
+		return
+
+	//Needs to not be dead or anything like that
+	if(user.incapacitated() || src.stat >= DEAD)
+		return
+
+	//Range re-check
+	if(!(user in view(1)))
+		return
+
+	//Play initial message
+	visible_message("<span class='notice'>[user] climbs into [src], wearing them like a suit!</span>",
+					"<span class='notice'>[user] climbs into you, wearing you like a suit!</span>",
+					"<span class='warning'>There's a wet 'splat' sound.</span>")
+	
+	//Puttem on
+	convert_to_suit(user)
