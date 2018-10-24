@@ -746,7 +746,7 @@
 	firemodes = list(
 		list(mode_name="normal", fire_delay=12, projectile_type=/obj/item/projectile/beam, charge_cost = 300),
 		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 60),
-		)
+	)
 
 /obj/item/weapon/gun/energy/frontier/unload_ammo(var/mob/user)
 	if(recharging)
@@ -816,9 +816,10 @@
 	icon_state = "PDW"
 	item_state = "gun"
 	w_class = ITEMSIZE_SMALL
+	charge_cost = 600
 	firemodes = list(
-		list(mode_name="normal", fire_delay=12, projectile_type=/obj/item/projectile/beam, charge_cost = 1200),
-		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 240),
+		list(mode_name="normal", fire_delay=12, projectile_type=/obj/item/projectile/beam, charge_cost = 600),
+		list(mode_name="low-power", fire_delay=8, projectile_type=/obj/item/projectile/beam/weaklaser, charge_cost = 120),
 	)
 
 /obj/item/weapon/gun/energy/frontier/locked/holdout/proc/update_mode()
