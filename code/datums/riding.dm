@@ -2,12 +2,13 @@
 
 /datum/riding
 	var/next_vehicle_move = 0			// Used for move delays
-	var/vehicle_move_delay = 2 			// Tick delay between movements, lower = faster, higher = slower
+	var/vehicle_move_delay = 2 			// Decisecond delay between movements, lower = faster, higher = slower
 	var/keytype = null					// Can give this a type to require the rider to hold the item type inhand to move the ridden atom.
 	var/nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
 	var/key_name = "the keys"			// What the 'keys' for the thing being rided on would be called.
 	var/atom/movable/ridden = null 		// The thing that the datum is attached to.
 	var/only_one_driver = FALSE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
+	var/rider_size = 1					// VOREStation Edit to figure out offsets for rider.
 
 /datum/riding/New(atom/movable/_ridden)
 	ridden = _ridden
@@ -97,11 +98,13 @@
 
 	if(world.time < next_vehicle_move)
 		return
+
 	next_vehicle_move = world.time + vehicle_move_delay
+
 	if(keycheck(user))
 		if(!Process_Spacemove(direction) || !isturf(ridden.loc))
 			return
-		ridden.Move(get_step(ridden, direction))
+		ridden.Move(get_step(ridden, direction), direction, vehicle_move_delay)
 
 		handle_vehicle_layer()
 		handle_vehicle_offsets()

@@ -41,11 +41,11 @@
 		if(!allow_stacking)
 			for(var/obj/item/weapon/inserted_spell/IS in L.contents)
 				if(IS.type == inserting)
-					user << "<span class='warning'>\The [L] is already affected by \the [src].</span>"
+					to_chat(user, "<span class='warning'>\The [L] is already affected by \the [src].</span>")
 					return
 		var/obj/item/weapon/inserted_spell/inserted = new inserting(L,user,src)
 		inserted.spell_power_at_creation = calculate_spell_power(1.0)
-		log_and_message_admins("has casted [src] on [L].")
+		add_attack_logs(user,L,"Casted [src]")
 		qdel(src)
 
 /obj/item/weapon/spell/insert/on_melee_cast(atom/hit_atom, mob/user)

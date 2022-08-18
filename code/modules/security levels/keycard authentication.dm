@@ -3,6 +3,7 @@
 	desc = "This device is used to trigger station functions, which require more than one ID card to authenticate."
 	icon = 'icons/obj/monitors.dmi'
 	icon_state = "auth_off"
+	layer = ABOVE_WINDOW_LAYER
 	circuit = /obj/item/weapon/circuitboard/keycard_auth
 	var/active = 0 //This gets set to 1 on all devices except the one where the initial request was made.
 	var/event = ""
@@ -15,8 +16,8 @@
 	var/mob/event_confirmed_by
 	//1 = select event
 	//2 = authenticate
-	anchored = 1.0
-	use_power = 1
+	anchored = TRUE
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
@@ -54,7 +55,7 @@
 			A.pixel_y = pixel_y
 			A.set_dir(dir)
 			A.circuit = M
-			A.anchored = 1
+			A.anchored = TRUE
 			for (var/obj/C in src)
 				C.forceMove(loc)
 			A.state = 3
@@ -188,13 +189,13 @@ var/global/maint_all_access = 0
 
 /proc/make_maint_all_access()
 	maint_all_access = 1
-	world << "<font size=4 color='red'>Attention!</font>"
-	world << "<font color='red'>The maintenance access requirement has been revoked on all airlocks.</font>"
+	to_world("<font size=4 color='red'>Attention!</font>")
+	to_world("<font color='red'>The maintenance access requirement has been revoked on all airlocks.</font>")
 
 /proc/revoke_maint_all_access()
 	maint_all_access = 0
-	world << "<font size=4 color='red'>Attention!</font>"
-	world << "<font color='red'>The maintenance access requirement has been readded on all maintenance airlocks.</font>"
+	to_world("<font size=4 color='red'>Attention!</font>")
+	to_world("<font color='red'>The maintenance access requirement has been readded on all maintenance airlocks.</font>")
 
 /obj/machinery/door/airlock/allowed(mob/M)
 	if(maint_all_access && src.check_access_list(list(access_maint_tunnels)))

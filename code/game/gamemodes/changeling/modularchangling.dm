@@ -2,7 +2,7 @@
 
 //Ling power's evolution menu entry datum should be contained alongside the mob proc for the actual power, in their own file.
 
-var/list/powers = typesof(/datum/power/changeling) - /datum/power/changeling	//needed for the badmin verb for now
+var/list/powers = subtypesof(/datum/power/changeling) //needed for the badmin verb for now
 var/list/datum/power/changeling/powerinstances = list()
 
 /datum/power			//Could be used by other antags too
@@ -316,23 +316,23 @@ var/list/datum/power/changeling/powerinstances = list()
 
 
 	for (var/datum/power/changeling/P in powerinstances)
-		//world << "[P] - [Pname] = [P.name == Pname ? "True" : "False"]"
+		//to_world("[P] - [Pname] = [P.name == Pname ? "True" : "False"]")
 		if(P.name == Pname)
 			Thepower = P
 			break
 
 
 	if(Thepower == null)
-		M.current << "This is awkward.  Changeling power purchase failed, please report this bug to a coder!"
+		to_chat(M.current, "This is awkward.  Changeling power purchase failed, please report this bug to a coder!")
 		return
 
 	if(Thepower in purchased_powers)
-		M.current << "We have already evolved this ability!"
+		to_chat(M.current, "We have already evolved this ability!")
 		return
 
 
 	if(geneticpoints < Thepower.genomecost)
-		M.current << "We cannot evolve this... yet.  We must acquire more DNA."
+		to_chat(M.current, "We cannot evolve this... yet.  We must acquire more DNA.")
 		return
 
 	geneticpoints -= Thepower.genomecost

@@ -67,7 +67,7 @@ Also includes Life and New
 			nutrition = 0
 		if((nutrition > 0 ) && traitdat.traits[TRAIT_XENO_EATS])
 			if(nutrition >= 300)
-				nutrition -= hunger_factor
+				adjust_nutrition(-hunger_factor)
 		else
 			if(traitdat.traits[TRAIT_XENO_EATS])
 				health = starve_damage
@@ -93,7 +93,7 @@ Also includes Life and New
 	traitdat.source = name
 
 	if(!health)
-		stat = DEAD
+		set_stat(DEAD)
 
 /mob/living/simple_mob/xeno/bullet_act(var/obj/item/projectile/Proj)
 	if(istype(Proj, /obj/item/projectile/beam/stun/xeno))
@@ -101,7 +101,12 @@ Also includes Life and New
 		stasis += hit.stasisforce
 	..()
 
+<<<<<<< HEAD
 /mob/living/simple_mob/xeno/Destroy()
 	traitdat.Destroy()	//Let's clean up after ourselves.
 	traitdat = null
+=======
+/mob/living/simple_animal/xeno/Destroy()
+	QDEL_NULL(traitdat)
+>>>>>>> a7877d86e50... Merge pull request #8341 from MistakeNot4892/qdel
 	..()

@@ -1,5 +1,5 @@
 /obj/item/device/floor_painter
-	name = "floor painter"
+	name = "paint sprayer"
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "labeler1"
 
@@ -43,13 +43,17 @@
 	if(!proximity)
 		return
 
+	if(istype(A, /mob/living/silicon/robot/platform))
+		var/mob/living/silicon/robot/platform/robit = A
+		return robit.try_paint(src, user)
+
 	var/turf/simulated/floor/F = A
 	if(!istype(F))
-		user << "<span class='warning'>\The [src] can only be used on station flooring.</span>"
+		to_chat(user, "<span class='warning'>\The [src] can only be used on station flooring.</span>")
 		return
 
 	if(!F.flooring || !F.flooring.can_paint || F.broken || F.burnt)
-		user << "<span class='warning'>\The [src] cannot paint broken or missing tiles.</span>"
+		to_chat(user, "<span class='warning'>\The [src] cannot paint broken or missing tiles.</span>")
 		return
 
 	var/list/decal_data = decals[decal]
@@ -63,11 +67,11 @@
 			config_error = 1
 
 	if(config_error)
-		user << "<span class='warning'>\The [src] flashes an error light. You might need to reconfigure it.</span>"
+		to_chat(user, "<span class='warning'>\The [src] flashes an error light. You might need to reconfigure it.</span>")
 		return
 
 	if(F.decals && F.decals.len > 5 && painting_decal != /obj/effect/floor_decal/reset)
-		user << "<span class='warning'>\The [F] has been painted too much; you need to clear it off.</span>"
+		to_chat(user, "<span class='warning'>\The [F] has been painted too much; you need to clear it off.</span>")
 		return
 
 	var/painting_dir = 0
@@ -101,8 +105,10 @@
 	new painting_decal(F, painting_dir, painting_colour)
 
 /obj/item/device/floor_painter/attack_self(var/mob/user)
-	var/choice = input("Do you wish to change the decal type, paint direction, or paint colour?") as null|anything in list("Decal","Direction", "Colour")
-	if(choice == "Decal")
+	var/choice = tgui_alert(usr, "Do you wish to change the decal type, paint direction, or paint colour?", "Modify What?", list("Decal","Direction","Colour","Cancel"))
+	if(choice == "Cancel")
+		return
+	else if(choice == "Decal")
 		choose_decal()
 	else if(choice == "Direction")
 		choose_direction()
@@ -110,46 +116,46 @@
 		choose_colour()
 
 /obj/item/device/floor_painter/examine(mob/user)
-	..(user)
-	user << "It is configured to produce the '[decal]' decal with a direction of '[paint_dir]' using [paint_colour] paint."
+	. = ..()
+	. += "It is configured to produce the '[decal]' decal with a direction of '[paint_dir]' using [paint_colour] paint."
 
 /obj/item/device/floor_painter/verb/choose_colour()
 	set name = "Choose Colour"
-	set desc = "Choose a floor painter colour."
+	set desc = "Choose a paint colour."
 	set category = "Object"
 	set src in usr
 
 	if(usr.incapacitated())
 		return
-	var/new_colour = input(usr, "Choose a colour.", "Floor painter", paint_colour) as color|null
+	var/new_colour = input(usr, "Choose a colour.", name, paint_colour) as color|null
 	if(new_colour && new_colour != paint_colour)
 		paint_colour = new_colour
-		usr << "<span class='notice'>You set \the [src] to paint with <font color='[paint_colour]'>a new colour</font>.</span>"
+		to_chat(usr, "<span class='notice'>You set \the [src] to paint with <font color='[paint_colour]'>a new colour</font>.</span>")
 
 /obj/item/device/floor_painter/verb/choose_decal()
 	set name = "Choose Decal"
-	set desc = "Choose a floor painter decal."
+	set desc = "Choose a painting decal."
 	set category = "Object"
 	set src in usr
 
 	if(usr.incapacitated())
 		return
 
-	var/new_decal = input("Select a decal.") as null|anything in decals
+	var/new_decal = tgui_input_list(usr, "Select a decal:", "Decal Choice", decals)
 	if(new_decal && !isnull(decals[new_decal]))
 		decal = new_decal
-		usr << "<span class='notice'>You set \the [src] decal to '[decal]'.</span>"
+		to_chat(usr, "<span class='notice'>You set \the [src] decal to '[decal]'.</span>")
 
 /obj/item/device/floor_painter/verb/choose_direction()
 	set name = "Choose Direction"
-	set desc = "Choose a floor painter direction."
+	set desc = "Choose a painting direction."
 	set category = "Object"
 	set src in usr
 
 	if(usr.incapacitated())
 		return
 
-	var/new_dir = input("Select a direction.") as null|anything in paint_dirs
+	var/new_dir = tgui_input_list(usr, "Select a direction:", "Direction Choice", paint_dirs)
 	if(new_dir && !isnull(paint_dirs[new_dir]))
 		paint_dir = new_dir
-		usr << "<span class='notice'>You set \the [src] direction to '[paint_dir]'.</span>"
+		to_chat(usr, "<span class='notice'>You set \the [src] direction to '[paint_dir]'.</span>")

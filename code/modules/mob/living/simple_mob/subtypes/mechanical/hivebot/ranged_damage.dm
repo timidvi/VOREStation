@@ -9,7 +9,8 @@
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/basic
 	name = "ranged hivebot"
 	desc = "A robot with a makeshift integrated ballistic weapon."
-
+	projectile_dispersion = 10
+	projectile_accuracy = -20
 
 // This one shoots quickly, and is considerably more dangerous.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/rapid
@@ -17,7 +18,8 @@
 	desc = "A robot with a crude but deadly integrated rifle."
 	base_attack_cooldown = 5 // Two attacks a second or so.
 	player_msg = "You have a <b>rapid fire attack</b>."
-
+	projectile_dispersion = 7
+	projectile_accuracy = -10
 
 // Shoots deadly lasers.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/laser
@@ -26,7 +28,8 @@
 	projectiletype = /obj/item/projectile/beam/blue
 	projectilesound = 'sound/weapons/Laser.ogg'
 	player_msg = "You have a <b>laser attack</b>."
-
+	projectile_dispersion = 7
+	projectile_accuracy = -20
 
 // Shoots EMPs, to screw over other robots.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/ion
@@ -48,6 +51,8 @@
 	health = 4 LASERS_TO_KILL
 	melee_damage_lower = 15
 	melee_damage_upper = 15
+	projectile_dispersion = 5
+	projectile_accuracy = -15
 
 // Also beefy, but tries to stay at their 'home', ideal for base defense.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/strong/guard
@@ -79,9 +84,12 @@
 	damage = 0
 	nodamage = TRUE
 
+	impact_effect_type = /obj/effect/temp_visual/impact_effect
+	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
+
 
 // Close to mid-ranged shooter that arcs over other things, ideal if allies are in front of it.
-// Difference from siege hivebots is that siege hivebots have limited charges for their attacks, are very long range, and \
+// Difference from siege hivebots is that siege hivebots have limited charges for their attacks, are very long range, and
 // the projectiles have an AoE component, where as backline hivebots do not.
 /mob/living/simple_mob/mechanical/hivebot/ranged_damage/backline
 	name = "backline hivebot"
@@ -109,6 +117,8 @@
 	icon_scale_y = 2
 	icon_state = "red"
 	icon_living = "red"
+
+	organ_names = /decl/mob_organ_names/hivebotsiege
 
 	player_msg = "You are capable of firing <b>very long range bombardment attacks</b>.<br>\
 	To use, click on a tile or enemy at a long range. Note that the projectile arcs in the air, \
@@ -146,3 +156,6 @@
 	name = "anti-personnel artillery hivebot"
 	desc = "A large robot capable of delivering fragmentation shells to rip apart their fleshy enemies."
 	projectiletype = /obj/item/projectile/arc/fragmentation
+
+/decl/mob_organ_names/hivebotsiege
+	hit_zones = list("central chassis", "armor plating", "reinforced positioning servo", "head", "sensor suite", "manipulator arm", "heavy weapons mount", "advanced weapons array", "front right leg", "front left leg", "rear left leg", "rear right leg")

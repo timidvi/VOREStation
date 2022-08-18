@@ -8,42 +8,17 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/path_to_some_food
 */
-
-/datum/recipe/jellydonut
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/doughslice)
-
-/datum/recipe/jellydonut/slime
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/doughslice)
-
-/datum/recipe/jellydonut/cherry
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/doughslice)
-
-/datum/recipe/donut
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/doughslice)
+// All of this shit needs to be gone through and reorganized into different recipes per machine - Rykka 7/16/2020
 
 /datum/recipe/sushi
 	fruit = list("cabbage" = 1)
 	reagents = list("rice" = 20)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
-		/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
-		/obj/item/weapon/reagent_containers/food/snacks/carpmeat
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/sushi
-
-/datum/recipe/lasagna
-	fruit = list("tomato" = 2, "eggplant" = 1)
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/cutlet,
-		/obj/item/weapon/reagent_containers/food/snacks/cutlet,
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough,
-		/obj/item/weapon/reagent_containers/food/snacks/sliceable/flatdough
-	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/lasagna
 
 /datum/recipe/goulash
 	fruit = list("tomato" = 1)
@@ -62,6 +37,7 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/donerkebab
 
+
 /datum/recipe/roastbeef
 	fruit = list("carrot" = 2, "potato" = 2)
 	items = list(
@@ -75,16 +51,6 @@
 		/obj/item/weapon/reagent_containers/food/snacks/chocolatebar
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/reishicup
-
-/datum/recipe/chickenwings
-	reagents = list("capsaicin" = 5, "flour" = 10)
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/meat
-	)
-	result = /obj/item/weapon/storage/box/wings //This is kinda like the donut box.
 
 /datum/recipe/hotandsoursoup
 	fruit = list("cabbage" = 1, "mushroom" = 1)
@@ -101,35 +67,6 @@
 		/obj/item/weapon/reagent_containers/food/snacks/tofu
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/kitsuneudon
-
-/datum/recipe/generalschicken
-	reagents = list("capsaicin" = 2, "sugar" = 2, "flour" = 10)
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/meat,
-		/obj/item/weapon/reagent_containers/food/snacks/meat
-	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/generalschicken
-
-/datum/recipe/chocroizegg
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
-		/obj/item/weapon/reagent_containers/food/snacks/egg/roiz
-	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/chocolateegg/roiz
-
-/datum/recipe/friedroizegg
-	reagents = list("sodiumchloride" = 1, "blackpepper" = 1)
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/egg/roiz
-	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/friedegg/roiz
-
-/datum/recipe/boiledroizegg
-	reagents = list("water" = 5)
-	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/egg/roiz
-	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/boiledegg/roiz
 
 /datum/recipe/pillbugball
 	reagents = list("carbon" = 5)
@@ -153,8 +90,18 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/makaroni
 
+/datum/recipe/carpsushi
+	fruit = list("cabbage" = 1)
+	reagents = list("rice" = 20)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
+		/obj/item/weapon/reagent_containers/food/snacks/carpmeat,
+		/obj/item/weapon/reagent_containers/food/snacks/carpmeat
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/sushi
+
 /datum/recipe/lobster
-	fruit = list("lemon" = 1, "cabbage" = 1)
+	fruit = list("lemon" = 1, "lettuce" = 1)
 	items = list(
 		/obj/item/weapon/reagent_containers/food/snacks/lobster
 	)
@@ -173,30 +120,68 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/monkfishcooked
 
-/datum/recipe/margheritapizzacargo
-	reagents = list()
+/datum/recipe/sharksteak
+	reagents = list("blackpepper"= 1, "sodiumchloride" = 1)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/pizza/margfrozen
+		/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat
 	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/margcargo
+	result = /obj/item/weapon/reagent_containers/food/snacks/sharkmeatcooked
 
-/datum/recipe/mushroompizzacargo
-	reagents = list()
+/datum/recipe/sharkdip
+	reagents = list("sodiumchloride" = 1)
+	fruit = list("chili" = 1)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/pizza/mushfrozen
+		/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat
 	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushcargo
+	result = /obj/item/weapon/reagent_containers/food/snacks/sharkmeatdip
 
-/datum/recipe/meatpizzacargo
-	reagents = list()
+/datum/recipe/sharkcubes
+	reagents = list("soysauce" = 5, "sodiumchloride" = 1)
+	fruit = list("potato" = 1)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/pizza/meatfrozen
+		/obj/item/weapon/reagent_containers/food/snacks/carpmeat/fish/sharkmeat
 	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/meatcargo
+	result = /obj/item/weapon/reagent_containers/food/snacks/sharkmeatcubes
 
-/datum/recipe/vegtablepizzacargo
-	reagents = list()
+//// food cubes
+
+/datum/recipe/foodcubes
+	reagents = list("enzyme" = 20, "virusfood" = 5, "nutriment" = 15, "protein" = 15) // labor intensive
+	items = list()
+	result = /obj/item/weapon/storage/box/wings/tray
+
+/datum/recipe/bucket
+	fruit = list("durian" = 1)
 	items = list(
-		/obj/item/weapon/reagent_containers/food/snacks/pizza/vegfrozen
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat,
+		/obj/item/weapon/reagent_containers/food/snacks/meat
 	)
-	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegcargo
+	result = /obj/item/weapon/storage/box/wings/bucket
+
+/datum/recipe/grub_pink
+	fruit = list("cherries" = 1)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/grub
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/grub_pink
+
+/datum/recipe/grub_blue
+	fruit = list("berries" = 1)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/grub
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/grub_blue
+
+/datum/recipe/grub_purple
+	fruit = list("grapes" = 1)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/grub
+	)
+	result = /obj/item/weapon/reagent_containers/food/snacks/grub_purple
+
+/datum/recipe/honey_candy
+	reagents = list("sugar" = 5, "nutriment" = 5)
+	items = list()
+	result = /obj/item/weapon/reagent_containers/food/snacks/honey_candy

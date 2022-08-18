@@ -144,9 +144,8 @@ Class Procs:
 			merge(A.zone,B.zone)
 			return
 
-	var
-		a_to_b = get_dir(A,B)
-		b_to_a = get_dir(B,A)
+	var/a_to_b = get_dir(A,B)
+	var/b_to_a = get_dir(B,A)
 
 	if(!A.connections) A.connections = new
 	if(!B.connections) B.connections = new
@@ -171,7 +170,7 @@ Class Procs:
 	if(T.needs_air_update) return
 	tiles_to_update |= T
 	#ifdef ZASDBG
-	T.overlays += mark
+	T.add_overlay(mark)
 	#endif
 	T.needs_air_update = 1
 

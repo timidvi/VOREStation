@@ -42,14 +42,14 @@
 	if(severity >= 2 && prob(33))
 		resistance += 10
 
-	if(all_species.len)
+	if(GLOB.all_species.len)
 		affected_species = get_infectable_species()
 
 /proc/get_infectable_species()
 	var/list/meat = list()
 	var/list/res = list()
-	for (var/specie in all_species)
-		var/datum/species/S = all_species[specie]
+	for (var/specie in GLOB.all_species)
+		var/datum/species/S = GLOB.all_species[specie]
 		if(!S.get_virus_immune())
 			meat += S
 	if(meat.len)
@@ -158,7 +158,7 @@
 	if (prob(5) && prob(100-resistance)) // The more resistant the disease,the lower the chance of randomly developing the antibodies
 		antigen = list(pick(ALL_ANTIGENS))
 		antigen |= pick(ALL_ANTIGENS)
-	if (prob(5) && all_species.len)
+	if (prob(5) && GLOB.all_species.len)
 		affected_species = get_infectable_species()
 	if (prob(10))
 		resistance += rand(1,9)
@@ -172,6 +172,7 @@
 	disease.stageprob = stageprob
 	disease.antigen   = antigen
 	disease.uniqueID = uniqueID
+	disease.resistance = resistance
 	disease.affected_species = affected_species.Copy()
 	for(var/datum/disease2/effectholder/holder in effects)
 		var/datum/disease2/effectholder/newholder = new /datum/disease2/effectholder
@@ -244,6 +245,27 @@ var/global/list/virusDB = list()
 
 	return r
 
+/datum/disease2/disease/proc/get_tgui_info()
+	. = list(
+		"name" = name(),
+		"spreadtype" = spreadtype,
+		"antigen" = antigens2string(antigen),
+		"rate" = stageprob * 10,
+		"resistance" = resistance,
+		"species" = jointext(affected_species, ", "),
+		"ref" = "\ref[src]",
+	)
+
+	var/list/symptoms = list()
+	for(var/datum/disease2/effectholder/E in effects)
+		symptoms.Add(list(list(
+			"stage" = E.stage,
+			"name" = E.effect.name,
+			"strength" = "[E.multiplier >= 3 ? "Severe" : E.multiplier > 1 ? "Above Average" : "Average"]",
+			"aggressiveness" = E.chance * 15,
+		)))
+	.["symptoms"] = symptoms
+
 /datum/disease2/disease/proc/addToDB()
 	if ("[uniqueID]" in virusDB)
 		return 0
@@ -251,12 +273,14 @@ var/global/list/virusDB = list()
 	v.fields["id"] = uniqueID
 	v.fields["name"] = name()
 	v.fields["description"] = get_info()
+	v.fields["tgui_description"] = get_tgui_info()
+	v.fields["tgui_description"]["record"] = "\ref[v]"
 	v.fields["antigen"] = antigens2string(antigen)
 	v.fields["spread type"] = spreadtype
 	virusDB["[uniqueID]"] = v
 	return 1
 
-proc/virus2_lesser_infection()
+/proc/virus2_lesser_infection()
 	var/list/candidates = list()	//list of candidate keys
 
 	for(var/mob/living/carbon/human/G in player_list)
@@ -269,7 +293,7 @@ proc/virus2_lesser_infection()
 
 	infect_mob_random_lesser(candidates[1])
 
-proc/virus2_greater_infection()
+/proc/virus2_greater_infection()
 	var/list/candidates = list()	//list of candidate keys
 
 	for(var/mob/living/carbon/human/G in player_list)
@@ -281,7 +305,7 @@ proc/virus2_greater_infection()
 
 	infect_mob_random_greater(candidates[1])
 
-proc/virology_letterhead(var/report_name)
+/proc/virology_letterhead(var/report_name)
 	return {"
 		<center><h1><b>[report_name]</b></h1></center>
 		<center><small><i>[station_name()] Virology Lab</i></small></center>

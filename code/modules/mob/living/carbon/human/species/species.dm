@@ -16,7 +16,7 @@
 
 	var/speech_bubble_appearance = "normal"					// Part of icon_state to use for speech bubbles when talking.	See talk.dmi for available icons.
 	var/fire_icon_state = "humanoid"						// The icon_state used inside OnFire.dmi for when on fire.
-	var/suit_storage_icon = 'icons/mob/belt_mirror.dmi'		// Icons used for worn items in suit storage slot.
+	var/suit_storage_icon = 'icons/inventory/suit_store/mob.dmi' // Icons used for worn items in suit storage slot.
 
 	// Damage overlay and masks.
 	var/damage_overlays = 'icons/mob/human_races/masks/dam_human.dmi'
@@ -41,12 +41,21 @@
 	var/show_ssd = "fast asleep"
 	var/virus_immune
 	var/short_sighted										// Permanent weldervision.
+	var/blood_name = "blood"								// Name for the species' blood.
 	var/blood_volume = 560									// Initial blood volume.
 	var/bloodloss_rate = 1									// Multiplier for how fast a species bleeds out. Higher = Faster
+	var/blood_level_safe = 0.85								//"Safe" blood level; above this, you're OK
+	var/blood_level_warning = 0.75								//"Warning" blood level; above this, you're a bit woozy and will have low-level oxydamage (no more than 20, or 15 with inap)
+	var/blood_level_danger = 0.6								//"Danger" blood level; above this, you'll rapidly take up to 50 oxyloss, and it will then steadily accumulate at a lower rate
+	var/blood_level_fatal = 0.4								//"Fatal" blood level; below this, you take extremely high oxydamage
 	var/hunger_factor = 0.05								// Multiplier for hunger.
 	var/active_regen_mult = 1								// Multiplier for 'Regenerate' power speed, in human_powers.dm
 
-	var/taste_sensitivity = TASTE_NORMAL					// How sensitive the species is to minute tastes.
+	var/taste_sensitivity = TASTE_NORMAL							// How sensitive the species is to minute tastes.
+	var/allergens = null									// Things that will make this species very sick
+	var/allergen_reaction = AG_TOX_DMG|AG_OXY_DMG|AG_EMOTE|AG_PAIN|AG_BLURRY|AG_CONFUSE	// What type of reactions will you have? These the 'main' options and are intended to approximate anaphylactic shock at high doses.
+	var/allergen_damage_severity = 2.5							// How bad are reactions to the allergen? Touch with extreme caution.
+	var/allergen_disable_severity = 10							// Whilst this determines how long nonlethal effects last and how common emotes are.
 
 	var/min_age = 17
 	var/max_age = 70
@@ -63,10 +72,11 @@
 
 	// The languages the species can't speak without an assisted organ.
 	// This list is a guess at things that no one other than the parent species should be able to speak
-	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX) //VOREStation Edit
+	var/list/assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX) //VOREStation Edit
 
 	//Soundy emotey things.
-	var/scream_verb = "screams"
+	var/scream_verb_1p = "scream"
+	var/scream_verb_3p = "screams"
 	var/male_scream_sound		//= 'sound/goonstation/voice/male_scream.ogg' Removed due to licensing, replace!
 	var/female_scream_sound		//= 'sound/goonstation/voice/female_scream.ogg' Removed due to licensing, replace!
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
@@ -74,23 +84,35 @@
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
 	var/female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
 
-	// Combat vars.
-	var/total_health = 100									// Point at which the mob will enter crit.
+	// Combat/health/chem/etc. vars.
+	var/total_health = 100								// How much damage the mob can take before entering crit.
 	var/list/unarmed_types = list(							// Possible unarmed attacks that the mob will use in combat,
 		/datum/unarmed_attack,
 		/datum/unarmed_attack/bite
 		)
 	var/list/unarmed_attacks = null							// For empty hand harm-intent attack
-	var/brute_mod =     1									// Physical damage multiplier.
-	var/burn_mod =      1									// Burn damage multiplier.
-	var/oxy_mod =       1									// Oxyloss modifier
-	var/toxins_mod =    1									// Toxloss modifier
-	var/radiation_mod = 1									// Radiation modifier
-	var/flash_mod =     1									// Stun from blindness modifier.
-	var/flash_burn =    0									// how much damage to take from being flashed if light hypersensitive
-	var/sound_mod =     1									// Stun from sounds, I.E. flashbangs.
-	var/chemOD_mod =	1									// Damage modifier for overdose
-	var/vision_flags = SEE_SELF								// Same flags as glasses.
+	var/brute_mod =     1								// Physical damage multiplier.
+	var/burn_mod =      1								// Burn damage multiplier.
+	var/oxy_mod =       1								// Oxyloss modifier
+	var/toxins_mod =    1								// Toxloss modifier. overridden by NO_POISON flag.
+	var/radiation_mod = 1								// Radiation modifier, determines the practically negligable burn damage from direct exposure to extreme sources.
+	var/flash_mod =     1								// Stun from blindness modifier (flashes and flashbangs)
+	var/flash_burn =    0								// how much damage to take from being flashed if light hypersensitive
+	var/sound_mod =     1								// Multiplier to the effective *range* of flashbangs. a flashbang's bang hits an entire screen radius, with some falloff.
+	var/chem_strength_heal =	1						// Multiplier to most beneficial chem strength
+	var/chem_strength_pain =	1						// Multiplier to painkiller strength (could be used in a negative trait to simulate long-term addiction reducing effects, etc.)
+	var/chem_strength_tox =		1						// Multiplier to toxic chem strength (inc. chloral/sopo/mindbreaker/etc. thresholds)
+	var/chemOD_threshold =		1						// Multiplier to overdose threshold; lower = easier overdosing
+	var/chemOD_mod =		1						// Damage modifier for overdose; higher = more damage from ODs
+	var/alcohol_mod =		1						// Multiplier to alcohol strength; 0.5 = half, 0 = no effect at all, 2 = double, etc.
+	var/pain_mod =			1						// Multiplier to pain effects; 0.5 = half, 0 = no effect (equal to NO_PAIN, really), 2 = double, etc.
+	var/spice_mod =			1						// Multiplier to spice/capsaicin/frostoil effects; 0.5 = half, 0 = no effect (immunity), 2 = double, etc.
+	var/trauma_mod = 		1						// Affects traumatic shock (how fast pain crit happens). 0 = no effect (immunity to pain crit), 2 = double etc.Overriden by "can_feel_pain" var
+	// set below is EMP interactivity for nonsynth carbons
+	var/emp_sensitivity =		0			// bitflag. valid flags are: EMP_PAIN, EMP_BLIND, EMP_DEAFEN, EMP_CONFUSE, EMP_STUN, and EMP_(BRUTE/BURN/TOX/OXY)_DMG
+	var/emp_dmg_mod =		1			// Multiplier to all EMP damage sustained by the mob, if it's EMP-sensitive
+	var/emp_stun_mod = 		1			// Multiplier to all EMP disorient/etc. sustained by the mob, if it's EMP-sensitive
+	var/vision_flags = SEE_SELF							// Same flags as glasses.
 
 	// Death vars.
 	var/meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/human
@@ -107,6 +129,7 @@
 	var/breath_type = "oxygen"								// Non-oxygen gas breathed, if any.
 	var/poison_type = "phoron"								// Poisonous air.
 	var/exhale_type = "carbon_dioxide"						// Exhaled gas type.
+	var/water_breather = FALSE
 
 	var/body_temperature = 310.15							// Species will try to stabilize at this temperature. (also affects temperature processing)
 
@@ -142,6 +165,8 @@
 		"Your skin prickles in the heat."
 		)
 
+	var/water_resistance = 0.1								// How wet the species gets from being splashed.
+	var/water_damage_mod = 0								// How much water damage is multiplied by when splashing this species.
 
 	var/passive_temp_gain = 0								// Species will gain this much temperature every second
 	var/hazard_high_pressure = HAZARD_HIGH_PRESSURE			// Dangerously high pressure.
@@ -176,13 +201,15 @@
 	var/has_glowing_eyes = 0								// Whether the eyes are shown above all lighting
 	var/water_movement = 0									// How much faster or slower the species is in water
 	var/snow_movement = 0									// How much faster or slower the species is on snow
-
+	var/can_space_freemove = FALSE							// Can we freely move in space?
+	var/can_zero_g_move	= FALSE								// What about just in zero-g non-space?
 
 	var/item_slowdown_mod = 1								// How affected by item slowdown the species is.
 	var/primitive_form										// Lesser form, if any (ie. monkey for humans)
 	var/greater_form										// Greater form, if any, ie. human for monkeys.
 	var/holder_type
 	var/gluttonous											// Can eat some mobs. 1 for mice, 2 for monkeys, 3 for people.
+	var/soft_landing = FALSE								// Can fall down and land safely on small falls.
 
 	var/rarity_value = 1									// Relative rarity/collector value for this species.
 	var/economic_modifier = 2								// How much money this species makes
@@ -232,6 +259,31 @@
 		/datum/mob_descriptor/build
 		)
 
+	//This is used in character setup preview generation (prefences_setup.dm) and human mob
+	//rendering (update_icons.dm)
+	var/color_mult = 0
+
+	//This is for overriding tail rendering with a specific icon in icobase, for static
+	//tails only, since tails would wag when dead if you used this
+	var/icobase_tail = 0
+
+	var/wing_hair
+	var/wing
+	var/wing_animation
+	var/icobase_wing
+	var/wikilink = null //link to wiki page for species
+	var/icon_height = 32
+	var/agility = 20 //prob() to do agile things
+	var/gun_accuracy_mod = 0	// More is better
+	var/gun_accuracy_dispersion_mod = 0	// More is worse
+
+	var/sort_hint = SPECIES_SORT_NORMAL
+
+/datum/species/proc/update_attack_types()
+	unarmed_attacks = list()
+	for(var/u_type in unarmed_types)
+		unarmed_attacks += new u_type()
+
 /datum/species/New()
 	if(hud_type)
 		hud = new hud_type()
@@ -259,6 +311,14 @@
 		if(!inherent_verbs)
 			inherent_verbs = list()
 		inherent_verbs |= /mob/living/carbon/human/proc/regurgitate
+
+	update_sort_hint()
+
+/datum/species/proc/update_sort_hint()
+	if(spawn_flags & SPECIES_IS_RESTRICTED)
+		sort_hint = SPECIES_SORT_RESTRICTED
+	else if(spawn_flags & SPECIES_IS_WHITELISTED)
+		sort_hint = SPECIES_SORT_WHITELISTED
 
 /datum/species/proc/sanitize_name(var/name, var/robot = 0)
 	return sanitizeName(name, MAX_NAME_LEN, robot)
@@ -328,6 +388,9 @@
 		var/limb_path = organ_data["path"]
 		var/obj/item/organ/O = new limb_path(H)
 		organ_data["descriptor"] = O.name
+		if(O.parent_organ)
+			organ_data = has_limbs[O.parent_organ]
+			organ_data["has_children"] = organ_data["has_children"]+1
 
 	for(var/organ_tag in has_organ)
 		var/organ_type = has_organ[organ_tag]
@@ -357,7 +420,8 @@
 				t_him = "him"
 			if(FEMALE)
 				t_him = "her"
-	if(H.zone_sel.selecting == "head") //VOREStation Edit - Headpats and Handshakes.
+	//VOREStation Edit Start - Headpats and Handshakes.
+	if(H.zone_sel.selecting == "head")
 		H.visible_message( \
 			"<span class='notice'>[H] pats [target] on the head.</span>", \
 			"<span class='notice'>You pat [target] on the head.</span>", )
@@ -365,8 +429,14 @@
 		H.visible_message( \
 			"<span class='notice'>[H] shakes [target]'s hand.</span>", \
 			"<span class='notice'>You shake [target]'s hand.</span>", )
-	else H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>") //End VOREStation Edit
+	else if(H.zone_sel.selecting == "mouth")
+		H.visible_message( \
+			"<span class='notice'>[H] boops [target]'s nose.</span>", \
+			"<span class='notice'>You boop [target] on the nose.</span>", )
+	//VOREStation Edit End
+	else
+		H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
+						"<span class='notice'>You hug [target] to make [t_him] feel better!</span>")
 
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)
@@ -426,11 +496,15 @@
 
 // Called in life() when the mob has no client.
 /datum/species/proc/handle_npc(var/mob/living/carbon/human/H)
+	if(H.stat == CONSCIOUS && H.ai_holder)
+		if(H.resting)
+			H.resting = FALSE
+			H.update_canmove()
 	return
 
 // Called when lying down on a water tile.
 /datum/species/proc/can_breathe_water()
-	return FALSE
+	return water_breather
 
 // Impliments different trails for species depending on if they're wearing shoes.
 /datum/species/proc/get_move_trail(var/mob/living/carbon/human/H)
@@ -463,3 +537,30 @@
 // Allow species to display interesting information in the human stat panels
 /datum/species/proc/Stat(var/mob/living/carbon/human/H)
 	return
+
+/datum/species/proc/handle_water_damage(var/mob/living/carbon/human/H, var/amount = 0)
+	amount *= 1 - H.get_water_protection()
+	amount *= water_damage_mod
+	if(amount > 0)
+		H.adjustToxLoss(amount)
+
+/datum/species/proc/handle_falling(mob/living/carbon/human/H, atom/hit_atom, damage_min, damage_max, silent, planetary)
+	if(soft_landing)
+		if(planetary || !istype(H))
+			return FALSE
+
+		var/turf/landing = get_turf(hit_atom)
+		if(!istype(landing))
+			return FALSE
+
+		if(!silent)
+			to_chat(H, SPAN_NOTICE("You manage to lower impact of the fall and land safely."))
+			landing.visible_message("<b>\The [H]</b> lowers down from above, landing safely.")
+			playsound(H, "rustle", 25, 1)
+		return TRUE
+
+	return FALSE
+
+/datum/species/proc/post_spawn_special(mob/living/carbon/human/H)
+	return
+

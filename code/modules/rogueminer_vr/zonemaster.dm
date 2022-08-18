@@ -6,7 +6,8 @@
 /datum/rogue/zonemaster
 	//our area
 	var/area/asteroid/rogue/myarea
-	var/area/shuttle/belter/myshuttle
+	// var/area/shuttle/belter/myshuttle
+	var/obj/effect/shuttle_landmark/myshuttle_landmark
 
 	//world.time
 	var/prepared_at = 0
@@ -26,13 +27,15 @@
 	var/original_mobs = 0
 
 	//in-use spawns from the area
-	var/obj/asteroid_spawner/list/rockspawns = list()
-	var/obj/rogue_mobspawner/list/mobspawns = list()
+	var/list/obj/asteroid_spawner/rockspawns = list()
+	var/list/obj/rogue_mobspawner/mobspawns = list()
 
 /datum/rogue/zonemaster/New(var/area/A)
 	ASSERT(A)
 	myarea = A
-	myshuttle = locate(myarea.shuttle_area)
+	myshuttle_landmark = locate(/obj/effect/shuttle_landmark) in myarea
+	if(!istype(myshuttle_landmark))
+		warning("Zonemaster cannot find a shuttle landmark in its area '[A]'")
 	spawn(10) //This is called from controller New() and freaks out if this calls back too fast.
 		rm_controller.mark_clean(src)
 
@@ -46,7 +49,7 @@
 		if(H.stat >= DEAD) //Conditions for exclusion here, like if disconnected people start blocking it.
 			continue
 		var/area/A = get_area(H)
-		if((A == myarea) || (A == myshuttle)) //The loc of a turf is the area it is in.
+		if(A == myarea) //The loc of a turf is the area it is in.
 			humans++
 	return humans
 
@@ -124,6 +127,8 @@
 
 	rm_controller.dbg("ZM(pa): The asteroid has [A.map.len] X-lists.")
 
+	var/list/changedturfs = list()
+
 	for(var/Ix=1, Ix <= A.map.len, Ix++)
 		var/list/curr_x = A.map[Ix]
 		rm_controller.dbg("ZM(pa): Now doing X:[Ix] which has [curr_x.len] Y-lists.")
@@ -150,15 +155,17 @@
 
 					rm_controller.dbg("ZM(pa): Replacing [P.type] with [T].")
 					var/turf/newturf = P.ChangeTurf(T)
+					changedturfs += newturf
 					switch(newturf.type)
-						if(/turf/simulated/mineral)
+						if(/turf/simulated/mineral/vacuum)
 							place_resources(newturf)
 
-					newturf.update_icon(1)
 				else //Anything not a turf
 					rm_controller.dbg("ZM(pa): Creating [T].")
 					new T(spot)
 
+	for(var/turf/T in changedturfs)
+		T.update_icon(1)
 
 /datum/rogue/zonemaster/proc/place_resources(var/turf/simulated/mineral/M)
 	#define XENOARCH_SPAWN_CHANCE 0.3
@@ -167,7 +174,7 @@
 	#define ARTIFACTSPAWNNUM_LOWER 6
 	#define ARTIFACTSPAWNNUM_UPPER 12 //Replace with difficulty-based ones.
 
-	if(!M.mineral && prob(rm_controller.diffstep_nums[rm_controller.diffstep]/10)) //Difficulty translates directly into ore chance
+	if(!M.mineral && prob(rm_controller.diffstep_chances[rm_controller.diffstep])) //Difficulty translates directly into ore chance
 		rm_controller.dbg("ZM(par): Adding mineral to [M.x],[M.y].")
 		M.make_ore(rm_controller.diffstep >= 3 ? 1 : 0)
 		mineral_rocks += M
@@ -184,8 +191,7 @@
 		return
 
 	var/farEnough = 1
-	for(var/A in SSxenoarch.digsite_spawning_turfs)
-		var/turf/T = A
+	for(var/turf/T as anything in SSxenoarch.digsite_spawning_turfs)
 		if(T in range(5, M))
 			farEnough = 0
 			break
@@ -293,7 +299,7 @@
 					break
 		if(SP)
 			rm_controller.dbg("ZM(p): Got a mob spawnpoint, so picking a type.")
-			var/mobchoice = pick(rm_controller.mobs["tier[rm_controller.diffstep]"])
+			var/mobchoice = pickweight(rm_controller.mobs["tier[rm_controller.diffstep]"])
 			rm_controller.dbg("ZM(p): Picked [mobchoice] to spawn.")
 			var/mob/living/newmob = new mobchoice(get_turf(SP))
 			newmob.faction = "asteroid_belt"
@@ -302,7 +308,7 @@
 				sleep(delay)
 
 	rm_controller.dbg("ZM(p): Zone generation done.")
-	world.log << "RM(stats): PREP [myarea] at [world.time] with [spawned_mobs.len] mobs, [mineral_rocks.len] minrocks, total of [rockspawns.len] rockspawns, [mobspawns.len] mobspawns." //DEBUG code for playtest stats gathering.
+	to_world_log("RM(stats): PREP [myarea] at [world.time] with [spawned_mobs.len] mobs, [mineral_rocks.len] minrocks, total of [rockspawns.len] rockspawns, [mobspawns.len] mobspawns.") //DEBUG code for playtest stats gathering.
 	prepared_at = world.time
 	rm_controller.mark_ready(src)
 	return myarea
@@ -321,7 +327,7 @@
 	mobspawns.Cut()
 	rm_controller.dbg("ZM(rs): Now [mobspawns.len] mobspawns.")
 	for(var/obj/rogue_mobspawner/SP in myarea.mob_spawns)
-		if(prob(rm_controller.diffstep_nums[rm_controller.diffstep]/10))
+		if(prob(rm_controller.diffstep_chances[rm_controller.diffstep]))
 			mobspawns += SP
 			original_mobs++
 	rm_controller.dbg("ZM(rs): Picked [mobspawns.len] new mobspawns with [chance]% chance.")
@@ -362,13 +368,13 @@
 
 	rm_controller.adjust_difficulty(tally)
 	rm_controller.dbg("ZM(sz): Finished scoring and adjusted by [tally].")
-	world.log << "RM(stats): SCORE [myarea] for [tally]." //DEBUG code for playtest stats gathering.
+	to_world_log("RM(stats): SCORE [myarea] for [tally].") //DEBUG code for playtest stats gathering.
 	return tally
 
 //Overall 'destroy' proc (marks as unready)
 /datum/rogue/zonemaster/proc/clean_zone(var/delay = 1)
 	rm_controller.dbg("ZM(cz): Cleaning zone with area [myarea].")
-	world.log << "RM(stats): CLEAN start [myarea] at [world.time] prepared at [prepared_at]." //DEBUG code for playtest stats gathering.
+	to_world_log("RM(stats): CLEAN start [myarea] at [world.time] prepared at [prepared_at].") //DEBUG code for playtest stats gathering.
 	rm_controller.unmark_ready(src)
 
 	//Cut these lists so qdel can dereference the things properly
@@ -380,14 +386,17 @@
 	var/ignored = list(
 	/obj/asteroid_spawner,
 	/obj/rogue_mobspawner,
-	/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/onleft,
-	/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/onright,
-	/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/ontop,
-	/obj/effect/step_trigger/teleporter/random/rogue/fourbyfour/onbottom)
+	/obj/effect/shuttle_landmark,
+	/obj/effect/step_trigger/teleporter/roguemine_loop/north,
+	/obj/effect/step_trigger/teleporter/roguemine_loop/south,
+	/obj/effect/step_trigger/teleporter/roguemine_loop/east,
+	/obj/effect/step_trigger/teleporter/roguemine_loop/west)
 
 	for(var/atom/I in myarea.contents)
 		if(I.type == /turf/space)
-			I.overlays.Cut()
+			I.cut_overlays()
+			continue
+		else if(!I.simulated)
 			continue
 		else if(I.type in ignored)
 			continue
@@ -396,7 +405,12 @@
 
 	//A deletion so nice that I give it twice
 	for(var/atom/I in myarea.contents)
-		if(I.type in ignored)
+		if(I.type == /turf/space)
+			I.cut_overlays()
+			continue
+		else if(!I.simulated)
+			continue
+		else if(I.type in ignored)
 			continue
 		qdel(I)
 		sleep(delay)
@@ -406,7 +420,7 @@
 	original_mobs = 0
 	prepared_at = 0
 
-	world.log << "RM(stats): CLEAN done [myarea] at [world.time]." //DEBUG code for playtest stats gathering.
+	to_world_log("RM(stats): CLEAN done [myarea] at [world.time].") //DEBUG code for playtest stats gathering.
 
 	rm_controller.dbg("ZM(cz): Finished cleaning up zone area [myarea].")
 	rm_controller.mark_clean(src)

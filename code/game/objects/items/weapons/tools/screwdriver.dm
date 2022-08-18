@@ -4,8 +4,10 @@
 /obj/item/weapon/tool/screwdriver
 	name = "screwdriver"
 	desc = "You can be totally screwwy with this."
+	description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave.
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "screwdriver"
+	center_of_mass = list("x" = 13,"y" = 7)
 	slot_flags = SLOT_BELT | SLOT_EARS
 	force = 6
 	w_class = ITEMSIZE_TINY
@@ -14,17 +16,14 @@
 	throw_range = 5
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	usesound = 'sound/items/screwdriver.ogg'
-	matter = list(DEFAULT_WALL_MATERIAL = 75)
+	drop_sound = 'sound/items/drop/screwdriver.ogg'
+	pickup_sound = 'sound/items/pickup/screwdriver.ogg'
+	matter = list(MAT_STEEL = 75)
 	attack_verb = list("stabbed")
-	sharp  = 1
+	sharp  = TRUE
 	toolspeed = 1
+	tool_qualities = list(TOOL_SCREWDRIVER)
 	var/random_color = TRUE
-
-/obj/item/weapon/tool/screwdriver/suicide_act(mob/user)
-	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-	viewers(user) << pick("<span class='danger'>\The [user] is stabbing the [src.name] into [TU.his] temple! It looks like [TU.hes] trying to commit suicide.</span>", \
-						"<span class='danger'>\The [user] is stabbing the [src.name] into [TU.his] heart! It looks like [TU.hes] trying to commit suicide.</span>")
-	return(BRUTELOSS)
 
 /obj/item/weapon/tool/screwdriver/New()
 	if(random_color)
@@ -64,10 +63,6 @@
 		M = user
 	return eyestab(M,user)
 
-/obj/item/weapon/tool/screwdriver/is_screwdriver()
-	return TRUE
-
-
 /datum/category_item/catalogue/anomalous/precursor_a/alien_screwdriver
 	name = "Precursor Alpha Object - Hard Light Torgue Tool"
 	desc = "This appears to be a tool, with a solid handle, and a thin hard light \
@@ -98,20 +93,11 @@
 	icon_state = "hybscrewdriver"
 	item_state = "screwdriver_black"
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
-	slowdown = 0.1
 	w_class = ITEMSIZE_NORMAL
 	usesound = 'sound/effects/uncloak.ogg'
 	toolspeed = 0.4
 	random_color = FALSE
 	reach = 2
-
-/obj/item/weapon/tool/screwdriver/hybrid/is_screwdriver()
-	if(prob(10))
-		var/turf/T = get_turf(src)
-		SSradiation.radiate(get_turf(src), 5)
-		T.visible_message("<span class='alien'>\The [src] shudders!</span>")
-		return FALSE
-	return TRUE
 
 /obj/item/weapon/tool/screwdriver/cyborg
 	name = "powered screwdriver"
@@ -124,7 +110,7 @@
 	desc = "A simple powered hand drill. It's fitted with a screw bit."
 	icon_state = "drill_screw"
 	item_state = "drill"
-	matter = list(DEFAULT_WALL_MATERIAL = 150, MAT_SILVER = 50)
+	matter = list(MAT_STEEL = 150, MAT_SILVER = 50)
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
 	slot_flags = SLOT_BELT
 	force = 8
@@ -152,7 +138,7 @@
 	return ..()
 
 /obj/item/weapon/tool/screwdriver/power/attack_self(mob/user)
-	playsound(get_turf(user),'sound/items/change_drill.ogg',50,1)
+	playsound(src,'sound/items/change_drill.ogg',50,1)
 	user.drop_item(src)
 	counterpart.forceMove(get_turf(src))
 	src.forceMove(counterpart)

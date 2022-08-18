@@ -6,7 +6,7 @@
 	icon_state = "pilot_helmet1"
 	item_icons = list(slot_head_str = 'icons/mob/pilot_helmet.dmi')
 	sprite_sheets = list(
-		SPECIES_TESHARI = 'icons/mob/species/seromi/pilot_helmet.dmi'
+		SPECIES_TESHARI = 'icons/inventory/head/mob_teshari.dmi'
 		)
 	flags = THICKMATERIAL
 	armor = list(melee = 20, bullet = 10, laser = 10, energy = 5, bomb = 10, bio = 0, rad = 0)
@@ -166,8 +166,7 @@
 			I.color = newcolor
 
 /obj/item/clothing/head/pilot/Destroy()
-	for(var/img in raw_images)
-		var/image/I = img
+	for(var/image/I as anything in raw_images)
 		I.loc = null
 	shuttle_comp = null
 	qdel(pilot_hud)
@@ -194,8 +193,8 @@
 /obj/item/clothing/head/pilot/alt/attack_self(mob/user as mob)
 	if(src.icon_state == initial(icon_state))
 		src.icon_state = "[icon_state]up"
-		user << "You raise the visor on the pilot helmet."
+		to_chat(user, "You raise the visor on the pilot helmet.")
 	else
 		src.icon_state = initial(icon_state)
-		user << "You lower the visor on the pilot helmet."
+		to_chat(user, "You lower the visor on the pilot helmet.")
 	update_clothing_icon() //so our mob-overlays update

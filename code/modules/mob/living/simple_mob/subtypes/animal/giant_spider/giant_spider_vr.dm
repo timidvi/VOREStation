@@ -34,6 +34,7 @@
 	desc = "Absolutely gigantic, this creature is horror itself."
 	tt_desc = "X Brachypelma phorus tyrannus"
 	icon = 'icons/mob/64x64.dmi'
+	vis_height = 64
 	icon_state = "spider_queen"
 	icon_living = "spider_queen"
 	icon_dead = "spider_queen_dead"
@@ -46,6 +47,19 @@
 	attack_armor_pen = 25
 
 	pixel_x = -16
-	pixel_y = -16
+	pixel_y = 0
+	default_pixel_x = -16
 	old_x = -16
-	old_y = -16
+	old_y = 0
+	meat_amount = 15
+
+	egg_type = /obj/effect/spider/eggcluster/royal
+
+/mob/living/simple_mob/animal/giant_spider/nurse
+	var/can_lay_eggs = TRUE
+
+/mob/living/simple_mob/animal/giant_spider/nurse/eggless
+	can_lay_eggs = FALSE
+
+/mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless
+	can_lay_eggs = FALSE

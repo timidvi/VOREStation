@@ -13,7 +13,7 @@
 	species_language = LANGUAGE_SOL_COMMON
 	secondary_langs = list(LANGUAGE_SOL_COMMON, LANGUAGE_TERMINUS)
 	name_language = null // Use the first-name last-name generator rather than a language scrambler
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_SKRELLIAN, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 	min_age = 17
 	max_age = 130
@@ -135,20 +135,20 @@
 		O_LUNGS =    /obj/item/organ/internal/lungs/unathi,
 		O_LIVER =    /obj/item/organ/internal/liver/unathi,
 		O_BRAIN =    /obj/item/organ/internal/brain/unathi,
-		O_EYES =     /obj/item/organ/internal/eyes,
+		O_EYES =     /obj/item/organ/internal/eyes/unathi,
 		O_STOMACH =		/obj/item/organ/internal/stomach/unathi,
 		O_INTESTINE =	/obj/item/organ/internal/intestine/unathi
 		)
 
 
-	heat_discomfort_level = 295
+	heat_discomfort_level = 320 //VOREStation Edit - 46c (higher than normal humans) Don't spam red text if you're slightly warm.
 	heat_discomfort_strings = list(
 		"You feel soothingly warm.",
 		"You feel the heat sink into your bones.",
 		"You feel warm enough to take a nap."
 		)
 
-	cold_discomfort_level = 292
+	cold_discomfort_level = 288.15	//VOREStation Edit - 15c Give a little bit of wiggle room here come on.
 	cold_discomfort_strings = list(
 		"You feel chilly.",
 		"You feel sluggish and cold.",
@@ -159,6 +159,16 @@
 		/datum/mob_descriptor/height = 2,
 		/datum/mob_descriptor/build = 2
 		)
+
+	default_emotes = list(
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
 
 /datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
@@ -198,7 +208,7 @@
 	home worlds and speak a variety of languages, especially Siik and Akhani."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/tajaran)
 
-	body_temperature = 320.15	//Even more cold resistant, even more flammable
+	body_temperature = 280.15	//Even more cold resistant, even more flammable
 
 	cold_level_1 = 200 //Default 260
 	cold_level_2 = 140 //Default 200
@@ -225,6 +235,7 @@
 	base_color = "#333333"
 
 	reagent_tag = IS_TAJARA
+	allergens = ALLERGEN_STIMULANT
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
@@ -235,19 +246,34 @@
 		"Your overheated skin itches."
 		)
 
-	cold_discomfort_level = 275
+	cold_discomfort_level = 215
 
 	has_organ = list(    //No appendix.
-		O_HEART =    /obj/item/organ/internal/heart,
-		O_LUNGS =    /obj/item/organ/internal/lungs,
+		O_HEART =    /obj/item/organ/internal/heart/tajaran,
+		O_LUNGS =    /obj/item/organ/internal/lungs/tajaran,
 		O_VOICE = 		/obj/item/organ/internal/voicebox,
-		O_LIVER =    /obj/item/organ/internal/liver,
+		O_LIVER =    /obj/item/organ/internal/liver/tajaran,
 		O_KIDNEYS =  /obj/item/organ/internal/kidneys,
 		O_BRAIN =    /obj/item/organ/internal/brain,
-		O_EYES =     /obj/item/organ/internal/eyes,
-		O_STOMACH =		/obj/item/organ/internal/stomach,
+		O_EYES =     /obj/item/organ/internal/eyes/tajaran,
+		O_STOMACH =		/obj/item/organ/internal/stomach/tajaran,
 		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
+
+	default_emotes = list(
+		//VOREStation Add
+		/decl/emote/audible/gnarl,
+		/decl/emote/audible/purr,
+		/decl/emote/audible/purrlong,
+		//VOREStation Add End
+		/decl/emote/human/swish,
+		/decl/emote/human/wag,
+		/decl/emote/human/sway,
+		/decl/emote/human/qwag,
+		/decl/emote/human/fastsway,
+		/decl/emote/human/swag,
+		/decl/emote/human/stopsway
+	)
 
 /datum/species/tajaran/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
@@ -292,7 +318,7 @@
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR
 
 	flesh_color = "#8CD7A3"
-	blood_color = "#1D2CBF"
+	blood_color = "#0081CD"
 	base_color = "#006666"
 
 	cold_level_1 = 280 //Default 260 - Lower is better
@@ -312,6 +338,9 @@
 	breath_heat_level_3 = 1350	//Default 1250
 
 	reagent_tag = IS_SKRELL
+	allergens = ALLERGEN_MEAT|ALLERGEN_FISH|ALLERGEN_DAIRY|ALLERGEN_EGGS
+
+	water_breather = TRUE
 
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest),
@@ -325,6 +354,20 @@
 		BP_R_HAND = list("path" = /obj/item/organ/external/hand/right),
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
+		)
+
+	has_organ = list(
+		O_HEART =		/obj/item/organ/internal/heart/skrell,
+		O_LUNGS =		/obj/item/organ/internal/lungs/skrell,
+		O_VOICE = 		/obj/item/organ/internal/voicebox/skrell,
+		O_LIVER =		/obj/item/organ/internal/liver/skrell,
+		O_KIDNEYS =		/obj/item/organ/internal/kidneys/skrell,
+		O_BRAIN =		/obj/item/organ/internal/brain/skrell,
+		O_APPENDIX = 	/obj/item/organ/internal/appendix/skrell,
+		O_SPLEEN = 		/obj/item/organ/internal/spleen/skrell,
+		O_EYES =		/obj/item/organ/internal/eyes/skrell,
+		O_STOMACH =		/obj/item/organ/internal/stomach/skrell,
+		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell
 		)
 
 /datum/species/skrell/can_breathe_water()
@@ -346,7 +389,7 @@
 	taste_sensitivity = TASTE_SENSITIVE
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_ZADDAT, LANGUAGE_UNATHI)
-	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_SKRELLIANFAR, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_SOL_COMMON, LANGUAGE_AKHANI, LANGUAGE_SIIK, LANGUAGE_GUTTER) //limited vocal range; can talk Unathi and magical Galcom but not much else
+	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_TERMINUS, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_SOL_COMMON, LANGUAGE_AKHANI, LANGUAGE_SIIK, LANGUAGE_GUTTER) //limited vocal range; can talk Unathi and magical Galcom but not much else
 	name_language = LANGUAGE_ZADDAT
 	species_language = LANGUAGE_ZADDAT
 	health_hud_intensity = 2.5
@@ -411,6 +454,11 @@
 		/datum/mob_descriptor/height = 0,
 		/datum/mob_descriptor/build = -1
 		)
+
+	default_emotes = list(
+		/decl/emote/audible/chirp
+	)
+
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	if(H.wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
@@ -441,6 +489,8 @@
 		if(!(K in covered))
 			H.apply_damage(light_amount/4, BURN, K, 0, 0, "Abnormal growths")
 
+/datum/species/zaddat/get_perfect_belly_air_type()
+	return /datum/gas_mixture/belly_air/zaddat
 
 /datum/species/diona
 	name = SPECIES_DIONA
@@ -460,7 +510,7 @@
 	health_hud_intensity = 2.5
 	item_slowdown_mod = 0.1
 
-	num_alternate_languages = 2
+	num_alternate_languages = 3
 	name_language = LANGUAGE_ROOTLOCAL
 	species_language = LANGUAGE_ROOTLOCAL
 	secondary_langs = list(LANGUAGE_ROOTGLOBAL)
@@ -482,6 +532,7 @@
 	has_organ = list(
 		O_NUTRIENT = /obj/item/organ/internal/diona/nutrients,
 		O_STRATA =   /obj/item/organ/internal/diona/strata,
+		O_BRAIN = /obj/item/organ/internal/brain/cephalon,
 		O_RESPONSE = /obj/item/organ/internal/diona/node,
 		O_GBLADDER = /obj/item/organ/internal/diona/bladder,
 		O_POLYP =    /obj/item/organ/internal/diona/polyp,
@@ -520,7 +571,7 @@
 
 	body_temperature = T0C + 15		//make the plant people have a bit lower body temperature, why not
 
-	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT
+	flags = NO_SCAN | IS_PLANT | NO_PAIN | NO_SLIP | NO_MINOR_CUT | NO_DEFIB
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED
 
 	blood_color = "#004400"
@@ -530,11 +581,15 @@
 
 	genders = list(PLURAL)
 
+	default_emotes = list(
+		/decl/emote/audible/chirp,
+		/decl/emote/audible/multichirp
+	)
+
 /datum/species/diona/can_understand(var/mob/other)
-	var/mob/living/carbon/alien/diona/D = other
-	if(istype(D))
-		return 1
-	return 0
+	if(istype(other, /mob/living/carbon/alien/diona))
+		return TRUE
+	return FALSE
 
 /datum/species/diona/equip_survival_gear(var/mob/living/carbon/human/H)
 	if(H.backbag == 1)
@@ -555,6 +610,16 @@
 
 	if(H.isSynthetic())
 		H.visible_message("<span class='danger'>\The [H] collapses into parts, revealing a solitary diona nymph at the core.</span>")
+
+		H.species = GLOB.all_species[SPECIES_HUMAN] // This is hard-set to default the body to a normal FBP, without changing anything.
+
+		for(var/obj/item/organ/internal/diona/Org in H.internal_organs) // Remove Nymph organs.
+			qdel(Org)
+
+		// Purge the diona verbs.
+		H.verbs -= /mob/living/carbon/human/proc/diona_split_nymph
+		H.verbs -= /mob/living/carbon/human/proc/regenerate
+
 		return
 
 	for(var/mob/living/carbon/alien/diona/D in H.contents)
@@ -576,11 +641,11 @@
 		if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
-		H.nutrition += light_amount
+		// Don't overfeed, just make them full without going over.
+		if((H.nutrition + light_amount) < initial(H.nutrition))
+			H.adjust_nutrition(light_amount)
 		H.shock_stage -= light_amount
 
-		if(H.nutrition > 450)
-			H.nutrition = 450
 		if(light_amount >= 3) //if there's enough light, heal
 			H.adjustBruteLoss(-(round(light_amount/2)))
 			H.adjustFireLoss(-(round(light_amount/2)))

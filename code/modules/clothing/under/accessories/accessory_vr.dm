@@ -2,32 +2,118 @@
 // Collars and such like that
 //
 
+/obj/item/clothing/accessory/choker //A colorable, tagless choker
+	name = "plain choker"
+	slot_flags = SLOT_TIE | SLOT_OCLOTHING
+	desc = "A simple, plain choker. Or maybe it's a collar? Use in-hand to customize it."
+	icon = 'icons/inventory/accessory/item_vr.dmi'
+	icon_override = 'icons/inventory/accessory/mob_vr.dmi'
+	icon_state = "choker_cst"
+	item_state = "choker_cst"
+	overlay_state = "choker_cst"
+	var/customized = 0
+	var/icon_previous_override
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/inventory/accessory/mob_vr_teshari.dmi'
+		)
+
+//Forces different sprite sheet on equip
+/obj/item/clothing/accessory/choker/New()
+	..()
+	icon_previous_override = icon_override
+
+/obj/item/clothing/accessory/choker/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
+	..()
+	setUniqueSpeciesSprite()
+
+/obj/item/clothing/accessory/choker/proc/setUniqueSpeciesSprite()
+	var/mob/living/carbon/human/H = loc
+	if(!istype(H) && istype(has_suit) && ishuman(has_suit.loc))
+		H = has_suit.loc
+	if(sprite_sheets && istype(H) && H.species.get_bodytype(H) && (H.species.get_bodytype(H) in sprite_sheets))
+		icon_override = sprite_sheets[H.species.get_bodytype(H)]
+		update_clothing_icon()
+
+/obj/item/clothing/accessory/choker/on_attached(var/obj/item/clothing/S, var/mob/user)
+	if(!istype(S))
+		return
+	has_suit = S
+	setUniqueSpeciesSprite()
+	..(S, user)
+
+/obj/item/clothing/accessory/choker/dropped()
+	icon_override = icon_previous_override
+
+/obj/item/clothing/accessory/choker/attack_self(mob/user as mob)
+	if(!customized)
+		var/design = tgui_input_list(user,"Descriptor?","Pick descriptor","Descriptor", list("plain","simple","ornate","elegant","opulent"))
+		var/material = tgui_input_list(user,"Material?","Pick material","Material", list("leather","velvet","lace","fabric","latex","plastic","metal","chain","silver","gold","platinum","steel","bead","ruby","sapphire","emerald","diamond"))
+		var/type = tgui_input_list(user,"Type?","Pick type","Type", list("choker","collar","necklace"))
+		name = "[design] [material] [type]"
+		desc = "A [type], made of [material]. It's rather [design]."
+		customized = 1
+		to_chat(usr,"<span class='notice'>[src] has now been customized.</span>")
+	else
+		to_chat(usr,"<span class='notice'>[src] has already been customized!</span>")
+
 /obj/item/clothing/accessory/collar
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	icon = 'icons/obj/clothing/collars_vr.dmi'
-	icon_override = 'icons/obj/clothing/collars_vr.dmi'
+	icon = 'icons/inventory/accessory/item_vr.dmi'
+	icon_override = 'icons/inventory/accessory/mob_vr.dmi'
+	icon_state = "collar_blk"
 	var/writtenon = 0
+	var/icon_previous_override
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/inventory/accessory/mob_vr_teshari.dmi'
+	)
+
+//Forces different sprite sheet on equip
+/obj/item/clothing/accessory/collar/New()
+	..()
+	icon_previous_override = icon_override
+
+/obj/item/clothing/accessory/collar/equipped() //Solution for race-specific sprites for an accessory which is also a suit. Suit icons break if you don't use icon override which then also overrides race-specific sprites.
+	..()
+	setUniqueSpeciesSprite()
+
+/obj/item/clothing/accessory/collar/proc/setUniqueSpeciesSprite()
+	var/mob/living/carbon/human/H = loc
+	if(!istype(H) && istype(has_suit) && ishuman(has_suit.loc))
+		H = has_suit.loc
+	if(sprite_sheets && istype(H) && H.species.get_bodytype(H) && (H.species.get_bodytype(H) in sprite_sheets))
+		icon_override = sprite_sheets[H.species.get_bodytype(H)]
+		update_clothing_icon()
+
+/obj/item/clothing/accessory/collar/on_attached(var/obj/item/clothing/S, var/mob/user)
+	if(!istype(S))
+		return
+	has_suit = S
+	setUniqueSpeciesSprite()
+	..(S, user)
+
+/obj/item/clothing/accessory/collar/dropped()
+	icon_override = icon_previous_override
 
 /obj/item/clothing/accessory/collar/silver
 	name = "Silver tag collar"
 	desc = "A collar for your little pets... or the big ones."
 	icon_state = "collar_blk"
-	item_state = "collar_blk_overlay"
-	overlay_state = "collar_blk_overlay"
+	item_state = "collar_blk"
+	overlay_state = "collar_blk"
 
 /obj/item/clothing/accessory/collar/gold
 	name = "Golden tag collar"
 	desc = "A collar for your little pets... or the big ones."
 	icon_state = "collar_gld"
-	item_state = "collar_gld_overlay"
-	overlay_state = "collar_gld_overlay"
+	item_state = "collar_gld"
+	overlay_state = "collar_gld"
 
 /obj/item/clothing/accessory/collar/bell
 	name = "Bell collar"
 	desc = "A collar with a tiny bell hanging from it, purrfect furr kitties."
 	icon_state = "collar_bell"
-	item_state = "collar_bell_overlay"
-	overlay_state = "collar_bell_overlay"
+	item_state = "collar_bell"
+	overlay_state = "collar_bell"
 	var/jingled = 0
 
 /obj/item/clothing/accessory/collar/bell/verb/jinglebell()
@@ -38,7 +124,8 @@
 	if(usr.stat) return
 
 	if(!jingled)
-		usr.audible_message("[usr] jingles the [src]'s bell.")
+		usr.audible_message("[usr] jingles the [src]'s bell.", runemessage = "jingle")
+		playsound(src, 'sound/items/pickup/ring.ogg', 50, 1)
 		jingled = 1
 		addtimer(CALLBACK(src, .proc/jingledreset), 50)
 	return
@@ -50,15 +137,15 @@
 	name = "Shock collar"
 	desc = "A collar used to ease hungry predators."
 	icon_state = "collar_shk0"
-	item_state = "collar_shk_overlay"
-	overlay_state = "collar_shk_overlay"
+	item_state = "collar_shk"
+	overlay_state = "collar_shk"
 	var/on = FALSE // 0 for off, 1 for on, starts off to encourage people to set non-default frequencies and codes.
 	var/frequency = 1449
 	var/code = 2
 	var/datum/radio_frequency/radio_connection
 
 /obj/item/clothing/accessory/collar/shock/Initialize()
-	..()
+	. = ..()
 	radio_connection = radio_controller.add_object(src, frequency, RADIO_CHAT) // Makes it so you don't need to change the frequency off of default for it to work.
 
 /obj/item/clothing/accessory/collar/shock/Destroy() //Clean up your toys when you're done.
@@ -80,7 +167,7 @@
 			var/new_frequency = sanitize_frequency(frequency + text2num(href_list["freq"]))
 			set_frequency(new_frequency)
 		if(href_list["tag"])
-			var/str = copytext(reject_bad_text(input(usr,"Tag text?","Set tag","")),1,MAX_NAME_LEN)
+			var/str = copytext(reject_bad_text(tgui_input_text(usr,"Tag text?","Set tag","",MAX_NAME_LEN)),1,MAX_NAME_LEN)
 			if(!str || !length(str))
 				to_chat(usr,"<span class='notice'>[name]'s tag set to be blank.</span>")
 				name = initial(name)
@@ -165,31 +252,41 @@
 	name = "Spiked collar"
 	desc = "A collar with spikes that look as sharp as your teeth."
 	icon_state = "collar_spik"
-	item_state = "collar_spik_overlay"
-	overlay_state = "collar_spik_overlay"
+	item_state = "collar_spik"
+	overlay_state = "collar_spik"
 
 /obj/item/clothing/accessory/collar/pink
 	name = "Pink collar"
 	desc = "This collar will make your pets look FA-BU-LOUS."
 	icon_state = "collar_pnk"
-	item_state = "collar_pnk_overlay"
-	overlay_state = "collar_pnk_overlay"
+	item_state = "collar_pnk"
+	overlay_state = "collar_pnk"
+
+/obj/item/clothing/accessory/collar/cowbell
+	name = "cowbell collar"
+	desc = "A collar for your little pets... or the big ones."
+	icon_state = "collar_cowbell"
+	item_state = "collar_cowbell_overlay"
+	overlay_state = "collar_cowbell_overlay"
+
+/obj/item/clothing/accessory/collar/collarplanet_earth
+	name = "planet collar"
+	desc = "A collar featuring a surprisingly detailed replica of a earth-like planet surrounded by a weak battery powered force shield. There is a button to turn it off."
+	icon_state = "collarplanet_earth"
+	item_state = "collarplanet_earth"
+	overlay_state = "collarplanet_earth"
+
 
 /obj/item/clothing/accessory/collar/holo
 	name = "Holo-collar"
 	desc = "An expensive holo-collar for the modern day pet."
 	icon_state = "collar_holo"
-	item_state = "collar_holo_overlay"
-	overlay_state = "collar_holo_overlay"
-	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	item_state = "collar_holo"
+	overlay_state = "collar_holo"
+	matter = list(MAT_STEEL = 50)
 
-//TFF 17/6/19 - public loadout addition: Indigestible Holocollar
 /obj/item/clothing/accessory/collar/holo/indigestible
-	name = "Holo-collar"
 	desc = "A special variety of the holo-collar that seems to be made of a very durable fabric that fits around the neck."
-	icon_state = "collar_holo"
-	item_state = "collar_holo_overlay"
-	overlay_state = "collar_holo_overlay"
 //Make indigestible
 /obj/item/clothing/accessory/collar/holo/indigestible/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
@@ -203,7 +300,7 @@
 			return
 		to_chat(user,"<span class='notice'>You adjust the [name]'s tag.</span>")
 
-	var/str = copytext(reject_bad_text(input(user,"Tag text?","Set tag","")),1,MAX_NAME_LEN)
+	var/str = copytext(reject_bad_text(tgui_input_text(user,"Tag text?","Set tag","",MAX_NAME_LEN)),1,MAX_NAME_LEN)
 
 	if(!str || !length(str))
 		to_chat(user,"<span class='notice'>[name]'s tag set to be blank.</span>")
@@ -240,7 +337,7 @@
 	if(!(istype(user.get_active_hand(),I)) || !(istype(user.get_inactive_hand(),src)) || (user.stat))
 		return
 
-	var/str = copytext(reject_bad_text(input(user,"Tag text?","Set tag","")),1,MAX_NAME_LEN)
+	var/str = copytext(reject_bad_text(tgui_input_text(user,"Tag text?","Set tag","",MAX_NAME_LEN)),1,MAX_NAME_LEN)
 
 	if(!str || !length(str))
 		if(!writtenon)
@@ -267,7 +364,7 @@
 	icon_state = "holster_machete"
 	slot = ACCESSORY_SLOT_WEAPON
 	concealed_holster = 0
-	can_hold = list(/obj/item/weapon/material/knife/machete)
+	can_hold = list(/obj/item/weapon/material/knife/machete, /obj/item/weapon/kinetic_crusher/machete)
 	//sound_in = 'sound/effects/holster/sheathin.ogg'
 	//sound_out = 'sound/effects/holster/sheathout.ogg'
 
@@ -276,3 +373,47 @@
 /obj/item/clothing/accessory/medal/silver/unity
 	name = "medal of unity"
 	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat."
+
+/obj/item/clothing/accessory/medal/silver/unity/tabiranth
+	icon = 'icons/inventory/accessory/item_vr.dmi'
+	icon_override = 'icons/inventory/accessory/mob_vr.dmi'
+	icon_state = "silverthree"
+	item_state = "silverthree"
+	overlay_state = "silverthree"
+	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat. This one has three bronze service stars, denoting that it has been awarded four times."
+
+/obj/item/clothing/accessory/talon
+	name = "Talon pin"
+	desc = "A collectable enamel pin that resembles ITV Talon's ship logo."
+	icon = 'icons/inventory/accessory/item_vr.dmi'
+	icon_override = 'icons/inventory/accessory/mob_vr.dmi'
+	icon_state = "talon_pin"
+	item_state = "talonpin"
+	overlay_state = "talonpin"
+
+//Casino Slave Collar
+
+/obj/item/clothing/accessory/collar/casinoslave
+	name = "a disabled Sentient Prize Collar"
+	desc = "A collar worn by sentient prizes registered to a SPASM. Although the red text on it shows its disconnected and nonfunctional."
+
+	icon_state = "casinoslave"
+	item_state = "casinoslave"
+	overlay_state = "casinoslave"
+
+	var/slavename = null	//Name for system to put on collar description
+	var/ownername = null	//Name for system to put on collar description
+	var/slaveckey = null	//Ckey for system to check who is the person and ensure no abuse of system or errors
+	var/slaveflavor = null	//Description to show on the SPASM
+	var/slaveooc = null		//OOC text to show on the SPASM
+
+/obj/item/clothing/accessory/collar/casinoslave/attack_self(mob/user as mob)
+	//keeping it blank so people don't tag and reset collar status
+
+/obj/item/clothing/accessory/collar/casinoslave_fake
+	name = "a Sentient Prize Collar"
+	desc = "A collar worn by sentient prizes registered to a SPASM. This one has been disconnected from the system and is now an accessory!"
+
+	icon_state = "casinoslave_owned"
+	item_state = "casinoslave_owned"
+	overlay_state = "casinoslave_owned"

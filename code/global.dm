@@ -1,11 +1,10 @@
 //#define TESTING
-#if DM_VERSION < 506
-#warn This compiler is out of date. You may experience issues with projectile animations.
+#if DM_VERSION < 512
+#error This compiler is out of date Please update to at least BYOND 512.
 #endif
 
 // Items that ask to be called every cycle.
 var/global/datum/datacore/data_core = null
-var/global/list/all_areas                = list()
 var/global/list/machines                 = list()	// ALL Machines, wether processing or not.
 var/global/list/processing_machines      = list()	// TODO - Move into SSmachines
 var/global/list/processing_power_items   = list()	// TODO - Move into SSmachines
@@ -38,7 +37,7 @@ var/href_logfile		= null
 // var/const/starsys_name	= "Vir"
 var/const/game_version	= "VOREStation"
 var/changelog_hash		= ""
-var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544)
+var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 300) //VOREStation Edit
 var/round_progressing = 1
 
 var/master_mode       = "extended" // "extended"
@@ -107,7 +106,6 @@ var/gravity_is_on = 1
 
 var/join_motd = null
 
-var/datum/game_master/game_master = new() // Game Master, an AI for choosing events.
 var/datum/metric/metric = new() // Metric datum, used to keep track of the round.
 
 var/list/awaydestinations = list() // Away missions. A list of landmarks that the warpgate can take you to.
@@ -132,18 +130,28 @@ var/custom_event_msg = null
 var/DBConnection/dbcon     = new() // Feedback    database (New database)
 var/DBConnection/dbcon_old = new() // /tg/station database (Old database) -- see the files in the SQL folder for information on what goes where.
 
-// Reference list for disposal sort junctions. Filled up by sorting junction's New()
-/var/list/tagger_locations = list()
-
 // Added for Xenoarchaeology, might be useful for other stuff.
 var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
 
 
-// Used by robots and robot preferences.
+// Used by robots and robot preferences for regular modules.
 var/list/robot_module_types = list(
 	"Standard", "Engineering", "Surgeon",  "Crisis",
 	"Miner",    "Janitor",     "Service",      "Clerical", "Security",
-	"Research"
+	"Research", "Medihound", "K9", "Janihound", "Sci-borg", "Pupdozer",
+	"Service-Hound", "BoozeHound", "KMine", "TraumaHound"
+)
+// List of modules added during code red
+var/list/emergency_module_types = list(
+	"Combat", "ERT"
+)
+// List of modules available to AI shells
+var/list/shell_module_types = list(
+	"Standard", "Service", "Clerical", "Service-Hound", "BoozeHound"
+)
+// List of whitelisted modules
+var/list/whitelisted_module_types = list(
+	"Lost", "Stray"
 )
 
 // Some scary sounds.
@@ -162,7 +170,7 @@ var/static/list/scarySounds = list(
 	'sound/effects/Glassbr3.ogg',
 	'sound/items/Welder.ogg',
 	'sound/items/Welder2.ogg',
-	'sound/machines/airlock.ogg',
+	'sound/machines/door/old_airlock.ogg',
 	'sound/effects/clownstep1.ogg',
 	'sound/effects/clownstep2.ogg'
 )
@@ -178,6 +186,7 @@ var/list/station_departments = list("Command", "Medical", "Engineering", "Scienc
 //Icons for in-game HUD glasses. Why don't we just share these a little bit?
 var/static/icon/ingame_hud = icon('icons/mob/hud.dmi')
 var/static/icon/ingame_hud_med = icon('icons/mob/hud_med.dmi')
+var/static/icon/buildmode_hud = icon('icons/misc/buildmode.dmi')
 
 //Keyed list for caching icons so you don't need to make them for records, IDs, etc all separately.
 //Could be useful for AI impersonation or something at some point?

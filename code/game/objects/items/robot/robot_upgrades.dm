@@ -6,6 +6,8 @@
 	desc = "Protected by FRM."
 	icon = 'icons/obj/module.dmi'
 	icon_state = "cyborg_upgrade"
+	///	Bitflags listing module compatibility. Used in the exosuit fabricator for creating sub-categories.
+	var/list/module_flags = NONE
 	var/locked = 0
 	var/require_module = 0
 	var/installed = 0
@@ -38,7 +40,7 @@
 	var/heldname = "default name"
 
 /obj/item/borg/upgrade/rename/attack_self(mob/user as mob)
-	heldname = sanitizeSafe(input(user, "Enter new robot name", "Robot Reclassification", heldname), MAX_NAME_LEN)
+	heldname = sanitizeSafe(tgui_input_text(user, "Enter new robot name", "Robot Reclassification", heldname, MAX_NAME_LEN), MAX_NAME_LEN)
 
 /obj/item/borg/upgrade/rename/action(var/mob/living/silicon/robot/R)
 	if(..()) return 0
@@ -66,7 +68,8 @@
 			if(ghost.mind && ghost.mind.current == R)
 				R.key = ghost.key
 
-	R.stat = CONSCIOUS
+	R.set_stat(CONSCIOUS)
+	R.add_robot_verbs()
 	dead_mob_list -= R
 	living_mob_list |= R
 	R.notify_ai(ROBOT_NOTIFICATION_NEW_UNIT)
@@ -95,6 +98,7 @@
 	desc = "Used to cool a mounted taser, increasing the potential current in it and thus its recharge rate."
 	icon_state = "cyborg_upgrade3"
 	item_state = "cyborg_upgrade"
+	module_flags = BORG_MODULE_SECURITY
 	require_module = 1
 
 
@@ -152,7 +156,7 @@
 
 /obj/item/borg/upgrade/advhealth
 	name = "advanced health analyzer module"
-	desc = "A carbon dioxide jetpack suitable for low-gravity operations."
+	desc = "An Advanced Health Analyzer, optimized for borg mounting."
 	icon_state = "cyborg_upgrade3"
 	item_state = "cyborg_upgrade"
 	require_module = 1
@@ -204,7 +208,6 @@
 	R.add_language(LANGUAGE_SIIK, 1)
 	R.add_language(LANGUAGE_AKHANI, 1)
 	R.add_language(LANGUAGE_SKRELLIAN, 1)
-	R.add_language(LANGUAGE_SKRELLIANFAR, 0)
 	R.add_language(LANGUAGE_GUTTER, 1)
 	R.add_language(LANGUAGE_SCHECHI, 1)
 	R.add_language(LANGUAGE_ROOTLOCAL, 1)

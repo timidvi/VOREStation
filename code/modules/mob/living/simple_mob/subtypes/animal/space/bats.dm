@@ -13,12 +13,14 @@
 	maxHealth = 20
 	health = 20
 
-	attacktext = list("bites")
+	attacktext = list("bitten")
 	attack_sound = 'sound/weapons/bite.ogg'
 
 	response_help = "pets the"
 	response_disarm = "gently pushes aside the"
 	response_harm = "hits the"
+
+	organ_names = /decl/mob_organ_names/smallflying
 
 	harm_intent_damage = 10
 
@@ -31,6 +33,7 @@
 	has_langs = list("Mouse")
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_amount = 2
 
 	say_list_type = /datum/say_list/mouse	// Close enough
 
@@ -41,7 +44,7 @@
 		var/mob/living/L = A
 		if(prob(scare_chance))
 			L.Stun(1)
-			L.visible_message("<span class='danger'>\the [src] scares \the [L]!</span>")
+			L.visible_message("<span class='danger'>\The [src] scares \the [L]!</span>")
 
 // Spookiest of bats
 /mob/living/simple_mob/animal/space/bats/cult
@@ -50,3 +53,8 @@
 
 /mob/living/simple_mob/animal/space/bats/cult/cultify()
 	return
+
+/mob/living/simple_mob/animal/space/bats/cult/strong
+	maxHealth = 60
+	health = 60
+	melee_damage_upper = 10

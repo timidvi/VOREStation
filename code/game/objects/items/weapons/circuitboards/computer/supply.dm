@@ -32,12 +32,12 @@
 			opposite_catastasis = "BROAD"
 			catastasis = "STANDARD"
 
-		switch( alert("Current receiver spectrum is set to: [catastasis]","Multitool-Circuitboard interface","Switch to [opposite_catastasis]","Cancel") )
+		switch( tgui_alert(usr, "Current receiver spectrum is set to: [catastasis]","Multitool-Circuitboard interface",list("Switch to [opposite_catastasis]","Cancel")) )
 			if("Switch to STANDARD","Switch to BROAD")
 				src.contraband_enabled = !src.contraband_enabled
 
 			if("Cancel")
 				return
 			else
-				user << "DERP! BUG! Report this (And what you were doing to cause it) to Agouri"
+				to_chat(user, "DERP! BUG! Report this (And what you were doing to cause it) to Agouri")
 	return

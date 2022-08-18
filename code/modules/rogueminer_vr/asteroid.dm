@@ -5,8 +5,8 @@
 
 /datum/rogue/asteroid
 	//Composition
-	var/type_wall	= /turf/simulated/mineral		//Type of turf used to generate the asteroid
-	var/type_under	= /turf/simulated/mineral/floor	//Type of turf that's under the normal one
+	var/type_wall	= /turf/simulated/mineral/vacuum		//Type of turf used to generate the asteroid
+	var/type_under	= /turf/simulated/mineral/floor/vacuum	//Type of turf that's under the normal one
 
 	//Dimensions
 	var/coresize 	= 3		//The size of the center square
@@ -92,28 +92,28 @@
 	type_wall	= /turf/simulated/wall
 	type_under	= /turf/simulated/floor/plating
 
-	New()
-		..()
-		spot_add(1,1,type_wall) //Bottom left corner
-		spot_add(1,2,type_wall)
-		spot_add(1,3,type_wall)
-		spot_add(2,1,type_wall)
-		spot_add(2,2,type_under) //Center floor
-		spot_add(2,2,/obj/random/cargopod) //Loot!
-		spot_add(2,3,type_wall)
-		spot_add(3,1,type_wall)
-		spot_add(3,2,type_wall)
-		spot_add(3,3,type_wall) //Bottom right corner
+/datum/rogue/asteroid/predef/cargo/New()
+	..()
+	spot_add(1,1,type_wall) //Bottom left corner
+	spot_add(1,2,type_wall)
+	spot_add(1,3,type_wall)
+	spot_add(2,1,type_wall)
+	spot_add(2,2,type_under) //Center floor
+	spot_add(2,2,/obj/random/roguemineloot) //Loot!
+	spot_add(2,3,type_wall)
+	spot_add(3,1,type_wall)
+	spot_add(3,2,type_wall)
+	spot_add(3,3,type_wall) //Bottom right corner
 
 //Abandoned 1-tile hollow cargo box (ANGRY).
 /datum/rogue/asteroid/predef/cargo/angry
 	type_wall	= /turf/simulated/wall
 	type_under	= /turf/simulated/floor/plating
 
-	New()
-		..()
-		spot_add(2,2,/obj/random/cargopod) //EXTRA loot!
-		spot_add(2,2,/mob/living/simple_mob/animal/space/alien) //GRRR
+/datum/rogue/asteroid/predef/cargo/angry/New()
+	..()
+	spot_add(2,2,/obj/random/roguemineloot) //EXTRA loot!
+	spot_add(2,2,/mob/living/simple_mob/animal/space/alien) //GRRR
 
 //Longer cargo container for higher difficulties
 /datum/rogue/asteroid/predef/cargo_large
@@ -121,30 +121,30 @@
 	type_wall	= /turf/simulated/wall
 	type_under	= /turf/simulated/floor/plating
 
-	New()
-		..()
-		spot_add(1,2,type_wall) //--
-		spot_add(1,3,type_wall) //Left end of cargo container
-		spot_add(1,4,type_wall) //--
+/datum/rogue/asteroid/predef/cargo_large/New()
+	..()
+	spot_add(1,2,type_wall) //--
+	spot_add(1,3,type_wall) //Left end of cargo container
+	spot_add(1,4,type_wall) //--
 
-		spot_add(5,2,type_wall) //--
-		spot_add(5,3,type_wall) //Right end of cargo container
-		spot_add(5,4,type_wall) //--
+	spot_add(5,2,type_wall) //--
+	spot_add(5,3,type_wall) //Right end of cargo container
+	spot_add(5,4,type_wall) //--
 
-		spot_add(2,4,type_wall) //--
-		spot_add(3,4,type_wall) //Top and
-		spot_add(4,4,type_wall) //bottom of
-		spot_add(2,2,type_wall) //cargo
-		spot_add(3,2,type_wall) //container
-		spot_add(4,2,type_wall) //--
+	spot_add(2,4,type_wall) //--
+	spot_add(3,4,type_wall) //Top and
+	spot_add(4,4,type_wall) //bottom of
+	spot_add(2,2,type_wall) //cargo
+	spot_add(3,2,type_wall) //container
+	spot_add(4,2,type_wall) //--
 
-		spot_add(2,3,type_under) //Left floor
-		spot_add(3,3,type_under) //Mid floor
-		spot_add(4,3,type_under) //Right floor
+	spot_add(2,3,type_under) //Left floor
+	spot_add(3,3,type_under) //Mid floor
+	spot_add(4,3,type_under) //Right floor
 
-		spot_add(2,3,/obj/random/cargopod) //Left loot
-		spot_add(3,3,/obj/random/cargopod) //Mid loot
-		spot_add(4,3,/obj/random/cargopod) //Right loot
+	spot_add(2,3,/obj/random/roguemineloot) //Left loot
+	spot_add(3,3,/obj/random/roguemineloot) //Mid loot
+	spot_add(4,3,/obj/random/roguemineloot) //Right loot
 
-		if(prob(30))
-			spot_add(3,3,/mob/living/simple_mob/animal/space/alien) //And maybe a friend.
+	if(prob(30))
+		spot_add(3,3,/mob/living/simple_mob/animal/space/alien/sentinel/praetorian) //And maybe a big friend for big loot.

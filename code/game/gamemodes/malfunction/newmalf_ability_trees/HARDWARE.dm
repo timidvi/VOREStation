@@ -19,11 +19,11 @@
 		return
 
 	if(user.bombing_core)
-		user << "***** CORE SELF-DESTRUCT SEQUENCE ABORTED *****"
+		to_chat(user, "***** CORE SELF-DESTRUCT SEQUENCE ABORTED *****")
 		user.bombing_core = 0
 		return
 
-	var/choice = alert("Really destroy core?", "Core self-destruct", "YES", "NO")
+	var/choice = tgui_alert(user, "Really destroy core?", "Core self-destruct", list("YES", "NO"))
 	if(choice != "YES")
 		return
 
@@ -32,15 +32,15 @@
 
 	user.bombing_core = 1
 
-	user << "***** CORE SELF-DESTRUCT SEQUENCE ACTIVATED *****"
-	user << "Use command again to cancel self-destruct. Destroying in 15 seconds."
+	to_chat(user, "***** CORE SELF-DESTRUCT SEQUENCE ACTIVATED *****")
+	to_chat(user, "Use command again to cancel self-destruct. Destroying in 15 seconds.")
 	var/timer = 15
 	while(timer)
 		sleep(10)
 		timer--
 		if(!user || !user.bombing_core)
 			return
-		user << "** [timer] **"
+		to_chat(user, "** [timer] **")
 	explosion(user.loc, 3,6,12,24)
 	qdel(user)
 
@@ -75,20 +75,20 @@
 		return
 
 	if(user.system_override != 2)
-		user << "You do not have access to self-destruct system."
+		to_chat(user, "You do not have access to self-destruct system.")
 		return
 
 	if(user.bombing_station)
 		user.bombing_station = 0
 		return
 
-	var/choice = alert("Really destroy station?", "Station self-destruct", "YES", "NO")
+	var/choice = tgui_alert(user, "Really destroy station?", "Station self-destruct", list("YES", "NO"))
 	if(choice != "YES")
 		return
 	if(!ability_prechecks(user, 0, 0))
 		return
-	user << "***** STATION SELF-DESTRUCT SEQUENCE INITIATED *****"
-	user << "Self-destructing in 2 minutes. Use this command again to abort."
+	to_chat(user, "***** STATION SELF-DESTRUCT SEQUENCE INITIATED *****")
+	to_chat(user, "Self-destructing in 2 minutes. Use this command again to abort.")
 	user.bombing_station = 1
 	set_security_level("delta")
 	radio.autosay("Self destruct sequence has been activated. Self-destructing in 120 seconds.", "Self-Destruct Control")

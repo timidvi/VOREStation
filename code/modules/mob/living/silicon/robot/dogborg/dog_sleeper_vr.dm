@@ -1,3 +1,5 @@
+#define SLEEPER_INJECT_COST 600 // Note that this has unlimited supply unlike a borg hypo, so should be balanced accordingly
+
 //Sleeper
 /obj/item/device/dogborg/sleeper
 	name = "Medbelly"
@@ -11,7 +13,7 @@
 	var/min_health = -100
 	var/cleaning = 0
 	var/patient_laststat = null
-	var/list/injection_chems = list("inaprovaline", "dexalin", "bicaridine", "kelotane","anti_toxin", "alkysine", "imidazoline", "spaceacillin", "paracetamol") //The borg is able to heal every damage type. As a nerf, they use 750 charge per injection.
+	var/list/injection_chems = list("inaprovaline", "dexalin", "bicaridine", "kelotane", "anti_toxin", "spaceacillin", "paracetamol") //The borg is able to heal every damage type. As a nerf, they use 750 charge per injection.
 	var/eject_port = "ingestion"
 	var/list/items_preserved = list()
 	var/UI_open = FALSE
@@ -20,7 +22,7 @@
 	var/decompiler = FALSE
 	var/delivery = FALSE
 	var/delivery_tag = "Fuel"
-	var/list/deliverylists = list()
+	var/list/list/deliverylists = list()
 	var/list/deliveryslot_1 = list()
 	var/list/deliveryslot_2 = list()
 	var/list/deliveryslot_3 = list()
@@ -28,6 +30,7 @@
 	var/synced = FALSE
 	var/startdrain = 500
 	var/max_item_count = 1
+	var/upgraded_capacity = FALSE
 	var/gulpsound = 'sound/vore/gulp.ogg'
 	var/datum/matter_synth/metal = null
 	var/datum/matter_synth/glass = null
@@ -36,12 +39,16 @@
 	var/datum/matter_synth/water = null
 	var/digest_brute = 2
 	var/digest_burn = 3
+	var/digest_multiplier = 1
 	var/recycles = FALSE
+	var/medsensor = TRUE //Does belly sprite come with patient ok/dead light?
+	var/obj/item/device/healthanalyzer/med_analyzer = null
 
 /obj/item/device/dogborg/sleeper/New()
 	..()
 	flags |= NOBLUDGEON //No more attack messages
 	files = new /datum/research/techonly(src)
+	med_analyzer = new /obj/item/device/healthanalyzer
 
 /obj/item/device/dogborg/sleeper/Destroy()
 	go_out()
@@ -49,6 +56,13 @@
 
 /obj/item/device/dogborg/sleeper/Exit(atom/movable/O)
 	return 0
+
+/obj/item/device/dogborg/sleeper/return_air()
+	return return_air_for_internal_lifeform()
+
+/obj/item/device/dogborg/sleeper/return_air_for_internal_lifeform()
+	var/datum/gas_mixture/belly_air/air = new(1000)
+	return air
 
 /obj/item/device/dogborg/sleeper/afterattack(var/atom/movable/target, mob/living/silicon/user, proximity)
 	hound = loc
@@ -77,7 +91,7 @@
 			if(do_after(user, 30, target) && length(contents) < max_item_count)
 				target.forceMove(src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [target.name] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [target] slips inside.</span>")
-				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(analyzer && istype(target,/obj/item))
 					var/obj/item/tech_item = target
 					for(var/T in tech_item.origin_tech)
@@ -95,7 +109,7 @@
 				trashmouse.forceMove(src)
 				trashmouse.reset_view(src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [trashmouse] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [trashmouse] slips inside.</span>")
-				playsound(hound, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 60, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
 						deliverylists[delivery_tag] |= trashmouse
@@ -117,7 +131,7 @@
 				START_PROCESSING(SSobj, src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] groans lightly as [trashman] slips inside.</span>", "<span class='notice'>Your [src.name] groans lightly as [trashman] slips inside.</span>")
 				message_admins("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
-				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
 						deliverylists[delivery_tag] |= trashman
@@ -148,7 +162,7 @@
 				START_PROCESSING(SSobj, src)
 				user.visible_message("<span class='warning'>[hound.name]'s [src.name] lights up as [H.name] slips inside.</span>", "<span class='notice'>Your [src] lights up as [H] slips inside. Life support functions engaged.</span>")
 				message_admins("[key_name(hound)] has eaten [key_name(patient)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
-				playsound(hound, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
+				playsound(src, gulpsound, vol = 100, vary = 1, falloff = 0.1, preference = /datum/client_preference/eating_noises)
 
 /obj/item/device/dogborg/sleeper/proc/go_out(var/target)
 	hound = src.loc
@@ -166,7 +180,7 @@
 			else
 				var/obj/T = C
 				T.loc = hound.loc
-		playsound(loc, 'sound/effects/splat.ogg', 50, 1)
+		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 		update_patient()
 	else //You clicked eject with nothing in you, let's just reset stuff to be sure.
 		update_patient()
@@ -204,6 +218,8 @@
 	dat += "<A href='?src=\ref[src];port=1'>Eject port: [eject_port]</A>"
 	if(!cleaning)
 		dat += "<A href='?src=\ref[src];clean=1'>Self-Clean</A>"
+	if(medsensor)
+		dat += "<A href='?src=\ref[src];analyze=1'>Analyze Patient</A>"
 	else
 		dat += "<span class='linkOff'>Self-Clean</span>"
 	if(delivery)
@@ -216,21 +232,21 @@
 
 	if(!delivery && compactor && length(contents))//garbage counter for trashpup
 		dat += "<font color='red'><B>Current load:</B> [length(contents)] / [max_item_count] objects.</font><BR>"
-		dat += "<font color='gray'>([list2text(contents,", ")])</font><BR><BR>"
+		dat += "<font color='gray'>([contents.Join(", ")])</font><BR><BR>"
 
 	if(delivery && length(contents))
 		dat += "<font color='red'><B>Current load:</B> [length(contents)] / [max_item_count] objects.</font><BR>"
 		dat += "<font color='gray'>Cargo compartment slot: Cargo 1.</font><BR>"
 		if(length(deliveryslot_1))
-			dat += "<font color='gray'>([list2text(deliveryslot_1,", ")])</font><BR>"
+			dat += "<font color='gray'>([deliveryslot_1.Join(", ")])</font><BR>"
 		dat += "<font color='gray'>Cargo compartment slot: Cargo 2.</font><BR>"
 		if(length(deliveryslot_2))
-			dat += "<font color='gray'>([list2text(deliveryslot_2,", ")])</font><BR>"
+			dat += "<font color='gray'>([deliveryslot_2.Join(", ")])</font><BR>"
 		dat += "<font color='gray'>Cargo compartment slot: Cargo 3.</font><BR>"
 		if(length(deliveryslot_3))
-			dat += "<font color='gray'>([list2text(deliveryslot_3,", ")])</font><BR>"
+			dat += "<font color='gray'>([deliveryslot_3.Join(", ")])</font><BR>"
 		dat += "<font color='red'>Cargo compartment slot: Fuel.</font><BR>"
-		dat += "<font color='red'>([list2text(contents - (deliveryslot_1 + deliveryslot_2 + deliveryslot_3),", ")])</font><BR><BR>"
+		dat += "<font color='red'>([jointext(contents - (deliveryslot_1 + deliveryslot_2 + deliveryslot_3),", ")])</font><BR><BR>"
 
 	if(analyzer && !synced)
 		dat += "<A href='?src=\ref[src];sync=1'>Sync Files</A><BR>"
@@ -309,7 +325,7 @@
 		return
 	if(href_list["clean"])
 		if(!cleaning)
-			var/confirm = alert(usr, "You are about to engage self-cleaning mode. This will fill your [src] with caustic enzymes to remove any objects or biomatter, and convert them into energy. Are you sure?", "Confirmation", "Self-Clean", "Cancel")
+			var/confirm = tgui_alert(usr, "You are about to engage self-cleaning mode. This will fill your [src] with caustic enzymes to remove any objects or biomatter, and convert them into energy. Are you sure?", "Confirmation", list("Self-Clean", "Cancel"))
 			if(confirm == "Self-Clean")
 				if(cleaning)
 					return
@@ -324,6 +340,8 @@
 		if(cleaning)
 			sleeperUI(usr)
 			return
+	if(href_list["analyze"]) //DO HEALTH ANALYZER STUFF HERE.
+		med_analyzer.scan_mob(patient,hound)
 	if(href_list["port"])
 		switch(eject_port)
 			if("ingestion")
@@ -333,7 +351,7 @@
 		sleeperUI(usr)
 		return
 	if(href_list["deliveryslot"])
-		var/tag = input("Select active delivery slot.") as null|anything in deliverylists
+		var/tag = tgui_input_list(usr, "Select active delivery slot:", "Slot Choice", deliverylists)
 		if(!tag)
 			return 0
 		delivery_tag = tag
@@ -350,7 +368,7 @@
 				else
 					var/obj/T = C
 					T.loc = hound.loc
-			playsound(loc, 'sound/effects/splat.ogg', 50, 1)
+			playsound(src, 'sound/effects/splat.ogg', 50, 1)
 			update_patient()
 			deliverylists[delivery_tag].Cut()
 		sleeperUI(usr)
@@ -367,10 +385,10 @@
 			files.RefreshResearch()
 		if(success)
 			to_chat(usr, "You connect to the research server, push your data upstream to it, then pull the resulting merged data from the master branch.")
-			playsound(src.loc, 'sound/machines/twobeep.ogg', 50, 1)
+			playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
 		else
 			to_chat(usr, "Reserch server ping response timed out.  Unable to connect.  Please contact the system administrator.")
-			playsound(src.loc, 'sound/machines/buzz-two.ogg', 50, 1)
+			playsound(src, 'sound/machines/buzz-two.ogg', 50, 1)
 		sleeperUI(usr)
 		return
 
@@ -396,7 +414,7 @@
 				to_chat(hound, "<span class='notice'>Your stomach is currently too full of fluids to secrete more fluids of this kind.</span>")
 			else if(patient.reagents.get_reagent_amount(chem) + 10 <= 20) //No overdoses for you
 				patient.reagents.add_reagent(chem, inject_amount)
-				drain(750) //-750 charge per injection
+				drain(SLEEPER_INJECT_COST)
 			var/units = round(patient.reagents.get_reagent_amount(chem))
 			to_chat(hound, "<span class='notice'>Injecting [units] unit\s of [SSchemistry.chemical_reagents[chem]] into occupant.</span>") //If they were immersed, the reagents wouldn't leave with them.
 
@@ -417,21 +435,25 @@
 
 	//Well, we HAD one, what happened to them?
 	if(patient in contents)
-		if(patient_laststat != patient.stat)
-			if(cleaning)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
-			else if(patient.stat & DEAD)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
-			else
-				hound.sleeper_r = FALSE
-				hound.sleeper_g = TRUE
-				patient_laststat = patient.stat
-			//Update icon
-			hound.updateicon()
+		if(medsensor)
+			if(patient_laststat != patient.stat)
+				if(cleaning)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else if(patient.stat & DEAD)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else
+					hound.sleeper_r = FALSE
+					hound.sleeper_g = TRUE
+					patient_laststat = patient.stat
+		else
+			hound.sleeper_r = TRUE
+			patient_laststat = patient.stat
+		//Update icon
+		hound.updateicon()
 		//Return original patient
 		return(patient)
 
@@ -439,17 +461,21 @@
 	else
 		for(var/mob/living/carbon/human/C in contents)
 			patient = C
-			if(cleaning)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
-			else if(patient.stat & DEAD)
-				hound.sleeper_r = TRUE
-				hound.sleeper_g = FALSE
-				patient_laststat = patient.stat
+			if(medsensor)
+				if(cleaning)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else if(patient.stat & DEAD)
+					hound.sleeper_r = TRUE
+					hound.sleeper_g = FALSE
+					patient_laststat = patient.stat
+				else
+					hound.sleeper_r = FALSE
+					hound.sleeper_g = TRUE
+					patient_laststat = patient.stat
 			else
-				hound.sleeper_r = FALSE
-				hound.sleeper_g = TRUE
+				hound.sleeper_r = TRUE
 				patient_laststat = patient.stat
 			//Update icon and return new patient
 			hound.updateicon()
@@ -488,11 +514,11 @@
 			'sound/vore/death8.ogg',
 			'sound/vore/death9.ogg',
 			'sound/vore/death10.ogg')
-		playsound(hound, finisher, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, finisher, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 		to_chat(hound, "<span class='notice'>Your [src.name] is now clean. Ending self-cleaning cycle.</span>")
 		cleaning = 0
 		update_patient()
-		playsound(hound, 'sound/machines/ding.ogg', vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, 'sound/machines/ding.ogg', vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 		return
 
 	if(prob(20))
@@ -509,7 +535,7 @@
 			'sound/vore/digest10.ogg',
 			'sound/vore/digest11.ogg',
 			'sound/vore/digest12.ogg')
-		playsound(hound, churnsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+		playsound(src, churnsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 	//If the timing is right, and there are items to be touched
 	if(air_master.current_cycle%3==1 && length(touchable_items))
 
@@ -522,13 +548,14 @@
 			else
 				var/old_brute = T.getBruteLoss()
 				var/old_burn = T.getFireLoss()
-				T.adjustBruteLoss(digest_brute)
-				T.adjustFireLoss(digest_burn)
+				T.adjustBruteLoss(digest_brute * digest_multiplier)
+				T.adjustFireLoss(digest_burn * digest_multiplier)
 				var/actual_brute = T.getBruteLoss() - old_brute
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
 				drain(-25 * damage_gain) //25*total loss as with voreorgan stats.
-				water.add_charge(damage_gain)
+				if(water)
+					water.add_charge(damage_gain)
 				if(T.stat == DEAD)
 					if(ishuman(T))
 						message_admins("[key_name(hound)] has digested [key_name(T)] as a dogborg. ([hound ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[hound.x];Y=[hound.y];Z=[hound.z]'>JMP</a>" : "null"])")
@@ -545,10 +572,9 @@
 						'sound/vore/death8.ogg',
 						'sound/vore/death9.ogg',
 						'sound/vore/death10.ogg')
-					playsound(hound, deathsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
+					playsound(src, deathsound, vol = 100, vary = 1, falloff = 0.1, ignore_walls = TRUE, preference = /datum/client_preference/digestion_noises)
 					if(is_vore_predator(T))
-						for(var/belly in T.vore_organs)
-							var/obj/belly/B = belly
+						for(var/obj/belly/B as anything in T.vore_organs)
 							for(var/atom/movable/thing in B)
 								thing.forceMove(src)
 								if(ismob(thing))
@@ -566,10 +592,12 @@
 					if(ishuman(T))
 						var/mob/living/carbon/human/Prey = T
 						volume = (Prey.bloodstr.total_volume + Prey.ingested.total_volume + Prey.touching.total_volume + Prey.weight) * Prey.size_multiplier
-						water.add_charge(volume)
+						if(water)
+							water.add_charge(volume)
 					if(T.reagents)
 						volume = T.reagents.total_volume
-						water.add_charge(volume)
+						if(water)
+							water.add_charge(volume)
 					if(patient == T)
 						patient_laststat = null
 						patient = null
@@ -593,8 +621,7 @@
 						for(var/tech in tech_item.origin_tech)
 							files.UpdateTech(tech, tech_item.origin_tech[tech])
 							synced = FALSE
-						drain(-50 * digested)
-					if(volume)
+					if(volume && water)
 						water.add_charge(volume)
 					if(recycles && T.matter)
 						for(var/material in T.matter)
@@ -602,17 +629,16 @@
 							if(istype(T,/obj/item/stack))
 								var/obj/item/stack/stack = T
 								total_material *= stack.get_amount()
-							if(material == DEFAULT_WALL_MATERIAL)
+							if(material == MAT_STEEL && metal)
 								metal.add_charge(total_material)
-							if(material == "glass")
+							if(material == "glass" && glass)
 								glass.add_charge(total_material)
 							if(decompiler)
-								if(material == "plastic")
+								if(material == "plastic" && plastic)
 									plastic.add_charge(total_material)
-								if(material == "wood")
+								if(material == "wood" && wood)
 									wood.add_charge(total_material)
-					else
-						drain(-50 * digested)
+					drain(-50 * digested)
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
 				drain(-100)
@@ -650,6 +676,7 @@
 	desc = "Equipment for a K9 unit. A mounted portable-brig that holds criminals."
 	icon_state = "sleeperb"
 	injection_chems = null //So they don't have all the same chems as the medihound!
+	medsensor = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor //Janihound gut.
 	name = "Garbage Processor"
@@ -659,14 +686,16 @@
 	compactor = TRUE
 	recycles = TRUE
 	max_item_count = 25
+	medsensor = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/analyzer //sci-borg gut.
 	name = "Digestive Analyzer"
 	desc = "A mounted destructive analyzer unit with fuel processor."
 	icon_state = "analyzer"
-	max_item_count = 1
+	max_item_count = 10
 	startdrain = 100
 	analyzer = TRUE
+	recycles = FALSE
 
 /obj/item/device/dogborg/sleeper/compactor/decompiler
 	name = "Matter Decompiler"
@@ -682,3 +711,33 @@
 	icon_state = "decompiler"
 	max_item_count = 20
 	delivery = TRUE
+	recycles = FALSE
+
+/obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
+	name = "Supply Satchel"
+	desc = "A mounted survival unit with fuel processor."
+	icon_state = "sleeperc"
+	injection_chems = list("glucose","inaprovaline","tricordrazine")
+	max_item_count = 10
+	recycles = FALSE
+
+/obj/item/device/dogborg/sleeper/compactor/brewer
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = null
+
+/obj/item/device/dogborg/sleeper/K9/ert
+	name = "ERT Belly"
+	desc = "A mounted 'emergency containment cell'."
+	icon_state = "sleeperert"
+	injection_chems = list("inaprovaline", "paracetamol") // short list
+
+/obj/item/device/dogborg/sleeper/compactor/trauma //Trauma borg belly
+	name = "Recovery Belly"
+	desc = "A downgraded model of the medihound sleeper."
+	icon_state = "sleeper"
+	injection_chems = list("inaprovaline", "dexalin", "bicaridine", "anti_toxin", "spaceacillin", "paracetamol")
+	max_item_count = 1
+
+#undef SLEEPER_INJECT_COST

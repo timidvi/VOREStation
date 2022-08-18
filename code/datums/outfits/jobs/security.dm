@@ -8,6 +8,7 @@
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/sec
 	backpack_contents = list(/obj/item/weapon/handcuffs = 1)
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/sec
+	sports_bag = /obj/item/weapon/storage/backpack/sport/sec
 
 /decl/hierarchy/outfit/job/security/hos
 	name = OUTFIT_JOB_NAME("Head of security")
@@ -37,14 +38,17 @@
 	satchel_one = /obj/item/weapon/storage/backpack/satchel/norm
 	backpack_contents = list(/obj/item/weapon/storage/box/evidence = 1)
 
+//VOREStation Edit - More cyberpunky
 /decl/hierarchy/outfit/job/security/detective/forensic
 	name = OUTFIT_JOB_NAME("Forensic technician")
 	head = null
-	suit = /obj/item/clothing/suit/storage/forensics/blue
+	suit = /obj/item/clothing/suit/storage/det_trench/alt2
+	uniform = /obj/item/clothing/under/det
+//VOREStation Edit End
 
 /decl/hierarchy/outfit/job/security/officer
 	name = OUTFIT_JOB_NAME("Security Officer")
 	uniform = /obj/item/clothing/under/rank/security
 	l_pocket = /obj/item/device/flash
-	id_type = /obj/item/weapon/card/id/security/officer
+	id_type = /obj/item/weapon/card/id/security
 	pda_type = /obj/item/device/pda/security

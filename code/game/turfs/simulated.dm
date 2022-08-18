@@ -16,6 +16,7 @@
 	var/can_start_dirty = TRUE	// If false, cannot start dirty roundstart
 	var/dirty_prob = 2	// Chance of being dirty roundstart
 	var/dirt = 0
+	var/special_temperature //Used for turf HE-Pipe interaction
 
 // This is not great.
 /turf/simulated/proc/wet_floor(var/wet_val = 1)
@@ -55,8 +56,8 @@
 		B.clean_blood()
 	..()
 
-/turf/simulated/New()
-	..()
+/turf/simulated/Initialize(mapload)
+	. = ..()
 	if(istype(loc, /area/chapel))
 		holy = 1
 	levelupdate()
@@ -78,12 +79,12 @@
 
 /turf/simulated/Entered(atom/A, atom/OL)
 	if(movement_disabled && usr.ckey != movement_disabled_exception)
-		usr << "<span class='danger'>Movement is admin-disabled.</span>" //This is to identify lag problems
+		to_chat(usr, "<span class='danger'>Movement is admin-disabled.</span>") //This is to identify lag problems
 		return
 
 	if (istype(A,/mob/living))
 		var/mob/living/M = A
-		if(M.lying)
+		if(M.lying || M.flying) //VOREStation Edit
 			return ..()
 
 		if(M.dirties_floor())
@@ -138,6 +139,8 @@
 
 			if(M.slip("the [floor_type] floor", slip_stun))
 				for(var/i = 1 to slip_dist)
+					if(isbelly(M.loc))	//VOREEdit, Stop the slip if we're in a belly. Inspired by a chompedit, cleaned it up with isbelly instead of a variable since the var was resetting too fast.
+						return
 					step(M, M.dir)
 					sleep(1)
 			else

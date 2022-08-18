@@ -44,9 +44,9 @@
 		var/mob/living/L = hit_atom
 		if(pay_energy(1000))
 			visible_message("<span class='danger'>\The [user] reaches out towards \the [L] with the flaming hand, and they ignite!</span>")
-			L << "<span class='danger'>You ignite!</span>"
+			to_chat(L, "<span class='danger'>You ignite!</span>")
 			L.fire_act()
-			log_and_message_admins("has ignited [L] with [src].")
+			add_attack_logs(user,L,"Ignited with [src]")
 			adjust_instability(12)
 	else
 		//This is needed in order for the welder to work, and works similarly to grippers.

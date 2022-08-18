@@ -9,7 +9,7 @@
 
 	var t = invalidFeedTarget(M)
 	if (t)
-		src << t
+		to_chat(src,t)
 		return
 
 	Feedon(M)
@@ -32,7 +32,7 @@
 	Victim = M
 	loc = M.loc
 	canmove = 0
-	anchored = 1
+	anchored = TRUE
 
 	regenerate_icons()
 
@@ -64,7 +64,7 @@
 				else if (istype(M, /mob/living/carbon))
 					var/mob/living/carbon/C = M
 					if (C.can_feel_pain())
-						M << "<span class='danger'>[painMes]</span>"
+						to_chat(M, "<span class='danger'>[painMes]</span>")
 
 			gain_nutrition(rand(20,25))
 
@@ -81,7 +81,7 @@
 			break
 
 	canmove = 1
-	anchored = 0
+	anchored = FALSE
 
 	if(M && invalidFeedTarget(M)) // This means that the slime drained the victim
 		if(!client)
@@ -98,7 +98,8 @@
 
 /mob/living/carbon/slime/proc/Feedstop()
 	if(Victim)
-		if(Victim.client) Victim << "[src] has let go of your head!"
+		if(Victim.client)
+			to_chat(Victim, "[src] has let go of your head!")
 		Victim = null
 
 /mob/living/carbon/slime/proc/UpdateFeed(var/mob/M)

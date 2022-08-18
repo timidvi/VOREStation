@@ -7,11 +7,14 @@
 
 	icon_state = "cell_bay"
 
+	robotic = ORGAN_ROBOT
 	parent_organ = BP_TORSO
 
 	organ_verbs = list(/mob/living/carbon/human/proc/augment_menu)	// Verbs added by the organ when present in the body.
 	target_parent_classes = list()	// Is the parent supposed to be organic, robotic, assisted?
-	forgiving_class = FALSE	// Will the organ give its verbs when it isn't a perfect match? I.E., assisted in organic, synthetic in organic.
+	forgiving_class = TRUE	// Will the organ give its verbs when it isn't a perfect match? I.E., assisted in organic, synthetic in organic.
+
+	butcherable = FALSE
 
 	var/obj/item/integrated_object	// Objects held by the organ, used for re-usable, deployable things.
 	var/integrated_object_type	// Object type the organ will spawn.
@@ -28,10 +31,8 @@
 	var/last_activate = null
 
 /obj/item/organ/internal/augment/Initialize()
-	..()
-
+	. = ..()
 	setup_radial_icon()
-
 	if(integrated_object_type)
 		integrated_object = new integrated_object_type(src)
 		integrated_object.canremove = FALSE
@@ -62,6 +63,10 @@
 			last_activate = world.time
 		else
 			return
+
+	if(robotic && owner.get_restraining_bolt())
+		to_chat(owner, "<span class='warning'>\The [src] doesn't respond.</span>")
+		return
 
 	var/item_to_equip = integrated_object
 	if(!item_to_equip && integrated_object_type)
@@ -144,6 +149,12 @@
 		return 0
 
 	var/mob/living/carbon/human/M = src
+
+	if(buckled)
+		var/obj/Ob = buckled
+		if(Ob.buckle_lying)
+			to_chat(M, "<span class='notice'>You cannot use your augments when restrained.</span>")
+			return 0
 
 	if((slot == slot_l_hand && l_hand) || (slot == slot_r_hand && r_hand))
 		to_chat(M,"<span class='warning'>Your hand is full.  Drop something first.</span>")

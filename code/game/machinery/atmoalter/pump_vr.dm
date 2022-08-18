@@ -2,10 +2,10 @@
 	name = "Huge Air Pump"
 	icon = 'icons/obj/atmos.dmi'
 	icon_state = "siphon:0"
-	anchored = 1
+	anchored = TRUE
 	volume = 500000
 
-	use_power = 1
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 50		//internal circuitry, friction losses and stuff
 	active_power_usage = 1000	// Blowers running
 	power_rating = 100000	//100 kW ~ 135 HP
@@ -26,7 +26,7 @@
 	to_chat(user, "<span class='notice'>You can't directly interact with this machine. Use the pump control console.</span>")
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/update_icon()
-	overlays.Cut()
+	cut_overlays()
 
 	if(on && !(stat & (NOPOWER|BROKEN)))
 		icon_state = "siphon:1"
@@ -85,12 +85,12 @@
 /obj/machinery/portable_atmospherics/powered/pump/huge/attackby(var/obj/item/I, var/mob/user)
 	if(I.is_wrench())
 		if(on)
-			user << "<span class='warning'>Turn \the [src] off first!</span>"
+			to_chat(user, "<span class='warning'>Turn \the [src] off first!</span>")
 			return
 
 		anchored = !anchored
-		playsound(get_turf(src), I.usesound, 50, 1)
-		user << "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>"
+		playsound(src, I.usesound, 50, 1)
+		to_chat(user, "<span class='notice'>You [anchored ? "wrench" : "unwrench"] \the [src].</span>")
 
 		return
 
@@ -112,7 +112,7 @@
 
 /obj/machinery/portable_atmospherics/powered/pump/huge/stationary/attackby(var/obj/item/I, var/mob/user)
 	if(I.is_wrench())
-		user << "<span class='warning'>The bolts are too tight for you to unscrew!</span>"
+		to_chat(user, "<span class='warning'>The bolts are too tight for you to unscrew!</span>")
 		return
 
 	..()

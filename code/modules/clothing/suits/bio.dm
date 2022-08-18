@@ -3,6 +3,8 @@
 	name = "bio hood"
 	icon_state = "bio"
 	desc = "A hood that protects the head and face from biological comtaminants."
+	randpixel = 0
+	center_of_mass = null
 	permeability_coefficient = 0.01
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 20)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|BLOCKHAIR
@@ -84,9 +86,9 @@
 /obj/item/clothing/head/bio_hood/cmo
 	icon_state = "bio_cmo"
 
-//Plague Dr mask can be found in clothing/masks/gasmask.dm
+//Plague Dr mask can be found in clothing/masks/gasmask.dm. Golden can be found in labcoat.dm.
 /obj/item/clothing/suit/bio_suit/plaguedoctorsuit
-	name = "Plague doctor suit"
+	name = "plague doctor suit"
 	desc = "It protected doctors from the Black Death, back then. You bet your arse it's gonna help you against viruses."
 	icon_state = "plaguedoctor"
 	item_state_slots = list(slot_r_hand_str = "bio", slot_l_hand_str = "bio")

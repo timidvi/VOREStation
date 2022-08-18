@@ -3,6 +3,7 @@
  *		Lasertag
  *		Costume
  *		Misc
+ *		Department Jackets
  */
 
 // -S2-note- Needs categorizing and sorting.
@@ -10,8 +11,9 @@
 /*
  * Lasertag
  */
+
 /obj/item/clothing/suit/bluetag
-	name = "blue laser tag armour"
+	name = "blue laser tag armor"
 	desc = "Blue Pride, Station Wide."
 	icon_state = "bluetag"
 	item_state_slots = list(slot_r_hand_str = "tdblue", slot_l_hand_str = "tdblue")
@@ -20,8 +22,13 @@
 	allowed = list (/obj/item/weapon/gun/energy/lasertag/blue)
 	siemens_coefficient = 3.0
 
+/obj/item/clothing/suit/bluetag/sub
+	name = "Brigader Armor"
+	desc = "Repilca rmor commonly worn by Spacer Union Brigade members from the hit series Spacer Trail. Modified for Laser Tag (Blue Team)."
+	icon_state = "bluetag2"
+
 /obj/item/clothing/suit/redtag
-	name = "red laser tag armour"
+	name = "red laser tag armor"
 	desc = "Reputed to go faster."
 	icon_state = "redtag"
 	item_state_slots = list(slot_r_hand_str = "tdred", slot_l_hand_str = "tdred")
@@ -30,14 +37,72 @@
 	allowed = list (/obj/item/weapon/gun/energy/lasertag/red)
 	siemens_coefficient = 3.0
 
+/obj/item/clothing/suit/redtag/dom
+	name = "Mu'tu'bi Armor"
+	desc = "Repilca rmor commonly worn by Dominion Of Mu'tu'bi soldiers from the hit series Spacer Trail. Modified for Laser Tag (Red Team)."
+	icon_state = "redtag2"
+
+/*
+ * 80s
+ */
+
+/obj/item/clothing/suit/storage/puffyblue
+	name = "blue puffy coat"
+	desc = "A stylish, shiny, very blue puffer coat."
+	icon_state = "puffycoatblue"
+	item_state = "puffycoatblue"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	flags_inv = HIDEHOLSTER
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+	item_state_slots = list(slot_r_hand_str = "blue_labcoat", slot_l_hand_str = "blue_labcoat")
+
+/obj/item/clothing/suit/storage/puffypurple
+	name = "purple puffy coat"
+	desc = "A stylish, shiny, very purple puffer coat."
+	icon_state = "puffycoatpurple"
+	item_state = "puffycoatpurple"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	flags_inv = HIDEHOLSTER
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+	item_state_slots = list(slot_r_hand_str = "purple_labcoat", slot_l_hand_str = "purple_labcoat")
+
+/obj/item/clothing/suit/storage/puffyred
+	name = "crimson puffy coat"
+	desc = "A stylish, shiny, very crimson puffer coat."
+	icon_state = "puffycoatred"
+	item_state = "puffycoatred"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	flags_inv = HIDEHOLSTER
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	siemens_coefficient = 0.7
+	item_state_slots = list(slot_r_hand_str = "red_labcoat", slot_l_hand_str = "red_labcoat")
+
 /*
  * Costume
  */
+
 /obj/item/clothing/suit/pirate
 	name = "pirate coat"
 	desc = "Yarr."
 	icon_state = "pirate"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/poncho
+	name = "poncho"
+	desc = "A simple, comfortable poncho."
+	icon = 'icons/inventory/suit/mob.dmi'
+	icon_state = "poncho"
+	item_state = "poncho"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_vr.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_vr.dmi',
+		)
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/hgpirate
@@ -93,7 +158,6 @@
 
 /obj/item/clothing/suit/syndicatefake
 	name = "red space suit replica"
-	icon = 'icons/obj/clothing/spacesuits.dmi'
 	icon_state = "syndicate"
 	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
 	w_class = ITEMSIZE_NORMAL
@@ -216,6 +280,7 @@
 /*
  * Misc
  */
+
 /obj/item/clothing/suit/straight_jacket
 	name = "straight jacket"
 	desc = "A suit that completely restrains the wearer."
@@ -250,20 +315,62 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDETIE|HIDEHOLSTER
 
-obj/item/clothing/suit/kimono
-	name = "kimono"
+/*
+ * Kimonos
+ */
+
+/obj/item/clothing/suit/kimono
+	name = "traditional kimono"
 	desc = "A traditional Japanese kimono."
 	icon_state = "kimono"
 	addblends = "kimono_a"
 
-obj/item/clothing/suit/kamishimo
-	name = "kamishimo"
+/obj/item/clothing/suit/kamishimo
+	name = "traditional kamishimo"
 	desc = "Traditional Japanese menswear."
 	icon_state = "kamishimo"
+	addblends = "kamishimo_a"
+
+/obj/item/clothing/suit/kimono/red
+	name = "red kimono"
+	icon_state = "kimono_red"
+
+/obj/item/clothing/suit/kimono/orange
+	name = "orange kimono"
+	icon_state = "kimono_orange"
+
+/obj/item/clothing/suit/kimono/yellow
+	name = "yellow kimono"
+	icon_state = "kimono_yellow"
+
+/obj/item/clothing/suit/kimono/green
+	name = "green kimono"
+	icon_state = "kimono_green"
+
+/obj/item/clothing/suit/kimono/blue
+	name = "blue kimono"
+	icon_state = "kimono_blue"
+
+/obj/item/clothing/suit/kimono/purple
+	name = "purple kimono"
+	icon_state = "kimono_purple"
+
+/obj/item/clothing/suit/kimono/violet
+	name = "violet kimono"
+	icon_state = "kimono_violet"
+
+/obj/item/clothing/suit/kimono/pink
+	name = "pink kimono"
+	icon_state = "kimono_pink"
+
+/obj/item/clothing/suit/kimono/earth
+	name = "earth kimono"
+	icon_state = "kimono_earth"
 
 /*
- * coats
+ * Coats
  */
+
 /obj/item/clothing/suit/leathercoat
 	name = "leather coat"
 	desc = "A long, thick black leather coat."
@@ -332,8 +439,8 @@ obj/item/clothing/suit/kamishimo
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/storage/duster
-	name = "cowboy duster"
-	desc = "A duster commonly seen on cowboys from Earth's late 1800's."
+	name = "duster"
+	desc = "A duster is a light, loose-fitting long coat. Dusters are meant to protect your clothing from dust and rain."
 	icon_state = "duster"
 	blood_overlay_type = "coat"
 	allowed = list(/obj/item/weapon/tank/emergency/oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter)
@@ -398,17 +505,52 @@ obj/item/clothing/suit/kamishimo
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/storage/miljacket/alt
-	name = "military jacket"
-	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable."
+	name = "military jacket, alternate"
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. This one has some extra badges on it."
 	icon_state = "militaryjacket_badge"
 	item_state_slots = list(slot_r_hand_str = "suit_olive", slot_l_hand_str = "suit_olive")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/storage/miljacket/green
-	name = "military jacket"
-	desc = "A dark green canvas jacket. Feels sturdy, yet comfortable."
+	name = "green military jacket"
+	desc = "A dark but rather high-saturation green canvas jacket. Feels sturdy, yet comfortable."
 	icon_state = "militaryjacket_green"
 	item_state_slots = list(slot_r_hand_str = "suit_olive", slot_l_hand_str = "suit_olive")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/miljacket/tan
+	name = "tan military jacket"
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. Now in sandy tans for desert fans."
+	icon_state = "militaryjacket_tan"
+	item_state_slots = list(slot_r_hand_str = "suit_orange", slot_l_hand_str = "suit_orange")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/miljacket/grey
+	name = "grey military jacket"
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. This one's in urban grey."
+	icon_state = "militaryjacket_grey"
+	item_state_slots = list(slot_r_hand_str = "suit_grey", slot_l_hand_str = "suit_grey")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/miljacket/navy
+	name = "navy military jacket"
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. Dark navy, this one is."
+	icon_state = "militaryjacket_navy"
+	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/miljacket/black
+	name = "black military jacket"
+	desc = "A canvas jacket styled after classical American military garb. Feels sturdy, yet comfortable. Now in tactical black."
+	icon_state = "militaryjacket_black"
+	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/miljacket/white
+	name = "white military jacket"
+	desc = "A white canvas jacket. Don't wear this for walks in the snow, it won't keep you warm - it'll just make it harder to find your frozen corpse."
+	icon_state = "militaryjacket_white"
+	item_state_slots = list(slot_r_hand_str = "med_dep_jacket", slot_l_hand_str = "med_dep_jacket")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/storage/toggle/bomber
@@ -422,6 +564,11 @@ obj/item/clothing/suit/kamishimo
 	cold_protection = UPPER_TORSO|ARMS
 	min_cold_protection_temperature = T0C - 20
 	siemens_coefficient = 0.7
+
+/obj/item/clothing/suit/storage/toggle/bomber/retro
+	name = "retro bomber jacket"
+	desc = "A retro style, fur-lined leather bomber jacket that invokes the early days of space exploration when spacemen were spacemen, and laser guns had funny little antennae on them."
+	icon_state = "retrojacket"
 
 /obj/item/clothing/suit/storage/bomber/alt
 	name = "bomber jacket"
@@ -674,6 +821,19 @@ obj/item/clothing/suit/kamishimo
 	item_state_slots = list(slot_r_hand_str = "med_dep_jacket", slot_l_hand_str = "med_dep_jacket")
 	flags_inv = HIDEHOLSTER
 
+/obj/item/clothing/suit/storage/toggle/light_jacket
+	name = "grey light jacket"
+	desc = "A light, cozy jacket. Now in grey."
+	icon_state = "grey_dep_jacket"
+	item_state_slots = list(slot_r_hand_str = "grey_dep_jacket", slot_l_hand_str = "grey_dep_jacket")
+	flags_inv = HIDEHOLSTER
+
+/obj/item/clothing/suit/storage/toggle/light_jacket/blue
+	name = "dark blue light jacket"
+	desc = "A light, cozy jacket. Now in dark blue."
+	icon_state = "blue_dep_jacket"
+	item_state_slots = list(slot_r_hand_str = "blue_dep_jacket", slot_l_hand_str = "blue_dep_jacket")
+
 /*
  * Track Jackets
  */
@@ -730,11 +890,11 @@ obj/item/clothing/suit/kamishimo
 	if(rolled == 0)
 		rolled = 1
 		body_parts_covered &= ~(ARMS)
-		usr << "<span class='notice'>You roll up the sleeves of your [src].</span>"
+		to_chat(usr, "<span class='notice'>You roll up the sleeves of your [src].</span>")
 	else
 		rolled = 0
 		body_parts_covered = initial(body_parts_covered)
-		usr << "<span class='notice'>You roll down the sleeves of your [src].</span>"
+		to_chat(usr, "<span class='notice'>You roll down the sleeves of your [src].</span>")
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/verb/tuck()
@@ -746,10 +906,10 @@ obj/item/clothing/suit/kamishimo
 
 	if(tucked == 0)
 		tucked = 1
-		usr << "<span class='notice'>You tuck in your your [src].</span>"
+		to_chat(usr, "<span class='notice'>You tuck in your your [src].</span>")
 	else
 		tucked = 0
-		usr << "<span class='notice'>You untuck your [src].</span>"
+		to_chat(usr, "<span class='notice'>You untuck your [src].</span>")
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/verb/button()
@@ -762,11 +922,11 @@ obj/item/clothing/suit/kamishimo
 	if(buttoned == 0)
 		buttoned = 1
 		flags_inv = HIDETIE|HIDEHOLSTER
-		usr << "<span class='notice'>You button your [src].</span>"
+		to_chat(usr, "<span class='notice'>You button your [src].</span>")
 	else
 		buttoned = 0
 		flags_inv = HIDEHOLSTER
-		usr<<"<span class='notice'>You unbutton your [src].</span>"
+		to_chat(usr, "<span class='notice'>You unbutton your [src].</span>")
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/update_icon()
@@ -840,3 +1000,47 @@ obj/item/clothing/suit/kamishimo
 /obj/item/clothing/suit/storage/snowsuit/science
 	name = "science snowsuit"
 	icon_state = "snowsuit_science"
+
+/obj/item/clothing/suit/caution
+	name = "wet floor sign"
+	desc = "Caution! Wet Floor!"
+	description_fluff = "Used by the janitor to passive-aggressively point at when you eventually slip on one of their mopped floors."
+	description_info = "Alt-click, or click in-hand to toggle the caution lights. It looks like you can wear it in your suit slot."
+	icon_state = "caution"
+	drop_sound = 'sound/items/drop/shoes.ogg'
+	force = 1
+	throwforce = 3
+	throw_speed = 2
+	throw_range = 5
+	w_class = 2
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	attack_verb = list("warned", "cautioned", "smashed")
+	armor = list("melee" = 5, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/suit/caution/attack_self()
+	toggle()
+
+/obj/item/clothing/suit/caution/AltClick()
+	toggle()
+
+/obj/item/clothing/suit/caution/proc/toggle()
+	if(!usr || usr.stat || usr.lying || usr.restrained() || !Adjacent(usr))	return
+	else if(src.icon_state == "caution")
+		src.icon_state = "caution_blinking"
+		src.item_state = "caution_blinking"
+		usr.show_message("You turn the wet floor sign on.")
+		playsound(src.loc, 'sound/machines/button.ogg', 30, 1)
+	else
+		src.icon_state = "caution"
+		src.item_state = "caution"
+		usr.show_message("You turn the wet floor sign off.")
+	update_clothing_icon()
+
+//Ruin Marine (Doom Marine)
+/obj/item/clothing/suit/marine
+	name = "marine armor"
+	desc = "A set of marine prop armor from the popular game 'Ruin'."
+	icon_state = "marine"
+	body_parts_covered = FEET|LOWER_TORSO|UPPER_TORSO|LEGS
+	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
+	item_state_slots = list(slot_r_hand_str = "green_labcoat", slot_l_hand_str = "green_labcoat")

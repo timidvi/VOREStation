@@ -3,8 +3,8 @@
 	attack_noun = list("fangs")
 	attack_sound = 'sound/weapons/bite.ogg'
 	shredding = 0
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 
 /datum/unarmed_attack/bite/sharp/numbing/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
@@ -46,15 +46,32 @@
 					target.bloodstr.add_reagent("numbenzyme",attack_damage)
 
 /datum/unarmed_attack/claws/shadekin
-	var/energy_gain = 3
 
-/datum/unarmed_attack/claws/shadekin/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/claws/shadekin/apply_effects(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	..()
-	user.shadekin_adjust_energy(energy_gain)
+	if(!(target == user))
+		user.shadekin_adjust_energy(attack_damage)
 
 /datum/unarmed_attack/bite/sharp/shadekin
-	var/energy_gain = 3
 
-/datum/unarmed_attack/bite/sharp/shadekin/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
+/datum/unarmed_attack/bite/sharp/shadekin/apply_effects(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	..()
-	user.shadekin_adjust_energy(energy_gain)
+	if(!(target == user))
+		user.shadekin_adjust_energy(attack_damage)
+
+/datum/unarmed_attack/claws/chimera //special feral attack that gets stronger as they get angrier
+
+/datum/unarmed_attack/claws/chimera/get_unarmed_damage(var/mob/living/carbon/human/user)
+	return user.feral/5
+
+/datum/unarmed_attack/claws/chimera/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/armour,var/attack_damage,var/zone)
+	..()
+	if(user.feral && !(target == user))
+		var/selfdamage = ((user.feral/10)-7.5)
+		if(selfdamage > 0)
+			var/selfdamagezone = null
+			if (user.hand)
+				selfdamagezone=pick(BP_L_ARM, BP_L_HAND)
+			else
+				selfdamagezone=pick(BP_R_ARM, BP_R_HAND)
+			user.apply_damage(selfdamage, BRUTE, selfdamagezone, 0, 0, sharp=FALSE, edge=FALSE)

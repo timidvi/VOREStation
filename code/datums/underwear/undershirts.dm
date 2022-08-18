@@ -34,6 +34,10 @@
 	has_color = TRUE
 
 
+/datum/category_item/underwear/undershirt/fishnet_simple
+	name = "Fishnet shirt"
+	icon_state = "fishnet_simple"
+
 /datum/category_item/underwear/undershirt/tank_top
 	name = "Tank top"
 	icon_state = "tanktop"
@@ -52,6 +56,11 @@
 /datum/category_item/underwear/undershirt/tank_top_alt_fem_vneck
 	name = "Tank top, feminine, v-neck"
 	icon_state = "tanktop_alt_fem_vneck"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/tank_cropped_vneck
+	name = "Tank top, feminine, cropped & v-neck"
+	icon_state = "tanktop_cropped_vneck"
 	has_color = TRUE
 
 /datum/category_item/underwear/undershirt/tank_top_fire
@@ -178,3 +187,23 @@
 /datum/category_item/underwear/undershirt/pinkblack_tshirt
 	name = "Pink and Black T-Shirt"
 	icon_state = "pinkblack_tshirt"
+
+/datum/category_item/underwear/undershirt/turtle
+	name = "Turtleneck"
+	icon_state = "turtleneck"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/sleevelessturtle
+	name = "Turtleneck, Sleeveless"
+	icon_state = "sleevelessturtle"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/dress_shirt_fem
+	name = "Dress shirt, feminine"
+	icon_state = "undershirt_dress_fem"
+	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/dress_shirt
+	name = "Dress shirt, masculine"
+	icon_state = "undershirt_dress"
+	has_color = TRUE

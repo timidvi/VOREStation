@@ -1,9 +1,7 @@
 /obj/structure/closet/crate/secure/loot
 	name = "abandoned crate"
 	desc = "What could be inside?"
-	icon_state = "securecrate"
-	icon_opened = "securecrateopen"
-	icon_closed = "securecrate"
+	closet_appearance = /decl/closet_appearance/crate/secure
 	var/list/code = list()
 	var/list/lastattempt = list()
 	var/attempts = 10
@@ -29,7 +27,7 @@
 			new/obj/item/weapon/reagent_containers/food/snacks/grown/ambrosiadeus(src)
 			new/obj/item/weapon/flame/lighter/zippo(src)
 		if(6 to 10)
-			new/obj/item/weapon/pickaxe/drill(src)
+			new/obj/item/weapon/pickaxe/advdrill(src)
 			new/obj/item/device/taperecorder(src)
 			new/obj/item/clothing/suit/space(src)
 			new/obj/item/clothing/head/helmet/space(src)
@@ -60,12 +58,12 @@
 		if(53 to 54)
 			new/obj/item/latexballon(src)
 		if(55 to 56)
-			var/newitem = pick(typesof(/obj/item/toy/prize) - /obj/item/toy/prize)
+			var/newitem = pick(subtypesof(/obj/item/toy/mecha))
 			new newitem(src)
 		if(57 to 58)
 			new/obj/item/toy/syndicateballoon(src)
 		if(59 to 60)
-			new/obj/item/weapon/rig(src)
+			new/obj/item/weapon/rig/industrial(src)
 		if(61 to 62)
 			for(var/i = 0, i < 12, ++i)
 				new/obj/item/clothing/head/kitty(src)
@@ -79,7 +77,7 @@
 		if(67 to 68)
 			var/t = rand(4,7)
 			for(var/i = 0, i < t, ++i)
-				var/newitem = pick(typesof(/obj/item/weapon/stock_parts) - /obj/item/weapon/stock_parts - /obj/item/weapon/stock_parts/subspace)
+				var/newitem = pick(subtypesof(/obj/item/weapon/stock_parts) - /obj/item/weapon/stock_parts/subspace)
 				new newitem(src)
 		if(69 to 70)
 			new/obj/item/weapon/pickaxe/silver(src)
@@ -122,7 +120,7 @@
 			new/obj/item/weapon/bikehorn(src)
 			//new/obj/item/weapon/stamp/clown(src) I'd add it, but only clowns can use it
 			new/obj/item/weapon/pen/crayon/rainbow(src)
-			new/obj/item/toy/waterflower(src)
+			new/obj/item/weapon/reagent_containers/spray/waterflower(src)
 		if(95)
 			new/obj/item/clothing/under/mime(src)
 			new/obj/item/clothing/shoes/black(src)
@@ -147,8 +145,8 @@
 	if(!locked)
 		return
 
-	user << "<span class='notice'>The crate is locked with a Deca-code lock.</span>"
-	var/input = input(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "") as text
+	to_chat(user, "<span class='notice'>The crate is locked with a Deca-code lock.</span>")
+	var/input = tgui_input_text(usr, "Enter [codelen] digits. All digits must be unique.", "Deca-Code Lock", "")
 	if(!Adjacent(user))
 		return
 	var/list/sanitised = list()
@@ -161,23 +159,23 @@
 				sanitycheck = null //if a digit is repeated, reject the input
 
 	if(input == null || sanitycheck == null || length(input) != codelen)
-		user << "<span class='notice'>You leave the crate alone.</span>"
+		to_chat(user, "<span class='notice'>You leave the crate alone.</span>")
 	else if(check_input(input))
-		user << "<span class='notice'>The crate unlocks!</span>"
-		playsound(user, 'sound/machines/lockreset.ogg', 50, 1)
+		to_chat(user, "<span class='notice'>The crate unlocks!</span>")
+		playsound(src, 'sound/machines/lockreset.ogg', 50, 1)
 		set_locked(0)
 	else
 		visible_message("<span class='warning'>A red light on \the [src]'s control panel flashes briefly.</span>")
 		attempts--
 		if (attempts == 0)
-			user << "<span class='danger'>The crate's anti-tamper system activates!</span>"
+			to_chat(user, "<span class='danger'>The crate's anti-tamper system activates!</span>")
 			var/turf/T = get_turf(src.loc)
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
 
 /obj/structure/closet/crate/secure/loot/emag_act(var/remaining_charges, var/mob/user)
 	if (locked)
-		user << "<span class='notice'>The crate unlocks!</span>"
+		to_chat(user, "<span class='notice'>The crate unlocks!</span>")
 		locked = 0
 
 /obj/structure/closet/crate/secure/loot/proc/check_input(var/input)
@@ -195,11 +193,11 @@
 /obj/structure/closet/crate/secure/loot/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(locked)
 		if (istype(W, /obj/item/device/multitool)) // Greetings Urist McProfessor, how about a nice game of cows and bulls?
-			user << "<span class='notice'>DECA-CODE LOCK ANALYSIS:</span>"
+			to_chat(user, "<span class='notice'>DECA-CODE LOCK ANALYSIS:</span>")
 			if (attempts == 1)
-				user << "<span class='warning'>* Anti-Tamper system will activate on the next failed access attempt.</span>"
+				to_chat(user, "<span class='warning'>* Anti-Tamper system will activate on the next failed access attempt.</span>")
 			else
-				user << "<span class='notice'>* Anti-Tamper system will activate after [src.attempts] failed access attempts.</span>"
+				to_chat(user, "<span class='notice'>* Anti-Tamper system will activate after [src.attempts] failed access attempts.</span>")
 			if(lastattempt.len)
 				var/bulls = 0
 				var/cows = 0
@@ -214,6 +212,13 @@
 				var/previousattempt = null //convert back to string for readback
 				for(var/i in 1 to codelen)
 					previousattempt = addtext(previousattempt, lastattempt[i])
-				user << "<span class='notice'>Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions.</span>"
+				to_chat(user, "<span class='notice'>Last code attempt, [previousattempt], had [bulls] correct digits at correct positions and [cows] correct digits at incorrect positions.</span>")
 			return
+	..()
+
+/obj/structure/closet/crate/secure/loot/damage(var/damage)
+	if(contents.len)
+		visible_message("<font color='red'><b>[src] makes a grinding noise as its contents are destroyed by the deca-lock safety!</b></font>")
+		for(var/obj/O in src.contents)
+			qdel(O)
 	..()

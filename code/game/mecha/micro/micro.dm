@@ -9,7 +9,7 @@
 /obj/mecha/micro
 	icon = 'icons/mecha/micro.dmi'
 	force = 10 //still a robot
-	anchored = 0 //light enough to push and pull, but you still can't just walk past them. Like people on non-help.
+	anchored = FALSE //light enough to push and pull, but you still can't just walk past them. Like people on non-help.
 	opacity = 0 //small enough to see around, like people.
 	step_energy_drain = 2 // They're light and small. A compact is gonna get better MPG than a truck.
 	var/melee_cooldown = 10
@@ -28,7 +28,8 @@
 	//operation_req_access = list(access_hos)
 	damage_absorption = list("brute"=1,"fire"=1,"bullet"=1,"laser"=1,"energy"=1,"bomb"=1)
 	var/am = "d3c2fbcadca903a41161ccc9df9cf948"
-
+	damage_minimum = 0				//Incoming damage lower than this won't actually deal damage. Scrapes shouldn't be a real thing.
+	minimum_penetration = 0		//Incoming damage won't be fully applied if you don't have at least 20. Almost all AP clears this.
 
 /obj/mecha/micro/melee_action(target as obj|mob|turf)
 	if(internal_damage&MECHA_INT_CONTROL_LOST)
@@ -120,16 +121,16 @@
 
 /obj/mecha/micro/move_inside()
 	var/mob/living/carbon/C = usr
-	if (C.size_multiplier >= 0.5)
-		C << "<span class='warning'>You can't fit in this suit!</span>"
+	if (C.get_effective_size(TRUE) >= 0.5)
+		to_chat(C, "<span class='warning'>You can't fit in this suit!</span>")
 		return
 	else
 		..()
 
 /obj/mecha/micro/move_inside_passenger()
 	var/mob/living/carbon/C = usr
-	if (C.size_multiplier >= 0.5)
-		C << "<span class='warning'>You can't fit in this suit!</span>"
+	if (C.get_effective_size(TRUE) >= 0.5)
+		to_chat(C, "<span class='warning'>You can't fit in this suit!</span>")
 		return
 	else
 		..()

@@ -11,6 +11,12 @@
 						/datum/category_item/catalogue/technology/resleeving)
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "backup_implant"
+	known_implant = TRUE
+
+	// Resleeving database this machine interacts with. Blank for default database
+	// Needs a matching /datum/transcore_db with key defined in code
+	var/db_key
+	var/datum/transcore_db/our_db // These persist all round and are never destroyed, just keep a hard ref
 
 /obj/item/weapon/implant/backup/get_data()
 	var/dat = {"
@@ -25,14 +31,22 @@
 <b>Integrity:</b> Generally very survivable. Susceptible to being destroyed by acid."}
 	return dat
 
+/obj/item/weapon/implant/backup/New(newloc, db_key)
+	. = ..()
+	src.db_key = db_key
+
+/obj/item/weapon/implant/backup/Initialize()
+	. = ..()
+	our_db = SStranscore.db_by_key(db_key)
+
 /obj/item/weapon/implant/backup/Destroy()
-	SStranscore.implants -= src
+	our_db.implants -= src
 	return ..()
 
 /obj/item/weapon/implant/backup/post_implant(var/mob/living/carbon/human/H)
 	if(istype(H))
 		BITSET(H.hud_updateflag, BACKUP_HUD)
-		SStranscore.implants |= src
+		our_db.implants |= src
 
 		return 1
 
@@ -48,14 +62,16 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = ITEMSIZE_SMALL
-	matter = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 2000)
-	var/obj/item/weapon/implant/backup/list/imps = list()
+	matter = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
+	var/list/obj/item/weapon/implant/backup/imps = list()
 	var/max_implants = 4 //Iconstates need to exist due to the update proc!
+
+	var/db_key // To give to the baby implants
 
 /obj/item/weapon/backup_implanter/New()
 	..()
 	for(var/i = 1 to max_implants)
-		var/obj/item/weapon/implant/backup/imp = new(src)
+		var/obj/item/weapon/implant/backup/imp = new(src, db_key)
 		imps |= imp
 		imp.germ_level = 0
 	update()
@@ -69,14 +85,14 @@
 		return
 
 	if(imps.len)
-		user << "<span class='notice'>You eject a backup implant.</span>"
+		to_chat(user, "<span class='notice'>You eject a backup implant.</span>")
 		var/obj/item/weapon/implant/backup/imp = imps[imps.len]
 		imp.forceMove(get_turf(user))
 		imps -= imp
 		user.put_in_any_hand_if_possible(imp)
 		update()
 	else
-		user << "<span class='warning'>\The [src] is empty.</span>"
+		to_chat(user, "<span class='warning'>\The [src] is empty.</span>")
 
 	return
 
@@ -88,9 +104,9 @@
 			W.germ_level = 0
 			W.forceMove(src)
 			update()
-			user << "<span class='notice'>You load \the [W] into \the [src].</span>"
+			to_chat(user, "<span class='notice'>You load \the [W] into \the [src].</span>")
 		else
-			user << "<span class='warning'>\The [src] is already full!</span>"
+			to_chat(user, "<span class='warning'>\The [src] is already full!</span>")
 
 /obj/item/weapon/backup_implanter/attack(mob/M as mob, mob/user as mob)
 	if (!istype(M, /mob/living/carbon))

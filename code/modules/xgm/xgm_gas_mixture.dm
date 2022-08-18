@@ -277,6 +277,12 @@
 
 	return removed
 
+//Returns the amount of gas that has the given flag, in moles
+/datum/gas_mixture/proc/get_by_flag(flag)
+	. = 0
+	for(var/g in gas)
+		if(gas_data.flags[g] & flag)
+			. += gas[g]
 
 //Copies gas and temperature from another gas_mixture.
 /datum/gas_mixture/proc/copy_from(const/datum/gas_mixture/sample)
@@ -440,7 +446,7 @@
 
 
 //Equalizes a list of gas mixtures.  Used for pipe networks.
-/proc/equalize_gases(datum/gas_mixture/list/gases)
+/proc/equalize_gases(list/datum/gas_mixture/gases)
 	//Calculate totals from individual components
 	var/total_volume = 0
 	var/total_thermal_energy = 0
@@ -478,3 +484,7 @@
 			gasmix.multiply(gasmix.volume)
 
 	return 1
+
+/datum/gas_mixture/proc/get_mass()
+	for(var/g in gas)
+		. += gas[g] * gas_data.molar_mass[g] * group_multiplier

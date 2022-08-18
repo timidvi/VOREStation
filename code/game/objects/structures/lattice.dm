@@ -3,20 +3,20 @@
 	desc = "A lightweight support lattice."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "latticefull"
-	density = 0
-	anchored = 1.0
+	density = FALSE
+	anchored = TRUE
 	w_class = ITEMSIZE_NORMAL
 	plane = PLATING_PLANE
 
 /obj/structure/lattice/Initialize()
 	. = ..()
 
-	if(!(istype(src.loc, /turf/space) || istype(src.loc, /turf/simulated/open) || istype(src.loc, /turf/simulated/mineral)))
+	if(!(istype(src.loc, /turf/space) || istype(src.loc, /turf/simulated/open) || istype(src.loc, /turf/simulated/mineral) || istype(src.loc, /turf/simulated/shuttle/plating/airless/carry)))
 		return INITIALIZE_HINT_QDEL
 
 	for(var/obj/structure/lattice/LAT in src.loc)
 		if(LAT != src)
-			crash_with("Found multiple lattices at '[log_info_line(loc)]'")
+			log_debug("Found multiple lattices at '[log_info_line(loc)]'") //VOREStation Edit, why was this a runtime, it's harmless
 			return INITIALIZE_HINT_QDEL
 	icon = 'icons/obj/smoothlattice.dmi'
 	icon_state = "latticeblank"
@@ -63,14 +63,14 @@
 		var/obj/item/weapon/weldingtool/WT = C
 		if(WT.welding == 1)
 			if(WT.remove_fuel(0, user))
-				user << "<span class='notice'>Slicing lattice joints ...</span>"
+				to_chat(user, "<span class='notice'>Slicing lattice joints ...</span>")
 			new /obj/item/stack/rods(src.loc)
 			qdel(src)
 		return
 	if (istype(C, /obj/item/stack/rods))
 		var/obj/item/stack/rods/R = C
 		if(R.use(2))
-			user << "<span class='notice'>You start connecting \the [R.name] to \the [src.name] ...</span>"
+			to_chat(user, "<span class='notice'>You start connecting \the [R.name] to \the [src.name] ...</span>")
 			if(do_after(user, 5 SECONDS))
 				src.alpha = 0 // Note: I don't know why this is set, Eris did it, just trusting for now. ~Leshana
 				new /obj/structure/catwalk(src.loc)
@@ -82,7 +82,7 @@
 	//if(!(istype(src.loc, /turf/space)))
 	//	qdel(src)
 	spawn(1)
-		overlays = list()
+		cut_overlays()
 
 		var/dir_sum = 0
 

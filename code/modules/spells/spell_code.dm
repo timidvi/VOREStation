@@ -146,8 +146,8 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 			var/obj/effect/overlay/spell = new /obj/effect/overlay(location)
 			spell.icon = overlay_icon
 			spell.icon_state = overlay_icon_state
-			spell.anchored = 1
-			spell.density = 0
+			spell.anchored = TRUE
+			spell.density = FALSE
 			spawn(overlay_lifespan)
 				qdel(spell)
 	return valid_targets
@@ -156,7 +156,7 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 	for(var/atom/target in targets)
 		var/location = get_turf(target)
 		if(istype(target,/mob/living) && message)
-			target << text("[message]")
+			to_chat(target, "[message]")
 		if(sparks_spread)
 			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
 			sparks.set_up(sparks_amt, 0, location) //no idea what the 0 is
@@ -180,7 +180,7 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 
 	if(!(src in user.spell_list) && holder == user)
 		error("[user] utilized the spell '[src]' without having it.")
-		user << "<span class='warning'>You shouldn't have this spell! Something's wrong.</span>"
+		to_chat(user, "<span class='warning'>You shouldn't have this spell! Something's wrong.</span>")
 		return 0
 
 	if(silenced > 0)
@@ -188,7 +188,7 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 
 	var/turf/user_turf = get_turf(user)
 	if(!user_turf)
-		user << "<span class='warning'>You cannot cast spells in null space!</span>"
+		to_chat(user, "<span class='warning'>You cannot cast spells in null space!</span>")
 
 	if(spell_flags & Z2NOCAST && (user_turf.z in using_map.admin_levels)) //Certain spells are not allowed on the CentCom zlevel
 		return 0
@@ -201,7 +201,7 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 	if(istype(user, /mob/living/simple_mob) && holder == user)
 		var/mob/living/simple_mob/SM = user
 		if(SM.purge)
-			SM << "<span class='warning'>The nullrod's power interferes with your own!</span>"
+			to_chat(SM, "<span class='warning'>The nullrod's power interferes with your own!</span>")
 			return 0
 
 	if(!src.check_charge(skipcharge, user)) //sees if we can cast based on charges alone
@@ -209,12 +209,12 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 
 	if(!(spell_flags & GHOSTCAST) && holder == user)
 		if(user.stat && !(spell_flags & STATALLOWED))
-			usr << "Not when you're incapacitated."
+			to_chat(usr, "Not when you're incapacitated.")
 			return 0
 
 		if(ishuman(user) && !(invocation_type in list(SpI_EMOTE, SpI_NONE)))
 			if(user.is_muzzled())
-				user << "Mmmf mrrfff!"
+				to_chat(user, "Mmmf mrrfff!")
 				return 0
 
 	var/spell/noclothes/spell = locate() in user.spell_list
@@ -229,11 +229,11 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 		switch(charge_type)
 			if(Sp_RECHARGE)
 				if(charge_counter < charge_max)
-					user << still_recharging_msg
+					to_chat(user,still_recharging_msg)
 					return 0
 			if(Sp_CHARGES)
 				if(!charge_counter)
-					user << "<span class='notice'>[name] has no charges left.</span>"
+					to_chat(user, "<span class='notice'>[name] has no charges left.</span>")
 					return 0
 	return 1
 
@@ -267,7 +267,7 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 			else
 				user.whisper(replacetext(invocation," ","`"))
 		if(SpI_EMOTE)
-			user.emote("me", 1, invocation) //the 1 means it's for everyone in view, the me makes it an emote, and the invocation is written accordingly.
+			user.custom_emote(VISIBLE_MESSAGE, invocation) 
 
 /////////////////////
 ///UPGRADING PROCS///
@@ -277,7 +277,7 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 	if(level_max[Sp_TOTAL] <= ( spell_levels[Sp_SPEED] + spell_levels[Sp_POWER] )) //too many levels, can't do it
 		return 0
 
-	if(upgrade_type && upgrade_type in spell_levels && upgrade_type in level_max)
+	if(upgrade_type && (upgrade_type in spell_levels) && (upgrade_type in level_max))
 		if(spell_levels[upgrade_type] >= level_max[upgrade_type])
 			return 0
 

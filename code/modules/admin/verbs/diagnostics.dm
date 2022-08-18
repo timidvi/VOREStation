@@ -3,7 +3,7 @@
 	set name = "Show Air Report"
 
 	if(!master_controller || !air_master)
-		alert(usr,"Master_controller or air_master not found.","Air Report")
+		tgui_alert_async(usr,"Master_controller or air_master not found.","Air Report")
 		return
 
 	var/active_groups = air_master.active_zones
@@ -17,7 +17,7 @@
 	var/inactive_on_main_station = 0
 	for(var/zone/zone in air_master.zones)
 		var/turf/simulated/turf = locate() in zone.contents
-		if(turf && turf.z in using_map.station_levels)
+		if(turf?.z in using_map.station_levels)
 			if(zone.needs_update)
 				active_on_main_station++
 			else
@@ -79,7 +79,7 @@
 	var/output = "<b>Radio Report</b><hr>"
 	for (var/fq in radio_controller.frequencies)
 		output += "<b>Freq: [fq]</b><br>"
-		var/list/datum/radio_frequency/fqs = radio_controller.frequencies[fq]
+		var/datum/radio_frequency/fqs = radio_controller.frequencies[fq]
 		if (!fqs)
 			output += "&nbsp;&nbsp;<b>ERROR</b><br>"
 			continue
@@ -128,7 +128,7 @@
 		return
 
 	if(!air_master)
-		usr << "Cannot find air_system"
+		to_chat(usr, "Cannot find air_system")
 		return
 	var/datum/air_group/dead_groups = list()
 	for(var/datum/air_group/group in air_master.air_groups)
@@ -150,7 +150,7 @@
 		return
 
 	if(!air_master)
-		usr << "Cannot find air_system"
+		to_chat(usr, "Cannot find air_system")
 		return
 
 	var/turf/T = get_turf(usr)
@@ -159,7 +159,7 @@
 		AG.next_check = 30
 		AG.group_processing = 0
 	else
-		usr << "Local airgroup is unsimulated!"
+		to_chat(usr, "Local airgroup is unsimulated!")
 	feedback_add_details("admin_verb","KLAG") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	*/
 
@@ -168,20 +168,20 @@
 	set desc = "This spams all the active jobban entries for the current round to standard output."
 	set category = "Debug"
 
-	usr << "<b>Jobbans active in this round.</b>"
+	to_chat(usr, "<b>Jobbans active in this round.</b>")
 	for(var/t in jobban_keylist)
-		usr << "[t]"
+		to_chat(usr, "[t]")
 
 /client/proc/print_jobban_old_filter()
 	set name = "Search Jobban Log"
 	set desc = "This searches all the active jobban entries for the current round and outputs the results to standard output."
 	set category = "Debug"
 
-	var/job_filter = input("Contains what?","Job Filter") as text|null
+	var/job_filter = tgui_input_text(usr, "Contains what?","Job Filter")
 	if(!job_filter)
 		return
 
-	usr << "<b>Jobbans active in this round.</b>"
+	to_chat(usr, "<b>Jobbans active in this round.</b>")
 	for(var/t in jobban_keylist)
 		if(findtext(t, job_filter))
-			usr << "[t]"
+			to_chat(usr, "[t]")

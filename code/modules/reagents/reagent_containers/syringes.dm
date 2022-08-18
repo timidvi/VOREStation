@@ -8,22 +8,26 @@
 /obj/item/weapon/reagent_containers/syringe
 	name = "syringe"
 	desc = "A syringe."
+	description_fluff = "This could be used to engrave messages on suitable surfaces if you really put your mind to it! Alt-click a floor or wall to engrave with it." //This way it's not a completely hidden, arcane art to engrave.
 	icon = 'icons/obj/syringe.dmi'
 	item_state = "syringe_0"
 	icon_state = "0"
-	matter = list("glass" = 150)
+	center_of_mass = list("x" = 16,"y" = 14)
+	matter = list(MAT_GLASS = 150)
 	amount_per_transfer_from_this = 5
 	possible_transfer_amounts = null
 	volume = 15
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
-	sharp = 1
-	unacidable = 1 //glass
+	sharp = TRUE
+	unacidable = TRUE //glass
 	var/mode = SYRINGE_DRAW
 	var/image/filling //holds a reference to the current filling overlay
 	var/visible_name = "a syringe"
 	var/time = 30
 	var/drawing = 0
+	drop_sound = 'sound/items/drop/glass.ogg'
+	pickup_sound = 'sound/items/pickup/glass.ogg'
 
 /obj/item/weapon/reagent_containers/syringe/on_reagent_change()
 	update_icon()
@@ -167,9 +171,11 @@
 				if(!affected)
 					to_chat(user, "<span class='danger'>\The [H] is missing that limb!</span>")
 					return
+				/* since synths have oil/coolant streams now, it only makes sense that you should be able to inject stuff. preserved for posterity.
 				else if(affected.robotic >= ORGAN_ROBOT)
 					to_chat(user, "<span class='danger'>You cannot inject a robotic limb.</span>")
 					return
+				*/
 
 			var/cycle_time = injtime*0.33 //33% of the time slept between 5u doses
 			var/warmup_time = 0	//0 for containers
@@ -183,8 +189,6 @@
 					if(H.wear_suit)
 						if(istype(H.wear_suit, /obj/item/clothing/suit/space))
 							injtime = injtime * 2
-					if(!H.can_inject(user, 1))
-						return
 
 				else if(isliving(target))
 
@@ -229,7 +233,7 @@
 	return
 /* VOREStation Edit - See syringes_vr.dm
 /obj/item/weapon/reagent_containers/syringe/update_icon()
-	overlays.Cut()
+	cut_overlays()
 
 	if(mode == SYRINGE_BROKEN)
 		icon_state = "broken"
@@ -243,7 +247,7 @@
 				injoverlay = "draw"
 			if (SYRINGE_INJECT)
 				injoverlay = "inject"
-		overlays += injoverlay
+		add_overlay(injoverlay)
 	icon_state = "[rounded_vol]"
 	item_state = "syringe_[rounded_vol]"
 
@@ -253,7 +257,7 @@
 		filling.icon_state = "syringe[rounded_vol]"
 
 		filling.color = reagents.get_color()
-		overlays += filling
+		add_overlay(filling)
 */
 /obj/item/weapon/reagent_containers/syringe/proc/syringestab(mob/living/carbon/target as mob, mob/living/carbon/user as mob)
 	if(istype(target, /mob/living/carbon/human))
@@ -298,7 +302,8 @@
 	var/trans = reagents.trans_to_mob(target, syringestab_amount_transferred, CHEM_BLOOD)
 	if(isnull(trans)) trans = 0
 	add_attack_logs(user,target,"Stabbed with [src.name] containing [contained], trasferred [trans] units")
-	break_syringe(target, user)
+	if(!issilicon(user))
+		break_syringe(target, user)
 
 /obj/item/weapon/reagent_containers/syringe/proc/break_syringe(mob/living/carbon/target, mob/living/carbon/user)
 	desc += " It is broken."
@@ -365,7 +370,7 @@
 
 /obj/item/weapon/reagent_containers/syringe/drugs/Initialize()
 	. = ..()
-	reagents.add_reagent("space_drugs",  5)
+	reagents.add_reagent("bliss",  5)
 	reagents.add_reagent("mindbreaker",  5)
 	reagents.add_reagent("cryptobiolin", 5)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped

@@ -8,6 +8,8 @@
 	slot_flags = SLOT_EARS
 	var/colour = "red"
 	var/open = 0
+	drop_sound = 'sound/items/drop/glass.ogg'
+	pickup_sound = 'sound/items/pickup/glass.ogg'
 
 /obj/item/weapon/lipstick/purple
 	name = "purple lipstick"
@@ -29,7 +31,7 @@
 	name = "[colour] lipstick"
 
 /obj/item/weapon/lipstick/attack_self(mob/user as mob)
-	user << "<span class='notice'>You twist \the [src] [open ? "closed" : "open"].</span>"
+	to_chat(user, "<span class='notice'>You twist \the [src] [open ? "closed" : "open"].</span>")
 	open = !open
 	if(open)
 		icon_state = "[initial(icon_state)]_[colour]"
@@ -44,7 +46,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.lip_style)	//if they already have lipstick on
-			user << "<span class='notice'>You need to wipe off the old lipstick first!</span>"
+			to_chat(user, "<span class='notice'>You need to wipe off the old lipstick first!</span>")
 			return
 		if(H == user)
 			user.visible_message("<span class='notice'>[user] does their lips with \the [src].</span>", \
@@ -60,7 +62,7 @@
 				H.lip_style = colour
 				H.update_icons_body()
 	else
-		user << "<span class='notice'>Where are the lips on that?</span>"
+		to_chat(user, "<span class='notice'>Where are the lips on that?</span>")
 
 //you can wipe off lipstick with paper! see code/modules/paperwork/paper.dm, paper/attack()
 
@@ -95,17 +97,16 @@
 	w_class = ITEMSIZE_TINY
 	icon = 'icons/obj/items.dmi'
 	icon_state = "trinketbox"
-	var/list/ui_users = list()
+	var/datum/tgui_module/appearance_changer/mirror/coskit/M
+
+/obj/item/weapon/makeover/Initialize()
+	. = ..()
+	M = new(src, null)
 
 /obj/item/weapon/makeover/attack_self(mob/living/carbon/user as mob)
 	if(ishuman(user))
 		to_chat(user, "<span class='notice'>You flip open \the [src] and begin to adjust your appearance.</span>")
-		var/datum/nano_module/appearance_changer/AC = ui_users[user]
-		if(!AC)
-			AC = new(src, user)
-			AC.name = "SalonPro Porta-Makeover Deluxe&trade;"
-			ui_users[user] = AC
-		AC.ui_interact(user)
+		M.tgui_interact(user)
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if(istype(E))

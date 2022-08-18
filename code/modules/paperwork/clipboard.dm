@@ -1,5 +1,6 @@
 /obj/item/weapon/clipboard
 	name = "clipboard"
+	desc = "Used to clip paper to, for an on-the-go writing board."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "clipboard"
 	item_state = "clipboard"
@@ -33,13 +34,13 @@
 			return
 
 /obj/item/weapon/clipboard/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(toppaper)
-		overlays += toppaper.icon_state
-		overlays += toppaper.overlays
+		add_overlay(toppaper.icon_state)
+		add_overlay(toppaper.overlays)
 	if(haspen)
-		overlays += "clipboard_pen"
-	overlays += "clipboard_over"
+		add_overlay("clipboard_pen")
+	add_overlay("clipboard_over")
 	return
 
 /obj/item/weapon/clipboard/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -49,7 +50,7 @@
 		W.loc = src
 		if(istype(W, /obj/item/weapon/paper))
 			toppaper = W
-		user << "<span class='notice'>You clip the [W] onto \the [src].</span>"
+		to_chat(user, "<span class='notice'>You clip the [W] onto \the [src].</span>")
 		update_icon()
 
 	else if(istype(toppaper) && istype(W, /obj/item/weapon/pen))
@@ -102,7 +103,7 @@
 					usr.drop_item()
 					W.loc = src
 					haspen = W
-					usr << "<span class='notice'>You slot the pen into \the [src].</span>"
+					to_chat(usr, "<span class='notice'>You slot the pen into \the [src].</span>")
 
 		else if(href_list["write"])
 			var/obj/item/weapon/P = locate(href_list["write"])
@@ -163,7 +164,7 @@
 			var/obj/item/P = locate(href_list["top"])
 			if(P && (P.loc == src) && istype(P, /obj/item/weapon/paper) )
 				toppaper = P
-				usr << "<span class='notice'>You move [P.name] to the top.</span>"
+				to_chat(usr, "<span class='notice'>You move [P.name] to the top.</span>")
 
 		//Update everything
 		attack_self(usr)

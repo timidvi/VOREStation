@@ -8,7 +8,6 @@ var/global/ingredientLimit = 20
 
 /obj/item/weapon/reagent_containers/food/snacks/customizable
 	icon = 'icons/obj/food_custom.dmi'
-	trash = /obj/item/trash/plate
 	bitesize = 2
 
 	var/ingMax = 100
@@ -44,25 +43,25 @@ var/global/ingredientLimit = 20
 			to_chat(user, "<span class='warning'>As uniquely original as that idea is, you can't figure out how to perform it.</span>")
 			return
 		/*if(!user.drop_item())
-			user << "<span class='warning'>\The [I] is stuck to your hands!</span>"
+			to_chat(user, "<span class='warning'>\The [I] is stuck to your hands!</span>")
 			return*/
 		user.drop_item()
 		I.forceMove(src)
 
 		if(S.reagents)
-			S.reagents.trans_to(src,S.reagents.total_volume)
+			S.reagents.trans_to_holder(reagents,S.reagents.total_volume)
 
 		ingredients += S
 
 		if(src.addTop)
-			overlays -= topping //thank you Comic
-		if(!fullyCustom && !stackIngredients && overlays.len)
-			overlays -= filling //we can't directly modify the overlay, so we have to remove it and then add it again
+			cut_overlay(topping)
+		if(!fullyCustom && !stackIngredients && our_overlays.len)
+			cut_overlay(filling) //we can't directly modify the overlay, so we have to remove it and then add it again
 			var/newcolor = S.filling_color != "#FFFFFF" ? S.filling_color : AverageColor(getFlatIcon(S, S.dir, 0), 1, 1)
 			filling.color = BlendRGB(filling.color, newcolor, 1/ingredients.len)
-			overlays += filling
+			add_overlay(filling)
 		else
-			overlays += generateFilling(S)
+			add_overlay(generateFilling(S))
 		if(addTop)
 			drawTopping()
 
@@ -129,7 +128,7 @@ var/global/ingredientLimit = 20
 /obj/item/weapon/reagent_containers/food/snacks/customizable/proc/drawTopping()
 	var/image/I = topping
 	I.pixel_y = (ingredients.len+1)*2
-	overlays += I
+	add_overlay(I)
 
 
 // Sandwiches //////////////////////////////////////////////////
@@ -143,7 +142,7 @@ var/global/ingredientLimit = 20
 
 /obj/item/weapon/reagent_containers/food/snacks/customizable/sandwich/attackby(obj/item/I,mob/user)
 	if(istype(I,/obj/item/weapon/reagent_containers/food/snacks/slice/bread) && !addTop)
-		I.reagents.trans_to(src,I.reagents.total_volume)
+		I.reagents.trans_to_holder(reagents,I.reagents.total_volume)
 		qdel(I)
 		addTop = 1
 		src.drawTopping()

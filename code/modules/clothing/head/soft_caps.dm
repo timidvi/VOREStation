@@ -16,10 +16,10 @@
 	flipped = !flipped
 	if(flipped)
 		icon_state = "[icon_state]_flipped"
-		user << "You flip the hat backwards."
+		to_chat(user, "You flip the hat backwards.")
 	else
 		icon_state = initial(icon_state)
-		user << "You flip the hat back in normal position."
+		to_chat(user, "You flip the hat back in normal position.")
 	update_clothing_icon()	//so our mob-overlays update
 
 /obj/item/clothing/head/soft/red
@@ -99,3 +99,9 @@
 	desc = "It's a ballcap bearing the colors of Major Bill's Shipping."
 	icon_state = "mbillsoft"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/major_bills)
+
+/obj/item/clothing/head/soft/med
+	name = "medical cap"
+	desc = "It's a field cap in white, with a blue cross on the front."
+	icon_state = "medsoft"
+	item_state_slots = list(slot_r_hand_str = "mimesoft", slot_l_hand_str = "mimesoft")

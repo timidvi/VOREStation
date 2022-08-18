@@ -1,29 +1,27 @@
-
-var/global/BSACooldown = 0
 var/global/floorIsLava = 0
 
 
 ////////////////////////////////
 /proc/message_admins(var/msg)
-	msg = "<span class=\"log_message\"><span class=\"prefix\">ADMIN LOG:</span> <span class=\"message\">[msg]</span></span>"
+	msg = "<span class='filter_adminlog log_message'><span class='prefix'>ADMIN LOG:</span> <span class=\"message\">[msg]</span></span>"
 	//log_adminwarn(msg) //log_and_message_admins is for this
 
-	for(var/client/C in admins)
+	for(var/client/C in GLOB.admins)
 		if((R_ADMIN|R_MOD) & C.holder.rights)
-			C << msg
+			to_chat(C,msg)
 
 /proc/msg_admin_attack(var/text) //Toggleable Attack Messages
-	var/rendered = "<span class=\"log_message\"><span class=\"prefix\">ATTACK:</span> <span class=\"message\">[text]</span></span>"
-	for(var/client/C in admins)
+	var/rendered = "<span class='filter_attacklog log_message'><span class='prefix'>ATTACK:</span> <span class=\"message\">[text]</span></span>"
+	for(var/client/C in GLOB.admins)
 		if((R_ADMIN|R_MOD) & C.holder.rights)
 			if(C.is_preference_enabled(/datum/client_preference/mod/show_attack_logs))
 				var/msg = rendered
-				C << msg
+				to_chat(C,msg)
 
-proc/admin_notice(var/message, var/rights)
+/proc/admin_notice(var/message, var/rights)
 	for(var/mob/M in mob_list)
 		if(check_rights(rights, 0, M))
-			M << message
+			to_chat(M,message)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////Panels
 
@@ -33,12 +31,12 @@ proc/admin_notice(var/message, var/rights)
 	set desc="Edit player (respawn, ban, heal, etc)"
 
 	if(!M)
-		usr << "You seem to be selecting a mob that doesn't exist anymore."
+		to_chat(usr, "You seem to be selecting a mob that doesn't exist anymore.")
 		return
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
 	if (!istype(src,/datum/admins))
-		usr << "Error: you are not an admin!"
+		to_chat(usr, "Error: you are not an admin!")
 		return
 
 	var/body = "<html><head><title>Options for [M.key]</title></head>"
@@ -75,6 +73,7 @@ proc/admin_notice(var/message, var/rights)
 
 	if(M.client)
 		body += "| <A HREF='?src=\ref[src];sendtoprison=\ref[M]'>Prison</A> | "
+		body += "\ <A HREF='?src=\ref[src];sendbacktolobby=\ref[M]'>Send back to Lobby</A> | "
 		var/muted = M.client.prefs.muted
 		body += {"<br><b>Mute: </b>
 			\[<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_IC]'><font color='[(muted & MUTE_IC)?"red":"blue"]'>IC</font></a> |
@@ -90,7 +89,7 @@ proc/admin_notice(var/message, var/rights)
 		<A href='?src=\ref[src];getmob=\ref[M]'>Get</A> |
 		<A href='?src=\ref[src];sendmob=\ref[M]'>Send To</A>
 		<br><br>
-		[check_rights(R_ADMIN|R_MOD,0) ? "<A href='?src=\ref[src];traitor=\ref[M]'>Traitor panel</A> | " : "" ]
+		[check_rights(R_ADMIN|R_MOD|R_EVENT,0) ? "<A href='?src=\ref[src];traitor=\ref[M]'>Traitor panel</A> | " : "" ]
 		<A href='?src=\ref[src];narrateto=\ref[M]'>Narrate to</A> |
 		<A href='?src=\ref[src];subtlemessage=\ref[M]'>Subtle message</A>
 	"}
@@ -127,6 +126,8 @@ proc/admin_notice(var/message, var/rights)
 				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Re-Animalize</A> | "
 			else
 				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Animalize</A> | "
+
+			body += "<A href='?src=\ref[src];respawn=\ref[M.client]'>Respawn</A> | "
 
 			// DNA2 - Admin Hax
 			if(M.dna && iscarbon(M))
@@ -192,8 +193,8 @@ proc/admin_notice(var/message, var/rights)
 	// language toggles
 	body += "<br><br><b>Languages:</b><br>"
 	var/f = 1
-	for(var/k in all_languages)
-		var/datum/language/L = all_languages[k]
+	for(var/k in GLOB.all_languages)
+		var/datum/language/L = GLOB.all_languages[k]
 		if(!(L.flags & INNATE))
 			if(!f) body += " | "
 			else f = 0
@@ -215,55 +216,36 @@ proc/admin_notice(var/message, var/rights)
 /datum/player_info/var/content // text content of the information
 /datum/player_info/var/timestamp // Because this is bloody annoying
 
-#define PLAYER_NOTES_ENTRIES_PER_PAGE 50
 /datum/admins/proc/PlayerNotes()
 	set category = "Admin"
 	set name = "Player Notes"
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
 	if (!istype(src,/datum/admins))
-		usr << "Error: you are not an admin!"
+		to_chat(usr, "Error: you are not an admin!")
 		return
 	PlayerNotesPage(1)
 
-/datum/admins/proc/PlayerNotesPage(page)
-	var/dat = "<B>Player notes</B><HR>"
+/datum/admins/proc/PlayerNotesFilter()
+	if (!istype(src,/datum/admins))
+		src = usr.client.holder
+	if (!istype(src,/datum/admins))
+		to_chat(usr, "Error: you are not an admin!")
+		return
+	var/filter = tgui_input_text(usr, "Filter string (case-insensitive regex)", "Player notes filter")
+	PlayerNotesPage(1, filter)
+
+/datum/admins/proc/PlayerNotesPage(page, filter)
 	var/savefile/S=new("data/player_notes.sav")
 	var/list/note_keys
 	S >> note_keys
-	if(!note_keys)
-		dat += "No notes found."
-	else
-		dat += "<table>"
+
+	if(note_keys)
 		note_keys = sortList(note_keys)
 
-		// Display the notes on the current page
-		var/number_pages = note_keys.len / PLAYER_NOTES_ENTRIES_PER_PAGE
-		// Emulate CEILING(why does BYOND not have ceil, 1)
-		if(number_pages != round(number_pages))
-			number_pages = round(number_pages) + 1
-		var/page_index = page - 1
-		if(page_index < 0 || page_index >= number_pages)
-			return
-
-		var/lower_bound = page_index * PLAYER_NOTES_ENTRIES_PER_PAGE + 1
-		var/upper_bound = (page_index + 1) * PLAYER_NOTES_ENTRIES_PER_PAGE
-		upper_bound = min(upper_bound, note_keys.len)
-		for(var/index = lower_bound, index <= upper_bound, index++)
-			var/t = note_keys[index]
-			dat += "<tr><td><a href='?src=\ref[src];notes=show;ckey=[t]'>[t]</a></td></tr>"
-
-		dat += "</table><br>"
-
-		// Display a footer to select different pages
-		for(var/index = 1, index <= number_pages, index++)
-			if(index == page)
-				dat += "<b>"
-			dat += "<a href='?src=\ref[src];notes=list;index=[index]'>[index]</a> "
-			if(index == page)
-				dat += "</b>"
-
-	usr << browse(dat, "window=player_notes;size=400x400")
+	var/datum/tgui_module/player_notes/A = new(src)
+	A.ckeys = note_keys
+	A.tgui_interact(usr)
 
 
 /datum/admins/proc/player_has_info(var/key as text)
@@ -280,46 +262,12 @@ proc/admin_notice(var/message, var/rights)
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
 	if (!istype(src,/datum/admins))
-		usr << "Error: you are not an admin!"
+		to_chat(usr, "Error: you are not an admin!")
 		return
-	var/dat = "<html><head><title>Info on [key]</title></head>"
-	dat += "<body>"
 
-	var/p_age = "unknown"
-	for(var/client/C in GLOB.clients)
-		if(C.ckey == key)
-			p_age = C.player_age
-			break
-	dat +="<span style='color:#000000; font-weight: bold'>Player age: [p_age]</span><br>"
-
-	var/savefile/info = new("data/player_saves/[copytext(key, 1, 2)]/[key]/info.sav")
-	var/list/infos
-	info >> infos
-	if(!infos)
-		dat += "No information found on the given key.<br>"
-	else
-		var/update_file = 0
-		var/i = 0
-		for(var/datum/player_info/I in infos)
-			i += 1
-			if(!I.timestamp)
-				I.timestamp = "Pre-4/3/2012"
-				update_file = 1
-			if(!I.rank)
-				I.rank = "N/A"
-				update_file = 1
-			dat += "<font color=#008800>[I.content]</font> <i>by [I.author] ([I.rank])</i> on <i><font color=blue>[I.timestamp]</i></font> "
-			if(I.author == usr.key || I.author == "Adminbot" || ishost(usr))
-				dat += "<A href='?src=\ref[src];remove_player_info=[key];remove_index=[i]'>Remove</A>"
-			dat += "<br><br>"
-		if(update_file) info << infos
-
-	dat += "<br>"
-	dat += "<A href='?src=\ref[src];add_player_info=[key]'>Add Comment</A><br>"
-
-	dat += "</body></html>"
-	usr << browse(dat, "window=adminplayerinfo;size=480x480")
-
+	var/datum/tgui_module/player_notes_info/A = new(src)
+	A.key = key
+	A.tgui_interact(usr)
 
 
 /datum/admins/proc/access_news_network() //MARKER
@@ -330,7 +278,7 @@ proc/admin_notice(var/message, var/rights)
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
 	if (!istype(src,/datum/admins))
-		usr << "Error: you are not an admin!"
+		to_chat(usr, "Error: you are not an admin!")
 		return
 	var/dat
 	dat = text("<HEAD><TITLE>Admin Newscaster</TITLE></HEAD><H3>Admin Newscaster Unit</H3>")
@@ -369,7 +317,7 @@ proc/admin_notice(var/message, var/rights)
 					if(CHANNEL.is_admin_channel)
 						dat+="<B><FONT style='BACKGROUND-COLOR: LightGreen'><A href='?src=\ref[src];ac_show_channel=\ref[CHANNEL]'>[CHANNEL.channel_name]</A></FONT></B><BR>"
 					else
-						dat+="<B><A href='?src=\ref[src];ac_show_channel=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : ()]<BR></B>"
+						dat+="<B><A href='?src=\ref[src];ac_show_channel=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : null]<BR></B>"
 			dat+={"<BR><HR><A href='?src=\ref[src];ac_refresh=1'>Refresh</A>
 				<BR><A href='?src=\ref[src];ac_setScreen=[0]'>Back</A>
 			"}
@@ -404,7 +352,7 @@ proc/admin_notice(var/message, var/rights)
 			dat+="<B><FONT COLOR='maroon'>ERROR: Could not submit Feed story to Network.</B></FONT><HR><BR>"
 			if(src.admincaster_feed_channel.channel_name=="")
 				dat+="<FONT COLOR='maroon'>Invalid receiving channel name.</FONT><BR>"
-			if(src.admincaster_feed_message.body == "" || src.admincaster_feed_message.body == "\[REDACTED\]")
+			if(src.admincaster_feed_message.body == "" || src.admincaster_feed_message.body == "\[REDACTED\]" || admincaster_feed_message.title == "")
 				dat+="<FONT COLOR='maroon'>Invalid message body.</FONT><BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[3]'>Return</A><BR>"
 		if(7)
@@ -433,11 +381,14 @@ proc/admin_notice(var/message, var/rights)
 					var/i = 0
 					for(var/datum/feed_message/MESSAGE in src.admincaster_feed_channel.messages)
 						i++
-						dat+="-[MESSAGE.body] <BR>"
+						//dat+="-[MESSAGE.body] <BR>"
+						var/pic_data
 						if(MESSAGE.img)
 							usr << browse_rsc(MESSAGE.img, "tmp_photo[i].png")
-							dat+="<img src='tmp_photo[i].png' width = '180'><BR><BR>"
-						dat+="<FONT SIZE=1>\[Story by <FONT COLOR='maroon'>[MESSAGE.author]</FONT>\]</FONT><BR>"
+							pic_data+="<img src='tmp_photo[i].png' width = '180'><BR>"
+						dat+= get_newspaper_content(MESSAGE.title, MESSAGE.body, MESSAGE.author,"#d4cec1", pic_data)
+						dat+="<BR>"
+						dat+="<FONT SIZE=1>\[Story by <FONT COLOR='maroon'>[MESSAGE.author] - [MESSAGE.time_stamp]</FONT>\]</FONT><BR>"
 			dat+={"
 				<BR><HR><A href='?src=\ref[src];ac_refresh=1'>Refresh</A>
 				<BR><A href='?src=\ref[src];ac_setScreen=[1]'>Back</A>
@@ -453,7 +404,7 @@ proc/admin_notice(var/message, var/rights)
 				dat+="<I>No feed channels found active...</I><BR>"
 			else
 				for(var/datum/feed_channel/CHANNEL in news_network.network_channels)
-					dat+="<A href='?src=\ref[src];ac_pick_censor_channel=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : ()]<BR>"
+					dat+="<A href='?src=\ref[src];ac_pick_censor_channel=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : null]<BR>"
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[0]'>Cancel</A>"
 		if(11)
 			dat+={"
@@ -466,7 +417,7 @@ proc/admin_notice(var/message, var/rights)
 				dat+="<I>No feed channels found active...</I><BR>"
 			else
 				for(var/datum/feed_channel/CHANNEL in news_network.network_channels)
-					dat+="<A href='?src=\ref[src];ac_pick_d_notice=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : ()]<BR>"
+					dat+="<A href='?src=\ref[src];ac_pick_d_notice=\ref[CHANNEL]'>[CHANNEL.channel_name]</A> [(CHANNEL.censored) ? ("<FONT COLOR='red'>***</FONT>") : null]<BR>"
 
 			dat+="<BR><A href='?src=\ref[src];ac_setScreen=[0]'>Back</A>"
 		if(12)
@@ -561,8 +512,8 @@ proc/admin_notice(var/message, var/rights)
 		else
 			dat+="I'm sorry to break your immersion. This shit's bugged. Report this bug to Agouri, polyxenitopalidou@gmail.com"
 
-	//world << "Channelname: [src.admincaster_feed_channel.channel_name] [src.admincaster_feed_channel.author]"
-	//world << "Msg: [src.admincaster_feed_message.author] [src.admincaster_feed_message.body]"
+	//to_world("Channelname: [src.admincaster_feed_channel.channel_name] [src.admincaster_feed_channel.author]")
+	//to_world("Msg: [src.admincaster_feed_message.author] [src.admincaster_feed_message.body]")
 	usr << browse(dat, "window=admincaster_main;size=400x600")
 	onclose(usr, "admincaster_main")
 
@@ -641,11 +592,11 @@ proc/admin_notice(var/message, var/rights)
 	set desc="Restarts the world"
 	if (!usr.client.holder)
 		return
-	var/confirm = alert("Restart the game world?", "Restart", "Yes", "Cancel")
+	var/confirm = alert(usr, "Restart the game world?", "Restart", "Yes", "Cancel") // Not tgui_alert for safety
 	if(confirm == "Cancel")
 		return
 	if(confirm == "Yes")
-		world << "<span class='danger'>Restarting world!</span> <span class='notice'>Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!</span>"
+		to_world("<span class='danger'>Restarting world!</span> <span class='notice'>Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!</span>")
 		log_admin("[key_name(usr)] initiated a reboot.")
 
 		feedback_set_details("end_error","admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]")
@@ -664,12 +615,12 @@ proc/admin_notice(var/message, var/rights)
 	set desc="Announce your desires to the world"
 	if(!check_rights(0))	return
 
-	var/message = input("Global message to send:", "Admin Announce", null, null)  as message//todo: sanitize for all?
+	var/message = tgui_input_text(usr, "Global message to send:", "Admin Announce", multiline = TRUE, prevent_enter = TRUE)
 	if(message)
 		if(!check_rights(R_SERVER,0))
 			message = sanitize(message, 500, extra = 0)
 		message = replacetext(message, "\n", "<br>") // required since we're putting it in a <p> tag
-		world << "<span class=notice><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b><p style='text-indent: 50px'>[message]</p></span>"
+		to_world("<span class=notice><b>[usr.client.holder.fakekey ? "Administrator" : usr.key] Announces:</b><p style='text-indent: 50px'>[message]</p></span>")
 		log_admin("Announce: [key_name(usr)] : [message]")
 	feedback_add_details("admin_verb","A") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -682,18 +633,24 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set desc = "Send an intercom message, like an arrivals announcement."
 	if(!check_rights(0))	return
 
-	var/channel = input("Channel for message:","Channel", null) as null|anything in radiochannels
+	var/channel = tgui_input_list(usr, "Channel for message:","Channel", radiochannels)
 
 	if(channel) //They picked a channel
-		var/sender = input("Name of sender (max 75):", "Announcement", "Announcement Computer") as null|text
+		var/sender = tgui_input_text(usr, "Name of sender (max 75):", "Announcement", "Announcement Computer")
 
 		if(sender) //They put a sender
 			sender = sanitize(sender, 75, extra = 0)
-			var/message = input("Message content (max 500):", "Contents", "This is a test of the announcement system.") as null|message
-
+			var/message = tgui_input_text(usr, "Message content (max 500):", "Contents", "This is a test of the announcement system.", multiline = TRUE, prevent_enter = TRUE)
+			var/msgverb = tgui_input_text(usr, "Name of verb (Such as 'states', 'says', 'asks', etc):", "Verb", "says")
 			if(message) //They put a message
 				message = sanitize(message, 500, extra = 0)
-				global_announcer.autosay("[message]", "[sender]", "[channel == "Common" ? null : channel]") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
+				//VOREStation Edit Start
+				if(msgverb)
+					msgverb = sanitize(msgverb, 50, extra = 0)
+				else
+					msgverb = "states"
+				global_announcer.autosay("[message]", "[sender]", "[channel == "Common" ? null : channel]", states = msgverb) //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
+				//VOREStation Edit End
 				log_admin("Intercom: [key_name(usr)] : [sender]:[message]")
 
 	feedback_add_details("admin_verb","IN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -705,12 +662,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set waitfor = FALSE //Why bother? We have some sleeps. You can leave tho!
 	if(!check_rights(0))	return
 
-	var/channel = input("Channel for message:","Channel", null) as null|anything in radiochannels
+	var/channel = tgui_input_list(usr, "Channel for message:","Channel", radiochannels)
 
 	if(!channel) //They picked a channel
 		return
 
-	to_chat(usr,"<span class='notice'><B>Intercom Convo Directions</B><br>Start the conversation with the sender, a pipe (|), and then the message on one line. Then hit enter to \
+	to_chat(usr, "<span class='notice'><B>Intercom Convo Directions</B><br>Start the conversation with the sender, a pipe (|), and then the message on one line. Then hit enter to \
 		add another line, and type a (whole) number of seconds to pause between that message, and the next message, then repeat the message syntax up to 20 times. For example:<br>\
 		--- --- ---<br>\
 		Some Guy|Hello guys, what's up?<br>\
@@ -722,7 +679,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		The above will result in those messages playing, with a 5 second gap between each. Maximum of 20 messages allowed.</span>")
 
 	var/list/decomposed
-	var/message = input(usr,"See your chat box for instructions. Keep a copy elsewhere in case it is rejected when you click OK.", "Input Conversation", "") as null|message
+	var/message = tgui_input_text(usr,"See your chat box for instructions. Keep a copy elsewhere in case it is rejected when you click OK.", "Input Conversation", "", multiline = TRUE, prevent_enter = TRUE)
 
 	if(!message)
 		return
@@ -734,12 +691,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 	//Time to find how they screwed up.
 	//Wasn't the right length
 	if((decomposed.len) % 3) //+1 to accomidate the lack of a wait time for the last message
-		to_chat(usr,"<span class='warning'>You passed [decomposed.len] segments (senders+messages+pauses). You must pass a multiple of 3, minus 1 (no pause after the last message). That means a sender and message on every other line (starting on the first), separated by a pipe character (|), and a number every other line that is a pause in seconds.</span>")
+		to_chat(usr, "<span class='warning'>You passed [decomposed.len] segments (senders+messages+pauses). You must pass a multiple of 3, minus 1 (no pause after the last message). That means a sender and message on every other line (starting on the first), separated by a pipe character (|), and a number every other line that is a pause in seconds.</span>")
 		return
 
 	//Too long a conversation
 	if((decomposed.len / 3) > 20)
-		to_chat(usr,"<span class='warning'>This conversation is too long! 20 messages maximum, please.</span>")
+		to_chat(usr, "<span class='warning'>This conversation is too long! 20 messages maximum, please.</span>")
 		return
 
 	//Missed some sleeps, or sanitized to nothing.
@@ -748,24 +705,24 @@ var/datum/announcement/minor/admin_min_announcer = new
 		//Sanitize sender
 		var/clean_sender = sanitize(decomposed[i])
 		if(!clean_sender)
-			to_chat(usr,"<span class='warning'>One part of your conversation was not able to be sanitized. It was the sender of the [(i+2)/3]\th message.</span>")
+			to_chat(usr, "<span class='warning'>One part of your conversation was not able to be sanitized. It was the sender of the [(i+2)/3]\th message.</span>")
 			return
 		decomposed[i] = clean_sender
 
 		//Sanitize message
 		var/clean_message = sanitize(decomposed[++i])
 		if(!clean_message)
-			to_chat(usr,"<span class='warning'>One part of your conversation was not able to be sanitized. It was the body of the [(i+2)/3]\th message.</span>")
+			to_chat(usr, "<span class='warning'>One part of your conversation was not able to be sanitized. It was the body of the [(i+2)/3]\th message.</span>")
 			return
 		decomposed[i] = clean_message
 
 		//Sanitize wait time
 		var/clean_time = text2num(decomposed[++i])
 		if(!isnum(clean_time))
-			to_chat(usr,"<span class='warning'>One part of your conversation was not able to be sanitized. It was the wait time after the [(i+2)/3]\th message.</span>")
+			to_chat(usr, "<span class='warning'>One part of your conversation was not able to be sanitized. It was the wait time after the [(i+2)/3]\th message.</span>")
 			return
 		if(clean_time > 60)
-			to_chat(usr,"<span class='warning'>Max 60 second wait time between messages for sanity's sake please.</span>")
+			to_chat(usr, "<span class='warning'>Max 60 second wait time between messages for sanity's sake please.</span>")
 			return
 		decomposed[i] = clean_time
 
@@ -778,7 +735,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 			var/this_sender = decomposed[i]
 			var/this_message = decomposed[++i]
 			var/this_wait = decomposed[++i]
-			global_announcer.autosay("[this_message]", "[this_sender]", "[channel == "Common" ? null : channel]") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
+			global_announcer.autosay("[this_message]", "[this_sender]", "[channel == "Common" ? null : channel]", "says") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.	//VOREStation Edit
 			sleep(this_wait SECONDS)
 
 /datum/admins/proc/toggleooc()
@@ -791,9 +748,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	config.ooc_allowed = !(config.ooc_allowed)
 	if (config.ooc_allowed)
-		world << "<B>The OOC channel has been globally enabled!</B>"
+		to_world("<B>The OOC channel has been globally enabled!</B>")
 	else
-		world << "<B>The OOC channel has been globally disabled!</B>"
+		to_world("<B>The OOC channel has been globally disabled!</B>")
 	log_and_message_admins("toggled OOC.")
 	feedback_add_details("admin_verb","TOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -807,9 +764,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	config.looc_allowed = !(config.looc_allowed)
 	if (config.looc_allowed)
-		world << "<B>The LOOC channel has been globally enabled!</B>"
+		to_world("<B>The LOOC channel has been globally enabled!</B>")
 	else
-		world << "<B>The LOOC channel has been globally disabled!</B>"
+		to_world("<B>The LOOC channel has been globally disabled!</B>")
 	log_and_message_admins("toggled LOOC.")
 	feedback_add_details("admin_verb","TLOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -824,9 +781,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	config.dsay_allowed = !(config.dsay_allowed)
 	if (config.dsay_allowed)
-		world << "<B>Deadchat has been globally enabled!</B>"
+		to_world("<B>Deadchat has been globally enabled!</B>")
 	else
-		world << "<B>Deadchat has been globally disabled!</B>"
+		to_world("<B>Deadchat has been globally disabled!</B>")
 	log_admin("[key_name(usr)] toggled deadchat.")
 	message_admins("[key_name_admin(usr)] toggled deadchat.", 1)
 	feedback_add_details("admin_verb","TDSAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc
@@ -868,21 +825,26 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 /datum/admins/proc/startnow()
 	set category = "Server"
-	set desc="Start the round RIGHT NOW"
+	set desc="Start the round ASAP"
 	set name="Start Now"
-	if(!ticker)
-		alert("Unable to start the game as it is not set up.")
+
+	if(!check_rights(R_SERVER|R_EVENT))
 		return
-	if(ticker.current_state == GAME_STATE_PREGAME)
-		ticker.current_state = GAME_STATE_SETTING_UP
-		Master.SetRunLevel(RUNLEVEL_SETUP)
-		log_admin("[usr.key] has started the game.")
-		message_admins("<font color='blue'>[usr.key] has started the game.</font>")
+	if(SSticker.current_state > GAME_STATE_PREGAME)
+		to_chat(usr, "<span class='warning'>Error: Start Now: Game has already started.</span>")
+		return
+	if(!SSticker.start_immediately)
+		SSticker.start_immediately = TRUE
+		var/msg = ""
+		if(SSticker.current_state == GAME_STATE_INIT)
+			msg = " (The server is still setting up, but the round will be started as soon as possible.)"
+		log_admin("[key_name(usr)] has started the game.[msg]")
+		message_admins("<span class='notice'>[key_name_admin(usr)] has started the game.[msg]</span>")
 		feedback_add_details("admin_verb","SN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-		return 1
 	else
-		usr << "<font color='red'>Error: Start Now: Game has already started.</font>"
-		return 0
+		SSticker.start_immediately = FALSE
+		to_world("<span class='notice'>Immediate game start canceled.  Normal startup resumed.</span>")
+		log_and_message_admins("cancelled immediate game start.")
 
 /datum/admins/proc/toggleenter()
 	set category = "Server"
@@ -890,9 +852,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name="Toggle Entering"
 	config.enter_allowed = !(config.enter_allowed)
 	if (!(config.enter_allowed))
-		world << "<B>New players may no longer enter the game.</B>"
+		to_world("<B>New players may no longer enter the game.</B>")
 	else
-		world << "<B>New players may now enter the game.</B>"
+		to_world("<B>New players may now enter the game.</B>")
 	log_admin("[key_name(usr)] toggled new player game entering.")
 	message_admins("<font color='blue'>[key_name_admin(usr)] toggled new player game entering.</font>", 1)
 	world.update_status()
@@ -904,9 +866,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name="Toggle AI"
 	config.allow_ai = !( config.allow_ai )
 	if (!( config.allow_ai ))
-		world << "<B>The AI job is no longer chooseable.</B>"
+		to_world("<B>The AI job is no longer chooseable.</B>")
 	else
-		world << "<B>The AI job is chooseable now.</B>"
+		to_world("<B>The AI job is chooseable now.</B>")
 	log_admin("[key_name(usr)] toggled AI allowed.")
 	world.update_status()
 	feedback_add_details("admin_verb","TAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -917,13 +879,41 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name="Toggle Respawn"
 	config.abandon_allowed = !(config.abandon_allowed)
 	if(config.abandon_allowed)
-		world << "<B>You may now respawn.</B>"
+		to_world("<B>You may now respawn.</B>")
 	else
-		world << "<B>You may no longer respawn :(</B>"
+		to_world("<B>You may no longer respawn :(</B>")
 	message_admins("<font color='blue'>[key_name_admin(usr)] toggled respawn to [config.abandon_allowed ? "On" : "Off"].</font>", 1)
 	log_admin("[key_name(usr)] toggled respawn to [config.abandon_allowed ? "On" : "Off"].")
 	world.update_status()
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/togglepersistence()
+	set category = "Server"
+	set desc="Whether persistent data will be saved from now on."
+	set name="Toggle Persistent Data"
+	config.persistence_disabled = !(config.persistence_disabled)
+	if(!config.persistence_disabled)
+		to_world("<B>Persistence is now enabled..</B>")
+	else
+		to_world("<B>Persistence is no longer enabled.</B>")
+	message_admins("<font color='blue'>[key_name_admin(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"].</font>", 1)
+	log_admin("[key_name(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"].")
+	world.update_status()
+	feedback_add_details("admin_verb","TPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/datum/admins/proc/togglemaploadpersistence()
+	set category = "Server"
+	set desc="Whether mapload persistent data will be saved from now on."
+	set name="Toggle Mapload Persistent Data"
+	config.persistence_ignore_mapload = !(config.persistence_ignore_mapload)
+	if(!config.persistence_ignore_mapload)
+		to_world("<B>Persistence is now enabled..</B>")
+	else
+		to_world("<B>Persistence is no longer enabled.</B>")
+	message_admins("<font color='blue'>[key_name_admin(usr)] toggled persistence to [config.persistence_ignore_mapload ? "Off" : "On"].</font>", 1)
+	log_admin("[key_name(usr)] toggled persistence to [config.persistence_ignore_mapload ? "Off" : "On"].")
+	world.update_status()
+	feedback_add_details("admin_verb","TMPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggle_aliens()
 	set category = "Server"
@@ -949,17 +939,17 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name="Delay"
 
 	if(!check_rights(R_SERVER|R_EVENT))	return
-	if (!ticker || ticker.current_state != GAME_STATE_PREGAME)
-		ticker.delay_end = !ticker.delay_end
-		log_admin("[key_name(usr)] [ticker.delay_end ? "delayed the round end" : "has made the round end normally"].")
-		message_admins("<font color='blue'>[key_name(usr)] [ticker.delay_end ? "delayed the round end" : "has made the round end normally"].</font>", 1)
-		return //alert("Round end delayed", null, null, null, null, null)
+	if (SSticker.current_state >= GAME_STATE_PLAYING)
+		SSticker.delay_end = !SSticker.delay_end
+		log_admin("[key_name(usr)] [SSticker.delay_end ? "delayed the round end" : "has made the round end normally"].")
+		message_admins("<font color='blue'>[key_name(usr)] [SSticker.delay_end ? "delayed the round end" : "has made the round end normally"].</font>", 1)
+		return
 	round_progressing = !round_progressing
 	if (!round_progressing)
-		world << "<b>The game start has been delayed.</b>"
+		to_world("<b>The game start has been delayed.</b>")
 		log_admin("[key_name(usr)] delayed the game.")
 	else
-		world << "<b>The game will start soon.</b>"
+		to_world("<b>The game will start soon.</b>")
 		log_admin("[key_name(usr)] removed the delay.")
 	feedback_add_details("admin_verb","DELAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
@@ -992,9 +982,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set desc="Reboots the server post haste"
 	set name="Immediate Reboot"
 	if(!usr.client.holder)	return
-	if( alert("Reboot server?",,"Yes","No") == "No")
+	if(alert(usr, "Reboot server?","Reboot!","Yes","No") == "No") // Not tgui_alert for safety
 		return
-	world << "<font color='red'><b>Rebooting world!</b></font> <font color='blue'>Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!</font>"
+	to_world("<font color='red'><b>Rebooting world!</b></font> <font color='blue'>Initiated by [usr.client.holder.fakekey ? "Admin" : usr.key]!</font>")
 	log_admin("[key_name(usr)] initiated an immediate reboot.")
 
 	feedback_set_details("end_error","immediate admin reboot - by [usr.key] [usr.client.holder.fakekey ? "(stealth)" : ""]")
@@ -1014,9 +1004,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 			message_admins("[key_name_admin(usr)] has unprisoned [key_name_admin(M)]", 1)
 			log_admin("[key_name(usr)] has unprisoned [key_name(M)]")
 		else
-			alert("Admin jumping disabled")
+			tgui_alert_async(usr, "Admin jumping disabled")
 	else
-		alert("[M.name] is not prisoned.")
+		tgui_alert_async(usr, "[M.name] is not prisoned.")
 	feedback_add_details("admin_verb","UP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
@@ -1046,17 +1036,19 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	return 0
 
-/datum/admins/proc/spawn_fruit(seedtype in plant_controller.seeds)
+/datum/admins/proc/spawn_fruit(seedtype in SSplants.seeds)
 	set category = "Debug"
 	set desc = "Spawn the product of a seed."
 	set name = "Spawn Fruit"
 
 	if(!check_rights(R_SPAWN))	return
 
-	if(!seedtype || !plant_controller.seeds[seedtype])
+	if(!seedtype || !SSplants.seeds[seedtype])
 		return
-	var/datum/seed/S = plant_controller.seeds[seedtype]
-	S.harvest(usr,0,0,1)
+	var/amount = tgui_input_number(usr, "Amount of fruit to spawn", "Fruit Amount", 1)
+	if(!isnull(amount))
+		var/datum/seed/S = SSplants.seeds[seedtype]
+		S.harvest(usr,0,0,amount)
 	log_admin("[key_name(usr)] spawned [seedtype] fruit at ([usr.x],[usr.y],[usr.z])")
 
 /datum/admins/proc/spawn_custom_item()
@@ -1066,12 +1058,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	if(!check_rights(R_SPAWN))	return
 
-	var/owner = input("Select a ckey.", "Spawn Custom Item") as null|anything in custom_items
+	var/owner = tgui_input_list(usr, "Select a ckey.", "Spawn Custom Item", custom_items)
 	if(!owner|| !custom_items[owner])
 		return
 
 	var/list/possible_items = custom_items[owner]
-	var/datum/custom_item/item_to_spawn = input("Select an item to spawn.", "Spawn Custom Item") as null|anything in possible_items
+	var/datum/custom_item/item_to_spawn = tgui_input_list(usr, "Select an item to spawn.", "Spawn Custom Item", possible_items)
 	if(!item_to_spawn)
 		return
 
@@ -1086,35 +1078,35 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(!check_rights(R_SPAWN))	return
 
 	if(!custom_items)
-		usr << "Custom item list is null."
+		to_chat(usr, "Custom item list is null.")
 		return
 
 	if(!custom_items.len)
-		usr << "Custom item list not populated."
+		to_chat(usr, "Custom item list not populated.")
 		return
 
 	for(var/assoc_key in custom_items)
-		usr << "[assoc_key] has:"
+		to_chat(usr, "[assoc_key] has:")
 		var/list/current_items = custom_items[assoc_key]
 		for(var/datum/custom_item/item in current_items)
-			usr << "- name: [item.name] icon: [item.item_icon] path: [item.item_path] desc: [item.item_desc]"
+			to_chat(usr, "- name: [item.name] icon: [item.item_icon] path: [item.item_path] desc: [item.item_desc]")
 
-/datum/admins/proc/spawn_plant(seedtype in plant_controller.seeds)
+/datum/admins/proc/spawn_plant(seedtype in SSplants.seeds)
 	set category = "Debug"
 	set desc = "Spawn a spreading plant effect."
 	set name = "Spawn Plant"
 
 	if(!check_rights(R_SPAWN))	return
 
-	if(!seedtype || !plant_controller.seeds[seedtype])
+	if(!seedtype || !SSplants.seeds[seedtype])
 		return
-	new /obj/effect/plant(get_turf(usr), plant_controller.seeds[seedtype])
+	new /obj/effect/plant(get_turf(usr), SSplants.seeds[seedtype])
 	log_admin("[key_name(usr)] spawned [seedtype] vines at ([usr.x],[usr.y],[usr.z])")
 
 /datum/admins/proc/spawn_atom(var/object as text)
+	set name = "Spawn"
 	set category = "Debug"
 	set desc = "(atom path) Spawn an atom"
-	set name = "Spawn"
 
 	if(!check_rights(R_SPAWN))	return
 
@@ -1132,7 +1124,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(matches.len==1)
 		chosen = matches[1]
 	else
-		chosen = input("Select an atom type", "Spawn Atom", matches[1]) as null|anything in matches
+		chosen = tgui_input_list(usr, "Select an atom type", "Spawn Atom", matches)
 		if(!chosen)
 			return
 
@@ -1152,10 +1144,10 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name = "Show Traitor Panel"
 
 	if(!istype(M))
-		usr << "This can only be used on instances of type /mob"
+		to_chat(usr, "This can only be used on instances of type /mob")
 		return
 	if(!M.mind)
-		usr << "This mob has no mind!"
+		to_chat(usr, "This mob has no mind!")
 		return
 
 	M.mind.edit_memory()
@@ -1167,7 +1159,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name = "Show Game Mode"
 
 	if(!ticker || !ticker.mode)
-		alert("Not before roundstart!", "Alert")
+		tgui_alert_async(usr, "Not before roundstart!", "Alert")
 		return
 
 	var/out = "<font size=3><b>Current mode: [ticker.mode.name] (<a href='?src=\ref[ticker.mode];debug_antag=self'>[ticker.mode.config_tag]</a>)</b></font><br/>"
@@ -1221,7 +1213,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		out += "<b>Autotraitor <a href='?src=\ref[ticker.mode];toggle=autotraitor'>disabled</a></b>.<br/>"
 
 	out += "<b>All antag ids:</b>"
-	if(ticker.mode.antag_templates && ticker.mode.antag_templates.len).
+	if(ticker.mode.antag_templates && ticker.mode.antag_templates.len)
 		for(var/datum/antagonist/antag in ticker.mode.antag_templates)
 			antag.update_current_antag_max()
 			out += " <a href='?src=\ref[ticker.mode];debug_antag=[antag.id]'>[antag.id]</a>"
@@ -1241,9 +1233,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name="Toggle tinted welding helmets."
 	config.welder_vision = !( config.welder_vision )
 	if (config.welder_vision)
-		world << "<B>Reduced welder vision has been enabled!</B>"
+		to_world("<B>Reduced welder vision has been enabled!</B>")
 	else
-		world << "<B>Reduced welder vision has been disabled!</B>"
+		to_world("<B>Reduced welder vision has been disabled!</B>")
 	log_admin("[key_name(usr)] toggled welder vision.")
 	message_admins("[key_name_admin(usr)] toggled welder vision.", 1)
 	feedback_add_details("admin_verb","TTWH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -1254,9 +1246,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set name="Toggle guests"
 	config.guests_allowed = !(config.guests_allowed)
 	if (!(config.guests_allowed))
-		world << "<B>Guests may no longer enter the game.</B>"
+		to_world("<B>Guests may no longer enter the game.</B>")
 	else
-		world << "<B>Guests may now enter the game.</B>"
+		to_world("<B>Guests may now enter the game.</B>")
 	log_admin("[key_name(usr)] toggled guests game entering [config.guests_allowed?"":"dis"]allowed.")
 	message_admins("<font color='blue'>[key_name_admin(usr)] toggled guests game entering [config.guests_allowed?"":"dis"]allowed.</font>", 1)
 	feedback_add_details("admin_verb","TGU") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -1266,21 +1258,21 @@ var/datum/announcement/minor/admin_min_announcer = new
 	for(var/mob/living/silicon/S in mob_list)
 		ai_number++
 		if(isAI(S))
-			usr << "<b>AI [key_name(S, usr)]'s laws:</b>"
+			to_chat(usr, "<b>AI [key_name(S, usr)]'s laws:</b>")
 		else if(isrobot(S))
 			var/mob/living/silicon/robot/R = S
-			usr << "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [R.connected_ai])":"(Independent)"]: laws:</b>"
+			to_chat(usr, "<b>CYBORG [key_name(S, usr)] [R.connected_ai?"(Slaved to: [R.connected_ai])":"(Independent)"]: laws:</b>")
 		else if (ispAI(S))
-			usr << "<b>pAI [key_name(S, usr)]'s laws:</b>"
+			to_chat(usr, "<b>pAI [key_name(S, usr)]'s laws:</b>")
 		else
-			usr << "<b>SOMETHING SILICON [key_name(S, usr)]'s laws:</b>"
+			to_chat(usr, "<b>SOMETHING SILICON [key_name(S, usr)]'s laws:</b>")
 
 		if (S.laws == null)
-			usr << "[key_name(S, usr)]'s laws are null?? Contact a coder."
+			to_chat(usr, "[key_name(S, usr)]'s laws are null?? Contact a coder.")
 		else
 			S.laws.show_laws(usr)
 	if(!ai_number)
-		usr << "<b>No AIs located</b>" //Just so you know the thing is actually working and not just ignoring you.
+		to_chat(usr, "<b>No AIs located</b>") //Just so you know the thing is actually working and not just ignoring you.
 
 /datum/admins/proc/show_skills()
 	set category = "Admin"
@@ -1289,10 +1281,10 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
 	if (!istype(src,/datum/admins))
-		usr << "Error: you are not an admin!"
+		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/mob/living/carbon/human/M = input("Select mob.", "Select mob.") as null|anything in human_mob_list
+	var/mob/living/carbon/human/M = tgui_input_list(usr, "Select mob.", "Select mob.", human_mob_list)
 	if(!M) return
 
 	show_skill_window(usr, M)
@@ -1333,15 +1325,15 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 		if(2)	//Admins
 			var/ref_mob = "\ref[M]"
-			return "<b>[key_name(C, link, name, highlight_special)](<A HREF='?_src_=holder;adminmoreinfo=[ref_mob]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) ([admin_jump_link(M, src)]) (<A HREF='?_src_=holder;check_antagonist=1'>CA</A>) (<A HREF='?_src_=holder;take_question=\ref[M]'>TAKE</A>)</b>"
+			return "<b>[key_name(C, link, name, highlight_special)](<A HREF='?_src_=holder;adminmoreinfo=[ref_mob]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) ([admin_jump_link(M)]) (<A HREF='?_src_=holder;check_antagonist=1'>CA</A>) (<A HREF='?_src_=holder;take_question=\ref[M]'>TAKE</A>)</b>"
 
 		if(3)	//Devs
 			var/ref_mob = "\ref[M]"
-			return "<b>[key_name(C, link, name, highlight_special)](<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>)([admin_jump_link(M, src)]) (<A HREF='?_src_=holder;take_question=\ref[M]'>TAKE</A>)</b>"
+			return "<b>[key_name(C, link, name, highlight_special)](<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>)([admin_jump_link(M)]) (<A HREF='?_src_=holder;take_question=\ref[M]'>TAKE</A>)</b>"
 
 		if(4)	//Event Managers
 			var/ref_mob = "\ref[M]"
-			return "<b>[key_name(C, link, name, highlight_special)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[M]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) ([admin_jump_link(M, src)]) (<A HREF='?_src_=holder;take_question=\ref[M]'>TAKE</A>)</b>"
+			return "<b>[key_name(C, link, name, highlight_special)] (<A HREF='?_src_=holder;adminmoreinfo=\ref[M]'>?</A>) (<A HREF='?_src_=holder;adminplayeropts=[ref_mob]'>PP</A>) (<A HREF='?_src_=vars;Vars=[ref_mob]'>VV</A>) (<A HREF='?_src_=holder;subtlemessage=[ref_mob]'>SM</A>) ([admin_jump_link(M)]) (<A HREF='?_src_=holder;take_question=\ref[M]'>TAKE</A>)</b>"
 
 
 /proc/ishost(whom)
@@ -1371,7 +1363,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		return //Extra sanity check to make sure only observers are shoved into things
 
 	//Same as assume-direct-control perm requirements.
-	if (!check_rights(R_VAREDIT,0) || !check_rights(R_ADMIN|R_DEBUG,0))
+	if (!check_rights(R_VAREDIT,0) || !check_rights(R_ADMIN|R_DEBUG|R_EVENT,0))
 		return 0
 	if (!frommob.ckey)
 		return 0
@@ -1379,13 +1371,18 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if (tomob.ckey)
 		question = "This mob already has a user ([tomob.key]) in control of it! "
 	question += "Are you sure you want to place [frommob.name]([frommob.key]) in control of [tomob.name]?"
-	var/ask = alert(question, "Place ghost in control of mob?", "Yes", "No")
+	var/ask = tgui_alert(usr, question, "Place ghost in control of mob?", list("Yes", "No"))
 	if (ask != "Yes")
 		return 1
 	if (!frommob || !tomob) //make sure the mobs don't go away while we waited for a response
 		return 1
 	if(tomob.client) //No need to ghostize if there is no client
 		tomob.ghostize(0)
+	if(frommob.mind && frommob.mind.current) //Preserve teleop for original body when adminghosting.
+		var/mob/body = frommob.mind.current
+		if(body)
+			if(body.teleop)
+				body.teleop = tomob
 	message_admins("<span class='adminnotice'>[key_name_admin(usr)] has put [frommob.ckey] in control of [tomob.name].</span>")
 	log_admin("[key_name(usr)] stuffed [frommob.ckey] into [tomob.name].")
 	feedback_add_details("admin_verb","CGD")
@@ -1401,16 +1398,16 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
 	if (!istype(src,/datum/admins))
-		usr << "Error: you are not an admin!"
+		to_chat(usr, "Error: you are not an admin!")
 		return
 
 	if(!ticker || !ticker.mode)
-		usr << "Mode has not started."
+		to_chat(usr, "Mode has not started.")
 		return
 
-	var/antag_type = input("Choose a template.","Force Latespawn") as null|anything in all_antag_types
+	var/antag_type = tgui_input_list(usr, "Choose a template.","Force Latespawn", all_antag_types)
 	if(!antag_type || !all_antag_types[antag_type])
-		usr << "Aborting."
+		to_chat(usr, "Aborting.")
 		return
 
 	var/datum/antagonist/antag = all_antag_types[antag_type]
@@ -1424,12 +1421,12 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	if (!istype(src,/datum/admins))
 		src = usr.client.holder
-	if (!istype(src,/datum/admins) || !check_rights(R_ADMIN))
-		usr << "Error: you are not an admin!"
+	if (!istype(src,/datum/admins) || !check_rights(R_ADMIN|R_EVENT|R_FUN))
+		to_chat(usr, "Error: you are not an admin!")
 		return
 
 	if(!ticker || !ticker.mode)
-		usr << "Mode has not started."
+		to_chat(usr, "Mode has not started.")
 		return
 
 	log_and_message_admins("attempting to force mode autospawn.")
@@ -1442,14 +1439,14 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	var/msg
 
-	if(check_rights(R_ADMIN|R_MOD))
+	if(check_rights(R_ADMIN|R_MOD|R_EVENT))
 		if (H.paralysis == 0)
-			H.paralysis = 8000
+			H.SetParalysis(8000)
 			msg = "has paralyzed [key_name(H)]."
 			log_and_message_admins(msg)
 		else
-			if(alert(src, "[key_name(H)] is paralyzed, would you like to unparalyze them?",,"Yes","No") == "Yes")
-				H.paralysis = 0
+			if(tgui_alert(src, "[key_name(H)] is paralyzed, would you like to unparalyze them?","Paralyze Mob",list("Yes","No")) == "Yes")
+				H.SetParalysis(0)
 				msg = "has unparalyzed [key_name(H)]."
 				log_and_message_admins(msg)
 
@@ -1460,14 +1457,14 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
 	var/crystals
 
-	if(check_rights(R_ADMIN))
-		crystals = input("Amount of telecrystals for [H.ckey], currently [H.mind.tcrystals].", crystals) as null|num
+	if(check_rights(R_ADMIN|R_EVENT))
+		crystals = tgui_input_number(usr, "Amount of telecrystals for [H.ckey], currently [H.mind.tcrystals].", crystals)
 		if (!isnull(crystals))
 			H.mind.tcrystals = crystals
 			var/msg = "[key_name(usr)] has modified [H.ckey]'s telecrystals to [crystals]."
 			message_admins(msg)
 	else
-		usr << "You do not have access to this command."
+		to_chat(usr, "You do not have access to this command.")
 
 /datum/admins/proc/add_tcrystals(mob/living/carbon/human/H as mob)
 	set category = "Debug"
@@ -1476,31 +1473,31 @@ var/datum/announcement/minor/admin_min_announcer = new
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
 	var/crystals
 
-	if(check_rights(R_ADMIN))
-		crystals = input("Amount of telecrystals to give to [H.ckey], currently [H.mind.tcrystals].", crystals) as null|num
+	if(check_rights(R_ADMIN|R_EVENT))
+		crystals = tgui_input_number(usr, "Amount of telecrystals to give to [H.ckey], currently [H.mind.tcrystals].", crystals)
 		if (!isnull(crystals))
 			H.mind.tcrystals += crystals
 			var/msg = "[key_name(usr)] has added [crystals] to [H.ckey]'s telecrystals."
 			message_admins(msg)
 	else
-		usr << "You do not have access to this command."
+		to_chat(usr, "You do not have access to this command.")
 
 
 /datum/admins/proc/sendFax()
 	set category = "Special Verbs"
 	set name = "Send Fax"
 	set desc = "Sends a fax to this machine"
-	var/department = input("Choose a fax", "Fax") as null|anything in alldepartments
+	var/department = tgui_input_list(usr, "Choose a fax", "Fax", alldepartments)
 	for(var/obj/machinery/photocopier/faxmachine/sendto in allfaxes)
 		if(sendto.department == department)
 
 			if (!istype(src,/datum/admins))
 				src = usr.client.holder
 			if (!istype(src,/datum/admins))
-				usr << "Error: you are not an admin!"
+				to_chat(usr, "Error: you are not an admin!")
 				return
 
-			var/replyorigin = input(src.owner, "Please specify who the fax is coming from", "Origin") as text|null
+			var/replyorigin = tgui_input_text(src.owner, "Please specify who the fax is coming from", "Origin")
 
 			var/obj/item/weapon/paper/admin/P = new /obj/item/weapon/paper/admin( null ) //hopefully the null loc won't cause trouble for us
 			faxreply = P
@@ -1512,17 +1509,17 @@ var/datum/announcement/minor/admin_min_announcer = new
 			P.adminbrowse()
 
 
-datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies in
+/datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies in
 
 /datum/admins/proc/faxCallback(var/obj/item/weapon/paper/admin/P, var/obj/machinery/photocopier/faxmachine/destination)
-	var/customname = input(src.owner, "Pick a title for the report", "Title") as text|null
+	var/customname = tgui_input_text(src.owner, "Pick a title for the report", "Title")
 
 	P.name = "[P.origin] - [customname]"
 	P.desc = "This is a paper titled '" + P.name + "'."
 
 	var/shouldStamp = 1
 	if(!P.sender) // admin initiated
-		switch(alert("Would you like the fax stamped?",, "Yes", "No"))
+		switch(tgui_alert(usr, "Would you like the fax stamped?","Stamped?", list("Yes", "No")))
 			if("No")
 				shouldStamp = 0
 
@@ -1530,9 +1527,8 @@ datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies
 		P.stamps += "<hr><i>This paper has been stamped by the [P.origin] Quantum Relay.</i>"
 
 		var/image/stampoverlay = image('icons/obj/bureaucracy.dmi')
-		var/{x; y;}
-		x = rand(-2, 0)
-		y = rand(-1, 2)
+		var/x = rand(-2, 0)
+		var/y = rand(-1, 2)
 		P.offset_x += x
 		P.offset_y += y
 		stampoverlay.pixel_x = x
@@ -1546,7 +1542,7 @@ datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies
 		if(!P.stamped)
 			P.stamped = new
 		P.stamped += /obj/item/weapon/stamp/centcomm
-		P.overlays += stampoverlay
+		P.add_overlay(stampoverlay)
 
 	var/obj/item/rcvdcopy
 	rcvdcopy = destination.copy(P)
@@ -1556,20 +1552,33 @@ datum/admins/var/obj/item/weapon/paper/admin/faxreply // var to hold fax replies
 
 
 	if(destination.receivefax(P))
-		src.owner << "<span class='notice'>Message reply to transmitted successfully.</span>"
+		to_chat(src.owner, "<span class='notice'>Message reply to transmitted successfully.</span>")
 		if(P.sender) // sent as a reply
 			log_admin("[key_name(src.owner)] replied to a fax message from [key_name(P.sender)]")
-			for(var/client/C in admins)
-				if((R_ADMIN | R_MOD) & C.holder.rights)
-					C << "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] replied to a fax message from [key_name_admin(P.sender)] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>"
+			for(var/client/C in GLOB.admins)
+				if((R_ADMIN | R_MOD | R_EVENT) & C.holder.rights)
+					to_chat(C, "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] replied to a fax message from [key_name_admin(P.sender)] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
 		else
 			log_admin("[key_name(src.owner)] has sent a fax message to [destination.department]")
-			for(var/client/C in admins)
-				if((R_ADMIN | R_MOD) & C.holder.rights)
-					C << "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>"
+			for(var/client/C in GLOB.admins)
+				if((R_ADMIN | R_MOD | R_EVENT) & C.holder.rights)
+					to_chat(C, "<span class='log_message'><span class='prefix'>FAX LOG:</span>[key_name_admin(src.owner)] has sent a fax message to [destination.department] (<a href='?_src_=holder;AdminFaxView=\ref[rcvdcopy]'>VIEW</a>)</span>")
+
+		var/plaintext_title = P.sender ? "replied to [key_name(P.sender)]'s fax" : "sent a fax message to [destination.department]"
+		var/fax_text = paper_html_to_plaintext(P.info)
+		log_game(plaintext_title)
+		log_game(fax_text)
+
+		SSwebhooks.send(
+			WEBHOOK_FAX_SENT,
+			list(
+				"name" = "[key_name(owner)] [plaintext_title].",
+				"body" = fax_text
+			)
+		)
 
 	else
-		src.owner << "<span class='warning'>Message reply failed.</span>"
+		to_chat(src.owner, "<span class='warning'>Message reply failed.</span>")
 
 	spawn(100)
 		qdel(P)

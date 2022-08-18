@@ -18,7 +18,8 @@
 			continue
 		if(vent.welded)
 			continue
-		if(istype(get_area(vent), /area/crew_quarters/sleep)) //No going to dorms
+		var/area/A = get_area(vent)
+		if(A.forbid_events)
 			continue
 		vent_list += vent
 	if(!vent_list.len)
@@ -51,4 +52,17 @@
 		query_string += "&color=[url_encode(color)]"
 		if(sender)
 			query_string += "&from=[url_encode(sender)]"
+		world.Export("[config.chat_webhook_url]?[query_string]")
+
+/proc/admin_action_message(var/admin = "INVALID", var/user = "INVALID", var/action = "INVALID", var/reason = "INVALID", var/time = "INVALID")
+	if (!config.chat_webhook_url || !action)
+		return
+	spawn(0)
+		var/query_string = "type=adminaction"
+		query_string += "&key=[url_encode(config.chat_webhook_key)]"
+		query_string += "&admin=[url_encode(admin)]"
+		query_string += "&user=[url_encode(user)]"
+		query_string += "&action=[url_encode(action)]"
+		query_string += "&reason=[url_encode(reason)]"
+		query_string += "&time=[url_encode(time)]"
 		world.Export("[config.chat_webhook_url]?[query_string]")

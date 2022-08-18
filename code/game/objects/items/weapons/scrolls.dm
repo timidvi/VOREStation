@@ -3,6 +3,10 @@
 	desc = "A scroll for moving around."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "scroll"
+	item_icons = list(
+		slot_l_hand_str = 'icons/mob/items/lefthand_books.dmi',
+		slot_r_hand_str = 'icons/mob/items/righthand_books.dmi'
+		)
 	var/uses = 4.0
 	w_class = ITEMSIZE_TINY
 	item_state = "paper"
@@ -12,7 +16,7 @@
 
 /obj/item/weapon/teleportation_scroll/attack_self(mob/user as mob)
 	if((user.mind && !wizards.is_antagonist(user.mind)))
-		usr << "<span class='warning'>You stare at the scroll but cannot make sense of the markings!</span>"
+		to_chat(usr, "<span class='warning'>You stare at the scroll but cannot make sense of the markings!</span>")
 		return
 
 	user.set_machine(src)
@@ -42,10 +46,9 @@
 	return
 
 /obj/item/weapon/teleportation_scroll/proc/teleportscroll(var/mob/user)
-
-	var/A
-
-	A = input(user, "Area to jump to", "BOOYEA", A) in teleportlocs
+	var/A = tgui_input_list(user, "Area to jump to:", "Teleportation Scroll", teleportlocs)
+	if(!A)
+		return
 	var/area/thearea = teleportlocs[A]
 
 	if (user.stat || user.restrained())
@@ -69,7 +72,7 @@
 				L+=T
 
 	if(!L.len)
-		user <<"The spell matrix was unable to locate a suitable teleport destination for an unknown reason. Sorry."
+		to_chat(user, "The spell matrix was unable to locate a suitable teleport destination for an unknown reason. Sorry.")
 		return
 
 	if(user && user.buckled)

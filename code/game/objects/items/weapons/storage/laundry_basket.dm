@@ -14,7 +14,7 @@
 	max_w_class = ITEMSIZE_LARGE
 	max_storage_space = ITEMSIZE_COST_NORMAL * 8
 	storage_slots = 20
-	use_to_pickup = 1
+	use_to_pickup = TRUE
 	allow_quick_empty = 1
 	allow_quick_gather = 1
 	collection_mode = 1
@@ -28,17 +28,17 @@
 		if (user.hand)
 			temp = H.get_organ("l_hand")
 		if(!temp)
-			user << "<span class='warning'>You need two hands to pick this up!</span>"
+			to_chat(user, "<span class='warning'>You need two hands to pick this up!</span>")
 			return
 
 	if(user.get_inactive_hand())
-		user << "<span class='warning'>You need your other hand to be empty</span>"
+		to_chat(user, "<span class='warning'>You need your other hand to be empty</span>")
 		return
 	return ..()
 
 /obj/item/weapon/storage/laundry_basket/attack_self(mob/user as mob)
 	var/turf/T = get_turf(user)
-	user << "<span class='notice'>You dump the [src]'s contents onto \the [T].</span>"
+	to_chat(user, "<span class='notice'>You dump the [src]'s contents onto \the [T].</span>")
 	return ..()
 
 /obj/item/weapon/storage/laundry_basket/pickup(mob/user)
@@ -79,7 +79,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "offhand"
 	name = "second hand"
-	use_to_pickup = 0
+	use_to_pickup = FALSE
 
 /obj/item/weapon/storage/laundry_basket/offhand/dropped(mob/user as mob)
 	user.drop_from_inventory(linked)

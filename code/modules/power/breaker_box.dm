@@ -6,13 +6,15 @@
 
 /obj/machinery/power/breakerbox
 	name = "Breaker Box"
+	desc = "Large machine with heavy duty switching circuits used for advanced grid control."
 	icon = 'icons/obj/power.dmi'
 	icon_state = "bbox_off"
 	//directwired = 0
 	var/icon_state_on = "bbox_on"
 	var/icon_state_off = "bbox_off"
-	density = 1
-	anchored = 1
+	density = TRUE
+	anchored = TRUE
+	unacidable = TRUE
 	circuit = /obj/item/weapon/circuitboard/breakerbox
 	var/on = 0
 	var/busy = 0
@@ -24,7 +26,7 @@
 	for(var/obj/structure/cable/C in src.loc)
 		qdel(C)
 	. = ..()
-	for(var/datum/nano_module/rcon/R in world)
+	for(var/datum/tgui_module/rcon/R in world)
 		R.FindDevices()
 
 /obj/machinery/power/breakerbox/Initialize()
@@ -40,11 +42,11 @@
 	set_state(1)
 
 /obj/machinery/power/breakerbox/examine(mob/user)
-	to_chat(user, "Large machine with heavy duty switching circuits used for advanced grid control")
+	. = ..()
 	if(on)
-		to_chat(user, "<font color='green'>It seems to be online.</font>")
+		. += "<span class='notice'>It seems to be online.</span>"
 	else
-		to_chat(user, "<font color='red'>It seems to be offline.</font>")
+		. += "<span class='warning'>It seems to be offline.</span>"
 
 /obj/machinery/power/breakerbox/attack_ai(mob/user)
 	if(update_locked)
@@ -91,7 +93,7 @@
 
 /obj/machinery/power/breakerbox/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
 	if(istype(W, /obj/item/device/multitool))
-		var/newtag = input(user, "Enter new RCON tag. Use \"NO_TAG\" to disable RCON or leave empty to cancel.", "SMES RCON system") as text
+		var/newtag = tgui_input_text(user, "Enter new RCON tag. Use \"NO_TAG\" to disable RCON or leave empty to cancel.", "SMES RCON system")
 		if(newtag)
 			RCon_tag = newtag
 			to_chat(user, "<span class='notice'>You changed the RCON tag to: [newtag]</span>")

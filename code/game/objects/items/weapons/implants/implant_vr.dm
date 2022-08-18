@@ -22,19 +22,16 @@
 	if (emote == "smile")
 		src.uses--
 		to_chat(source,"<span class='notice'>You suddenly feel as if you can understand other languages!</span>")
-		source.add_language(LANGUAGE_CHIMPANZEE)
-		source.add_language(LANGUAGE_NEAERA)
-		source.add_language(LANGUAGE_STOK)
-		source.add_language(LANGUAGE_FARWA)
 		source.add_language(LANGUAGE_UNATHI)
 		source.add_language(LANGUAGE_SIIK)
 		source.add_language(LANGUAGE_SKRELLIAN)
+		source.add_language(LANGUAGE_ANIMAL)
 		source.add_language(LANGUAGE_SCHECHI)
 		source.add_language(LANGUAGE_BIRDSONG)
 		source.add_language(LANGUAGE_SAGARU)
 		source.add_language(LANGUAGE_CANILUNZT)
-		source.add_language(LANGUAGE_SLAVIC)
 		source.add_language(LANGUAGE_SOL_COMMON) //In case they're giving a xenomorph an implant or something.
+		source.add_language(LANGUAGE_TAVAN)
 
 /obj/item/weapon/implant/vrlanguage/post_implant(mob/source)
 	source.mind.store_memory("A implant can be activated by using the smile emote, <B>say *smile</B> to attempt to activate.", 0, 0)
@@ -60,12 +57,13 @@
 <b>Function:</b> Resizes the host whenever specific verbal command is received<BR>"}
 	return dat
 
-/obj/item/weapon/implant/sizecontrol/hear_talk(mob/M, msg)
+/obj/item/weapon/implant/sizecontrol/hear_talk(mob/M, list/message_pieces)
 	if(M == imp_in)
 		return
 	if(owner)
 		if(M != owner)
 			return
+	var/msg = multilingual_to_message(message_pieces)
 	if(findtext(msg,"ignore"))
 		return
 	var/list/replacechars = list("&#39;" = "",">" = "","<" = "","(" = "",")" = "", "~" = "")

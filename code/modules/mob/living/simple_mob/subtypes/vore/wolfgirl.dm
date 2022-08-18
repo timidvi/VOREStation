@@ -2,7 +2,7 @@
 	name = "wolfgirl"
 	desc = "AwooOOOOoooo!"
 	tt_desc = "Homo lupus"
-	
+
 	icon_state = "wolfgirl"
 	icon_living = "wolfgirl"
 	icon_dead = "wolfgirl-dead"
@@ -12,9 +12,9 @@
 	maxHealth = 30
 	health = 30
 
-	response_help = "pats the"
-	response_disarm = "gently pushes aside the"
-	response_harm = "hits the"
+	response_help = "pats"
+	response_disarm = "gently pushes aside"
+	response_harm = "hits"
 
 	harm_intent_damage = 8
 	melee_damage_lower = 7
@@ -24,15 +24,6 @@
 	say_list_type = /datum/say_list/wolfgirl
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/cooperative/wolfgirl
 
-	var/loopstop = 0 //To prevent circular awoooos.
-/*
-/mob/living/simple_mob/retaliate/wolfgirl/hear_say()
-	if(world.time - loopstop < 5 SECONDS)
-		return
-	else
-		loopstop = world.time
-		..()
-*/
 // Activate Noms!
 /mob/living/simple_mob/vore/wolfgirl
 	vore_active = 1
@@ -58,6 +49,22 @@
 
 	if(findtext(message, "Awoo."))
 		delayed_say(pick("Awoo?"), speaker)
+
+	if(findtext(message, "Nice hat"))
+		delayed_say(pick("Thanks my grandma made it for me."), speaker)
+
+	if(findtext(message, "What's your phone number?"))
+		delayed_say(pick("Five six seven oh nine! Wait, who are you?"), speaker)
+
+	if(findtext(message, "Are you horny?"))
+		delayed_say(pick("No! I'm just hyperactive!"), speaker)
+
+	if(findtext(message, "Good girl"))
+		delayed_say(pick("Aww thanks... Wait, I'm not a dog!"), speaker)
+
+	if(findtext(message, "Fuyu"))
+		delayed_say(pick("You know my sister?!", "Is she causing problems again?"), speaker)
+
 
 /datum/say_list/wolfgirl
 	speak = list("AwoooOOOOoooo!","Awoo~","I'll protect the forest! ... Where's the forest again?","All I need is my sword!","Awoo?","Anyone else smell that?")

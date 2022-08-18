@@ -5,7 +5,7 @@
 	icon = 'icons/obj/aibots.dmi'
 	layer = MOB_LAYER
 	universal_speak = 1
-	density = 0
+	density = FALSE
 
 	makes_dirt = FALSE	// No more dirt from Beepsky
 
@@ -17,7 +17,7 @@
 	var/emagged = 0
 	var/light_strength = 3
 	var/busy = 0
-
+	var/obj/item/device/paicard/paicard = null
 	var/obj/access_scanner = null
 	var/list/req_access = list()
 	var/list/req_one_access = list()
@@ -32,6 +32,7 @@
 	var/will_patrol = 0 // If set to 1, will patrol, duh
 	var/patrol_speed = 1 // How many times per tick we move when patrolling
 	var/target_speed = 2 // Ditto for chasing the target
+	var/panic_on_alert = FALSE	// Will the bot go faster when the alert level is raised?
 	var/min_target_dist = 1 // How close we try to get to the target
 	var/max_target_dist = 50 // How far we are willing to go
 	var/max_patrol_dist = 250
@@ -44,7 +45,7 @@
 	..()
 	update_icons()
 
-	default_language = all_languages[LANGUAGE_GALCOM]
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM]
 
 	botcard = new /obj/item/weapon/card/id(src)
 	botcard.access = botcard_access.Copy()
@@ -67,18 +68,35 @@
 	if(health <= 0)
 		death()
 		return
-	weakened = 0
-	stunned = 0
-	paralysis = 0
+	SetWeakened(0)
+	SetStunned(0)
+	SetParalysis(0)
 
-	if(on && !client && !busy)
+	if(on && !client && !busy && !paicard)
 		spawn(0)
 			handleAI()
-
+/*
+/mob/living/bot/examine(mob/user)
+	. = ..()
+	if(health < maxHealth)
+		if(health > maxHealth/3)
+			. += "[src]'s parts look loose."
+		else
+			. += "[src]'s parts look very loose!"
+	else
+		. += "[src] is in pristine condition."
+	. += span_notice("Its maintenance panel is [open ? "open" : "closed"].")
+	. += span_info("You can use a <b>screwdriver</b> to [open ? "close" : "open"] it.")
+	. += span_notice("Its control panel is [locked ? "locked" : "unlocked"].")
+	if(paicard)
+		. += span_notice("It has a pAI device installed.")
+		if(open)
+			. += span_info("You can use a <b>crowbar</b> to remove it.")
+*/
 /mob/living/bot/updatehealth()
 	if(status_flags & GODMODE)
 		health = getMaxHealth()
-		stat = CONSCIOUS
+		set_stat(CONSCIOUS)
 	else
 		health = getMaxHealth() - getFireLoss() - getBruteLoss()
 	oxyloss = 0
@@ -137,18 +155,25 @@
 			qdel(O)
 		else
 			to_chat(user, "<span class='notice'>Unable to repair with the maintenance panel closed.</span>")
+	else if(istype(O, /obj/item/device/paicard))
+		if(open)
+			insertpai(user, O)
+			to_chat(user, span_notice("You slot the card into \the [initial(src.name)]."))
+		else
+			to_chat(user, span_notice("You must open the panel first!"))
+	else if(O.is_crowbar())
+		if(open && paicard)
+			to_chat(user, span_notice("You are attempting to remove the pAI.."))
+			if(do_after(user,10 * O.toolspeed))
+				ejectpai(user)
 	else
 		..()
 
 /mob/living/bot/attack_ai(var/mob/user)
 	return attack_hand(user)
 
-/mob/living/bot/say(var/message)
-	var/verb = "beeps"
-
-	message = sanitize(message)
-
-	..(message, null, verb)
+/mob/living/bot/say_quote(var/message, var/datum/language/speaking = null)
+	return "beeps"
 
 /mob/living/bot/speech_bubble_appearance()
 	return "machine"
@@ -156,7 +181,7 @@
 /mob/living/bot/Bump(var/atom/A)
 	if(on && botcard && istype(A, /obj/machinery/door))
 		var/obj/machinery/door/D = A
-		if(!istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && D.check_access(botcard))
+		if(!istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(botcard))
 			D.open()
 	else
 		..()
@@ -170,14 +195,20 @@
 			if(!A || !A.loc || prob(1))
 				ignore_list -= A
 	handleRegular()
+
+	var/panic_speed_mod = 0
+
+	if(panic_on_alert)
+		panic_speed_mod = handlePanic()
+
 	if(target && confirmTarget(target))
 		if(Adjacent(target))
 			handleAdjacentTarget()
 		else
 			handleRangedTarget()
 		if(!wait_if_pulled || !pulledby)
-			for(var/i = 1 to target_speed)
-				sleep(20 / (target_speed + 1))
+			for(var/i = 1 to (target_speed + panic_speed_mod))
+				sleep(20 / (target_speed + panic_speed_mod + 1))
 				stepToTarget()
 		if(max_frustration && frustration > max_frustration * target_speed)
 			handleFrustrated(1)
@@ -186,7 +217,7 @@
 		lookForTargets()
 		if(will_patrol && !pulledby && !target)
 			if(patrol_path && patrol_path.len)
-				for(var/i = 1 to patrol_speed)
+				for(var/i = 1 to (patrol_speed + panic_speed_mod))
 					sleep(20 / (patrol_speed + 1))
 					handlePatrol()
 				if(max_frustration && frustration > max_frustration * patrol_speed)
@@ -194,6 +225,19 @@
 			else
 				startPatrol()
 		else
+			if((locate(/obj/machinery/door) in loc) && !pulledby) //Don't hang around blocking doors, but don't run off if someone tries to pull us through one.
+				var/turf/my_turf = get_turf(src)
+				var/list/can_go = my_turf.CardinalTurfsWithAccess(botcard)
+				if(LAZYLEN(can_go))
+					if(step_towards(src, pick(can_go)))
+						return
+			for(var/mob in loc)
+				if(istype(mob, /mob/living/bot) && mob != src) // Same as above, but we also don't want to have bots ontop of bots. Cleanbots shouldn't stack >:(
+					var/turf/my_turf = get_turf(src)
+					var/list/can_go = my_turf.CardinalTurfsWithAccess(botcard)
+					if(LAZYLEN(can_go))
+						if(step_towards(src, pick(can_go)))
+							return
 			handleIdle()
 
 /mob/living/bot/proc/handleRegular()
@@ -204,6 +248,32 @@
 
 /mob/living/bot/proc/handleRangedTarget()
 	return
+
+/mob/living/bot/proc/handlePanic()	// Speed modification based on alert level.
+	. = 0
+	switch(get_security_level())
+		if("green")
+			. = 0
+
+		if("yellow")
+			. = 0
+
+		if("violet")
+			. = 0
+
+		if("orange")
+			. = 0
+
+		if("blue")
+			. = 1
+
+		if("red")
+			. = 2
+
+		if("delta")
+			. = 2
+
+	return .
 
 /mob/living/bot/proc/stepToTarget()
 	if(!target || !target.loc)
@@ -307,6 +377,7 @@
 	resetTarget()
 	patrol_path = list()
 	ignore_list = list()
+	update_canmove()
 	return 1
 
 /mob/living/bot/proc/turn_off()
@@ -314,11 +385,17 @@
 	busy = 0 // If ever stuck... reboot!
 	set_light(0)
 	update_icons()
+	update_canmove()
 
 /mob/living/bot/proc/explode()
+	if(paicard)
+		ejectpai()
+	release_vore_contents()
 	qdel(src)
 
 /mob/living/bot/is_sentient()
+	if(paicard)
+		return TRUE
 	return FALSE
 
 /******************************************************************/
@@ -408,3 +485,81 @@
 
 /mob/living/bot/isSynthetic() //Robots are synthetic, no?
 	return 1
+
+/mob/living/bot/update_canmove()
+	..()
+	canmove = on
+	return canmove
+
+/mob/living/bot/proc/insertpai(mob/user, obj/item/device/paicard/card)
+	//var/obj/item/paicard/card = I
+	var/mob/living/silicon/pai/AI = card.pai
+	if(paicard)
+		to_chat(user, span_notice("This bot is already under PAI Control!"))
+		return
+	if(!istype(card)) // TODO: Add sleevecard support.
+		return
+	if(client)
+		to_chat(user, span_notice("Higher levels of processing are already present!"))
+		return
+	if(!card.pai)
+		to_chat(user, span_notice("This card does not currently have a personality!"))
+		return
+	paicard = card
+	user.unEquip(card)
+	card.forceMove(src)
+	src.ckey = AI.ckey
+	name = AI.name
+	ooc_notes = AI.ooc_notes
+	to_chat(src, span_notice("You feel a tingle in your circuits as your systems interface with \the [initial(src.name)]."))
+	if(AI.idcard.access)
+		botcard.access	|= AI.idcard.access
+
+/mob/living/bot/proc/ejectpai(mob/user)
+	if(paicard)
+		var/mob/living/silicon/pai/AI = paicard.pai
+		AI.ckey = src.ckey
+		AI.ooc_notes = ooc_notes
+		paicard.forceMove(src.loc)
+		paicard = null
+		name = initial(name)
+		botcard.access = botcard_access.Copy()
+		to_chat(AI, span_notice("You feel a tad claustrophobic as your mind closes back into your card, ejecting from \the [initial(src.name)]."))
+
+		if(user)
+			to_chat(user, span_notice("You eject the card from \the [initial(src.name)]."))
+
+/mob/living/bot/verb/bot_nom(var/mob/living/T in oview(1))
+	set name = "Bot Nom"
+	set category = "Bot Commands"
+	set desc = "Allows you to eat someone. Yum."
+
+	if (stat != CONSCIOUS)
+		return
+	return feed_grabbed_to_self(src,T)
+
+/mob/living/bot/verb/ejectself()
+	set name = "Eject pAI"
+	set category = "Bot Commands"
+	set desc = "Eject your card, return to smole."
+
+	return ejectpai()
+
+/mob/living/bot/Login()
+	no_vore = FALSE // ROBOT VORE
+	init_vore() // ROBOT VORE
+	verbs |= /mob/living/proc/insidePanel
+
+	return ..()
+
+/mob/living/bot/Logout()
+	no_vore = TRUE // ROBOT VORE
+	release_vore_contents()
+	init_vore() // ROBOT VORE
+	verbs -= /mob/living/proc/insidePanel
+	no_vore = TRUE
+	devourable = FALSE
+	feeding = FALSE
+	can_be_drop_pred = FALSE
+
+	return ..()

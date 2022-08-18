@@ -64,7 +64,7 @@
 		if(I)
 
 			if(is_path_in_list(I.type, blacklisted_items))
-				user << "<span class='danger'>You can't use \the [I] while warping!</span>"
+				to_chat(user, "<span class='danger'>You can't use \the [I] while warping!</span>")
 				return
 
 			if(istype(I, /obj/item/weapon))
@@ -76,5 +76,5 @@
 				I.afterattack(chosen_target, user)
 		else
 			chosen_target.attack_hand(user)
-		log_and_message_admins("has warp striked [chosen_target].")
+		add_attack_logs(user,chosen_target,"Warp striked")
 

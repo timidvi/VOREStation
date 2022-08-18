@@ -5,6 +5,7 @@
 
 /turf/simulated/floor/holofloor
 	thermal_conductivity = 0
+	flags = TURF_ACID_IMMUNE
 
 /turf/simulated/floor/holofloor/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	return
@@ -58,17 +59,19 @@
 
 /turf/simulated/floor/holofloor/space
 	icon = 'icons/turf/space.dmi'
+	plane = SPACE_PLANE
 	name = "\proper space"
-	icon_state = "0"
+	icon_state = "white"
+
+/turf/simulated/floor/holofloor/space/update_icon()
+	. = ..()
+	add_overlay(SSskybox.dust_cache["[((x + y) ^ ~(x * y) + z) % 25]"])
 
 /turf/simulated/floor/holofloor/reinforced
 	icon = 'icons/turf/flooring/tiles.dmi'
 	initial_flooring = /decl/flooring/reinforced
 	name = "reinforced holofloor"
 	icon_state = "reinforced"
-
-/turf/simulated/floor/holofloor/space/New()
-	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
 /turf/simulated/floor/holofloor/beach
 	desc = "Uncomfortably gritty for a hologram."
@@ -109,18 +112,32 @@
 	if(prob(10))
 		add_overlay("asteroid[rand(0,9)]")
 
+/turf/simulated/floor/holofloor/bmarble
+	name = "marble"
+	icon = 'icons/turf/flooring/misc.dmi'
+	icon_state = "darkmarble"
+	initial_flooring = /decl/flooring/bmarble
+
+/turf/simulated/floor/holofloor/wmarble
+	name = "marble"
+	icon = 'icons/turf/flooring/misc.dmi'
+	icon_state = "lightmarble"
+	initial_flooring = /decl/flooring/wmarble
+
 /obj/structure/holostool
 	name = "stool"
 	desc = "Apply butt."
-	icon = 'icons/obj/furniture.dmi'
+	icon = 'icons/obj/furniture_vr.dmi'
 	icon_state = "stool_padded_preview"
-	anchored = 1.0
+	anchored = TRUE
+	unacidable = TRUE
 	pressure_resistance = 15
 
 /obj/item/clothing/gloves/boxing/hologlove
 	name = "boxing gloves"
 	desc = "Because you really needed another excuse to punch your crewmates."
 	icon_state = "boxing"
+	unacidable = TRUE
 	item_icons = list(
 			slot_l_hand_str = 'icons/mob/items/lefthand_gloves.dmi',
 			slot_r_hand_str = 'icons/mob/items/righthand_gloves.dmi',
@@ -128,14 +145,14 @@
 	item_state = "boxing"
 	special_attack_type = /datum/unarmed_attack/holopugilism
 
-datum/unarmed_attack/holopugilism
+/datum/unarmed_attack/holopugilism
 	sparring_variant_type = /datum/unarmed_attack/holopugilism
 
-datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/zone)
+/datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,var/zone)
 	user.do_attack_animation(src)
 	var/damage = rand(0, 9)
 	if(!damage)
-		playsound(target.loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
+		playsound(target, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 		target.visible_message("<font color='red'><B>[user] has attempted to punch [target]!</B></font>")
 		return TRUE
 	var/obj/item/organ/external/affecting = target.get_organ(ran_zone(user.zone_sel.selecting))
@@ -145,7 +162,7 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 	if(HULK in user.mutations)
 		damage += 5
 
-	playsound(target.loc, "punch", 25, 1, -1)
+	playsound(target, "punch", 25, 1, -1)
 
 	target.visible_message("<font color='red'><B>[user] has punched [target]!</B></font>")
 
@@ -198,11 +215,11 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 		if(W.damtype == BRUTE || W.damtype == BURN)
 			hit(W.force)
 			if(health <= 7)
-				anchored = 0
+				anchored = FALSE
 				update_nearby_icons()
 				step(src, get_dir(user, src))
 		else
-			playsound(loc, 'sound/effects/Glasshit.ogg', 75, 1)
+			playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
 		..()
 	return
 
@@ -220,7 +237,7 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 
 	if(src.density && istype(I, /obj/item/weapon) && !istype(I, /obj/item/weapon/card))
 		var/aforce = I.force
-		playsound(src.loc, 'sound/effects/Glasshit.ogg', 75, 1)
+		playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
 		visible_message("<font color='red'><B>[src] was hit by [I].</B></font>")
 		if(I.damtype == BRUTE || I.damtype == BURN)
 			take_damage(aforce)
@@ -242,7 +259,7 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 	return
 
 /obj/machinery/door/window/holowindoor/shatter(var/display_message = 1)
-	src.density = 0
+	src.density = FALSE
 	playsound(src, "shatter", 70, 1)
 	if(display_message)
 		visible_message("[src] fades away as it shatters!")
@@ -255,16 +272,19 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 //VOREStation Add
 /obj/structure/bed/holobed/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(W.is_wrench())
-		user << ("<span class='notice'>It's a holochair, you can't dismantle it!</span>")
+		to_chat(user, "<span class='notice'>It's a holochair, you can't dismantle it!</span>")
 	return
 //VOREStation Add End
 /obj/item/weapon/holo
 	damtype = HALLOSS
 	no_attack_log = 1
+	no_random_knockdown = TRUE
 
 /obj/item/weapon/holo/esword
 	desc = "May the force be within you. Sorta."
-	icon_state = "sword0"
+	icon_state = "esword"
+	var/lcolor
+	var/rainbow = FALSE
 	item_icons = list(
 			slot_l_hand_str = 'icons/mob/items/lefthand_melee.dmi',
 			slot_r_hand_str = 'icons/mob/items/righthand_melee.dmi',
@@ -275,16 +295,14 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 	throwforce = 0
 	w_class = ITEMSIZE_SMALL
 	flags = NOBLOODY
+	unacidable = TRUE
 	var/active = 0
-	var/item_color
 
-/obj/item/weapon/holo/esword/green
-	New()
-		item_color = "green"
+/obj/item/weapon/holo/esword/green/New()
+		lcolor = "#008000"
 
-/obj/item/weapon/holo/esword/red
-	New()
-		item_color = "red"
+/obj/item/weapon/holo/esword/red/New()
+		lcolor = "#FF0000"
 
 /obj/item/weapon/holo/esword/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(active && default_parry_check(user, attacker, damage_source) && prob(50))
@@ -293,52 +311,71 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 		var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 		spark_system.set_up(5, 0, user.loc)
 		spark_system.start()
-		playsound(user.loc, 'sound/weapons/blade1.ogg', 50, 1)
+		playsound(src, 'sound/weapons/blade1.ogg', 50, 1)
 		return TRUE
 	return FALSE
-
-/obj/item/weapon/holo/esword/New()
-	item_color = pick("red","blue","green","purple")
 
 /obj/item/weapon/holo/esword/attack_self(mob/living/user as mob)
 	active = !active
 	if (active)
 		force = 30
-		icon_state = "sword[item_color]"
+		item_state = "[icon_state]_blade"
 		w_class = ITEMSIZE_LARGE
-		playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
+		playsound(src, 'sound/weapons/saberon.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>[src] is now active.</span>")
 	else
 		force = 3
-		icon_state = "sword0"
+		item_state = "[icon_state]"
 		w_class = ITEMSIZE_SMALL
-		playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
+		playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
 		to_chat(user, "<span class='notice'>[src] can now be concealed.</span>")
 
-	if(istype(user,/mob/living/carbon/human))
-		var/mob/living/carbon/human/H = user
-		H.update_inv_l_hand()
-		H.update_inv_r_hand()
-
+	update_icon()
 	add_fingerprint(user)
 	return
+
+/obj/item/weapon/holo/esword/attackby(obj/item/weapon/W, mob/user)
+	if(istype(W, /obj/item/device/multitool) && !active)
+		if(!rainbow)
+			rainbow = TRUE
+		else
+			rainbow = FALSE
+		to_chat(user, "<span class='notice'>You manipulate the color controller in [src].</span>")
+		update_icon()
+	return ..()
+
+/obj/item/weapon/holo/esword/update_icon()
+	. = ..()
+	var/mutable_appearance/blade_overlay = mutable_appearance(icon, "[icon_state]_blade")
+	blade_overlay.color = lcolor
+	cut_overlays()		//So that it doesn't keep stacking overlays non-stop on top of each other
+	if(active)
+		add_overlay(blade_overlay)
+	if(istype(usr,/mob/living/carbon/human))
+		var/mob/living/carbon/human/H = usr
+		H.update_inv_l_hand()
+		H.update_inv_r_hand()
 
 //BASKETBALL OBJECTS
 
 /obj/item/weapon/beach_ball/holoball
-	icon = 'icons/obj/basketball.dmi'
+	icon = 'icons/obj/balls_vr.dmi'
 	icon_state = "basketball"
 	name = "basketball"
 	desc = "Here's your chance, do your dance at the Space Jam."
 	w_class = ITEMSIZE_LARGE //Stops people from hiding it in their bags/pockets
+	unacidable = TRUE
+	drop_sound = 'sound/items/drop/basketball.ogg'
+	pickup_sound = 'sound/items/pickup/basketball.ogg'
 
 /obj/structure/holohoop
 	name = "basketball hoop"
 	desc = "Boom, Shakalaka!"
-	icon = 'icons/obj/basketball.dmi'
+	icon = 'icons/obj/32x64.dmi'
 	icon_state = "hoop"
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
+	unacidable = TRUE
 	throwpass = 1
 
 /obj/structure/holohoop/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -370,18 +407,19 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 		return FALSE
 	return ..()
 
-
 /obj/machinery/readybutton
 	name = "Ready Declaration Device"
 	desc = "This device is used to declare ready. If all devices in an area are ready, the event will begin!"
 	icon = 'icons/obj/monitors.dmi'
 	icon_state = "auth_off"
+	layer = ABOVE_WINDOW_LAYER
 	var/ready = 0
 	var/area/currentarea = null
 	var/eventstarted = 0
 
-	anchored = 1.0
-	use_power = 1
+	unacidable = TRUE
+	anchored = TRUE
+	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
@@ -482,5 +520,5 @@ datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/u
 	derez()
 
 /mob/living/simple_mob/animal/space/carp/holodeck/proc/derez()
-	visible_message("<span class='notice'>\The [src] fades away!</span>")
+	visible_message("<b>\The [src]</b> fades away!")
 	qdel(src)

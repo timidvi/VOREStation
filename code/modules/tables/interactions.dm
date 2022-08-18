@@ -1,19 +1,31 @@
 /obj/structure/table/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover,/obj/item/projectile))
 		return (check_cover(mover,target))
-	if (flipped == 1)
-		if (get_dir(loc, target) == dir)
+	if(flipped == 1)
+		if(get_dir(mover, target) == reverse_dir[dir]) // From elsewhere to here, can't move against our dir
 			return !density
-		else
-			return TRUE
+		return TRUE
 	if(istype(mover) && mover.checkpass(PASSTABLE))
 		return TRUE
 	if(locate(/obj/structure/table/bench) in get_turf(mover))
 		return FALSE
 	var/obj/structure/table/table = locate(/obj/structure/table) in get_turf(mover)
-	if(table && !table.flipped)
+	if(table && !(table.flipped == 1))
 		return TRUE
 	return FALSE
+
+/obj/structure/table/climb_to(mob/living/mover)
+	if(flipped == 1 && mover.loc == loc)
+		var/turf/T = get_step(src, dir)
+		if(T.Enter(mover))
+			return T
+
+	return ..()
+
+/obj/structure/table/Uncross(atom/movable/mover, turf/target)
+	if(flipped == 1 && (get_dir(mover, target) == dir)) // From here to elsewhere, can't move in our dir
+		return !density
+	return TRUE
 
 //checks if projectile 'P' from turf 'from' can hit whatever is behind the table. Returns 1 if it can, 0 if bullet stops.
 /obj/structure/table/proc/check_cover(obj/item/projectile/P, turf/from)
@@ -48,30 +60,33 @@
 				return 1
 	return 1
 
-/obj/structure/table/CheckExit(atom/movable/O as mob|obj, target as turf)
-	if(istype(O) && O.checkpass(PASSTABLE))
-		return 1
-	if (flipped==1)
-		if (get_dir(loc, target) == dir)
-			return !density
-		else
-			return 1
-	return 1
+/obj/structure/table/MouseDrop_T(obj/O, mob/user, src_location, over_location, src_control, over_control, params)
+	if(ismob(O.loc)) //If placing an item
+		if(!isitem(O) || user.get_active_hand() != O)
+			return ..()
+		if(isrobot(user))
+			return
+		user.drop_item()
+		if(O.loc != src.loc)
+			step(O, get_dir(O, src))
+
+	else if(isturf(O.loc) && isitem(O)) //If pushing an item on the tabletop
+		var/obj/item/I = O
+		if(I.anchored)
+			return
+
+		if((isliving(user)) && (Adjacent(user)) && !(user.incapacitated()))
+			if(O.w_class <= user.can_pull_size)
+				O.forceMove(loc)
+				auto_align(I, params, TRUE)
+			else
+				to_chat(user, SPAN_WARNING("\The [I] is too big for you to move!"))
+			return
+
+	return ..()
 
 
-/obj/structure/table/MouseDrop_T(obj/O as obj, mob/user as mob)
-
-	if ((!( istype(O, /obj/item/weapon) ) || user.get_active_hand() != O))
-		return ..()
-	if(isrobot(user))
-		return
-	user.drop_item()
-	if (O.loc != src.loc)
-		step(O, get_dir(O, src))
-	return
-
-
-/obj/structure/table/attackby(obj/item/W as obj, mob/user as mob)
+/obj/structure/table/attackby(obj/item/W as obj, mob/user as mob, var/hit_modifier, var/click_parameters)
 	if (!W) return
 
 	// Handle harm intent grabbing/tabling.
@@ -81,7 +96,7 @@
 			var/mob/living/M = G.affecting
 			var/obj/occupied = turf_is_crowded()
 			if(occupied)
-				user << "<span class='danger'>There's \a [occupied] in the way.</span>"
+				to_chat(user, "<span class='danger'>There's \a [occupied] in the way.</span>")
 				return
 			if(!user.Adjacent(M))
 				return
@@ -91,9 +106,9 @@
 					M.apply_damage(8,def_zone = BP_HEAD)
 					visible_message("<span class='danger'>[G.assailant] slams [G.affecting]'s face against \the [src]!</span>")
 					if(material)
-						playsound(loc, material.tableslam_noise, 50, 1)
+						playsound(src, material.tableslam_noise, 50, 1)
 					else
-						playsound(loc, 'sound/weapons/tablehit1.ogg', 50, 1)
+						playsound(src, 'sound/weapons/tablehit1.ogg', 50, 1)
 					var/list/L = take_damage(rand(1,5))
 					// Shards. Extra damage, plus potentially the fact YOU LITERALLY HAVE A PIECE OF GLASS/METAL/WHATEVER IN YOUR FACE
 					for(var/obj/item/weapon/material/shard/S in L)
@@ -104,7 +119,7 @@
 							if(prob(2))
 								M.embed(S, def_zone = BP_HEAD)
 				else
-					user << "<span class='danger'>You need a better grip to do that!</span>"
+					to_chat(user, "<span class='danger'>You need a better grip to do that!</span>")
 					return
 			else if(G.state > GRAB_AGGRESSIVE || world.time >= (G.last_action + UPGRADE_COOLDOWN))
 				M.forceMove(get_turf(src))
@@ -124,8 +139,8 @@
 		var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()
 		spark_system.set_up(5, 0, src.loc)
 		spark_system.start()
-		playsound(src.loc, 'sound/weapons/blade1.ogg', 50, 1)
-		playsound(src.loc, "sparks", 50, 1)
+		playsound(src, 'sound/weapons/blade1.ogg', 50, 1)
+		playsound(src, "sparks", 50, 1)
 		user.visible_message("<span class='danger'>\The [src] was sliced apart by [user]!</span>")
 		break_to_parts()
 		return
@@ -136,12 +151,13 @@
 		return
 
 	if(can_plate && !material)
-		user << "<span class='warning'>There's nothing to put \the [W] on! Try adding plating to \the [src] first.</span>"
+		to_chat(user, "<span class='warning'>There's nothing to put \the [W] on! Try adding plating to \the [src] first.</span>")
 		return
 
-	if(item_place)
-		user.drop_item(src.loc)
-	return
+// Placing stuff on tables
+	if(user.unEquip(W, 0, src.loc) && user.is_preference_enabled(/datum/client_preference/precision_placement))
+		auto_align(W, click_parameters)
+		return 1
 
 /obj/structure/table/attack_tk() // no telehulk sorry
 	return

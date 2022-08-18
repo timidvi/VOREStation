@@ -22,7 +22,7 @@
 		return
 
 	if(flipped < 0 || !flip(get_cardinal_dir(usr,src)))
-		usr << "<span class='notice'>It won't budge.</span>"
+		to_chat(usr, "<span class='notice'>It won't budge.</span>")
 		return
 
 	usr.visible_message("<span class='warning'>[usr] flips \the [src]!</span>")
@@ -39,7 +39,7 @@
 
 	var/obj/occupied = turf_is_crowded()
 	if(occupied)
-		usr << "There's \a [occupied] in the way."
+		to_chat(usr, "There's \a [occupied] in the way.")
 		return 0
 
 	var/list/L = list()
@@ -50,7 +50,7 @@
 		L.Add(turn(src.dir,90))
 	for(var/new_dir in L)
 		var/obj/structure/table/T = locate() in get_step(src.loc,new_dir)
-		if(T && T.material.name == material.name)
+		if(T && T.material && T.material.name == material.name)
 			if(T.flipped == 1 && T.dir == src.dir && !T.unflipping_check(new_dir))
 				return 0
 	return 1
@@ -65,7 +65,7 @@
 		return
 
 	if (!unflipping_check())
-		usr << "<span class='notice'>It won't budge.</span>"
+		to_chat(usr, "<span class='notice'>It won't budge.</span>")
 		return
 	unflip()
 
@@ -86,7 +86,7 @@
 	if(dir != NORTH)
 		plane = MOB_PLANE
 		layer = ABOVE_MOB_LAYER
-	climbable = 0 //flipping tables allows them to be used as makeshift barriers
+	//climbable = FALSE //flipping tables allows them to be used as makeshift barriers
 	flipped = 1
 	flags |= ON_BORDER
 	for(var/D in list(turn(direction, 90), turn(direction, -90)))
@@ -105,7 +105,7 @@
 
 	reset_plane_and_layer()
 	flipped = 0
-	climbable = initial(climbable)
+	//climbable = initial(climbable)
 	flags &= ~ON_BORDER
 	for(var/D in list(turn(dir, 90), turn(dir, -90)))
 		var/obj/structure/table/T = locate() in get_step(src.loc,D)

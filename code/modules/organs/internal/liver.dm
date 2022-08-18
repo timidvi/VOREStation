@@ -1,5 +1,3 @@
-#define PROCESS_ACCURACY 10
-
 /obj/item/organ/internal/liver
 	name = "liver"
 	icon_state = "liver"
@@ -8,7 +6,7 @@
 
 /obj/item/organ/internal/liver/process()
 	..()
-	if(!owner) return
+	if(!iscarbon(owner)) return
 
 	if(owner.life_tick % PROCESS_ACCURACY == 0)
 
@@ -55,7 +53,7 @@
 			owner.custom_pain("There's a sharp pain in your upper-right abdomen!",1)
 	if (. >= 2)
 		if(prob(1) && owner.getToxLoss() < owner.getMaxHealth()*0.3)
-			//owner << "" //Toxins provide their own messages for pain
+			//to_chat(owner, "") //Toxins provide their own messages for pain
 			owner.adjustToxLoss(5) //Not realistic to PA but there are basically no 'real' liver infections
 
 /obj/item/organ/internal/liver/grey

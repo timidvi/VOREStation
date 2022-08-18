@@ -11,16 +11,16 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 		return
 
 	if(!ticker)
-		usr << "<font color='red'>The game hasn't started yet!</font>"
+		to_chat(usr, "<font color='red'>The game hasn't started yet!</font>")
 		return
 
 	if(world.time < 6000)
-		usr << "<font color='red'>There are [(6000-world.time)/10] seconds remaining before it may be called.</font>"
+		to_chat(usr, "<font color='red'>There are [(6000-world.time)/10] seconds remaining before it may be called.</font>")
 		return
 
 	var/datum/antagonist/deathsquad/team
 
-	var/choice = input(usr, "Select type of strike team:") as null|anything in list("Heavy Asset Protection", "Mercenaries")
+	var/choice = tgui_input_list(usr, "Select type of strike team:", "Strike Team", list("Heavy Asset Protection", "Mercenaries"))
 	if(!choice)
 		return
 
@@ -33,23 +33,24 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 			return
 
 	if(team.deployed)
-		usr << "<font color='red'>Someone is already sending a team.</font>"
+		to_chat(usr, "<font color='red'>Someone is already sending a team.</font>")
 		return
 
-	if(alert("Do you want to send in a strike team? Once enabled, this is irreversible.",,"Yes","No")!="Yes")
+	if(tgui_alert(usr, "Do you want to send in a strike team? Once enabled, this is irreversible.","Strike Team",list("Yes","No"))!="Yes")
 		return
 
-	alert("This 'mode' will go on until everyone is dead or the station is destroyed. You may also admin-call the evac shuttle when appropriate. Spawned commandos have internals cameras which are viewable through a monitor inside the Spec. Ops. Office. Assigning the team's detailed task is recommended from there. While you will be able to manually pick the candidates from active ghosts, their assignment in the squad will be random.")
+	tgui_alert(usr, "This 'mode' will go on until everyone is dead or the station is destroyed. You may also admin-call the evac shuttle when appropriate. Spawned commandos have internals cameras which are viewable through a monitor inside the Spec. Ops. Office. Assigning the team's detailed task is recommended from there. While you will be able to manually pick the candidates from active ghosts, their assignment in the squad will be random.") // Should remain tgui_alert() (blocking)
 
 	choice = null
 	while(!choice)
-		choice = sanitize(input(src, "Please specify which mission the strike team shall undertake.", "Specify Mission", ""))
+		choice = sanitize(tgui_input_text(src, "Please specify which mission the strike team shall undertake.", "Specify Mission", ""))
 		if(!choice)
-			if(alert("Error, no mission set. Do you want to exit the setup process?",,"Yes","No")=="Yes")
+			if(tgui_alert(usr, "Error, no mission set. Do you want to exit the setup process?","Strike Team",list("Yes","No"))=="Yes")
 				return
+	consider_ert_load() //VOREStation Add
 
 	if(team.deployed)
-		usr << "Looks like someone beat you to it."
+		to_chat(usr, "Looks like someone beat you to it.")
 		return
 
 	team.attempt_random_spawn()

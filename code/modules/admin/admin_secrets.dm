@@ -12,7 +12,7 @@ var/datum/admin_secrets/admin_secrets = new()
 	for(var/datum/admin_secret_category/category in categories)
 		category_assoc[category.type] = category
 
-	for(var/item_type in (typesof(/datum/admin_secret_item) - /datum/admin_secret_item))
+	for(var/item_type in subtypesof(/datum/admin_secret_item))
 		var/datum/admin_secret_item/secret_item = item_type
 		if(!initial(secret_item.name))
 			continue
@@ -28,10 +28,7 @@ var/datum/admin_secrets/admin_secrets = new()
 /datum/admin_secret_category
 	var/name = ""
 	var/desc = ""
-	var/list/datum/admin_secret_item/items
-
-/datum/admin_secret_category
-	items = list()
+	var/list/datum/admin_secret_item/items = list()
 
 /datum/admin_secret_category/proc/can_view(var/mob/user)
 	for(var/datum/admin_secret_item/item in items)
@@ -62,7 +59,7 @@ var/datum/admin_secrets/admin_secrets = new()
 
 /datum/admin_secret_item/proc/can_execute(var/mob/user)
 	if(can_view(user))
-		if(!warn_before_use || alert("Execute the command '[name]'?", name, "No","Yes") == "Yes")
+		if(!warn_before_use || tgui_alert(usr, "Execute the command '[name]'?", name, list("No","Yes")) == "Yes")
 			return 1
 	return 0
 
@@ -99,18 +96,18 @@ var/datum/admin_secrets/admin_secrets = new()
 /datum/admin_secret_item/admin_secret
 	category = /datum/admin_secret_category/admin_secrets
 	log = 0
-	permissions = R_ADMIN|R_EVENT
+	permissions = R_ADMIN //VOREStation Edit
 
 /datum/admin_secret_item/random_event
 	category = /datum/admin_secret_category/random_events
-	permissions = R_FUN|R_EVENT
+	permissions = R_FUN //VOREStation Edit
 	warn_before_use = 1
 
 /datum/admin_secret_item/fun_secret
 	category = /datum/admin_secret_category/fun_secrets
-	permissions = R_FUN|R_EVENT
+	permissions = R_FUN //VOREStation Edit
 	warn_before_use = 1
 
 /datum/admin_secret_item/final_solution
 	category = /datum/admin_secret_category/final_solutions
-	permissions = R_FUN|R_SERVER|R_ADMIN|R_EVENT
+	permissions = R_FUN|R_SERVER|R_ADMIN //VOREStation Edit

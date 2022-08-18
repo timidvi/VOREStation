@@ -12,24 +12,22 @@
 	var/time = 30.0
 	var/title = "Mass Driver Controls"
 
-
-/obj/machinery/computer/pod/New()
+/obj/machinery/computer/pod/Initialize()
 	..()
-	spawn( 5 )
-		for(var/obj/machinery/mass_driver/M in machines)
-			if(M.id == id)
-				connected = M
-			else
-		return
-	return
+	return INITIALIZE_HINT_LATELOAD
 
+/obj/machinery/computer/pod/LateInitialize()
+	for(var/obj/machinery/mass_driver/M in machines)
+		if(M.id == id)
+			connected = M
+			break
 
 /obj/machinery/computer/pod/proc/alarm()
 	if(stat & (NOPOWER|BROKEN))
 		return
 
 	if(!( connected ))
-		viewers(null, null) << "Cannot locate mass driver connector. Cancelling firing sequence!"
+		to_chat(viewers(null, null),"Cannot locate mass driver connector. Cancelling firing sequence!")
 		return
 
 	for(var/obj/machinery/door/blast/M in machines)
@@ -53,7 +51,7 @@
 /*
 /obj/machinery/computer/pod/attackby(I as obj, user as mob)
 	if(I.is_screwdriver())
-		playsound(src.loc, W.usesound, 50, 1)
+		playsound(src, W.usesound, 50, 1)
 		if(do_after(user, 20))
 			if(stat & BROKEN)
 				to_chat(user, "<span class='notice'>The broken glass falls out.</span>")
@@ -77,10 +75,10 @@
 				A.circuit = M
 				A.state = 3
 				A.icon_state = "3"
-				A.anchored = 1
+				A.anchored = TRUE
 				qdel(src)
 			else
-				to_chat(user << "<span class='notice'>You disconnect the monitor.</span>")
+				to_chat(to_chat(user, "<span class='notice'>You disconnect the monitor.</span>"))
 				var/obj/structure/computerframe/A = new /obj/structure/computerframe( loc )
 
 				//generate appropriate circuitboard. Accounts for /pod/old computer types
@@ -100,7 +98,7 @@
 				A.circuit = M
 				A.state = 4
 				A.icon_state = "4"
-				A.anchored = 1
+				A.anchored = TRUE
 				qdel(src)
 	else
 		attack_hand(user)

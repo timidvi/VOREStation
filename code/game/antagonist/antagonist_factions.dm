@@ -34,12 +34,12 @@
 	message_admins("<span class='danger'>[src]([src.ckey]) attempted to convert [player.current].</span>")
 
 	player.rev_cooldown = world.time+100
-	var/choice = alert(player.current,"Asked by [src]: Do you want to join the [faction.faction_descriptor]?","Join the [faction.faction_descriptor]?","No!","Yes!")
+	var/choice = tgui_alert(player.current, "Asked by [src]: Do you want to join the [faction.faction_descriptor]?", "Join the [faction.faction_descriptor]?", list("No!","Yes!"))
 	if(choice == "Yes!" && faction.add_antagonist_mind(player, 0, faction.faction_role_text, faction.faction_welcome))
 		to_chat(src, "<span class='notice'>\The [player.current] joins the [faction.faction_descriptor]!</span>")
 		return
 	if(choice == "No!")
-		player << "<span class='danger'>You reject this traitorous cause!</span>"
+		to_chat(player, "<span class='danger'>You reject this traitorous cause!</span>")
 	to_chat(src, "<span class='danger'>\The [player.current] does not support the [faction.faction_descriptor]!</span>")
 
 /mob/living/proc/convert_to_loyalist(mob/M as mob in oview(src))

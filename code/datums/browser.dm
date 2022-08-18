@@ -15,9 +15,7 @@
 	var/content = ""
 	var/title_buttons = ""
 
-
 /datum/browser/New(nuser, nwindow_id, ntitle = 0, nwidth = 0, nheight = 0, var/atom/nref = null)
-
 	user = nuser
 	window_id = nwindow_id
 	if (ntitle)
@@ -32,6 +30,14 @@
 	if(user && user.client && !user.client.is_preference_enabled(/datum/client_preference/browser_style))
 		return
 	add_stylesheet("common", 'html/browser/common.css') // this CSS sheet is common to all UIs
+
+//VOREStation Edit - Allow browser datums to be garbage collected
+/datum/browser/Destroy()
+	close()
+	ref = null
+	user = null
+	. = ..()
+//VOREStation Edit End - Allow browser datums to be garbage collected
 
 /datum/browser/proc/set_title(ntitle)
 	title = format_text(ntitle)
@@ -156,7 +162,7 @@
 
 	winset(user, windowid, "on-close=\".windowclose [param]\"")
 
-	//world << "OnClose [user]: [windowid] : ["on-close=\".windowclose [param]\""]"
+	//to_world("OnClose [user]: [windowid] : ["on-close=\".windowclose [param]\""]")
 
 // the on-close client verb
 // called when a browser popup window is closed after registering with proc/onclose()
@@ -168,11 +174,11 @@
 	set hidden = 1						// hide this verb from the user's panel
 	set name = ".windowclose"			// no autocomplete on cmd line
 
-	//world << "windowclose: [atomref]"
+	//to_world("windowclose: [atomref]")
 	if(atomref!="null")				// if passed a real atomref
 		var/hsrc = locate(atomref)	// find the reffed atom
 		if(hsrc)
-			//world << "[src] Topic [href] [hsrc]"
+			//to_world("[src] Topic [href] [hsrc]")
 			usr = src.mob
 			src.Topic("close=1", list("close"="1"), hsrc)	// this will direct to the atom's
 			return										// Topic() proc via client.Topic()
@@ -180,7 +186,7 @@
 	// no atomref specified (or not found)
 	// so just reset the user mob's machine var
 	if(src && src.mob)
-		//world << "[src] was [src.mob.machine], setting to null"
+		//to_world("[src] was [src.mob.machine], setting to null")
 		src.mob.unset_machine()
 	return
 
@@ -300,13 +306,9 @@
 	var/output =  {"<form><input type="hidden" name="src" value="\ref[src]"><ul class="sparse">"}
 	if (inputtype == "checkbox" || inputtype == "radio")
 		for (var/i in values)
-			var/div_slider = slidecolor
-			if(!i["allowed_edit"])
-				div_slider = "locked"
 			output += {"<li>
 						<label class="switch">
-							<input type="[inputtype]" value="1" name="[i["name"]]"[i["checked"] ? " checked" : ""][i["allowed_edit"] ? "" : " onclick='return false' onkeydown='return false'"]>
-								<div class="slider [div_slider ? "[div_slider]" : ""]"></div>
+							<input type="[inputtype]" value="1" name="[i["name"]]"[i["checked"] ? " checked" : ""][i["allowed_edit"] ? "" : " disabled onclick='return false' onkeydown='return false'"]>
 									<span>[i["name"]]</span>
 						</label>
 						</li>"}

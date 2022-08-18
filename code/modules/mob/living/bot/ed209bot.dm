@@ -3,7 +3,7 @@
 	desc = "A security robot.  He looks less than thrilled."
 	icon = 'icons/obj/aibots.dmi'
 	icon_state = "ed2090"
-	density = 1
+	density = TRUE
 	health = 200
 	maxHealth = 200
 
@@ -49,7 +49,7 @@
 	s.start()
 
 	new /obj/effect/decal/cleanable/blood/oil(Tsec)
-	qdel(src)
+	return ..()
 
 /mob/living/bot/secbot/ed209/handleRangedTarget()
 	RangedAttack(target)
@@ -65,7 +65,7 @@
 	if(emagged)
 		projectile = /obj/item/projectile/beam
 
-	playsound(loc, emagged ? 'sound/weapons/Laser.ogg' : 'sound/weapons/Taser.ogg', 50, 1)
+	playsound(src, emagged ? 'sound/weapons/Laser.ogg' : 'sound/weapons/Taser.ogg', 50, 1)
 	var/obj/item/projectile/P = new projectile(loc)
 
 	P.firer = src
@@ -87,7 +87,7 @@
 	..()
 
 	if(istype(W, /obj/item/weapon/pen))
-		var/t = sanitizeSafe(input(user, "Enter new robot name", name, created_name), MAX_NAME_LEN)
+		var/t = sanitizeSafe(tgui_input_text(user, "Enter new robot name", name, created_name, MAX_NAME_LEN), MAX_NAME_LEN)
 		if(!t)
 			return
 		if(!in_range(src, usr) && src.loc != usr)
@@ -203,7 +203,8 @@
 				build_step++
 				to_chat(user, "<span class='notice'>You complete the ED-209.</span>")
 				var/turf/T = get_turf(src)
-				new /mob/living/bot/secbot/ed209(T,created_name,lasercolor)
+				var/mob/living/bot/secbot/ed209/S = new /mob/living/bot/secbot/ed209(T)
+				S.name = created_name
 				user.drop_item()
 				qdel(W)
 				user.drop_from_inventory(src)

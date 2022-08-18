@@ -1,5 +1,3 @@
-#define PROCESS_ACCURACY 10
-
 /obj/item/organ/internal/eyes
 	name = "eyeballs"
 	icon_state = "eyes"
@@ -39,7 +37,7 @@
 	set src in usr
 
 	var/current_color = rgb(eye_colour[1],eye_colour[2],eye_colour[3])
-	var/new_color = input("Pick a new color for your eyes.","Eye Color", current_color) as null|color
+	var/new_color = input(usr, "Pick a new color for your eyes.","Eye Color", current_color) as null|color
 	if(new_color && owner)
 		// input() supplies us with a hex color, which we can't use, so we convert it to rbg values.
 		var/list/new_color_rgb_list = hex2rgb(new_color)
@@ -75,7 +73,7 @@
 	var/oldbroken = is_broken()
 	..()
 	if(is_broken() && !oldbroken && owner && !owner.stat)
-		owner << "<span class='danger'>You go blind!</span>"
+		to_chat(owner, "<span class='danger'>You go blind!</span>")
 
 /obj/item/organ/internal/eyes/process() //Eye damage replaces the old eye_stat var.
 	..()

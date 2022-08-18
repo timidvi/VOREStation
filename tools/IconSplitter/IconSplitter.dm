@@ -20,7 +20,7 @@ obj
 
 
 
-client/verb/split_dmi()
+/client/verb/split_dmi()
 	set name = "Split Dmi"
 	set desc = "Loads DmiToSplit.dmi and removes the icon_states of user provided input into another .dmi."
 	set category = "Here"
@@ -33,7 +33,7 @@ client/verb/split_dmi()
 	var/user_input
 	while(!user_input)
 		user_input = input(usr, "Enter the criteria for the icon_states you wish to be split. For example, doing _d_s will remove all rolled down jumpsuits.","Split Criteria", "")
-	world << "Your split criteria is [user_input]"
+	to_world("Your split criteria is [user_input]")
 
 	for(var/OriginalState in icon_states(DMIToSplit))
 		if(findtext(OriginalState, user_input))

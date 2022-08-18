@@ -12,6 +12,8 @@
 	layer = MOB_LAYER
 	pressure_resistance = 1
 	attack_verb = list("bapped")
+	drop_sound = 'sound/items/drop/paper.ogg'
+	pickup_sound = 'sound/items/pickup/paper.ogg'
 	var/page = 1    // current page
 	var/list/pages = list()  // Ordered list of pages as they are to be displayed. Can be different order than src.contents.
 
@@ -22,7 +24,7 @@
 	if (istype(W, /obj/item/weapon/paper/carbon))
 		var/obj/item/weapon/paper/carbon/C = W
 		if (!C.iscopy && !C.copied)
-			user << "<span class='notice'>Take off the carbon copy first.</span>"
+			to_chat(user, "<span class='notice'>Take off the carbon copy first.</span>")
 			add_fingerprint(user)
 			return
 	// adding sheets
@@ -41,7 +43,7 @@
 			O.add_fingerprint(usr)
 			pages.Add(O)
 
-		user << "<span class='notice'>You add \the [W.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>"
+		to_chat(user, "<span class='notice'>You add \the [W.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>")
 		qdel(W)
 	else
 		if(istype(W, /obj/item/weapon/tape_roll))
@@ -58,9 +60,9 @@
 
 /obj/item/weapon/paper_bundle/proc/insert_sheet_at(mob/user, var/index, obj/item/weapon/sheet)
 	if(istype(sheet, /obj/item/weapon/paper))
-		user << "<span class='notice'>You add [(sheet.name == "paper") ? "the paper" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>"
+		to_chat(user, "<span class='notice'>You add [(sheet.name == "paper") ? "the paper" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>")
 	else if(istype(sheet, /obj/item/weapon/photo))
-		user << "<span class='notice'>You add [(sheet.name == "photo") ? "the photo" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>"
+		to_chat(user, "<span class='notice'>You add [(sheet.name == "photo") ? "the photo" : sheet.name] to [(src.name == "paper bundle") ? "the paper bundle" : src.name].</span>")
 
 	user.drop_from_inventory(sheet)
 	sheet.loc = src
@@ -92,14 +94,14 @@
 				qdel(src)
 
 			else
-				user << "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>"
+				to_chat(user, "<font color='red'>You must hold \the [P] steady to burn \the [src].</font>")
 
 /obj/item/weapon/paper_bundle/examine(mob/user)
-	if(..(user, 1))
-		src.show_content(user)
+	. = ..()
+	if(Adjacent(user))
+		show_content(user)
 	else
-		user << "<span class='notice'>It is too far away.</span>"
-	return
+		. += "<span class='notice'>It is too far away.</span>"
 
 /obj/item/weapon/paper_bundle/proc/show_content(mob/user as mob)
 	var/dat
@@ -134,7 +136,7 @@
 		user << browse(dat + "<html><head><title>[P.name]</title></head>" \
 		+ "<body style='overflow:hidden'>" \
 		+ "<div> <img src='tmp_photo.png' width = '180'" \
-		+ "[P.scribble ? "<div> Written on the back:<br><i>[P.scribble]</i>" : ]"\
+		+ "[P.scribble ? "<div> Written on the back:<br><i>[P.scribble]</i>" : null]"\
 		+ "</body></html>", "window=[name]")
 
 /obj/item/weapon/paper_bundle/attack_self(mob/user as mob)
@@ -153,13 +155,13 @@
 				insert_sheet_at(usr, page+1, in_hand)
 			else if(page != pages.len)
 				page++
-				playsound(src.loc, "pageturn", 50, 1)
+				playsound(src, "pageturn", 50, 1)
 		if(href_list["prev_page"])
 			if(in_hand && (istype(in_hand, /obj/item/weapon/paper) || istype(in_hand, /obj/item/weapon/photo)))
 				insert_sheet_at(usr, page, in_hand)
 			else if(page > 1)
 				page--
-				playsound(src.loc, "pageturn", 50, 1)
+				playsound(src, "pageturn", 50, 1)
 		if(href_list["remove"])
 			var/obj/item/weapon/W = pages[page]
 			usr.put_in_hands(W)
@@ -190,7 +192,7 @@
 	set category = "Object"
 	set src in usr
 
-	var/n_name = sanitizeSafe(input(usr, "What would you like to label the bundle?", "Bundle Labelling", null)  as text, MAX_NAME_LEN)
+	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the bundle?", "Bundle Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)
 	if((loc == usr || loc.loc && loc.loc == usr) && usr.stat == 0)
 		name = "[(n_name ? text("[n_name]") : "paper")]"
 	add_fingerprint(usr)
@@ -202,7 +204,7 @@
 	set category = "Object"
 	set src in usr
 
-	usr << "<span class='notice'>You loosen the bundle.</span>"
+	to_chat(usr, "<span class='notice'>You loosen the bundle.</span>")
 	for(var/obj/O in src)
 		O.loc = usr.loc
 		O.layer = initial(O.layer)
@@ -215,7 +217,7 @@
 /obj/item/weapon/paper_bundle/update_icon()
 	var/obj/item/weapon/paper/P = pages[1]
 	icon_state = P.icon_state
-	overlays = P.overlays
+	copy_overlays(P)
 	underlays = 0
 	var/i = 0
 	var/photo
@@ -233,12 +235,12 @@
 			var/obj/item/weapon/photo/Ph = O
 			img = Ph.tiny
 			photo = 1
-			overlays += img
+			add_overlay(img)
 	if(i>1)
 		desc =  "[i] papers clipped to each other."
 	else
 		desc = "A single sheet of paper."
 	if(photo)
 		desc += "\nThere is a photo attached to it."
-	overlays += image('icons/obj/bureaucracy.dmi', "clip")
+	add_overlay(image('icons/obj/bureaucracy.dmi', "clip"))
 	return

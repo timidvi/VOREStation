@@ -26,7 +26,7 @@
 	var/A = null
 
 	if(!randomise_selection)
-		A = input("Area to teleport to", "Teleport", A) in teleportlocs
+		A = tgui_input_list(usr, "Area to teleport to", "Teleport", teleportlocs)
 	else
 		A = pick(teleportlocs)
 
@@ -50,7 +50,7 @@
 				L+=T
 
 	if(!L.len)
-		user <<"The spell matrix was unable to locate a suitable teleport destination for an unknown reason. Sorry."
+		to_chat(user, "The spell matrix was unable to locate a suitable teleport destination for an unknown reason. Sorry.")
 		return
 
 	if(user && user.buckled)

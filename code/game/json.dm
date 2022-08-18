@@ -2,18 +2,18 @@
 var/jsonpath = "/home/bay12/public_html"
 var/dmepath = "/home/bay12/git/baystation12.dme"
 var/makejson = 1 //temp
-proc/makejson()
+/proc/makejson()
 
 	if(!makejson)
 		return
 	fdel("[jsonpath]/info.json")
-		//usr << "Error cant delete json"
+		//to_chat(usr, "Error cant delete json")
 	//else
-		//usr << "Deleted json in public html"
+		//to_chat(usr, "Deleted json in public html")
 	fdel("info.json")
-		//usr << "error cant delete local json"
+		//to_chat(usr, "error cant delete local json")
 	//else
-		//usr << "Deleted local json"
+		//to_chat(usr, "Deleted local json")
 	var/F = file("info.json")
 	if(!isfile(F))
 		return
@@ -38,7 +38,7 @@ proc/makejson()
 				players += "[C.fakekey];"
 		else
 			players += "[C.key];"
-	F << "{\"mode\":\"[mode]\",\"players\" : \"[players]\",\"playercount\" : \"[playerscount]\",\"admin\" : \"[admins]\",\"time\" : \"[time2text(world.realtime,"MM/DD - hh:mm")]\"}"
+	to_chat(F, "{\"mode\":\"[mode]\",\"players\" : \"[players]\",\"playercount\" : \"[playerscount]\",\"admin\" : \"[admins]\",\"time\" : \"[time2text(world.realtime,"MM/DD - hh:mm")]\"}")
 	fcopy("info.json","[jsonpath]/info.json")
 
 /proc/switchmap(newmap,newpath)
@@ -73,7 +73,7 @@ proc/makejson()
 		if(findtext(A,path,1,0))
 			lineloc = lines.Find(A,1,0)
 			lines[lineloc] = xpath
-			world << "FOUND"*/
+			to_world("FOUND")*/
 	fdel(dmepath)
 	var/file = file(dmepath)
 	file << text
@@ -82,19 +82,19 @@ proc/makejson()
 	message_admins("Done")
 	world.Reboot("Switching to [newmap]")
 
-obj/mapinfo
+/obj/mapinfo
 	invisibility = 101
 	var/mapname = "thismap"
 	var/decks = 4
-proc/GetMapInfo()
+/proc/GetMapInfo()
 //	var/obj/mapinfo/M = locate()
 //	Just removing these to try and fix the occasional JSON -> WORLD issue.
-//	world << M.name
-//	world << M.mapname
-client/proc/ChangeMap(var/X as text)
+//	to_world(M.name)
+//	to_world(M.mapname)
+/client/proc/ChangeMap(var/X as text)
 	set name = "Change Map"
 	set category  = "Admin"
 	switchmap(X,X)
-proc/send2adminirc(channel,msg)
+/proc/send2adminirc(channel,msg)
 	world << channel << " "<< msg
 	shell("python nudge.py '[channel]' [msg]")

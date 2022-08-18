@@ -13,14 +13,16 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 	var/datum/seed/seed
 	var/modified = 0
 
-/obj/item/seeds/Initialize()
+/obj/item/seeds/Initialize(var/ml, var/_seed_type)
+	if(_seed_type in SSplants.seeds)
+		seed_type = _seed_type
 	update_seed()
 	. = ..()
 
 //Grabs the appropriate seed datum from the global list.
 /obj/item/seeds/proc/update_seed()
-	if(!seed && seed_type && !isnull(plant_controller.seeds) && plant_controller.seeds[seed_type])
-		seed = plant_controller.seeds[seed_type]
+	if(!seed && seed_type && !isnull(SSplants.seeds) && SSplants.seeds[seed_type])
+		seed = SSplants.seeds[seed_type]
 	update_appearance()
 
 //Updates strings and icon appropriately based on seed datum.
@@ -28,7 +30,7 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 	if(!seed) return
 
 	// Update icon.
-	overlays.Cut()
+	cut_overlays()
 	var/is_seeds = ((seed.seed_noun in list("seeds","pits","nodes")) ? 1 : 0)
 	var/image/seed_mask
 	var/seed_base_key = "base-[is_seeds ? seed.get_trait(TRAIT_PLANT_COLOUR) : "spores"]"
@@ -49,8 +51,8 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 		seed_overlay.color = seed.get_trait(TRAIT_PRODUCT_COLOUR)
 		plant_seed_sprites[seed_overlay_key] = seed_overlay
 
-	overlays |= seed_mask
-	overlays |= seed_overlay
+	add_overlay(seed_mask)
+	add_overlay(seed_overlay)
 
 	if(is_seeds)
 		src.name = "packet of [seed.seed_name] [seed.seed_noun]"
@@ -60,9 +62,9 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 		src.desc = "It's labelled as coming from [seed.display_name]."
 
 /obj/item/seeds/examine(mob/user)
-	..(user)
+	. = ..()
 	if(seed && !seed.roundstart)
-		user << "It's tagged as variety #[seed.uid]."
+		. += "It's tagged as variety #[seed.uid]."
 
 /obj/item/seeds/cutting
 	name = "cuttings"
@@ -76,7 +78,7 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 	seed_type = null
 
 /obj/item/seeds/random/Initialize()
-	seed = plant_controller.create_random_seed()
+	seed = SSplants.create_random_seed()
 	seed_type = seed.name
 	. = ..()
 
@@ -85,6 +87,9 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 
 /obj/item/seeds/chiliseed
 	seed_type = "chili"
+
+/obj/item/seeds/ghostchiliseed
+	seed_type = "ghostchili"
 
 /obj/item/seeds/plastiseed
 	seed_type = "plastic"
@@ -176,11 +181,20 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 /obj/item/seeds/towermycelium
 	seed_type = "towercap"
 
+/obj/item/seeds/redtowermycelium
+	seed_type = "redcap"
+
 /obj/item/seeds/glowshroom
 	seed_type = "glowshroom"
 
 /obj/item/seeds/plumpmycelium
 	seed_type = "plumphelmet"
+
+/obj/item/seeds/plastellmycelium
+	seed_type = "plastic"
+
+/obj/item/seeds/sporemycelium
+	seed_type = "sporeshroom"
 
 /obj/item/seeds/nettleseed
 	seed_type = "nettle"
@@ -218,6 +232,12 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 /obj/item/seeds/ambrosiadeusseed
 	seed_type = "ambrosiadeus"
 
+/obj/item/seeds/ambrosiagaiaseed
+	seed_type = "ambrosiagaia"
+
+/obj/item/seeds/ambrosiainfernusseed
+	seed_type = "ambrosiainfernus"
+
 /obj/item/seeds/whitebeetseed
 	seed_type = "whitebeet"
 
@@ -250,6 +270,9 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 
 /obj/item/seeds/grassseed
 	seed_type = "grass"
+
+/obj/item/seeds/carpetseed
+	seed_type = "carpet"
 
 /obj/item/seeds/cocoapodseed
 	seed_type = "cocoa"
@@ -308,8 +331,8 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 /obj/item/seeds/eggyplant
 	seed_type = "egg-plant"
 
-/obj/item/seeds/spineapple
-	seed_type = "spineapple"
+/obj/item/seeds/pineapple
+	seed_type = "pineapple"
 
 /obj/item/seeds/durian
 	seed_type = "durian"
@@ -322,3 +345,12 @@ GLOBAL_LIST_BOILERPLATE(all_seed_packs, /obj/item/seeds)
 
 /obj/item/seeds/rose/blood
 	seed_type = "bloodrose"
+
+/obj/item/seeds/gnomes
+	seed_type = "gnomes"
+
+/obj/item/seeds/sifbulb
+	seed_type = "sifbulb"
+
+/obj/item/seeds/wurmwoad
+	seed_type = "wurmwoad"

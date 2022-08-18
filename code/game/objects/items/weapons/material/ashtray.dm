@@ -4,6 +4,7 @@ var/global/list/ashtray_cache = list()
 	name = "ashtray"
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "blank"
+	randpixel = 5
 	force_divisor = 0.1
 	thrown_force_divisor = 0.1
 	var/image/base_image
@@ -15,30 +16,29 @@ var/global/list/ashtray_cache = list()
 		qdel(src)
 		return
 	max_butts = round(material.hardness/5) //This is arbitrary but whatever.
-	src.pixel_y = rand(-5, 5)
-	src.pixel_x = rand(-6, 6)
+	randpixel_xy()
 	update_icon()
 	return
 
 /obj/item/weapon/material/ashtray/update_icon()
 	color = null
-	overlays.Cut()
+	cut_overlays()
 	var/cache_key = "base-[material.name]"
 	if(!ashtray_cache[cache_key])
 		var/image/I = image('icons/obj/objects.dmi',"ashtray")
 		I.color = material.icon_colour
 		ashtray_cache[cache_key] = I
-	overlays |= ashtray_cache[cache_key]
+	add_overlay(ashtray_cache[cache_key])
 
 	if (contents.len == max_butts)
 		if(!ashtray_cache["full"])
 			ashtray_cache["full"] = image('icons/obj/objects.dmi',"ashtray_full")
-		overlays |= ashtray_cache["full"]
+		add_overlay(ashtray_cache["full"])
 		desc = "It's stuffed full."
 	else if (contents.len > max_butts/2)
 		if(!ashtray_cache["half"])
 			ashtray_cache["half"] = image('icons/obj/objects.dmi',"ashtray_half")
-		overlays |= ashtray_cache["half"]
+		add_overlay(ashtray_cache["half"])
 		desc = "It's half-filled."
 	else
 		desc = "An ashtray made of [material.display_name]."
@@ -46,9 +46,9 @@ var/global/list/ashtray_cache = list()
 /obj/item/weapon/material/ashtray/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if (health <= 0)
 		return
-	if (istype(W,/obj/item/weapon/cigbutt) || istype(W,/obj/item/clothing/mask/smokable/cigarette) || istype(W, /obj/item/weapon/flame/match))
+	if (istype(W,/obj/item/trash/cigbutt) || istype(W,/obj/item/clothing/mask/smokable/cigarette) || istype(W, /obj/item/weapon/flame/match))
 		if (contents.len >= max_butts)
-			user << "\The [src] is full."
+			to_chat(user, "\The [src] is full.")
 			return
 		user.remove_from_mob(W)
 		W.loc = src
@@ -65,7 +65,7 @@ var/global/list/ashtray_cache = list()
 				//spawn(1)
 				//	TemperatureAct(150)
 			else if (cig.lit == 0)
-				user << "You place [cig] in [src] without even smoking it. Why would you do that?"
+				to_chat(user, "You place [cig] in [src] without even smoking it. Why would you do that?")
 
 		src.visible_message("[user] places [W] in [src].")
 		user.update_inv_l_hand()
@@ -74,7 +74,7 @@ var/global/list/ashtray_cache = list()
 		update_icon()
 	else
 		health = max(0,health - W.force)
-		user << "You hit [src] with [W]."
+		to_chat(user, "You hit [src] with [W].")
 		if (health < 1)
 			shatter()
 	return

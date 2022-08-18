@@ -127,7 +127,7 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 		if(8)	//Aug
 			switch(DD)
 //				if(10)
-//					Holiday["S'randarr's Day"] = "A Tajaran holiday that occurs on the longest day of the year in summer, \
+//					Holiday["S'randarr's Day"] = "A Tajaran holiday that occurs on the longest day of the year in summer,
 //					on Ahdomai. It is named after the Tajaran deity of Light, and huge celebrations are common."
 //VOREStation Add - Of course we need this.
 				if(8)
@@ -167,8 +167,8 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 					Holiday["Kindness Day"] = "Kindness Day is an unofficial holiday to highlight good deeds in the \
 					community, focusing on the positive power and the common thread of kindness which binds humanity and \
 					friends together."
-//				if(28) //Space thanksgiving.
-//					Holiday["Appreciation Day"] = "Originally an old holiday from Earth, Appreciation Day follows many of the \
+				if(28) //Space thanksgiving.
+					Holiday["Appreciation Day"] = "Originally an old holiday from Earth, Appreciation Day follows many of the \
 					traditions that its predecessor did, such as having a large feast (turkey often included), gathering with family, and being thankful \
 					for what one has in life."
 			if(28 > DD > 20)
@@ -214,8 +214,8 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 
 	Holiday = list()
 
-	var/H = input(src,"What holiday is it today?","Set Holiday") as text
-	var/B = input(src,"Now explain what the holiday is about","Set Holiday") as message
+	var/H = tgui_input_text(src,"What holiday is it today?","Set Holiday")
+	var/B = tgui_input_text(src,"Now explain what the holiday is about","Set Holiday", multiline = TRUE, prevent_enter = TRUE)
 
 
 	Holiday[H] = B
@@ -237,11 +237,11 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 			holidays.Add(p)
 			holiday_blurbs.Add("[Holiday[p]]")
 		var/holidays_string = english_list(holidays, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "" )
-		world << "<font color='blue'>and...</font>"
-		world << "<h4>Happy [holidays_string] Everybody!</h4>"
+		to_world("<font color='blue'>and...</font>")
+		to_world("<h4>Happy [holidays_string] Everybody!</h4>")
 		if(holiday_blurbs.len != 0)
 			for(var/blurb in holiday_blurbs)
-				world << "<div align='center'><font color='blue'>[blurb]</font></div>"
+				to_world("<div align='center'><font color='blue'>[blurb]</font></div>")
 		switch(Holiday)			//special holidays
 			if("Easter")
 				//do easter stuff

@@ -5,12 +5,12 @@
 	A.add_fingerprint(user)
 	var/list/result = A.atmosanalyze(user)
 	if(result && result.len)
-		user << "<span class='notice'>Results of the analysis[src == A ? "" : " of \the [A]"]</span>"
+		to_chat(user, "<span class='notice'>Results of the analysis[src == A ? "" : " of \the [A]"]</span>")
 		for(var/line in result)
-			user << "<span class='notice'>[line]</span>"
+			to_chat(user, "<span class='notice'>[line]</span>")
 		return 1
 
-	user << "<span class='warning'>Your [src] flashes a red light as it fails to analyze \the [A].</span>"
+	to_chat(user, "<span class='warning'>Your [src] flashes a red light as it fails to analyze \the [A].</span>")
 	return 0
 
 /proc/atmosanalyzer_scan(var/atom/target, var/datum/gas_mixture/mixture, var/mob/user)
@@ -21,8 +21,9 @@
 		var/total_moles = mixture.total_moles
 		results += "<span class='notice'>Pressure: [round(pressure,0.1)] kPa</span>"
 		for(var/mix in mixture.gas)
-			results += "<span class='notice'>[gas_data.name[mix]]: [round((mixture.gas[mix] / total_moles) * 100)]%</span>"
+			results += "<span class='notice'>[gas_data.name[mix]]: [round((mixture.gas[mix] / total_moles) * 100)]% ([round(mixture.gas[mix], 0.01)] moles)</span>"
 		results += "<span class='notice'>Temperature: [round(mixture.temperature-T0C)]&deg;C</span>"
+		results += "<span class='notice'>Heat Capacity: [round(mixture.heat_capacity(),0.1)]</span>"
 	else
 		results += "<span class='notice'>\The [target] is empty!</span>"
 

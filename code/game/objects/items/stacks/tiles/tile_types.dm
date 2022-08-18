@@ -14,13 +14,15 @@
 	name = "tile"
 	singular_name = "tile"
 	desc = "A non-descript floor tile"
+	randpixel = 7
 	w_class = ITEMSIZE_NORMAL
 	max_amount = 60
+	drop_sound = 'sound/items/drop/axe.ogg'
+	pickup_sound = 'sound/items/pickup/axe.ogg'
 
-/obj/item/stack/tile/New()
-	..()
-	pixel_x = rand(-7, 7)
-	pixel_y = rand(-7, 7)
+/obj/item/stack/tile/Initialize()
+	. = ..()
+	randpixel_xy()
 
 /*
  * Grass
@@ -37,6 +39,9 @@
 	flags = 0
 	origin_tech = list(TECH_BIO = 1)
 	no_variants = FALSE
+	drop_sound = 'sound/items/drop/herb.ogg'
+	pickup_sound = 'sound/items/pickup/herb.ogg'
+
 /*
  * Wood
  */
@@ -51,12 +56,34 @@
 	throw_range = 20
 	flags = 0
 	no_variants = FALSE
+	drop_sound = 'sound/items/drop/wooden.ogg'
+	pickup_sound = 'sound/items/pickup/wooden.ogg'
 
 /obj/item/stack/tile/wood/sif
 	name = "alien wood tile"
 	singular_name = "alien wood tile"
 	desc = "An easy to fit wooden floor tile. It's blue!"
 	icon_state = "tile-sifwood"
+
+/obj/item/stack/tile/wood/alt
+	name = "wood floor tile"
+	singular_name = "wood floor tile"
+	icon_state = "tile-wood_tile"
+
+/obj/item/stack/tile/wood/parquet
+	name = "parquet wood floor tile"
+	singular_name = "parquet wood floor tile"
+	icon_state = "tile-wood_parquet"
+
+/obj/item/stack/tile/wood/panel
+	name = "large wood floor tile"
+	singular_name = "large wood floor tile"
+	icon_state = "tile-wood_large"
+
+/obj/item/stack/tile/wood/tile
+	name = "tiled wood floor tile"
+	singular_name = "tiled wood floor tile"
+	icon_state = "tile-wood_tile"
 
 /obj/item/stack/tile/wood/cyborg
 	name = "wood floor tile synthesizer"
@@ -65,6 +92,8 @@
 	charge_costs = list(250)
 	stacktype = /obj/item/stack/tile/wood
 	build_type = /obj/item/stack/tile/wood
+
+
 
 /*
  * Carpets
@@ -80,6 +109,8 @@
 	throw_range = 20
 	flags = 0
 	no_variants = FALSE
+	drop_sound = 'sound/items/drop/cloth.ogg'
+	pickup_sound = 'sound/items/pickup/cloth.ogg'
 
 /obj/item/stack/tile/carpet/teal
 	name = "teal carpet"
@@ -88,6 +119,23 @@
 	icon_state = "tile-tealcarpet"
 	no_variants = FALSE
 
+/obj/item/stack/tile/carpet/geo
+	icon_state = "tile-carpet-deco"
+	desc = "A piece of carpet with a gnarly geometric design. It is the same size as a normal floor tile!"
+
+/obj/item/stack/tile/carpet/retro
+	icon_state = "tile-carpet-retro"
+	desc = "A piece of carpet with totally wicked blue space patterns. It is the same size as a normal floor tile!"
+
+/obj/item/stack/tile/carpet/retro_red
+	icon_state = "tile-carpet-retro-red"
+	desc = "A piece of carpet with red-ical space patterns. It is the same size as a normal floor tile!"
+
+/obj/item/stack/tile/carpet/happy
+	icon_state = "tile-carpet-happy"
+	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"
+
+// TODO - Add descriptions to these
 /obj/item/stack/tile/carpet/bcarpet
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/blucarpet
@@ -101,6 +149,14 @@
 /obj/item/stack/tile/carpet/purcarpet
 	icon_state = "tile-carpet"
 /obj/item/stack/tile/carpet/oracarpet
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/brncarpet
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/blucarpet2
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/greencarpet
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/purplecarpet
 	icon_state = "tile-carpet"
 
 /obj/item/stack/tile/floor
@@ -138,21 +194,21 @@
 	name = "steel floor tile"
 	singular_name = "steel floor tile"
 	icon_state = "tile_steel"
-	matter = list("plasteel" = SHEET_MATERIAL_AMOUNT / 4)
+	matter = list(MAT_PLASTEEL = SHEET_MATERIAL_AMOUNT / 4)
 	no_variants = FALSE
 
 /obj/item/stack/tile/floor/steel
 	name = "steel floor tile"
 	singular_name = "steel floor tile"
 	icon_state = "tile_steel"
-	matter = list("plasteel" = SHEET_MATERIAL_AMOUNT / 4)
+	matter = list(MAT_PLASTEEL = SHEET_MATERIAL_AMOUNT / 4)
 	no_variants = FALSE
 
 /obj/item/stack/tile/floor/white
 	name = "white floor tile"
 	singular_name = "white floor tile"
 	icon_state = "tile_white"
-	matter = list("plastic" = SHEET_MATERIAL_AMOUNT / 4)
+	matter = list(MAT_PLASTIC = SHEET_MATERIAL_AMOUNT / 4)
 	no_variants = FALSE
 
 /obj/item/stack/tile/floor/yellow
@@ -166,14 +222,14 @@
 	name = "dark floor tile"
 	singular_name = "dark floor tile"
 	icon_state = "tile_steel"
-	matter = list("plasteel" = SHEET_MATERIAL_AMOUNT / 4)
+	matter = list(MAT_PLASTEEL = SHEET_MATERIAL_AMOUNT / 4)
 	no_variants = FALSE
 
 /obj/item/stack/tile/floor/freezer
 	name = "freezer floor tile"
 	singular_name = "freezer floor tile"
 	icon_state = "tile_freezer"
-	matter = list("plastic" = SHEET_MATERIAL_AMOUNT / 4)
+	matter = list(MAT_PLASTIC = SHEET_MATERIAL_AMOUNT / 4)
 	no_variants = FALSE
 
 /obj/item/stack/tile/floor/cyborg
@@ -193,6 +249,30 @@
 	icon_state = "tile-linoleum"
 	force = 1.0
 	throwforce = 1.0
+	throw_speed = 5
+	throw_range = 20
+	flags = 0
+	no_variants = FALSE
+
+/obj/item/stack/tile/wmarble
+	name = "light marble tile"
+	singular_name = "light marble tile"
+	desc = "Some white marble tiles used for flooring."
+	icon_state = "tile-wmarble"
+	force = 6.0
+	throwforce = 15.0
+	throw_speed = 5
+	throw_range = 20
+	flags = 0
+	no_variants = FALSE
+
+/obj/item/stack/tile/bmarble
+	name = "dark marble tile"
+	singular_name = "dark marble tile"
+	desc = "Some black marble tiles used for flooring."
+	icon_state = "tile-bmarble"
+	force = 6.0
+	throwforce = 15.0
 	throw_speed = 5
 	throw_range = 20
 	flags = 0

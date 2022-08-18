@@ -5,8 +5,9 @@
 	icon = 'icons/obj/shards.dmi'
 	desc = "Made of nothing. How does this even exist?" // set based on material, if this desc is visible it's a bug (shards default to being made of glass)
 	icon_state = "large"
-	sharp = 1
-	edge = 1
+	randpixel = 8
+	sharp = TRUE
+	edge = TRUE
 	w_class = ITEMSIZE_SMALL
 	force_divisor = 0.25 // 7.5 with hardness 30 (glass)
 	thrown_force_divisor = 0.5
@@ -16,20 +17,13 @@
 	unbreakable = 1 //It's already broken.
 	drops_debris = 0
 
-/obj/item/weapon/material/shard/suicide_act(mob/user)
-	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-	viewers(user) << pick("<span class='danger'>\The [user] is slitting [TU.his] wrists with \the [src]! It looks like [TU.hes] trying to commit suicide.</span>",
-	                      "<span class='danger'>\The [user] is slitting [TU.his] throat with \the [src]! It looks like [TU.hes] trying to commit suicide.</span>")
-	return (BRUTELOSS)
-
 /obj/item/weapon/material/shard/set_material(var/new_material)
 	..(new_material)
 	if(!istype(material))
 		return
 
 	icon_state = "[material.shard_icon][pick("large", "medium", "small")]"
-	pixel_x = rand(-8, 8)
-	pixel_y = rand(-8, 8)
+	randpixel_xy()
 	update_icon()
 
 	if(material.shard_type)
@@ -102,25 +96,21 @@
 
 	if(will_break && src.loc == user) // If it's not in our hand anymore
 		user.visible_message("<span class='danger'>[user] hit \the [target] with \the [src], shattering it!</span>", "<span class='warning'>You shatter \the [src] in your hand!</span>")
-		playsound(user, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 30, 1)
+		playsound(src, pick('sound/effects/Glassbr1.ogg', 'sound/effects/Glassbr2.ogg', 'sound/effects/Glassbr3.ogg'), 30, 1)
 		qdel(src)
 	return
 
-/obj/item/weapon/material/shard/Crossed(AM as mob|obj)
+/obj/item/weapon/material/shard/Crossed(atom/movable/AM as mob|obj)
 	..()
-	//VOREStation Edit begin: SHADEKIN
-	var/mob/SK = AM
-	if(istype(SK))
-		if(SK.shadekin_phasing_check())
-			return
-	//VOREStation Edit end: SHADEKIN
+	if(AM.is_incorporeal())
+		return
 	if(isliving(AM))
 		var/mob/M = AM
 
 		if(M.buckled) //wheelchairs, office chairs, rollerbeds
 			return
 
-		playsound(src.loc, 'sound/effects/glass_step.ogg', 50, 1) // not sure how to handle metal shards with sounds
+		playsound(src, 'sound/effects/glass_step.ogg', 50, 1) // not sure how to handle metal shards with sounds
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 
@@ -156,4 +146,4 @@
 	..(loc, "steel")
 
 /obj/item/weapon/material/shard/phoron/New(loc)
-	..(loc, "phglass")
+	..(loc, "borosilicate glass")

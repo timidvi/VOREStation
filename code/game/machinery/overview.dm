@@ -26,7 +26,7 @@
 		imap += icon('icons/misc/imap.dmi', "blank")
 		imap += icon('icons/misc/imap.dmi', "blank")
 
-	//world << "[icount] images in list"
+	//to_world("[icount] images in list")
 
 	for(var/wx = 1 ; wx <= world.maxx; wx++)
 
@@ -134,11 +134,11 @@
 			var/rx = ((wx*2+xoff)%32) + 1
 			var/ry = ((wy*2+yoff)%32) + 1
 
-			//world << "trying [ix],[iy] : [ix+icx*iy]"
+			//to_world("trying [ix],[iy] : [ix+icx*iy]")
 			var/icon/I = imap[1+(ix + icx*iy)*2]
 			var/icon/I2 = imap[2+(ix + icx*iy)*2]
 
-			//world << "icon: \icon[I]"
+			//to_world("icon: \icon[I][bicon(I)]")
 
 			I.DrawBox(colour, rx, ry, rx+1, ry+1)
 
@@ -153,7 +153,7 @@
 
 		H.screen_loc = "[5 + i%icx],[6+ round(i/icx)]"
 
-		//world<<"\icon[I] at [H.screen_loc]"
+		//to_world("\icon[I][bicon(I)] at [H.screen_loc]")
 
 		H.name = (i==0)?"maprefresh":"map"
 
@@ -263,10 +263,10 @@
 			var/rx = ((wx*2+xoff)%32) + 1
 			var/ry = ((wy*2+yoff)%32) + 1
 
-			//world << "trying [ix],[iy] : [ix+icx*iy]"
+			//to_world("trying [ix],[iy] : [ix+icx*iy]")
 			var/icon/I = imap[1+(ix + icx*iy)]
 
-			//world << "icon: \icon[I]"
+			//to_world("icon: \icon[I][bicon(I)]")
 
 			I.DrawBox(colour, rx, ry, rx, ry)
 
@@ -279,7 +279,7 @@
 
 		H.screen_loc = "[5 + i%icx],[6+ round(i/icx)]"
 
-		//world<<"\icon[I] at [H.screen_loc]"
+		//to_world("\icon[I][bicon(I)] at [H.screen_loc]")
 
 		H.name = (i==0)?"maprefresh":"map"
 
@@ -317,13 +317,13 @@
 
 		return
 
-proc/getr(col)
+/proc/getr(col)
 	return hex2num(copytext(col, 2,4))
 
-proc/getg(col)
+/proc/getg(col)
 	return hex2num(copytext(col, 4,6))
 
-proc/getb(col)
+/proc/getb(col)
 	return hex2num(copytext(col, 6))
 
 /mob/proc/clearmap()

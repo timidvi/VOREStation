@@ -83,7 +83,8 @@ var/datum/antagonist/wizard/wizards
 	if(wizard_mob.backbag == 2) wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack(wizard_mob), slot_back)
 	if(wizard_mob.backbag == 3) wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel/norm(wizard_mob), slot_back)
 	if(wizard_mob.backbag == 4) wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/satchel(wizard_mob), slot_back)
-	if(wizard_mob.backbag == 5) wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack(wizard_mob), slot_back)
+	if(wizard_mob.backbag == 5) wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/messenger(wizard_mob), slot_back)
+	if(wizard_mob.backbag == 6) wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/backpack/sport(wizard_mob), slot_back)
 	wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/storage/box(wizard_mob), slot_in_backpack)
 	wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/teleportation_scroll(wizard_mob), slot_r_store)
 	wizard_mob.equip_to_slot_or_del(new /obj/item/weapon/spellbook(wizard_mob), slot_r_hand)
@@ -98,14 +99,14 @@ var/datum/antagonist/wizard/wizards
 		break
 	if(!survivor)
 		feedback_set_details("round_end_result","loss - wizard killed")
-		world << "<span class='danger'><font size = 3>The [(current_antagonists.len>1)?"[role_text_plural] have":"[role_text] has"] been killed by the crew!</font></span>"
+		to_world("<span class='danger'><font size = 3>The [(current_antagonists.len>1)?"[role_text_plural] have":"[role_text] has"] been killed by the crew!</font></span>")
 
 //To batch-remove wizard spells. Linked to mind.dm.
 /mob/proc/spellremove()
 	for(var/spell/spell_to_remove in src.spell_list)
 		remove_spell(spell_to_remove)
 
-obj/item/clothing
+/obj/item/clothing
 	var/wizard_garb = 0
 
 // Does this clothing slot count as wizard garb? (Combines a few checks)

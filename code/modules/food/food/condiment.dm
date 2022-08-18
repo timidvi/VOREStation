@@ -26,6 +26,8 @@
 		return
 
 /obj/item/weapon/reagent_containers/food/condiment/afterattack(var/obj/target, var/mob/user, var/flag)
+	if(!user.Adjacent(target))
+		return
 	if(standard_dispenser_refill(user, target))
 		return
 	if(standard_pour_into(user, target))
@@ -33,23 +35,23 @@
 
 	if(istype(target, /obj/item/weapon/reagent_containers/food/snacks)) // These are not opencontainers but we can transfer to them
 		if(!reagents || !reagents.total_volume)
-			user << "<span class='notice'>There is no condiment left in \the [src].</span>"
+			to_chat(user, "<span class='notice'>There is no condiment left in \the [src].</span>")
 			return
 
 		if(!target.reagents.get_free_space())
-			user << "<span class='notice'>You can't add more condiment to \the [target].</span>"
+			to_chat(user, "<span class='notice'>You can't add more condiment to \the [target].</span>")
 			return
 
 		var/trans = reagents.trans_to_obj(target, amount_per_transfer_from_this)
-		user << "<span class='notice'>You add [trans] units of the condiment to \the [target].</span>"
+		to_chat(user, "<span class='notice'>You add [trans] units of the condiment to \the [target].</span>")
 	else
 		..()
 
 /obj/item/weapon/reagent_containers/food/condiment/feed_sound(var/mob/user)
-	playsound(user.loc, 'sound/items/drink.ogg', rand(10, 50), 1)
+	playsound(src, 'sound/items/drink.ogg', rand(10, 50), 1)
 
 /obj/item/weapon/reagent_containers/food/condiment/self_feed_message(var/mob/user)
-	user << "<span class='notice'>You swallow some of contents of \the [src].</span>"
+	to_chat(user, "<span class='notice'>You swallow some of contents of \the [src].</span>")
 
 /obj/item/weapon/reagent_containers/food/condiment/on_reagent_change()
 	if(reagents.reagent_list.len > 0)
@@ -58,6 +60,11 @@
 				name = "Ketchup"
 				desc = "You feel more American already."
 				icon_state = "ketchup"
+				center_of_mass = list("x"=16, "y"=6)
+			if("mustard")
+				name = "Mustard"
+				desc = "A somewhat bitter topping."
+				icon_state = "mustard"
 				center_of_mass = list("x"=16, "y"=6)
 			if("capsaicin")
 				name = "Hotsauce"
@@ -74,6 +81,11 @@
 				desc = "A salty soy-based flavoring."
 				icon_state = "soysauce"
 				center_of_mass = list("x"=16, "y"=6)
+			if("vinegar")
+				name = "Vinegar"
+				desc = "An acetic acid used in various dishes."
+				icon_state = "vinegar"
+				center_of_mass = list("x"=16, "y"=6)
 			if("frostoil")
 				name = "Coldsauce"
 				desc = "Leaves the tongue numb in its passage."
@@ -83,20 +95,50 @@
 				name = "Salt Shaker"
 				desc = "Salt. From space oceans, presumably."
 				icon_state = "saltshaker"
-				center_of_mass = list("x"=16, "y"=10)
+				center_of_mass = list("x"=17, "y"=11)
 			if("blackpepper")
 				name = "Pepper Mill"
 				desc = "Often used to flavor food or make people sneeze."
 				icon_state = "peppermillsmall"
-				center_of_mass = list("x"=16, "y"=10)
-			if("cornoil")
-				name = "Corn Oil"
-				desc = "A delicious oil used in cooking. Made from corn."
+				center_of_mass = list("x"=17, "y"=11)
+			if("cookingoil")
+				name = "Cooking Oil"
+				desc = "A delicious oil used in cooking. General purpose."
 				icon_state = "oliveoil"
 				center_of_mass = list("x"=16, "y"=6)
 			if("sugar")
 				name = "Sugar"
 				desc = "Tastey space sugar!"
+				center_of_mass = list("x"=16, "y"=6)
+			if("peanutbutter")
+				name = "Peanut Butter"
+				desc = "A jar of smooth peanut butter."
+				icon_state = "peanutbutter"
+				center_of_mass = list("x"=16, "y"=6)
+			if("mayo")
+				name = "Mayonnaise"
+				desc = "A jar of mayonnaise!"
+				icon_state = "mayo"
+				center_of_mass = list("x"=16, "y"=6)
+			if("yeast")
+				name = "Yeast"
+				desc = "This is what you use to make bread fluffy."
+				icon_state = "yeast"
+				center_of_mass = list("x"=16, "y"=6)
+			if("spacespice")
+				name = "bottle of space spice"
+				desc = "An exotic blend of spices for cooking. Definitely not worms."
+				icon_state = "spacespicebottle"
+				center_of_mass = list("x"=16, "y"=6)
+			if("barbecue")
+				name = "barbecue sauce"
+				desc = "Barbecue sauce, it's labeled 'sweet and spicy'."
+				icon_state = "barbecue"
+				center_of_mass = list("x"=16, "y"=6)
+			if("sprinkles")
+				name = "sprinkles"
+				desc = "Bottle of sprinkles, colourful!"
+				icon_state= "sprinkles"
 				center_of_mass = list("x"=16, "y"=6)
 			else
 				name = "Misc Condiment Bottle"
@@ -130,9 +172,23 @@
 	. = ..()
 	reagents.add_reagent("ketchup", 50)
 
+/obj/item/weapon/reagent_containers/food/condiment/mustard/Initialize()
+	. = ..()
+	reagents.add_reagent("mustard", 50)
+
 /obj/item/weapon/reagent_containers/food/condiment/hotsauce/Initialize()
 	. = ..()
 	reagents.add_reagent("capsaicin", 50)
+
+/obj/item/weapon/reagent_containers/food/condiment/cookingoil
+	name = "Cooking Oil"
+
+/obj/item/weapon/reagent_containers/food/condiment/cookingoil/Initialize()
+	. = ..()
+	reagents.add_reagent("cookingoil", 50)
+
+/obj/item/weapon/reagent_containers/food/condiment/cornoil
+	name = "Corn Oil"
 
 /obj/item/weapon/reagent_containers/food/condiment/cornoil/Initialize()
 	. = ..()
@@ -145,6 +201,24 @@
 /obj/item/weapon/reagent_containers/food/condiment/soysauce/Initialize()
 	. = ..()
 	reagents.add_reagent("soysauce", 50)
+
+/obj/item/weapon/reagent_containers/food/condiment/vinegar/Initialize()
+	. = ..()
+	reagents.add_reagent("vinegar", 50)
+
+/obj/item/weapon/reagent_containers/food/condiment/yeast
+	name = "Yeast"
+
+/obj/item/weapon/reagent_containers/food/condiment/yeast/Initialize()
+	. = ..()
+	reagents.add_reagent("yeast", 50)
+
+/obj/item/weapon/reagent_containers/food/condiment/sprinkles
+	name = "Sprinkles"
+
+/obj/item/weapon/reagent_containers/food/condiment/sprinkles/Initialize()
+	. = ..()
+	reagents.add_reagent("sprinkles", 50)
 
 /obj/item/weapon/reagent_containers/food/condiment/small
 	possible_transfer_amounts = list(1,20)
@@ -159,19 +233,31 @@
 	name = "salt shaker"											//	a large one.
 	desc = "Salt. From space oceans, presumably."
 	icon_state = "saltshakersmall"
+	center_of_mass = list("x"=17, "y"=11)
 
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker/Initialize()
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 20)
 
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill
-	name = "pepper mill"
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill //Keeping name here to save map based headaches
+	name = "pepper shaker"
 	desc = "Often used to flavor food or make people sneeze."
-	icon_state = "peppermillsmall"
+	icon_state = "peppershakersmall"
+	center_of_mass = list("x"=17, "y"=11)
 
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill/Initialize()
 	. = ..()
 	reagents.add_reagent("blackpepper", 20)
+
+/obj/item/weapon/reagent_containers/food/condiment/small/peppergrinder
+	name = "pepper mill"
+	desc = "Fancy way to season a dish or make people sneeze."
+	icon_state = "peppermill"
+	center_of_mass = list("x"=17, "y"=11)
+
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill/Initialize()
+	. = ..()
+	reagents.add_reagent("blackpepper", 30)
 
 /obj/item/weapon/reagent_containers/food/condiment/small/sugar
 	name = "sugar"
@@ -374,17 +460,69 @@
 
 //End of MRE stuff.
 
-/obj/item/weapon/reagent_containers/food/condiment/flour
-	name = "flour sack"
-	desc = "A big bag of flour. Good for baking!"
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour
+	name = "flour carton"
+	desc = "A big carton of flour. Good for baking!"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "flour"
+	volume = 220
+	center_of_mass = list("x"=16, "y"=8)
 
-/obj/item/weapon/reagent_containers/food/condiment/flour/on_reagent_change()
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour/on_reagent_change()
+	update_icon()
 	return
 
-/obj/item/weapon/reagent_containers/food/condiment/flour/Initialize()
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour/Initialize()
 	. = ..()
-	reagents.add_reagent("flour", 30)
-	src.pixel_x = rand(-10.0, 10)
-	src.pixel_y = rand(-10.0, 10)
+	reagents.add_reagent("flour", 200)
+	randpixel_xy()
+
+/obj/item/weapon/reagent_containers/food/condiment/carton/update_icon()
+	overlays.Cut()
+
+	if(reagents.total_volume)
+		var/image/filling = image('icons/obj/food.dmi', src, "[icon_state]10")
+
+		filling.icon_state = "[icon_state]-[clamp(round(100 * reagents.total_volume / volume, 25), 0, 100)]"
+
+		overlays += filling
+
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour/rustic
+	name = "flour sack"
+	desc = "An artisanal sack of flour. Classy!"
+	icon_state = "flour_bag"
+
+/obj/item/weapon/reagent_containers/food/condiment/carton/sugar
+	name = "sugar carton"
+	desc = "A big carton of sugar. Sweet!"
+	icon_state = "sugar"
+	volume = 120
+	center_of_mass = list("x"=16, "y"=8)
+
+/obj/item/weapon/reagent_containers/food/condiment/carton/sugar/on_reagent_change()
+	update_icon()
+	return
+
+/obj/item/weapon/reagent_containers/food/condiment/carton/sugar/Initialize()
+	. = ..()
+	reagents.add_reagent("sugar", 100)
+
+/obj/item/weapon/reagent_containers/food/condiment/carton/sugar/rustic
+	name = "sugar sack"
+	desc = "An artisanal sack of sugar. Classy!"
+	icon_state = "sugar_bag"
+
+/obj/item/weapon/reagent_containers/food/condiment/spacespice
+	name = "space spices"
+	desc = "An exotic blend of spices for cooking. Definitely not worms."
+	icon_state = "spacespicebottle"
+	possible_transfer_amounts = list(1,40) //for clown turning the lid off
+	amount_per_transfer_from_this = 1
+	volume = 40
+
+/obj/item/weapon/reagent_containers/food/condiment/spacespice/on_reagent_change()
+	return
+
+/obj/item/weapon/reagent_containers/food/condiment/spacespice/Initialize()
+	. = ..()
+	reagents.add_reagent("spacespice", 40)

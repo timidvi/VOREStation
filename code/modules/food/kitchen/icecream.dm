@@ -12,9 +12,9 @@
 	desc = "Ding-aling ding dong. Get your NanoTrasen-approved ice cream!"
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "icecream_vat"
-	density = 1
-	anchored = 0
-	use_power = 0
+	density = TRUE
+	anchored = FALSE
+	use_power = USE_POWER_OFF
 	flags = OPENCONTAINER | NOREACT
 
 	var/list/product_types = list()
@@ -92,7 +92,7 @@
 		var/obj/item/weapon/reagent_containers/food/snacks/icecream/I = O
 		if(!I.ice_creamed)
 			if(product_types[dispense_flavour] > 0)
-				src.visible_message("\icon[src] <span class='info'>[user] scoops delicious [flavour_name] icecream into [I].</span>")
+				src.visible_message("\icon[src][bicon(src)] <span class='info'>[user] scoops delicious [flavour_name] icecream into [I].</span>")
 				product_types[dispense_flavour] -= 1
 				I.add_ice_cream(flavour_name)
 			//	if(beaker)
@@ -100,9 +100,9 @@
 				if(I.reagents.total_volume < 10)
 					I.reagents.add_reagent("sugar", 10 - I.reagents.total_volume)
 			else
-				user << "<span class='warning'>There is not enough icecream left!</span>"
+				to_chat(user, "<span class='warning'>There is not enough icecream left!</span>")
 		else
-			user << "<span class='notice'>[O] already has icecream in it.</span>"
+			to_chat(user, "<span class='notice'>[O] already has icecream in it.</span>")
 		return 1
 	else if(O.is_open_container())
 		return
@@ -125,7 +125,7 @@
 		else
 			src.visible_message("<span class='info'>[user] whips up some [flavour] icecream.</span>")
 	else
-		user << "<span class='warning'>You don't have the ingredients to make this.</span>"
+		to_chat(user, "<span class='warning'>You don't have the ingredients to make this.</span>")
 
 /obj/machinery/icecream_vat/Topic(href, href_list)
 
@@ -148,7 +148,7 @@
 			I.desc = "Delicious [cone_name] cone, but no ice cream."
 			src.visible_message("<span class='info'>[usr] dispenses a crunchy [cone_name] cone from [src].</span>")
 		else
-			usr << "<span class='warning'>There are no [cone_name] cones left!</span>"
+			to_chat(usr, "<span class='warning'>There are no [cone_name] cones left!</span>")
 
 	if(href_list["make"])
 		var/amount = (text2num(href_list["amount"]))
@@ -183,13 +183,13 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/icecream/proc/add_ice_cream(var/flavour_name)
 	name = "[flavour_name] icecream"
-	src.overlays += "icecream_[flavour_name]"
+	add_overlay("icecream_[flavour_name]")
 	desc = "Delicious [cone_type] cone with a dollop of [flavour_name] ice cream."
 	ice_creamed = 1
 
 #undef ICECREAM_VANILLA
-#undef FLAVOUR_CHOCOLATE
-#undef FLAVOUR_STRAWBERRY
-#undef FLAVOUR_BLUE
+#undef ICECREAM_CHOCOLATE
+#undef ICECREAM_STRAWBERRY
+#undef ICECREAM_BLUE
 #undef CONE_WAFFLE
 #undef CONE_CHOC

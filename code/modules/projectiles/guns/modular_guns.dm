@@ -37,7 +37,8 @@
 	CheckParts()
 	FireModeModify()
 
-/obj/item/weapon/gun/energy/modular/proc/CheckParts() //What parts do we have inside us, and how good are they?
+/obj/item/weapon/gun/energy/modular/CheckParts() //What parts do we have inside us, and how good are they?
+	..()
 	capacitor_rating = 0
 	laser_rating = 0
 	manipulator_rating = 0
@@ -142,7 +143,7 @@
 				power_supply = P
 				P.loc = src
 				user.visible_message("[user] inserts [P] into [src].", "<span class='notice'>You insert [P] into [src].</span>")
-				playsound(src.loc, 'sound/weapons/flipblade.ogg', 50, 1)
+				playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 				update_icon()
 				update_held_icon()
 		return

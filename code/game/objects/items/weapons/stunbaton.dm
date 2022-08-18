@@ -6,11 +6,13 @@
 	item_state = "baton"
 	slot_flags = SLOT_BELT
 	force = 15
-	sharp = 0
-	edge = 0
+	sharp = FALSE
+	edge = FALSE
 	throwforce = 7
 	flags = NOCONDUCT
 	w_class = ITEMSIZE_NORMAL
+	drop_sound = 'sound/items/drop/metalweapon.ogg'
+	pickup_sound = 'sound/items/pickup/metalweapon.ogg'
 	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten")
 	var/lightcolor = "#FF6A00"
@@ -28,11 +30,6 @@
 
 /obj/item/weapon/melee/baton/get_cell()
 	return bcell
-
-/obj/item/weapon/melee/baton/suicide_act(mob/user)
-	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-	user.visible_message("<span class='suicide'>\The [user] is putting the live [name] in [TU.his] mouth! It looks like [TU.he] [TU.is] trying to commit suicide.</span>")
-	return (FIRELOSS)
 
 /obj/item/weapon/melee/baton/MouseDrop(obj/over_object as obj)
 	if(!canremove)
@@ -101,13 +98,13 @@
 		set_light(0)
 
 /obj/item/weapon/melee/baton/examine(mob/user)
-	if(!..(user, 1))
-		return
+	. = ..()
 
-	if(bcell)
-		user <<"<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
-	if(!bcell)
-		user <<"<span class='warning'>The baton does not have a power source installed.</span>"
+	if(Adjacent(user, src))
+		if(bcell)
+			. += "<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
+		if(!bcell)
+			. += "<span class='warning'>The baton does not have a power source installed.</span>"
 
 /obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
 	if(use_external_power)
@@ -118,12 +115,12 @@
 				user.drop_item()
 				W.loc = src
 				bcell = W
-				user << "<span class='notice'>You install a cell in [src].</span>"
+				to_chat(user, "<span class='notice'>You install a cell in [src].</span>")
 				update_icon()
 			else
-				user << "<span class='notice'>[src] already has a cell.</span>"
+				to_chat(user, "<span class='notice'>[src] already has a cell.</span>")
 		else
-			user << "<span class='notice'>This cell is not fitted for [src].</span>"
+			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
 
 /obj/item/weapon/melee/baton/attack_hand(mob/user as mob)
 	if(user.get_inactive_hand() == src)
@@ -131,7 +128,7 @@
 			bcell.update_icon()
 			user.put_in_hands(bcell)
 			bcell = null
-			user << "<span class='notice'>You remove the cell from the [src].</span>"
+			to_chat(user, "<span class='notice'>You remove the cell from the [src].</span>")
 			status = 0
 			update_icon()
 			return
@@ -147,20 +144,20 @@
 			bcell = R.cell
 	if(bcell && bcell.charge > hitcost)
 		status = !status
-		user << "<span class='notice'>[src] is now [status ? "on" : "off"].</span>"
-		playsound(loc, "sparks", 75, 1, -1)
+		to_chat(user, "<span class='notice'>[src] is now [status ? "on" : "off"].</span>")
+		playsound(src, "sparks", 75, 1, -1)
 		update_icon()
 	else
 		status = 0
 		if(!bcell)
-			user << "<span class='warning'>[src] does not have a power source!</span>"
+			to_chat(user, "<span class='warning'>[src] does not have a power source!</span>")
 		else
-			user << "<span class='warning'>[src] is out of charge.</span>"
+			to_chat(user, "<span class='warning'>[src] is out of charge.</span>")
 	add_fingerprint(user)
 
 /obj/item/weapon/melee/baton/attack(mob/M, mob/user)
 	if(status && (CLUMSY in user.mutations) && prob(50))
-		user << "<span class='danger'>You accidentally hit yourself with the [src]!</span>"
+		to_chat(user, "<span class='danger'>You accidentally hit yourself with the [src]!</span>")
 		user.Weaken(30)
 		deductcharge(hitcost)
 		return
@@ -178,7 +175,7 @@
 		var/mob/living/carbon/human/H = target
 		affecting = H.get_organ(hit_zone)
 
-	if(user.a_intent == I_HURT || user.a_intent == I_DISARM)
+	if(user.a_intent == I_GRAB || user.a_intent == I_HURT)
 		. = ..()
 		//whacking someone causes a much poorer electrical contact than deliberately prodding them.
 		agony *= 0.5
@@ -193,7 +190,7 @@
 			target.visible_message("<span class='danger'>[target] has been prodded in the [affecting.name] with [src] by [user]!</span>")
 		else
 			target.visible_message("<span class='danger'>[target] has been prodded with [src] by [user]!</span>")
-		playsound(loc, 'sound/weapons/Egloves.ogg', 50, 1, -1)
+		playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 
 	//stun effects
 	if(status)
@@ -236,12 +233,12 @@
 				user.drop_item()
 				W.loc = src
 				bcell = W
-				user << "<span class='notice'>You install a cell in [src].</span>"
+				to_chat(user, "<span class='notice'>You install a cell in [src].</span>")
 				update_icon()
 			else
-				user << "<span class='notice'>[src] already has a cell.</span>"
+				to_chat(user, "<span class='notice'>[src] already has a cell.</span>")
 		else
-			user << "<span class='notice'>This cell is not fitted for [src].</span>"
+			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
 
 /obj/item/weapon/melee/baton/get_description_interaction()
 	var/list/results = list()

@@ -58,14 +58,22 @@
 	var/stripping
 	var/obj/item/held = user.get_active_hand()
 	if(!istype(held) || is_robot_module(held))
+		stripping = TRUE
+	else
+		var/obj/item/weapon/holder/holder = held
+		if(istype(holder) && src == holder.held_mob)
+			stripping = TRUE
+		else
+			var/obj/item/weapon/grab/grab = held
+			if(istype(grab) && grab.affecting == src)
+				stripping = TRUE
+		
+	if(stripping)
 		if(!istype(target_slot))  // They aren't holding anything valid and there's nothing to remove, why are we even here?
 			return
 		if(!target_slot.canremove)
-			user << "<span class='warning'>You cannot remove \the [src]'s [target_slot.name].</span>"
+			to_chat(user, "<span class='warning'>You cannot remove \the [src]'s [target_slot.name].</span>")
 			return
-		stripping = 1
-
-	if(stripping)
 		visible_message("<span class='danger'>\The [user] is trying to remove \the [src]'s [target_slot.name]!</span>")
 	else
 		if(slot_to_strip == slot_wear_mask && istype(held, /obj/item/weapon/grenade))
@@ -76,8 +84,14 @@
 	if(!do_after(user,HUMAN_STRIP_DELAY,src))
 		return
 
-	if(!stripping && user.get_active_hand() != held)
-		return
+	if(!stripping)
+		if(user.get_active_hand() != held)
+			return
+		var/obj/item/weapon/holder/mobheld = held
+		if(istype(mobheld)&&mobheld.held_mob==src)
+			to_chat(user, "<span class='warning'>You can't put someone on themselves! Stop trying to break reality!</span>")
+			return
+
 
 	if(stripping)
 		add_attack_logs(user,src,"Removed equipment from slot [target_slot]")
@@ -90,7 +104,7 @@
 // Empty out everything in the target's pockets.
 /mob/living/carbon/human/proc/empty_pockets(var/mob/living/user)
 	if(!r_store && !l_store)
-		user << "<span class='warning'>\The [src] has nothing in their pockets.</span>"
+		to_chat(user, "<span class='warning'>\The [src] has nothing in their pockets.</span>")
 		return
 	if(r_store)
 		unEquip(r_store)
@@ -102,10 +116,10 @@
 /mob/living/carbon/human/proc/toggle_sensors(var/mob/living/user)
 	var/obj/item/clothing/under/suit = w_uniform
 	if(!suit)
-		user << "<span class='warning'>\The [src] is not wearing a suit with sensors.</span>"
+		to_chat(user, "<span class='warning'>\The [src] is not wearing a suit with sensors.</span>")
 		return
 	if (suit.has_sensor >= 2)
-		user << "<span class='warning'>\The [src]'s suit sensor controls are locked.</span>"
+		to_chat(user, "<span class='warning'>\The [src]'s suit sensor controls are locked.</span>")
 		return
 	add_attack_logs(user,src,"Adjusted suit sensor level")
 	suit.set_sensors(user)
@@ -117,7 +131,7 @@
 	if(istype(wear_suit,/obj/item/clothing/suit/space))
 		var/obj/item/clothing/suit/space/suit = wear_suit
 		if(suit.supporting_limbs && suit.supporting_limbs.len)
-			user << "<span class='warning'>You cannot remove the splints - [src]'s [suit] is supporting some of the breaks.</span>"
+			to_chat(user, "<span class='warning'>You cannot remove the splints - [src]'s [suit] is supporting some of the breaks.</span>")
 			can_reach_splints = 0
 
 	if(can_reach_splints)
@@ -133,7 +147,7 @@
 		if(removed_splint)
 			visible_message("<span class='danger'>\The [user] removes \the [src]'s splints!</span>")
 		else
-			user << "<span class='warning'>\The [src] has no splints to remove.</span>"
+			to_chat(user, "<span class='warning'>\The [src] has no splints to remove.</span>")
 
 // Set internals on or off.
 /mob/living/carbon/human/proc/toggle_internals(var/mob/living/user)

@@ -130,7 +130,6 @@
 	for(var/obj/screen/spell/spell in spell_objects)
 		spell.update_charge(forced)
 
-
 /obj/screen/movable/spell_master/genetic
 	name = "Mutant Powers"
 	icon_state = "genetic_spell_ready"
@@ -139,6 +138,13 @@
 	closed_state = "genetics_closed"
 
 	screen_loc = ui_genetic_master
+
+/obj/screen/movable/spell_master/swarm
+	name = "Swarm Abilities"
+	icon_state = "nano_spell_ready"
+
+	open_state = "swarm_open"
+	closed_state = "swarm_closed"
 
 //////////////ACTUAL SPELLS//////////////
 //This is what you click to cast things//
@@ -175,7 +181,7 @@
 	if((last_charge == spell.charge_counter || !handle_icon_updates) && !forced_update)
 		return //nothing to see here
 
-	overlays -= spell.hud_state
+	cut_overlay(spell.hud_state)
 
 	if(spell.charge_type == Sp_RECHARGE || spell.charge_type == Sp_CHARGES)
 		if(spell.charge_counter < spell.charge_max)
@@ -185,23 +191,23 @@
 				partial_charge.Crop(1, 1, partial_charge.Width(), round(partial_charge.Height() * spell.charge_counter / spell.charge_max))
 				overlays += partial_charge
 				if(last_charged_icon)
-					overlays -= last_charged_icon
+					cut_overlay(last_charged_icon)
 				last_charged_icon = partial_charge
 			else if(last_charged_icon)
-				overlays -= last_charged_icon
+				cut_overlay(last_charged_icon)
 				last_charged_icon = null
 		else
 			icon_state = "[spell_base]_spell_ready"
 			if(last_charged_icon)
-				overlays -= last_charged_icon
+				cut_overlay(last_charged_icon)
 	else
 		icon_state = "[spell_base]_spell_ready"
 
-	overlays += spell.hud_state
+	add_overlay(spell.hud_state)
 
 	last_charge = spell.charge_counter
 
-	overlays -= "silence"
+	cut_overlay("silence")
 	if(spell.silenced)
 		overlays += "silence"
 

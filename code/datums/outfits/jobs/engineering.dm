@@ -1,6 +1,6 @@
 /decl/hierarchy/outfit/job/engineering
 	hierarchy_type = /decl/hierarchy/outfit/job/engineering
-	belt = /obj/item/weapon/storage/belt/utility/full
+	belt = /obj/item/weapon/storage/belt/utility/full/multitool
 	l_ear = /obj/item/device/radio/headset/headset_eng
 	shoes = /obj/item/clothing/shoes/boots/workboots
 	r_pocket = /obj/item/device/t_scanner
@@ -23,7 +23,7 @@
 	name = OUTFIT_JOB_NAME("Engineer")
 	head = /obj/item/clothing/head/hardhat
 	uniform = /obj/item/clothing/under/rank/engineer
-	id_type = /obj/item/weapon/card/id/engineering/engineer
+	id_type = /obj/item/weapon/card/id/engineering
 	pda_type = /obj/item/device/pda/engineering
 
 /decl/hierarchy/outfit/job/engineering/atmos

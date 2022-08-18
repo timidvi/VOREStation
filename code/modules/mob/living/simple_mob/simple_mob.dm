@@ -1,6 +1,7 @@
 // Reorganized and somewhat cleaned up.
 // AI code has been made into a datum, inside the AI module folder.
 
+
 /mob/living/simple_mob
 	name = "animal"
 	desc = ""
@@ -13,6 +14,8 @@
 	mob_bump_flag = HEAVY
 	mob_swap_flags = ~HEAVY
 	mob_push_flags = ~HEAVY
+
+	has_huds = TRUE // We do show AI status huds for buildmode players
 
 	var/tt_desc = null //Tooltip description
 
@@ -55,17 +58,15 @@
 	var/response_harm   = "tries to hurt"	// If clicked on harm intent
 	var/list/friends = list()		// Mobs on this list wont get attacked regardless of faction status.
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
-	var/meat_amount = 0				// How much meat to drop from this mob when butchered
-	var/obj/meat_type				// The meat object to drop
 	var/list/loot_list = list()		// The list of lootable objects to drop, with "/path = prob%" structure
 	var/obj/item/weapon/card/id/myid// An ID card if they have one to give them access to stuff.
+	var/organ_names = /decl/mob_organ_names //'False' bodyparts that can be shown as hit by projectiles in place of the default humanoid bodyplan.
 
 	//Mob environment settings
 	var/minbodytemp = 250			// Minimum "okay" temperature in kelvin
 	var/maxbodytemp = 350			// Maximum of above
 	var/heat_damage_per_tick = 3	// Amount of damage applied if animal's body temperature is higher than maxbodytemp
 	var/cold_damage_per_tick = 2	// Same as heat_damage_per_tick, only if the bodytemperature it's lower than minbodytemp
-	var/fire_alert = 0				// 0 = fine, 1 = hot, 2 = cold
 
 	var/min_oxy = 5					// Oxygen in moles, minimum, 0 is 'no minimum'
 	var/max_oxy = 0					// Oxygen in moles, maximum, 0 is 'no maximum'
@@ -91,7 +92,7 @@
 	var/needs_reload = FALSE							// If TRUE, mob needs to reload occasionally
 	var/reload_max = 1									// How many shots the mob gets before it has to reload, will not be used if needs_reload is FALSE
 	var/reload_count = 0								// A counter to keep track of how many shots the mob has fired so far. Reloads when it hits reload_max.
-	var/reload_time = 1 SECONDS							// How long it takes for a mob to reload. This is to buy a player a bit of time to run or fight.
+	var/reload_time = 4 SECONDS							// How long it takes for a mob to reload. This is to buy a player a bit of time to run or fight.
 	var/reload_sound = 'sound/weapons/flipblade.ogg'	// What sound gets played when the mob successfully reloads. Defaults to the same sound as reloading guns. Can be null.
 
 	//Mob melee settings
@@ -106,7 +107,7 @@
 	var/attack_sharp = FALSE			// Is the attack sharp?
 	var/attack_edge = FALSE				// Does the attack have an edge?
 
-	var/melee_attack_delay = null			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
+	var/melee_attack_delay = 2			// If set, the mob will do a windup animation and can miss if the target moves out of the way.
 	var/ranged_attack_delay = null
 	var/special_attack_delay = null
 
@@ -155,19 +156,38 @@
 	// contained in a cage
 	var/in_stasis = 0
 
+	// don't process me if there's nobody around to see it
+	low_priority = TRUE
+	// Used for if the mob can drop limbs. Overrides species dmi.
+	var/limb_icon
+	// Used for if the mob can drop limbs. Overrides the icon cache key, so it doesn't keep remaking the icon needlessly.
+	var/limb_icon_key
+	var/understands_common = TRUE 		//VOREStation Edit - Makes it so that simplemobs can understand galcomm without being able to speak it.
+	var/heal_countdown = 5				//VOREStation Edit - A cooldown ticker for passive healing
+	var/obj/item/weapon/card/id/mobcard = null //VOREStation Edit
+	var/list/mobcard_access = list() //VOREStation Edit
+	var/mobcard_provided = FALSE //VOREStation Edit
+
 /mob/living/simple_mob/Initialize()
 	verbs -= /mob/verb/observe
 	health = maxHealth
 
+	if(mobcard_provided) //VOREStation Edit
+		mobcard = new /obj/item/weapon/card/id(src)
+		mobcard.access = mobcard_access.Copy()
+
 	for(var/L in has_langs)
-		languages |= all_languages[L]
+		languages |= GLOB.all_languages[L]
 	if(languages.len)
 		default_language = languages[1]
 
 	if(has_eye_glow)
 		add_eyes()
-	return ..()
 
+	if(organ_names)
+		organ_names = GET_DECL(organ_names)
+
+	return ..()
 
 /mob/living/simple_mob/Destroy()
 	default_language = null
@@ -186,19 +206,12 @@
 	update_icon()
 	..()
 
-
 //Client attached
 /mob/living/simple_mob/Login()
 	. = ..()
 	to_chat(src,"<b>You are \the [src].</b> [player_msg]")
 
-
-/mob/living/simple_mob/emote(var/act, var/type, var/desc)
-	if(act)
-		..(act, type, desc)
-
-
-/mob/living/simple_mob/SelfMove(turf/n, direct)
+/mob/living/simple_mob/SelfMove(turf/n, direct, movetime)
 	var/turf/old_turf = get_turf(src)
 	var/old_dir = dir
 	. = ..()
@@ -216,9 +229,7 @@
 	return ..()
 */
 /mob/living/simple_mob/movement_delay()
-	var/tally = 0 //Incase I need to add stuff other than "speed" later
-
-	tally = movement_cooldown
+	. = movement_cooldown
 
 	if(force_max_speed)
 		return -3
@@ -227,25 +238,27 @@
 		if(!isnull(M.haste) && M.haste == TRUE)
 			return -3
 		if(!isnull(M.slowdown))
-			tally += M.slowdown
+			. += M.slowdown
 
 	// Turf related slowdown
 	var/turf/T = get_turf(src)
 	if(T && T.movement_cost && !hovering) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
 		if(istype(T,/turf/simulated/floor/water) && aquatic_movement)
-			tally -= aquatic_movement - 1
+			. -= aquatic_movement - 1
 		else
-			tally += T.movement_cost
+			. += T.movement_cost
 
 	if(purge)//Purged creatures will move more slowly. The more time before their purge stops, the slower they'll move.
-		if(tally <= 0)
-			tally = 1
-		tally *= purge
+		if(. <= 0)
+			. = 1
+		. *= purge
 
 	if(m_intent == "walk")
-		tally *= 1.5
+		. *= 1.5
 
-	return tally+config.animal_delay
+	 . += config.animal_delay
+
+	 . += ..()
 
 
 /mob/living/simple_mob/Stat()
@@ -262,37 +275,42 @@
 	update_icon()
 
 
-/mob/living/simple_mob/say(var/message,var/datum/language/language)
-	var/verb = "says"
+/mob/living/simple_mob/say_quote(var/message, var/datum/language/speaking = null)
 	if(speak_emote.len)
-		verb = pick(speak_emote)
-
-	message = sanitize(message)
-
-	..(message, null, verb)
+		. = pick(speak_emote)
+	else if(speaking)
+		. = ..()
 
 /mob/living/simple_mob/get_speech_ending(verb, var/ending)
 	return verb
-
-
-// Harvest an animal's delicious byproducts
-/mob/living/simple_mob/proc/harvest(var/mob/user)
-	var/actual_meat_amount = max(1,(meat_amount/2))
-	if(meat_type && actual_meat_amount>0 && (stat == DEAD))
-		for(var/i=0;i<actual_meat_amount;i++)
-			var/obj/item/meat = new meat_type(get_turf(src))
-			meat.name = "[src.name] [meat.name]"
-		if(issmall(src))
-			user.visible_message("<span class='danger'>[user] chops up \the [src]!</span>")
-			new/obj/effect/decal/cleanable/blood/splatter(get_turf(src))
-			qdel(src)
-		else
-			user.visible_message("<span class='danger'>[user] butchers \the [src] messily!</span>")
-			gib()
-
 
 /mob/living/simple_mob/is_sentient()
 	return mob_class & MOB_CLASS_HUMANOID|MOB_CLASS_ANIMAL|MOB_CLASS_SLIME // Update this if needed.
 
 /mob/living/simple_mob/get_nametag_desc(mob/user)
 	return "<i>[tt_desc]</i>"
+
+/mob/living/simple_mob/make_hud_overlays()
+	hud_list[STATUS_HUD]  = gen_hud_image(buildmode_hud, src, "ai_0", plane = PLANE_BUILDMODE)
+	hud_list[LIFE_HUD]	  = gen_hud_image(buildmode_hud, src, "ais_1", plane = PLANE_BUILDMODE)
+	add_overlay(hud_list)
+
+//VOREStation Add Start		Makes it so that simplemobs can understand galcomm without being able to speak it.
+/mob/living/simple_mob/say_understands(var/mob/other, var/datum/language/speaking = null)
+	if(understands_common && speaking?.name == LANGUAGE_GALCOM)
+		return TRUE
+	return ..()
+//Vorestation Add End
+
+/decl/mob_organ_names
+	var/list/hit_zones = list("body") //When in doubt, it's probably got a body.
+
+//VOREStation Add Start 	For allowing mobs with ID's door access
+/mob/living/simple_mob/Bump(var/atom/A)
+	if(mobcard && istype(A, /obj/machinery/door))
+		var/obj/machinery/door/D = A
+		if(client && !istype(D, /obj/machinery/door/firedoor) && !istype(D, /obj/machinery/door/blast) && !istype(D, /obj/machinery/door/airlock/lift) && D.check_access(mobcard))
+			D.open()
+	else
+		..()
+//Vorestation Add End

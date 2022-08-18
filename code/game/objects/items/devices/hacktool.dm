@@ -5,7 +5,7 @@
 	var/in_hack_mode = 0
 	var/list/known_targets
 	var/list/supported_types
-	var/datum/topic_state/default/must_hack/hack_state
+	var/datum/tgui_state/default/must_hack/hack_state
 
 /obj/item/device/multitool/hacktool/New()
 	..()
@@ -15,8 +15,7 @@
 	hack_state = new(src)
 
 /obj/item/device/multitool/hacktool/Destroy()
-	for(var/T in known_targets)
-		var/atom/target = T
+	for(var/atom/target as anything in known_targets)
 		target.unregister(OBSERVER_EVENT_DESTROY, src)
 	known_targets.Cut()
 	qdel(hack_state)
@@ -26,11 +25,11 @@
 /obj/item/device/multitool/hacktool/attackby(var/obj/item/W, var/mob/user)
 	if(W.is_screwdriver())
 		in_hack_mode = !in_hack_mode
-		playsound(src.loc, W.usesound, 50, 1)
+		playsound(src, W.usesound, 50, 1)
 	else
 		..()
 
-/obj/item/device/multitool/hacktool/resolve_attackby(atom/A, mob/user)
+/obj/item/device/multitool/hacktool/afterattack(atom/A, mob/user)
 	sanity_check()
 
 	if(!in_hack_mode)
@@ -39,32 +38,33 @@
 	if(!attempt_hack(user, A))
 		return 0
 
-	A.ui_interact(user, state = hack_state)
+	// Note, if you ever want to expand supported_types, you must manually add the custom state argument to their tgui_interact
+	A.tgui_interact(user, custom_state = hack_state)
 	return 1
 
 /obj/item/device/multitool/hacktool/proc/attempt_hack(var/mob/user, var/atom/target)
 	if(is_hacking)
-		user << "<span class='warning'>You are already hacking!</span>"
+		to_chat(user, "<span class='warning'>You are already hacking!</span>")
 		return 0
 	if(!is_type_in_list(target, supported_types))
-		user << "\icon[src] <span class='warning'>Unable to hack this target!</span>"
+		to_chat(user, "\icon[src][bicon(src)] <span class='warning'>Unable to hack this target!</span>")
 		return 0
 	var/found = known_targets.Find(target)
 	if(found)
 		known_targets.Swap(1, found)	// Move the last hacked item first
 		return 1
 
-	user << "<span class='notice'>You begin hacking \the [target]...</span>"
+	to_chat(user, "<span class='notice'>You begin hacking \the [target]...</span>")
 	is_hacking = 1
 	// On average hackin takes ~30 seconds. Fairly small random span to avoid people simply aborting and trying again
 	var/hack_result = do_after(user, (20 SECONDS + rand(0, 10 SECONDS) + rand(0, 10 SECONDS)))
 	is_hacking = 0
 
 	if(hack_result && in_hack_mode)
-		user << "<span class='notice'>Your hacking attempt was succesful!</span>"
+		to_chat(user, "<span class='notice'>Your hacking attempt was succesful!</span>")
 		user.playsound_local(get_turf(src), 'sound/instruments/piano/An6.ogg', 50)
 	else
-		user << "<span class='warning'>Your hacking attempt failed!</span>"
+		to_chat(user, "<span class='warning'>Your hacking attempt failed!</span>")
 		return 0
 
 	known_targets.Insert(1, target)	// Insert the newly hacked target first,
@@ -83,18 +83,18 @@
 /obj/item/device/multitool/hacktool/proc/on_target_destroy(var/target)
 	known_targets -= target
 
-/datum/topic_state/default/must_hack
+/datum/tgui_state/default/must_hack
 	var/obj/item/device/multitool/hacktool/hacktool
 
-/datum/topic_state/default/must_hack/New(var/hacktool)
+/datum/tgui_state/default/must_hack/New(var/hacktool)
 	src.hacktool = hacktool
 	..()
 
-/datum/topic_state/default/must_hack/Destroy()
+/datum/tgui_state/default/must_hack/Destroy()
 	hacktool = null
 	return ..()
 
-/datum/topic_state/default/must_hack/can_use_topic(var/src_object, var/mob/user)
+/datum/tgui_state/default/must_hack/can_use_topic(src_object, mob/user)
 	if(!hacktool || !hacktool.in_hack_mode || !(src_object in hacktool.known_targets))
 		return STATUS_CLOSE
 	return ..()

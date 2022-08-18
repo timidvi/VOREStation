@@ -40,11 +40,15 @@
 	var/originhash = md5("[origin]")
 	var/timehash = copytext(md5("[world.time]"),1,10)
 	var/text = null
-	var/logo = alert(usr, "Do you want the header of your fax to have a NanoTrasen or SolGov logo?","Fax Logo","NanoTrasen","SolGov")
+	var/logo = tgui_alert(usr, "Do you want the header of your fax to have a NanoTrasen, SolGov, or Trader logo?","Fax Logo",list("NanoTrasen","SolGov","Trader")) //VOREStation Add - Trader
 	if(logo == "SolGov")
 		logo = "sglogo.png"
-	else
+	//VOREStation Edit/Add
+	else if(logo == "NanoTrasen")
 		logo = "ntlogo.png"
+	else
+		logo = "trader.png"
+	//VOREStation Edit/Add End
 	//TODO change logo based on who you're contacting.
 	text = "<center><img src = [logo]></br>"
 	text += "<b>[origin] Quantum Uplink Signed Message</b><br>"
@@ -71,7 +75,7 @@
 	generateFooter()
 	updateDisplay()
 
-obj/item/weapon/paper/admin/proc/updateDisplay()
+/obj/item/weapon/paper/admin/proc/updateDisplay()
 	usr << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[headerOn ? header : ""][info_links][stamps][footerOn ? footer : ""][interactions]</BODY></HTML>", "window=[name];can_close=0")
 
 
@@ -80,11 +84,13 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 	if(href_list["write"])
 		var/id = href_list["write"]
 		if(free_space <= 0)
-			usr << "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>"
+			to_chat(usr, "<span class='info'>There isn't enough space left on \the [src] to write anything.</span>")
 			return
 
-		var/t =  sanitize(input("Enter what you want to write:", "Write", null, null) as message, free_space, extra = 0)
-
+		var/raw_t = tgui_input_text(usr, "Enter what you want to write:", "Write", multiline = TRUE, prevent_enter = TRUE)
+		if(!raw_t)
+			return
+		var/t =  sanitize(raw_t, free_space, extra = 0)
 		if(!t)
 			return
 
@@ -96,7 +102,7 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 
 
 		if(fields > 50)//large amount of fields creates a heavy load on the server, see updateinfolinks() and addtofield()
-			usr << "<span class='warning'>Too many fields. Sorry, you can't do this.</span>"
+			to_chat(usr, "<span class='warning'>Too many fields. Sorry, you can't do this.</span>")
 			fields = last_fields_value
 			return
 
@@ -114,7 +120,7 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 		return
 
 	if(href_list["confirm"])
-		switch(alert("Are you sure you want to send the fax as is?",, "Yes", "No"))
+		switch(tgui_alert(usr, "Are you sure you want to send the fax as is?","Send Fax", list("Yes", "No")))
 			if("Yes")
 				if(headerOn)
 					info = header + info
@@ -152,4 +158,4 @@ obj/item/weapon/paper/admin/proc/updateDisplay()
 		return
 
 /obj/item/weapon/paper/admin/get_signature()
-	return input(usr, "Enter the name you wish to sign the paper with (will prompt for multiple entries, in order of entry)", "Signature") as text|null
+	return tgui_input_text(usr, "Enter the name you wish to sign the paper with (will prompt for multiple entries, in order of entry)", "Signature")

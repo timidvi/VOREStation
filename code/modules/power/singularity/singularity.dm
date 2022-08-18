@@ -7,11 +7,11 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	desc = "A gravitational singularity."
 	icon = 'icons/obj/singularity.dmi'
 	icon_state = "singularity_s1"
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	plane = ABOVE_PLANE
 	light_range = 6
-	unacidable = 1 //Don't comment this out.
+	unacidable = TRUE //Don't comment this out.
 
 	var/current_size = 1
 	var/allowed_size = 1
@@ -265,8 +265,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	return 1
 
 /obj/singularity/proc/eat()
-	for(var/T in orange(grav_pull, src))
-		var/atom/X = T
+	for(var/atom/X as anything in orange(grav_pull, src))
 		if(!X.simulated)
 			continue
 		var/dist = get_dist(X, src)
@@ -366,7 +365,8 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 		return 0
 
 	// VOREStation Edit Start
-	if(istype(get_area(T), /area/crew_quarters/sleep)) //No going to dorms
+	var/area/A = get_area(T)
+	if(A.forbid_singulo) //No going to dorms
 		return 0
 	// VOREStation Edit End
 
@@ -427,11 +427,11 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 			if (istype(M,/mob/living/carbon/human))
 				var/mob/living/carbon/human/H = M
 				if(istype(H.glasses,/obj/item/clothing/glasses/meson) && current_size != STAGE_SUPER)
-					H << "<span class=\"notice\">You look directly into The [src.name], good thing you had your protective eyewear on!</span>"
+					to_chat(H, "<span class=\"notice\">You look directly into The [src.name], good thing you had your protective eyewear on!</span>")
 					return
 				else
-					H << "<span class=\"warning\">You look directly into The [src.name], but your eyewear does absolutely nothing to protect you from it!</span>"
-		M << "<span class='danger'>You look directly into The [src.name] and feel [current_size == STAGE_SUPER ? "helpless" : "weak"].</span>"
+					to_chat(H, "<span class=\"warning\">You look directly into The [src.name], but your eyewear does absolutely nothing to protect you from it!</span>")
+		to_chat(M, "<span class='danger'>You look directly into The [src.name] and feel [current_size == STAGE_SUPER ? "helpless" : "weak"].</span>")
 		M.apply_effect(3, STUN)
 		for(var/mob/O in viewers(M, null))
 			O.show_message(text("<span class='danger'>[] stares blankly at The []!</span>", M, src), 1)
@@ -448,8 +448,8 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 			to_chat(M, "<span class=\"warning\">You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat.</span>")
 			to_chat(M, "<span class=\"notice\">Miraculously, it fails to kill you.</span>")
 		else
-			M << "<span class=\"danger\">You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat.</span>"
-			M << "<span class=\"danger\">You don't even have a moment to react as you are reduced to ashes by the intense radiation.</span>"
+			to_chat(M, "<span class=\"danger\">You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat.</span>")
+			to_chat(M, "<span class=\"danger\">You don't even have a moment to react as you are reduced to ashes by the intense radiation.</span>")
 			M.dust()
 	SSradiation.radiate(src, rand(energy))
 	return
@@ -465,15 +465,15 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	move_self = 0
 	switch (current_size)
 		if(STAGE_ONE)
-			overlays += image('icons/obj/singularity.dmi',"chain_s1")
+			add_overlay(image('icons/obj/singularity.dmi',"chain_s1"))
 		if(STAGE_TWO)
-			overlays += image('icons/effects/96x96.dmi',"chain_s3")
+			add_overlay(image('icons/effects/96x96.dmi',"chain_s3"))
 		if(STAGE_THREE)
-			overlays += image('icons/effects/160x160.dmi',"chain_s5")
+			add_overlay(image('icons/effects/160x160.dmi',"chain_s5"))
 		if(STAGE_FOUR)
-			overlays += image('icons/effects/224x224.dmi',"chain_s7")
+			add_overlay(image('icons/effects/224x224.dmi',"chain_s7"))
 		if(STAGE_FIVE)
-			overlays += image('icons/effects/288x288.dmi',"chain_s9")
+			add_overlay(image('icons/effects/288x288.dmi',"chain_s9"))
 
 /obj/singularity/proc/on_release()
 	chained = 0

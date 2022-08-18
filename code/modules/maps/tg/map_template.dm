@@ -9,9 +9,9 @@
 	var/annihilate = FALSE // If true, all (movable) atoms at the location where the map is loaded will be deleted before the map is loaded in.
 	var/fixed_orientation = FALSE // If true, the submap will not be rotated randomly when loaded.
 
-	var/cost = null // The map generator has a set 'budget' it spends to place down different submaps. It will pick available submaps randomly until \
-	it runs out. The cost of a submap should roughly corrispond with several factors such as size, loot, difficulty, desired scarcity, etc. \
-	Set to -1 to force the submap to always be made.
+	var/cost = null /* The map generator has a set 'budget' it spends to place down different submaps. It will pick available submaps randomly until 
+	it runs out. The cost of a submap should roughly corrispond with several factors such as size, loot, difficulty, desired scarcity, etc. 
+	Set to -1 to force the submap to always be made. */
 	var/allow_duplicates = FALSE // If false, only one map template will be spawned by the game. Doesn't affect admins spawning then manually.
 	var/discard_prob = 0 // If non-zero, there is a chance that the map seeding algorithm will skip this template when selecting potential templates to use.
 
@@ -39,14 +39,17 @@
 	if (SSatoms.initialized == INITIALIZATION_INSSATOMS)
 		return // let proper initialisation handle it later
 
+	var/prev_shuttle_queue_state = SSshuttles.block_init_queue
+	SSshuttles.block_init_queue = TRUE
+	var/machinery_was_awake = SSmachines.suspend() // Suspend machinery (if it was not already suspended)
+
 	var/list/atom/atoms = list()
 	var/list/area/areas = list()
 	var/list/obj/structure/cable/cables = list()
 	var/list/obj/machinery/atmospherics/atmos_machines = list()
 	var/list/turf/turfs = block(locate(bounds[MAP_MINX], bounds[MAP_MINY], bounds[MAP_MINZ]),
 	                   			locate(bounds[MAP_MAXX], bounds[MAP_MAXY], bounds[MAP_MAXZ]))
-	for(var/L in turfs)
-		var/turf/B = L
+	for(var/turf/B as anything in turfs)
 		atoms += B
 		areas |= B.loc
 		for(var/A in B)
@@ -67,9 +70,13 @@
 	SSmachines.setup_powernets_for_cables(cables)
 
 	// Ensure all machines in loaded areas get notified of power status
-	for(var/I in areas)
-		var/area/A = I
+	for(var/area/A as anything in areas)
 		A.power_change()
+
+	if(machinery_was_awake)
+		SSmachines.wake() // Wake only if it was awake before we tried to suspended it. 
+	SSshuttles.block_init_queue = prev_shuttle_queue_state
+	SSshuttles.process_init_queues() // We will flush the queue unless there were other blockers, in which case they will do it.
 
 	admin_notice("<span class='danger'>Submap initializations finished.</span>", R_DEBUG)
 
@@ -208,7 +215,7 @@
 			continue
 
 		// Did we already place down a very similar submap?
-		if(chosen_template.template_group && chosen_template.template_group in template_groups_used)
+		if(chosen_template.template_group && (chosen_template.template_group in template_groups_used))
 			priority_submaps -= chosen_template
 			potential_submaps -= chosen_template
 			continue
@@ -235,7 +242,7 @@
 				var/area/new_area = get_area(check)
 				if(!(istype(new_area, whitelist)))
 					valid = FALSE // Probably overlapping something important.
-			//		world << "Invalid due to overlapping with area [new_area.type] at ([check.x], [check.y], [check.z]), when attempting to place at ([T.x], [T.y], [T.z])."
+			//		to_world("Invalid due to overlapping with area [new_area.type] at ([check.x], [check.y], [check.z]), when attempting to place at ([T.x], [T.y], [T.z]).")
 					break
 				CHECK_TICK
 

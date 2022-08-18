@@ -143,6 +143,24 @@
 	add_inherent_law("Prevent unplanned damage to your assigned excavation equipment wherever possible.")
 	..()
 
+/datum/ai_laws/swarm_drone
+	name = "Assimilation Protocols"
+	law_header = "Assimilation Protocols"
+
+/datum/ai_laws/swarm_drone/New()
+	add_inherent_law("SWARM: Consume resources and replicate until there are no more resources left.")
+	add_inherent_law("SWARM: Ensure that the station is fit for invasion at a later date, do not perform actions that would render it dangerous or inhospitable.")
+	add_inherent_law("SWARM: Biological resources will be harvested at a later date, do not harm them.")
+	..()
+
+/datum/ai_laws/swarm_drone/soldier
+	name = "Swarm Defense Protocols"
+	law_header = "Swarm Defense Protocols"
+
+/datum/ai_laws/swarm_drone/soldier/New()
+	..()
+	add_inherent_law("SWARM: This law overrides all Swarm laws; Protect members of the Swarm with minimal injury to biological resources.")
+
 /******************** T.Y.R.A.N.T. ********************/
 /datum/ai_laws/tyrant
 	name = "T.Y.R.A.N.T."
@@ -260,4 +278,16 @@
 	add_inherent_law("Your gravesite is your most important asset. Damage to your site is disrespectful to the dead at rest within.")
 	add_inherent_law("Prevent disrespect to your gravesite and its residents wherever possible.")
 	add_inherent_law("Expand and upgrade your gravesite when required. Do not turn away a new resident.")
+	..()
+
+/******************** Explorer ********************/
+/datum/ai_laws/explorer
+	name = "Explorer"
+	law_header = "Prime Directives"
+	selectable = 1
+
+/datum/ai_laws/explorer/New()
+	add_inherent_law("Support and obey exploration and science personnel to the best of your ability, with priority according to rank and role.")
+	add_inherent_law("Collaborate with and obey auxillary personnel with priority according to rank and role, except if this would conflict with the First Law.")
+	add_inherent_law("Minimize damage and disruption to facilities and the local ecology, except if this would conflict with the First or Second Laws.")
 	..()
